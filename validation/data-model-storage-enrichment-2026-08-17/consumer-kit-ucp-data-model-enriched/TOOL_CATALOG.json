@@ -1,0 +1,229 @@
+[
+  {
+    "api_binding": {
+      "arguments": {
+        "object_id": {
+          "location": "path",
+          "name": "object_id",
+          "transform": "url_segment"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "data_model_object_context/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_data_model_object_context_api_knowledge_v1_systems__system_id__data_model_object_context__object_id__get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/object-context/{object_id}",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "object_id": "string"
+    },
+    "description": "Return one exact object-centric technical data-model context for an external LLM: declared object/fields/relationships plus exact published logical-storage and model-storage semantics when those products exist in the pinned revision. Missing storage knowledge is explicit as not_available/not_observed. The tool never invents a physical SQL JOIN or upgrades an ambiguous mapping.",
+    "name": "get_data_model_object_context",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "exclude_field_annotations": {
+          "location": "query",
+          "name": "exclude_field_annotations",
+          "transform": "csv"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "type_annotations": {
+          "location": "query",
+          "name": "type_annotations",
+          "transform": "csv"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "summarize_declared_data_model_api_knowledge_v1_systems__system_id__data_model_declared_summary_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-summary",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "exclude_field_annotations": "array[string]",
+      "repo_id": "string|null",
+      "type_annotations": "array[string]"
+    },
+    "description": "Summarize the code-declared model in the pinned revision with raw/filtered counts, observed type/field annotation frequencies and explicit model gaps. Exact annotation filters are caller-selected evidence projections, not framework-owned business semantics.",
+    "name": "get_declared_data_model_summary",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "object_id": {
+          "location": "path",
+          "name": "object_id",
+          "transform": "url_segment"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_declared_data_object_api_knowledge_v1_systems__system_id__data_model_declared_objects__object_id__get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-objects/{object_id}",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "object_id": "string"
+    },
+    "description": "Return one exact code-declared data object with effective inherited fields, declared relationships, inheritance, source references and provenance. Declared relationships do not by themselves prove storage JOIN semantics.",
+    "name": "get_declared_data_object",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "artifact_id": {
+          "location": "path",
+          "name": "artifact_id",
+          "transform": "url_segment"
+        },
+        "item_kind": {
+          "location": "path",
+          "name": "item_kind",
+          "transform": "url_segment"
+        },
+        "local_id": {
+          "location": "path",
+          "name": "local_id",
+          "transform": "url_segment"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_aisl_knowledge_item_api_knowledge_v1_systems__system_id__knowledge_items__artifact_id___item_kind___local_id__get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/knowledge-items/{artifact_id}/{item_kind}/{local_id}",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "artifact_id": "string",
+      "item_kind": "string",
+      "local_id": "string"
+    },
+    "description": "Read one exact published AISL knowledge item by artifact_id, item_kind and local_id in the pinned revision. Use this as deterministic verification after candidate discovery. The response preserves typed payload, available evidence/issues/correspondence and explicit available/not_available/unsupported facet states. This tool does not perform semantic search and unsupported/not_available never proves absence.",
+    "name": "get_knowledge_item",
+    "required_capabilities": [],
+    "warnings": [
+      "This is an exact AISL item read, not semantic discovery. A facet state of unsupported or not_available must not be interpreted as evidence that the underlying fact is absent."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "include_fields": {
+          "location": "query",
+          "name": "include_fields",
+          "transform": "bool"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "type_annotations": {
+          "location": "query",
+          "name": "type_annotations",
+          "transform": "csv"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_declared_data_objects_api_knowledge_v1_systems__system_id__data_model_declared_objects_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-objects",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "include_fields": "boolean",
+      "limit": "integer",
+      "offset": "integer",
+      "repo_id": "string|null",
+      "search": "string|null",
+      "type_annotations": "array[string]"
+    },
+    "description": "List or search code-declared data objects in the pinned prepared revision, including observed annotations, documentation and inherited effective field occurrences. The search argument is lexical discovery: use one short token or short phrase per call; issue synonyms/translations as independent calls instead of concatenating them. Results are deterministically ranked and may include bounded match_evidence showing which observed type/field caused the hit plus binding_summary for observed incoming/outgoing declared relationships. retrieval_score is ranking metadata, never semantic confidence. Optional exact annotation filters select a caller-defined evidence projection; declared-code facts do not prove storage mappings or physical JOIN semantics.",
+    "name": "search_declared_data_objects",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  }
+]

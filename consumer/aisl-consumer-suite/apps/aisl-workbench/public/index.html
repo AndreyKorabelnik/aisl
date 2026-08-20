@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AISL Platform</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="importmap">{"imports":{"aisl-sdk-typescript":"/vendor/aisl-sdk/index.js"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <div><div class="eyebrow">AI Semantic Layer</div><h1>AISL Platform</h1></div>
+    <div id="pinBadge" class="pin-badge muted">No revision pinned</div>
+  </header>
+  <main>
+    <section class="selector-panel card">
+      <label>System<select id="systemSelect"><option value="">Select system…</option></select></label>
+      <label>Revision<select id="revisionSelect" disabled><option value="">Select revision…</option></select></label>
+      <button id="pinButton" disabled>Pin revision</button>
+      <button id="refreshButton" class="secondary">Refresh systems</button>
+    </section>
+    <div id="notice" class="notice hidden"></div>
+    <nav id="tabs" class="tabs" aria-label="AISL Platform sections">
+      <button data-tab="build" class="active">Build</button>
+      <button data-tab="overview">Overview</button>
+      <button data-tab="products">Products</button>
+      <button data-tab="knowledge">Explore</button>
+      <button data-tab="provenance">Provenance</button>
+      <button data-tab="diagnostics">Diagnostics</button>
+      <button data-tab="reports">Reports</button>
+      <button data-tab="chat">Chat</button>
+      <button data-tab="raw">Raw API</button>
+    </nav>
+    <section id="content" class="content card"><div class="empty">Loading Build…</div></section>
+  </main>
+  <footer>Build → KCP · Explore → Knowledge API · Chat → external agent runtime · Reports → aisl-reporting</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

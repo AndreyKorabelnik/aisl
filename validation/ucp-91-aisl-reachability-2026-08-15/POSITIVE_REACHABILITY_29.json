@@ -1,0 +1,838 @@
+{
+  "schema_version": "ucp-91-positive-reachability/v1",
+  "scope": "acceptance-only; Gold targets used only to test reachability after retrieval output was frozen",
+  "total_gold_positive_nonambiguous": 29,
+  "fact_present_count": 29,
+  "discoverable_top5_count": 23,
+  "projected_discoverable_count": 15,
+  "all_declared_only_count": 8,
+  "not_discoverable_top5_indices": [
+    1,
+    6,
+    13,
+    29,
+    66,
+    81
+  ],
+  "rows": [
+    {
+      "input_index": 1,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "id",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": true,
+        "inherited_depth": 4
+      },
+      "discoveries": [],
+      "discoverable_top5": false
+    },
+    {
+      "input_index": 2,
+      "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+      "field": "equivalents",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "идентификаторы в других системах",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_display_name_exact"
+        },
+        {
+          "term": "equivalent",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 3,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "names",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "имя физического лица",
+          "scope": "projected",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_display_name_exact"
+        },
+        {
+          "term": "имя физического лица",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_display_name_exact"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 4,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "birthDate",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "дата рождения",
+          "scope": "projected",
+          "rank": 2,
+          "score": 970,
+          "score_basis": "field_documentation_display_name_exact"
+        },
+        {
+          "term": "дата рождения",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "score": 970,
+          "score_basis": "field_documentation_display_name_exact"
+        },
+        {
+          "term": "birth",
+          "scope": "projected",
+          "rank": 5,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 5,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "gender",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "Пол",
+          "scope": "projected",
+          "rank": 2,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "Пол",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "gender",
+          "scope": "projected",
+          "rank": 3,
+          "score": 990,
+          "score_basis": "field_name_exact"
+        },
+        {
+          "term": "gender",
+          "scope": "all_declared_types",
+          "rank": 5,
+          "score": 990,
+          "score_basis": "field_name_exact"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 6,
+      "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+      "field": "addresses",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [],
+      "discoverable_top5": false
+    },
+    {
+      "input_index": 7,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "selfEmployment",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "самозан",
+          "scope": "projected",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "самозан",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 9,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "placesOfWork",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "место работы",
+          "scope": "projected",
+          "rank": 2,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "место работы",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 10,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "maritalStatus",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "семейное положение",
+          "scope": "projected",
+          "rank": 3,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "семейное положение",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "marital",
+          "scope": "projected",
+          "rank": 3,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "marital",
+          "scope": "all_declared_types",
+          "rank": 5,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 11,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "employeeInfos",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "сотрудника Сбербанка",
+          "scope": "projected",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "сотрудника Сбербанка",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 12,
+      "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+      "field": "clientConsents",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "согласия клиента",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "соглас",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_summary_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 13,
+      "fqcn": "com.sbt.bm.ucp.customerjourney.model.CustomerJourney",
+      "field": "preferredLanguages",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [],
+      "discoverable_top5": false
+    },
+    {
+      "input_index": 14,
+      "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+      "field": "serviceStartDate",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "начало обслуживания",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "обслуживания клиента",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "service",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 23,
+      "fqcn": "com.sbt.bm.ucp.preclient.form.model.PreclientForm",
+      "field": "processingCompleted",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "processing",
+          "scope": "projected",
+          "rank": 1,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "processing",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 28,
+      "fqcn": "com.sbt.bm.ucp.common.model.party.Consent",
+      "field": "consentChannels",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "канал",
+          "scope": "projected",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "канал",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "consent",
+          "scope": "projected",
+          "rank": 1,
+          "score": 1000,
+          "score_basis": "type_name_exact"
+        },
+        {
+          "term": "consent",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 1000,
+          "score_basis": "type_name_exact"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 29,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.extraBlocks.ProductInfo",
+      "field": "hasActiveProduct",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [],
+      "discoverable_top5": false
+    },
+    {
+      "input_index": 30,
+      "fqcn": "com.sbt.bm.ucp.creditscore.model.Obligation",
+      "field": "obligationCurrent",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "остаток",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "задолжен",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 31,
+      "fqcn": "com.sbt.bm.ucp.retail.model.way4.CardProduct",
+      "field": "openDate",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "дата открытия",
+          "scope": "projected",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_display_name_prefix"
+        },
+        {
+          "term": "дата открытия",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_display_name_prefix"
+        },
+        {
+          "term": "open",
+          "scope": "projected",
+          "rank": 2,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "open",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 35,
+      "fqcn": "com.sbt.bm.ucp.finprofile.model.ndfl2.IncomesPayment",
+      "field": "incomeAmount",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "доход",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 960,
+          "score_basis": "type_documentation_display_name_exact"
+        },
+        {
+          "term": "income",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 37,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+      "field": "creditHistory",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "кредитная история",
+          "scope": "projected",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "кредитная история",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 970,
+          "score_basis": "field_documentation_summary_exact"
+        },
+        {
+          "term": "credit",
+          "scope": "projected",
+          "rank": 1,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "credit",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 38,
+      "fqcn": "com.sbt.bm.ucp.creditscore.model.Obligation",
+      "field": "pastDueEvents",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "просроч",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 39,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.extraBlocks.RiskProfile",
+      "field": "investorRiskProfileScore",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "риск",
+          "scope": "projected",
+          "rank": 4,
+          "score": 890,
+          "score_basis": "type_documentation_summary_prefix"
+        },
+        {
+          "term": "риск",
+          "scope": "all_declared_types",
+          "rank": 4,
+          "score": 890,
+          "score_basis": "type_documentation_summary_prefix"
+        },
+        {
+          "term": "invest",
+          "scope": "projected",
+          "rank": 1,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "invest",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "risk",
+          "scope": "projected",
+          "rank": 2,
+          "score": 930,
+          "score_basis": "type_name_prefix"
+        },
+        {
+          "term": "risk",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "score": 930,
+          "score_basis": "type_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 40,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.extraBlocks.RiskProfile",
+      "field": "investingHorizon",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "инвест",
+          "scope": "projected",
+          "rank": 4,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "инвест",
+          "scope": "all_declared_types",
+          "rank": 4,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "горизонт инвест",
+          "scope": "projected",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_summary_prefix"
+        },
+        {
+          "term": "горизонт инвест",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_summary_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 48,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.Preferences",
+      "field": "customerAvailabilityTime",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "доступности клиента",
+          "scope": "projected",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "доступности клиента",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 62,
+      "fqcn": "com.sbt.bm.ucp.customerknowledge.model.CustomerKnowledge",
+      "field": "markers",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "маркер",
+          "scope": "projected",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_summary_prefix"
+        },
+        {
+          "term": "маркер",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 910,
+          "score_basis": "field_documentation_summary_prefix"
+        },
+        {
+          "term": "marker",
+          "scope": "projected",
+          "rank": 3,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        },
+        {
+          "term": "marker",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "score": 940,
+          "score_basis": "field_name_prefix"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 63,
+      "fqcn": "com.sbt.bm.ucp.retail.model.individual.marketinginfo.AbstractMarketingInfo",
+      "field": "hobby",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "увлечен",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 830,
+          "score_basis": "field_documentation_summary_substring"
+        },
+        {
+          "term": "hobby",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 990,
+          "score_basis": "field_name_exact"
+        }
+      ],
+      "discoverable_top5": true
+    },
+    {
+      "input_index": 66,
+      "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+      "field": "partyToPartyGroups",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [],
+      "discoverable_top5": false
+    },
+    {
+      "input_index": 81,
+      "fqcn": "com.sbt.bm.storage.model.OmniMemoryIndividualFacts",
+      "field": "facts",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [],
+      "discoverable_top5": false
+    },
+    {
+      "input_index": 86,
+      "fqcn": "com.sbt.bm.ucp.cp.model.CreditPotentialApplication",
+      "field": "dateApplication",
+      "fact_present": true,
+      "effective_field": {
+        "is_inherited": false,
+        "inherited_depth": 0
+      },
+      "discoveries": [
+        {
+          "term": "application",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "score": 880,
+          "score_basis": "field_name_substring"
+        }
+      ],
+      "discoverable_top5": true
+    }
+  ]
+}

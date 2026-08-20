@@ -1,0 +1,135 @@
+{
+  "acceptance": "Generic Structural Member Selection Acceptance",
+  "claim_boundary": "sanitized generic acceptance reproduces historical PLP fidelity dimensions; it is not a real PLP application acceptance",
+  "core_structured_members": 8,
+  "default_inventory_policy_for_shape_evidence": "existing_only",
+  "derived_structural_families": 1,
+  "derived_structural_members": 8,
+  "real_plp_application_used": false,
+  "selected_representatives": {
+    "dominant": {
+      "cardinality_extremes": [],
+      "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+      "member_id": "structured_member_9039d5a79b40d71389c66393",
+      "minority_states": [],
+      "repository_relative_path": "schemas/dominant-1.json",
+      "variant_roles": [
+        "dominant_structure"
+      ]
+    },
+    "empty_cardinality_minimum": {
+      "cardinality_extremes": [
+        {
+          "family_max": 12,
+          "family_min": 0,
+          "length": 0,
+          "path": "/columns",
+          "role": "minimum"
+        }
+      ],
+      "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+      "member_id": "structured_member_43e9d911dba7618da51a48a8",
+      "minority_states": [
+        {
+          "family_member_count": 1,
+          "family_rate": 0.125,
+          "path": "/columns",
+          "state": "empty",
+          "value_type": "array"
+        }
+      ],
+      "repository_relative_path": "schemas/rare-empty-columns.json",
+      "variant_roles": [
+        "cardinality_extreme",
+        "minority_state",
+        "rare_structure"
+      ]
+    },
+    "maximum_cardinality": {
+      "cardinality_extremes": [
+        {
+          "family_max": 12,
+          "family_min": 0,
+          "length": 12,
+          "path": "/columns",
+          "role": "maximum"
+        }
+      ],
+      "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+      "member_id": "structured_member_77d1db1d4853ac59bb8596f0",
+      "minority_states": [
+        {
+          "family_member_count": 1,
+          "family_rate": 0.125,
+          "path": "/deleted",
+          "state": "true",
+          "value_type": "boolean"
+        }
+      ],
+      "repository_relative_path": "schemas/minority-deleted-true.json",
+      "variant_roles": [
+        "cardinality_extreme",
+        "dominant_structure",
+        "minority_state"
+      ]
+    },
+    "minority_deleted_true": {
+      "cardinality_extremes": [
+        {
+          "family_max": 12,
+          "family_min": 0,
+          "length": 12,
+          "path": "/columns",
+          "role": "maximum"
+        }
+      ],
+      "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+      "member_id": "structured_member_77d1db1d4853ac59bb8596f0",
+      "minority_states": [
+        {
+          "family_member_count": 1,
+          "family_rate": 0.125,
+          "path": "/deleted",
+          "state": "true",
+          "value_type": "boolean"
+        }
+      ],
+      "repository_relative_path": "schemas/minority-deleted-true.json",
+      "variant_roles": [
+        "cardinality_extreme",
+        "dominant_structure",
+        "minority_state"
+      ]
+    },
+    "rare_structure": {
+      "cardinality_extremes": [
+        {
+          "family_max": 12,
+          "family_min": 0,
+          "length": 0,
+          "path": "/columns",
+          "role": "minimum"
+        }
+      ],
+      "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+      "member_id": "structured_member_43e9d911dba7618da51a48a8",
+      "minority_states": [
+        {
+          "family_member_count": 1,
+          "family_rate": 0.125,
+          "path": "/columns",
+          "state": "empty",
+          "value_type": "array"
+        }
+      ],
+      "repository_relative_path": "schemas/rare-empty-columns.json",
+      "variant_roles": [
+        "cardinality_extreme",
+        "minority_state",
+        "rare_structure"
+      ]
+    }
+  },
+  "selection_from_prepared_knowledge_only": true,
+  "source_repository_removed_before_klc": true
+}

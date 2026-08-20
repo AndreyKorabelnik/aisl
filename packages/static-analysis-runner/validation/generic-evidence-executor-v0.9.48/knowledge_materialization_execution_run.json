@@ -1,0 +1,100 @@
+{
+  "completed_at": "2026-08-05T15:08:14.473819+00:00",
+  "diagnostics": [],
+  "execution_fingerprint": "d0cc2f83b36efd3da88ba3987768ebbf04c9bca2e59b8989e774c58e51d340ee",
+  "execution_order": [
+    "code-declared-data-model"
+  ],
+  "knowledge_artifacts": [
+    {
+      "artifact_id": "knowledge_artifact_96f2a163d46217f04706",
+      "content_fingerprint": "5b4197a9a9507467db1f0f303af0e44b9b88050227492e194540040f44b37346",
+      "coverage": {},
+      "diagnostics": [],
+      "location": {
+        "kind": "knowledge-layer",
+        "manifest_path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/knowledge-run/materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer-manifest.json",
+        "output_path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/knowledge-run/materializations/001-code-declared-data-model/knowledge-layer"
+      },
+      "materialization_result_path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/knowledge-run/materializations/001-code-declared-data-model/materialization-result.json",
+      "model_kind": "code-declared-data-model",
+      "schema_version": "code-declared-data-model/v1",
+      "source_materialization_id": "code-declared-data-model"
+    }
+  ],
+  "knowledge_layer_core": {
+    "runtime_contract_id": "knowledge_materialization_runtime/v1",
+    "version": "0.54.1"
+  },
+  "materialization_catalog": {
+    "catalog_fingerprint": "25ab785a6ac859287824ff321b811bf42c0cbebbd2ddbd28f61e63e40f18357c",
+    "path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/contracts/knowledge-materialization-catalog-v2.json"
+  },
+  "materialization_executions": [
+    {
+      "completed_at": "2026-08-05T15:08:14.473175+00:00",
+      "input_artifact_ids": [
+        "java_type_structure_84f8e83cd77c4ec42fb00eaa"
+      ],
+      "input_knowledge_artifact_ids": [],
+      "knowledge_artifact_ids": [
+        "knowledge_artifact_96f2a163d46217f04706"
+      ],
+      "materialization_execution_id": "knowledge_materialization_execution_a6b96eaf0bb089fa3213",
+      "materialization_id": "code-declared-data-model",
+      "output_manifest": "materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer-manifest.json",
+      "producer": {
+        "component": "knowledge-layer-core",
+        "version": "0.54.1"
+      },
+      "published_capabilities": [
+        "common.code-declared-data-model",
+        "common.code-declared-entities",
+        "common.code-declared-fields",
+        "common.code-declared-inheritance",
+        "common.code-declared-relationships"
+      ],
+      "request": "materializations/001-code-declared-data-model/materialization-request.json",
+      "result": "materializations/001-code-declared-data-model/materialization-result.json",
+      "started_at": "2026-08-05T15:08:14.324110+00:00",
+      "status": "completed"
+    }
+  ],
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships"
+  ],
+  "resolution_plan": {
+    "path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/contracts/knowledge-resolution-plan-v2.json",
+    "plan_fingerprint": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712"
+  },
+  "runner": {
+    "producer": "static-analysis-runner",
+    "version": "0.9.48"
+  },
+  "schema_version": "knowledge_materialization_execution_run/v1",
+  "scope_id": "smoke-repository",
+  "semantic_policy": {
+    "capability_publication": "completed_materialization_results_only",
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "legacy_fallback": "not_supported",
+    "runner_dispatch": "generic_contract_driven",
+    "task_suite_profile_semantics": "not_used"
+  },
+  "sources": [
+    {
+      "manifest_path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/repository_analysis_run_manifest.json",
+      "repo_id": "smoke-repository",
+      "revision": {
+        "content_sha256": "4fedd2bb1553b8c99edb4394a0cd9c9395674bb65e24f8c859299b3e585d5746",
+        "kind": "content",
+        "revision": "sha256:4fedd2bb1553b8c99edb4394a0cd9c9395674bb65e24f8c859299b3e585d5746"
+      }
+    }
+  ],
+  "started_at": "2026-08-05T15:08:14.323555+00:00",
+  "status": "completed"
+}

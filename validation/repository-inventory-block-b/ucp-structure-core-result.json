@@ -1,0 +1,99 @@
+{
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_1302172d24185431208ddfea",
+      "analyzer_id": "repository-structure-analyzer",
+      "analyzer_version": "0.44.23a4",
+      "artifact_ids": [
+        "repository_structure_9ba10a63afd7b6d223466487"
+      ],
+      "parameters": {},
+      "required_by": [],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "repository-structure-evidence",
+          "schema_version": "repository-structure-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "adc16fca4891510ce5cb286178cc880977e1f8ceb4fccf6ee184ad9fb154e219"
+      ],
+      "source_snapshot_ids": [
+        "ucp-real"
+      ],
+      "status": "completed"
+    }
+  ],
+  "diagnostics": [],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "repository_structure_9ba10a63afd7b6d223466487",
+      "artifact_kind": "repository-structure-evidence",
+      "content_fingerprint": "9ba10a63afd7b6d223466487aa2c2a7fcbe40dff256dc606d433d8d3efeee9bf",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "all_file_count": 490,
+        "analyzer_eligible_file_count": 487,
+        "coverage_status": "complete",
+        "extension_family_count": 8,
+        "outside_analyzer_frontier_extension_family_count": 3,
+        "outside_analyzer_frontier_file_count": 3,
+        "unreadable_file_count": 0
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 239367,
+        "kind": "file",
+        "path": "evidence/repository-structure-evidence.json",
+        "sha256": "d35914f196dcdd4be037838f871c797c63fb318b2f83e45b70b5bbbe7af96775"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_1302172d24185431208ddfea",
+      "provenance": {
+        "core_artifact_provenance": {},
+        "foundation": {},
+        "producer": {
+          "analyzer_id": "repository-structure-analyzer",
+          "analyzer_version": "0.44.23a4",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [],
+        "source_snapshot": {
+          "file_count": 490,
+          "fingerprint": "adc16fca4891510ce5cb286178cc880977e1f8ceb4fccf6ee184ad9fb154e219",
+          "revision": null,
+          "scope": "repository_all_files",
+          "source_id": "ucp-real"
+        }
+      },
+      "schema_version": "repository-structure-evidence/v1",
+      "status": "completed"
+    }
+  ],
+  "execution_id": "core_evidence_execution_ca7036a8dae88f6e74abea69",
+  "producer": {
+    "component": "code-analyzer-core",
+    "version": "0.44.23a4"
+  },
+  "request_fingerprint": "102c8384ab405ae6ce29c100b80cd7e2b23b8e7ee55b4393b02cc02d49aeff70",
+  "result_fingerprint": "2d7fc78ad1236aeac50210239dc500e5f4b93a4b3ca09c8e4103bb54a637c89c",
+  "runtime_contract_id": "core_evidence_runtime/v1",
+  "schema_version": "core_evidence_execution_result/v1",
+  "source": {
+    "source_id": "ucp-real",
+    "source_kind": "repository"
+  },
+  "source_snapshots": [
+    {
+      "file_count": 490,
+      "fingerprint": "adc16fca4891510ce5cb286178cc880977e1f8ceb4fccf6ee184ad9fb154e219",
+      "revision": null,
+      "scope": "repository_all_files",
+      "source_id": "ucp-real"
+    }
+  ],
+  "status": "completed"
+}

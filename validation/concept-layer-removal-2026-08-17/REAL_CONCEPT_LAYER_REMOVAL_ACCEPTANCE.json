@@ -1,0 +1,97 @@
+{
+  "api": {
+    "concept-cleanup-datamart": {
+      "coverage_no_concept_evaluation": true,
+      "discovery_count": 6,
+      "summary_no_concepts": true
+    },
+    "concept-cleanup-ucp": {
+      "coverage_no_concept_evaluation": true,
+      "discovery_count": 2,
+      "summary_no_concepts": true
+    },
+    "old_concepts_route_status": 404,
+    "openapi_old_concepts_route_absent": true,
+    "portfolio_no_concept_facet": true
+  },
+  "architecture": {
+    "core_changed": false,
+    "repository_local_novelty_claim_removed": true,
+    "runner_changed": false,
+    "runtime_concept_detector_removed": true,
+    "true_novelty_owner": "downstream_cross_repository_mining",
+    "unknown_primitive_owner": "framework_core_frontier"
+  },
+  "cases": {
+    "datamart": {
+      "candidate_counts": {
+        "unknown_primitive": 6
+      },
+      "concept_tables": [],
+      "family_count": 28,
+      "family_discovery_counts": {
+        "none": 22,
+        "unknown_primitive": 6
+      },
+      "object_occurrence_links": 868,
+      "schema_version": "repository-inventory/v5",
+      "source_occurrences": 491,
+      "unknown_families": [
+        ".iml",
+        ".sbt",
+        ".scala",
+        ".txt",
+        ".xlsx",
+        "<none>"
+      ],
+      "yaml_sample": {
+        "occurrence_id": "repository_source_occurrence_ee6bbbb20967ddd79eae",
+        "path": "entity/935120600 CI05502975 - Витрина Профиль ФЛ/935120601 custom_blago_b2c_profile_fl.epk_client.yaml",
+        "precision": "file",
+        "sha256": "bda3a4fa749b1091d8bc6449acd1d03ff7bb6129c0d76af5ccbf551e8e4e26d8"
+      }
+    },
+    "ucp": {
+      "candidate_counts": {
+        "unknown_primitive": 2
+      },
+      "concept_tables": [],
+      "family_count": 6,
+      "family_discovery_counts": {
+        "none": 4,
+        "unknown_primitive": 2
+      },
+      "java_sample": {
+        "line_end": 65,
+        "line_start": 6,
+        "occurrence_id": "repository_source_occurrence_10168ab13956a18ce2db",
+        "path": "ucp-common-api/src/main/java/com/sbt/bm/ucp/model/DedupEdge.java",
+        "precision": "exact_span",
+        "sha256": "741d3ec54cfdd7b19bb1991d2fa0090674e9479e601d6c6736bde9920d5e4de6"
+      },
+      "object_occurrence_links": 678,
+      "schema_version": "repository-inventory/v5",
+      "source_occurrences": 670,
+      "unknown_families": [
+        ".md",
+        "<none>"
+      ]
+    }
+  },
+  "date": "2026-08-17",
+  "status": "PASS",
+  "structural_parity": {
+    "datamart": {
+      "families_structural_dimensions": "exact",
+      "files_path_extension_sha": "exact",
+      "new_family_count": 28,
+      "old_family_count": 28
+    },
+    "ucp": {
+      "families_structural_dimensions": "exact",
+      "files_path_extension_sha": "exact",
+      "new_family_count": 6,
+      "old_family_count": 6
+    }
+  }
+}

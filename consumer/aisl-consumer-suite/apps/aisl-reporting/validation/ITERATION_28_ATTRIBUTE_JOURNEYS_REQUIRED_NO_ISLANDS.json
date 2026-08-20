@@ -1,0 +1,27 @@
+{
+  "schema_version": "aisl_reporting_validation/v1",
+  "release": "0.12.1",
+  "profile_id": "workspace-interaction/v1",
+  "compatibility_policy": "replacement; no legacy island fields and no dual-write",
+  "real_workspace": {
+    "repository_count": 2,
+    "boundary_interaction_count": 1,
+    "field_contract_count": 7,
+    "transport_edge_count": 7,
+    "required_attribute_journey_count": 5,
+    "required_wire_paths": [
+      "phone.flags.flagtype.code",
+      "sberprofileid",
+      "phone.flags.enddate",
+      "phone.flags.updatedatetime",
+      "phone.flags"
+    ],
+    "dataset_contains_island_content": false,
+    "prompt_contains_island_content": false
+  },
+  "tests": {
+    "passed": 47,
+    "skipped": 13,
+    "failed": 0
+  }
+}

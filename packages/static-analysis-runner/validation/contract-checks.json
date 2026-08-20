@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checks": {
+    "version_0_9_7": true,
+    "replace_default_false": true,
+    "blank_output_rejected": true,
+    "filesystem_root_rejected": true,
+    "home_directory_rejected": true,
+    "cwd_and_ancestors_rejected": true,
+    "protected_input_overlap_rejected": true,
+    "non_owned_nonempty_output_not_deleted": true,
+    "runner_owned_output_replace_supported": true,
+    "core_preflight_before_output_replacement": true,
+    "empty_shell_output_regression_preserves_sentinel": true
+  },
+  "commands": [
+    {
+      "name": "version",
+      "hidden": false
+    },
+    {
+      "name": "repository",
+      "hidden": false
+    },
+    {
+      "name": "workspace",
+      "hidden": false
+    },
+    {
+      "name": "materialize-knowledge-layer",
+      "hidden": true
+    }
+  ]
+}

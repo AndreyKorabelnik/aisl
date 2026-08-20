@@ -1,0 +1,681 @@
+{
+  "diagnostics": [],
+  "expected_outputs": {
+    "capabilities": [
+      "common.code-declared-data-model",
+      "common.code-declared-entities",
+      "common.code-declared-fields",
+      "common.code-declared-inheritance",
+      "common.code-declared-relationships",
+      "common.logical-storage-identity",
+      "common.logical-storage-mapping",
+      "common.logical-storage-relationship",
+      "common.model-storage-semantics",
+      "common.storage-identities",
+      "common.storage-reference-lineage"
+    ],
+    "knowledge_models": [
+      "code-declared-data-model/v1",
+      "logical-storage-model-mapping/v1",
+      "model-storage-semantics/v1"
+    ]
+  },
+  "foundation_requirements": [
+    "java_syntax_index",
+    "source_file_inventory"
+  ],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-model-storage-analyzer:ucp-api",
+        "to": "evidence:planned_evidence_3a8d68c86664de5545aca38d"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+        "to": "evidence:planned_evidence_63738b78b405f40a6a5a8bd7"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-type-structure-analyzer:ucp-api",
+        "to": "evidence:planned_evidence_dae038ddc8ccbbedca1908fc"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+        "to": "evidence:planned_evidence_41f0782f334dd6f9a0f1fb81"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_3a8d68c86664de5545aca38d",
+        "to": "materialization:model-storage-semantics"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_41f0782f334dd6f9a0f1fb81",
+        "to": "materialization:code-declared-data-model"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_63738b78b405f40a6a5a8bd7",
+        "to": "materialization:model-storage-semantics"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_dae038ddc8ccbbedca1908fc",
+        "to": "materialization:code-declared-data-model"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+        "model_kind": "code-declared-data-model",
+        "schema_versions": [
+          "code-declared-data-model/v1"
+        ],
+        "to": "materialization:logical-storage-mapping"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_c4f461e4a77b579ce4f79ae5",
+        "model_kind": "model-storage-semantics",
+        "schema_versions": [
+          "model-storage-semantics/v1"
+        ],
+        "to": "materialization:logical-storage-mapping"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:code-declared-data-model",
+        "to": "knowledge:planned_knowledge_396d95d0b0650e930a967e23"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:logical-storage-mapping",
+        "to": "knowledge:planned_knowledge_6fa0faa963b8ad8c000a2f61"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:model-storage-semantics",
+        "to": "knowledge:planned_knowledge_c4f461e4a77b579ce4f79ae5"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:ucp-api",
+        "to": "analyzer:java-model-storage-analyzer:ucp-api"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:ucp-api",
+        "to": "analyzer:java-type-structure-analyzer:ucp-api"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:ucp-tsa-v4",
+        "to": "analyzer:java-model-storage-analyzer:ucp-tsa-v4"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:ucp-tsa-v4",
+        "to": "analyzer:java-type-structure-analyzer:ucp-tsa-v4"
+      }
+    ],
+    "execution_order": [
+      "analyzer:java-model-storage-analyzer:ucp-api",
+      "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+      "analyzer:java-type-structure-analyzer:ucp-api",
+      "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+      "materialization:code-declared-data-model",
+      "materialization:model-storage-semantics",
+      "materialization:logical-storage-mapping"
+    ],
+    "nodes": [
+      {
+        "analyzer_id": "java-model-storage-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".md",
+                ".xml"
+              ],
+              "observed_languages": [
+                "java",
+                "xml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [
+                "java"
+              ],
+              "source_id": "ucp-api",
+              "status": "applicable"
+            },
+            "artifact_kind": "model-storage-evidence",
+            "contract_fingerprint": "d6902f81014d6f1a76005a22c02b5f0b1de325a06e05dec15a36405a792295b8",
+            "optional_by": [
+              "internal:model-storage-semantics"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "model-storage-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "model-storage-evidence",
+            "schema_version": "model-storage-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index"
+        ],
+        "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "ucp-api",
+        "source_snapshot_id": "source_snapshot_3d5315cee053020107c4e1e9"
+      },
+      {
+        "analyzer_id": "java-model-storage-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".jks",
+                ".json",
+                ".md",
+                ".xml",
+                ".yaml",
+                ".yml"
+              ],
+              "observed_languages": [
+                "java",
+                "json",
+                "xml",
+                "yaml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [
+                "java"
+              ],
+              "source_id": "ucp-tsa-v4",
+              "status": "applicable"
+            },
+            "artifact_kind": "model-storage-evidence",
+            "contract_fingerprint": "d6902f81014d6f1a76005a22c02b5f0b1de325a06e05dec15a36405a792295b8",
+            "optional_by": [
+              "internal:model-storage-semantics"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "model-storage-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "model-storage-evidence",
+            "schema_version": "model-storage-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index"
+        ],
+        "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "ucp-tsa-v4",
+        "source_snapshot_id": "source_snapshot_2d9e263f0c106743b4e0ed96"
+      },
+      {
+        "analyzer_id": "java-type-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".md",
+                ".xml"
+              ],
+              "observed_languages": [
+                "java",
+                "xml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [
+                "java"
+              ],
+              "source_id": "ucp-api",
+              "status": "applicable"
+            },
+            "artifact_kind": "java-type-structure-evidence",
+            "contract_fingerprint": "c861267da0b3c2e2b2ab72639036e76b3d820d965581c2edc94a59453e14c8ee",
+            "optional_by": [],
+            "production_policy": "produce_if_missing",
+            "required_by": [
+              "code-declared-data-model"
+            ],
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index",
+          "source_file_inventory"
+        ],
+        "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "ucp-api",
+        "source_snapshot_id": "source_snapshot_3d5315cee053020107c4e1e9"
+      },
+      {
+        "analyzer_id": "java-type-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".jks",
+                ".json",
+                ".md",
+                ".xml",
+                ".yaml",
+                ".yml"
+              ],
+              "observed_languages": [
+                "java",
+                "json",
+                "xml",
+                "yaml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [
+                "java"
+              ],
+              "source_id": "ucp-tsa-v4",
+              "status": "applicable"
+            },
+            "artifact_kind": "java-type-structure-evidence",
+            "contract_fingerprint": "c861267da0b3c2e2b2ab72639036e76b3d820d965581c2edc94a59453e14c8ee",
+            "optional_by": [],
+            "production_policy": "produce_if_missing",
+            "required_by": [
+              "code-declared-data-model"
+            ],
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index",
+          "source_file_inventory"
+        ],
+        "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "ucp-tsa-v4",
+        "source_snapshot_id": "source_snapshot_2d9e263f0c106743b4e0ed96"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_3a8d68c86664de5545aca38d",
+          "artifact_kind": "model-storage-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+          "schema_version": "model-storage-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_3a8d68c86664de5545aca38d",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "internal:model-storage-semantics"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_41f0782f334dd6f9a0f1fb81",
+          "artifact_kind": "java-type-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+          "schema_version": "java-type-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_41f0782f334dd6f9a0f1fb81",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "production_policy": "produce_if_missing",
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_63738b78b405f40a6a5a8bd7",
+          "artifact_kind": "model-storage-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+          "schema_version": "model-storage-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_63738b78b405f40a6a5a8bd7",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "internal:model-storage-semantics"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_dae038ddc8ccbbedca1908fc",
+          "artifact_kind": "java-type-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+          "schema_version": "java-type-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_dae038ddc8ccbbedca1908fc",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "production_policy": "produce_if_missing",
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_396d95d0b0650e930a967e23",
+          "availability": "planned",
+          "model_kind": "code-declared-data-model",
+          "producer_materialization_node_id": "materialization:code-declared-data-model",
+          "schema_version": "code-declared-data-model/v1",
+          "source_materialization_id": "code-declared-data-model"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_6fa0faa963b8ad8c000a2f61",
+          "availability": "planned",
+          "model_kind": "logical-storage-model-mapping",
+          "producer_materialization_node_id": "materialization:logical-storage-mapping",
+          "schema_version": "logical-storage-model-mapping/v1",
+          "source_materialization_id": "logical-storage-mapping"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_6fa0faa963b8ad8c000a2f61",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_c4f461e4a77b579ce4f79ae5",
+          "availability": "planned",
+          "model_kind": "model-storage-semantics",
+          "producer_materialization_node_id": "materialization:model-storage-semantics",
+          "schema_version": "model-storage-semantics/v1",
+          "source_materialization_id": "model-storage-semantics"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_c4f461e4a77b579ce4f79ae5",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "conditional_capabilities": [],
+        "execution_required": true,
+        "execution_requirement": "required",
+        "expected_capabilities": [
+          "common.code-declared-data-model",
+          "common.code-declared-entities",
+          "common.code-declared-fields",
+          "common.code-declared-inheritance",
+          "common.code-declared-relationships"
+        ],
+        "expected_models": [
+          "code-declared-data-model/v1"
+        ],
+        "knowledge_id": "code-declared-data-model",
+        "materialization_id": "code-declared-data-model",
+        "node_id": "materialization:code-declared-data-model",
+        "node_kind": "knowledge_materialization",
+        "optional_by": [],
+        "required_by": [],
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true,
+        "selection_origin": null
+      },
+      {
+        "conditional_capabilities": [],
+        "execution_required": true,
+        "execution_requirement": "optional",
+        "expected_capabilities": [
+          "common.logical-storage-identity",
+          "common.logical-storage-mapping",
+          "common.logical-storage-relationship"
+        ],
+        "expected_models": [
+          "logical-storage-model-mapping/v1"
+        ],
+        "knowledge_id": null,
+        "materialization_id": "logical-storage-mapping",
+        "node_id": "materialization:logical-storage-mapping",
+        "node_kind": "knowledge_materialization",
+        "optional_by": [
+          "code-declared-data-model"
+        ],
+        "required_by": [],
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true,
+        "selection_origin": "optional_internal_enrichment"
+      },
+      {
+        "conditional_capabilities": [],
+        "execution_required": true,
+        "execution_requirement": "optional",
+        "expected_capabilities": [
+          "common.model-storage-semantics",
+          "common.storage-identities",
+          "common.storage-reference-lineage"
+        ],
+        "expected_models": [
+          "model-storage-semantics/v1"
+        ],
+        "knowledge_id": null,
+        "materialization_id": "model-storage-semantics",
+        "node_id": "materialization:model-storage-semantics",
+        "node_kind": "knowledge_materialization",
+        "optional_by": [
+          "internal:logical-storage-mapping"
+        ],
+        "required_by": [],
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true,
+        "selection_origin": "optional_internal_enrichment"
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:ucp-api",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "extensions": [
+            ".java",
+            ".md",
+            ".xml"
+          ],
+          "file_count": 630,
+          "languages": [
+            "java",
+            "xml"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/data_model_enrichment_work/ucp_sources/ucp-api"
+          },
+          "revision": {
+            "content_sha256": "ecb1e7e70f3ee617924327722d3fac5c9602d35985278aadd5869eef15ef00f1",
+            "kind": "content",
+            "revision": "sha256:ecb1e7e70f3ee617924327722d3fac5c9602d35985278aadd5869eef15ef00f1"
+          },
+          "snapshot_fingerprint": "3d5315cee053020107c4e1e9d847090e1c942be5737e675a2800cbb61bfa05c7",
+          "snapshot_id": "source_snapshot_3d5315cee053020107c4e1e9",
+          "source_id": "ucp-api",
+          "source_kind": "repository",
+          "source_metadata": {
+            "default_branch": null,
+            "repository_id": "ucp-api-8b14d41f22",
+            "repository_name": "ucp-api",
+            "source_kind": "local"
+          }
+        }
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:ucp-tsa-v4",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "extensions": [
+            ".java",
+            ".jks",
+            ".json",
+            ".md",
+            ".xml",
+            ".yaml",
+            ".yml"
+          ],
+          "file_count": 490,
+          "languages": [
+            "java",
+            "json",
+            "xml",
+            "yaml"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/data_model_enrichment_work/ucp_sources/ucp-tsa-v4"
+          },
+          "revision": {
+            "content_sha256": "77e15228803b2ee3e6b96ce7f6b5d395f50f1b4a7b25fb5f4eb4ac5a45f0488a",
+            "kind": "content",
+            "revision": "sha256:77e15228803b2ee3e6b96ce7f6b5d395f50f1b4a7b25fb5f4eb4ac5a45f0488a"
+          },
+          "snapshot_fingerprint": "2d9e263f0c106743b4e0ed9613ce5336bde437a995d4d1bf7a416c722fe8d60a",
+          "snapshot_id": "source_snapshot_2d9e263f0c106743b4e0ed96",
+          "source_id": "ucp-tsa-v4",
+          "source_kind": "repository",
+          "source_metadata": {
+            "default_branch": null,
+            "repository_id": "ucp-tsa-v4-b24b3e5a1b",
+            "repository_name": "ucp-tsa-v4",
+            "source_kind": "local"
+          }
+        }
+      }
+    ],
+    "topological_order": [
+      "source:ucp-api",
+      "source:ucp-tsa-v4",
+      "analyzer:java-model-storage-analyzer:ucp-api",
+      "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+      "analyzer:java-type-structure-analyzer:ucp-api",
+      "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+      "evidence:planned_evidence_3a8d68c86664de5545aca38d",
+      "evidence:planned_evidence_41f0782f334dd6f9a0f1fb81",
+      "evidence:planned_evidence_63738b78b405f40a6a5a8bd7",
+      "evidence:planned_evidence_dae038ddc8ccbbedca1908fc",
+      "materialization:code-declared-data-model",
+      "materialization:model-storage-semantics",
+      "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+      "knowledge:planned_knowledge_c4f461e4a77b579ce4f79ae5",
+      "materialization:logical-storage-mapping",
+      "knowledge:planned_knowledge_6fa0faa963b8ad8c000a2f61"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "001d1a74dae33c7cff3a220e5cef4e270c65d3b87533c0429c5b95d5a8a8718c",
+    "knowledge_input_inventory_fingerprint": "ee0aea4c6dce0e96ce0b55b7477fe8455a2c969128c68a9ee7547786c3b0f1c2",
+    "knowledge_materialization_catalog_fingerprint": "a513e518ef7398a413a7e13453badd733c0b41a97a39aa63b40e2cd7e6d14bab"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "2bf8f20c427eaf6f4d67f7b28b847202de9cc52ab35891eece15d960194009e7",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.10.28"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "d888b647c46697daa4b6cf9741fff5ee556e3c37c7a847421ad5ff0943788378",
+    "knowledge_profile_fingerprint": "99d8f9ef5a6f3007c05369760078728b70fe9db63aa79119a722c31d9584d6fc",
+    "knowledge_profile_id": "data-model-v1",
+    "knowledge_resolution_plan_fingerprint": "dc557e3380158a9653f3696e071f990f265fcc01f2fa2631df63f66cfe497104",
+    "resolved_knowledge_ids": [
+      "code-declared-data-model"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "ucp-data-model-enriched"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 4,
+    "execution_node_count": 7,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 3,
+    "overall": "ready"
+  }
+}

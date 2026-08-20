@@ -1,0 +1,125 @@
+{
+  "schema_version": "iteration_28_constructor_cross_system_validation/v1",
+  "core_version": "0.40.7",
+  "repositories": {
+    "at900": {
+      "root": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+      "java_file_count": 868,
+      "method_count": 6343,
+      "container_count": 629,
+      "warning_count": 0,
+      "constructor_mapping_count": 259,
+      "constructor_derivation_count": 453,
+      "constructor_gap_count": 3,
+      "diagnostics": {
+        "attribute_derivations": 453,
+        "attribute_mappings": 259,
+        "mapping_gaps": 3,
+        "object_creations_with_arguments": 757,
+        "observed_origin_constant_or_default": 74,
+        "observed_origin_object_creation": 6,
+        "suppressed_generated_code_observed_origins": 72,
+        "suppressed_test_code_observed_origins": 75,
+        "suppressed_test_code_unresolved_arguments": 34,
+        "target_resolution_exact_fqcn": 1,
+        "target_resolution_explicit_import": 164,
+        "target_resolution_same_package": 250,
+        "target_resolution_unique_simple_name": 5,
+        "target_resolution_unresolved": 337
+      },
+      "remaining_gaps": [
+        {
+          "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+          "container": "PprbProfileByUcpIdRs",
+          "field": "profiles",
+          "expression": "dao.getPprbProfilesByUcpIdsWithChannel(ucpIds)",
+          "resolution_kind": "unresolved",
+          "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+          "line": 266
+        },
+        {
+          "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+          "container": "PprbProfileByUcpIdRs",
+          "field": "profiles",
+          "expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+          "resolution_kind": "unresolved",
+          "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+          "line": 266
+        },
+        {
+          "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIdsWhiteList",
+          "container": "PprbProfileByUcpIdRs",
+          "field": "profiles",
+          "expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+          "resolution_kind": "unresolved",
+          "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+          "line": 276
+        }
+      ],
+      "elapsed_seconds": 5.839
+    },
+    "ucp_api": {
+      "root": "/mnt/data/iteration28_work/inputs/UCPDataModel(15)/ucp-api",
+      "java_file_count": 592,
+      "method_count": 5293,
+      "container_count": 407,
+      "warning_count": 0,
+      "constructor_mapping_count": 4,
+      "constructor_derivation_count": 2,
+      "constructor_gap_count": 0,
+      "diagnostics": {
+        "attribute_derivations": 2,
+        "attribute_mappings": 4,
+        "object_creations_with_arguments": 28,
+        "observed_origin_constant_or_default": 1,
+        "target_resolution_same_package": 2,
+        "target_resolution_unresolved": 26
+      },
+      "remaining_gaps": [],
+      "elapsed_seconds": 4.337
+    },
+    "ucp_tsa_v4": {
+      "root": "/mnt/data/iteration28_work/inputs/UCPucp-tsa-v4(12)/ucp-tsa-v4",
+      "java_file_count": 469,
+      "method_count": 2350,
+      "container_count": 119,
+      "warning_count": 0,
+      "constructor_mapping_count": 64,
+      "constructor_derivation_count": 714,
+      "constructor_gap_count": 2,
+      "diagnostics": {
+        "attribute_derivations": 714,
+        "attribute_mappings": 64,
+        "mapping_gaps": 2,
+        "object_creations_with_arguments": 963,
+        "observed_origin_constant_or_default": 18,
+        "observed_origin_object_creation": 2,
+        "suppressed_test_code_observed_origins": 5,
+        "target_resolution_explicit_import": 324,
+        "target_resolution_same_package": 76,
+        "target_resolution_unresolved": 563
+      },
+      "remaining_gaps": [
+        {
+          "operation": "LdmMetaPublishMojo.publishRequest",
+          "container": "ReverseResultLog",
+          "field": "publishResultStatusFuncMap",
+          "expression": "this.getLog()",
+          "resolution_kind": "unresolved",
+          "file": "/mnt/data/iteration28_work/inputs/UCPucp-tsa-v4(12)/ucp-tsa-v4/ucp-tsa4-meta-maven-plugin/src/main/java/ru/sbrf/ucp/meta/LdmMetaPublishMojo.java",
+          "line": 61
+        },
+        {
+          "operation": "UcpRbSourceChangeVectorPlugin.createUniversalChangeVectorDeserializer",
+          "container": "UcpUniversalChangeVectorDeserializer",
+          "field": "serializer",
+          "expression": "supplier.get()",
+          "resolution_kind": "unresolved",
+          "file": "/mnt/data/iteration28_work/inputs/UCPucp-tsa-v4(12)/ucp-tsa-v4/ucp-tsa4-plugin/src/main/java/com/sbt/pprbod/artifacts/ucp/UcpRbSourceChangeVectorPlugin.java",
+          "line": 13
+        }
+      ],
+      "elapsed_seconds": 6.469
+    }
+  }
+}

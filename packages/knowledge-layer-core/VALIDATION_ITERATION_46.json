@@ -1,0 +1,255 @@
+{
+  "schema_version": "iteration_46_validation/v1",
+  "input_artifact": "external:frozen-multi-repository-validation/knowledge-layer.duckdb",
+  "comparison": {
+    "iteration_45_update_phone_transport_paths": 2,
+    "iteration_46_update_phone_transport_paths": 7,
+    "new_reconstructed_nested_paths": 5,
+    "manual_attribute_paths": 5,
+    "framework_complete_to_target_parameter": 5
+  },
+  "update_phone_field_contracts": [
+    {
+      "wire_path": "phone",
+      "match_kind": "exact_wire_path",
+      "match_status": "probable"
+    },
+    {
+      "wire_path": "phone.flags",
+      "match_kind": "exact_observed_nested_boundary_path",
+      "match_status": "probable"
+    },
+    {
+      "wire_path": "phone.flags.endDate",
+      "match_kind": "exact_collection_member_builder_path",
+      "match_status": "probable"
+    },
+    {
+      "wire_path": "phone.flags.flagType.code",
+      "match_kind": "exact_collection_member_builder_path",
+      "match_status": "probable"
+    },
+    {
+      "wire_path": "phone.flags.updateDateTime",
+      "match_kind": "exact_collection_member_builder_path",
+      "match_status": "probable"
+    },
+    {
+      "wire_path": "phone.phoneNumber",
+      "match_kind": "exact_observed_nested_boundary_path",
+      "match_status": "probable"
+    },
+    {
+      "wire_path": "sberProfileId",
+      "match_kind": "exact_wire_path",
+      "match_status": "probable"
+    }
+  ],
+  "update_phone_transport_edges": [
+    {
+      "wire_path": "phone",
+      "confidence": "probable",
+      "reconstructed": false
+    },
+    {
+      "wire_path": "phone.flags",
+      "confidence": "probable",
+      "reconstructed": true
+    },
+    {
+      "wire_path": "phone.flags.enddate",
+      "confidence": "probable",
+      "reconstructed": true
+    },
+    {
+      "wire_path": "phone.flags.flagtype.code",
+      "confidence": "probable",
+      "reconstructed": true
+    },
+    {
+      "wire_path": "phone.flags.updatedatetime",
+      "confidence": "probable",
+      "reconstructed": true
+    },
+    {
+      "wire_path": "phone.phonenumber",
+      "confidence": "probable",
+      "reconstructed": true
+    },
+    {
+      "wire_path": "sberprofileid",
+      "confidence": "probable",
+      "reconstructed": false
+    }
+  ],
+  "manual_attribute_validation": [
+    {
+      "name": "sberProfileId",
+      "status": "probable_complete",
+      "confidence": "probable",
+      "hop_count": 10,
+      "source_value_node_id": "repository_value_node_a07c60983df5adf5f5eb",
+      "target_value_node_id": "repository_value_node_79fcd028bf39d72b2b1f",
+      "source_display_ref": "request.sberProfileId",
+      "target_display_ref": "parameters.sberProfileId",
+      "edge_kinds": [
+        "builder_argument",
+        "builder_field_to_built_object",
+        "variable_initializer_field_projection",
+        "method_argument_binding_field_projection",
+        "interface_implementation_parameter_binding_field_projection",
+        "rest_request_observed_object_field",
+        "http_request_serialization",
+        "http_request_transport",
+        "http_request_deserialization",
+        "rest_request_deserialization_field"
+      ],
+      "guards": [],
+      "limitations": [
+        "boundary_interaction_probable",
+        "environment_authority_non_binding",
+        "authority_not_confirmed",
+        "request_payload_type_not_equal",
+        "request_contract_partial"
+      ]
+    },
+    {
+      "name": "phoneNumber",
+      "status": "probable_complete",
+      "confidence": "probable",
+      "hop_count": 12,
+      "source_value_node_id": "repository_value_node_c784447a2649b02f5d4b",
+      "target_value_node_id": "repository_value_node_04697c38cad80b0bd4f2",
+      "source_display_ref": "request.phone.phoneNumber",
+      "target_display_ref": "parameters.phone.phoneNumber",
+      "edge_kinds": [
+        "builder_argument",
+        "builder_field_to_built_object",
+        "nested_object_field_projection",
+        "builder_field_to_built_object",
+        "variable_initializer_field_projection",
+        "method_argument_binding_field_projection",
+        "interface_implementation_parameter_binding_field_projection",
+        "rest_request_observed_object_field",
+        "http_request_serialization",
+        "http_request_transport",
+        "http_request_deserialization",
+        "rest_request_deserialization_field"
+      ],
+      "guards": [],
+      "limitations": [
+        "boundary_interaction_probable",
+        "environment_authority_non_binding",
+        "authority_not_confirmed",
+        "request_payload_type_not_equal",
+        "request_contract_partial",
+        "source_wire_contract_reconstructed"
+      ]
+    },
+    {
+      "name": "flagType.code",
+      "status": "probable_complete",
+      "confidence": "probable",
+      "hop_count": 5,
+      "source_value_node_id": "repository_value_node_daa554033d907497fb25",
+      "target_value_node_id": "repository_value_node_0fb12973c75d8ac99e6d",
+      "source_display_ref": "flagDto.name.code",
+      "target_display_ref": "parameters.phone.flags.flagType.code",
+      "edge_kinds": [
+        "builder_argument",
+        "http_request_serialization",
+        "http_request_transport",
+        "http_request_deserialization",
+        "rest_request_deserialization_field"
+      ],
+      "guards": [],
+      "limitations": [
+        "boundary_interaction_probable",
+        "environment_authority_non_binding",
+        "authority_not_confirmed",
+        "request_payload_type_not_equal",
+        "request_contract_partial",
+        "source_wire_contract_reconstructed"
+      ]
+    },
+    {
+      "name": "updateDateTime",
+      "status": "probable_complete",
+      "confidence": "probable",
+      "hop_count": 6,
+      "source_value_node_id": "repository_value_node_c43ec1754679aaf48d65",
+      "target_value_node_id": "repository_value_node_cac3d164ba9b7f9d71b5",
+      "source_display_ref": "flagDto.changeDt",
+      "target_display_ref": "parameters.phone.flags.updateDateTime",
+      "edge_kinds": [
+        "variable_initializer",
+        "builder_argument",
+        "http_request_serialization",
+        "http_request_transport",
+        "http_request_deserialization",
+        "rest_request_deserialization_field"
+      ],
+      "guards": [],
+      "limitations": [
+        "boundary_interaction_probable",
+        "environment_authority_non_binding",
+        "authority_not_confirmed",
+        "request_payload_type_not_equal",
+        "request_contract_partial",
+        "source_wire_contract_reconstructed"
+      ]
+    },
+    {
+      "name": "endDate",
+      "status": "probable_complete",
+      "confidence": "probable",
+      "hop_count": 6,
+      "source_value_node_id": "repository_value_node_c43ec1754679aaf48d65",
+      "target_value_node_id": "repository_value_node_8853c2f03a015d64de2a",
+      "source_display_ref": "flagDto.changeDt",
+      "target_display_ref": "parameters.phone.flags.endDate",
+      "edge_kinds": [
+        "variable_initializer",
+        "builder_argument",
+        "http_request_serialization",
+        "http_request_transport",
+        "http_request_deserialization",
+        "rest_request_deserialization_field"
+      ],
+      "guards": [
+        {
+          "ast_node": {
+            "end_byte": 2509,
+            "end_point": [
+              56,
+              54
+            ],
+            "node_type": "parenthesized_expression",
+            "start_byte": 2467,
+            "start_point": [
+              56,
+              12
+            ]
+          },
+          "branch": "consequence",
+          "expression_text": "(BooleanUtils.isFalse(flagDto.getValue()))",
+          "node_type": "parenthesized_expression"
+        }
+      ],
+      "limitations": [
+        "boundary_interaction_probable",
+        "environment_authority_non_binding",
+        "authority_not_confirmed",
+        "request_payload_type_not_equal",
+        "request_contract_partial",
+        "source_wire_contract_reconstructed"
+      ]
+    }
+  ],
+  "confidence_promotions": 0,
+  "counts": {
+    "system_interaction_field_contract": 231,
+    "repository_value_node": 3849,
+    "repository_value_flow_edge": 2336
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "build_status": "complete",
+  "producer_version": "0.52.5",
+  "workflow_binding_count": 2853,
+  "capability_present": true,
+  "main_table_name_count": 47,
+  "epk_client_count": 6,
+  "epk_client_v2_count": 9,
+  "sample_evidence": {
+    "extractor": "sql_workflow_binding",
+    "file": "workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_application_list.yaml",
+    "line_end": 5,
+    "line_start": 5,
+    "relative_file": "workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_application_list.yaml",
+    "snippet": "main_table_name: application_list"
+  }
+}

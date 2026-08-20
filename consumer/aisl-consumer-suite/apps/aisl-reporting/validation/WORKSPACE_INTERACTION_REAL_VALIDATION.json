@@ -1,0 +1,36 @@
+{
+  "schema_version": "aisl_reporting_workspace_interaction_validation/v1",
+  "profile_id": "workspace-interaction/v1",
+  "aisl_reporting_version": "0.12.0",
+  "knowledge_layer_min_version": "0.49.1",
+  "validation_case": "real_cli_workspace_v3",
+  "result": {
+    "repository_count": 2,
+    "boundary_interaction_count": 1,
+    "confirmed_interaction_count": 0,
+    "probable_interaction_count": 1,
+    "field_contract_count": 7,
+    "transport_edge_count": 7,
+    "selected_attribute_journey_count": 5,
+    "unresolved_outbound_count": 21,
+    "evidence_index_count": 12,
+    "legacy_cross_repository_correspondences_present": false,
+    "legacy_journey_candidates_present": false,
+    "absolute_runtime_paths_present": false,
+    "dataset_schema_valid": true
+  },
+  "tested_field_paths": [
+    "sberProfileId",
+    "phone",
+    "phone.phoneNumber",
+    "phone.flags",
+    "phone.flags.flagType.code",
+    "phone.flags.updateDateTime",
+    "phone.flags.endDate"
+  ],
+  "notes": [
+    "The interaction and all selected transport paths remain probable; no confidence promotion is performed.",
+    "Execution context was unresolved and is reported as an explicit limitation rather than used to invalidate the boundary interaction.",
+    "The report dataset contains repository-relative evidence only."
+  ]
+}

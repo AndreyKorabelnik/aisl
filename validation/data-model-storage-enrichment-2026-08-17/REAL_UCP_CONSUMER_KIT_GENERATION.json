@@ -1,0 +1,16 @@
+{
+  "files": [
+    "API_USAGE.md",
+    "CAPABILITIES.json",
+    "RETRIEVAL_GUIDE.md",
+    "SYSTEM_PROMPT.md",
+    "TOOL_CATALOG.json",
+    "llm_integration_profile.json"
+  ],
+  "fingerprint": "b175ebc249631700557c19edb6d57abc9c7bf65f9908bca2184788caa933a2b8",
+  "output": "/mnt/data/data_model_enrichment_work/auto-code-analysis-current-data-model-storage-enrichment-2026-08-17/validation/data-model-storage-enrichment-2026-08-17/consumer-kit-ucp-data-model-enriched",
+  "profile_id": "data-model/v1",
+  "revision_id": "rev-88415df4d14df2ff3827b01c",
+  "status": "exported",
+  "system_id": "ucp-data-model-enriched"
+}

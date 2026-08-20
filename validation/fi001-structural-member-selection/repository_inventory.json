@@ -1,0 +1,1372 @@
+{
+  "format": "repository-inventory/v2",
+  "repository_id": "generic-structured-member-acceptance",
+  "identity": {
+    "repository_id": null,
+    "repository_name": "generic-structured-member-acceptance",
+    "source_kind": null,
+    "repository_url": null,
+    "default_branch": null
+  },
+  "summary": {
+    "root_file_count": 8,
+    "extension_family_count": 1,
+    "structural_family_count": 3,
+    "novel_candidate_count": 3,
+    "detected_concepts": [],
+    "detected_concept_count": 0,
+    "unclassified_candidate_count": 3,
+    "inbound_interface_count": 0,
+    "outbound_interface_count": 0,
+    "technology_count": 0,
+    "structural_member_count": 8,
+    "structured_shape_family_count": 1
+  },
+  "composition": {
+    "file_count": 8,
+    "extension_family_count": 1,
+    "total_bytes": 3820,
+    "analyzer_eligible_file_count": 8,
+    "outside_analyzer_frontier_file_count": 0,
+    "languages": []
+  },
+  "technologies": [],
+  "concepts": [
+    {
+      "concept_status_id": "repository_inventory_concept_status_08e396b0f1ab9aee9854",
+      "concept_id": "data_model",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "data-model-candidate-evidence",
+          "sql-analysis"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "candidate representation of a data model only; no logical/physical correctness or business meaning is asserted"
+    },
+    {
+      "concept_status_id": "repository_inventory_concept_status_3de0b92bc2689e4d470c",
+      "concept_id": "data_flow",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "sql-analysis",
+          "value-flow-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "data-flow/transformation candidate only; no end-to-end business lineage correctness is asserted"
+    },
+    {
+      "concept_status_id": "repository_inventory_concept_status_cfd2a28ffd8048e8fd97",
+      "concept_id": "system_interaction",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "interaction-boundary-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "interaction boundary candidate only; no peer identity, runtime invocation or endpoint linkage is inferred"
+    },
+    {
+      "concept_status_id": "repository_inventory_concept_status_f7236ebb16be9aec6c98",
+      "concept_id": "workflow",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "sql-analysis",
+          "system-description-evidence",
+          "value-flow-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "workflow/orchestration-shaped evidence only; exact runtime order and business process semantics remain unresolved"
+    },
+    {
+      "concept_status_id": "repository_inventory_concept_status_234350e15eed87f9e969",
+      "concept_id": "persistence",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "java-persistence-mapping-evidence",
+          "model-storage-evidence",
+          "persistence-lineage-evidence",
+          "storage-usage-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "persistence/storage-access candidate only; no physical database/table binding is invented"
+    },
+    {
+      "concept_status_id": "repository_inventory_concept_status_a4a08a2aaf3190d02a00",
+      "concept_id": "reference_data",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "reference-data-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "reference-data candidate only; NSI/master-data ownership, origin and lifecycle are not inferred"
+    }
+  ],
+  "interfaces": {
+    "evaluation_status": "not_evaluated",
+    "items": []
+  },
+  "inputs": {
+    "evaluation_status": "not_evaluated",
+    "items": []
+  },
+  "outputs": {
+    "evaluation_status": "not_evaluated",
+    "items": []
+  },
+  "storage": {
+    "evaluation_status": "not_evaluated",
+    "official_evidence": []
+  },
+  "data_footprint": {
+    "sql_files": 0,
+    "data_model": {
+      "concept_status_id": "repository_inventory_concept_status_08e396b0f1ab9aee9854",
+      "concept_id": "data_model",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "data-model-candidate-evidence",
+          "sql-analysis"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "candidate representation of a data model only; no logical/physical correctness or business meaning is asserted"
+    },
+    "reference_data": {
+      "concept_status_id": "repository_inventory_concept_status_a4a08a2aaf3190d02a00",
+      "concept_id": "reference_data",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "reference-data-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "reference-data candidate only; NSI/master-data ownership, origin and lifecycle are not inferred"
+    },
+    "data_flow": {
+      "concept_status_id": "repository_inventory_concept_status_3de0b92bc2689e4d470c",
+      "concept_id": "data_flow",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "sql-analysis",
+          "value-flow-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      },
+      "claim_boundary": "data-flow/transformation candidate only; no end-to-end business lineage correctness is asserted"
+    }
+  },
+  "evaluation_policy": {
+    "mode": "bounded_default",
+    "required": [
+      "repository-structure-evidence"
+    ],
+    "produce_if_missing": [
+      "data-model-candidate-evidence",
+      "interaction-boundary-evidence"
+    ],
+    "existing_only": [
+      "java-persistence-mapping-evidence",
+      "java-type-structure-evidence",
+      "model-storage-evidence",
+      "persistence-lineage-evidence",
+      "reference-data-evidence",
+      "sql-analysis",
+      "storage-usage-evidence",
+      "structured-file-shape-evidence",
+      "system-description-evidence",
+      "value-flow-evidence"
+    ],
+    "claim": "deep optional evidence is consumed when available and is not produced solely for default inventory"
+  },
+  "concept_summary": [],
+  "coverage": {
+    "all_file_count": 8,
+    "analyzer_eligible_file_count": 8,
+    "coverage_status": "complete",
+    "extension_family_count": 1,
+    "outside_analyzer_frontier_extension_family_count": 0,
+    "outside_analyzer_frontier_file_count": 0,
+    "unreadable_file_count": 0
+  },
+  "extension_inventory": [
+    {
+      "analyzer_eligible_file_count": 8,
+      "extension": ".json",
+      "file_count": 8,
+      "outside_analyzer_frontier_file_count": 0
+    }
+  ],
+  "outside_analyzer_frontier_extension_families": [],
+  "structural_report": {
+    "structural_families": [
+      {
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "family_kind": "file_extension",
+        "family_label": ".json",
+        "source_artifact_kind": "repository-structure-evidence",
+        "source_schema_version": "repository-structure-evidence/v1",
+        "count": 8,
+        "generic_novelty_score": 55.359,
+        "semantic_status": "unclassified",
+        "observed_metrics": {
+          "file_count": 8,
+          "analyzer_eligible_file_count": 8,
+          "outside_analyzer_frontier_file_count": 0,
+          "outside_analyzer_frontier_extension_family": false
+        },
+        "descriptor_labels": [],
+        "evidence_refs": [
+          {
+            "artifact_id": "repository_structure_46e367f133052553543a6638",
+            "artifact_kind": "repository-structure-evidence",
+            "schema_version": "repository-structure-evidence/v1",
+            "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+          }
+        ]
+      },
+      {
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "family_kind": "official_evidence_structure",
+        "family_label": "structured-file-shape-evidence",
+        "source_artifact_kind": "structured-file-shape-evidence",
+        "source_schema_version": "structured-file-shape-evidence/v1",
+        "count": 8,
+        "generic_novelty_score": 55.359,
+        "semantic_status": "unclassified",
+        "observed_metrics": {
+          "bounded_skip_file_count": 0,
+          "candidate_file_count": 8,
+          "coverage_status": "complete",
+          "member_count": 8,
+          "parse_failed_file_count": 0,
+          "parsed_file_count": 8,
+          "payload_section": null,
+          "record_count": 8
+        },
+        "descriptor_labels": [
+          "structured-file-shape-evidence"
+        ],
+        "evidence_refs": [
+          {
+            "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+            "artifact_kind": "structured-file-shape-evidence",
+            "schema_version": "structured-file-shape-evidence/v1",
+            "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+            "observed_section": "structured-file-shape-evidence"
+          }
+        ]
+      },
+      {
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "family_kind": "structured_file_shape",
+        "family_label": "json-shape-c36c47da05c4",
+        "source_artifact_kind": "structured-file-shape-evidence",
+        "source_schema_version": "structured-file-shape-evidence/v1",
+        "count": 8,
+        "generic_novelty_score": 55.359,
+        "semantic_status": "unclassified",
+        "observed_metrics": {
+          "record_count": 8,
+          "shape_count": 3,
+          "dominant_structure_rate": 0.75,
+          "syntax": "json"
+        },
+        "descriptor_labels": [
+          "structured_file_shape",
+          "json"
+        ],
+        "evidence_refs": [
+          {
+            "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+            "artifact_kind": "structured-file-shape-evidence",
+            "schema_version": "structured-file-shape-evidence/v1",
+            "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+            "member_ids": [
+              "structured_member_04b2c4b5f73e6e55835d22c7",
+              "structured_member_35548e6e6cc1a2333129b1cb",
+              "structured_member_43e9d911dba7618da51a48a8",
+              "structured_member_77d1db1d4853ac59bb8596f0",
+              "structured_member_9039d5a79b40d71389c66393",
+              "structured_member_a7ab490c9ec2136da30e8808",
+              "structured_member_d41ca71a6cec8b4879f7b75c",
+              "structured_member_f8445c3b3934f60af4e47e80"
+            ]
+          }
+        ]
+      }
+    ],
+    "novel_candidates": [
+      {
+        "candidate_id": "repository_inventory_candidate_4469ddd238c20b8846a7",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "family_kind": "file_extension",
+        "generic_novelty_score": 55.359,
+        "semantic_status": "unclassified",
+        "basis": {
+          "observed_metrics": {
+            "file_count": 8,
+            "analyzer_eligible_file_count": 8,
+            "outside_analyzer_frontier_file_count": 0,
+            "outside_analyzer_frontier_extension_family": false
+          },
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "repository_inventory_candidate_ebf47b53feaf40fd4935",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "family_kind": "official_evidence_structure",
+        "generic_novelty_score": 55.359,
+        "semantic_status": "unclassified",
+        "basis": {
+          "observed_metrics": {
+            "bounded_skip_file_count": 0,
+            "candidate_file_count": 8,
+            "coverage_status": "complete",
+            "member_count": 8,
+            "parse_failed_file_count": 0,
+            "parsed_file_count": 8,
+            "payload_section": null,
+            "record_count": 8
+          },
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "repository_inventory_candidate_a78d3750ee1cf54cb064",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "family_kind": "structured_file_shape",
+        "generic_novelty_score": 55.359,
+        "semantic_status": "unclassified",
+        "basis": {
+          "observed_metrics": {
+            "record_count": 8,
+            "shape_count": 3,
+            "dominant_structure_rate": 0.75,
+            "syntax": "json"
+          },
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "structural_members": {
+      "evaluation_status": "evaluated",
+      "families": [
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "family_kind": "structured_file_shape",
+          "family_label": "json-shape-c36c47da05c4",
+          "syntax": "json",
+          "occurrence_count": 8,
+          "shape_count": 3,
+          "dominant_structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "dominant_structure_count": 6,
+          "dominant_structure_rate": 0.75,
+          "consensus_path_types": [
+            {
+              "path": "/",
+              "value_type": "object",
+              "member_count": 8
+            },
+            {
+              "path": "/columns",
+              "value_type": "array",
+              "member_count": 7
+            },
+            {
+              "path": "/columns/*",
+              "value_type": "object",
+              "member_count": 6
+            },
+            {
+              "path": "/deleted",
+              "value_type": "boolean",
+              "member_count": 8
+            },
+            {
+              "path": "/entity",
+              "value_type": "string",
+              "member_count": 8
+            }
+          ],
+          "member_ids": [
+            "structured_member_04b2c4b5f73e6e55835d22c7",
+            "structured_member_35548e6e6cc1a2333129b1cb",
+            "structured_member_43e9d911dba7618da51a48a8",
+            "structured_member_77d1db1d4853ac59bb8596f0",
+            "structured_member_9039d5a79b40d71389c66393",
+            "structured_member_a7ab490c9ec2136da30e8808",
+            "structured_member_d41ca71a6cec8b4879f7b75c",
+            "structured_member_f8445c3b3934f60af4e47e80"
+          ],
+          "source_artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+          "source_content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+          "claim_boundary": "family membership is deterministic structural similarity over official observed member descriptors; no business or semantic equivalence is asserted"
+        }
+      ],
+      "members": [
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_9039d5a79b40d71389c66393",
+          "repository_relative_path": "schemas/dominant-1.json",
+          "content_identity": {
+            "byte_size": 267,
+            "sha256": "a058f9a0eb6b0866d8c52b06fcaa8d319a238364de5a84946a60d043f19335c4"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "variant_signature": "86ad77ba1798a8cc87cdf6f4ea2b97387220c969d47d98b55573b0f8cee2000e",
+          "structure_family_occurrence_count": 6,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 2,
+            "max_depth": 3,
+            "node_count": 12,
+            "object_count": 3,
+            "path_type_count": 8,
+            "scalar_count": 8
+          },
+          "variant_roles": [
+            "dominant_structure"
+          ],
+          "minority_states": [],
+          "cardinality_extremes": [],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/dominant-1.json",
+            "source_sha256": "a058f9a0eb6b0866d8c52b06fcaa8d319a238364de5a84946a60d043f19335c4"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_a7ab490c9ec2136da30e8808",
+          "repository_relative_path": "schemas/dominant-2.json",
+          "content_identity": {
+            "byte_size": 363,
+            "sha256": "2741776bad0a2edea60c405ebc71a1b247a9417609cf46ddceaf7d4900a62d04"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "variant_signature": "86ad77ba1798a8cc87cdf6f4ea2b97387220c969d47d98b55573b0f8cee2000e",
+          "structure_family_occurrence_count": 6,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 3,
+            "max_depth": 3,
+            "node_count": 16,
+            "object_count": 4,
+            "path_type_count": 8,
+            "scalar_count": 11
+          },
+          "variant_roles": [
+            "dominant_structure"
+          ],
+          "minority_states": [],
+          "cardinality_extremes": [],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/dominant-2.json",
+            "source_sha256": "2741776bad0a2edea60c405ebc71a1b247a9417609cf46ddceaf7d4900a62d04"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_d41ca71a6cec8b4879f7b75c",
+          "repository_relative_path": "schemas/dominant-3.json",
+          "content_identity": {
+            "byte_size": 460,
+            "sha256": "c784de46623c56f1ec0ff1d1a51e47ca0dc21c66a72135d3d5fca31520583510"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "variant_signature": "86ad77ba1798a8cc87cdf6f4ea2b97387220c969d47d98b55573b0f8cee2000e",
+          "structure_family_occurrence_count": 6,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 4,
+            "max_depth": 3,
+            "node_count": 20,
+            "object_count": 5,
+            "path_type_count": 8,
+            "scalar_count": 14
+          },
+          "variant_roles": [
+            "dominant_structure"
+          ],
+          "minority_states": [],
+          "cardinality_extremes": [],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/dominant-3.json",
+            "source_sha256": "c784de46623c56f1ec0ff1d1a51e47ca0dc21c66a72135d3d5fca31520583510"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_f8445c3b3934f60af4e47e80",
+          "repository_relative_path": "schemas/dominant-4.json",
+          "content_identity": {
+            "byte_size": 556,
+            "sha256": "ea4629f47709b3c7e3d81f8077f7962b879214ae5ea402b4e0df448b7829db2a"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "variant_signature": "90131ddad144d45bca44e3411ad64bfcc5cfbdbdebaa41600f8181b835cd72cd",
+          "structure_family_occurrence_count": 6,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 5,
+            "max_depth": 3,
+            "node_count": 24,
+            "object_count": 6,
+            "path_type_count": 8,
+            "scalar_count": 17
+          },
+          "variant_roles": [
+            "dominant_structure"
+          ],
+          "minority_states": [],
+          "cardinality_extremes": [],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/dominant-4.json",
+            "source_sha256": "ea4629f47709b3c7e3d81f8077f7962b879214ae5ea402b4e0df448b7829db2a"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_04b2c4b5f73e6e55835d22c7",
+          "repository_relative_path": "schemas/dominant-5.json",
+          "content_identity": {
+            "byte_size": 653,
+            "sha256": "63b7774a165aced85603e6e3547aa55b04fa53a6114c72d18fd74782c0742a09"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "variant_signature": "90131ddad144d45bca44e3411ad64bfcc5cfbdbdebaa41600f8181b835cd72cd",
+          "structure_family_occurrence_count": 6,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 6,
+            "max_depth": 3,
+            "node_count": 28,
+            "object_count": 7,
+            "path_type_count": 8,
+            "scalar_count": 20
+          },
+          "variant_roles": [
+            "dominant_structure"
+          ],
+          "minority_states": [],
+          "cardinality_extremes": [],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/dominant-5.json",
+            "source_sha256": "63b7774a165aced85603e6e3547aa55b04fa53a6114c72d18fd74782c0742a09"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_77d1db1d4853ac59bb8596f0",
+          "repository_relative_path": "schemas/minority-deleted-true.json",
+          "content_identity": {
+            "byte_size": 1376,
+            "sha256": "dbf493595996ae18714da24797a4759731ad2ddb4ec3e72348e2e765b286040f"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "9dda264172a5ab943b53a2f97229577ecf134c74115b6967aca20df18c4af19e",
+          "variant_signature": "dc1bbec9ad17fc2a1660a038644f55b19d45c6ba6c2ef6da6fab9f8cd0b56da1",
+          "structure_family_occurrence_count": 6,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 12,
+            "max_depth": 3,
+            "node_count": 52,
+            "object_count": 13,
+            "path_type_count": 8,
+            "scalar_count": 38
+          },
+          "variant_roles": [
+            "cardinality_extreme",
+            "dominant_structure",
+            "minority_state"
+          ],
+          "minority_states": [
+            {
+              "path": "/deleted",
+              "value_type": "boolean",
+              "state": "true",
+              "family_member_count": 1,
+              "family_rate": 0.125
+            }
+          ],
+          "cardinality_extremes": [
+            {
+              "path": "/columns",
+              "length": 12,
+              "family_min": 0,
+              "family_max": 12,
+              "role": "maximum"
+            }
+          ],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/minority-deleted-true.json",
+            "source_sha256": "dbf493595996ae18714da24797a4759731ad2ddb4ec3e72348e2e765b286040f"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_43e9d911dba7618da51a48a8",
+          "repository_relative_path": "schemas/rare-empty-columns.json",
+          "content_identity": {
+            "byte_size": 80,
+            "sha256": "b25e863bec7a7a4dc0e27f05c224de836b2602e04ebcd78a73ce0e1eb720a5af"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "bdab6ca659a54f8d7f4d43154a9d48c29ceb6dfb0cbb8e2bc84d01ff1dc667ec",
+          "variant_signature": "3193e76fba897dcf254dc553159ceb7b9c4bb77e9d8a08a1107562dc83cd414c",
+          "structure_family_occurrence_count": 1,
+          "structural_size": {
+            "array_count": 1,
+            "max_array_length": 0,
+            "max_depth": 1,
+            "node_count": 4,
+            "object_count": 1,
+            "path_type_count": 4,
+            "scalar_count": 2
+          },
+          "variant_roles": [
+            "cardinality_extreme",
+            "minority_state",
+            "rare_structure"
+          ],
+          "minority_states": [
+            {
+              "path": "/columns",
+              "value_type": "array",
+              "state": "empty",
+              "family_member_count": 1,
+              "family_rate": 0.125
+            }
+          ],
+          "cardinality_extremes": [
+            {
+              "path": "/columns",
+              "length": 0,
+              "family_min": 0,
+              "family_max": 12,
+              "role": "minimum"
+            }
+          ],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/rare-empty-columns.json",
+            "source_sha256": "b25e863bec7a7a4dc0e27f05c224de836b2602e04ebcd78a73ce0e1eb720a5af"
+          }
+        },
+        {
+          "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+          "member_id": "structured_member_35548e6e6cc1a2333129b1cb",
+          "repository_relative_path": "schemas/rare-missing-columns.json",
+          "content_identity": {
+            "byte_size": 65,
+            "sha256": "e9831455a7e1dbbb03f07003732edd0400f314a935e83d2ad92dcd02871f1b68"
+          },
+          "syntax": "json",
+          "parse_status": "parsed",
+          "structure_signature": "0d566ef308a0f056a6062377bd937d584861f87fdfeb6fe811660ebf848af03c",
+          "variant_signature": "05e5076175329168b65df849d825faf49988fb123dfa59f12e91ebbee75742b6",
+          "structure_family_occurrence_count": 1,
+          "structural_size": {
+            "array_count": 0,
+            "max_array_length": 0,
+            "max_depth": 1,
+            "node_count": 3,
+            "object_count": 1,
+            "path_type_count": 3,
+            "scalar_count": 2
+          },
+          "variant_roles": [
+            "rare_structure"
+          ],
+          "minority_states": [],
+          "cardinality_extremes": [],
+          "observation_truncated": false,
+          "provenance": {
+            "repository_relative_path": "schemas/rare-missing-columns.json",
+            "source_sha256": "e9831455a7e1dbbb03f07003732edd0400f314a935e83d2ad92dcd02871f1b68"
+          }
+        }
+      ],
+      "diagnostics": []
+    }
+  },
+  "concept_report": {
+    "detector_version": "official-evidence-1.0",
+    "classifications": [
+      {
+        "classification_id": "repository_inventory_concept_c5ca93170c4092b7acd7",
+        "concept_id": "data_model",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        },
+        "claim_boundary": "candidate representation of a data model only; no logical/physical correctness or business meaning is asserted",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_0e8eab1cc53520fe7feb",
+        "concept_id": "data_flow",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        },
+        "claim_boundary": "data-flow/transformation candidate only; no end-to-end business lineage correctness is asserted",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_c7b9468aa3e7d46142fa",
+        "concept_id": "system_interaction",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        },
+        "claim_boundary": "interaction boundary candidate only; no peer identity, runtime invocation or endpoint linkage is inferred",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_1e7ef87fba974ad90b5b",
+        "concept_id": "workflow",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        },
+        "claim_boundary": "workflow/orchestration-shaped evidence only; exact runtime order and business process semantics remain unresolved",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_b971a04f282486fb9d2e",
+        "concept_id": "persistence",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        },
+        "claim_boundary": "persistence/storage-access candidate only; no physical database/table binding is invented",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_30560da091c1ae4d1a9d",
+        "concept_id": "reference_data",
+        "family_id": "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "repository_structure_46e367f133052553543a6638",
+              "artifact_kind": "repository-structure-evidence",
+              "schema_version": "repository-structure-evidence/v1",
+              "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753"
+            }
+          ]
+        },
+        "claim_boundary": "reference-data candidate only; NSI/master-data ownership, origin and lifecycle are not inferred",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_fe776f5b183c4d715d03",
+        "concept_id": "data_model",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        },
+        "claim_boundary": "candidate representation of a data model only; no logical/physical correctness or business meaning is asserted",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_168b93d34ab1a3be2449",
+        "concept_id": "data_flow",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        },
+        "claim_boundary": "data-flow/transformation candidate only; no end-to-end business lineage correctness is asserted",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_4170a85d28283e294cf0",
+        "concept_id": "system_interaction",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        },
+        "claim_boundary": "interaction boundary candidate only; no peer identity, runtime invocation or endpoint linkage is inferred",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_b1bda0b5b55bd9f4826e",
+        "concept_id": "workflow",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        },
+        "claim_boundary": "workflow/orchestration-shaped evidence only; exact runtime order and business process semantics remain unresolved",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_20016c262f426244b8f9",
+        "concept_id": "persistence",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        },
+        "claim_boundary": "persistence/storage-access candidate only; no physical database/table binding is invented",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_efe3a27a5a96ff8caf58",
+        "concept_id": "reference_data",
+        "family_id": "repository_inventory_family_c8a778bc0810a0f0b130",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "observed_section": "structured-file-shape-evidence"
+            }
+          ]
+        },
+        "claim_boundary": "reference-data candidate only; NSI/master-data ownership, origin and lifecycle are not inferred",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_001e9eb6cb4ef80a64b1",
+        "concept_id": "data_model",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        },
+        "claim_boundary": "candidate representation of a data model only; no logical/physical correctness or business meaning is asserted",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_ce46c19b557c387b243f",
+        "concept_id": "data_flow",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        },
+        "claim_boundary": "data-flow/transformation candidate only; no end-to-end business lineage correctness is asserted",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_9a517e95fe672e70f630",
+        "concept_id": "system_interaction",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        },
+        "claim_boundary": "interaction boundary candidate only; no peer identity, runtime invocation or endpoint linkage is inferred",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_2e37595bacab57c1fa2f",
+        "concept_id": "workflow",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        },
+        "claim_boundary": "workflow/orchestration-shaped evidence only; exact runtime order and business process semantics remain unresolved",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_591b7572736ec52dc1d8",
+        "concept_id": "persistence",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        },
+        "claim_boundary": "persistence/storage-access candidate only; no physical database/table binding is invented",
+        "diagnostics": []
+      },
+      {
+        "classification_id": "repository_inventory_concept_9c676da916fd67f24dd2",
+        "concept_id": "reference_data",
+        "family_id": "repository_structured_family_f7965edcc36c47da05c4",
+        "classified": false,
+        "confidence": "unclassified",
+        "concept_score": 0.0,
+        "detector_version": "official-evidence-1.0",
+        "basis": {
+          "reason": "no_supported_official_evidence_for_concept_on_family",
+          "evidence_refs": [
+            {
+              "artifact_id": "structured_file_shape_ded5f56abbdeb572f242fd87",
+              "artifact_kind": "structured-file-shape-evidence",
+              "schema_version": "structured-file-shape-evidence/v1",
+              "content_fingerprint": "ded5f56abbdeb572f242fd876dee472b15fc2dc9e54099395f5c0dd75db159b4",
+              "member_ids": [
+                "structured_member_04b2c4b5f73e6e55835d22c7",
+                "structured_member_35548e6e6cc1a2333129b1cb",
+                "structured_member_43e9d911dba7618da51a48a8",
+                "structured_member_77d1db1d4853ac59bb8596f0",
+                "structured_member_9039d5a79b40d71389c66393",
+                "structured_member_a7ab490c9ec2136da30e8808",
+                "structured_member_d41ca71a6cec8b4879f7b75c",
+                "structured_member_f8445c3b3934f60af4e47e80"
+              ]
+            }
+          ]
+        },
+        "claim_boundary": "reference-data candidate only; NSI/master-data ownership, origin and lifecycle are not inferred",
+        "diagnostics": []
+      }
+    ],
+    "unclassified_candidate_family_ids": [
+      "repository_inventory_extension_family_c78cd07c8f38ef19b026",
+      "repository_inventory_family_c8a778bc0810a0f0b130",
+      "repository_structured_family_f7965edcc36c47da05c4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "repository_inventory_concept_not_evaluated",
+      "severity": "info",
+      "message": "Concept data_model is not_evaluated from supplied/default official evidence.",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "data-model-candidate-evidence",
+          "sql-analysis"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      }
+    },
+    {
+      "code": "repository_inventory_concept_not_evaluated",
+      "severity": "info",
+      "message": "Concept data_flow is not_evaluated from supplied/default official evidence.",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "sql-analysis",
+          "value-flow-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      }
+    },
+    {
+      "code": "repository_inventory_concept_not_evaluated",
+      "severity": "info",
+      "message": "Concept system_interaction is not_evaluated from supplied/default official evidence.",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "interaction-boundary-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      }
+    },
+    {
+      "code": "repository_inventory_concept_not_evaluated",
+      "severity": "info",
+      "message": "Concept workflow is not_evaluated from supplied/default official evidence.",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "sql-analysis",
+          "system-description-evidence",
+          "value-flow-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      }
+    },
+    {
+      "code": "repository_inventory_concept_not_evaluated",
+      "severity": "info",
+      "message": "Concept persistence is not_evaluated from supplied/default official evidence.",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "java-persistence-mapping-evidence",
+          "model-storage-evidence",
+          "persistence-lineage-evidence",
+          "storage-usage-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      }
+    },
+    {
+      "code": "repository_inventory_concept_not_evaluated",
+      "severity": "info",
+      "message": "Concept reference_data is not_evaluated from supplied/default official evidence.",
+      "basis": {
+        "available_relevant_evidence": [],
+        "relevant_coverage_statuses": [],
+        "expected_evidence": [
+          "reference-data-evidence"
+        ],
+        "interpretation": "evidence is incomplete or unavailable"
+      }
+    }
+  ],
+  "claim_boundary": "repository inventory combines observed official evidence and source-registry metadata into a bounded system/repository passport; classifications are inference and missing deep evidence remains not_evaluated"
+}

@@ -1,0 +1,14 @@
+{
+  "catalog_fingerprint": "726655ca796a0b5e747199a0fa1c2665fcdc1bcdfd14e88f86eee43008f3c01f",
+  "knowledge_type_count": 15,
+  "markdown": "/mnt/data/work_generic_plan/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-planning-v0.9.49/knowledge-catalog-v2-0.9.49.md",
+  "next_step": "generic_knowledge_architecture_audit/v1_for_code-declared-data-model",
+  "output": "/mnt/data/work_generic_plan/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-planning-v0.9.49/knowledge-catalog-v2-0.9.49.json",
+  "profile_v2_selectable_count": 14,
+  "runtime_status_counts": {
+    "current_legacy": 7,
+    "current_partial": 4,
+    "current_typed": 3
+  },
+  "schema_version": "knowledge_catalog/v2"
+}

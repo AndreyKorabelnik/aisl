@@ -1,0 +1,220 @@
+{
+  "diagnostics": [
+    {
+      "diagnostic_id": "source_availability_not_assessed",
+      "effect": "This read-only resolution uses contracts only and does not inspect the selected repository/workspace.",
+      "severity": "info"
+    }
+  ],
+  "execution_effect": "none",
+  "knowledge_preview": [
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": true,
+        "explanation": "Materialization уже использует самостоятельный типизированный вход.",
+        "status": "current_typed",
+        "target_contract_status": "current"
+      },
+      "contains": [
+        "типы и сущности, объявленные в коде",
+        "поля и их типы",
+        "объявленные связи между типами",
+        "наследование",
+        "покрытие, доказательства и пробелы анализа кода"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "code-declared-data-model",
+      "knowledge_inputs": [],
+      "minimum_coverage": null,
+      "recommended_knowledge_dependencies": [],
+      "required_by": [],
+      "required_knowledge_dependencies": [],
+      "selection_origin": "user_requested",
+      "sources": [
+        {
+          "actual_source_availability": "not_assessed",
+          "analyzer_ids": [
+            "java-type-structure-analyzer"
+          ],
+          "artifact_kind": "java-type-structure-evidence",
+          "contract_status": "current",
+          "core_contract_fingerprints": [
+            "37d2c9d6e4fd794b4cadccf47b6996692913ca0999b6e820097f183a05335ca9"
+          ],
+          "current_core_stage_ids": [
+            "java_source_observation_build",
+            "java_structural_scan"
+          ],
+          "foundation_requirements": [
+            "java_syntax_index",
+            "source_file_inventory"
+          ],
+          "future_analyzer_id": "java-type-structure-analyzer",
+          "mapping_status": "runtime_published",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Observed model type, field, relationship and inheritance declarations from source code.",
+          "requirement": "required",
+          "runtime_publication": "current",
+          "schema_versions": [
+            "java-type-structure-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Java type structure evidence"
+        }
+      ],
+      "summary": "Типы, поля, объявленные связи и наследование, непосредственно наблюдаемые в исходном коде.",
+      "title": "Модель данных, объявленная в коде"
+    }
+  ],
+  "next_step": "inspect_repository_or_workspace_sources_then_compile_runtime_execution_plan",
+  "plan_fingerprint": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712",
+  "profile": {
+    "knowledge": [
+      {
+        "knowledge_id": "code-declared-data-model",
+        "options": {
+          "include_optional_sources": true,
+          "minimum_coverage": null
+        }
+      }
+    ],
+    "presentation": {
+      "include_coverage": true,
+      "include_evidence": true,
+      "include_gaps": true,
+      "include_technical_details": true
+    },
+    "profile_id": "generic-core-evidence-smoke",
+    "schema_version": "knowledge_profile/v2",
+    "scope": {
+      "kind": "repository",
+      "scope_id": "smoke-repository"
+    },
+    "title": "Generic Core evidence runtime smoke"
+  },
+  "resolution_mode": "contract_only_repository_not_scanned",
+  "resolved_selection": {
+    "implicit_required_knowledge_ids": [],
+    "requested_knowledge_ids": [
+      "code-declared-data-model"
+    ],
+    "resolved_knowledge_ids": [
+      "code-declared-data-model"
+    ]
+  },
+  "resolver_contract_id": "knowledge_resolver_contract/v2",
+  "schema_version": "knowledge_resolution_plan/v2",
+  "source": {
+    "knowledge_catalog_fingerprint": "053a79c2ba7c05d59fbc6f684d5578fc868d049eb7f4851d766cbdef70cbc0b9",
+    "knowledge_profile_fingerprint": "e2bd0594329cab2820519b472c492b30184c7aa82301cd76afc64b0ad4a48ced"
+  },
+  "status": {
+    "actual_source_availability": "not_assessed",
+    "current_legacy_or_partial_count": 0,
+    "current_typed_count": 1,
+    "implicit_required_dependency_count": 0,
+    "overall": "current_typed",
+    "planned_count": 0,
+    "requested_knowledge_count": 1,
+    "resolved_knowledge_count": 1,
+    "target_contract_not_current_count": 0
+  },
+  "technical_plan": {
+    "core_stage_sources": [
+      {
+        "artifact_kinds": [
+          "java-type-structure-evidence"
+        ],
+        "source_titles": [
+          "Java type structure evidence"
+        ],
+        "stage_id": "java_source_observation_build",
+        "used_by_knowledge": [
+          "code-declared-data-model"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "java-type-structure-evidence"
+        ],
+        "source_titles": [
+          "Java type structure evidence"
+        ],
+        "stage_id": "java_structural_scan",
+        "used_by_knowledge": [
+          "code-declared-data-model"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "artifact_kind": "java-type-structure-evidence",
+        "contract_status": "current",
+        "current_core_stage_ids": [
+          "java_source_observation_build",
+          "java_structural_scan"
+        ],
+        "foundation_requirements": [
+          "java_syntax_index",
+          "source_file_inventory"
+        ],
+        "future_analyzer_id": "java-type-structure-analyzer",
+        "mapping_status": "runtime_published",
+        "optional_by": [],
+        "producer_kind": "core",
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "schema_version": "java-type-structure-evidence/v1",
+        "title": "Java type structure evidence"
+      }
+    ],
+    "foundation_requirements": [
+      "java_syntax_index",
+      "source_file_inventory"
+    ],
+    "knowledge_model_dependencies": [],
+    "materializations": [
+      {
+        "availability": {
+          "business_knowledge_available_now": true,
+          "can_execute_through_target_contracts": true,
+          "explanation": "Materialization уже использует самостоятельный типизированный вход.",
+          "status": "current_typed",
+          "target_contract_status": "current"
+        },
+        "capabilities": [
+          "common.code-declared-data-model",
+          "common.code-declared-entities",
+          "common.code-declared-fields",
+          "common.code-declared-inheritance",
+          "common.code-declared-relationships"
+        ],
+        "definition": "Compose observed source-code type, field, relationship and inheritance declarations into a code-declared data model without physical-schema substitution.",
+        "knowledge_id": "code-declared-data-model",
+        "lifecycle": "current_typed_input",
+        "materialization_id": "code-declared-data-model",
+        "materialized_marts": [
+          "code-declared-entities",
+          "code-declared-fields",
+          "code-declared-inheritance",
+          "code-declared-relationships"
+        ],
+        "models": [
+          "code-declared-data-model/v1"
+        ],
+        "scope": "repository_or_workspace"
+      }
+    ],
+    "task_suite_profile_policy": "internal_execution_provenance_only_not_user_configuration"
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "correspondences": [],
+  "correspondences_state": {
+    "availability": "unsupported",
+    "basis": "revision_wide_cross_product_lookup_not_yet_supported_for_this_item"
+  },
+  "coverage_state": {
+    "availability": "available",
+    "basis": "product_coverage_published_for_observed_item"
+  },
+  "evidence": [
+    {
+      "basis": "sql-analysis/v1:sql_statement",
+      "evidence_id": "evidence_f07671d56a9567916817d1da",
+      "evidence_kind": "observed_sql_fact",
+      "source_fragment_ids": [
+        "source_fragment_26d227a0fe8dc37ed820bb00"
+      ]
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "basis": "universal_item_read_context",
+      "binding_id": "sql_analysis_2223a9945b5214605c10a320:sql_statement:query_datamart-profile-fl_000001:evidence_f07671d56a9567916817d1da",
+      "evidence_id": "evidence_f07671d56a9567916817d1da",
+      "role": "direct_observation"
+    }
+  ],
+  "evidence_state": {
+    "availability": "available",
+    "basis": "typed_product_evidence_projection"
+  },
+  "issues": [],
+  "issues_state": {
+    "availability": "not_available",
+    "basis": "no_item_specific_issue_published"
+  },
+  "item": {
+    "evidence": [
+      {
+        "extractor": "sql_profile",
+        "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/custom_b2c_profile_fl.t_dim_client_team_type.sql",
+        "line_end": 1,
+        "line_start": 1,
+        "relative_file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/custom_b2c_profile_fl.t_dim_client_team_type.sql",
+        "snippet": "DROP TABLE IF EXISTS ${$app.pa.schema.name}.t_dim_client_team_type"
+      }
+    ],
+    "evidence_maturity_level": "confirmed",
+    "fact_type": "sql_statement",
+    "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/custom_b2c_profile_fl.t_dim_client_team_type.sql",
+    "line_end": 1,
+    "line_start": 1,
+    "operation": null,
+    "query_id": "query_datamart-profile-fl_000001",
+    "repo_id": "datamart-profile-fl",
+    "scoped_ast_missing_source_candidates": [],
+    "scoped_source_candidate_count": 0,
+    "scoped_source_count": 0,
+    "scoped_source_coverage_status": "complete",
+    "select_scope_ids": [],
+    "semantic_placeholders": [
+      {
+        "end": 43,
+        "name": "app.pa.schema.name",
+        "raw": "${$app.pa.schema.name}",
+        "start": 21,
+        "syntax": "braced_or_template"
+      }
+    ],
+    "sql_statement_id": "query_datamart-profile-fl_000001",
+    "statement_hash": "e46bcccb4ebb15e2",
+    "statement_type": "drop",
+    "target_relation_name": null,
+    "unit_kind": "sql_file",
+    "write_target_ids": []
+  },
+  "item_ref": {
+    "item_kind": "sql_statement",
+    "local_id": "query_datamart-profile-fl_000001",
+    "product_id": "sql_analysis_2223a9945b5214605c10a320",
+    "revision_id": "rev-3156d56a22184e6a609bc36e",
+    "scope_id": "datamart-profile-fl"
+  },
+  "product": {
+    "artifact_id": "sql_analysis_2223a9945b5214605c10a320",
+    "capabilities": [],
+    "content_fingerprint": "2223a9945b5214605c10a320c31f7f54509af070ab1ac1e4b9fccd9b6e5485fd",
+    "coverage": {
+      "coverage_status": "partial",
+      "lineage_gap_count": 70,
+      "sql_files_scanned": 480,
+      "sql_statement_count": 475,
+      "sql_unit_count": 306
+    },
+    "diagnostics": [
+      {
+        "code": "sql_analysis_partial",
+        "message": "SQL analysis published partial coverage; localized resolution statuses and gaps are preserved.",
+        "severity": "warning",
+        "source_refs": []
+      }
+    ],
+    "exact_dependency_product_ids": [],
+    "model_kind": "sql-analysis",
+    "origin_kind": "observed",
+    "physical_artifacts": [
+      {
+        "byte_size": 3799,
+        "filename": "coverage.json",
+        "media_type": "application/json",
+        "role": "coverage",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "8e22d0f863e63078fda44a0984fb8565960f0c020fb9c80241d2a7a8f7dfa9ee",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/8e/8e22d0f863e63078fda44a0984fb8565960f0c020fb9c80241d2a7a8f7dfa9ee/blob"
+      },
+      {
+        "byte_size": 7790,
+        "filename": "sql-analysis-evidence.json",
+        "media_type": "application/json",
+        "role": "descriptor",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "785ca2fdb039572aef3857446270459d4e69da5db7ed01fe537d055e401a23c3",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/78/785ca2fdb039572aef3857446270459d4e69da5db7ed01fe537d055e401a23c3/blob"
+      },
+      {
+        "byte_size": 15654983,
+        "filename": "sql_column_usage.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_column_usage",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "2d2768cd26a4bffd0b28108cceae9c2591170ac2ad29a05c6a680a29cd73daad",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/2d/2d2768cd26a4bffd0b28108cceae9c2591170ac2ad29a05c6a680a29cd73daad/blob"
+      },
+      {
+        "byte_size": 1908401,
+        "filename": "sql_direct_column_lineage.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_direct_column_lineage",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "2842d756e8421575df1d3f9c53f7f32e3e9483df4d93b09401e610dcf9698965",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/28/2842d756e8421575df1d3f9c53f7f32e3e9483df4d93b09401e610dcf9698965/blob"
+      },
+      {
+        "byte_size": 774284,
+        "filename": "sql_join_edge.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_join_edge",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "621662ef977cb55ec924e69980387d32000633759126fc65c08ef46b4815563b",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/62/621662ef977cb55ec924e69980387d32000633759126fc65c08ef46b4815563b/blob"
+      },
+      {
+        "byte_size": 2509667,
+        "filename": "sql_object_dependency.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_object_dependency",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "b907bb040ddb639c5b9372aaa76d9e17df51cf65cd22870a9a32bcd13f8d7ad5",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/b9/b907bb040ddb639c5b9372aaa76d9e17df51cf65cd22870a9a32bcd13f8d7ad5/blob"
+      },
+      {
+        "byte_size": 8293216,
+        "filename": "sql_projection.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_projection",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "aa345bede6630b8f91bbf5bf7e17d7061a94ad670af5e11a995cef3183070136",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/aa/aa345bede6630b8f91bbf5bf7e17d7061a94ad670af5e11a995cef3183070136/blob"
+      },
+      {
+        "byte_size": 8979981,
+        "filename": "sql_recursive_column_lineage.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_recursive_column_lineage",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "939df4284cd9ae03713990b2954bb9ceb773208fe4f093decdf5e4c9d0254b7a",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/93/939df4284cd9ae03713990b2954bb9ceb773208fe4f093decdf5e4c9d0254b7a/blob"
+      },
+      {
+        "byte_size": 7956208,
+        "filename": "sql_relation.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_relation",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "e314a8573ca44e05d23370d03cc9572a3b149235ac30c223634514bef7502a04",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/e3/e314a8573ca44e05d23370d03cc9572a3b149235ac30c223634514bef7502a04/blob"
+      },
+      {
+        "byte_size": 97794,
+        "filename": "sql_scoped_lineage_gap.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_scoped_lineage_gap",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "8a1fb37aeda935b3a8eca415c685fea39bea1efec02f43e916f5d4025502f9e4",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/8a/8a1fb37aeda935b3a8eca415c685fea39bea1efec02f43e916f5d4025502f9e4/blob"
+      },
+      {
+        "byte_size": 1366895,
+        "filename": "sql_script_binding.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_script_binding",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "086b406d8bfadcf704ecdff9ad8a42c523f49c4331e364cd3c9d1b4f55bf3ec8",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/08/086b406d8bfadcf704ecdff9ad8a42c523f49c4331e364cd3c9d1b4f55bf3ec8/blob"
+      },
+      {
+        "byte_size": 1220929,
+        "filename": "sql_script_call.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_script_call",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "465f222da7b41b0649a57621429941b2e844f1d3241a25f596762295d6f1ac43",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/46/465f222da7b41b0649a57621429941b2e844f1d3241a25f596762295d6f1ac43/blob"
+      },
+      {
+        "byte_size": 196680,
+        "filename": "sql_script_embedded_sql.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_script_embedded_sql",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "0da7617f181c4f982c88b300fca997aeeb1ffe68eeee032509860263ec84e9c6",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/0d/0da7617f181c4f982c88b300fca997aeeb1ffe68eeee032509860263ec84e9c6/blob"
+      },
+      {
+        "byte_size": 173884,
+        "filename": "sql_script_invocation.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_script_invocation",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "1ae952e4103401ace16b80ba681b973735a1d6ef3bdc4ebe231f02e9e1a5ae46",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/1a/1ae952e4103401ace16b80ba681b973735a1d6ef3bdc4ebe231f02e9e1a5ae46/blob"
+      },
+      {
+        "byte_size": 2252505,
+        "filename": "sql_script_statement.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_script_statement",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "51757e087b6b29ee9564b71724a3d170b1966a78dc1cd2208397aaf004be35d2",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/51/51757e087b6b29ee9564b71724a3d170b1966a78dc1cd2208397aaf004be35d2/blob"
+      },
+      {
+        "byte_size": 5916855,
+        "filename": "sql_select_scope.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_select_scope",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "3d7f545e37ac376cba78ca2a6c43f8d847cc47f6e9dad2a6cdcfe33a0a7a6c9f",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/3d/3d7f545e37ac376cba78ca2a6c43f8d847cc47f6e9dad2a6cdcfe33a0a7a6c9f/blob"
+      },
+      {
+        "byte_size": 2544119,
+        "filename": "sql_semantic_placeholder.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_semantic_placeholder",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "1f88bd7ddedf80fc51141c4357988fc78a3e10ff71b4c66914da07f726ace0be",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/1f/1f88bd7ddedf80fc51141c4357988fc78a3e10ff71b4c66914da07f726ace0be/blob"
+      },
+      {
+        "byte_size": 1414523,
+        "filename": "sql_statement.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_statement",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "ab83f2571c73d289e41d3cc44758eeea8afbe52e8a4e015bde36de3a5c6d654a",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/ab/ab83f2571c73d289e41d3cc44758eeea8afbe52e8a4e015bde36de3a5c6d654a/blob"
+      },
+      {
+        "byte_size": 988564,
+        "filename": "sql_target_projection_binding.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_target_projection_binding",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "0281855e57ecb9d9e9ae46bbd500bd4bea2952387ce55c1ff255b4493529f272",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/02/0281855e57ecb9d9e9ae46bbd500bd4bea2952387ce55c1ff255b4493529f272/blob"
+      },
+      {
+        "byte_size": 3323522,
+        "filename": "sql_workflow_binding.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_workflow_binding",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "09a1fd7197837bb12e782bf6d7f350eb0cb96edc980fb80231ad3eb453e3b2c0",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/09/09a1fd7197837bb12e782bf6d7f350eb0cb96edc980fb80231ad3eb453e3b2c0/blob"
+      },
+      {
+        "byte_size": 383690,
+        "filename": "sql_write_target.jsonl",
+        "media_type": "application/x-ndjson",
+        "role": "fact:sql_write_target",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "83adde6fa3e7c0eee639c5130c095a4c1abf3189ee4fba0f7ff904be7cc9c09c",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/83/83adde6fa3e7c0eee639c5130c095a4c1abf3189ee4fba0f7ff904be7cc9c09c/blob"
+      },
+      {
+        "byte_size": 6846,
+        "filename": "manifest.json",
+        "media_type": "application/json",
+        "role": "manifest",
+        "schema_version": "sql-analysis/v1",
+        "sha256": "9cb2286bf70f9be735e4ce8249af70ed1d46d196b9003f60a42efe90f1612cfe",
+        "uri": "file:///mnt/data/aisl_multi_file_work/real_sql/aisl/artifact-store/sha256/9c/9cb2286bf70f9be735e4ce8249af70ed1d46d196b9003f60a42efe90f1612cfe/blob"
+      }
+    ],
+    "producer_contract_ref": "core_evidence_artifact_contract/v1",
+    "producer_ref": "code-analyzer-core:sql-analysis-analyzer",
+    "product_slot_id": "core:sql-analysis",
+    "provenance": {
+      "core_artifact_provenance": {
+        "canonical_payload_contract": "sql-analysis/v1-jsonl-shards",
+        "execution_runtime": "core_evidence_runtime/v1",
+        "semantic_routing": "artifact_kind_plus_schema_version"
+      },
+      "foundation": {
+        "contract_version": null,
+        "fingerprint": null,
+        "sections": [],
+        "used": false
+      },
+      "producer": {
+        "analyzer_id": "sql-analysis-analyzer",
+        "analyzer_version": "0.44.23a5",
+        "component": "code-analyzer-core"
+      },
+      "required_by": [
+        "aisl-multifile-persistence-acceptance"
+      ],
+      "source_snapshot": {
+        "file_count": 480,
+        "fingerprint": "12adb25028a78e74436dc70f1d5a2948744465b15578200d8beedafc4bfb44fa",
+        "revision": null,
+        "scope": "sql_analysis_sources",
+        "source_id": "datamart-profile-fl"
+      }
+    },
+    "schema_version": "sql-analysis/v1",
+    "source_materialization_id": null
+  },
+  "projection_basis": "typed_product_universal_projection",
+  "projection_status": "available",
+  "revision_id": "rev-3156d56a22184e6a609bc36e",
+  "schema_version": "aisl-knowledge-item-read/v1",
+  "source_fragments": [
+    {
+      "content_identity": null,
+      "extractor": "sql_profile",
+      "fragment_id": "source_fragment_26d227a0fe8dc37ed820bb00",
+      "fragment_kind": "sql_source_location",
+      "line_end": 1,
+      "line_start": 1,
+      "locator": "repo://datamart-profile-fl/hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/custom_b2c_profile_fl.t_dim_client_team_type.sql#L1",
+      "path": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/custom_b2c_profile_fl.t_dim_client_team_type.sql",
+      "source_id": "datamart-profile-fl"
+    }
+  ],
+  "system_id": "datamart-profile-fl"
+}

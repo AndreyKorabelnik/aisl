@@ -1,0 +1,15 @@
+{
+  "knowledge_materialization_move_count": 4,
+  "map_fingerprint": "5456c1fd15ff8f49671964f0a6d4a4c1f3f0e0c759a385a3efccef20614fce5e",
+  "markdown": "/mnt/data/core-klc-responsibility-map-v1-0.9.41.md",
+  "migration_stage_ids": [
+    "code_conceptual_model_build",
+    "reference_data_fact_base",
+    "system_description_enrichment",
+    "workspace_sql_mart_catalog_build"
+  ],
+  "output": "/mnt/data/core-klc-responsibility-map-v1-0.9.41.json",
+  "result_count": 67,
+  "schema_version": "core_klc_responsibility_map/v1",
+  "stage_count": 48
+}

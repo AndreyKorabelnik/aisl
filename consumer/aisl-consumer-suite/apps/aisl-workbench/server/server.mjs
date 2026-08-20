@@ -1,0 +1,21 @@
+import http from 'node:http';
+import {readFile, stat} from 'node:fs/promises';
+import {resolve, dirname, extname, sep} from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const publicRoot = resolve(here, '../public');
+const upstream = String(process.env.AISL_API_URL || '').replace(/\/+$/, '');
+const kcpUpstream = String(process.env.AISL_KCP_URL || '').replace(/\/+$/, '');
+const reportingUpstream = String(process.env.AISL_REPORTING_URL || '').replace(/\/+$/, '');
+const agentUpstream = String(process.env.AISL_AGENT_URL || '').replace(/\/+$/, '');
+const host = process.env.HOST || '127.0.0.1';
+const port = Number(process.env.PORT || 18180);
+if (!upstream) throw new Error('AISL_API_URL is required');
+
+const contentType = (path) => ({'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8'}[extname(path)] || 'application/octet-stream');
+function safePublicPath(urlPath) {const decoded = decodeURIComponent(urlPath.split('?')[0]);const rel = decoded === '/' ? 'index.html' : decoded.replace(/^\/+/, '');const p = resolve(publicRoot, rel);if (p !== publicRoot && !p.startsWith(publicRoot + sep)) return null;return p;}
+async function proxy(req,res,base,{name,rewrite=(u)=>u,methods=null,forwardAuth=false}={name:'upstream',rewrite:(u)=>u,methods:null,forwardAuth:false}){if(!base){res.writeHead(503,{'content-type':'application/json'});res.end(JSON.stringify({error:`${name}_not_configured`}));return;}if(methods&&!methods.includes(req.method||'GET')){res.writeHead(405,{'content-type':'application/json'});res.end(JSON.stringify({error:`${name}_method_not_allowed`}));return;}const target=base+rewrite(req.url||'/');try{const headers={'content-type':req.headers['content-type']||'application/json'};if(forwardAuth&&req.headers.authorization)headers.authorization=req.headers.authorization;const chunks=[];for await(const chunk of req)chunks.push(chunk);const body=chunks.length?Buffer.concat(chunks):undefined;const response=await fetch(target,{method:req.method,headers,body});const data=Buffer.from(await response.arrayBuffer());res.writeHead(response.status,{'content-type':response.headers.get('content-type')||'application/octet-stream'});res.end(data);}catch(err){res.writeHead(502,{'content-type':'application/json'});res.end(JSON.stringify({error:`${name}_unreachable`,detail:String(err)}));}}
+function kcpAllowed(url,method){const p=(url||'').split('?')[0].replace(/^\/api\/kcp/,'/api');if(method==='GET')return /^\/api\/v1\/(version|capabilities|repositories(?:\/[^/]+)?|scenarios(?:\/.*)?|jobs(?:\/[^/]+(?:\/logs)?)?)$/.test(p);if(method==='POST')return p==='/api/v1/repositories/discover'||p==='/api/v1/jobs/preview'||p==='/api/v1/jobs';return false;}
+const server = http.createServer(async (req,res) => {const url=req.url||'/';if(url==='/healthz'){res.writeHead(200,{'content-type':'application/json'});res.end(JSON.stringify({status:'ok',knowledge_api:upstream,kcp:kcpUpstream||null,reporting:reportingUpstream||null,agent:agentUpstream||null}));return;}if(url.startsWith('/api/knowledge/'))return proxy(req,res,upstream,{name:'knowledge_api',methods:['GET'],forwardAuth:true});if(url.startsWith('/api/kcp/')){if(!kcpAllowed(url,req.method||'GET')){res.writeHead(405,{'content-type':'application/json'});res.end(JSON.stringify({error:'kcp_route_not_allowed'}));return;}return proxy(req,res,kcpUpstream,{name:'kcp',rewrite:(u)=>u.replace(/^\/api\/kcp/,'/api')});}if(url.startsWith('/api/reporting/'))return proxy(req,res,reportingUpstream,{name:'reporting'});if(url.startsWith('/api/agent/'))return proxy(req,res,agentUpstream,{name:'agent'});const path=safePublicPath(url);if(!path){res.writeHead(400);res.end('bad path');return;}try{const s=await stat(path);if(!s.isFile())throw new Error('not file');const body=await readFile(path);res.writeHead(200,{'content-type':contentType(path),'cache-control':'no-cache'});res.end(body);}catch{res.writeHead(404,{'content-type':'text/plain; charset=utf-8'});res.end('not found');}});
+server.listen(port,host,()=>console.log(`AISL Platform http://${host}:${port} -> Knowledge ${upstream}; KCP ${kcpUpstream||'off'}`));

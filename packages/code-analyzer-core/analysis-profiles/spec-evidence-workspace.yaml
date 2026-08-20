@@ -1,0 +1,41 @@
+profile_id: spec-evidence-workspace
+profile_version: 1
+
+name: Specification artifacts to evidence workspace
+
+source_type: spec_artifacts
+workspace_types:
+  - java
+
+description: >
+  Deterministically normalizes data-evidence.yaml and accompanying SDD/OpenSpec
+  artifacts into the standard analysis-output contract used by analyze-java.
+  This profile does not inspect source code, does not call LLMs, does not make
+  business decisions and does not produce an authoritative specification.
+
+goal:
+  primary_question: >
+    Build a standard evidence workspace from deterministic specification
+    artifacts so existing LLM analysis profiles can use the ordinary evidence
+    CLI without loading the full data-evidence.yaml into the prompt.
+
+pipeline:
+  stages:
+    - id: spec_artifact_discovery
+    - id: data_evidence_yaml_parse
+    - id: spec_to_standard_analysis_output
+    - id: evidence_coverage_build
+    - id: compact_package
+
+output_contract:
+  intent: spec_artifacts_as_standard_evidence_workspace
+  primary_interface: evidence_access_api
+  source_type: spec_artifacts
+  compatible_with:
+    - system-data-model-description
+    - foreign-data-persistence
+  policy:
+    code_evidence_included: false
+    source_inspection_available: false
+    authoritative_specification: false
+    business_decisions_made: false

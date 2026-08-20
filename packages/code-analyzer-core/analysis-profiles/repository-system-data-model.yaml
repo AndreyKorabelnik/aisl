@@ -1,0 +1,41 @@
+profile_id: repository-system-data-model
+profile_version: 3
+extends: ../analysis-profile-fragments/repository-analysis-foundation
+name: Complete system data-model evidence
+description: >
+  Общая evidence foundation плюс persistence origin resolution на явно заданной глубине,
+  effective data-model materialization и детерминированная conceptual model.
+  Не строит repository-wide field-flow и не извлекает полные declared-value sets.
+capabilities:
+  - data-model.persistence-observations
+  - data-model.persistence
+  - data-model.attribute-lineage
+  - data-model.conceptual-model
+analysis_parameters:
+  persistence_depth: deep
+goal:
+  primary_question: Какие сущности, атрибуты, таблицы, ключи, связи и наблюдаемые persistent mappings присутствуют в системе?
+pipeline:
+  stages:
+    - id: java_persistence_lineage_build
+      options:
+        max_depth: 7
+        deep: true
+        suspend_automatic_gc: true
+        progress_interval: 25
+    - id: java_data_model_lineage_build
+      options:
+        max_depth: 4
+    - id: java_table_observation_build
+  final_stages:
+    - id: core_output
+    - id: normalize_facts
+    - id: compact_package
+output_contract:
+  intent: system_data_model_evidence
+  primary_interface: evidence_access_api
+  policy:
+    full_persistence_context_available: true
+    persistence_depth: deep
+    field_flow_not_requested: true
+    declared_values_not_requested: true

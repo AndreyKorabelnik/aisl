@@ -1,0 +1,13 @@
+interfaces:
+  deduplicate_by: [operation, endpoint_or_topic, http_method, payload_schema, boundary_kind]
+  include_all_within_budget: true
+data_objects:
+  representative_limit: {executive: 12, standard: 25, detailed: 30}
+  ranking: relationship-key-usage-score/v1
+relationships:
+  limit: {executive: 12, standard: 20, detailed: 40}
+journeys:
+  limit: {executive: 5, standard: 5, detailed: 8}
+  ranking: boundary-storage-external-coverage/v1
+evidence:
+  exact_repository_path_lines: true

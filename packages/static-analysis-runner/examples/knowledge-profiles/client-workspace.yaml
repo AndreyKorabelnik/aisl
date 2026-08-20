@@ -1,0 +1,28 @@
+schema_version: knowledge_profile/v2
+profile_id: client-workspace-knowledge
+title: База знаний клиентского профиля
+scope:
+  kind: workspace
+  scope_id: client-profile
+knowledge:
+  - knowledge_id: effective-data-model
+    options:
+      include_optional_sources: true
+      minimum_coverage: 0.70
+  - knowledge_id: sql-source-inventory
+    options:
+      include_optional_sources: true
+      minimum_coverage: null
+  - knowledge_id: system-interactions
+    options:
+      include_optional_sources: true
+      minimum_coverage: null
+  - knowledge_id: reference-data
+    options:
+      include_optional_sources: true
+      minimum_coverage: null
+presentation:
+  include_evidence: true
+  include_coverage: true
+  include_gaps: true
+  include_technical_details: false

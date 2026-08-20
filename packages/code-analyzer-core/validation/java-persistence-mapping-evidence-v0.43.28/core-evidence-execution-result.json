@@ -1,0 +1,209 @@
+{
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_64c73013fc911a39fb73b5ba",
+      "analyzer_id": "java-persistence-mapping-analyzer",
+      "analyzer_version": "0.43.28",
+      "artifact_ids": [
+        "java_persistence_mapping_0933b31e59a12fb7073419c6"
+      ],
+      "parameters": {},
+      "required_by": [
+        "logical-physical-mapping"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "java-persistence-mapping-evidence",
+          "schema_version": "java-persistence-mapping-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2"
+      ],
+      "source_snapshot_ids": [
+        "core04328-smoke"
+      ],
+      "status": "completed"
+    },
+    {
+      "analyzer_execution_id": "core_analyzer_execution_0aabb405bbf60d4389de58c5",
+      "analyzer_id": "java-type-structure-analyzer",
+      "analyzer_version": "0.43.28",
+      "artifact_ids": [
+        "java_type_structure_15875066aa6a1b6e84c565b2"
+      ],
+      "parameters": {},
+      "required_by": [
+        "code-declared-data-model"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "java-type-structure-evidence",
+          "schema_version": "java-type-structure-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2"
+      ],
+      "source_snapshot_ids": [
+        "core04328-smoke"
+      ],
+      "status": "completed"
+    }
+  ],
+  "diagnostics": [],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "java_persistence_mapping_0933b31e59a12fb7073419c6",
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "content_fingerprint": "0933b31e59a12fb7073419c649e96fde46d1048962f9e7128708ebf0b68efe3b",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "coverage_status": "complete",
+        "diagnostic_count": 0,
+        "java_files_failed": 0,
+        "java_files_in_scope": 1,
+        "java_files_parsed": 1,
+        "java_files_with_parse_errors": 0,
+        "mapping_gap_count": 0,
+        "persistence_field_mapping_count": 4,
+        "persistence_inheritance_mapping_count": 0,
+        "persistence_key_mapping_count": 2,
+        "persistence_relationship_mapping_count": 1,
+        "persistence_type_mapping_count": 2,
+        "unsupported_composite_annotation_count": 0
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 11116,
+        "kind": "file",
+        "path": "evidence/java-persistence-mapping-evidence.json",
+        "sha256": "34d6550cd1714b68b5aa953fd398977f7640e7c45fea68f64ca905f30d20386d"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_64c73013fc911a39fb73b5ba",
+      "provenance": {
+        "core_artifact_provenance": {
+          "execution_runtime": "core_evidence_runtime/v1",
+          "parser_provider": "tree_sitter",
+          "semantic_routing": "artifact_kind_plus_schema_version",
+          "source_structural_artifact_fingerprint": "15875066aa6a1b6e84c565b206a1e6bbf3dd69281faf5aec47b13ed2b97fb7b1"
+        },
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "java-persistence-mapping-analyzer",
+          "analyzer_version": "0.43.28",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [
+          "logical-physical-mapping"
+        ],
+        "source_snapshot": {
+          "file_count": 1,
+          "fingerprint": "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2",
+          "revision": null,
+          "scope": "java_source_files",
+          "source_id": "core04328-smoke"
+        }
+      },
+      "schema_version": "java-persistence-mapping-evidence/v1",
+      "status": "completed"
+    },
+    {
+      "artifact_id": "java_type_structure_15875066aa6a1b6e84c565b2",
+      "artifact_kind": "java-type-structure-evidence",
+      "content_fingerprint": "15875066aa6a1b6e84c565b206a1e6bbf3dd69281faf5aec47b13ed2b97fb7b1",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 11,
+        "coverage_status": "complete",
+        "enum_constant_declaration_count": 0,
+        "field_declaration_count": 4,
+        "inheritance_declaration_count": 0,
+        "java_files_discovered": 1,
+        "java_files_failed": 0,
+        "java_files_in_scope": 1,
+        "java_files_parsed": 1,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 2,
+        "type_reference_count": 1,
+        "unresolved_type_reference_count": 0,
+        "unsupported_declaration_count": 0
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 19807,
+        "kind": "file",
+        "path": "evidence/java-type-structure-evidence.json",
+        "sha256": "3fa52ee6be79ceed72b0fe6c769d6b330ed82074e6e441ad64631aa126bb9ee1"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_0aabb405bbf60d4389de58c5",
+      "provenance": {
+        "core_artifact_provenance": {
+          "execution_runtime": "core_evidence_runtime/v1",
+          "parser_provider": "tree_sitter",
+          "semantic_routing": "artifact_kind_plus_schema_version"
+        },
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "java-type-structure-analyzer",
+          "analyzer_version": "0.43.28",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "source_snapshot": {
+          "file_count": 1,
+          "fingerprint": "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2",
+          "revision": null,
+          "scope": "java_source_files",
+          "source_id": "core04328-smoke"
+        }
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "status": "completed"
+    }
+  ],
+  "execution_id": "core_evidence_execution_dd3684cee2d06a67350bc5d5",
+  "producer": {
+    "component": "code-analyzer-core",
+    "version": "0.43.28"
+  },
+  "request_fingerprint": "d508392be143b73fbaf047f555b65f519e26d53ca59d97a23cd2ebd8f50f4a14",
+  "result_fingerprint": "f5a965c9093fa79b35a92802bab6f97ef41c66c168356a69de46bab6285244c4",
+  "runtime_contract_id": "core_evidence_runtime/v1",
+  "schema_version": "core_evidence_execution_result/v1",
+  "source": {
+    "source_id": "core04328-smoke",
+    "source_kind": "repository"
+  },
+  "source_snapshots": [
+    {
+      "file_count": 1,
+      "fingerprint": "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2",
+      "revision": null,
+      "scope": "java_source_files",
+      "source_id": "core04328-smoke"
+    }
+  ],
+  "status": "completed"
+}

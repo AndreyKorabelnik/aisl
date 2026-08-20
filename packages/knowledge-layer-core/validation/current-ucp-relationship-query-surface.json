@@ -1,0 +1,480 @@
+{
+  "schema_version": "knowledge_query/v1",
+  "query": {
+    "kind": "get_data_object_relationships",
+    "scope": {
+      "kind": "workspace",
+      "id": "ucp-canonical-validation",
+      "repository_ids": []
+    },
+    "filters": {
+      "source_object_id": "",
+      "target_object_id": "",
+      "relation_kind": null
+    },
+    "max_results": 1
+  },
+  "items": [
+    {
+      "relationship_id": "model_relationship_2e2d5c588e3267580c14",
+      "relationship_kind": "reference_field",
+      "source": {
+        "repo_id": "ucp_api",
+        "object_id": "java_type_1f5e0de7a49fb0b6cb8b",
+        "object_fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+        "field": "birthDate",
+        "inherited": false,
+        "cardinality": "one"
+      },
+      "target": {
+        "repo_id": "ucp_api",
+        "object_id": "java_type_a731c7d78c418196f71e",
+        "type_fqcn": "com.sbt.bm.ucp.retail.model.individual.BirthDate",
+        "aliases": [
+          "com.sbt.bm.ucp.retail.model.individual.BirthDate"
+        ],
+        "logical_identity": {
+          "status": "observed",
+          "fields": [
+            "id"
+          ],
+          "version_fields": [
+            "version"
+          ],
+          "collocation_fields": [],
+          "classification_basis": "observed_key_member_role"
+        },
+        "storage_key": {
+          "status": "observed",
+          "fields": [
+            "key"
+          ],
+          "expressions": [
+            "parentKey + '.' + (checkExists != null ? fieldName + '_' + birthDate.getId() : fieldName)",
+            "parentKey + '.' + fieldName"
+          ],
+          "evidence": [
+            {
+              "storage_reference_id": "model_relationship_storage_reference_a6fa5b03b926e8ee7e45",
+              "target_alias": "com.sbt.bm.ucp.retail.model.individual.BirthDate",
+              "field": "key",
+              "expression": "parentKey + '.' + (checkExists != null ? fieldName + '_' + birthDate.getId() : fieldName)",
+              "expression_tree": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "field": "left",
+                        "node_type": "identifier",
+                        "value": "parentKey"
+                      },
+                      {
+                        "field": "operator",
+                        "node_type": "+",
+                        "value": "+"
+                      },
+                      {
+                        "field": "right",
+                        "node_type": "character_literal",
+                        "value": "'.'"
+                      }
+                    ],
+                    "field": "left",
+                    "node_type": "binary_expression",
+                    "operator": "+"
+                  },
+                  {
+                    "field": "operator",
+                    "node_type": "+",
+                    "value": "+"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "field": "left",
+                                "node_type": "identifier",
+                                "value": "checkExists"
+                              },
+                              {
+                                "field": "operator",
+                                "node_type": "!=",
+                                "value": "!="
+                              },
+                              {
+                                "field": "right",
+                                "node_type": "null_literal",
+                                "value": "null"
+                              }
+                            ],
+                            "field": "condition",
+                            "node_type": "binary_expression",
+                            "operator": "!="
+                          },
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "field": "left",
+                                    "node_type": "identifier",
+                                    "value": "fieldName"
+                                  },
+                                  {
+                                    "field": "operator",
+                                    "node_type": "+",
+                                    "value": "+"
+                                  },
+                                  {
+                                    "field": "right",
+                                    "node_type": "character_literal",
+                                    "value": "'_'"
+                                  }
+                                ],
+                                "field": "left",
+                                "node_type": "binary_expression",
+                                "operator": "+"
+                              },
+                              {
+                                "field": "operator",
+                                "node_type": "+",
+                                "value": "+"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "field": "object",
+                                    "node_type": "identifier",
+                                    "value": "birthDate"
+                                  },
+                                  {
+                                    "field": "name",
+                                    "node_type": "identifier",
+                                    "value": "getId"
+                                  },
+                                  {
+                                    "field": "arguments",
+                                    "node_type": "argument_list",
+                                    "value": "()"
+                                  }
+                                ],
+                                "field": "right",
+                                "node_type": "method_invocation"
+                              }
+                            ],
+                            "field": "consequence",
+                            "node_type": "binary_expression",
+                            "operator": "+"
+                          },
+                          {
+                            "field": "alternative",
+                            "node_type": "identifier",
+                            "value": "fieldName"
+                          }
+                        ],
+                        "node_type": "ternary_expression"
+                      }
+                    ],
+                    "field": "right",
+                    "node_type": "parenthesized_expression"
+                  }
+                ],
+                "end_byte": 51969,
+                "node_type": "binary_expression",
+                "operator": "+",
+                "start_byte": 51880,
+                "text": "parentKey + '.' + (checkExists != null ? fieldName + '_' + birthDate.getId() : fieldName)"
+              },
+              "input_symbols": [
+                "parentKey",
+                "checkExists",
+                "fieldName",
+                "birthDate.getId",
+                "birthDate"
+              ],
+              "parameter_bindings": [
+                {
+                  "call_observation_id": "call_f63177d4a60090b91a33",
+                  "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "cvb",
+                  "caller_expression": "cvb",
+                  "caller_operation": "IndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "changeVectorBuilderFactoryImpl.changeVectorBuilder()"
+                },
+                {
+                  "call_observation_id": "call_f63177d4a60090b91a33",
+                  "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "birthDate",
+                  "caller_expression": "individual.getBirthDate()",
+                  "caller_operation": "IndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "individual.getBirthDate()"
+                },
+                {
+                  "call_observation_id": "call_f63177d4a60090b91a33",
+                  "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "fieldName",
+                  "caller_expression": "\"birthDate\"",
+                  "caller_operation": "IndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "\"birthDate\""
+                },
+                {
+                  "call_observation_id": "call_f63177d4a60090b91a33",
+                  "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "parentKey",
+                  "caller_expression": "key",
+                  "caller_operation": "IndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "\"Individual_\" + individual.getId()"
+                },
+                {
+                  "call_observation_id": "call_f63177d4a60090b91a33",
+                  "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "checkExists",
+                  "caller_expression": "null",
+                  "caller_operation": "IndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "null"
+                }
+              ],
+              "reference_operation": "referenceField",
+              "value_origin": "returned_target_storage_key",
+              "value_binding_resolution": "nearest_visible_dominating_assignment",
+              "source_operation": "IndividualToChangeVectorConverter.convert",
+              "target_converter_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+              "physical_encoding": "downstream_interpretation_required",
+              "provenance": {
+                "repo_id": "ucp_tsa_v4",
+                "source_observation_id": "source_observation_70cee052175daedaf55a",
+                "target_storage_record_observation_id": "source_observation_b6aa62de643a3f62e45d",
+                "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java",
+                "line_start": 200,
+                "line_end": 200,
+                "observation_basis": "exact_source_field_target_storage_reference"
+              }
+            },
+            {
+              "storage_reference_id": "model_relationship_storage_reference_ba6f53ec1544276e2b0a",
+              "target_alias": "com.sbt.bm.ucp.retail.model.individual.BirthDate",
+              "field": "key",
+              "expression": "parentKey + '.' + fieldName",
+              "expression_tree": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "field": "left",
+                        "node_type": "identifier",
+                        "value": "parentKey"
+                      },
+                      {
+                        "field": "operator",
+                        "node_type": "+",
+                        "value": "+"
+                      },
+                      {
+                        "field": "right",
+                        "node_type": "character_literal",
+                        "value": "'.'"
+                      }
+                    ],
+                    "field": "left",
+                    "node_type": "binary_expression",
+                    "operator": "+"
+                  },
+                  {
+                    "field": "operator",
+                    "node_type": "+",
+                    "value": "+"
+                  },
+                  {
+                    "field": "right",
+                    "node_type": "identifier",
+                    "value": "fieldName"
+                  }
+                ],
+                "end_byte": 55707,
+                "node_type": "binary_expression",
+                "operator": "+",
+                "start_byte": 55680,
+                "text": "parentKey + '.' + fieldName"
+              },
+              "input_symbols": [
+                "parentKey",
+                "fieldName"
+              ],
+              "parameter_bindings": [
+                {
+                  "call_observation_id": "call_b5b273401fa3d462f879",
+                  "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "cvb",
+                  "caller_expression": "cvb",
+                  "caller_operation": "JsonIndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "changeVectorBuilderFactoryImpl.changeVectorBuilder()"
+                },
+                {
+                  "call_observation_id": "call_b5b273401fa3d462f879",
+                  "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "entityNode",
+                  "caller_expression": "birthDateNode",
+                  "caller_operation": "JsonIndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "individualNode.get(\"birthDate\")"
+                },
+                {
+                  "call_observation_id": "call_b5b273401fa3d462f879",
+                  "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "fieldName",
+                  "caller_expression": "\"birthDate\"",
+                  "caller_operation": "JsonIndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "\"birthDate\""
+                },
+                {
+                  "call_observation_id": "call_b5b273401fa3d462f879",
+                  "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "parentKey",
+                  "caller_expression": "key",
+                  "caller_operation": "JsonIndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "\"Individual_\" + individualNode.get(\"id\").asText()"
+                },
+                {
+                  "call_observation_id": "call_b5b273401fa3d462f879",
+                  "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+                  "callee_parameter": "checkExists",
+                  "caller_expression": "null",
+                  "caller_operation": "JsonIndividualToChangeVectorConverter.convert",
+                  "resolution": "exact_same_class_name_and_arity",
+                  "resolved_expression": "null"
+                }
+              ],
+              "reference_operation": "referenceField",
+              "value_origin": "returned_target_storage_key",
+              "value_binding_resolution": "nearest_visible_dominating_assignment",
+              "source_operation": "JsonIndividualToChangeVectorConverter.convert",
+              "target_converter_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+              "physical_encoding": "downstream_interpretation_required",
+              "provenance": {
+                "repo_id": "ucp_tsa_v4",
+                "source_observation_id": "source_observation_801d58ff8e540f2fb0a1",
+                "target_storage_record_observation_id": "source_observation_cb4d7b30a92c4a9b2be6",
+                "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java",
+                "line_start": 85,
+                "line_end": 85,
+                "observation_basis": "exact_source_field_target_storage_reference"
+              }
+            }
+          ]
+        }
+      },
+      "polymorphic_targets": [],
+      "reference": {
+        "assignment_operations": [
+          "referenceField"
+        ],
+        "value_origins": [
+          "returned_target_storage_key"
+        ],
+        "encoding_inputs": {
+          "type_component": {
+            "source": "target_alias",
+            "values": [
+              "com.sbt.bm.ucp.retail.model.individual.BirthDate"
+            ]
+          },
+          "key_component": {
+            "source": "target_storage_key",
+            "fields": [
+              "key"
+            ]
+          }
+        },
+        "physical_encoding": {
+          "status": "downstream_interpretation_required"
+        }
+      },
+      "join": {
+        "method": "storage_reference_requires_encoding",
+        "source": {
+          "field": "birthDate"
+        },
+        "target": {
+          "kind": "storage_key",
+          "fields": [
+            "key"
+          ]
+        },
+        "requires_encoding_interpretation": true,
+        "physical_join_confirmed": false
+      },
+      "evidence_ids": [
+        "evidence_e5001f2513d75100513f",
+        "evidence_54e0a25a0706120c02c4",
+        "evidence_a5569bd7054745797bc0",
+        "evidence_024c9e8ff6fe3d78807e"
+      ]
+    }
+  ],
+  "summary": {
+    "relationship_count": 1,
+    "relation_kind_counts": {
+      "reference_field": 1
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence_024c9e8ff6fe3d78807e",
+      "repo_id": "ucp_tsa_v4",
+      "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java",
+      "line_start": 1057,
+      "line_end": 1057,
+      "extractor": "java_tree_sitter",
+      "snippet": null,
+      "maturity": "observed"
+    },
+    {
+      "evidence_id": "evidence_54e0a25a0706120c02c4",
+      "repo_id": "ucp_tsa_v4",
+      "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java",
+      "line_start": 85,
+      "line_end": 85,
+      "extractor": "java_tree_sitter",
+      "snippet": null,
+      "maturity": "observed"
+    },
+    {
+      "evidence_id": "evidence_a5569bd7054745797bc0",
+      "repo_id": "ucp_tsa_v4",
+      "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java",
+      "line_start": 921,
+      "line_end": 921,
+      "extractor": "java_tree_sitter",
+      "snippet": null,
+      "maturity": "observed"
+    },
+    {
+      "evidence_id": "evidence_e5001f2513d75100513f",
+      "repo_id": "ucp_tsa_v4",
+      "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java",
+      "line_start": 200,
+      "line_end": 200,
+      "extractor": "java_tree_sitter",
+      "snippet": null,
+      "maturity": "observed"
+    }
+  ],
+  "gaps": [],
+  "pagination": {
+    "total_count": 1,
+    "returned_count": 1,
+    "truncated": false,
+    "next_token": null
+  }
+}

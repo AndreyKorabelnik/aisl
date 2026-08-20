@@ -1,0 +1,22 @@
+{
+  "execution_order": [
+    "analyzer:java-type-structure-analyzer:repository",
+    "materialization:code-declared-data-model"
+  ],
+  "output": "/mnt/data/work_generic_plan/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-planning-v0.9.49/knowledge-execution-plan-v1.json",
+  "plan_fingerprint": "c8940ebf508cd92627de0f640278b5f0102c5ea4ead51f2c3e5494da4fa3a5fa",
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "smoke-repository"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 1,
+    "execution_node_count": 2,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  }
+}

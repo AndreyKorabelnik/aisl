@@ -1,0 +1,57 @@
+profile_id: git-change-complexity-assessment
+profile_version: 1
+
+name: Git change complexity assessment evidence
+
+workspace_types:
+  - java
+
+description: >
+  Technical static analysis profile used by analyze-git-change for BEFORE and
+  AFTER snapshots. It builds the standard fast evidence workspace needed to
+  compare schema, lineage, transformations, flows, event sources, tests and
+  documentation across a git change. The profile extracts change evidence only;
+  it does not evaluate people, authors, productivity, KPIs or code ownership.
+
+goal:
+  primary_question: >
+    Which data model, lineage, transformation, flow, event-source and coverage
+    changes are visible between BEFORE and AFTER snapshots of a git change?
+
+pipeline:
+  stages:
+    - id: scan_files
+    - id: config_scan
+    - id: java_structural_scan
+    - id: sql_scan
+    - id: db_schema_scan
+    - id: java_data_flow_build
+    - id: java_field_flow_build
+    - id: java_traceability_build
+    - id: java_data_model_lineage_build
+      options:
+        max_depth: 2
+    - id: java_table_observation_build
+    - id: java_persistence_lineage_build
+      options:
+        max_depth: 4
+    - id: declared_value_scan
+    - id: core_output
+    - id: normalize_facts
+    - id: compact_package
+
+output_contract:
+  intent: git_change_before_after_evidence_workspace
+  primary_interface: evidence_access_api
+  strict_evidence_policy: deterministic_change_evidence_not_person_evaluation
+  policy:
+    person_evaluation: forbidden
+    author_committer_metadata_use: traceability_only_not_scoring
+    primary_complexity_evidence:
+      - schema_delta
+      - lineage_delta
+      - transformation_delta
+      - flow_delta
+      - event_source_delta
+      - coverage_delta
+      - test_doc_delta

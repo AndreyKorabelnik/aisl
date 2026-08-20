@@ -1,0 +1,14 @@
+{
+  "catalog_fingerprint": "3aae461fe16bb1b7ea6f85a907321e0acba36ba3e1efd658b42e911d2790dea1",
+  "knowledge_type_count": 15,
+  "markdown": "validation/knowledge-catalog-v2-0.9.46.md",
+  "next_step": "generic_knowledge_architecture_audit/v1_for_code-declared-data-model",
+  "output": "validation/knowledge-catalog-v2-0.9.46.json",
+  "profile_v2_selectable_count": 14,
+  "runtime_status_counts": {
+    "current_legacy": 8,
+    "current_partial": 4,
+    "current_typed": 2
+  },
+  "schema_version": "knowledge_catalog/v2"
+}

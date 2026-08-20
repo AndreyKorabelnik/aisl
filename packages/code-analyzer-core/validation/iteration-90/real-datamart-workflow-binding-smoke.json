@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "producer_version": "0.43.7",
+  "sql_profile_version": "1.8",
+  "schema_version": "sql-analysis/v1",
+  "validation_status": "valid",
+  "content_fingerprint": "b766c16d8ba88a5bd0ed41a5017ecf06117f0e4bea5c292626f40b04d92f855e",
+  "workflow_binding_count": 2853,
+  "workflow_bindings_literal": 2406,
+  "workflow_bindings_template": 447,
+  "main_table_matches": 15,
+  "epk_client_count": 6,
+  "epk_client_v2_count": 9,
+  "sql_file_binding_count": 8,
+  "pipeline_config_path_binding_count": 44,
+  "portable_evidence": true,
+  "elapsed_seconds": 21.038
+}

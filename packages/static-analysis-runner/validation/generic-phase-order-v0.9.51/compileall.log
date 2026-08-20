@@ -1,0 +1,2 @@
+python -m compileall -q static_analysis_runner tests
+passed

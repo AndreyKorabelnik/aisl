@@ -1,0 +1,33 @@
+{
+  "analyzer_execution_count": 0,
+  "evidence_artifact_count": 3,
+  "execution_node_count": 4,
+  "knowledge_artifact_count": 5,
+  "materialization_execution_count": 4,
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships",
+    "common.cross-layer-data-model",
+    "common.effective-data-model",
+    "common.entity-table-mapping",
+    "common.field-column-mapping",
+    "common.logical-physical-mapping",
+    "common.physical-model",
+    "common.physical-model.columns",
+    "common.physical-model.gaps",
+    "common.physical-model.keys",
+    "common.physical-model.pdm",
+    "common.physical-model.relationships",
+    "common.physical-model.tables"
+  ],
+  "result_fingerprint": "5eeb2252a42c6659625272c30bb786304e53039cea83ee5710f7680233553cb0",
+  "schema_version": "knowledge_execution_summary/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "cleanup-effective"
+  },
+  "status": "completed"
+}

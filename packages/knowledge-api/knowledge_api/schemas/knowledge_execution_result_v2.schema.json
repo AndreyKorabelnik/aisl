@@ -1,0 +1,415 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_execution_result_v2.schema.json",
+  "title": "Knowledge Execution Result v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "runner",
+    "scope",
+    "request",
+    "knowledge_execution_plan",
+    "catalogs",
+    "execution_order",
+    "node_executions",
+    "analyzer_executions",
+    "evidence_artifacts",
+    "repository_run_manifests",
+    "materialization_executions",
+    "knowledge_artifacts",
+    "external_knowledge_artifacts",
+    "published_capabilities",
+    "producer_reuse",
+    "semantic_policy",
+    "started_at",
+    "completed_at",
+    "status",
+    "diagnostics",
+    "result_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "knowledge_execution_result/v2"
+    },
+    "runner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "version"
+      ],
+      "properties": {
+        "producer": {
+          "const": "static-analysis-runner"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "scope_id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "repository",
+            "workspace",
+            "portfolio"
+          ]
+        },
+        "scope_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "request": {
+      "type": "object"
+    },
+    "knowledge_execution_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "plan_fingerprint"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "plan_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "catalogs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "core_evidence_contract_catalog_fingerprint",
+        "knowledge_materialization_catalog_fingerprint"
+      ],
+      "properties": {
+        "core_evidence_contract_catalog_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "knowledge_materialization_catalog_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "execution_order": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "node_executions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "execution_node_id",
+          "node_kind",
+          "status"
+        ],
+        "properties": {
+          "execution_node_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "node_kind": {
+            "enum": [
+              "core_evidence_analyzer",
+              "knowledge_materialization"
+            ]
+          },
+          "status": {
+            "const": "completed"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "analyzer_executions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "repository_run_manifests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "materialization_executions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "knowledge_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "external_knowledge_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "artifact_id",
+          "model_kind",
+          "schema_version",
+          "source_materialization_id",
+          "content_fingerprint",
+          "source_system_id",
+          "source_revision_id",
+          "published_capabilities"
+        ],
+        "properties": {
+          "artifact_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model_kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schema_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_materialization_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "content_fingerprint": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_system_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_revision_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "published_capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "published_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "semantic_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan_dispatch",
+        "core_dispatch",
+        "evidence_registration",
+        "klc_dispatch",
+        "capability_publication"
+      ],
+      "properties": {
+        "plan_dispatch": {
+          "const": "knowledge_execution_plan_topological_order"
+        },
+        "core_dispatch": {
+          "const": "artifact_identity_to_core_owned_analyzer"
+        },
+        "evidence_registration": {
+          "const": "all_validated_core_result_artifacts"
+        },
+        "klc_dispatch": {
+          "const": "materialization_id_to_klc_owned_handler"
+        },
+        "capability_publication": {
+          "const": "completed_materialization_results_only"
+        }
+      }
+    },
+    "started_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "completed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "completed"
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "result_fingerprint": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "producer_reuse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "decisions",
+        "summary"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "producer_reuse_decisions/v1"
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "node_id",
+              "producer_kind",
+              "producer_id",
+              "producer_version",
+              "source_id",
+              "action",
+              "reuse_key",
+              "basis",
+              "invalidation_reason",
+              "artifact_reference",
+              "elapsed_seconds",
+              "saved_seconds",
+              "diagnostics"
+            ],
+            "properties": {
+              "node_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "producer_kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "producer_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "producer_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "action": {
+                "enum": [
+                  "built",
+                  "reused"
+                ]
+              },
+              "reuse_key": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "invalidation_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "artifact_reference": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "elapsed_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "saved_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "diagnostics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "built",
+            "reused"
+          ],
+          "properties": {
+            "built": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reused": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

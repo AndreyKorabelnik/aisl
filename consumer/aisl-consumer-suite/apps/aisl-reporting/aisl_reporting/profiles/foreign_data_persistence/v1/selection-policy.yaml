@@ -1,0 +1,8 @@
+paths:
+  include_all: true
+  deterministic_order: [repo_id, direction, storage_object, path_id]
+cases:
+  include_all: true
+  bridge: exact_storage_object_identity_only
+evidence:
+  include_all_referenced: true

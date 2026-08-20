@@ -1,0 +1,11 @@
+Exact candidate ZIP clean extraction:
+- source manifest: passed
+- compileall: passed
+- targeted tests: 49 passed
+- real Core 0.43.28 + Runner 0.9.51 + KLC 0.55.0 E2E: passed
+- Core analyzer executions: 2
+- KLC materializations: 3
+- knowledge artifacts: 3
+- published capabilities: 15
+- evidence/knowledge/materialization-specific dispatch added to Runner: no
+- ZIP integrity: passed

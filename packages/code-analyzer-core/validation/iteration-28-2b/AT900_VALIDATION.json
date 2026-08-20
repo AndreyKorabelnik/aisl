@@ -1,0 +1,41 @@
+{
+  "schema_version": "iteration_28_2b_validation/v1",
+  "core_version": "0.40.3",
+  "runner_version": "0.9.10",
+  "knowledge_layer_core_version": "0.29.0",
+  "tests": {
+    "passed": 386,
+    "failed": 0
+  },
+  "at900": {
+    "suite_status": "completed",
+    "knowledge_layer_status": "complete",
+    "baseline_0_40_2": {
+      "data_model_facts": 32997,
+      "data_model_lineage_gaps": 7062,
+      "constructor_mapping_not_resolved": 760,
+      "workspace_missing_fact": 7967
+    },
+    "core_0_40_3": {
+      "data_model_facts": 32421,
+      "data_model_lineage_gaps": 6486,
+      "constructor_mapping_not_resolved": 184,
+      "workspace_missing_fact": 7391
+    },
+    "suppressed": {
+      "generated_code": 303,
+      "test_code": 273
+    },
+    "remaining_expression_kinds": {
+      "unknown": 120,
+      "constant_or_default": 38,
+      "method_call": 20,
+      "dictionary_lookup": 6
+    }
+  },
+  "downstream_limitation": {
+    "component": "knowledge-layer-core",
+    "version": "0.29.0",
+    "issue": "constructor-specific gap metadata not retained in workspace_missing_fact.payload_json"
+  }
+}

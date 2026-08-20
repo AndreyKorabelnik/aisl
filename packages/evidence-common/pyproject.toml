@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-common"
+version = "0.23.2"
+description = "Shared infrastructure helpers for evidence-driven code analysis packages"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+  "PyYAML>=6.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["evidence_common*"]

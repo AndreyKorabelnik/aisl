@@ -1,0 +1,28 @@
+{
+  "name": "aisl-sdk-typescript",
+  "version": "0.3.0",
+  "description": "Public revision-pinned TypeScript SDK for AISL Knowledge API",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "openapi",
+    "README.md"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-contract.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "node tests/client.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "artifact": "/mnt/data/iter93_klc_context_smoke/knowledge-layer.duckdb",
+  "artifact_sha256": "a9128120b3f3dc301cf190116768991dd45e9c5502ea6d545c9a4e0b33b0daa3",
+  "revision_id": "rev-b8bd10a31ea280789a18e0e6",
+  "top_target": "epk_client",
+  "top_target_score": 87,
+  "recommended_insertion_file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthplace_snp.sql",
+  "recommended_propagation_status": "probable"
+}

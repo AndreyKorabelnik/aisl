@@ -1,0 +1,131 @@
+{
+  "base_revision_id": null,
+  "capabilities": [
+    "common.code-declared-data-model"
+  ],
+  "created_at": "2026-08-16T07:19:18.291850Z",
+  "execution": {
+    "completed_at": "2026-08-05T10:00:01Z",
+    "knowledge_profile_id": "test-knowledge-profile",
+    "plan_fingerprint": "1111111111111111111111111111111111111111111111111111111111111111",
+    "result_fingerprint": "024112412127f3f5634bf4373695fd291896e0d2f6184e729e08de7232bff78f",
+    "runner_version": "0.9.51",
+    "schema_version": "knowledge_execution_result/v2",
+    "scope_id": "mobility-acceptance",
+    "scope_kind": "repository",
+    "semantic_policy": {
+      "capability_publication": "completed_materialization_results_only",
+      "core_dispatch": "artifact_identity_to_core_owned_analyzer",
+      "evidence_registration": "all_validated_core_result_artifacts",
+      "klc_dispatch": "materialization_id_to_klc_owned_handler",
+      "plan_dispatch": "knowledge_execution_plan_topological_order"
+    },
+    "started_at": "2026-08-05T10:00:00Z",
+    "status": "completed"
+  },
+  "execution_result": {
+    "byte_size": 4475,
+    "filename": "knowledge-execution-result-storage-mobility-release.json",
+    "media_type": "application/json",
+    "schema_version": "knowledge_execution_result/v2",
+    "sha256": "08792ba539cecdef8d9c32274d0a3917883c9dc508cade627947b2dc20230a67",
+    "uri": "aisl+sha256://08792ba539cecdef8d9c32274d0a3917883c9dc508cade627947b2dc20230a67"
+  },
+  "knowledge_artifacts": [
+    {
+      "artifact_id": "java_type_structure_pilot",
+      "capabilities": [],
+      "content_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "coverage": {
+        "coverage_status": "complete",
+        "field_declaration_count": 1,
+        "java_files_discovered": 1,
+        "java_files_parsed": 1,
+        "type_declaration_count": 1
+      },
+      "diagnostics": [],
+      "exact_dependency_product_ids": [],
+      "model_kind": "java-type-structure-evidence",
+      "origin_kind": "observed",
+      "physical_artifacts": [
+        {
+          "byte_size": 2564,
+          "filename": "java-type-structure-evidence.json",
+          "media_type": "application/json",
+          "role": "descriptor",
+          "schema_version": "java-type-structure-evidence/v1",
+          "sha256": "1f3ef809b18be6f00b26760f3544e065b5b72899601f7efda45d287b67f0b12b",
+          "uri": "aisl+sha256://1f3ef809b18be6f00b26760f3544e065b5b72899601f7efda45d287b67f0b12b"
+        }
+      ],
+      "producer_contract_ref": "core_evidence_artifact_contract/v1",
+      "producer_ref": "code-analyzer-core:java-type-structure-analyzer",
+      "product_slot_id": "core:java-type-structure-evidence",
+      "provenance": {
+        "producer": {
+          "analyzer_id": "java-type-structure-analyzer",
+          "analyzer_version": "pilot",
+          "component": "code-analyzer-core"
+        },
+        "source_snapshot": {
+          "file_count": 1,
+          "fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "revision": null,
+          "scope": "java_source_files",
+          "source_id": "repo"
+        }
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "source_materialization_id": null
+    },
+    {
+      "artifact_id": "code-product",
+      "capabilities": [
+        "common.code-declared-data-model"
+      ],
+      "content_fingerprint": "df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e",
+      "coverage": {},
+      "diagnostics": [],
+      "exact_dependency_product_ids": [
+        "java_type_structure_pilot"
+      ],
+      "model_kind": "code-declared-data-model",
+      "origin_kind": "derived",
+      "physical_artifacts": [
+        {
+          "byte_size": 1847296,
+          "filename": "code.duckdb",
+          "media_type": "application/vnd.duckdb",
+          "role": "database",
+          "schema_version": "code-declared-data-model/v1",
+          "sha256": "df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e",
+          "uri": "aisl+sha256://df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e"
+        },
+        {
+          "byte_size": 405,
+          "filename": "code-product-manifest.json",
+          "media_type": "application/json",
+          "role": "manifest",
+          "schema_version": "knowledge_layer/v1",
+          "sha256": "9ab908d22850b262cf478489f764a18c93cacec1f0ee9e0467b1da0a6710bc9b",
+          "uri": "aisl+sha256://9ab908d22850b262cf478489f764a18c93cacec1f0ee9e0467b1da0a6710bc9b"
+        }
+      ],
+      "producer_contract_ref": "knowledge_layer/v1",
+      "producer_ref": "knowledge-layer-core",
+      "product_slot_id": "klc:code-declared-data-model",
+      "provenance": {
+        "materialization_id": "code-declared-data-model"
+      },
+      "schema_version": "code-declared-data-model/v1",
+      "source_materialization_id": "code-declared-data-model"
+    }
+  ],
+  "labels": [],
+  "metadata": {},
+  "ordinal": 1,
+  "report": null,
+  "revision_id": "rev-a9eb627642530740ceed95fa",
+  "state": "active",
+  "system_id": "mobility-acceptance"
+}

@@ -1,0 +1,633 @@
+{
+  "diagnostic_schema": "relationship_storage_evidence_diagnostic/v1",
+  "logical_identity": {
+    "field_names": [
+      "id",
+      "version"
+    ],
+    "key_observations": [
+      {
+        "annotation_fqcn": "ru.sbrf.ucp.meta.annotations.MetaVersionedEntity",
+        "annotation_name": "MetaVersionedEntity",
+        "key_observation_id": "model_object_key_38ec9e20dc648ec827a3",
+        "line_end": 14,
+        "line_start": 14,
+        "object_fqcn": "com.sbt.bm.ucp.retail.model.individual.BirthDate",
+        "observation_basis": "annotation_field_roles",
+        "repo_id": "ucp_api",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_api/ucp-models/ucp-retail-model/src/main/java/com/sbt/bm/ucp/retail/model/individual/BirthDate.java"
+      }
+    ],
+    "members": [
+      {
+        "field_name": "id",
+        "field_owner_fqcn": "com.sbt.bm.ucp.common.model.common.BusinessBase",
+        "field_resolution_kind": "inherited_field",
+        "key_observation_id": "model_object_key_38ec9e20dc648ec827a3",
+        "position": 1,
+        "role_name": "id"
+      },
+      {
+        "field_name": "version",
+        "field_owner_fqcn": "com.sbt.bm.ucp.common.model.common.VersionBase",
+        "field_resolution_kind": "inherited_field",
+        "key_observation_id": "model_object_key_38ec9e20dc648ec827a3",
+        "position": 2,
+        "role_name": "version"
+      }
+    ],
+    "status": "observed"
+  },
+  "logical_key_correspondence": {
+    "canonicalization_fields": [
+      "id",
+      "version"
+    ],
+    "correspondences": [],
+    "status": "not_observed"
+  },
+  "physical_join": {
+    "confirmed": false,
+    "reason": "A physical join requires a first-class storage key, resolved reference value flow, and observed encoding semantics.",
+    "status": "unresolved"
+  },
+  "reference_encoding": {
+    "diagnostic_note": "No physical encoding or alias normalization is inferred from separate alias(...) and key(...) calls.",
+    "semantic_observations": [],
+    "status": "unresolved"
+  },
+  "reference_value_flow": {
+    "local_result_binding_diagnostics": [
+      {
+        "candidate_count": 27,
+        "candidates": [
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCountry",
+            "line_end": 76,
+            "line_start": 76,
+            "observation_id": "source_observation_7c079794bf047aea11dc",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+            "line_end": 83,
+            "line_start": 83,
+            "observation_id": "source_observation_209cb0ba2df2efc7c3b7",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthPlace",
+            "line_end": 90,
+            "line_start": 90,
+            "observation_id": "source_observation_3bb7bd6e8c4e291f975a",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCountry",
+            "line_end": 102,
+            "line_start": 102,
+            "observation_id": "source_observation_6e33bde6d01e87c7f00f",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCreditHistory",
+            "line_end": 109,
+            "line_start": 109,
+            "observation_id": "source_observation_4a250a8b71f0bf61cd0d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCurrencyResident",
+            "line_end": 116,
+            "line_start": 116,
+            "observation_id": "source_observation_fce4270d4cbb653f5742",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertDeathDate",
+            "line_end": 123,
+            "line_start": 123,
+            "observation_id": "source_observation_a43c44f2b735b9e0d43b",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertDeathInfo",
+            "line_end": 130,
+            "line_start": 130,
+            "observation_id": "source_observation_7244d54e389bff9846f9",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertEducation",
+            "line_end": 137,
+            "line_start": 137,
+            "observation_id": "source_observation_e649f767c909503515e7",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertExtraBlocks",
+            "line_end": 164,
+            "line_start": 164,
+            "observation_id": "source_observation_5e70dd9ae8f5365c365d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertGender",
+            "line_end": 171,
+            "line_start": 171,
+            "observation_id": "source_observation_4ee694770f0a461ba930",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertLiteracy",
+            "line_end": 199,
+            "line_start": 199,
+            "observation_id": "source_observation_b8a216b925a482eff94d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertManagerEmployeeInfo",
+            "line_end": 206,
+            "line_start": 206,
+            "observation_id": "source_observation_57792ef38751aae3a184",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMaritalStatus",
+            "line_end": 213,
+            "line_start": 213,
+            "observation_id": "source_observation_50311eae3e9ad555c5ab",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMergeClientInfo",
+            "line_end": 220,
+            "line_start": 220,
+            "observation_id": "source_observation_1122ad909334246ac687",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMergeClientInfo",
+            "line_end": 227,
+            "line_start": 227,
+            "observation_id": "source_observation_9240f57a1045c3db712c",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMergeHistory",
+            "line_end": 234,
+            "line_start": 234,
+            "observation_id": "source_observation_fae84944ffc236a45624",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertPartyServiceAttributes",
+            "line_end": 249,
+            "line_start": 249,
+            "observation_id": "source_observation_e5755c10575ef4309f1d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertPartyStatusType",
+            "line_end": 256,
+            "line_start": 256,
+            "observation_id": "source_observation_2df2570aa0bf6e495b86",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertPreferences",
+            "line_end": 287,
+            "line_start": 287,
+            "observation_id": "source_observation_e935f3946d8571553d8e",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertSelfEmployment",
+            "line_end": 298,
+            "line_start": 298,
+            "observation_id": "source_observation_f4fb026c2c24b1dbb739",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertServiceZone",
+            "line_end": 314,
+            "line_start": 314,
+            "observation_id": "source_observation_cf69810a277a7f47d770",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 325,
+            "line_start": 325,
+            "observation_id": "source_observation_8942007a36e162b9999c",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 332,
+            "line_start": 332,
+            "observation_id": "source_observation_40de28730479cb74e579",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 339,
+            "line_start": 339,
+            "observation_id": "source_observation_a16dfb99d5b462e2bc79",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUserInfo",
+            "line_end": 350,
+            "line_start": 350,
+            "observation_id": "source_observation_9d2af296b3ae27c134a9",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertWelfare",
+            "line_end": 365,
+            "line_start": 365,
+            "observation_id": "source_observation_600e67d969bc58a9111e",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          }
+        ],
+        "current_core_matching_key": [
+          "JsonIndividualToChangeVectorConverter.convert",
+          "refKey"
+        ],
+        "diagnostic_note": "The current interpreter groups result bindings by owner operation and local variable name; it does not use lexical scope or source position to select a dominating assignment.",
+        "nearest_preceding_candidate": {
+          "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+          "line_end": 83,
+          "line_start": 83,
+          "observation_id": "source_observation_209cb0ba2df2efc7c3b7",
+          "resolution": "exact_same_class_name_and_arity",
+          "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+        },
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "reference_observation_id": "source_observation_66eae0de637798b7afdd",
+        "status": "ambiguous_reused_local_name",
+        "value_expression": "refKey",
+        "value_identifier": "refKey"
+      },
+      {
+        "candidate_count": 22,
+        "candidates": [
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+            "line_end": 198,
+            "line_start": 198,
+            "observation_id": "source_observation_c9cd1c9622b71f9495d1",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertBirthPlace",
+            "line_end": 204,
+            "line_start": 204,
+            "observation_id": "source_observation_053d78a6894c4443e0e5",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertCreditHistory",
+            "line_end": 217,
+            "line_start": 217,
+            "observation_id": "source_observation_1d4ee83ed837c5f7cb54",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertCurrencyResident",
+            "line_end": 223,
+            "line_start": 223,
+            "observation_id": "source_observation_889388bc488eabd37aef",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertDeathDate",
+            "line_end": 229,
+            "line_start": 229,
+            "observation_id": "source_observation_acc5795509dface76714",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertDeathInfo",
+            "line_end": 235,
+            "line_start": 235,
+            "observation_id": "source_observation_54194117274eb178acea",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertEducation",
+            "line_end": 241,
+            "line_start": 241,
+            "observation_id": "source_observation_d61f0b5cabddf15eea0a",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertExtraBlocks",
+            "line_end": 262,
+            "line_start": 262,
+            "observation_id": "source_observation_980d51a04157361f1a94",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertGender",
+            "line_end": 268,
+            "line_start": 268,
+            "observation_id": "source_observation_b9b91e0022188cf3ebcc",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertLiteracy",
+            "line_end": 292,
+            "line_start": 292,
+            "observation_id": "source_observation_91c9fdf2ba8c861130ce",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertManagerEmployeeInfo",
+            "line_end": 298,
+            "line_start": 298,
+            "observation_id": "source_observation_1d1a6ebc0fa88dc68973",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertMaritalStatus",
+            "line_end": 304,
+            "line_start": 304,
+            "observation_id": "source_observation_05f22043fc7fd700ebc9",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertMergeClientInfo",
+            "line_end": 310,
+            "line_start": 310,
+            "observation_id": "source_observation_287d0da3ecd8aee33730",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertMergeClientInfo",
+            "line_end": 316,
+            "line_start": 316,
+            "observation_id": "source_observation_feedcc4aa507633e7213",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertMergeHistory",
+            "line_end": 322,
+            "line_start": 322,
+            "observation_id": "source_observation_085201f0c93be72e2a4c",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertPartyServiceAttributes",
+            "line_end": 334,
+            "line_start": 334,
+            "observation_id": "source_observation_88d7aec60a7e77ff55ea",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertPreferences",
+            "line_end": 364,
+            "line_start": 364,
+            "observation_id": "source_observation_56404fb43b09d1d5da9d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertSelfEmployment",
+            "line_end": 373,
+            "line_start": 373,
+            "observation_id": "source_observation_6478e8a1365bee13bb3b",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 392,
+            "line_start": 392,
+            "observation_id": "source_observation_b4a408b1c98720d95d1b",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 398,
+            "line_start": 398,
+            "observation_id": "source_observation_0558dbd07f51e280886f",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 404,
+            "line_start": 404,
+            "observation_id": "source_observation_4d228b0d946c76c93061",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "IndividualToChangeVectorConverter.convertUserInfo",
+            "line_end": 413,
+            "line_start": 413,
+            "observation_id": "source_observation_3884adeafa0f4353f30a",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+          }
+        ],
+        "current_core_matching_key": [
+          "IndividualToChangeVectorConverter.convert",
+          "blockKey"
+        ],
+        "diagnostic_note": "The current interpreter groups result bindings by owner operation and local variable name; it does not use lexical scope or source position to select a dominating assignment.",
+        "nearest_preceding_candidate": {
+          "callee_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+          "line_end": 198,
+          "line_start": 198,
+          "observation_id": "source_observation_c9cd1c9622b71f9495d1",
+          "resolution": "exact_same_class_name_and_arity",
+          "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+        },
+        "owner_operation": "IndividualToChangeVectorConverter.convert",
+        "reference_observation_id": "source_observation_c6946fabd7fc5f96c020",
+        "status": "ambiguous_reused_local_name",
+        "value_expression": "blockKey",
+        "value_identifier": "blockKey"
+      }
+    ],
+    "reference_operations": [
+      {
+        "line_end": 85,
+        "line_start": 85,
+        "observation_id": "source_observation_66eae0de637798b7afdd",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "reference_operation": "referenceField",
+        "relationship_field": "birthDate",
+        "repo_id": "ucp_tsa_v4",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java",
+        "value_expression": "refKey",
+        "value_identifier": "refKey"
+      },
+      {
+        "line_end": 200,
+        "line_start": 200,
+        "observation_id": "source_observation_c6946fabd7fc5f96c020",
+        "owner_operation": "IndividualToChangeVectorConverter.convert",
+        "reference_operation": "referenceField",
+        "relationship_field": "birthDate",
+        "repo_id": "ucp_tsa_v4",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java",
+        "value_expression": "blockKey",
+        "value_identifier": "blockKey"
+      }
+    ],
+    "reference_value_derivations": [],
+    "status": "ambiguous"
+  },
+  "relationship": {
+    "cardinality": "one",
+    "relation_kind": "reference_field",
+    "relationship_id": "model_relationship_2e2d5c588e3267580c14",
+    "source_field_name": "birthDate",
+    "source_object_fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+    "source_repo_id": "ucp_api",
+    "target_repo_id": "ucp_api",
+    "target_type_fqcn": "com.sbt.bm.ucp.retail.model.individual.BirthDate"
+  },
+  "root_causes": [
+    {
+      "code": "scope_insensitive_local_result_binding",
+      "effect": "return-to-referenceField derivation is not emitted when a local name is reused",
+      "evidence": [
+        "source_observation_66eae0de637798b7afdd",
+        "source_observation_c6946fabd7fc5f96c020"
+      ],
+      "layer": "code-analyzer-core"
+    },
+    {
+      "code": "storage_record_key_not_first_class",
+      "effect": "observed builder key assignments remain expressions and cannot become a canonical physical target field",
+      "evidence": [
+        "source_observation_6f434e8df6553ef39161",
+        "source_observation_b341d96c50f99ef6f9df"
+      ],
+      "layer": "knowledge-layer-core schema/materialization"
+    },
+    {
+      "code": "logical_identity_is_only_correspondence_domain",
+      "effect": "reference/value matching is canonicalized only against model_object_key_member fields",
+      "evidence": [
+        "model_object_key_38ec9e20dc648ec827a3"
+      ],
+      "layer": "knowledge-layer-core correspondence"
+    },
+    {
+      "code": "reference_encoding_semantics_not_observed",
+      "effect": "alias and key calls do not by themselves prove an encoded source value or alias normalization rule",
+      "evidence": [],
+      "layer": "evidence contract"
+    }
+  ],
+  "safety": {
+    "alias_normalization_inferred": false,
+    "domain_specific_rules_used": false,
+    "physical_join_inferred": false
+  },
+  "storage_key_evidence": {
+    "first_class_storage_tables": [],
+    "relationship_target_expressions": [
+      "key",
+      "parentKey + '.' + fieldName"
+    ],
+    "status": "observed_not_first_class",
+    "storage_lineages": [],
+    "target_alias_assignments": [
+      {
+        "line_end": 922,
+        "line_start": 922,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.IndividualToChangeVectorConverter",
+        "owner_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+        "repo_id": "ucp_tsa_v4",
+        "source_expression": "\"com.sbt.bm.ucp.retail.model.individual.BirthDate\"",
+        "source_observation_occurrence_id": "source_observation_485836e3c7bf6ec3d63a",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+      },
+      {
+        "line_end": 1055,
+        "line_start": 1055,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.JsonIndividualToChangeVectorConverter",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+        "repo_id": "ucp_tsa_v4",
+        "source_expression": "\"com.sbt.bm.ucp.retail.model.individual.BirthDate\"",
+        "source_observation_occurrence_id": "source_observation_3acb72b165dc2685274c",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+      }
+    ],
+    "target_key_assignments": [
+      {
+        "key_expression": "key",
+        "key_expression_tree_json": "{\"end_byte\":52497,\"node_type\":\"identifier\",\"start_byte\":52494,\"text\":\"key\",\"value\":\"key\"}",
+        "line_end": 921,
+        "line_start": 921,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.IndividualToChangeVectorConverter",
+        "owner_operation": "IndividualToChangeVectorConverter.convertBirthDate",
+        "repo_id": "ucp_tsa_v4",
+        "source_observation_occurrence_id": "source_observation_6f434e8df6553ef39161",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+      },
+      {
+        "key_expression": "key",
+        "key_expression_tree_json": "{\"end_byte\":56395,\"node_type\":\"identifier\",\"start_byte\":56392,\"text\":\"key\",\"value\":\"key\"}",
+        "line_end": 1057,
+        "line_start": 1057,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.JsonIndividualToChangeVectorConverter",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+        "repo_id": "ucp_tsa_v4",
+        "source_observation_occurrence_id": "source_observation_b341d96c50f99ef6f9df",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+      }
+    ]
+  }
+}

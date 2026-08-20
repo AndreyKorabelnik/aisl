@@ -1,0 +1,88 @@
+{
+  "iteration": 107,
+  "knowledge_api_version": "0.15.0",
+  "knowledge_layer_core_version": "0.53.1",
+  "revision_id": "rev-c8cb535e1a629bfd5ae2efdf",
+  "summary": {
+    "schema_version": "knowledge_api/v1",
+    "physical_model_schema_version": "physical-model-query/v1",
+    "system_id": "pdm_b2c",
+    "revision_id": "rev-c8cb535e1a629bfd5ae2efdf",
+    "sources": [
+      {
+        "physical_model_source_id": "pdm_b2c_restored",
+        "manifest_path": "/mnt/data/iter106_real_physical_artifact/manifest.json",
+        "source_schema_version": "physical-model/v1",
+        "content_fingerprint": "55cce57ebe68f017dd1454692aa974f4908e915e56ba61cb0e68ccc3c05650df",
+        "core_version": "0.43.7",
+        "source_file": "CDO_B2C_PDM - ag 20260710.pdm",
+        "source_sha256": "096eb0d51f6e8690740e908ea2b167777918a11553d8c71e4d6b2afd5a3a94d1",
+        "model_object_id": "7CFF8FF8-4248-4C62-A9F2-5AFBAA566ADB",
+        "model_name": "Модель ЕПКАП B2C",
+        "model_code": "Модель ЕПКАП B2C",
+        "powerdesigner_version": "16.6.0.4971",
+        "powerdesigner_target": "Hadoop Hive 1.0",
+        "coverage_status": "complete",
+        "gap_count": 0,
+        "metadata": {
+          "core_version": "0.43.7",
+          "extracted_at": "2026-08-02T03:57:52.163609+00:00",
+          "model_code": "Модель ЕПКАП B2C",
+          "model_creation_timestamp": 1742991289,
+          "model_modification_timestamp": 1783691734,
+          "model_name": "Модель ЕПКАП B2C",
+          "model_object_id": "7CFF8FF8-4248-4C62-A9F2-5AFBAA566ADB",
+          "physical_model_source_id": "pdm_b2c_restored",
+          "powerdesigner_signature": "PDM_DATA_MODEL_XML",
+          "powerdesigner_target": "Hadoop Hive 1.0",
+          "powerdesigner_version": "16.6.0.4971",
+          "schema_version": "physical-model/v1",
+          "source_file": "CDO_B2C_PDM - ag 20260710.pdm",
+          "source_sha256": "096eb0d51f6e8690740e908ea2b167777918a11553d8c71e4d6b2afd5a3a94d1"
+        }
+      }
+    ],
+    "counts": {
+      "tables": 522,
+      "columns": 11940,
+      "keys": 498,
+      "relationships": 370,
+      "gaps": 0
+    },
+    "relationship_resolution": {
+      "resolved": 370
+    },
+    "key_kinds": {
+      "alternate": 3,
+      "primary": 495
+    },
+    "gap_kinds": {}
+  },
+  "table_search": {
+    "query": "t_dim_user_erib",
+    "total": 1,
+    "table_id": "physical_model_table_8fae63e81c21e3e62718",
+    "table_code": "t_dim_user_erib",
+    "table_name": "Маппинг профиля клиента в ЕРИБ на его ЕПК ID",
+    "column_count": 13
+  },
+  "table_detail": {
+    "column_count": 13,
+    "key_count": 1,
+    "relationship_count": 4
+  },
+  "hash_columns": [
+    "hash_md5_erib_sid",
+    "hash_sha256_erib_sid",
+    "hash_md5_ufs_sid",
+    "hash_sha256_ufs_sid",
+    "row_hash"
+  ],
+  "relationships_total": 4,
+  "gaps_total": 0,
+  "artifact": {
+    "path": "/mnt/data/iter106_real_klc/knowledge-layer.duckdb",
+    "size_bytes": 25178112,
+    "sha256": "5f1ad23b81fa3cb9d5f6be72898a1d58236d39293b243321ab187e41aa8836ba"
+  }
+}

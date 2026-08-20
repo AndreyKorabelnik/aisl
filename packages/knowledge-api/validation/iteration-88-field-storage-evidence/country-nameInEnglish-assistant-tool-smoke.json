@@ -1,0 +1,111 @@
+{
+  "field": {
+    "name": "nameInEnglish",
+    "type": "string",
+    "description": "Наименование на английском",
+    "inherited": false,
+    "storage_observation_count": 2,
+    "storage_observations": [
+      {
+        "physical_field_name": "nameInEnglish",
+        "operation": "primitiveField",
+        "object_alias": "com.sbt.bm.ucp.common.model.dictionary.Country",
+        "value_expression": "nameInEnglishNode.asText()",
+        "converter_owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.dict.JsonCountryToChangeVectorConverter",
+        "converter_method": "convert",
+        "call_observation_id": "call_0078f56d48f340065bc5",
+        "match_basis": "exact_converter_alias_and_exact_model_field_name",
+        "value_mapping_status": "observed_expression_not_semantically_interpreted",
+        "evidence_ids": [
+          "evidence_44c603f4063f77bac278",
+          "evidence_932e076eb20a13cdc8fa",
+          "evidence_cb0933f6c23d1a5472cc"
+        ],
+        "evidence_refs": [
+          {
+            "evidence_id": "evidence_cb0933f6c23d1a5472cc",
+            "repo_id": "ucp_tsa_v4",
+            "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/dict/JsonCountryToChangeVectorConverter.java",
+            "line_start": 27,
+            "line_end": 27,
+            "extractor": "java_tree_sitter",
+            "maturity": "observed",
+            "role": "object_alias"
+          },
+          {
+            "evidence_id": "evidence_44c603f4063f77bac278",
+            "repo_id": "ucp_tsa_v4",
+            "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/dict/JsonCountryToChangeVectorConverter.java",
+            "line_start": 65,
+            "line_end": 65,
+            "extractor": "java_tree_sitter",
+            "maturity": "observed",
+            "role": "physical_field_name"
+          },
+          {
+            "evidence_id": "evidence_932e076eb20a13cdc8fa",
+            "repo_id": "ucp_tsa_v4",
+            "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/dict/JsonCountryToChangeVectorConverter.java",
+            "line_start": 65,
+            "line_end": 65,
+            "extractor": "java_tree_sitter",
+            "maturity": "observed",
+            "role": "value_expression"
+          }
+        ]
+      },
+      {
+        "physical_field_name": "nameInEnglish",
+        "operation": "primitiveField",
+        "object_alias": "com.sbt.bm.ucp.common.model.dictionary.Country",
+        "value_expression": "country.getNameInEnglish()",
+        "converter_owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.CountryToChangeVectorConverter",
+        "converter_method": "convert",
+        "call_observation_id": "call_35c65f3fbcdb7f8fb1e4",
+        "match_basis": "exact_converter_alias_and_exact_model_field_name",
+        "value_mapping_status": "observed_expression_not_semantically_interpreted",
+        "evidence_ids": [
+          "evidence_0a2809bfd126e07e54ff",
+          "evidence_4371bff54c8986fda353",
+          "evidence_6b4e1cc85e6e4f894424"
+        ],
+        "evidence_refs": [
+          {
+            "evidence_id": "evidence_4371bff54c8986fda353",
+            "repo_id": "ucp_tsa_v4",
+            "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/CountryToChangeVectorConverter.java",
+            "line_start": 33,
+            "line_end": 33,
+            "extractor": "java_tree_sitter",
+            "maturity": "observed",
+            "role": "object_alias"
+          },
+          {
+            "evidence_id": "evidence_6b4e1cc85e6e4f894424",
+            "repo_id": "ucp_tsa_v4",
+            "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/CountryToChangeVectorConverter.java",
+            "line_start": 49,
+            "line_end": 49,
+            "extractor": "java_tree_sitter",
+            "maturity": "observed",
+            "role": "physical_field_name"
+          },
+          {
+            "evidence_id": "evidence_0a2809bfd126e07e54ff",
+            "repo_id": "ucp_tsa_v4",
+            "path": "ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/CountryToChangeVectorConverter.java",
+            "line_start": 49,
+            "line_end": 49,
+            "extractor": "java_tree_sitter",
+            "maturity": "observed",
+            "role": "value_expression"
+          }
+        ]
+      }
+    ],
+    "storage_observations_truncated": false
+  },
+  "warnings": [
+    "Data-model names and fields are deterministic facts of the configured source system; their correspondence to SQL relation names remains an interpretation."
+  ]
+}

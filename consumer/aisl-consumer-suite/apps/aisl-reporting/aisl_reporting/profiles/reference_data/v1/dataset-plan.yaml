@@ -1,0 +1,12 @@
+queries:
+  - search_reference_data
+  - list_declared_value_sets
+  - list_literal_writes
+  - get_reference_data_usage
+  - get_reference_data_gap_summary
+  - get_scope_overview
+policy:
+  complete_candidate_catalog: true
+  semantic_classification_in_builder: false
+  official_nsi_status_in_builder: false
+  ownership_in_builder: false

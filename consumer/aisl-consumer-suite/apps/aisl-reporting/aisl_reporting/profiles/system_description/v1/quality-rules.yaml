@@ -1,0 +1,11 @@
+max_dataset_bytes: 550000
+require_exact_evidence: true
+require_owner_questions: true
+require_diagram_data: true
+forbid_final_response_dependency: true
+
+business_opening:
+  required_heading: О системе
+  prohibit_evidence_citations: true
+  prohibit_implementation_identifiers: true
+  detailed_gap_counts_only_after_summary: true

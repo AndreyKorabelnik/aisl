@@ -1,0 +1,9 @@
+report_type: workspace-sql-catalog-report
+version: v1
+audiences: [business, architecture, engineering]
+required_headings:
+  - Краткий вывод
+  - Состав workspace
+  - Каталог источников и назначений
+  - Покрытие по репозиториям
+  - Ограничения и provenance

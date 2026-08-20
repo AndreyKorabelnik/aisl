@@ -1,0 +1,125 @@
+{
+  "correspondences": [],
+  "correspondences_state": {
+    "availability": "unsupported",
+    "basis": "revision_wide_cross_product_lookup_not_yet_supported_for_this_item"
+  },
+  "coverage_state": {
+    "availability": "available",
+    "basis": "product_coverage_published_for_observed_item"
+  },
+  "evidence": [
+    {
+      "basis": "java-type-structure-evidence/v1:type_declarations",
+      "evidence_id": "evidence_983e712daad5be3ea798fc28",
+      "evidence_kind": "observed_source_declaration",
+      "source_fragment_ids": [
+        "source_fragment_a5d5518cee6e1371890609b7"
+      ]
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "basis": "universal_item_read_context",
+      "binding_id": "java_type_structure_pilot:type_declaration:type-customer:evidence_983e712daad5be3ea798fc28",
+      "evidence_id": "evidence_983e712daad5be3ea798fc28",
+      "role": "direct_observation"
+    }
+  ],
+  "evidence_state": {
+    "availability": "available",
+    "basis": "typed_product_evidence_projection"
+  },
+  "issues": [],
+  "issues_state": {
+    "availability": "not_available",
+    "basis": "no_item_specific_issue_published"
+  },
+  "item": {
+    "fully_qualified_name": "com.acme.Customer",
+    "modifier_tokens": [
+      "public"
+    ],
+    "package_name": "com.acme",
+    "simple_name": "Customer",
+    "source_ref": {
+      "extractor": "java_tree_sitter",
+      "line_end": 20,
+      "line_start": 1,
+      "repository_relative_path": "src/Customer.java"
+    },
+    "source_unit_id": "unit-customer",
+    "type_id": "type-customer",
+    "type_kind": "class",
+    "type_parameters": []
+  },
+  "item_ref": {
+    "item_kind": "type_declaration",
+    "local_id": "type-customer",
+    "product_id": "java_type_structure_pilot",
+    "revision_id": "rev-a9eb627642530740ceed95fa",
+    "scope_id": "mobility-acceptance"
+  },
+  "product": {
+    "artifact_id": "java_type_structure_pilot",
+    "capabilities": [],
+    "content_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "coverage": {
+      "coverage_status": "complete",
+      "field_declaration_count": 1,
+      "java_files_discovered": 1,
+      "java_files_parsed": 1,
+      "type_declaration_count": 1
+    },
+    "diagnostics": [],
+    "exact_dependency_product_ids": [],
+    "model_kind": "java-type-structure-evidence",
+    "origin_kind": "observed",
+    "physical_artifacts": [
+      {
+        "byte_size": 2564,
+        "filename": "java-type-structure-evidence.json",
+        "media_type": "application/json",
+        "role": "descriptor",
+        "schema_version": "java-type-structure-evidence/v1",
+        "sha256": "1f3ef809b18be6f00b26760f3544e065b5b72899601f7efda45d287b67f0b12b",
+        "uri": "aisl+sha256://1f3ef809b18be6f00b26760f3544e065b5b72899601f7efda45d287b67f0b12b"
+      }
+    ],
+    "producer_contract_ref": "core_evidence_artifact_contract/v1",
+    "producer_ref": "code-analyzer-core:java-type-structure-analyzer",
+    "product_slot_id": "core:java-type-structure-evidence",
+    "provenance": {
+      "producer": {
+        "analyzer_id": "java-type-structure-analyzer",
+        "analyzer_version": "pilot",
+        "component": "code-analyzer-core"
+      },
+      "source_snapshot": {
+        "file_count": 1,
+        "fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "revision": null,
+        "scope": "java_source_files",
+        "source_id": "repo"
+      }
+    },
+    "schema_version": "java-type-structure-evidence/v1"
+  },
+  "projection_basis": "typed_product_universal_projection",
+  "projection_status": "available",
+  "revision_id": "rev-a9eb627642530740ceed95fa",
+  "schema_version": "aisl-knowledge-item-read/v1",
+  "source_fragments": [
+    {
+      "extractor": "java_tree_sitter",
+      "fragment_id": "source_fragment_a5d5518cee6e1371890609b7",
+      "fragment_kind": "source_code_location",
+      "line_end": 20,
+      "line_start": 1,
+      "locator": "repo://repo/src/Customer.java#L1-L20",
+      "path": "src/Customer.java",
+      "source_id": "repo"
+    }
+  ],
+  "system_id": "mobility-acceptance"
+}

@@ -1,0 +1,11 @@
+{
+  "catalog_fingerprint": "b3dd9e18d30e0a88cf4d96806828be218674b5c1094fff93c018502c03c947a0",
+  "current_klc_task_semantic_route_count": 8,
+  "current_manifest_variant_count": 4,
+  "fully_compliant_manifest_count": 0,
+  "markdown": "/mnt/data/work_runner0946/static-analysis-runner-0.9.46-java-type-structure-registration/validation/analysis-execution-result-contract-v1-0.9.46.md",
+  "next_step": "vertical_klc_code_declared_import_and_task_decoupling",
+  "output": "/mnt/data/work_runner0946/static-analysis-runner-0.9.46-java-type-structure-registration/validation/analysis-execution-result-contract-v1-0.9.46.json",
+  "schema_version": "analysis_execution_result_catalog/v1",
+  "task_semantic_coupled_variant_count": 3
+}

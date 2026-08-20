@@ -1,0 +1,57 @@
+{
+  "schema_version": "aisl_real_acceptance/v1",
+  "date": "2026-08-15",
+  "domain": "foreign-data-persistence",
+  "system_id": "at900-client-profile-fdp-current",
+  "repository_id": "client-profile",
+  "publication": {
+    "job_id": "job-97d120611929400bb18898da4da79537",
+    "status": "succeeded",
+    "revision_id": "rev-f165cea38d8b1456ad51c978",
+    "producer_reuse": "official_content_addressed_core_artifact"
+  },
+  "canonical_dimensions": {
+    "path_count": 781,
+    "source_to_storage_count": 529,
+    "storage_to_access_count": 252,
+    "confirmed_path_count": 72,
+    "unresolved_path_count": 709,
+    "mechanical_case_count": 969,
+    "source_and_access_case_count": 163,
+    "same_data_confirmed_case_count": 8,
+    "storage_summary_count": 88,
+    "business_fdp_decision_assigned": false,
+    "mechanical_bridge_only": true
+  },
+  "representative_cases": {
+    "device_link": {
+      "source_path_count": 32,
+      "access_path_count": 1,
+      "source_field_count": 8,
+      "access_field_count": 3,
+      "overlap_fields": ["CLIENT_ID", "DEVICE_ID", "UCP_ID"],
+      "confirmed_same_data_case_count": 3,
+      "source": "SyncPushDeviceConsumer.onReceive / SyncPushDeviceRequest",
+      "access": "ServerController.findDevicesByPhones"
+    },
+    "mnp_operatorid": {
+      "source": "KafkaMNPConsumer.onReceiveMessage / PhoneMNPEvent",
+      "storage_field": "PHONE.OPERATORID",
+      "confirmed_access": "MbClientProfileController.mbClientProfileExtended",
+      "confirmed_same_data_case_count": 1
+    }
+  },
+  "consumer_guidance": {
+    "schema_version": "foreign-data-persistence-guidance/v1",
+    "device_link": {"raw_bytes": 1189171, "guidance_bytes": 69499, "reduction_percent": 94.2},
+    "operatorid": {"raw_bytes": 550203, "guidance_bytes": 68915, "reduction_percent": 87.5},
+    "unfiltered": {"raw_bytes": 5328381, "guidance_bytes": 71672, "reduction_percent": 98.7},
+    "semantic_derivation": "none"
+  },
+  "producer_change_required": false,
+  "limitations": [
+    "Technical confirmed ingress does not assign an upstream source system when it is not observed.",
+    "Confirmed same-data means a technical static bridge under the KLC contract; it does not assign business ownership, legal FDP classification or risk verdict.",
+    "The initial force-run was interrupted by the external execution wrapper during KLC materialization and is not counted as PASS; the authoritative replay used official content-addressed Core reuse and published successfully."
+  ]
+}

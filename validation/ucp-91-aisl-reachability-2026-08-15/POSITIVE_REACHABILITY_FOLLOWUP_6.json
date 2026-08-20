@@ -1,0 +1,110 @@
+{
+  "schema_version": "ucp-91-reachability-followup/v1",
+  "purpose": "Gold-driven acceptance-only follow-up for six targets not exposed as exact target fields by the frozen initial lexical query plan. These queries are not a blind agent score.",
+  "rows": [
+    {
+      "input_index": 1,
+      "query": "enumerate observed MetaRootEntity types, then inspect Individual",
+      "root_type_count": 18,
+      "individual_root_rank": 15,
+      "target": {
+        "input_index": 1,
+        "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+        "field": "id"
+      },
+      "exact_detail_has_id": true,
+      "id_field": {
+        "name": "id",
+        "is_inherited": true,
+        "declaring_type": "BusinessBase",
+        "documentation": "Идентификатор",
+        "additional_root_evidence": "MetaRootEntity(id=\"id\", collocationId=\"id\")"
+      }
+    },
+    {
+      "input_index": 6,
+      "query": "адреса",
+      "target": {
+        "input_index": 6,
+        "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+        "field": "addresses"
+      },
+      "exact_field_hit": {
+        "rank": 1,
+        "object_id": "code_declared_type_a9aad563e5969f81d745",
+        "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+        "field": "addresses",
+        "retrieval_score": 970,
+        "score_basis": "field_documentation_display_name_exact"
+      }
+    },
+    {
+      "input_index": 13,
+      "query": "предпочитаемые языки коммуникации",
+      "target": {
+        "input_index": 13,
+        "fqcn": "com.sbt.bm.ucp.customerjourney.model.CustomerJourney",
+        "field": "preferredLanguages"
+      },
+      "exact_field_hit": {
+        "rank": 1,
+        "object_id": "code_declared_type_f9095878cdb9a7c2a4e7",
+        "fqcn": "com.sbt.bm.ucp.customerjourney.model.CustomerJourney",
+        "field": "preferredLanguages",
+        "retrieval_score": 970,
+        "score_basis": "field_documentation_summary_exact"
+      }
+    },
+    {
+      "input_index": 29,
+      "query": "активного продукта",
+      "target": {
+        "input_index": 29,
+        "fqcn": "com.sbt.bm.ucp.retail.model.individual.extraBlocks.ProductInfo",
+        "field": "hasActiveProduct"
+      },
+      "exact_field_hit": {
+        "rank": 1,
+        "object_id": "code_declared_type_c50f4a750e7b569ab132",
+        "fqcn": "com.sbt.bm.ucp.retail.model.individual.extraBlocks.ProductInfo",
+        "field": "hasActiveProduct",
+        "retrieval_score": 830,
+        "score_basis": "field_documentation_summary_substring"
+      }
+    },
+    {
+      "input_index": 66,
+      "query": "связь клиента с группами",
+      "target": {
+        "input_index": 66,
+        "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+        "field": "partyToPartyGroups"
+      },
+      "exact_field_hit": {
+        "rank": 1,
+        "object_id": "code_declared_type_a9aad563e5969f81d745",
+        "fqcn": "com.sbt.bm.ucp.common.model.party.AbstractParty",
+        "field": "partyToPartyGroups",
+        "retrieval_score": 970,
+        "score_basis": "field_documentation_summary_exact"
+      }
+    },
+    {
+      "input_index": 81,
+      "query": "facts",
+      "target": {
+        "input_index": 81,
+        "fqcn": "com.sbt.bm.storage.model.OmniMemoryIndividualFacts",
+        "field": "facts"
+      },
+      "exact_field_hit": {
+        "rank": 1,
+        "object_id": "code_declared_type_893d8f004ee5dc7034cb",
+        "fqcn": "com.sbt.bm.storage.model.OmniMemoryIndividualFacts",
+        "field": "facts",
+        "retrieval_score": 990,
+        "score_basis": "field_name_exact"
+      }
+    }
+  ]
+}

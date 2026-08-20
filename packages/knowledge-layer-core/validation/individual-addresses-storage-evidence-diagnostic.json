@@ -1,0 +1,240 @@
+{
+  "diagnostic_schema": "relationship_storage_evidence_diagnostic/v1",
+  "logical_identity": {
+    "field_names": [
+      "id",
+      "version"
+    ],
+    "key_observations": [
+      {
+        "annotation_fqcn": "ru.sbrf.ucp.meta.annotations.MetaVersionedEntity",
+        "annotation_name": "MetaVersionedEntity",
+        "key_observation_id": "model_object_key_c6c6915b5b0975733b1d",
+        "line_end": 17,
+        "line_start": 17,
+        "object_fqcn": "com.sbt.bm.ucp.common.model.party.contact.Address",
+        "observation_basis": "annotation_field_roles",
+        "repo_id": "ucp_api",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_api/ucp-models/ucp-common-model/src/main/java/com/sbt/bm/ucp/common/model/party/contact/Address.java"
+      }
+    ],
+    "members": [
+      {
+        "field_name": "id",
+        "field_owner_fqcn": "com.sbt.bm.ucp.common.model.common.BusinessBase",
+        "field_resolution_kind": "inherited_field",
+        "key_observation_id": "model_object_key_c6c6915b5b0975733b1d",
+        "position": 1,
+        "role_name": "id"
+      },
+      {
+        "field_name": "version",
+        "field_owner_fqcn": "com.sbt.bm.ucp.common.model.common.VersionBase",
+        "field_resolution_kind": "inherited_field",
+        "key_observation_id": "model_object_key_c6c6915b5b0975733b1d",
+        "position": 2,
+        "role_name": "version"
+      }
+    ],
+    "status": "observed"
+  },
+  "logical_key_correspondence": {
+    "canonicalization_fields": [
+      "id",
+      "version"
+    ],
+    "correspondences": [],
+    "status": "not_observed"
+  },
+  "physical_join": {
+    "confirmed": false,
+    "reason": "A physical join requires a first-class storage key, resolved reference value flow, and observed encoding semantics.",
+    "status": "unresolved"
+  },
+  "reference_encoding": {
+    "diagnostic_note": "No physical encoding or alias normalization is inferred from separate alias(...) and key(...) calls.",
+    "semantic_observations": [],
+    "status": "unresolved"
+  },
+  "reference_value_flow": {
+    "local_result_binding_diagnostics": [
+      {
+        "candidate_count": 0,
+        "candidates": [],
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "reference_observation_id": "source_observation_4ae7a402977281b6d27a",
+        "status": "not_applicable_or_inline",
+        "value_expression": "convertAddressCollection(cvb, addressesNode, \"addresses\", key)"
+      },
+      {
+        "candidate_count": 0,
+        "candidates": [],
+        "owner_operation": "IndividualToChangeVectorConverter.convert",
+        "reference_observation_id": "source_observation_73326159a7b76269b084",
+        "status": "not_applicable_or_inline",
+        "value_expression": "convertAddressCollection(cvb, individual.getAddresses(), \"addresses\", key)"
+      }
+    ],
+    "reference_operations": [
+      {
+        "line_end": 68,
+        "line_start": 68,
+        "observation_id": "source_observation_4ae7a402977281b6d27a",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "reference_operation": "replaceReferenceCollection",
+        "relationship_field": "addresses",
+        "repo_id": "ucp_tsa_v4",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java",
+        "value_expression": "convertAddressCollection(cvb, addressesNode, \"addresses\", key)",
+        "value_identifier": null
+      },
+      {
+        "line_end": 189,
+        "line_start": 189,
+        "observation_id": "source_observation_73326159a7b76269b084",
+        "owner_operation": "IndividualToChangeVectorConverter.convert",
+        "reference_operation": "replaceReferenceCollection",
+        "relationship_field": "addresses",
+        "repo_id": "ucp_tsa_v4",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java",
+        "value_expression": "convertAddressCollection(cvb, individual.getAddresses(), \"addresses\", key)",
+        "value_identifier": null
+      }
+    ],
+    "reference_value_derivations": [],
+    "status": "not_observed"
+  },
+  "relationship": {
+    "cardinality": "many",
+    "relation_kind": "reference_collection",
+    "relationship_id": "model_relationship_0112d6c279658dfcf66e",
+    "source_field_name": "addresses",
+    "source_object_fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+    "source_repo_id": "ucp_api",
+    "target_repo_id": "ucp_api",
+    "target_type_fqcn": "com.sbt.bm.ucp.common.model.party.contact.Address"
+  },
+  "root_causes": [
+    {
+      "code": "storage_record_key_not_first_class",
+      "effect": "observed builder key assignments remain expressions and cannot become a canonical physical target field",
+      "evidence": [
+        "source_observation_1cc2a19ad49dbf635974",
+        "source_observation_d9fa9bfbf5c47e2e7e4f"
+      ],
+      "layer": "knowledge-layer-core schema/materialization"
+    },
+    {
+      "code": "logical_identity_is_only_correspondence_domain",
+      "effect": "reference/value matching is canonicalized only against model_object_key_member fields",
+      "evidence": [
+        "model_object_key_c6c6915b5b0975733b1d"
+      ],
+      "layer": "knowledge-layer-core correspondence"
+    },
+    {
+      "code": "reference_encoding_semantics_not_observed",
+      "effect": "alias and key calls do not by themselves prove an encoded source value or alias normalization rule",
+      "evidence": [],
+      "layer": "evidence contract"
+    }
+  ],
+  "safety": {
+    "alias_normalization_inferred": false,
+    "domain_specific_rules_used": false,
+    "physical_join_inferred": false
+  },
+  "storage_key_evidence": {
+    "first_class_storage_tables": [],
+    "relationship_target_expressions": [
+      "key",
+      "parentKey + '.' + (checkExists != null ? fieldName + '_' + address.getId() : fieldName)",
+      "parentKey + '.' + fieldName"
+    ],
+    "status": "observed_not_first_class",
+    "storage_lineages": [
+      {
+        "binding_path_json": "[{\"call_observation_id\":\"call_e4d452ff8e3ae66a2c69\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"cvb\",\"caller_expression\":\"cvb\",\"caller_operation\":\"IndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"changeVectorBuilderFactoryImpl.changeVectorBuilder()\"},{\"call_observation_id\":\"call_e4d452ff8e3ae66a2c69\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"entities\",\"caller_expression\":\"individual.getAddresses()\",\"caller_operation\":\"IndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"individual.getAddresses()\"},{\"call_observation_id\":\"call_e4d452ff8e3ae66a2c69\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"fieldName\",\"caller_expression\":\"\\\"addresses\\\"\",\"caller_operation\":\"IndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"\\\"addresses\\\"\"},{\"call_observation_id\":\"call_e4d452ff8e3ae66a2c69\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"parentKey\",\"caller_expression\":\"key\",\"caller_operation\":\"IndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"\\\"Individual_\\\" + individual.getId()\"},{\"call_observation_id\":\"call_29f2fba3d49ba8529b57\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"cvb\",\"caller_expression\":\"cvb\",\"caller_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"changeVectorBuilderFactoryImpl.changeVectorBuilder()\"},{\"call_observation_id\":\"call_29f2fba3d49ba8529b57\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"address\",\"caller_expression\":\"address\",\"caller_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"address\"},{\"call_observation_id\":\"call_29f2fba3d49ba8529b57\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"fieldName\",\"caller_expression\":\"fieldName\",\"caller_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"\\\"addresses\\\"\"},{\"call_observation_id\":\"call_29f2fba3d49ba8529b57\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"parentKey\",\"caller_expression\":\"parentKey\",\"caller_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"(\\\"Individual_\\\" + individual.getId())\"},{\"call_observation_id\":\"call_29f2fba3d49ba8529b57\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"checkExists\",\"caller_expression\":\"exists::contains\",\"caller_operation\":\"IndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"exists::contains\"}]",
+        "collection_helper_operation": "IndividualToChangeVectorConverter.convertAddressCollection",
+        "composed_target_key_expression": "((\"Individual_\" + individual.getId())) + '.' + ((exists::contains) != null ? (\"addresses\") + '_' + address.getId() : (\"addresses\"))",
+        "key_lineage_id": "model_relationship_storage_key_derivation_4ccfe8d6d2fac0efaeca",
+        "lineage_repo_id": "ucp_tsa_v4",
+        "observation_basis": "observed TSA reference collection plus exact Java call/key-expression bindings only; no physical table, SQL, FK, or join verdict",
+        "reference_operation": "replaceReferenceCollection",
+        "relationship_field": "addresses",
+        "source_alias": "com.sbt.bm.ucp.retail.model.individual.Individual",
+        "source_key_expression": "\"Individual_\" + individual.getId()",
+        "source_key_passed_into_target_key": true,
+        "source_observation_occurrence_id": "source_observation_ab2f1714ac793200e6c6",
+        "source_operation": "IndividualToChangeVectorConverter.convert",
+        "target_alias": "com.sbt.bm.ucp.common.model.party.contact.Address",
+        "target_key_expression_template": "parentKey + '.' + (checkExists != null ? fieldName + '_' + address.getId() : fieldName)",
+        "target_key_operation": "IndividualToChangeVectorConverter.convertAddress"
+      },
+      {
+        "binding_path_json": "[{\"call_observation_id\":\"call_9efe2cbbf9eb2bbfa744\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"cvb\",\"caller_expression\":\"cvb\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"changeVectorBuilderFactoryImpl.changeVectorBuilder()\"},{\"call_observation_id\":\"call_9efe2cbbf9eb2bbfa744\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"elements\",\"caller_expression\":\"addressesNode\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"individualNode.get(\\\"addresses\\\")\"},{\"call_observation_id\":\"call_9efe2cbbf9eb2bbfa744\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"fieldName\",\"caller_expression\":\"\\\"addresses\\\"\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"\\\"addresses\\\"\"},{\"call_observation_id\":\"call_9efe2cbbf9eb2bbfa744\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"callee_parameter\":\"parentKey\",\"caller_expression\":\"key\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"\\\"Individual_\\\" + individualNode.get(\\\"id\\\").asText()\"},{\"call_observation_id\":\"call_15905e22a884eea341b7\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"cvb\",\"caller_expression\":\"cvb\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"changeVectorBuilderFactoryImpl.changeVectorBuilder()\"},{\"call_observation_id\":\"call_15905e22a884eea341b7\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"entityNode\",\"caller_expression\":\"it.next()\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"it.next()\"},{\"call_observation_id\":\"call_15905e22a884eea341b7\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"fieldName\",\"caller_expression\":\"fieldName\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"\\\"addresses\\\"\"},{\"call_observation_id\":\"call_15905e22a884eea341b7\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"parentKey\",\"caller_expression\":\"parentKey\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"(\\\"Individual_\\\" + individualNode.get(\\\"id\\\").asText())\"},{\"call_observation_id\":\"call_15905e22a884eea341b7\",\"callee_operation\":\"JsonIndividualToChangeVectorConverter.convertAddress\",\"callee_parameter\":\"checkExists\",\"caller_expression\":\"exists::contains\",\"caller_operation\":\"JsonIndividualToChangeVectorConverter.convertAddressCollection\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"exists::contains\"}]",
+        "collection_helper_operation": "JsonIndividualToChangeVectorConverter.convertAddressCollection",
+        "composed_target_key_expression": "key",
+        "key_lineage_id": "model_relationship_storage_key_derivation_de9b599b232b49c90662",
+        "lineage_repo_id": "ucp_tsa_v4",
+        "observation_basis": "observed TSA reference collection plus exact Java call/key-expression bindings only; no physical table, SQL, FK, or join verdict",
+        "reference_operation": "replaceReferenceCollection",
+        "relationship_field": "addresses",
+        "source_alias": "com.sbt.bm.ucp.retail.model.individual.Individual",
+        "source_key_expression": "\"Individual_\" + individualNode.get(\"id\").asText()",
+        "source_key_passed_into_target_key": true,
+        "source_observation_occurrence_id": "source_observation_912d9e95ee7605cbebc1",
+        "source_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "target_alias": "com.sbt.bm.ucp.common.model.party.contact.Address",
+        "target_key_expression_template": "key",
+        "target_key_operation": "JsonIndividualToChangeVectorConverter.convertAddress"
+      }
+    ],
+    "target_alias_assignments": [
+      {
+        "line_end": 664,
+        "line_start": 664,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.IndividualToChangeVectorConverter",
+        "owner_operation": "IndividualToChangeVectorConverter.convertAddress",
+        "repo_id": "ucp_tsa_v4",
+        "source_expression": "\"com.sbt.bm.ucp.common.model.party.contact.Address\"",
+        "source_observation_occurrence_id": "source_observation_af6999642f103f0b9fb7",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+      },
+      {
+        "line_end": 672,
+        "line_start": 672,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.JsonIndividualToChangeVectorConverter",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convertAddress",
+        "repo_id": "ucp_tsa_v4",
+        "source_expression": "\"com.sbt.bm.ucp.common.model.party.contact.Address\"",
+        "source_observation_occurrence_id": "source_observation_f22b88dc62cf07871ca0",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+      }
+    ],
+    "target_key_assignments": [
+      {
+        "key_expression": "key",
+        "key_expression_tree_json": "{\"end_byte\":40307,\"node_type\":\"identifier\",\"start_byte\":40304,\"text\":\"key\",\"value\":\"key\"}",
+        "line_end": 663,
+        "line_start": 663,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.IndividualToChangeVectorConverter",
+        "owner_operation": "IndividualToChangeVectorConverter.convertAddress",
+        "repo_id": "ucp_tsa_v4",
+        "source_observation_occurrence_id": "source_observation_1cc2a19ad49dbf635974",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java"
+      },
+      {
+        "key_expression": "key",
+        "key_expression_tree_json": "{\"end_byte\":37859,\"node_type\":\"identifier\",\"start_byte\":37856,\"text\":\"key\",\"value\":\"key\"}",
+        "line_end": 674,
+        "line_start": 674,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.JsonIndividualToChangeVectorConverter",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convertAddress",
+        "repo_id": "ucp_tsa_v4",
+        "source_observation_occurrence_id": "source_observation_d9fa9bfbf5c47e2e7e4f",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+      }
+    ]
+  }
+}

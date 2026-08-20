@@ -1,0 +1,162 @@
+{
+  "schema_version": "data_model_discovery_e2e_validation/v1",
+  "repository_summary": {
+    "completed": 3,
+    "failed": 0,
+    "not_candidate": 0,
+    "possible": 1,
+    "strong": 2,
+    "total": 3,
+    "weak": 0
+  },
+  "candidates": [
+    {
+      "repo_id": "ucp_data_model",
+      "candidate_status": "strong",
+      "score": 80,
+      "signals": {
+        "annotated_model_type_count": 401,
+        "declarative_schema_file_count": 0,
+        "executable_type_count": 1,
+        "files_scanned": 626,
+        "java_class_count": 817,
+        "java_field_count": 4859,
+        "java_file_count": 583,
+        "model_named_module_count": 5,
+        "model_path_field_count": 4854,
+        "model_path_type_count": 814,
+        "model_path_type_ratio": 0.996328,
+        "model_tooling_type_count": 0,
+        "parse_error_count": 0,
+        "physical_schema_file_count": 0,
+        "relationship_field_count": 0,
+        "schema_binding_type_count": 0,
+        "standard_entity_type_count": 0
+      },
+      "score_components": [
+        {
+          "basis": "401 classes use standard or custom model annotations",
+          "component": "model_annotations",
+          "points": 40
+        },
+        {
+          "basis": "814/817 classes are in model-oriented paths",
+          "component": "model_path_concentration",
+          "points": 25
+        },
+        {
+          "basis": "5 model-oriented modules or source roots observed",
+          "component": "model_modules",
+          "points": 15
+        }
+      ],
+      "evidence_count": 40
+    },
+    {
+      "repo_id": "ucp_tsa_v4",
+      "candidate_status": "strong",
+      "score": 80,
+      "signals": {
+        "annotated_model_type_count": 1,
+        "declarative_schema_file_count": 0,
+        "executable_type_count": 1,
+        "files_scanned": 487,
+        "java_class_count": 479,
+        "java_field_count": 1142,
+        "java_file_count": 459,
+        "model_named_module_count": 8,
+        "model_path_field_count": 148,
+        "model_path_type_count": 36,
+        "model_path_type_ratio": 0.075157,
+        "model_tooling_type_count": 14,
+        "parse_error_count": 0,
+        "physical_schema_file_count": 0,
+        "relationship_field_count": 0,
+        "schema_binding_type_count": 12,
+        "standard_entity_type_count": 0
+      },
+      "score_components": [
+        {
+          "basis": "1 class uses a standard or custom model annotation",
+          "component": "model_annotations",
+          "points": 15
+        },
+        {
+          "basis": "36/479 classes are in model-oriented paths",
+          "component": "model_path_concentration",
+          "points": 8
+        },
+        {
+          "basis": "14 model parser/generator/compiler classes observed",
+          "component": "model_tooling",
+          "points": 30
+        },
+        {
+          "basis": "8 model-oriented modules or source roots observed",
+          "component": "model_modules",
+          "points": 15
+        },
+        {
+          "basis": "12 schema-bound classes observed",
+          "component": "schema_bindings",
+          "points": 12
+        }
+      ],
+      "evidence_count": 40
+    },
+    {
+      "repo_id": "at900_client_profile",
+      "candidate_status": "possible",
+      "score": 39,
+      "signals": {
+        "annotated_model_type_count": 0,
+        "declarative_schema_file_count": 0,
+        "executable_type_count": 249,
+        "files_scanned": 1038,
+        "java_class_count": 821,
+        "java_field_count": 3407,
+        "java_file_count": 781,
+        "model_named_module_count": 9,
+        "model_path_field_count": 1204,
+        "model_path_type_count": 292,
+        "model_path_type_ratio": 0.355664,
+        "model_tooling_type_count": 0,
+        "parse_error_count": 0,
+        "physical_schema_file_count": 121,
+        "relationship_field_count": 0,
+        "schema_binding_type_count": 13,
+        "standard_entity_type_count": 0
+      },
+      "score_components": [
+        {
+          "basis": "292/821 classes are in model-oriented paths",
+          "component": "model_path_concentration",
+          "points": 15
+        },
+        {
+          "basis": "9 model-oriented modules or source roots observed",
+          "component": "model_modules",
+          "points": 15
+        },
+        {
+          "basis": "13 schema-bound classes observed",
+          "component": "schema_bindings",
+          "points": 12
+        },
+        {
+          "basis": "121 migration or DDL files observed",
+          "component": "physical_schema",
+          "points": 12
+        },
+        {
+          "basis": "249/821 classes look executable and strong model ownership evidence is absent",
+          "component": "application_shape_penalty",
+          "points": -15
+        }
+      ],
+      "evidence_count": 40
+    }
+  ],
+  "elapsed_seconds": 27.16,
+  "peak_rss_kib": 486212
+}

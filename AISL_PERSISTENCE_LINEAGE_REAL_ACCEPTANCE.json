@@ -1,0 +1,984 @@
+{
+  "revision_id": "rev-748e1f231c35d6186f988e24",
+  "artifact_id": "knowledge_artifact_59bbfd7034339e97adab",
+  "read": {
+    "schema_version": "aisl-knowledge-item-read/v1",
+    "system_id": "aisl-real-at900-persistence",
+    "revision_id": "rev-748e1f231c35d6186f988e24",
+    "product": {
+      "artifact_id": "knowledge_artifact_59bbfd7034339e97adab",
+      "model_kind": "persistence-lineage",
+      "schema_version": "persistence-lineage/v1",
+      "source_materialization_id": "persistence-lineage",
+      "content_fingerprint": "c72e6d64d31ba089e19c513883c4a0acaa9ddfe6c91ce0144e288268d80cfb7c",
+      "database": {
+        "uri": "file:///mnt/data/work_block_b/at900_runner_acceptance/execution/materialization-execution/materializations/001-persistence-lineage/knowledge-layer/knowledge-layer.duckdb",
+        "sha256": "e87097931219b17c7385a52d6cf69f1d52e66fb802bee88886765acb676d3e8f",
+        "media_type": "application/vnd.duckdb",
+        "schema_version": "persistence-lineage/v1",
+        "byte_size": 17838080,
+        "filename": "knowledge-layer.duckdb"
+      },
+      "manifest": {
+        "uri": "file:///mnt/data/work_block_b/at900_runner_acceptance/execution/materialization-execution/materializations/001-persistence-lineage/knowledge-layer/knowledge-layer-manifest.json",
+        "sha256": "dc3b1db289799ab30135eb4989f56c1576fe9d1385fd0d55839f8d6855219224",
+        "media_type": "application/json",
+        "schema_version": "knowledge_layer/v1",
+        "byte_size": 31180,
+        "filename": "knowledge-layer-manifest.json"
+      },
+      "capabilities": [
+        "workspace.fdp-paths",
+        "workspace.persistence-lineage"
+      ],
+      "coverage": {
+        "core_status": {
+          "access_boundaries_extracted": 257,
+          "builder_field_mappings_extracted": 1948,
+          "candidate_signal_type_counts": {
+            "custom_dao_persistence_boundary": 761,
+            "known_storage_api_boundary": 37,
+            "storage_read_near_access_boundary": 233
+          },
+          "classes_indexed": 877,
+          "data_sources_extracted": 55,
+          "deep": true,
+          "elapsed_ms": 6684,
+          "evidence_maturity_blocker_counts": {
+            "access_boundary:unresolved": 162,
+            "end_to_end_trace:unresolved": 1166,
+            "field_mapping:unresolved": 1332,
+            "persistence_write:unresolved": 929,
+            "physical_storage:unresolved": 1183,
+            "source_boundary:unresolved": 1166,
+            "storage_to_access_lineage:unresolved": 233
+          },
+          "evidence_maturity_level_counts": {
+            "confirmed": 411,
+            "not_applicable": 4548,
+            "unresolved": 2145
+          },
+          "evidence_maturity_model": {
+            "candidate_signal_policy": "candidate_signals are navigation hints with is_evidence=false; LLM must inspect source before using them as proof",
+            "dimensions": [
+              "persistence_write",
+              "source_boundary",
+              "field_mapping",
+              "physical_storage",
+              "end_to_end_trace"
+            ],
+            "gap_lifecycle_policy": "decision-blocking actionable unresolved gaps must have source_inspection_required=true and linked source_inspection_request when a concrete target exists",
+            "levels": [
+              "confirmed",
+              "unresolved",
+              "not_applicable"
+            ],
+            "policy": "strict_confirmed_vs_unresolved_candidate_signals_are_navigation_only"
+          },
+          "factory_method_mappings_extracted": 69,
+          "files_scanned": 868,
+          "gap_kind_counts": {
+            "dao_entity_type_unknown": 39,
+            "field_mapping_not_resolved": 651,
+            "mapper_not_resolved": 2,
+            "persistent_mutation_by_key": 49,
+            "saved_object_schema_unknown": 13,
+            "storage_operation_is_delete": 24,
+            "storage_operation_is_read": 357,
+            "storage_operation_not_a_confirmed_write": 20
+          },
+          "java_lineage_patterns_extracted": 813,
+          "jooq_batch_bind_mappings_extracted": 36,
+          "jooq_parameterized_sql_mappings_extracted": 18,
+          "lineage_source_kind_counts": {
+            "computed": 57,
+            "kafka_consumed": 6,
+            "method_input": 205,
+            "storage_read": 3,
+            "unknown": 8
+          },
+          "mapstruct_field_mappings_extracted": 0,
+          "mapstruct_mapper_signatures_extracted": 43,
+          "methods_indexed": 6343,
+          "mode": "source_only_persistence_lineage_deep",
+          "persistent_writes_extracted": 138,
+          "progress_events": [
+            {
+              "deep": true,
+              "elapsed_ms": 0,
+              "file_count": 1038,
+              "phase": "context",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:51.173822+00:00"
+            },
+            {
+              "elapsed_ms": 0,
+              "file_count": 1038,
+              "phase": "context.method_index",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:51.173909+00:00"
+            },
+            {
+              "class_count": 877,
+              "elapsed_ms": 400,
+              "method_count": 6343,
+              "phase": "context.method_index",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:51.573909+00:00",
+              "warning_count": 0
+            },
+            {
+              "elapsed_ms": 400,
+              "method_count": 6343,
+              "phase": "context.method_grouping",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:51.574231+00:00"
+            },
+            {
+              "elapsed_ms": 515,
+              "grouped_method_count": 6343,
+              "phase": "context.method_grouping",
+              "raw_grouped_method_count": 6343,
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:51.688999+00:00"
+            },
+            {
+              "elapsed_ms": 515,
+              "method_count": 6343,
+              "phase": "context.origin_detection",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:51.689319+00:00"
+            },
+            {
+              "elapsed_ms": 531,
+              "origin_count": 58,
+              "phase": "context.origin_detection",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:51.705090+00:00"
+            },
+            {
+              "deep": true,
+              "elapsed_ms": 531,
+              "method_count": 6343,
+              "phase": "context.call_graph",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:51.705268+00:00"
+            },
+            {
+              "call_count": 6765,
+              "elapsed_ms": 3747,
+              "phase": "context.call_graph",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:54.921056+00:00"
+            },
+            {
+              "elapsed_ms": 3747,
+              "method_count": 6343,
+              "phase": "context.storage_access_detection",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:54.921697+00:00"
+            },
+            {
+              "elapsed_ms": 3881,
+              "phase": "context.storage_access_detection",
+              "status": "done",
+              "storage_access_count": 552,
+              "updated_at": "2026-08-15T13:41:55.055466+00:00"
+            },
+            {
+              "elapsed_ms": 3881,
+              "method_count": 6343,
+              "phase": "context.jooq_batch_bind_mappings",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.055796+00:00"
+            },
+            {
+              "elapsed_ms": 4207,
+              "fact_count": 36,
+              "phase": "context.jooq_batch_bind_mappings",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.380826+00:00"
+            },
+            {
+              "elapsed_ms": 4207,
+              "method_count": 6343,
+              "phase": "context.jooq_parameterized_sql_mappings",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.381145+00:00"
+            },
+            {
+              "elapsed_ms": 4417,
+              "fact_count": 18,
+              "phase": "context.jooq_parameterized_sql_mappings",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.591219+00:00"
+            },
+            {
+              "elapsed_ms": 4417,
+              "method_count": 6343,
+              "phase": "context.java_lineage_patterns",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.591571+00:00"
+            },
+            {
+              "elapsed_ms": 4527,
+              "fact_count": 813,
+              "phase": "context.java_lineage_patterns",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.700831+00:00"
+            },
+            {
+              "class_count": 877,
+              "elapsed_ms": 4527,
+              "phase": "context.spring_component_dependencies",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.701172+00:00"
+            },
+            {
+              "elapsed_ms": 4532,
+              "fact_count": 378,
+              "phase": "context.spring_component_dependencies",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.706790+00:00"
+            },
+            {
+              "elapsed_ms": 4533,
+              "method_count": 6343,
+              "phase": "context.template_method_dispatches",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.707025+00:00"
+            },
+            {
+              "elapsed_ms": 4539,
+              "fact_count": 12,
+              "phase": "context.template_method_dispatches",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.712994+00:00"
+            },
+            {
+              "elapsed_ms": 4539,
+              "method_count": 6343,
+              "phase": "context.factory_method_mappings",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.713173+00:00"
+            },
+            {
+              "elapsed_ms": 4577,
+              "fact_count": 69,
+              "phase": "context.factory_method_mappings",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.751033+00:00"
+            },
+            {
+              "elapsed_ms": 4578,
+              "method_count": 6343,
+              "method_variant_count": 7502,
+              "phase": "context.builder_field_mappings",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.752133+00:00"
+            },
+            {
+              "elapsed_ms": 4778,
+              "fact_count": 1948,
+              "phase": "context.builder_field_mappings",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.952063+00:00"
+            },
+            {
+              "elapsed_ms": 4778,
+              "method_count": 6343,
+              "phase": "context.stream_collection_lineages",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.952441+00:00"
+            },
+            {
+              "elapsed_ms": 4818,
+              "fact_count": 420,
+              "phase": "context.stream_collection_lineages",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:55.992783+00:00"
+            },
+            {
+              "elapsed_ms": 4819,
+              "file_count": 1038,
+              "phase": "context.schema_fields",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:55.993124+00:00"
+            },
+            {
+              "elapsed_ms": 4888,
+              "phase": "context.schema_fields",
+              "schema_count": 731,
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.061885+00:00"
+            },
+            {
+              "class_count": 877,
+              "elapsed_ms": 4888,
+              "phase": "context.interface_implementations",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:56.062238+00:00"
+            },
+            {
+              "elapsed_ms": 4890,
+              "interface_count": 166,
+              "phase": "context.interface_implementations",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.064500+00:00"
+            },
+            {
+              "deep": true,
+              "elapsed_ms": 4890,
+              "phase": "context.mapper_signatures",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:56.064677+00:00"
+            },
+            {
+              "elapsed_ms": 4927,
+              "fact_count": 43,
+              "phase": "context.mapper_signatures",
+              "signature_count": 43,
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.101298+00:00"
+            },
+            {
+              "deep": true,
+              "elapsed_ms": 4927,
+              "phase": "context.repository_entity_map",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:56.101590+00:00"
+            },
+            {
+              "elapsed_ms": 4947,
+              "mapping_count": 40,
+              "phase": "context.repository_entity_map",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.121789+00:00"
+            },
+            {
+              "elapsed_ms": 5129,
+              "method_count": 6343,
+              "phase": "context",
+              "status": "done",
+              "storage_access_count": 552,
+              "updated_at": "2026-08-15T13:41:56.302855+00:00"
+            },
+            {
+              "elapsed_ms": 5129,
+              "origin_count": 58,
+              "phase": "data_source_phase",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:56.303237+00:00"
+            },
+            {
+              "elapsed_ms": 5130,
+              "fact_count": 55,
+              "phase": "data_source_phase",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.304262+00:00"
+            },
+            {
+              "elapsed_ms": 5130,
+              "phase": "persistent_write_lineage_phase",
+              "status": "running",
+              "storage_access_count": 552,
+              "updated_at": "2026-08-15T13:41:56.304418+00:00"
+            },
+            {
+              "access_kind": "mutation",
+              "elapsed_ms": 5130,
+              "fact_count": 0,
+              "operation": "ActiveProfileDaoImpl.updateCurrentState",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 0,
+              "status": "running",
+              "storage_method": "update",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.304583+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5131,
+              "fact_count": 24,
+              "operation": "ActiveProfileSwitchJobTest.testMoveToSiAndFastReturnToProm",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 24,
+              "status": "running",
+              "storage_method": "getActiveProfile",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.305571+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5132,
+              "fact_count": 49,
+              "operation": "CardInfoDao.getWay4CardFullInfo",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 49,
+              "status": "running",
+              "storage_method": "select",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.306117+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5250,
+              "fact_count": 341,
+              "operation": "ClientProfileByCardService.findByInfoCard",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 74,
+              "status": "running",
+              "storage_method": "getPhonesByPprbCardNumber",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.423940+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5263,
+              "fact_count": 372,
+              "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIdsWhiteList",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 99,
+              "status": "running",
+              "storage_method": "getPprbProfilesByUcpIds",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.437329+00:00"
+            },
+            {
+              "access_kind": "write",
+              "elapsed_ms": 5279,
+              "fact_count": 461,
+              "operation": "DalProcessingServiceTest.removeNoPhoneLink_2phone_1card",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 124,
+              "status": "running",
+              "storage_method": "saveLinkHistory",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.453611+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5372,
+              "fact_count": 607,
+              "operation": "DeviceLinkServiceImpl.findByDeviceIds",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 149,
+              "status": "running",
+              "storage_method": "findByDeviceId",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.546196+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5412,
+              "fact_count": 681,
+              "operation": "LinkDao.fetchPprbLinks",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 174,
+              "status": "running",
+              "storage_method": "select",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.586394+00:00"
+            },
+            {
+              "access_kind": "write",
+              "elapsed_ms": 5423,
+              "fact_count": 752,
+              "operation": "LinkModifyServiceTest.testDeleteWay",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 199,
+              "status": "running",
+              "storage_method": "saveLinkHistory",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.597325+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5448,
+              "fact_count": 887,
+              "operation": "MbClientProfileDaoImpl.getLastBlocks",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 224,
+              "status": "running",
+              "storage_method": "select",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.622603+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5449,
+              "fact_count": 912,
+              "operation": "MbClientProfileExtSimpleDao.fetchSimpleProfilePprb",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 249,
+              "status": "running",
+              "storage_method": "select",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.623290+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5450,
+              "fact_count": 937,
+              "operation": "MbClientProfileServiceImpl.fetchSimpleProfile",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 274,
+              "status": "running",
+              "storage_method": "getInfoCardProfiles",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.623877+00:00"
+            },
+            {
+              "access_kind": "mutation",
+              "elapsed_ms": 5450,
+              "fact_count": 962,
+              "operation": "MbkConfig.jdbcTemplateMbk",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 299,
+              "status": "running",
+              "storage_method": "setQueryTimeout",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.624411+00:00"
+            },
+            {
+              "access_kind": "mutation",
+              "elapsed_ms": 5452,
+              "fact_count": 1001,
+              "operation": "NotificationChannelDao.updateChannels",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 324,
+              "status": "running",
+              "storage_method": "batchUpdate",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.626153+00:00"
+            },
+            {
+              "access_kind": "write",
+              "elapsed_ms": 5495,
+              "fact_count": 1115,
+              "operation": "PhoneDao.insertQuickServiceHistory",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 349,
+              "status": "running",
+              "storage_method": "insertInto",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.668976+00:00"
+            },
+            {
+              "access_kind": "write",
+              "elapsed_ms": 5540,
+              "fact_count": 1316,
+              "operation": "PprbCardDao.insertCardInfos",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 374,
+              "status": "running",
+              "storage_method": "insertInto",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.713941+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5544,
+              "fact_count": 1351,
+              "operation": "ProfilesByCardTest.findByCardStateTest",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 399,
+              "status": "running",
+              "storage_method": "getPhonesByPprbCardNumber",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.718008+00:00"
+            },
+            {
+              "access_kind": "mutation",
+              "elapsed_ms": 5557,
+              "fact_count": 1401,
+              "operation": "RegHistoryEventDao.updateSuccessEvents",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 424,
+              "status": "running",
+              "storage_method": "update",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.731471+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5566,
+              "fact_count": 1429,
+              "operation": "RegistrationHistoryServiceImpl.getReadyToSendByProcessing",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 449,
+              "status": "running",
+              "storage_method": "getReadyToSendByProcessing",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.740402+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5624,
+              "fact_count": 1568,
+              "operation": "RegistrationHistoryServiceTest.testNotFound",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 474,
+              "status": "running",
+              "storage_method": "loadAll",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.797874+00:00"
+            },
+            {
+              "access_kind": "write",
+              "elapsed_ms": 5642,
+              "fact_count": 1620,
+              "operation": "SpreadProfileServiceTest.testConflictProfiles",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 499,
+              "status": "running",
+              "storage_method": "merge",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.816242+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5648,
+              "fact_count": 1663,
+              "operation": "UnblockColdPeriodPhoneDao.fetchBlockedPhones",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 524,
+              "status": "running",
+              "storage_method": "select",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.822476+00:00"
+            },
+            {
+              "access_kind": "mutation",
+              "elapsed_ms": 5671,
+              "fact_count": 1721,
+              "operation": "Way4CardServiceImpl.updateAttributes",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 549,
+              "status": "running",
+              "storage_method": "updateWayPaymentAttribute",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.845108+00:00"
+            },
+            {
+              "access_kind": "read",
+              "elapsed_ms": 5672,
+              "fact_count": 1731,
+              "operation": "WhiteListServiceImpl.isInWhiteList",
+              "phase": "persistent_write_lineage_phase.access_loop",
+              "processed_accesses": 551,
+              "status": "running",
+              "storage_method": "loadAll",
+              "total_accesses": 552,
+              "updated_at": "2026-08-15T13:41:56.846788+00:00"
+            },
+            {
+              "counts": {
+                "access_kind_counts": {
+                  "mutation": 91,
+                  "read": 357,
+                  "write": 104
+                },
+                "gap_counts": {
+                  "dao_entity_type_unknown": 39,
+                  "field_mapping_not_resolved": 651,
+                  "mapper_not_resolved": 2,
+                  "persistent_mutation_by_key": 49,
+                  "saved_object_schema_unknown": 13,
+                  "storage_operation_is_delete": 24,
+                  "storage_operation_is_read": 357,
+                  "storage_operation_not_a_confirmed_write": 20
+                },
+                "operation_kind_counts": {
+                  "batch_insert": 7,
+                  "batch_update": 2,
+                  "cache_write": 2,
+                  "delete": 24,
+                  "insert": 39,
+                  "mutation": 38,
+                  "read": 255,
+                  "save": 40,
+                  "select": 102,
+                  "update": 27,
+                  "upsert": 16
+                },
+                "promoted_custom_dao_mutation_count": 18,
+                "source_kind_counts": {
+                  "computed": 57,
+                  "kafka_consumed": 6,
+                  "method_input": 205,
+                  "storage_read": 3,
+                  "unknown": 8
+                }
+              },
+              "elapsed_ms": 5673,
+              "fact_count": 1732,
+              "phase": "persistent_write_lineage_phase",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.847463+00:00"
+            },
+            {
+              "elapsed_ms": 5673,
+              "phase": "observed_factory_physical_composition",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:56.847694+00:00",
+              "write_fact_count": 1732
+            },
+            {
+              "elapsed_ms": 5722,
+              "fact_count": 2,
+              "phase": "observed_factory_physical_composition",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.895873+00:00"
+            },
+            {
+              "elapsed_ms": 5722,
+              "phase": "standalone_mapping_hint_phase",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:56.896273+00:00"
+            },
+            {
+              "elapsed_ms": 5726,
+              "fact_count": 3970,
+              "phase": "standalone_mapping_hint_phase",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:56.900055+00:00"
+            },
+            {
+              "elapsed_ms": 5726,
+              "phase": "stored_data_access_phase",
+              "status": "running",
+              "storage_access_count": 552,
+              "updated_at": "2026-08-15T13:41:56.900290+00:00"
+            },
+            {
+              "counts": {
+                "access_boundary": 257,
+                "read_from_storage": 438,
+                "storage_to_access_lineage": 252,
+                "stored_field_to_response_field_mapping": 237
+              },
+              "elapsed_ms": 6662,
+              "fact_count": 1345,
+              "phase": "stored_data_access_phase",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:57.836453+00:00"
+            },
+            {
+              "elapsed_ms": 6663,
+              "fact_count": 7104,
+              "phase": "source_inspection_links",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:57.836927+00:00"
+            },
+            {
+              "elapsed_ms": 6673,
+              "fact_count": 7104,
+              "phase": "source_inspection_links",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:57.847192+00:00"
+            },
+            {
+              "elapsed_ms": 6673,
+              "fact_count": 7104,
+              "phase": "status_build",
+              "status": "running",
+              "updated_at": "2026-08-15T13:41:57.847521+00:00"
+            },
+            {
+              "elapsed_ms": 6684,
+              "fact_count": 7104,
+              "phase": "done",
+              "status": "done",
+              "updated_at": "2026-08-15T13:41:57.858278+00:00"
+            }
+          ],
+          "promoted_custom_dao_mutation_count": 18,
+          "read_from_storage_extracted": 438,
+          "requested": true,
+          "source_inspection_requests_extracted": 306,
+          "source_to_storage_lineages_extracted": 529,
+          "spring_component_dependencies_extracted": 378,
+          "storage_access_kind_counts": {
+            "mutation": 91,
+            "read": 357,
+            "write": 104
+          },
+          "storage_lineage_gaps_extracted": 1155,
+          "storage_operation_kind_counts": {
+            "batch_insert": 7,
+            "batch_update": 2,
+            "cache_write": 2,
+            "delete": 24,
+            "insert": 39,
+            "mutation": 38,
+            "read": 255,
+            "save": 40,
+            "select": 102,
+            "update": 27,
+            "upsert": 16
+          },
+          "storage_to_access_lineages_extracted": 252,
+          "stored_data_access_counts": {
+            "access_boundary": 257,
+            "read_from_storage": 438,
+            "storage_to_access_lineage": 252,
+            "stored_field_to_response_field_mapping": 237
+          },
+          "stored_field_to_response_field_mappings_extracted": 237,
+          "stream_collection_lineages_extracted": 420,
+          "template_method_dispatches_extracted": 12,
+          "warnings": []
+        },
+        "coverage_status": "complete",
+        "lineage_gap_count": 1155,
+        "persistent_write_count": 138,
+        "source_file_count": 1038,
+        "source_to_storage_lineage_count": 529,
+        "storage_access_count": 0,
+        "storage_to_access_lineage_count": 252,
+        "stored_field_mapping_count": 237
+      },
+      "diagnostics": []
+    },
+    "item_ref": {
+      "scope_id": "aisl-real-at900-persistence",
+      "revision_id": "rev-748e1f231c35d6186f988e24",
+      "product_id": "knowledge_artifact_59bbfd7034339e97adab",
+      "item_kind": "source_to_storage_lineage",
+      "local_id": "source_to_storage_lineage_000108"
+    },
+    "projection_status": "available",
+    "projection_basis": "typed_product_universal_projection",
+    "item": {
+      "assignment_expression": "link.getClientId()",
+      "assignment_kind": "jooq_batch_bind_call_argument_mapping",
+      "candidate_signals": [],
+      "evidence": [
+        {
+          "extractor": "java_persistence_lineage_storage",
+          "file": "/mnt/data/work_block_b/sources/at900/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/DeviceLinkServiceImpl.java",
+          "line_end": 237,
+          "line_start": 193
+        }
+      ],
+      "evidence_maturity_dimensions": {
+        "end_to_end_trace": "confirmed",
+        "field_mapping": "confirmed",
+        "persistence_write": "confirmed",
+        "physical_storage": "confirmed",
+        "source_boundary": "confirmed"
+      },
+      "evidence_maturity_level": "confirmed",
+      "evidence_refs": [
+        "storage_access_000145",
+        "persistent_write_000029"
+      ],
+      "lineage_status": "confirmed",
+      "missing_links": [],
+      "path": [
+        "requests.clientId",
+        "DeviceLinkDao.updateDeviceLink.link.getClientId()",
+        "DeviceLinkDao.prepareUpdateBatch",
+        "DEVICE_LINK.CLIENT_ID"
+      ],
+      "persistence_missing_links": null,
+      "persistent_write_id": "persistent_write_000029",
+      "saved_object": "DEVICE_LINK",
+      "saved_object_field": "CLIENT_ID",
+      "source_container": "requests",
+      "source_container_type": null,
+      "source_element_type": "SyncPushDeviceRequest",
+      "source_field": "clientId",
+      "source_field_role": "identifier",
+      "source_inspection_request_ids": [],
+      "source_inspection_request_status": null,
+      "source_inspection_required": false,
+      "source_kind": "kafka_consumed",
+      "source_operation": "SyncPushDeviceConsumer.onReceive",
+      "source_payload": "SyncPushDeviceRequest",
+      "source_payload_parameter": "requests",
+      "source_scope": "production_code",
+      "source_to_saved_field_mappings": [
+        {
+          "evidence_refs": [
+            "source_to_storage_lineage_000108",
+            "storage_access_000145",
+            "persistent_write_000029"
+          ],
+          "mapping_kind": "jooq_batch_bind_call_argument_mapping",
+          "mapping_status": "confirmed",
+          "saved_object": "DEVICE_LINK",
+          "source_attribute": "clientId",
+          "source_object": "requests",
+          "storage_attribute": "CLIENT_ID"
+        }
+      ],
+      "source_to_storage_lineage_id": "source_to_storage_lineage_000108",
+      "source_to_storage_segment": {
+        "evidence_policy": "technical source-to-storage segment only; business own/foreign classification is not asserted",
+        "field_mapping_status": "confirmed",
+        "status": "confirmed"
+      },
+      "storage_access_id": "storage_access_000145",
+      "storage_call": "dao.updateDeviceLink(batch.forUpdateActual())",
+      "storage_field": "CLIENT_ID",
+      "storage_method": "updateDeviceLink",
+      "storage_operation": "DeviceLinkServiceImpl.changeData",
+      "storage_resolution_level": "resolved_dao_implementation",
+      "storage_target": "DEVICE_LINK",
+      "unresolved_gap_lifecycle": [],
+      "write_target_fields": [],
+      "repo_id": "at900-client-profile",
+      "record_occurrence_id": "subject_record_b14df859b23649ec33c6"
+    },
+    "evidence": [
+      {
+        "evidence_id": "aisl_evidence_efa996f0a11f5a11cf20",
+        "evidence_kind": "observed_source",
+        "source_fragment_ids": [
+          "aisl_source_fragment_3eeb398d0aba46149746"
+        ],
+        "basis": "persistence_lineage:source_to_storage_lineage:0"
+      }
+    ],
+    "evidence_bindings": [
+      {
+        "binding_id": "knowledge_artifact_59bbfd7034339e97adab:source_to_storage_lineage:source_to_storage_lineage_000108:aisl_evidence_efa996f0a11f5a11cf20",
+        "evidence_id": "aisl_evidence_efa996f0a11f5a11cf20",
+        "role": "direct_observation",
+        "basis": "universal_item_read_context"
+      }
+    ],
+    "source_fragments": [
+      {
+        "fragment_id": "aisl_source_fragment_3eeb398d0aba46149746",
+        "source_id": "at900-client-profile",
+        "fragment_kind": "source_location",
+        "locator": "/mnt/data/work_block_b/sources/at900/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/DeviceLinkServiceImpl.java:193-237",
+        "path": "/mnt/data/work_block_b/sources/at900/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/DeviceLinkServiceImpl.java",
+        "line_start": 193,
+        "line_end": 237,
+        "extractor": "java_persistence_lineage_storage"
+      }
+    ],
+    "issues": [],
+    "correspondences": [],
+    "evidence_state": {
+      "availability": "available",
+      "basis": "typed_product_evidence_projection"
+    },
+    "coverage_state": {
+      "availability": "not_available",
+      "basis": "item_level_coverage_fact_not_published_by_typed_product"
+    },
+    "issues_state": {
+      "availability": "not_available",
+      "basis": "no_item_specific_issue_published"
+    },
+    "correspondences_state": {
+      "availability": "unsupported",
+      "basis": "revision_wide_cross_product_lookup_not_yet_supported_for_this_item"
+    }
+  }
+}

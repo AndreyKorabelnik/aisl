@@ -1,0 +1,13 @@
+queries:
+  - search_data_objects
+  - get_data_object
+  - get_data_object_fields
+  - get_data_object_keys
+  - get_data_object_relationships
+  - get_join_guidance
+  - get_cross_repository_correspondences
+  - list_data_model_lineage
+  - get_scope_overview
+  - list_data_objects
+  - list_relationships
+  - get_gap_summary

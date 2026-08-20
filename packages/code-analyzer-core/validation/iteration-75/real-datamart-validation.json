@@ -1,0 +1,1354 @@
+{
+  "schema_version": "sql-intermediate-output-contract-validation/v1",
+  "before": {
+    "producer_version": "0.43.2",
+    "content_fingerprint": "d7de0f0247b2921bcaf59ba3ee41b6e871c155cc6416fe225f04e1981edd42fb",
+    "source_inventory": {
+      "non_source_values": {
+        "generated_value_usages": 27,
+        "semantic_parameter_usages": 151
+      },
+      "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+      "resolved_by_relation_kind": {
+        "cte": 5437,
+        "derived": 898,
+        "physical": 1381,
+        "physical_template": 3026
+      },
+      "resolved_source_field_usages": 10742,
+      "source_field_candidate_usages": 11061,
+      "source_field_resolution_rate": 0.97116,
+      "status": "partial",
+      "total_observed_usages": 11239,
+      "unresolved_by_basis": {
+        "ambiguous_unqualified": 317,
+        "relation_unavailable": 2
+      },
+      "unresolved_by_status": {
+        "ambiguous": 317,
+        "unresolved": 2
+      },
+      "unresolved_source_field_usages": 319
+    },
+    "projections": {
+      "by_resolution_status": {
+        "partial": 804,
+        "resolved": 6706
+      }
+    },
+    "joins": {
+      "by_resolution_status": {
+        "confirmed": 313,
+        "partial": 10
+      },
+      "by_type": {
+        "inner": 56,
+        "left": 266,
+        "left_anti": 1
+      },
+      "physical_join_confirmed": 129
+    },
+    "recursive_lineage": {
+      "by_status": {
+        "confirmed": 25,
+        "inferred_target": 566,
+        "partial": 140
+      },
+      "by_terminal_source_kind": {
+        "column": 520,
+        "expression_without_column": 47,
+        "semantic_parameter": 24,
+        "unresolved": 140
+      }
+    },
+    "gaps": {
+      "by_kind": {
+        "intermediate_projection_unresolved": 4,
+        "intermediate_wildcard_unexpanded": 1,
+        "recursive_source_relation_ambiguous": 111,
+        "scoped_ast_source_coverage_incomplete": 2,
+        "source_relation_ambiguous": 24,
+        "target_column_unresolved": 41
+      },
+      "total": 183
+    }
+  },
+  "after": {
+    "producer_version": "0.43.3",
+    "content_fingerprint": "61ca6816f5af4b19c65e0603b71ed786fe75b8437cf5fb703b3a344c84f48ec5",
+    "source_inventory": {
+      "non_source_values": {
+        "generated_value_usages": 27,
+        "semantic_parameter_usages": 151
+      },
+      "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+      "resolved_by_relation_kind": {
+        "cte": 5488,
+        "derived": 901,
+        "physical": 1381,
+        "physical_template": 3026
+      },
+      "resolved_source_field_usages": 10796,
+      "source_field_candidate_usages": 11061,
+      "source_field_resolution_rate": 0.976042,
+      "status": "partial",
+      "total_observed_usages": 11239,
+      "unresolved_by_basis": {
+        "ambiguous_unqualified": 263,
+        "relation_unavailable": 2
+      },
+      "unresolved_by_status": {
+        "ambiguous": 263,
+        "unresolved": 2
+      },
+      "unresolved_source_field_usages": 265
+    },
+    "projections": {
+      "by_resolution_status": {
+        "partial": 751,
+        "resolved": 6759
+      }
+    },
+    "joins": {
+      "by_resolution_status": {
+        "confirmed": 314,
+        "partial": 9
+      },
+      "by_type": {
+        "inner": 56,
+        "left": 266,
+        "left_anti": 1
+      },
+      "physical_join_confirmed": 129
+    },
+    "recursive_lineage": {
+      "by_status": {
+        "confirmed": 25,
+        "inferred_target": 566,
+        "partial": 140
+      },
+      "by_terminal_source_kind": {
+        "column": 520,
+        "expression_without_column": 47,
+        "semantic_parameter": 24,
+        "unresolved": 140
+      }
+    },
+    "gaps": {
+      "by_kind": {
+        "intermediate_projection_unresolved": 4,
+        "intermediate_wildcard_unexpanded": 1,
+        "recursive_source_relation_ambiguous": 111,
+        "scoped_ast_source_coverage_incomplete": 2,
+        "source_relation_ambiguous": 24,
+        "target_column_unresolved": 41
+      },
+      "total": 183
+    }
+  },
+  "resolved_usage_count": 54,
+  "resolved_by_role": {
+    "join": 1,
+    "projection": 53
+  },
+  "resolved_by_relation_kind": {
+    "cte": 51,
+    "derived": 3
+  },
+  "resolved_usages": [
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0aabeb0d03cd451a",
+      "column_name": "vehicle_brand_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0ab5f0ab60294fac",
+      "column_name": "engine_volume_qty",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0e011f7b5dede81e",
+      "column_name": "vehicle_production_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0ec5690a2a7aeba6",
+      "column_name": "src_ctl_validfrom",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0f4de1dfe6a0ceb0",
+      "column_name": "vehicle_chassis_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_11982d3efa95c6c2",
+      "column_name": "register_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_13309a2a14534c34",
+      "column_name": "engine_power_hp_val",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_16e79f3914fe9080",
+      "column_name": "src_ctl_action",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_269acf1b35e6689b",
+      "column_name": "engine_type_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_2ae17a86fa2e6d08",
+      "column_name": "right_hand_drive_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_32b5b679d1df9a45",
+      "column_name": "body_style_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_3b8a0b5eae67960b",
+      "column_name": "transmission_type_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_3c16b9792a72c301",
+      "column_name": "start_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_3cb4f081cead2cd6",
+      "column_name": "mileage_cnt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_3f538ce820562107",
+      "column_name": "engine_power_kwt_qty",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_4112008122432a5d",
+      "column_name": "vehicle_model_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_4295e4acbf956798",
+      "column_name": "mileage_entry_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_501e46e29dbfe73a",
+      "column_name": "drive_type_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_568a56cba89bc3bb",
+      "column_name": "src_ctl_loading",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_5d926748fef7b42c",
+      "column_name": "mileage_entry_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_5e69c7fa8f6f5a54",
+      "column_name": "src_ctl_validfrom",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_5f1b4d595051925d",
+      "column_name": "vehicle_ownership_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_840aad196711b7b1",
+      "column_name": "src_ctl_loading",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_84280186567a881a",
+      "column_name": "vehicle_identification_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_845b512c2398650b",
+      "column_name": "pon_channel_nflag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_domain_client.sql",
+      "line_start": 13,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_babf58e7e81aa109",
+        "relation_name": "cte_distantmanager",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_874ae6499a3db143",
+      "column_name": "vehicle_brand_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8875005b988c2e5c",
+      "column_name": "drive_type_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8bfa7a3310854ca7",
+      "column_name": "vehicle_category_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8d11f00ca442252e",
+      "column_name": "num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/stg_epk_phonenumber_rozn_mnp_hist_final.sql",
+      "line_start": 1,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_c6813d45f0555745",
+        "relation_name": "a",
+        "relation_kind": "derived",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_997bdd5a4d3a10a5",
+      "column_name": "engine_power_kwt_qty",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_9cd644155f273c0c",
+      "column_name": "vehicle_ownership_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_9d9d7901ad263cac",
+      "column_name": "mileage_cnt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_9e7a4678d6e2f898",
+      "column_name": "engine_power_hp_val",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_a6ac6f3b77947add",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_a86ec6e14733bfb3",
+      "column_name": "transmission_type_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_a98fac592ae0ed4d",
+      "column_name": "end_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_a9a64548c1b48425",
+      "column_name": "vehicle_model_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_b1d7ad55d2cddf9e",
+      "column_name": "src_ctl_action",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_b7923655c1cc5b86",
+      "column_name": "engine_volume_qty",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_c6b67c043b6b43b9",
+      "column_name": "vehicle_body_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_c6f8a6f829384675",
+      "column_name": "end_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ca4c6c670440f0dc",
+      "column_name": "vehicle_body_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_cb3ad7a4c5110e9d",
+      "column_name": "start_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_cd86697dfa3dbc89",
+      "column_name": "body_style_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_d08a005e542db059",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_d5d307ab213f86b9",
+      "column_name": "vehicle_production_dt",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_da64c487232e97ee",
+      "column_name": "vehicle_category_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_e4e930410adb7b92",
+      "column_name": "c_phone",
+      "usage_role": "join",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/stg_epk_phonenumber_rozn_mnp_hist_final.sql",
+      "line_start": 1,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_90e6f48364976fa7",
+        "relation_name": "def",
+        "relation_kind": "derived",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ea9548cf9b3d4822",
+      "column_name": "min_actual_date_from",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/stg_epk_phonenumber_rozn_mnp_hist_final.sql",
+      "line_start": 1,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_c6813d45f0555745",
+        "relation_name": "a",
+        "relation_kind": "derived",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ed2d7e21d2b241e0",
+      "column_name": "register_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ee79deec4535e89e",
+      "column_name": "vehicle_chassis_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_f87aaae85c4a8e74",
+      "column_name": "vehicle_identification_num",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 42,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_be8648cccf55cbc9",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_f96321793b0dc5fb",
+      "column_name": "engine_type_name",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ffc1bb0c36d0495c",
+      "column_name": "right_hand_drive_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "line_start": 48,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_2a41e436e1a9ee8d",
+        "relation_name": "cte_vehicle",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    }
+  ],
+  "safety_checks": {
+    "usage_id_set_preserved": true,
+    "all_new_resolutions_were_ambiguous_unqualified": true,
+    "all_new_resolutions_use_complete_intermediate_contract": true,
+    "physical_or_unknown_schema_used_for_exclusion": false
+  }
+}

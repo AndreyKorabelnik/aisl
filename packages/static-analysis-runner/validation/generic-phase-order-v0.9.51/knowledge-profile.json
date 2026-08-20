@@ -1,0 +1,24 @@
+{
+  "knowledge": [
+    {
+      "knowledge_id": "logical-physical-mapping",
+      "options": {
+        "include_optional_sources": true,
+        "minimum_coverage": null
+      }
+    }
+  ],
+  "presentation": {
+    "include_coverage": true,
+    "include_evidence": true,
+    "include_gaps": true,
+    "include_technical_details": true
+  },
+  "profile_id": "logical-physical-mapping-second-family-smoke",
+  "schema_version": "knowledge_profile/v2",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "title": "Logical physical mapping second evidence family smoke"
+}

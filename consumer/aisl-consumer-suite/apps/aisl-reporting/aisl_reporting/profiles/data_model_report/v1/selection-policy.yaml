@@ -1,0 +1,12 @@
+primary_objects:
+  focus: exact-name-or-fqcn-first
+  default_without_focus: root-entity-direct-field-count
+  limit: {executive: 3, standard: 5, detailed: 10}
+dictionaries:
+  include: referenced-by-selected-relationships
+relationships:
+  include_all_for_selected_objects: true
+cross_repository:
+  exact_correspondences_only: true
+evidence:
+  exact_repository_path_lines: true

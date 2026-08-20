@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "field_count": 639,
+  "knowledge_layer_path": "/mnt/data/iteration28_work/at900_validation_run_0_40_7/knowledge-layer/knowledge-layer.duckdb",
+  "knowledge_layer_sha256": "9d7d63b5911850bead31924f97157edd3d794c9b775a72c36c8aee80c2dd558a",
+  "relationship_count": 394,
+  "report_path": null,
+  "report_sha256": null,
+  "revision_id": "rev-625a711bd629802a5370c4cb",
+  "state": "active",
+  "status": "published",
+  "system_id": "client_profile",
+  "table_count": 80,
+  "warnings": []
+}

@@ -1,0 +1,131 @@
+{
+  "correspondences": [],
+  "correspondences_state": {
+    "availability": "unsupported",
+    "basis": "revision_wide_cross_product_lookup_not_yet_supported_for_this_item"
+  },
+  "coverage_state": {
+    "availability": "not_available",
+    "basis": "item_level_coverage_fact_not_published_by_typed_product"
+  },
+  "evidence": [
+    {
+      "basis": "declared_type_source_ref",
+      "evidence_id": "aisl_evidence_6172e9ada370e4c8f5e3",
+      "evidence_kind": "observed_source",
+      "source_fragment_ids": [
+        "aisl_source_fragment_cfa5e21964b0ba05a9aa"
+      ]
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "basis": "universal_item_read_context",
+      "binding_id": "code-product:declared_object:type-customer-occ:aisl_evidence_6172e9ada370e4c8f5e3",
+      "evidence_id": "aisl_evidence_6172e9ada370e4c8f5e3",
+      "role": "direct_observation"
+    }
+  ],
+  "evidence_state": {
+    "availability": "available",
+    "basis": "typed_product_evidence_projection"
+  },
+  "issues": [],
+  "issues_state": {
+    "availability": "not_available",
+    "basis": "no_item_specific_issue_published"
+  },
+  "item": {
+    "annotations": [],
+    "binding_summary": {
+      "has_observed_incoming_binding": false,
+      "incoming_examples": [],
+      "incoming_examples_truncated": false,
+      "incoming_relationship_count": 0,
+      "outgoing_relationship_count": 0
+    },
+    "documentation": {},
+    "fields": [],
+    "fqcn": "com.acme.Customer",
+    "inheritance": [],
+    "modifier_tokens": [],
+    "name": "Customer",
+    "object_id": "type-customer-occ",
+    "package_name": "com.acme",
+    "relationships": [],
+    "repo_id": "repo",
+    "source_ref": {
+      "line_end": 20,
+      "line_start": 1,
+      "repository_relative_path": "src/Customer.java"
+    },
+    "source_set": "main",
+    "type_kind": "class",
+    "type_parameters": []
+  },
+  "item_ref": {
+    "item_kind": "declared_object",
+    "local_id": "type-customer-occ",
+    "product_id": "code-product",
+    "revision_id": "rev-a9eb627642530740ceed95fa",
+    "scope_id": "mobility-acceptance"
+  },
+  "product": {
+    "artifact_id": "code-product",
+    "capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "content_fingerprint": "df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e",
+    "coverage": {},
+    "diagnostics": [],
+    "exact_dependency_product_ids": [
+      "java_type_structure_pilot"
+    ],
+    "model_kind": "code-declared-data-model",
+    "origin_kind": "derived",
+    "physical_artifacts": [
+      {
+        "byte_size": 1847296,
+        "filename": "code.duckdb",
+        "media_type": "application/vnd.duckdb",
+        "role": "database",
+        "schema_version": "code-declared-data-model/v1",
+        "sha256": "df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e",
+        "uri": "aisl+sha256://df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e"
+      },
+      {
+        "byte_size": 405,
+        "filename": "code-product-manifest.json",
+        "media_type": "application/json",
+        "role": "manifest",
+        "schema_version": "knowledge_layer/v1",
+        "sha256": "9ab908d22850b262cf478489f764a18c93cacec1f0ee9e0467b1da0a6710bc9b",
+        "uri": "aisl+sha256://9ab908d22850b262cf478489f764a18c93cacec1f0ee9e0467b1da0a6710bc9b"
+      }
+    ],
+    "producer_contract_ref": "knowledge_layer/v1",
+    "producer_ref": "knowledge-layer-core",
+    "product_slot_id": "klc:code-declared-data-model",
+    "provenance": {
+      "materialization_id": "code-declared-data-model"
+    },
+    "schema_version": "code-declared-data-model/v1",
+    "source_materialization_id": "code-declared-data-model"
+  },
+  "projection_basis": "typed_product_universal_projection",
+  "projection_status": "available",
+  "revision_id": "rev-a9eb627642530740ceed95fa",
+  "schema_version": "aisl-knowledge-item-read/v1",
+  "source_fragments": [
+    {
+      "fragment_id": "aisl_source_fragment_cfa5e21964b0ba05a9aa",
+      "fragment_kind": "source_location",
+      "line_end": 20,
+      "line_start": 1,
+      "locator": "src/Customer.java:1-20",
+      "path": "src/Customer.java",
+      "source_id": "repo"
+    }
+  ],
+  "system_id": "mobility-acceptance"
+}

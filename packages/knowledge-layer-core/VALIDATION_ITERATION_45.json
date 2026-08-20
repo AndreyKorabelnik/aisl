@@ -1,0 +1,63 @@
+{
+  "boundary_interaction_counts": {
+    "probable": 8
+  },
+  "confidence_promotions": 0,
+  "input_artifact": "frozen manual-vs-framework multi-repository DuckDB",
+  "materialization_results": [
+    {
+      "repository_value_flow_edge": 2326,
+      "repository_value_node": 3844,
+      "scope_id": "manual-framework-compare-multi"
+    }
+  ],
+  "sample_evidence_packet": {
+    "address_interpretation": {
+      "authority_overlap": [],
+      "binding_strength": "non_binding",
+      "environment_authorities": [
+        "localhost:8093",
+        "localhost"
+      ],
+      "outbound_authorities": [
+        "localhost:8093",
+        "localhost",
+        "updateorcreatelightclientpath"
+      ],
+      "target_authorities": []
+    },
+    "confidence": "probable",
+    "conflicting_evidence": [],
+    "contract_coverage": {
+      "matched_field_count": 37,
+      "matched_ratio": 1.0,
+      "payload_role": "request",
+      "source_field_count": 37,
+      "target_field_count": 37,
+      "wire_path": "name.enddate"
+    },
+    "edge_status": "candidate",
+    "limitations": [
+      "boundary_interaction_probable",
+      "environment_authority_non_binding",
+      "authority_not_confirmed",
+      "request_payload_type_not_equal"
+    ],
+    "supporting_evidence": [
+      "http_method_exact",
+      "normalized_path_exact",
+      "property_identity_exact",
+      "target_operation_unique",
+      "wire_path_exact",
+      "request_contract_overlap",
+      "request_contract_exact"
+    ]
+  },
+  "schema_version": "iteration_45_validation/v1",
+  "transport_edge_counts": {
+    "probable": 226
+  },
+  "transport_edge_kind_counts": {
+    "http_request_transport": 226
+  }
+}

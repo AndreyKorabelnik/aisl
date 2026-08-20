@@ -1,0 +1,33 @@
+{
+  "analyzer_execution_count": 2,
+  "artifact_count": 2,
+  "artifact_identities": [
+    [
+      "java-persistence-mapping-evidence",
+      "java-persistence-mapping-evidence/v1"
+    ],
+    [
+      "java-type-structure-evidence",
+      "java-type-structure-evidence/v1"
+    ]
+  ],
+  "core_version": "0.43.28",
+  "legacy_fallback": false,
+  "persistence_mapping_counts": {
+    "coverage_status": "complete",
+    "diagnostic_count": 0,
+    "java_files_failed": 0,
+    "java_files_in_scope": 1,
+    "java_files_parsed": 1,
+    "java_files_with_parse_errors": 0,
+    "mapping_gap_count": 0,
+    "persistence_field_mapping_count": 4,
+    "persistence_inheritance_mapping_count": 0,
+    "persistence_key_mapping_count": 2,
+    "persistence_relationship_mapping_count": 1,
+    "persistence_type_mapping_count": 2,
+    "unsupported_composite_annotation_count": 0
+  },
+  "schema_version": "generic-core-evidence-smoke/v1",
+  "status": "completed"
+}

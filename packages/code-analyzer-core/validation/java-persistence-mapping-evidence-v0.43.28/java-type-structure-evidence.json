@@ -1,0 +1,599 @@
+{
+  "artifact_id": "java_type_structure_15875066aa6a1b6e84c565b2",
+  "artifact_kind": "java-type-structure-evidence",
+  "content_fingerprint": "15875066aa6a1b6e84c565b206a1e6bbf3dd69281faf5aec47b13ed2b97fb7b1",
+  "contract_version": "core_evidence_artifact_contract/v1",
+  "coverage": {
+    "ambiguous_type_reference_count": 0,
+    "annotation_declaration_count": 11,
+    "coverage_status": "complete",
+    "enum_constant_declaration_count": 0,
+    "field_declaration_count": 4,
+    "inheritance_declaration_count": 0,
+    "java_files_discovered": 1,
+    "java_files_failed": 0,
+    "java_files_in_scope": 1,
+    "java_files_parsed": 1,
+    "java_files_with_parse_errors": 0,
+    "type_declaration_count": 2,
+    "type_reference_count": 1,
+    "unresolved_type_reference_count": 0,
+    "unsupported_declaration_count": 0
+  },
+  "diagnostics": [],
+  "foundation": {
+    "contract_version": null,
+    "fingerprint": null,
+    "sections": [],
+    "used": false
+  },
+  "parameters": {
+    "include_test_sources": true,
+    "language": "java",
+    "record_limit": null
+  },
+  "payload": {
+    "annotation_declarations": [
+      {
+        "annotation_id": "java_annotation_ef0d196c837e24302ba99299",
+        "annotation_name": "Column",
+        "arguments_raw": "name=\"full_name\"",
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 6,
+          "line_start": 6,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "full_name"
+                }
+              ],
+              "end_byte": 222,
+              "node_type": "string_literal",
+              "start_byte": 211,
+              "text": "\"full_name\"",
+              "value": "\"full_name\""
+            },
+            "input_symbols": [],
+            "name": "name",
+            "node_type": "string_literal",
+            "raw": "\"full_name\""
+          }
+        ],
+        "target_id": "java_field_ad1c22240629004388ab4db5",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_cc15aa61a8c84a11d3506ee2",
+        "annotation_name": "Column",
+        "arguments_raw": "name=\"address_id\"",
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 10,
+          "line_start": 10,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "address_id"
+                }
+              ],
+              "end_byte": 445,
+              "node_type": "string_literal",
+              "start_byte": 433,
+              "text": "\"address_id\"",
+              "value": "\"address_id\""
+            },
+            "input_symbols": [],
+            "name": "name",
+            "node_type": "string_literal",
+            "raw": "\"address_id\""
+          }
+        ],
+        "target_id": "java_field_cdc416ac40b948dc01169e4c",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_e85f25bf8806120d553a65a1",
+        "annotation_name": "Id",
+        "arguments_raw": null,
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 10,
+          "line_start": 10,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [],
+        "target_id": "java_field_cdc416ac40b948dc01169e4c",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_bdeacb78b0801e2be30a9d94",
+        "annotation_name": "Column",
+        "arguments_raw": "name=\"customer_id\", nullable=false",
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 5,
+          "line_start": 5,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "customer_id"
+                }
+              ],
+              "end_byte": 159,
+              "node_type": "string_literal",
+              "start_byte": 146,
+              "text": "\"customer_id\"",
+              "value": "\"customer_id\""
+            },
+            "input_symbols": [],
+            "name": "name",
+            "node_type": "string_literal",
+            "raw": "\"customer_id\""
+          },
+          {
+            "expression_tree": {
+              "end_byte": 175,
+              "node_type": "false",
+              "start_byte": 170,
+              "text": "false",
+              "value": "false"
+            },
+            "input_symbols": [],
+            "name": "nullable",
+            "node_type": "false",
+            "raw": "false"
+          }
+        ],
+        "target_id": "java_field_e869042b247e51d6f4966898",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_8e0e5d7f3a4e8a15a91ae99a",
+        "annotation_name": "Id",
+        "arguments_raw": null,
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 5,
+          "line_start": 5,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [],
+        "target_id": "java_field_e869042b247e51d6f4966898",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_e9e0630ce0176b4998e6db74",
+        "annotation_name": "JoinColumn",
+        "arguments_raw": "name=\"address_id\", referencedColumnName=\"address_id\"",
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 7,
+          "line_start": 7,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "address_id"
+                }
+              ],
+              "end_byte": 287,
+              "node_type": "string_literal",
+              "start_byte": 275,
+              "text": "\"address_id\"",
+              "value": "\"address_id\""
+            },
+            "input_symbols": [],
+            "name": "name",
+            "node_type": "string_literal",
+            "raw": "\"address_id\""
+          },
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "address_id"
+                }
+              ],
+              "end_byte": 322,
+              "node_type": "string_literal",
+              "start_byte": 310,
+              "text": "\"address_id\"",
+              "value": "\"address_id\""
+            },
+            "input_symbols": [],
+            "name": "referencedColumnName",
+            "node_type": "string_literal",
+            "raw": "\"address_id\""
+          }
+        ],
+        "target_id": "java_field_ef48adc1daa9e0978a25ff34",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_c66616d4accb85532072ada9",
+        "annotation_name": "ManyToOne",
+        "arguments_raw": null,
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 7,
+          "line_start": 7,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [],
+        "target_id": "java_field_ef48adc1daa9e0978a25ff34",
+        "target_kind": "field"
+      },
+      {
+        "annotation_id": "java_annotation_2358ed5a7096e9548e7c0802",
+        "annotation_name": "Entity",
+        "arguments_raw": null,
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 9,
+          "line_start": 9,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [],
+        "target_id": "java_type_923561a6c65fd0b61bee03c1",
+        "target_kind": "type"
+      },
+      {
+        "annotation_id": "java_annotation_789a8a6b2613b3d04b6ad63e",
+        "annotation_name": "Table",
+        "arguments_raw": "name=\"address_tbl\", schema=\"crm\"",
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 9,
+          "line_start": 9,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "address_tbl"
+                }
+              ],
+              "end_byte": 384,
+              "node_type": "string_literal",
+              "start_byte": 371,
+              "text": "\"address_tbl\"",
+              "value": "\"address_tbl\""
+            },
+            "input_symbols": [],
+            "name": "name",
+            "node_type": "string_literal",
+            "raw": "\"address_tbl\""
+          },
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "crm"
+                }
+              ],
+              "end_byte": 398,
+              "node_type": "string_literal",
+              "start_byte": 393,
+              "text": "\"crm\"",
+              "value": "\"crm\""
+            },
+            "input_symbols": [],
+            "name": "schema",
+            "node_type": "string_literal",
+            "raw": "\"crm\""
+          }
+        ],
+        "target_id": "java_type_923561a6c65fd0b61bee03c1",
+        "target_kind": "type"
+      },
+      {
+        "annotation_id": "java_annotation_4bc5a4b2cc81a4b2437410f4",
+        "annotation_name": "Entity",
+        "arguments_raw": null,
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 3,
+          "line_start": 3,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [],
+        "target_id": "java_type_eb225d6c951ed193ed3b358c",
+        "target_kind": "type"
+      },
+      {
+        "annotation_id": "java_annotation_35161d303a01e9948e4fd299",
+        "annotation_name": "Table",
+        "arguments_raw": "name=\"customer_tbl\", schema=\"crm\"",
+        "candidate_annotation_types": [],
+        "resolution_status": "unresolved",
+        "resolved_annotation_type": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 3,
+          "line_start": 3,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "structured_arguments": [
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "customer_tbl"
+                }
+              ],
+              "end_byte": 87,
+              "node_type": "string_literal",
+              "start_byte": 73,
+              "text": "\"customer_tbl\"",
+              "value": "\"customer_tbl\""
+            },
+            "input_symbols": [],
+            "name": "name",
+            "node_type": "string_literal",
+            "raw": "\"customer_tbl\""
+          },
+          {
+            "expression_tree": {
+              "children": [
+                {
+                  "node_type": "string_fragment",
+                  "value": "crm"
+                }
+              ],
+              "end_byte": 101,
+              "node_type": "string_literal",
+              "start_byte": 96,
+              "text": "\"crm\"",
+              "value": "\"crm\""
+            },
+            "input_symbols": [],
+            "name": "schema",
+            "node_type": "string_literal",
+            "raw": "\"crm\""
+          }
+        ],
+        "target_id": "java_type_eb225d6c951ed193ed3b358c",
+        "target_kind": "type"
+      }
+    ],
+    "enum_constant_declarations": [],
+    "field_declarations": [
+      {
+        "declared_type_expression": "String",
+        "documentation": null,
+        "field_id": "java_field_cdc416ac40b948dc01169e4c",
+        "initializer_present": false,
+        "is_final": false,
+        "is_static": false,
+        "modifier_tokens": [],
+        "name": "id",
+        "normalized_type_expression": "String",
+        "owner_type_id": "java_type_923561a6c65fd0b61bee03c1",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 10,
+          "line_start": 10,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "declared_type_expression": "Address",
+        "documentation": null,
+        "field_id": "java_field_ef48adc1daa9e0978a25ff34",
+        "initializer_present": false,
+        "is_final": false,
+        "is_static": false,
+        "modifier_tokens": [
+          "private"
+        ],
+        "name": "address",
+        "normalized_type_expression": "Address",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 7,
+          "line_start": 7,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "declared_type_expression": "String",
+        "documentation": null,
+        "field_id": "java_field_e869042b247e51d6f4966898",
+        "initializer_present": false,
+        "is_final": false,
+        "is_static": false,
+        "modifier_tokens": [
+          "private"
+        ],
+        "name": "id",
+        "normalized_type_expression": "String",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 5,
+          "line_start": 5,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "declared_type_expression": "String",
+        "documentation": null,
+        "field_id": "java_field_ad1c22240629004388ab4db5",
+        "initializer_present": false,
+        "is_final": false,
+        "is_static": false,
+        "modifier_tokens": [
+          "private"
+        ],
+        "name": "name",
+        "normalized_type_expression": "String",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 6,
+          "line_start": 6,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      }
+    ],
+    "inheritance_declarations": [],
+    "source_units": [
+      {
+        "bytes": 460,
+        "content_sha256": "a3f5df3b43e936dc39aae39db1206230f2ec4edfa634de5869cffeb6ad4df087",
+        "imports": [
+          "jakarta.persistence"
+        ],
+        "language": "java",
+        "package_name": "example.model",
+        "parse_error_count": 0,
+        "parse_status": "success",
+        "repository_relative_path": "src/main/java/example/model/Customer.java",
+        "source_set": "main",
+        "source_unit_id": "java_source_unit_bf986623c72523c4426e01c3"
+      }
+    ],
+    "type_declarations": [
+      {
+        "documentation": null,
+        "enclosing_type_id": null,
+        "fully_qualified_name": "example.model.Address",
+        "modifier_tokens": [],
+        "package_name": "example.model",
+        "simple_name": "Address",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 10,
+          "line_start": 9,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "source_set": "main",
+        "source_unit_id": "java_source_unit_bf986623c72523c4426e01c3",
+        "type_id": "java_type_923561a6c65fd0b61bee03c1",
+        "type_kind": "class",
+        "type_parameters": []
+      },
+      {
+        "documentation": null,
+        "enclosing_type_id": null,
+        "fully_qualified_name": "example.model.Customer",
+        "modifier_tokens": [
+          "public"
+        ],
+        "package_name": "example.model",
+        "simple_name": "Customer",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 8,
+          "line_start": 3,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "source_set": "main",
+        "source_unit_id": "java_source_unit_bf986623c72523c4426e01c3",
+        "type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "type_kind": "class",
+        "type_parameters": []
+      }
+    ],
+    "type_reference_observations": [
+      {
+        "candidate_fqcns": [
+          "example.model.Address"
+        ],
+        "candidate_type_ids": [
+          "java_type_923561a6c65fd0b61bee03c1"
+        ],
+        "declared_type_expression": "Address",
+        "owner_id": "java_field_ef48adc1daa9e0978a25ff34",
+        "owner_kind": "field",
+        "reference_role": "field_type",
+        "referenced_type_token": "Address",
+        "resolution_status": "same_package",
+        "resolved_fqcn": "example.model.Address",
+        "resolved_type_id": "java_type_923561a6c65fd0b61bee03c1",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 7,
+          "line_start": 7,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "type_reference_id": "java_type_ref_49b3cee41f6efb26474b069e"
+      }
+    ]
+  },
+  "producer": {
+    "analyzer_id": "java-type-structure-analyzer",
+    "analyzer_version": "0.43.28",
+    "component": "code-analyzer-core"
+  },
+  "provenance": {
+    "execution_runtime": "core_evidence_runtime/v1",
+    "parser_provider": "tree_sitter",
+    "semantic_routing": "artifact_kind_plus_schema_version"
+  },
+  "schema_version": "java-type-structure-evidence/v1",
+  "source_snapshot": {
+    "file_count": 1,
+    "fingerprint": "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2",
+    "revision": null,
+    "scope": "java_source_files",
+    "source_id": "core04328-smoke"
+  }
+}

@@ -1,0 +1,723 @@
+{
+  "/api/knowledge/v1/systems/demo-storage-sql/capabilities": {
+    "body": {
+      "capabilities": [
+        "common.observed-storage-usage",
+        "common.sql-analysis",
+        "common.sql-attribute-insertion-context",
+        "common.sql-relation-fields",
+        "common.sql-relation-semantic-roles",
+        "common.sql-source-inventory",
+        "common.sql-source-inventory-export",
+        "common.sql-target-column-lineage",
+        "common.sql-target-resolution",
+        "common.sql-workflow-bindings",
+        "common.sql-workflow-context",
+        "common.storage-access-gaps",
+        "common.storage-read-write-inventory"
+      ],
+      "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "demo-storage-sql"
+    },
+    "status": 200
+  },
+  "/api/knowledge/v1/systems/demo-storage-sql/knowledge-artifacts": {
+    "body": {
+      "items": [
+        {
+          "artifact_id": "knowledge_artifact_86e0213102bca4a56c0b",
+          "capabilities": [
+            "common.observed-storage-usage",
+            "common.storage-access-gaps",
+            "common.storage-read-write-inventory"
+          ],
+          "content_fingerprint": "587cc6b9a19379b95eb1a3d9589835e2778275ec3331094b801700580ffb6e02",
+          "coverage": {
+            "access_kind_counts": {
+              "read": 1,
+              "write": 1
+            },
+            "coverage_status": "complete",
+            "java_files_discovered": 1,
+            "java_methods_indexed": 4,
+            "storage_access_count": 2,
+            "storage_gap_count": 0,
+            "storage_kind_counts": {
+              "repository_or_storage_api": 2
+            },
+            "storage_read_count": 1,
+            "storage_write_count": 1
+          },
+          "database": {
+            "byte_size": 4206592,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "observed-storage-usage/v1",
+            "sha256": "7abea215f8fae32aaa83f8d3f9f1777f6007f99aa4e1259660cb45e67dc45ed4",
+            "uri": "file:///mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/001-observed-storage-usage/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 2767,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "9d2bc451124ddc069e6a3bde363df29bded06cf864353aa7f5eb05a5ec6c0169",
+            "uri": "file:///mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/001-observed-storage-usage/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "observed-storage-usage",
+          "schema_version": "observed-storage-usage/v1",
+          "source_materialization_id": "observed-storage-usage"
+        },
+        {
+          "artifact_id": "knowledge_artifact_703fffbf71e3e15b0dc9",
+          "capabilities": [
+            "common.sql-analysis",
+            "common.sql-attribute-insertion-context",
+            "common.sql-relation-fields",
+            "common.sql-relation-semantic-roles",
+            "common.sql-source-inventory",
+            "common.sql-source-inventory-export",
+            "common.sql-target-column-lineage",
+            "common.sql-target-resolution",
+            "common.sql-workflow-bindings",
+            "common.sql-workflow-context"
+          ],
+          "content_fingerprint": "d56dd8ea49cb7b0777487b18b6c5e700ff68253be5d55cbc534f4625561aeb5d",
+          "coverage": {},
+          "database": {
+            "byte_size": 10235904,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "knowledge_layer_sql/v2",
+            "sha256": "84aa1f1719570bd23238ea1b77371fd280b5c3564b22195fdcb75b996f2248c4",
+            "uri": "file:///mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/002-sql-analysis/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 5481,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "6fb095b928b139d0a00ba6b1b3c3360b38a53ac80fff46e81cb56efd0a9dfad1",
+            "uri": "file:///mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/002-sql-analysis/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "sql-observed-data-usage",
+          "schema_version": "knowledge_layer_sql/v2",
+          "source_materialization_id": "sql-analysis"
+        }
+      ],
+      "page": {
+        "limit": 50,
+        "offset": 0,
+        "total": 2
+      },
+      "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "demo-storage-sql"
+    },
+    "status": 200
+  },
+  "/api/knowledge/v1/systems/demo-storage-sql/sql/relations?view=all": {
+    "body": {
+      "coverage": {
+        "analysis_status": "complete",
+        "relation_classification": {
+          "by_role": {
+            "external_source": 1
+          },
+          "by_status": {
+            "confirmed": 1
+          },
+          "hidden_by_default": 0,
+          "status": "complete",
+          "total_relations": 1,
+          "visible_by_default": 1
+        },
+        "repositories": [
+          {
+            "analysis_status": "complete",
+            "coverage_json": {
+              "analysis_status": "complete",
+              "artifact": "sql_analysis_coverage",
+              "column_usages": {
+                "by_resolution_status": {
+                  "resolved": 3
+                },
+                "source_inventory": {
+                  "non_source_values": {
+                    "generated_value_usages": 0,
+                    "semantic_parameter_usages": 0
+                  },
+                  "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+                  "resolved_by_relation_kind": {
+                    "physical": 3
+                  },
+                  "resolved_source_field_usages": 3,
+                  "source_field_candidate_usages": 3,
+                  "source_field_resolution_rate": 1.0,
+                  "status": "complete",
+                  "total_observed_usages": 3,
+                  "unresolved_by_basis": {},
+                  "unresolved_by_status": {},
+                  "unresolved_source_field_usages": 0
+                }
+              },
+              "coverage_policy": "partial_facts_are_published_with_localized_resolution_status_and_gaps",
+              "direct_lineage": {
+                "by_status": {
+                  "confirmed_direct": 2
+                }
+              },
+              "fact_counts": {
+                "sql_column_usage": 3,
+                "sql_direct_column_lineage": 2,
+                "sql_join_edge": 0,
+                "sql_object_dependency": 1,
+                "sql_projection": 2,
+                "sql_recursive_column_lineage": 2,
+                "sql_relation": 1,
+                "sql_scoped_lineage_gap": 0,
+                "sql_script_binding": 0,
+                "sql_script_embedded_sql": 0,
+                "sql_script_invocation": 0,
+                "sql_script_statement": 0,
+                "sql_select_scope": 1,
+                "sql_semantic_placeholder": 0,
+                "sql_statement": 1,
+                "sql_target_projection_binding": 2,
+                "sql_workflow_binding": 0,
+                "sql_write_target": 1
+              },
+              "gaps": {
+                "by_kind": {},
+                "total": 0
+              },
+              "joins": {
+                "by_resolution_status": {},
+                "by_type": {},
+                "physical_join_confirmed": 0
+              },
+              "projections": {
+                "by_resolution_status": {
+                  "resolved": 2
+                }
+              },
+              "recursive_lineage": {
+                "by_status": {
+                  "confirmed": 2
+                },
+                "by_terminal_source_kind": {
+                  "column": 2
+                }
+              },
+              "relations": {
+                "by_definition_status": {
+                  "not_applicable": 1
+                },
+                "by_kind": {
+                  "physical": 1
+                }
+              },
+              "schema_version": "sql-analysis/v1",
+              "script_invocations": {
+                "by_resolution_status": {}
+              },
+              "semantic_placeholders": {
+                "by_resolution_status": {}
+              },
+              "source_inventory": {
+                "files_scanned": 2,
+                "script_statements": 0,
+                "sql_statements": 1,
+                "sql_units": 1
+              },
+              "target_projection_bindings": {
+                "by_mapping_status": {
+                  "confirmed": 2
+                }
+              },
+              "write_targets": {
+                "by_resolution_status": {
+                  "resolved": 1
+                }
+              }
+            },
+            "repo_id": "demo-repository",
+            "source_content_fingerprint": "4078e230b96e507ffe6c750ed3b4058e76fcf94bcc5a6b911980ac24f751bb2f",
+            "source_schema_version": "sql-analysis/v1"
+          }
+        ],
+        "source_inventory": {
+          "column_usages": {
+            "relation_field_candidates": 3,
+            "relation_field_resolution_rate": 1.0,
+            "resolved_relation_fields": 3,
+            "total": 3,
+            "unresolved_relation_fields": 0
+          },
+          "coverage_policy": "semantic parameters, projection outputs and generated LATERAL/EXPLODE values do not reduce source-field resolution",
+          "limitations": {},
+          "non_source_values": {
+            "generated_fields": 0,
+            "projection_outputs": 0,
+            "semantic_parameters": 0
+          },
+          "resolved_by_relation_kind": {
+            "physical": 3
+          },
+          "status": "complete"
+        }
+      },
+      "items": [
+        {
+          "classification_reasons": [
+            "read_without_local_write_evidence"
+          ],
+          "classification_status": "confirmed",
+          "definition_statuses": [
+            "not_applicable"
+          ],
+          "downstream_target_count": 1,
+          "evidence_count": 1,
+          "evidence_count_by_role": {
+            "from": 1
+          },
+          "evidence_refs": [
+            {
+              "evidence_id": "sql_relation_demo-repository_b5ea8dd4c4622bb5",
+              "file": "sql/customer.sql",
+              "line_start": 1,
+              "query_id": "query_demo-repository_000001",
+              "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+              "usage_role": "from"
+            }
+          ],
+          "evidence_truncated": false,
+          "field_count": 3,
+          "fields": [
+            {
+              "evidence_count": 1,
+              "evidence_count_by_role": {
+                "filter": 1
+              },
+              "evidence_refs": [
+                {
+                  "evidence_id": "sql_column_usage_demo-repository_bed5b4a9a61d8b5b",
+                  "file": "sql/customer.sql",
+                  "line_start": 1,
+                  "query_id": "query_demo-repository_000001",
+                  "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+                  "usage_role": "filter"
+                }
+              ],
+              "evidence_truncated": false,
+              "name": "active",
+              "occurrence_count": 1,
+              "resolution_bases": [
+                "alias"
+              ],
+              "resolution_statuses": [
+                "resolved"
+              ],
+              "statement_count": 1,
+              "usage_roles": [
+                "filter"
+              ]
+            },
+            {
+              "evidence_count": 1,
+              "evidence_count_by_role": {
+                "projection": 1
+              },
+              "evidence_refs": [
+                {
+                  "evidence_id": "sql_column_usage_demo-repository_5ac80f2883e0a021",
+                  "file": "sql/customer.sql",
+                  "line_start": 1,
+                  "query_id": "query_demo-repository_000001",
+                  "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+                  "usage_role": "projection"
+                }
+              ],
+              "evidence_truncated": false,
+              "name": "customer_id",
+              "occurrence_count": 1,
+              "resolution_bases": [
+                "alias"
+              ],
+              "resolution_statuses": [
+                "resolved"
+              ],
+              "statement_count": 1,
+              "usage_roles": [
+                "projection"
+              ]
+            },
+            {
+              "evidence_count": 1,
+              "evidence_count_by_role": {
+                "projection": 1
+              },
+              "evidence_refs": [
+                {
+                  "evidence_id": "sql_column_usage_demo-repository_c57331c1f492f1d0",
+                  "file": "sql/customer.sql",
+                  "line_start": 1,
+                  "query_id": "query_demo-repository_000001",
+                  "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+                  "usage_role": "projection"
+                }
+              ],
+              "evidence_truncated": false,
+              "name": "status",
+              "occurrence_count": 1,
+              "resolution_bases": [
+                "alias"
+              ],
+              "resolution_statuses": [
+                "resolved"
+              ],
+              "statement_count": 1,
+              "usage_roles": [
+                "projection"
+              ]
+            }
+          ],
+          "hidden_by_default": false,
+          "logical_name": "customer",
+          "occurrence_count": 1,
+          "owned_namespace": false,
+          "relation_id": "sql_relation_inventory_8b1a9ad9c9b079a2ee55",
+          "relation_identity": "ods.customer",
+          "relation_kind": "physical",
+          "repo_id": "demo-repository",
+          "resolved_names": [
+            "ods.customer"
+          ],
+          "semantic_role": "external_source",
+          "statement_count": 1,
+          "technical_name_signal": false,
+          "template_name": "ods.customer",
+          "usage_roles": [
+            "from"
+          ],
+          "write_occurrence_count": 0
+        }
+      ],
+      "page": {
+        "limit": 50,
+        "offset": 0,
+        "total": 1
+      },
+      "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "demo-storage-sql"
+    },
+    "status": 200
+  },
+  "/api/knowledge/v1/systems/demo-storage-sql/sql/source-inventory?view=all": {
+    "body": {
+      "coverage": {
+        "analysis_status": "complete",
+        "relation_classification": {
+          "by_role": {
+            "external_source": 1
+          },
+          "by_status": {
+            "confirmed": 1
+          },
+          "hidden_by_default": 0,
+          "status": "complete",
+          "total_relations": 1,
+          "visible_by_default": 1
+        },
+        "repositories": [
+          {
+            "analysis_status": "complete",
+            "coverage_json": {
+              "analysis_status": "complete",
+              "artifact": "sql_analysis_coverage",
+              "column_usages": {
+                "by_resolution_status": {
+                  "resolved": 3
+                },
+                "source_inventory": {
+                  "non_source_values": {
+                    "generated_value_usages": 0,
+                    "semantic_parameter_usages": 0
+                  },
+                  "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+                  "resolved_by_relation_kind": {
+                    "physical": 3
+                  },
+                  "resolved_source_field_usages": 3,
+                  "source_field_candidate_usages": 3,
+                  "source_field_resolution_rate": 1.0,
+                  "status": "complete",
+                  "total_observed_usages": 3,
+                  "unresolved_by_basis": {},
+                  "unresolved_by_status": {},
+                  "unresolved_source_field_usages": 0
+                }
+              },
+              "coverage_policy": "partial_facts_are_published_with_localized_resolution_status_and_gaps",
+              "direct_lineage": {
+                "by_status": {
+                  "confirmed_direct": 2
+                }
+              },
+              "fact_counts": {
+                "sql_column_usage": 3,
+                "sql_direct_column_lineage": 2,
+                "sql_join_edge": 0,
+                "sql_object_dependency": 1,
+                "sql_projection": 2,
+                "sql_recursive_column_lineage": 2,
+                "sql_relation": 1,
+                "sql_scoped_lineage_gap": 0,
+                "sql_script_binding": 0,
+                "sql_script_embedded_sql": 0,
+                "sql_script_invocation": 0,
+                "sql_script_statement": 0,
+                "sql_select_scope": 1,
+                "sql_semantic_placeholder": 0,
+                "sql_statement": 1,
+                "sql_target_projection_binding": 2,
+                "sql_workflow_binding": 0,
+                "sql_write_target": 1
+              },
+              "gaps": {
+                "by_kind": {},
+                "total": 0
+              },
+              "joins": {
+                "by_resolution_status": {},
+                "by_type": {},
+                "physical_join_confirmed": 0
+              },
+              "projections": {
+                "by_resolution_status": {
+                  "resolved": 2
+                }
+              },
+              "recursive_lineage": {
+                "by_status": {
+                  "confirmed": 2
+                },
+                "by_terminal_source_kind": {
+                  "column": 2
+                }
+              },
+              "relations": {
+                "by_definition_status": {
+                  "not_applicable": 1
+                },
+                "by_kind": {
+                  "physical": 1
+                }
+              },
+              "schema_version": "sql-analysis/v1",
+              "script_invocations": {
+                "by_resolution_status": {}
+              },
+              "semantic_placeholders": {
+                "by_resolution_status": {}
+              },
+              "source_inventory": {
+                "files_scanned": 2,
+                "script_statements": 0,
+                "sql_statements": 1,
+                "sql_units": 1
+              },
+              "target_projection_bindings": {
+                "by_mapping_status": {
+                  "confirmed": 2
+                }
+              },
+              "write_targets": {
+                "by_resolution_status": {
+                  "resolved": 1
+                }
+              }
+            },
+            "repo_id": "demo-repository",
+            "source_content_fingerprint": "4078e230b96e507ffe6c750ed3b4058e76fcf94bcc5a6b911980ac24f751bb2f",
+            "source_schema_version": "sql-analysis/v1"
+          }
+        ],
+        "source_inventory": {
+          "column_usages": {
+            "relation_field_candidates": 3,
+            "relation_field_resolution_rate": 1.0,
+            "resolved_relation_fields": 3,
+            "total": 3,
+            "unresolved_relation_fields": 0
+          },
+          "coverage_policy": "semantic parameters, projection outputs and generated LATERAL/EXPLODE values do not reduce source-field resolution",
+          "limitations": {},
+          "non_source_values": {
+            "generated_fields": 0,
+            "projection_outputs": 0,
+            "semantic_parameters": 0
+          },
+          "resolved_by_relation_kind": {
+            "physical": 3
+          },
+          "status": "complete"
+        }
+      },
+      "filters": {
+        "max_evidence_per_role": 3,
+        "relation_kind": null,
+        "repo_id": null,
+        "search": null,
+        "usage_role": null,
+        "view": "all"
+      },
+      "inventory_schema_version": "sql-source-inventory/v1",
+      "item_count": 1,
+      "items": [
+        {
+          "classification_reasons": [
+            "read_without_local_write_evidence"
+          ],
+          "classification_status": "confirmed",
+          "definition_statuses": [
+            "not_applicable"
+          ],
+          "downstream_target_count": 1,
+          "evidence_count": 1,
+          "evidence_count_by_role": {
+            "from": 1
+          },
+          "evidence_refs": [
+            {
+              "evidence_id": "sql_relation_demo-repository_b5ea8dd4c4622bb5",
+              "file": "sql/customer.sql",
+              "line_start": 1,
+              "query_id": "query_demo-repository_000001",
+              "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+              "usage_role": "from"
+            }
+          ],
+          "evidence_truncated": false,
+          "field_count": 3,
+          "fields": [
+            {
+              "evidence_count": 1,
+              "evidence_count_by_role": {
+                "filter": 1
+              },
+              "evidence_refs": [
+                {
+                  "evidence_id": "sql_column_usage_demo-repository_bed5b4a9a61d8b5b",
+                  "file": "sql/customer.sql",
+                  "line_start": 1,
+                  "query_id": "query_demo-repository_000001",
+                  "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+                  "usage_role": "filter"
+                }
+              ],
+              "evidence_truncated": false,
+              "name": "active",
+              "occurrence_count": 1,
+              "resolution_bases": [
+                "alias"
+              ],
+              "resolution_statuses": [
+                "resolved"
+              ],
+              "statement_count": 1,
+              "usage_roles": [
+                "filter"
+              ]
+            },
+            {
+              "evidence_count": 1,
+              "evidence_count_by_role": {
+                "projection": 1
+              },
+              "evidence_refs": [
+                {
+                  "evidence_id": "sql_column_usage_demo-repository_5ac80f2883e0a021",
+                  "file": "sql/customer.sql",
+                  "line_start": 1,
+                  "query_id": "query_demo-repository_000001",
+                  "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+                  "usage_role": "projection"
+                }
+              ],
+              "evidence_truncated": false,
+              "name": "customer_id",
+              "occurrence_count": 1,
+              "resolution_bases": [
+                "alias"
+              ],
+              "resolution_statuses": [
+                "resolved"
+              ],
+              "statement_count": 1,
+              "usage_roles": [
+                "projection"
+              ]
+            },
+            {
+              "evidence_count": 1,
+              "evidence_count_by_role": {
+                "projection": 1
+              },
+              "evidence_refs": [
+                {
+                  "evidence_id": "sql_column_usage_demo-repository_c57331c1f492f1d0",
+                  "file": "sql/customer.sql",
+                  "line_start": 1,
+                  "query_id": "query_demo-repository_000001",
+                  "scope_id": "sql_select_scope_demo-repository_fc46ced027475b00",
+                  "usage_role": "projection"
+                }
+              ],
+              "evidence_truncated": false,
+              "name": "status",
+              "occurrence_count": 1,
+              "resolution_bases": [
+                "alias"
+              ],
+              "resolution_statuses": [
+                "resolved"
+              ],
+              "statement_count": 1,
+              "usage_roles": [
+                "projection"
+              ]
+            }
+          ],
+          "hidden_by_default": false,
+          "logical_name": "customer",
+          "occurrence_count": 1,
+          "owned_namespace": false,
+          "relation_id": "sql_relation_inventory_8b1a9ad9c9b079a2ee55",
+          "relation_identity": "ods.customer",
+          "relation_kind": "physical",
+          "repo_id": "demo-repository",
+          "resolved_names": [
+            "ods.customer"
+          ],
+          "semantic_role": "external_source",
+          "statement_count": 1,
+          "technical_name_signal": false,
+          "template_name": "ods.customer",
+          "usage_roles": [
+            "from"
+          ],
+          "write_occurrence_count": 0
+        }
+      ],
+      "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "demo-storage-sql"
+    },
+    "status": 200
+  }
+}

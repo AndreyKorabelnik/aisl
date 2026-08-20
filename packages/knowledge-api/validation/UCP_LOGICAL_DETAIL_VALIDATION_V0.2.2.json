@@ -1,0 +1,22 @@
+{
+  "schema_version": "knowledge_api_validation/v1",
+  "knowledge_api_version": "0.2.2",
+  "repository_scope": {
+    "query_type": "KnowledgeLayerQuery",
+    "table_id": "replica:com.sbt.bm.ucp.retail.model.individual.Individual",
+    "status": "passed",
+    "fields": 52,
+    "keys": 0,
+    "relationships": 0,
+    "relationship_candidate_count": 0
+  },
+  "workspace_scope": {
+    "query_type": "WorkspaceKnowledgeQuery",
+    "table_id": "replica:com.sbt.bm.ucp.retail.model.individual.Individual",
+    "status": "passed",
+    "fields": 53,
+    "keys": 1,
+    "relationships": 40,
+    "relationship_candidate_count": 2
+  }
+}

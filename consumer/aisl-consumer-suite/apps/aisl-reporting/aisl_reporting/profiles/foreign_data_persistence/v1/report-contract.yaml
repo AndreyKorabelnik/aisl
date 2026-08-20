@@ -1,0 +1,29 @@
+report_type: foreign-data-persistence-report
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- Which external/runtime source-side segments are observed?
+- Which local persistence/write segments are observed?
+- Which storage-to-access segments are observed?
+- Is end-to-end same-data proven at field level?
+- Which blockers prevent a business FDP decision?
+required_headings:
+- Краткий вывод
+- Область анализа
+- Подтверждённые кейсы сохранения внешних данных
+- Источник и поступление данных
+- Локальное сохранение
+- Доступ к сохранённым данным
+- Полнота цепочек и same-data
+- Кандидатные кейсы
+- Архитектурные и бизнес-выводы
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance
+appendix_policy:
+  limitations_and_coverage: Приложение A. Полнота анализа и ограничения доказательности
+  ambiguities_and_questions: Приложение B. Неоднозначности и вопросы для уточнения
+  evidence_and_provenance: Приложение C. Технические доказательства и provenance

@@ -1,0 +1,87 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/evidence-common
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/code-analyzer-core
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/knowledge-layer-core
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/static-analysis-runner
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/knowledge-api
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/knowledge-reporting
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/knowledge-assistant
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/knowledge-control-plane
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Obtaining file:///mnt/data/flat_delivery/auto-code-analysis-current-flat-packages-2026-08-12/packages/prepared-knowledge-runtime
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: evidence-common, code-analyzer-core, knowledge-layer-core, static-analysis-runner, knowledge-api, knowledge-reporting, knowledge-assistant, knowledge-control-plane, prepared-knowledge-runtime
+  Building editable for evidence-common (pyproject.toml): started
+  Building editable for evidence-common (pyproject.toml): finished with status 'done'
+  Created wheel for evidence-common: filename=evidence_common-0.23.2-0.editable-py3-none-any.whl size=2914 sha256=4ede256d9cc2d7bf9066686e00c933f17ea0fc8bfcfa3701a3a979bf84451ed2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/9e/b8/34/e7425328558708a2a768338a68ef8c67dc36508c71d9c4365a
+  Building editable for code-analyzer-core (pyproject.toml): started
+  Building editable for code-analyzer-core (pyproject.toml): finished with status 'done'
+  Created wheel for code-analyzer-core: filename=code_analyzer_core-0.44.23a3-0.editable-py3-none-any.whl size=3465 sha256=745622da50fc0c38e25646f19b97c50e0640f7eb76b27128c60e541a4f3bc75a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/73/48/ef/7de5d2c3165e03c56c319014abc5b525ed3a0e2df1040827eb
+  Building editable for knowledge-layer-core (pyproject.toml): started
+  Building editable for knowledge-layer-core (pyproject.toml): finished with status 'done'
+  Created wheel for knowledge-layer-core: filename=knowledge_layer_core-0.61.0a20-0.editable-py3-none-any.whl size=3439 sha256=ed19ef1709d38c00c40c8272de9698a27ea6ed3a6252cf6aa672b5293aebba44
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/95/cb/6c/0b7588f85d55356d6a3222e936d603d0337c81185357e321d5
+  Building editable for static-analysis-runner (pyproject.toml): started
+  Building editable for static-analysis-runner (pyproject.toml): finished with status 'done'
+  Created wheel for static-analysis-runner: filename=static_analysis_runner-0.10.18-0.editable-py3-none-any.whl size=3421 sha256=0ba44ef67a933ab5caf6e4c8ab8eb8946611f05840e33d35532c354fdbed1980
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/f7/ac/c2/46b5c7d049ddc5e46a53545f93b619d482b2abd8ff73ae8624
+  Building editable for knowledge-api (pyproject.toml): started
+  Building editable for knowledge-api (pyproject.toml): finished with status 'done'
+  Created wheel for knowledge-api: filename=knowledge_api-0.30.0-0.editable-py3-none-any.whl size=3270 sha256=922f449f61c1cc95a3fed612a36ab2fd4740159a8467eb746616310e71d65b05
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/ae/70/02/9276ce53013c9d0ace5098f059800f85d3e99900c26fa92adc
+  Building editable for knowledge-reporting (pyproject.toml): started
+  Building editable for knowledge-reporting (pyproject.toml): finished with status 'done'
+  Created wheel for knowledge-reporting: filename=knowledge_reporting-0.18.0-0.editable-py3-none-any.whl size=3352 sha256=01be3c7b4f5e8d1aeb0da7768d44b75d566e37fa4c7451af2148012eabe4043b
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/57/72/7c/780683c076b390e444c7367d9af4e7c81825731b04d4c8f4aa
+  Building editable for knowledge-assistant (pyproject.toml): started
+  Building editable for knowledge-assistant (pyproject.toml): finished with status 'done'
+  Created wheel for knowledge-assistant: filename=knowledge_assistant-0.25.1.post4-0.editable-py3-none-any.whl size=3448 sha256=3d60eb7d9574d2da12b2c8602e8e65349dcc015be681597e62fb50c6b14368fd
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/fe/29/6c/720a8f1d39533b4cc5841fcaf435cdfe306ba2cbee737487ca
+  Building editable for knowledge-control-plane (pyproject.toml): started
+  Building editable for knowledge-control-plane (pyproject.toml): finished with status 'done'
+  Created wheel for knowledge-control-plane: filename=knowledge_control_plane-1.2.0a6-0.editable-py3-none-any.whl size=5110 sha256=146eb545029bd93260fe22bcc515c96ea4c9b3be007bc5898d58815cb9880e48
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/5b/71/23/b2fa76c885dcb1813c9e59a0d4f843f4d48fe26a5caef0c8ab
+  Building editable for prepared-knowledge-runtime (pyproject.toml): started
+  Building editable for prepared-knowledge-runtime (pyproject.toml): finished with status 'done'
+  Created wheel for prepared-knowledge-runtime: filename=prepared_knowledge_runtime-0.1.0.post1-0.editable-py3-none-any.whl size=3189 sha256=e0ce3d96029439545c1767debb85c8b93fbd229b206efce0c785f7994ab0dee6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q485utl3/wheels/f1/be/e9/003944dfbffc4ffaecc3e5028ccf1d77c2c444a6c93002324b
+Successfully built evidence-common code-analyzer-core knowledge-layer-core static-analysis-runner knowledge-api knowledge-reporting knowledge-assistant knowledge-control-plane prepared-knowledge-runtime
+Installing collected packages: static-analysis-runner, prepared-knowledge-runtime, knowledge-reporting, knowledge-layer-core, knowledge-control-plane, knowledge-assistant, knowledge-api, evidence-common, code-analyzer-core
+
+Successfully installed code-analyzer-core-0.44.23a3 evidence-common-0.23.2 knowledge-api-0.30.0 knowledge-assistant-0.25.1.post4 knowledge-control-plane-1.2.0a6 knowledge-layer-core-0.61.0a20 knowledge-reporting-0.18.0 prepared-knowledge-runtime-0.1.0.post1 static-analysis-runner-0.10.18

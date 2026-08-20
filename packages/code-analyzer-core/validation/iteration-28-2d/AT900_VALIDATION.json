@@ -1,0 +1,69 @@
+{
+  "schema_version": "iteration_28_2d_validation/v1",
+  "baseline": {
+    "core_version": "0.40.4",
+    "constructor_mapping_not_resolved": 184,
+    "data_model_lineage_gaps": 6486,
+    "workspace_missing_fact": 7391,
+    "attribute_mappings": 1591,
+    "attribute_derivations": 1529
+  },
+  "result": {
+    "core_version": "0.40.5",
+    "constructor_mapping_not_resolved": 30,
+    "data_model_lineage_gaps": 6332,
+    "workspace_missing_fact": 7237,
+    "attribute_mappings": 1723,
+    "attribute_derivations": 1940,
+    "duckdb_constructor_gaps": 30,
+    "duckdb_constructor_gaps_with_raw_expression": 30
+  },
+  "delta": {
+    "constructor_mapping_not_resolved": -154,
+    "data_model_lineage_gaps": -154,
+    "workspace_missing_fact": -154,
+    "attribute_mappings": 132,
+    "attribute_derivations": 411
+  },
+  "remaining_expression_kinds": {
+    "unknown": 14,
+    "dictionary_lookup": 4,
+    "method_call": 12
+  },
+  "remaining_expressions": {
+    "records": 1,
+    "card": 1,
+    "phoneNumber": 1,
+    "emptyMap()": 4,
+    "dao.getPprbProfilesByUcpIdsWithChannel(ucpIds)": 1,
+    "dao.getPprbProfilesByUcpIds(ucpIds)": 2,
+    "limit": 1,
+    "maxSize": 1,
+    "maxDelay": 1,
+    "profiles": 1,
+    "r.getValue(PHONE_ID_FIELD)": 2,
+    "r.getValue(PRODUCT_TYPE_FIELD)": 2,
+    "mergeNotNull(phones, new ArrayList<>())": 1,
+    "mergeNotNull(cards, new ArrayList<>())": 1,
+    "mergeNotNull(ucpIds, new ArrayList<>())": 1,
+    "mergeNotNull(accounts, new ArrayList<>())": 1,
+    "filteredLinks": 1,
+    "responses": 1,
+    "regDataList": 1,
+    "cardNum": 2,
+    "phoneDto": 1,
+    "lastDevice.orElse(null)": 1,
+    "request": 1
+  },
+  "tests": {
+    "full_core": "393 passed",
+    "at900_suite": "complete",
+    "knowledge_layer_materialization": "complete"
+  },
+  "scope_guards": [
+    "no AT900/UCP/package/class/field-name conditions",
+    "AST and lexical declaration based",
+    "direct DAO/helper return semantics remain unresolved",
+    "test/generated no-source origins remain suppressed"
+  ]
+}

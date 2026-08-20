@@ -1,0 +1,107 @@
+{
+  "accesses": {
+    "schema_version": "knowledge_api/v1",
+    "observed_storage_schema_version": "observed-storage-usage-query/v1",
+    "system_id": "demo-storage-sql",
+    "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+    "items": [
+      {
+        "storage_access_id": "storage_access_3cdff79989eef7de51d1aadd",
+        "repo_id": "demo-repository",
+        "operation": "CustomerService.load",
+        "class_name": "CustomerService",
+        "method_name": "load",
+        "access_kind": "read",
+        "operation_kind": "read",
+        "write_kind": "read",
+        "storage_kind": "repository_or_storage_api",
+        "storage_target_expression": "customerRepository",
+        "target_resolution_level": "read_method",
+        "target_resolution_status": "not_applicable",
+        "receiver_expression": "customerRepository",
+        "storage_method": "findById",
+        "payload_expression": "id",
+        "payload_role": "filter_key",
+        "writes_new_payload": false,
+        "selected_fields": [],
+        "result_type": "unknown",
+        "source_ref": {
+          "extractor": "java_tree_sitter_storage_call",
+          "line_end": 4,
+          "line_start": 4,
+          "repository_relative_path": "src/main/java/demo/CustomerService.java"
+        }
+      },
+      {
+        "storage_access_id": "storage_access_00c32d9377d8192e80f43a18",
+        "repo_id": "demo-repository",
+        "operation": "CustomerService.save",
+        "class_name": "CustomerService",
+        "method_name": "save",
+        "access_kind": "write",
+        "operation_kind": "save",
+        "write_kind": "save",
+        "storage_kind": "repository_or_storage_api",
+        "storage_target_expression": "customerRepository",
+        "target_resolution_level": "known_storage_api_or_framework_method",
+        "target_resolution_status": "recognized_storage_method",
+        "receiver_expression": "customerRepository",
+        "storage_method": "save",
+        "payload_expression": "customer",
+        "payload_role": "saved_payload",
+        "writes_new_payload": true,
+        "selected_fields": [],
+        "result_type": "unknown",
+        "source_ref": {
+          "extractor": "java_tree_sitter_storage_call",
+          "line_end": 5,
+          "line_start": 5,
+          "repository_relative_path": "src/main/java/demo/CustomerService.java"
+        }
+      }
+    ],
+    "page": {
+      "offset": 0,
+      "limit": 50,
+      "total": 2
+    },
+    "summary": {
+      "access_count": 2,
+      "read_count": 1,
+      "write_count": 1,
+      "gap_count": 0,
+      "by_storage_kind": {
+        "repository_or_storage_api": 2
+      },
+      "by_resolution_status": {
+        "not_applicable": 1,
+        "recognized_storage_method": 1
+      }
+    }
+  },
+  "gaps": {
+    "schema_version": "knowledge_api/v1",
+    "observed_storage_schema_version": "observed-storage-usage-query/v1",
+    "system_id": "demo-storage-sql",
+    "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+    "items": [],
+    "page": {
+      "offset": 0,
+      "limit": 50,
+      "total": 0
+    },
+    "summary": {
+      "access_count": 2,
+      "read_count": 1,
+      "write_count": 1,
+      "gap_count": 0,
+      "by_storage_kind": {
+        "repository_or_storage_api": 2
+      },
+      "by_resolution_status": {
+        "not_applicable": 1,
+        "recognized_storage_method": 1
+      }
+    }
+  }
+}

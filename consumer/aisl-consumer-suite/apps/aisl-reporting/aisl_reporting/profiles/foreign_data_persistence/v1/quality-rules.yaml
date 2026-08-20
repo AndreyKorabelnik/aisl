@@ -1,0 +1,6 @@
+max_dataset_bytes: 500000
+required_properties:
+  - complete_path_catalog
+  - no_business_risk_decision
+  - source_persistence_access_separation
+  - end_to_end_same_data_guardrail

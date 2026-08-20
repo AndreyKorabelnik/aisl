@@ -1,0 +1,16 @@
+{
+  "catalog_fingerprint": "c181a165d6c324ab6d81b1c5291b6f5675faf1a1e816e1c2e8fbe945496473b1",
+  "core_catalog_fingerprint": "321ac8f5ee0d31db1e550c1e6b5c1bbbf9123d3fd2c0e8931a0cf78937df3020",
+  "core_profiles": 14,
+  "core_version": "0.43.21",
+  "declared_stage_ids": 48,
+  "java_derived_stage_contracts": 9,
+  "knowledge_materialization_candidates": 4,
+  "output": "/mnt/data/analysis-mechanism-catalog-v4-0.9.40.json",
+  "pipeline_profiles": 5,
+  "schema_version": "analysis_mechanism_catalog/v4",
+  "stage_contracts_markdown": "/mnt/data/java-derived-stage-contracts-v4-0.9.40.md",
+  "suites": 7,
+  "task_linked_profiles": 8,
+  "tasks": 8
+}

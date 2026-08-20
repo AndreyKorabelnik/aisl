@@ -1,0 +1,49 @@
+{
+  "schema_version": "aisl_real_acceptance/v1",
+  "date": "2026-08-15",
+  "domain": "system-description",
+  "system_id": "at900-client-profile-system-description",
+  "repository_id": "client-profile",
+  "fresh_publication": {
+    "job_id": "job-50770118bb894834aacedcdd6da37f9b",
+    "status": "succeeded",
+    "revision_id": "rev-db657fc55d3446f57adbdadd"
+  },
+  "consumer_measurement_revision_id": "rev-a7fd3eb7b48b45d7718d85cc",
+  "structural_dimensions": {
+    "module_count": 3,
+    "rest_inbound_count": 35,
+    "kafka_inbound_count": 24,
+    "inbound_total": 59,
+    "outbound_integration_count": 13,
+    "event_boundary_count": 34,
+    "observed_storage_target_count": 127,
+    "scenario_count": 59,
+    "entrypoint_only_gap_count": 26,
+    "source_file_count": 1038,
+    "payload_artifact_count": 7,
+    "missing_payload_artifact_count": 0,
+    "coverage_status": "complete"
+  },
+  "representative_scenarios": [
+    "TpsController.update",
+    "TpsSwitchController.changeTPSState900",
+    "RemoveDeviceConsumer.onReceive",
+    "KafkaOperatorEnrichConsumer.onReceiveMessage",
+    "ClientProfileController.phonesByCardNumber",
+    "MbClientProfileController.mbClientProfileExtended",
+    "RegistrationHistoryController.getRegistrationHistory",
+    "RegHistoryEventConsumer.onReceiveMessage"
+  ],
+  "consumer_guidance": {
+    "schema_version": "system-description-guidance/v1",
+    "raw_common_context_bytes_approx": 421538,
+    "guidance_bytes": 54790,
+    "reduction_percent": 87.0,
+    "semantic_derivation": "none"
+  },
+  "producer_change_required": false,
+  "limitations": [
+    "Business purpose and functional-area labels are consumer interpretations over evidence and are not generated as confirmed facts by the compact projection."
+  ]
+}

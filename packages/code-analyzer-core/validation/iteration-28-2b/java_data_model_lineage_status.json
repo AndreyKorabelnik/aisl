@@ -1,0 +1,997 @@
+{
+  "requested": true,
+  "mode": "source_only_fast_data_model_lineage_v2",
+  "files_scanned": 1004,
+  "classes_indexed": 877,
+  "methods_indexed": 6343,
+  "containers_indexed": 629,
+  "repository_entity_types_indexed": 0,
+  "mapper_signatures_indexed": 43,
+  "facts_by_type": {
+    "attribute_derivation": 1529,
+    "attribute_mapping": 1591,
+    "attribute_occurrence": 2496,
+    "data_model_lineage_gap": 6486,
+    "java_inheritance_observation": 459,
+    "java_type_declaration": 909,
+    "java_type_descendant_observation": 233,
+    "persistent_structure": 12
+  },
+  "gap_kind_counts": {
+    "constructor_mapping_not_resolved": 184,
+    "repository_entity_type_unknown": 1,
+    "source_expression_not_resolved": 6300,
+    "sql_lineage_unresolved": 1
+  },
+  "attribute_occurrences_extracted": 2496,
+  "persistent_structures_extracted": 12,
+  "java_type_declarations_extracted": 909,
+  "java_inheritance_observations_extracted": 459,
+  "java_inheritance_resolved": 187,
+  "java_inheritance_unresolved": 272,
+  "java_inheritance_ambiguous": 0,
+  "java_inheritance_cycle_nodes": 0,
+  "java_type_parse_warnings": 0,
+  "java_type_descendant_observations_extracted": 233,
+  "java_type_descendant_ancestors": 67,
+  "java_type_descendant_cycle_paths_skipped": 0,
+  "effective_entity_fields_extracted": 0,
+  "effective_entity_fields_direct": 0,
+  "effective_entity_fields_inherited": 0,
+  "effective_entity_fields_excluded": 0,
+  "effective_entity_fields_with_model_exclusion_annotation": 0,
+  "effective_entity_field_unresolved_paths": 0,
+  "effective_entity_associations_extracted": 0,
+  "effective_entity_associations_inherited": 0,
+  "effective_entity_associations_direct": 0,
+  "effective_entity_association_resolution_counts": {},
+  "effective_entity_association_supporting_type_targets": 0,
+  "effective_entity_association_unresolved_targets": 0,
+  "bounded_entity_type_path_observations_extracted": 0,
+  "bounded_entity_type_path_roots": 0,
+  "bounded_entity_type_path_max_depth": 12,
+  "bounded_entity_type_path_stop_counts": {},
+  "attribute_mappings_extracted": 1591,
+  "attribute_derivations_extracted": 1529,
+  "source_to_storage_lineages_extracted": 0,
+  "data_model_lineage_gaps_extracted": 6486,
+  "persistence_lineage_status": {
+    "requested": true,
+    "mode": "source_only_persistence_lineage_deep",
+    "deep": true,
+    "files_scanned": 868,
+    "classes_indexed": 877,
+    "methods_indexed": 6343,
+    "data_sources_extracted": 55,
+    "persistent_writes_extracted": 116,
+    "source_to_storage_lineages_extracted": 454,
+    "storage_lineage_gaps_extracted": 905,
+    "read_from_storage_extracted": 255,
+    "access_boundaries_extracted": 185,
+    "storage_to_access_lineages_extracted": 159,
+    "stored_field_to_response_field_mappings_extracted": 53,
+    "jooq_batch_bind_mappings_extracted": 36,
+    "jooq_parameterized_sql_mappings_extracted": 18,
+    "java_lineage_patterns_extracted": 813,
+    "spring_component_dependencies_extracted": 378,
+    "template_method_dispatches_extracted": 12,
+    "factory_method_mappings_extracted": 69,
+    "builder_field_mappings_extracted": 1562,
+    "stream_collection_lineages_extracted": 420,
+    "mapstruct_mapper_signatures_extracted": 43,
+    "mapstruct_field_mappings_extracted": 0,
+    "stored_data_access_counts": {
+      "read_from_storage": 255,
+      "access_boundary": 185,
+      "storage_to_access_lineage": 159,
+      "stored_field_to_response_field_mapping": 53
+    },
+    "source_inspection_requests_extracted": 305,
+    "lineage_source_kind_counts": {
+      "computed": 54,
+      "method_input": 161,
+      "unknown": 8
+    },
+    "gap_kind_counts": {
+      "dao_entity_type_unknown": 39,
+      "field_mapping_not_resolved": 490,
+      "mapper_not_resolved": 2,
+      "persistent_mutation_by_key": 67,
+      "saved_object_schema_unknown": 8,
+      "storage_operation_is_delete": 24,
+      "storage_operation_is_read": 255,
+      "storage_operation_not_a_confirmed_write": 20
+    },
+    "storage_access_kind_counts": {
+      "mutation": 91,
+      "read": 255,
+      "write": 104
+    },
+    "storage_operation_kind_counts": {
+      "batch_insert": 7,
+      "batch_update": 2,
+      "cache_write": 2,
+      "delete": 24,
+      "insert": 39,
+      "mutation": 38,
+      "read": 255,
+      "save": 40,
+      "update": 27,
+      "upsert": 16
+    },
+    "candidate_signal_type_counts": {
+      "custom_dao_persistence_boundary": 595,
+      "known_storage_api_boundary": 37,
+      "storage_read_near_access_boundary": 151
+    },
+    "evidence_maturity_level_counts": {
+      "confirmed": 179,
+      "not_applicable": 4077,
+      "unresolved": 1582
+    },
+    "evidence_maturity_blocker_counts": {
+      "access_boundary:unresolved": 90,
+      "end_to_end_trace:unresolved": 939,
+      "field_mapping:unresolved": 846,
+      "persistence_write:unresolved": 734,
+      "physical_storage:unresolved": 988,
+      "source_boundary:unresolved": 939,
+      "storage_to_access_lineage:unresolved": 151
+    },
+    "evidence_maturity_model": {
+      "policy": "strict_confirmed_vs_unresolved_candidate_signals_are_navigation_only",
+      "levels": [
+        "confirmed",
+        "unresolved",
+        "not_applicable"
+      ],
+      "candidate_signal_policy": "candidate_signals are navigation hints with is_evidence=false; LLM must inspect source before using them as proof",
+      "gap_lifecycle_policy": "decision-blocking actionable unresolved gaps must have source_inspection_required=true and linked source_inspection_request when a concrete target exists",
+      "dimensions": [
+        "persistence_write",
+        "source_boundary",
+        "field_mapping",
+        "physical_storage",
+        "end_to_end_trace"
+      ]
+    },
+    "warnings": [],
+    "progress_events": [
+      {
+        "phase": "context",
+        "status": "running",
+        "elapsed_ms": 0,
+        "updated_at": "2026-07-30T08:38:49.081832+00:00",
+        "file_count": 1038,
+        "deep": true
+      },
+      {
+        "phase": "context.method_index",
+        "status": "running",
+        "elapsed_ms": 0,
+        "updated_at": "2026-07-30T08:38:49.081921+00:00",
+        "file_count": 1038
+      },
+      {
+        "phase": "context.method_index",
+        "status": "done",
+        "elapsed_ms": 3640,
+        "updated_at": "2026-07-30T08:38:52.722154+00:00",
+        "method_count": 6343,
+        "class_count": 877,
+        "warning_count": 0
+      },
+      {
+        "phase": "context.method_grouping",
+        "status": "running",
+        "elapsed_ms": 3640,
+        "updated_at": "2026-07-30T08:38:52.722605+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.method_grouping",
+        "status": "done",
+        "elapsed_ms": 3756,
+        "updated_at": "2026-07-30T08:38:52.838385+00:00",
+        "grouped_method_count": 6343,
+        "raw_grouped_method_count": 6343
+      },
+      {
+        "phase": "context.origin_detection",
+        "status": "running",
+        "elapsed_ms": 3756,
+        "updated_at": "2026-07-30T08:38:52.838731+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.origin_detection",
+        "status": "done",
+        "elapsed_ms": 3771,
+        "updated_at": "2026-07-30T08:38:52.853723+00:00",
+        "origin_count": 58
+      },
+      {
+        "phase": "context.storage_access_detection",
+        "status": "running",
+        "elapsed_ms": 3772,
+        "updated_at": "2026-07-30T08:38:52.853923+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.storage_access_detection",
+        "status": "done",
+        "elapsed_ms": 3871,
+        "updated_at": "2026-07-30T08:38:52.953548+00:00",
+        "storage_access_count": 450
+      },
+      {
+        "phase": "context.jooq_batch_bind_mappings",
+        "status": "running",
+        "elapsed_ms": 3872,
+        "updated_at": "2026-07-30T08:38:52.953865+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.jooq_batch_bind_mappings",
+        "status": "done",
+        "elapsed_ms": 4194,
+        "updated_at": "2026-07-30T08:38:53.276561+00:00",
+        "fact_count": 36
+      },
+      {
+        "phase": "context.jooq_parameterized_sql_mappings",
+        "status": "running",
+        "elapsed_ms": 4195,
+        "updated_at": "2026-07-30T08:38:53.276894+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.jooq_parameterized_sql_mappings",
+        "status": "done",
+        "elapsed_ms": 4411,
+        "updated_at": "2026-07-30T08:38:53.492907+00:00",
+        "fact_count": 18
+      },
+      {
+        "phase": "context.java_lineage_patterns",
+        "status": "running",
+        "elapsed_ms": 4411,
+        "updated_at": "2026-07-30T08:38:53.493269+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.java_lineage_patterns",
+        "status": "done",
+        "elapsed_ms": 4519,
+        "updated_at": "2026-07-30T08:38:53.601603+00:00",
+        "fact_count": 813
+      },
+      {
+        "phase": "context.spring_component_dependencies",
+        "status": "running",
+        "elapsed_ms": 4520,
+        "updated_at": "2026-07-30T08:38:53.601936+00:00",
+        "class_count": 877
+      },
+      {
+        "phase": "context.spring_component_dependencies",
+        "status": "done",
+        "elapsed_ms": 4525,
+        "updated_at": "2026-07-30T08:38:53.607042+00:00",
+        "fact_count": 378
+      },
+      {
+        "phase": "context.template_method_dispatches",
+        "status": "running",
+        "elapsed_ms": 4525,
+        "updated_at": "2026-07-30T08:38:53.607212+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.template_method_dispatches",
+        "status": "done",
+        "elapsed_ms": 4530,
+        "updated_at": "2026-07-30T08:38:53.611872+00:00",
+        "fact_count": 12
+      },
+      {
+        "phase": "context.factory_method_mappings",
+        "status": "running",
+        "elapsed_ms": 4530,
+        "updated_at": "2026-07-30T08:38:53.612035+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.factory_method_mappings",
+        "status": "done",
+        "elapsed_ms": 4564,
+        "updated_at": "2026-07-30T08:38:53.646189+00:00",
+        "fact_count": 69
+      },
+      {
+        "phase": "context.builder_field_mappings",
+        "status": "running",
+        "elapsed_ms": 4564,
+        "updated_at": "2026-07-30T08:38:53.646508+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.builder_field_mappings",
+        "status": "done",
+        "elapsed_ms": 4757,
+        "updated_at": "2026-07-30T08:38:53.839221+00:00",
+        "fact_count": 1562
+      },
+      {
+        "phase": "context.stream_collection_lineages",
+        "status": "running",
+        "elapsed_ms": 4757,
+        "updated_at": "2026-07-30T08:38:53.839575+00:00",
+        "method_count": 6343
+      },
+      {
+        "phase": "context.stream_collection_lineages",
+        "status": "done",
+        "elapsed_ms": 4797,
+        "updated_at": "2026-07-30T08:38:53.878897+00:00",
+        "fact_count": 420
+      },
+      {
+        "phase": "context.schema_fields",
+        "status": "running",
+        "elapsed_ms": 4797,
+        "updated_at": "2026-07-30T08:38:53.879261+00:00",
+        "file_count": 1038
+      },
+      {
+        "phase": "context.schema_fields",
+        "status": "done",
+        "elapsed_ms": 4865,
+        "updated_at": "2026-07-30T08:38:53.947534+00:00",
+        "schema_count": 731
+      },
+      {
+        "phase": "context.interface_implementations",
+        "status": "running",
+        "elapsed_ms": 4866,
+        "updated_at": "2026-07-30T08:38:53.947854+00:00",
+        "class_count": 877
+      },
+      {
+        "phase": "context.interface_implementations",
+        "status": "done",
+        "elapsed_ms": 4868,
+        "updated_at": "2026-07-30T08:38:53.949885+00:00",
+        "interface_count": 166
+      },
+      {
+        "phase": "context.mapper_signatures",
+        "status": "running",
+        "elapsed_ms": 4868,
+        "updated_at": "2026-07-30T08:38:53.950037+00:00",
+        "deep": true
+      },
+      {
+        "phase": "context.mapper_signatures",
+        "status": "done",
+        "elapsed_ms": 4904,
+        "updated_at": "2026-07-30T08:38:53.986763+00:00",
+        "signature_count": 43,
+        "fact_count": 43
+      },
+      {
+        "phase": "context.repository_entity_map",
+        "status": "running",
+        "elapsed_ms": 4905,
+        "updated_at": "2026-07-30T08:38:53.986983+00:00",
+        "deep": true
+      },
+      {
+        "phase": "context.repository_entity_map",
+        "status": "done",
+        "elapsed_ms": 4924,
+        "updated_at": "2026-07-30T08:38:54.006221+00:00",
+        "mapping_count": 40
+      },
+      {
+        "phase": "context",
+        "status": "done",
+        "elapsed_ms": 4924,
+        "updated_at": "2026-07-30T08:38:54.006506+00:00",
+        "method_count": 6343,
+        "storage_access_count": 450
+      },
+      {
+        "phase": "data_source_phase",
+        "status": "running",
+        "elapsed_ms": 4924,
+        "updated_at": "2026-07-30T08:38:54.006680+00:00",
+        "origin_count": 58
+      },
+      {
+        "phase": "data_source_phase",
+        "status": "done",
+        "elapsed_ms": 4925,
+        "updated_at": "2026-07-30T08:38:54.007571+00:00",
+        "fact_count": 55
+      },
+      {
+        "phase": "persistent_write_lineage_phase",
+        "status": "running",
+        "elapsed_ms": 4925,
+        "updated_at": "2026-07-30T08:38:54.007726+00:00",
+        "storage_access_count": 450
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 4926,
+        "updated_at": "2026-07-30T08:38:54.007974+00:00",
+        "processed_accesses": 0,
+        "total_accesses": 450,
+        "fact_count": 0,
+        "operation": "ActiveProfileDaoImpl.updateCurrentState",
+        "access_kind": "mutation",
+        "storage_method": "update"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 4926,
+        "updated_at": "2026-07-30T08:38:54.008475+00:00",
+        "processed_accesses": 24,
+        "total_accesses": 450,
+        "fact_count": 24,
+        "operation": "ActiveProfileSwitchJobTest.testMoveToSiAndFastReturnToProm",
+        "access_kind": "read",
+        "storage_method": "getActiveProfile"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 4943,
+        "updated_at": "2026-07-30T08:38:54.025600+00:00",
+        "processed_accesses": 49,
+        "total_accesses": 450,
+        "fact_count": 135,
+        "operation": "CardServiceImpl.addCards",
+        "access_kind": "write",
+        "storage_method": "upsertCardInfos"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5047,
+        "updated_at": "2026-07-30T08:38:54.129791+00:00",
+        "processed_accesses": 74,
+        "total_accesses": 450,
+        "fact_count": 334,
+        "operation": "ClientProfilePhonesByPhoneTest.testFindByPhonesEmpty",
+        "access_kind": "read",
+        "storage_method": "getProfiles"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5058,
+        "updated_at": "2026-07-30T08:38:54.140176+00:00",
+        "processed_accesses": 99,
+        "total_accesses": 450,
+        "fact_count": 395,
+        "operation": "DalProcessingServiceImpl.removeLinks",
+        "access_kind": "write",
+        "storage_method": "put"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5066,
+        "updated_at": "2026-07-30T08:38:54.148090+00:00",
+        "processed_accesses": 124,
+        "total_accesses": 450,
+        "fact_count": 465,
+        "operation": "DeviceLinkHoldDao.prepareInsertHoldBatch",
+        "access_kind": "write",
+        "storage_method": "insertInto"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5121,
+        "updated_at": "2026-07-30T08:38:54.202883+00:00",
+        "processed_accesses": 149,
+        "total_accesses": 450,
+        "fact_count": 621,
+        "operation": "KafkaConfig.transactionBetweenKafkaTemplate",
+        "access_kind": "read",
+        "storage_method": "getTemplate"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5146,
+        "updated_at": "2026-07-30T08:38:54.228029+00:00",
+        "processed_accesses": 174,
+        "total_accesses": 450,
+        "fact_count": 749,
+        "operation": "LinkServiceImpl.getTotalLinks",
+        "access_kind": "read",
+        "storage_method": "getWayCompleteLinks"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5146,
+        "updated_at": "2026-07-30T08:38:54.228660+00:00",
+        "processed_accesses": 199,
+        "total_accesses": 450,
+        "fact_count": 774,
+        "operation": "MbClientProfileExtendedServiceImpl.findSingleSupplier",
+        "access_kind": "read",
+        "storage_method": "findPprbLinksByCard"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5154,
+        "updated_at": "2026-07-30T08:38:54.235951+00:00",
+        "processed_accesses": 224,
+        "total_accesses": 450,
+        "fact_count": 799,
+        "operation": "MobileOperatorIncedentsDictionary.update",
+        "access_kind": "read",
+        "storage_method": "getAll"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5159,
+        "updated_at": "2026-07-30T08:38:54.241423+00:00",
+        "processed_accesses": 249,
+        "total_accesses": 450,
+        "fact_count": 878,
+        "operation": "OperatorServiceImpl.updateOperators",
+        "access_kind": "mutation",
+        "storage_method": "updatePhones"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5200,
+        "updated_at": "2026-07-30T08:38:54.282546+00:00",
+        "processed_accesses": 274,
+        "total_accesses": 450,
+        "fact_count": 1012,
+        "operation": "PhoneServiceImpl.updatePhoneBlock",
+        "access_kind": "write",
+        "storage_method": "insertPhoneBlockHistory"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5215,
+        "updated_at": "2026-07-30T08:38:54.297705+00:00",
+        "processed_accesses": 299,
+        "total_accesses": 450,
+        "fact_count": 1088,
+        "operation": "PriorityCardByPhoneTest.testOnePriorityCard",
+        "access_kind": "read",
+        "storage_method": "findByPhone"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5227,
+        "updated_at": "2026-07-30T08:38:54.309424+00:00",
+        "processed_accesses": 324,
+        "total_accesses": 450,
+        "fact_count": 1138,
+        "operation": "RegDataFactory.mapRegistration",
+        "access_kind": "read",
+        "storage_method": "getRegHistoryChannel"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5228,
+        "updated_at": "2026-07-30T08:38:54.309988+00:00",
+        "processed_accesses": 349,
+        "total_accesses": 450,
+        "fact_count": 1163,
+        "operation": "RegistrationHistoryServiceImpl.countNewMessages",
+        "access_kind": "read",
+        "storage_method": "countNewMessages"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5269,
+        "updated_at": "2026-07-30T08:38:54.351256+00:00",
+        "processed_accesses": 374,
+        "total_accesses": 450,
+        "fact_count": 1270,
+        "operation": "RegistrationHistoryServiceTest.testNotEnoughData",
+        "access_kind": "read",
+        "storage_method": "loadAll"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5286,
+        "updated_at": "2026-07-30T08:38:54.367985+00:00",
+        "processed_accesses": 399,
+        "total_accesses": 450,
+        "fact_count": 1322,
+        "operation": "SpreadProfileServiceTest.testConflictProfiles",
+        "access_kind": "read",
+        "storage_method": "get"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5292,
+        "updated_at": "2026-07-30T08:38:54.373909+00:00",
+        "processed_accesses": 424,
+        "total_accesses": 450,
+        "fact_count": 1365,
+        "operation": "UnblockColdPeriodPhoneDao.changeState",
+        "access_kind": "mutation",
+        "storage_method": "update"
+      },
+      {
+        "phase": "persistent_write_lineage_phase.access_loop",
+        "status": "running",
+        "elapsed_ms": 5307,
+        "updated_at": "2026-07-30T08:38:54.389232+00:00",
+        "processed_accesses": 449,
+        "total_accesses": 450,
+        "fact_count": 1412,
+        "operation": "WhiteListServiceImpl.isInWhiteList",
+        "access_kind": "read",
+        "storage_method": "loadAll"
+      },
+      {
+        "phase": "persistent_write_lineage_phase",
+        "status": "done",
+        "elapsed_ms": 5307,
+        "updated_at": "2026-07-30T08:38:54.389772+00:00",
+        "fact_count": 1413,
+        "counts": {
+          "source_kind_counts": {
+            "method_input": 161,
+            "computed": 54,
+            "unknown": 8
+          },
+          "gap_counts": {
+            "persistent_mutation_by_key": 67,
+            "storage_operation_is_read": 255,
+            "storage_operation_not_a_confirmed_write": 20,
+            "field_mapping_not_resolved": 490,
+            "dao_entity_type_unknown": 39,
+            "storage_operation_is_delete": 24,
+            "saved_object_schema_unknown": 8,
+            "mapper_not_resolved": 2
+          },
+          "access_kind_counts": {
+            "mutation": 91,
+            "read": 255,
+            "write": 104
+          },
+          "operation_kind_counts": {
+            "update": 27,
+            "read": 255,
+            "mutation": 38,
+            "insert": 39,
+            "upsert": 16,
+            "save": 40,
+            "delete": 24,
+            "cache_write": 2,
+            "batch_insert": 7,
+            "batch_update": 2
+          }
+        }
+      },
+      {
+        "phase": "standalone_mapping_hint_phase",
+        "status": "running",
+        "elapsed_ms": 5308,
+        "updated_at": "2026-07-30T08:38:54.389982+00:00"
+      },
+      {
+        "phase": "standalone_mapping_hint_phase",
+        "status": "done",
+        "elapsed_ms": 5311,
+        "updated_at": "2026-07-30T08:38:54.393450+00:00",
+        "fact_count": 3567
+      },
+      {
+        "phase": "stored_data_access_phase",
+        "status": "running",
+        "elapsed_ms": 5311,
+        "updated_at": "2026-07-30T08:38:54.393700+00:00",
+        "storage_access_count": 450
+      },
+      {
+        "phase": "stored_data_access_phase",
+        "status": "done",
+        "elapsed_ms": 5665,
+        "updated_at": "2026-07-30T08:38:54.747298+00:00",
+        "fact_count": 803,
+        "counts": {
+          "read_from_storage": 255,
+          "access_boundary": 185,
+          "storage_to_access_lineage": 159,
+          "stored_field_to_response_field_mapping": 53
+        }
+      },
+      {
+        "phase": "source_inspection_links",
+        "status": "running",
+        "elapsed_ms": 5665,
+        "updated_at": "2026-07-30T08:38:54.747826+00:00",
+        "fact_count": 5838
+      },
+      {
+        "phase": "source_inspection_links",
+        "status": "done",
+        "elapsed_ms": 5674,
+        "updated_at": "2026-07-30T08:38:54.756687+00:00",
+        "fact_count": 5838
+      },
+      {
+        "phase": "status_build",
+        "status": "running",
+        "elapsed_ms": 5675,
+        "updated_at": "2026-07-30T08:38:54.757160+00:00",
+        "fact_count": 5838
+      },
+      {
+        "phase": "done",
+        "status": "done",
+        "elapsed_ms": 5685,
+        "updated_at": "2026-07-30T08:38:54.767392+00:00",
+        "fact_count": 5838
+      }
+    ],
+    "elapsed_ms": 5685
+  },
+  "reused_persistence_lineage": true,
+  "persistence_facts_included": false,
+  "constructor_resolution": {
+    "attribute_derivations": 21,
+    "attribute_mappings": 115,
+    "mapping_gaps": 184,
+    "object_creations_with_arguments": 757,
+    "suppressed_generated_code_unresolved_arguments": 303,
+    "suppressed_test_code_unresolved_arguments": 273,
+    "target_resolution_exact_fqcn": 1,
+    "target_resolution_explicit_import": 164,
+    "target_resolution_same_package": 250,
+    "target_resolution_unique_simple_name": 5,
+    "target_resolution_unresolved": 337
+  },
+  "progress_events": [
+    {
+      "phase": "context.method_index",
+      "status": "running",
+      "elapsed_ms": 0,
+      "updated_at": "2026-07-30T08:38:55.978641+00:00",
+      "file_count": 1038
+    },
+    {
+      "phase": "context.method_index",
+      "status": "done",
+      "elapsed_ms": 823,
+      "updated_at": "2026-07-30T08:38:56.802584+00:00",
+      "method_count": 6343,
+      "class_count": 877
+    },
+    {
+      "phase": "context.schema_and_containers",
+      "status": "running",
+      "elapsed_ms": 824,
+      "updated_at": "2026-07-30T08:38:56.802852+00:00"
+    },
+    {
+      "phase": "context.schema_and_containers",
+      "status": "done",
+      "elapsed_ms": 1022,
+      "updated_at": "2026-07-30T08:38:57.000807+00:00",
+      "schema_type_count": 731,
+      "container_count": 629,
+      "repository_entity_type_count": 0,
+      "mapper_signature_count": 43
+    },
+    {
+      "phase": "context.java_inheritance_graph",
+      "status": "done",
+      "elapsed_ms": 1075,
+      "updated_at": "2026-07-30T08:38:57.054503+00:00",
+      "java_type_declarations_extracted": 909,
+      "java_inheritance_observations_extracted": 459,
+      "java_inheritance_resolved": 187,
+      "java_inheritance_unresolved": 272,
+      "java_inheritance_ambiguous": 0,
+      "java_inheritance_cycle_nodes": 0,
+      "java_type_parse_warnings": 0
+    },
+    {
+      "phase": "context.java_type_descendants",
+      "status": "done",
+      "elapsed_ms": 1077,
+      "updated_at": "2026-07-30T08:38:57.056415+00:00",
+      "java_type_descendant_observations_extracted": 233,
+      "java_type_descendant_ancestors": 67,
+      "java_type_descendant_cycle_paths_skipped": 0
+    },
+    {
+      "phase": "context.effective_entity_fields",
+      "status": "done",
+      "elapsed_ms": 1078,
+      "updated_at": "2026-07-30T08:38:57.057247+00:00",
+      "effective_entity_fields_extracted": 0,
+      "effective_entity_fields_direct": 0,
+      "effective_entity_fields_inherited": 0,
+      "effective_entity_fields_excluded": 0,
+      "effective_entity_fields_with_model_exclusion_annotation": 0,
+      "effective_entity_field_unresolved_paths": 0
+    },
+    {
+      "phase": "context.effective_entity_associations",
+      "status": "done",
+      "elapsed_ms": 1081,
+      "updated_at": "2026-07-30T08:38:57.060572+00:00",
+      "effective_entity_associations_extracted": 0,
+      "effective_entity_associations_inherited": 0,
+      "effective_entity_associations_direct": 0,
+      "effective_entity_association_resolution_counts": {},
+      "effective_entity_association_supporting_type_targets": 0,
+      "effective_entity_association_unresolved_targets": 0
+    },
+    {
+      "phase": "context.bounded_entity_type_paths",
+      "status": "done",
+      "elapsed_ms": 1082,
+      "updated_at": "2026-07-30T08:38:57.060852+00:00",
+      "bounded_entity_type_path_observations_extracted": 0,
+      "bounded_entity_type_path_roots": 0,
+      "bounded_entity_type_path_max_depth": 12,
+      "bounded_entity_type_path_stop_counts": {}
+    },
+    {
+      "phase": "attribute_occurrence_phase",
+      "status": "running",
+      "elapsed_ms": 1082,
+      "updated_at": "2026-07-30T08:38:57.060969+00:00",
+      "container_count": 629
+    },
+    {
+      "phase": "attribute_occurrence_phase",
+      "status": "done",
+      "elapsed_ms": 1110,
+      "updated_at": "2026-07-30T08:38:57.089285+00:00",
+      "fact_count": 4097,
+      "attribute_occurrence_count": 2496,
+      "persistent_structure_count": 0
+    },
+    {
+      "phase": "persistence_lineage_reuse",
+      "status": "running",
+      "elapsed_ms": 1110,
+      "updated_at": "2026-07-30T08:38:57.089547+00:00",
+      "reused": true
+    },
+    {
+      "phase": "persistence_lineage_reuse",
+      "status": "done",
+      "elapsed_ms": 1111,
+      "updated_at": "2026-07-30T08:38:57.089878+00:00",
+      "reused": true,
+      "persistence_fact_count": 5838
+    },
+    {
+      "phase": "persistence_fact_copy",
+      "status": "running",
+      "elapsed_ms": 1111,
+      "updated_at": "2026-07-30T08:38:57.090099+00:00",
+      "persistence_fact_count": 5838,
+      "include_persistence_facts": false
+    },
+    {
+      "phase": "persistence_fact_copy",
+      "status": "done",
+      "elapsed_ms": 1111,
+      "updated_at": "2026-07-30T08:38:57.090286+00:00",
+      "fact_count": 4097,
+      "persistence_facts_included": false
+    },
+    {
+      "phase": "persistent_structure_from_writes",
+      "status": "running",
+      "elapsed_ms": 1111,
+      "updated_at": "2026-07-30T08:38:57.090531+00:00"
+    },
+    {
+      "phase": "persistent_structure_from_writes",
+      "status": "done",
+      "elapsed_ms": 1113,
+      "updated_at": "2026-07-30T08:38:57.092354+00:00",
+      "persistent_structure_count": 12
+    },
+    {
+      "phase": "method_attribute_mapping_phase",
+      "status": "running",
+      "elapsed_ms": 1113,
+      "updated_at": "2026-07-30T08:38:57.092503+00:00",
+      "method_count": 6343
+    },
+    {
+      "phase": "method_attribute_mapping_phase",
+      "status": "done",
+      "elapsed_ms": 2300,
+      "updated_at": "2026-07-30T08:38:58.279556+00:00",
+      "attribute_mapping_count": 1591,
+      "attribute_derivation_count": 1529,
+      "gap_count": 6484,
+      "fact_count": 13713
+    },
+    {
+      "phase": "mapstruct_annotation_phase",
+      "status": "running",
+      "elapsed_ms": 2301,
+      "updated_at": "2026-07-30T08:38:58.280210+00:00"
+    },
+    {
+      "phase": "mapstruct_annotation_phase",
+      "status": "done",
+      "elapsed_ms": 2340,
+      "updated_at": "2026-07-30T08:38:58.318964+00:00",
+      "fact_count": 0,
+      "attribute_mapping_count": 1591
+    },
+    {
+      "phase": "mapper_save_lineage_phase",
+      "status": "running",
+      "elapsed_ms": 2340,
+      "updated_at": "2026-07-30T08:38:58.319203+00:00"
+    },
+    {
+      "phase": "mapper_save_lineage_phase",
+      "status": "done",
+      "elapsed_ms": 2362,
+      "updated_at": "2026-07-30T08:38:58.341147+00:00",
+      "fact_count": 0,
+      "lineage_count": 0,
+      "gap_count": 6484
+    },
+    {
+      "phase": "gap_finalization",
+      "status": "running",
+      "elapsed_ms": 2362,
+      "updated_at": "2026-07-30T08:38:58.341416+00:00"
+    },
+    {
+      "phase": "gap_finalization",
+      "status": "done",
+      "elapsed_ms": 2363,
+      "updated_at": "2026-07-30T08:38:58.342193+00:00",
+      "gap_count": 6486
+    },
+    {
+      "phase": "status_build",
+      "status": "running",
+      "elapsed_ms": 2363,
+      "updated_at": "2026-07-30T08:38:58.342331+00:00",
+      "fact_count": 13715
+    },
+    {
+      "phase": "done",
+      "status": "done",
+      "elapsed_ms": 2374,
+      "updated_at": "2026-07-30T08:38:58.352824+00:00",
+      "fact_count": 13715
+    }
+  ],
+  "elapsed_ms": 2374,
+  "warnings": []
+}

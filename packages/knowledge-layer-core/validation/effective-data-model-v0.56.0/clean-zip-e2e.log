@@ -1,0 +1,40 @@
+{
+  "evidence_artifact_count": 3,
+  "execution_order": [
+    "analyzer:java-persistence-mapping-analyzer:repository",
+    "analyzer:java-type-structure-analyzer:repository",
+    "materialization:code-declared-data-model",
+    "materialization:physical-model",
+    "materialization:logical-physical-mapping",
+    "materialization:effective-data-model"
+  ],
+  "knowledge_artifact_count": 5,
+  "materialization_count": 4,
+  "output": "/mnt/data/work_iter4/verify-candidate-e2e",
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships",
+    "common.cross-layer-data-model",
+    "common.effective-data-model",
+    "common.entity-table-mapping",
+    "common.field-column-mapping",
+    "common.logical-physical-mapping",
+    "common.physical-model",
+    "common.physical-model.columns",
+    "common.physical-model.gaps",
+    "common.physical-model.keys",
+    "common.physical-model.pdm",
+    "common.physical-model.relationships",
+    "common.physical-model.tables"
+  ],
+  "result_fingerprint": "150a08fe4f09db96d34a23e6a261d33f424ef60a8460bbf04fa0fff559e99fb9",
+  "schema_version": "knowledge_execution_result/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "status": "completed"
+}

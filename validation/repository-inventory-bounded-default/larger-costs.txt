@@ -1,0 +1,142 @@
+=== ucp-tsa-v4 data-model-candidate-evidence ===
+▶ profile_load Loading analysis profile
+✓ profile_load Analysis profile loaded
+▶ analysis Static analysis started
+▶ scan_files Scanning repository 
+/mnt/data/repo_inventory_enrichment/validation/repository-inventory-bounded-defa
+ult/ucp/ucp-tsa-v4
+✓ scan_files Files found: 487
+▶ syntax_runtime_initialization Initializing Java syntax runtime
+✓ syntax_runtime_initialization Java syntax runtime initialized
+▶ maven_dependency_scan Extracting source-declared Maven dependencies
+✓ maven_dependency_scan dependencies=109
+▶ gradle_dependency_scan Extracting source-declared Gradle modules and 
+dependencies
+✓ gradle_dependency_scan modules=1, module_dependencies=0, 
+external_dependencies=0
+▶ java_structural_scan Extracting Tree-sitter Java structural facts
+✓ java_structural_scan facts=2079, schemas=121, interfaces=0, relations=0, 
+mappers=2168
+▶ java_data_model_candidate_scan Detecting repository-level data model candidate
+signals
+✓ java_data_model_candidate_scan status=strong, score=80
+▶ core_output Writing slim machine-first core output
+✓ core_output Slim core JSON output written
+▶ normalize_facts Writing slim normalized fact indexes
+✓ normalize_facts normalized facts=4484, persisted=1237
+▶ compact_package Writing compact machine-first navigation
+✓ compact_package Navigation JSON written
+▶ syntax_runtime_release Releasing Java syntax runtime
+✓ syntax_runtime_release Java syntax runtime released
+✓ analysis Analysis completed
+RESULT_JSON {"repo_id": "ucp-tsa-v4", "kind": "data-model-candidate-evidence", "elapsed_s": 6.938, "status": "completed", "artifacts": [{"kind": "data-model-candidate-evidence", "status": "completed", "coverage": {"coverage_status": "complete", "source_file_count": 487, "candidate_status": "strong", "score": 80, "evidence_count": 40, "full_data_model_analysis_performed": false}}]}
+EXIT=0
+=== ucp-tsa-v4 interaction-boundary-evidence ===
+▶ profile_load Loading analysis profile
+✓ profile_load Analysis profile loaded
+▶ analysis Static analysis started
+▶ scan_files Scanning repository 
+/mnt/data/repo_inventory_enrichment/validation/repository-inventory-bounded-defa
+ult/ucp/ucp-tsa-v4
+✓ scan_files Files found: 487
+▶ syntax_runtime_initialization Initializing Java syntax runtime
+✓ syntax_runtime_initialization Java syntax runtime initialized
+▶ config_scan Extracting config facts
+✓ config_scan Config facts: 2248
+▶ maven_dependency_scan Extracting source-declared Maven dependencies
+✓ maven_dependency_scan dependencies=109
+▶ gradle_dependency_scan Extracting source-declared Gradle modules and 
+dependencies
+✓ gradle_dependency_scan modules=1, module_dependencies=0, 
+external_dependencies=0
+▶ openapi_scan Extracting OpenAPI/Swagger contract facts
+✓ openapi_scan contracts=0, schemas=0, interfaces=0
+▶ java_structural_scan Extracting Tree-sitter Java structural facts
+✓ java_structural_scan facts=2079, schemas=121, interfaces=0, relations=0, 
+mappers=2168
+▶ java_system_interaction_enrichment Composing local HTTP/configuration boundary
+evidence
+✓ java_system_interaction_enrichment facts=109, interfaces_added=0, 
+composed_calls=0
+▶ core_output Writing slim machine-first core output
+✓ core_output Slim core JSON output written
+▶ normalize_facts Writing slim normalized fact indexes
+✓ normalize_facts normalized facts=6836, persisted=3078
+▶ compact_package Writing compact machine-first navigation
+✓ compact_package Navigation JSON written
+▶ syntax_runtime_release Releasing Java syntax runtime
+✓ syntax_runtime_release Java syntax runtime released
+✓ analysis Analysis completed
+RESULT_JSON {"repo_id": "ucp-tsa-v4", "kind": "interaction-boundary-evidence", "elapsed_s": 6.935, "status": "completed", "artifacts": [{"kind": "interaction-boundary-evidence", "status": "completed", "coverage": {"coverage_status": "complete", "source_file_count": 487, "boundary_count": 0, "inbound_boundary_count": 0, "outbound_boundary_count": 0}}]}
+EXIT=0
+=== at900-client-profile data-model-candidate-evidence ===
+▶ profile_load Loading analysis profile
+✓ profile_load Analysis profile loaded
+▶ analysis Static analysis started
+▶ scan_files Scanning repository 
+/mnt/data/repo_inventory_enrichment/validation/repository-inventory-bounded-defa
+ult/at900/client-profile/client-profile
+✓ scan_files Files found: 1038
+▶ syntax_runtime_initialization Initializing Java syntax runtime
+✓ syntax_runtime_initialization Java syntax runtime initialized
+▶ maven_dependency_scan Extracting source-declared Maven dependencies
+✓ maven_dependency_scan dependencies=0
+▶ gradle_dependency_scan Extracting source-declared Gradle modules and 
+dependencies
+✓ gradle_dependency_scan modules=4, module_dependencies=2, 
+external_dependencies=114
+▶ java_structural_scan Extracting Tree-sitter Java structural facts
+✓ java_structural_scan facts=2679, schemas=629, interfaces=127, relations=30, 
+mappers=2209
+▶ java_data_model_candidate_scan Detecting repository-level data model candidate
+signals
+✓ java_data_model_candidate_scan status=possible, score=39
+▶ core_output Writing slim machine-first core output
+✓ core_output Slim core JSON output written
+▶ normalize_facts Writing slim normalized fact indexes
+✓ normalize_facts normalized facts=6214, persisted=2480
+▶ compact_package Writing compact machine-first navigation
+✓ compact_package Navigation JSON written
+▶ syntax_runtime_release Releasing Java syntax runtime
+✓ syntax_runtime_release Java syntax runtime released
+✓ analysis Analysis completed
+RESULT_JSON {"repo_id": "at900-client-profile", "kind": "data-model-candidate-evidence", "elapsed_s": 7.13, "status": "completed", "artifacts": [{"kind": "data-model-candidate-evidence", "status": "completed", "coverage": {"coverage_status": "complete", "source_file_count": 1038, "candidate_status": "possible", "score": 39, "evidence_count": 40, "full_data_model_analysis_performed": false}}]}
+EXIT=0
+=== at900-client-profile interaction-boundary-evidence ===
+▶ profile_load Loading analysis profile
+✓ profile_load Analysis profile loaded
+▶ analysis Static analysis started
+▶ scan_files Scanning repository 
+/mnt/data/repo_inventory_enrichment/validation/repository-inventory-bounded-defa
+ult/at900/client-profile/client-profile
+✓ scan_files Files found: 1038
+▶ syntax_runtime_initialization Initializing Java syntax runtime
+✓ syntax_runtime_initialization Java syntax runtime initialized
+▶ config_scan Extracting config facts
+✓ config_scan Config facts: 1794
+▶ maven_dependency_scan Extracting source-declared Maven dependencies
+✓ maven_dependency_scan dependencies=0
+▶ gradle_dependency_scan Extracting source-declared Gradle modules and 
+dependencies
+✓ gradle_dependency_scan modules=4, module_dependencies=2, 
+external_dependencies=114
+▶ openapi_scan Extracting OpenAPI/Swagger contract facts
+✓ openapi_scan contracts=1, schemas=8, interfaces=4
+▶ java_structural_scan Extracting Tree-sitter Java structural facts
+✓ java_structural_scan facts=2679, schemas=629, interfaces=127, relations=30, 
+mappers=2209
+▶ java_system_interaction_enrichment Composing local HTTP/configuration boundary
+evidence
+✓ java_system_interaction_enrichment facts=1, interfaces_added=0, 
+composed_calls=0
+▶ core_output Writing slim machine-first core output
+✓ core_output Slim core JSON output written
+▶ normalize_facts Writing slim normalized fact indexes
+✓ normalize_facts normalized facts=8017, persisted=3308
+▶ compact_package Writing compact machine-first navigation
+✓ compact_package Navigation JSON written
+▶ syntax_runtime_release Releasing Java syntax runtime
+✓ syntax_runtime_release Java syntax runtime released
+✓ analysis Analysis completed
+RESULT_JSON {"repo_id": "at900-client-profile", "kind": "interaction-boundary-evidence", "elapsed_s": 7.771, "status": "completed", "artifacts": [{"kind": "interaction-boundary-evidence", "status": "completed", "coverage": {"coverage_status": "complete", "source_file_count": 1038, "boundary_count": 41, "inbound_boundary_count": 35, "outbound_boundary_count": 6}}]}
+EXIT=0

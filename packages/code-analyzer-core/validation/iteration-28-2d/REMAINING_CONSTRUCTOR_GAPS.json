@@ -1,0 +1,1412 @@
+[
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/clc/AbstractCardLifeCycleHandler.java",
+        "line_end": 223,
+        "line_start": 196
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_000028_1707F9C52E41FF9A",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: RegistrationEventBuilder historyRecords",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "records",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "records",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "RegistrationEventBuilder",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_000028",
+        "field": "historyRecords",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "AbstractCardLifeCycleHandler.sendHistoryEvent2Kafka",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.history.RegistrationEventBuilder",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "RegistrationEventBuilder"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileByCardService.java",
+        "line_end": 102,
+        "line_start": 77
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_000836_A24814FB4D38FBBB",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: ProfileByCard cardNumber",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "card",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "card",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "ProfileByCard",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_000836",
+        "field": "cardNumber",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileByCardService.findByInfoCard",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.card.ProfileByCard",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "ProfileByCard"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileByCardService.java",
+        "line_end": 102,
+        "line_start": 77
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_000837_E91A9BD89B4A9B7C",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: Phone number",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "phoneNumber",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "phoneNumber",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "Phone",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_000837",
+        "field": "number",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileByCardService.findByInfoCard",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.card.Phone",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "Phone"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/profile/controller/ClientProfileController.java",
+        "line_end": 113,
+        "line_start": 96
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_000844_93C286EE8DAA5959",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: DevicesByClientsResponse clientsToDevice",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "emptyMap()",
+        "constructor_argument_expression_kind": "dictionary_lookup",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "emptyMap()",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "DevicesByClientsResponse",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_000844",
+        "field": "clientsToDevice",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileController.findDevicesByClients",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.client.DevicesByClientsResponse",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "DevicesByClientsResponse"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 247,
+        "line_start": 238
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001056_7B76C41E2B78AD7C",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: DevicesByPhonesResponse phoneToDevice",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "emptyMap()",
+        "constructor_argument_expression_kind": "dictionary_lookup",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "emptyMap()",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "DevicesByPhonesResponse",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_001056",
+        "field": "phoneToDevice",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileServiceImpl.findDevicesByPhones",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.device.DevicesByPhonesResponse",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "DevicesByPhonesResponse"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 274,
+        "line_start": 266
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001060_976FF62D86DCB00A",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: PprbProfileByUcpIdRs profiles",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "dao.getPprbProfilesByUcpIdsWithChannel(ucpIds)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "dao.getPprbProfilesByUcpIdsWithChannel(ucpIds)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "PprbProfileByUcpIdRs",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_001060",
+        "field": "profiles",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "PprbProfileByUcpIdRs"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 274,
+        "line_start": 266
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001061_16D61735B73A8AEE",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: PprbProfileByUcpIdRs profiles",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "PprbProfileByUcpIdRs",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_001061",
+        "field": "profiles",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "PprbProfileByUcpIdRs"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 287,
+        "line_start": 276
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001064_40BD1942C880FCA0",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: PprbProfileByUcpIdRs profiles",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "PprbProfileByUcpIdRs",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_001064",
+        "field": "profiles",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIdsWhiteList",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "PprbProfileByUcpIdRs"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/dal/DalAccessManager.java",
+        "line_end": 47,
+        "line_start": 35
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001127_4EC5F61F710C5C43",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: ConsumerUsage currentUsage",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "limit",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "limit",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "ConsumerUsage",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_001127",
+        "field": "currentUsage",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "DalAccessManager.init",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.dal.ConsumerUsage",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "ConsumerUsage"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbClientProfileBufferHandler.java",
+        "line_end": 136,
+        "line_start": 133
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_002728_158387DF44E30EE7",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbProfileExtRequest maxSize",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "maxSize",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "maxSize",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbProfileExtRequest",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_002728",
+        "field": "maxSize",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbClientProfileBufferHandler.buildRequest",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.MbProfileExtRequest",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "MbProfileExtRequest"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbClientProfileBufferHandler.java",
+        "line_end": 120,
+        "line_start": 101
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_002740_87415002ADB0984B",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: ProcessingBuffer count",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "maxDelay",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 2,
+        "constructor_resolved_source_expression": "maxDelay",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "ProcessingBuffer",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_002740",
+        "field": "count",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbClientProfileBufferHandler.getBuffer",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.api.ProcessingBuffer",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "ProcessingBuffer"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/MbClientProfileHandler.java",
+        "line_end": 199,
+        "line_start": 104
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_002966_F19431F49F62E6E6",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbClientProfileExtendedResponse profiles",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "profiles",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "profiles",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbClientProfileExtendedResponse",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_002966",
+        "field": "profiles",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbClientProfileHandler.processInt",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.mbinfo.MbClientProfileExtendedResponse",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "MbClientProfileExtendedResponse"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/dao/mb/MbInfoTransactionPushDao.java",
+        "line_end": 263,
+        "line_start": 244
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003169_25D56C23EA1ADAF4",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: LinkTypeWrapper phoneId",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "r.getValue(PHONE_ID_FIELD)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "r.getValue(PHONE_ID_FIELD)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "LinkTypeWrapper",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003169",
+        "field": "phoneId",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbInfoTransactionPushDao.getLinkTypesByUcpId",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.entity.LinkTypeWrapper",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "LinkTypeWrapper"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/dao/mb/MbInfoTransactionPushDao.java",
+        "line_end": 263,
+        "line_start": 244
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003170_E7138E9A4FA1FDD5",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: LinkTypeWrapper productType",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "r.getValue(PRODUCT_TYPE_FIELD)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 1,
+        "constructor_resolved_source_expression": "r.getValue(PRODUCT_TYPE_FIELD)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "LinkTypeWrapper",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003170",
+        "field": "productType",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbInfoTransactionPushDao.getLinkTypesByUcpId",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.entity.LinkTypeWrapper",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "LinkTypeWrapper"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/dao/mb/MbInfoTransactionPushDao.java",
+        "line_end": 277,
+        "line_start": 268
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003176_DC2357E35E1BFC28",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: LinkTypeWrapper phoneId",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "r.getValue(PHONE_ID_FIELD)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "r.getValue(PHONE_ID_FIELD)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "LinkTypeWrapper",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003176",
+        "field": "phoneId",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbInfoTransactionPushDao.getPprbLinkTypesByUcpId",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.entity.LinkTypeWrapper",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "LinkTypeWrapper"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/dao/mb/MbInfoTransactionPushDao.java",
+        "line_end": 277,
+        "line_start": 268
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003177_707C3E7726051481",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: LinkTypeWrapper productType",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "r.getValue(PRODUCT_TYPE_FIELD)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 1,
+        "constructor_resolved_source_expression": "r.getValue(PRODUCT_TYPE_FIELD)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "LinkTypeWrapper",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003177",
+        "field": "productType",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbInfoTransactionPushDao.getPprbLinkTypesByUcpId",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.entity.LinkTypeWrapper",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "LinkTypeWrapper"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbProfileExtRequest.java",
+        "line_end": 29,
+        "line_start": 22
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003260_F111C81D6E1F5201",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbProfileExtRequest phones",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "mergeNotNull(phones, new ArrayList<>())",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 2,
+        "constructor_resolved_source_expression": "mergeNotNull(phones, new ArrayList<>())",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbProfileExtRequest",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003260",
+        "field": "phones",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbProfileExtRequest.copy",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.MbProfileExtRequest",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "MbProfileExtRequest"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbProfileExtRequest.java",
+        "line_end": 29,
+        "line_start": 22
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003261_EE27174F005D27F2",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbProfileExtRequest cards",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "mergeNotNull(cards, new ArrayList<>())",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 3,
+        "constructor_resolved_source_expression": "mergeNotNull(cards, new ArrayList<>())",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbProfileExtRequest",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003261",
+        "field": "cards",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbProfileExtRequest.copy",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.MbProfileExtRequest",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "MbProfileExtRequest"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbProfileExtRequest.java",
+        "line_end": 29,
+        "line_start": 22
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003262_516585731EE42F15",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbProfileExtRequest ucpIds",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "mergeNotNull(ucpIds, new ArrayList<>())",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 4,
+        "constructor_resolved_source_expression": "mergeNotNull(ucpIds, new ArrayList<>())",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbProfileExtRequest",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003262",
+        "field": "ucpIds",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbProfileExtRequest.copy",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.MbProfileExtRequest",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "MbProfileExtRequest"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbProfileExtRequest.java",
+        "line_end": 29,
+        "line_start": 22
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003263_4C542266F385814A",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbProfileExtRequest accounts",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "mergeNotNull(accounts, new ArrayList<>())",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 5,
+        "constructor_resolved_source_expression": "mergeNotNull(accounts, new ArrayList<>())",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbProfileExtRequest",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003263",
+        "field": "accounts",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbProfileExtRequest.copy",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.MbProfileExtRequest",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "MbProfileExtRequest"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/buffer/MbProfileExtResponse.java",
+        "line_end": 46,
+        "line_start": 31
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003266_906A86E138A0BC6A",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbProfileExtResponse links",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "filteredLinks",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "filteredLinks",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbProfileExtResponse",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003266",
+        "field": "links",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "MbProfileExtResponse.filter",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.buffer.MbProfileExtResponse",
+        "target_resolution_kind": "same_package",
+        "target_type_reference": "MbProfileExtResponse"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/dal/PaymentAttributeHandler.java",
+        "line_end": 101,
+        "line_start": 91
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_003618_3127FB298C7DAE0E",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: PaymentAttributeRs responses",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "responses",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "responses",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "PaymentAttributeRs",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_003618",
+        "field": "responses",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "PaymentAttributeHandler.handleByDal",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.fee.PaymentAttributeRs",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "PaymentAttributeRs"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/PriorityCardsService.java",
+        "line_end": 52,
+        "line_start": 40
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_004009_745F278F002E81E9",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: PriorityTransferCardByPhoneResponse phoneToPriorityCard",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "emptyMap()",
+        "constructor_argument_expression_kind": "dictionary_lookup",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "emptyMap()",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "PriorityTransferCardByPhoneResponse",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_004009",
+        "field": "phoneToPriorityCard",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "PriorityCardsService.findPriorityTransferCardByPhone",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.prioritycard.PriorityTransferCardByPhoneResponse",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "PriorityTransferCardByPhoneResponse"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/history/RegHistoryInfoHandler.java",
+        "line_end": 70,
+        "line_start": 46
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_004411_9B151F4DFD759C33",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: MbRegistrationHistoryRs regData",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "regDataList",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "regDataList",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "MbRegistrationHistoryRs",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_004411",
+        "field": "regData",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "RegHistoryInfoHandler.getRegistrationHistory",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.bertone.MbRegistrationHistoryRs",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "MbRegistrationHistoryRs"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/history/RegistrationEventBuilder.java",
+        "line_end": 236,
+        "line_start": 210
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_004568_7244AC1F96D44970",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: InfoCard cardNumber",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "cardNum",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "cardNum",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "InfoCard",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_004568",
+        "field": "cardNumber",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "RegistrationEventBuilder.enrichUcpInfo",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.registration.InfoCard",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "InfoCard"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/history/RegistrationEventBuilder.java",
+        "line_end": 236,
+        "line_start": 210
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_004569_8EC42465809C6103",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: InfoCard cardNumber",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "cardNum",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "cardNum",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "InfoCard",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_004569",
+        "field": "cardNumber",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "RegistrationEventBuilder.enrichUcpInfo",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.registration.InfoCard",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "InfoCard"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/history/RegistrationEventBuilder.java",
+        "line_end": 164,
+        "line_start": 156
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_004577_EAB2FEB5ECCABE51",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: SinglePhoneMonitoringRequest phone",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "phoneDto",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "phoneDto",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "SinglePhoneMonitoringRequest",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_004577",
+        "field": "phone",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "RegistrationEventBuilder.map2InfoExchangeRequestV2",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.integration.kafka.entity.exchange.SinglePhoneMonitoringRequest",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "SinglePhoneMonitoringRequest"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/profile/controller/ServerController.java",
+        "line_end": 76,
+        "line_start": 58
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_005263_28F9D4634607845E",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: DevicesByPhonesResponse phoneToDevice",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "emptyMap()",
+        "constructor_argument_expression_kind": "dictionary_lookup",
+        "constructor_argument_index": 0,
+        "constructor_resolved_source_expression": "emptyMap()",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "DevicesByPhonesResponse",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_005263",
+        "field": "phoneToDevice",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "ServerController.findDevicesByPhones",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.profile.model.request.device.DevicesByPhonesResponse",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "DevicesByPhonesResponse"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/device/TpsSwitchStateHandler.java",
+        "line_end": 159,
+        "line_start": 95
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_005745_5BC62ACC5B5D6A2C",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: ActionData lastDeviceLink",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "lastDevice.orElse(null)",
+        "constructor_argument_expression_kind": "method_call",
+        "constructor_argument_index": 1,
+        "constructor_resolved_source_expression": "lastDevice.orElse(null)",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "ActionData",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_005745",
+        "field": "lastDeviceLink",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "TpsSwitchStateHandler.updatePushDevice",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.device.tps.ActionData",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "ActionData"
+      }
+    }
+  },
+  {
+    "affected_entity_ids": [],
+    "affected_physical_asset_ids": [],
+    "category": "constructor_mapping_not_resolved",
+    "description": "constructor argument could not be resolved to source fields by the fast profile",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/handler/device/TpsSwitchStateHandler.java",
+        "line_end": 159,
+        "line_start": 95
+      }
+    ],
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_005746_7180BFF6925E9C4E",
+    "missing_fact_kind": "constructor_mapping_not_resolved",
+    "required_for_operation": "complete_static_model_or_lineage_traversal",
+    "source_gap_payload": {
+      "fact_name": "constructor_mapping_not_resolved: ActionData request",
+      "fact_type": "data_model_lineage_gap",
+      "properties": {
+        "constructor_argument_expression": "request",
+        "constructor_argument_expression_kind": "unknown",
+        "constructor_argument_index": 3,
+        "constructor_resolved_source_expression": "request",
+        "constructor_source_resolution_kind": "unresolved",
+        "container": "ActionData",
+        "data_model_lineage_gap_id": "data_model_lineage_gap_005746",
+        "field": "request",
+        "fp_id": "client_profile",
+        "fp_name": "client_profile",
+        "gap_kind": "constructor_mapping_not_resolved",
+        "missing_links": [
+          "constructor argument source not resolved"
+        ],
+        "operation": "TpsSwitchStateHandler.updatePushDevice",
+        "project_code": "UNKNOWN",
+        "reason": "constructor argument could not be resolved to source fields by the fast profile",
+        "repo_id": "client_profile",
+        "repo_path": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile",
+        "source_scope": "production_code",
+        "system_name": "unknown-system",
+        "target_container_fqcn": "ru.sbrf.mss.services.root.handler.device.tps.ActionData",
+        "target_resolution_kind": "explicit_import",
+        "target_type_reference": "ActionData"
+      }
+    }
+  }
+]

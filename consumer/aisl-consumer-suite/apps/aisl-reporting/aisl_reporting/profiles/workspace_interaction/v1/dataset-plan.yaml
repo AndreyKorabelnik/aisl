@@ -1,0 +1,8 @@
+queries:
+  - system_interactions
+  - system_boundary_interactions
+  - system_interaction_execution_contexts
+  - system_interaction_field_contracts
+  - repository_interaction_boundaries
+  - repository_interaction_coverage
+  - system_interaction_diagnostics

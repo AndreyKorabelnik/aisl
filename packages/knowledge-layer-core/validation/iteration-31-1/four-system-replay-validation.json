@@ -1,0 +1,787 @@
+{
+  "schema_version": "interaction_graph_validation/v1",
+  "baseline": {
+    "knowledge_layer_core": "0.30.0",
+    "workspace": "four-system-interaction-fixture"
+  },
+  "counts": {
+    "node_count": 4,
+    "system_edge_count": 3,
+    "operation_edge_count": 9,
+    "outbound_match_status_counts": {
+      "matched": 8,
+      "unmatched": 14
+    }
+  },
+  "acceptance": {
+    "four_nodes": true,
+    "three_system_edges": true,
+    "nine_operation_edges": true,
+    "no_duplicate_operation_edges": true,
+    "manual_operation_set_exact": true
+  },
+  "missing_expected_operations": [],
+  "unexpected_operations": [],
+  "system_edges": [
+    {
+      "interaction_id": "system_interaction_eabda07cc16271710ad9",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "target_repo_id": "gateway_sberid_userinfo_by_ucpid",
+      "protocol": "http",
+      "operation_count": 2,
+      "match_status": "path_and_contract_confirmed",
+      "operation_interaction_ids_json": [
+        "system_interaction_operation_5530f9a3dddea98df3d2",
+        "system_interaction_operation_70cbf1edf7e5b2cca596"
+      ]
+    },
+    {
+      "interaction_id": "system_interaction_86afb20cedb11fe135b7",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "target_repo_id": "gw_sberid_update_phone_flags",
+      "protocol": "http",
+      "operation_count": 1,
+      "match_status": "path_and_contract_confirmed",
+      "operation_interaction_ids_json": [
+        "system_interaction_operation_6c117877532df1ec77c4"
+      ]
+    },
+    {
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "protocol": "http",
+      "operation_count": 6,
+      "match_status": "path_and_contract_confirmed",
+      "operation_interaction_ids_json": [
+        "system_interaction_operation_0f3c9824b3313ed6c3ca",
+        "system_interaction_operation_19276041549c35389fb3",
+        "system_interaction_operation_20b19f51a2c3d61ca1e7",
+        "system_interaction_operation_328a0409dcabefc31853",
+        "system_interaction_operation_5543a0bd7dab80c9b8e9",
+        "system_interaction_operation_c44819a059dcda374140"
+      ]
+    }
+  ],
+  "operation_edges": [
+    {
+      "operation_interaction_id": "system_interaction_operation_328a0409dcabefc31853",
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000001",
+      "source_ingress_operation": "ActivateTechProfileController.activateTechProfile",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/activate-tech-profile",
+      "outbound_interface_id": "interface_000049",
+      "outbound_operation": "ActivateTechProfileServiceImpl.processActivateTechnicalProfileUcpLogic",
+      "http_method": "POST",
+      "outbound_endpoint": "/updateorcreate",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "target_ingress_interface_id": "interface_000002",
+      "target_ingress_operation": "SberprofileCreateUpdateRestController.createUpdate",
+      "target_ingress_endpoint": "/updateorcreate",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 2,
+      "call_chain_json": [
+        "ActivateTechProfileController.activateTechProfile",
+        "ActivateTechProfileServiceImpl.activateTechProfile",
+        "ActivateTechProfileServiceImpl.processActivateTechnicalProfileUcpLogic"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "UpdateOrCreateRequestDto",
+          "outbound_request_payload_type": "UpdateProfileInfoRequest",
+          "request_field_overlap": [
+            "birthdate",
+            "birthdate.enddate",
+            "birthdate.updatedatetime",
+            "birthdate.value",
+            "electronicaddress",
+            "electronicaddress.electronicaddress",
+            "electronicaddress.enddate",
+            "electronicaddress.flags",
+            "electronicaddress.flags.enddate",
+            "electronicaddress.flags.flagtype",
+            "electronicaddress.flags.updatedatetime",
+            "electronicaddress.updatedatetime",
+            "enddate",
+            "name",
+            "name.enddate",
+            "name.name",
+            "name.patronymic",
+            "name.surname",
+            "name.updatedatetime",
+            "partytopartygroups",
+            "partytopartygroups.enddate",
+            "partytopartygroups.partygroup",
+            "partytopartygroups.updatedatetime",
+            "phonenumber",
+            "phonenumber.enddate",
+            "phonenumber.flags",
+            "phonenumber.flags.enddate",
+            "phonenumber.flags.flagtype",
+            "phonenumber.flags.updatedatetime",
+            "phonenumber.phonenumber",
+            "phonenumber.updatedatetime",
+            "sberprofileid",
+            "ucpid",
+            "uuid",
+            "uuid.externalsystemclientid",
+            "uuid.idtype",
+            "uuid.updatedatetime"
+          ],
+          "request_field_overlap_count": 37,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updateorcreate",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updateorcreate"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_d103a071836bcd1d7683",
+          "analysis_record_5d70e2206535841d6813"
+        ],
+        "outbound_interface_record_id": "analysis_record_80a382dbe1ed92bd921d",
+        "source_ingress_record_id": "analysis_record_850c09b9085d58598c6e",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000002"
+        ],
+        "target_ingress_record_id": "analysis_record_13bc0719f93dfef62d06"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_0f3c9824b3313ed6c3ca",
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000005",
+      "source_ingress_operation": "CreateLightClientController.createLightClient",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/create-light-client",
+      "outbound_interface_id": "interface_000051",
+      "outbound_operation": "CreateLightClientServiceImpl.createProfileByNewLogic",
+      "http_method": "POST",
+      "outbound_endpoint": "/updateorcreate",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "target_ingress_interface_id": "interface_000002",
+      "target_ingress_operation": "SberprofileCreateUpdateRestController.createUpdate",
+      "target_ingress_endpoint": "/updateorcreate",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 2,
+      "call_chain_json": [
+        "CreateLightClientController.createLightClient",
+        "CreateLightClientServiceImpl.createLightClient",
+        "CreateLightClientServiceImpl.createProfileByNewLogic"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "UpdateOrCreateRequestDto",
+          "outbound_request_payload_type": "UpdateProfileInfoRequest",
+          "request_field_overlap": [
+            "birthdate",
+            "birthdate.enddate",
+            "birthdate.updatedatetime",
+            "birthdate.value",
+            "electronicaddress",
+            "electronicaddress.electronicaddress",
+            "electronicaddress.enddate",
+            "electronicaddress.flags",
+            "electronicaddress.flags.enddate",
+            "electronicaddress.flags.flagtype",
+            "electronicaddress.flags.updatedatetime",
+            "electronicaddress.updatedatetime",
+            "enddate",
+            "name",
+            "name.enddate",
+            "name.name",
+            "name.patronymic",
+            "name.surname",
+            "name.updatedatetime",
+            "partytopartygroups",
+            "partytopartygroups.enddate",
+            "partytopartygroups.partygroup",
+            "partytopartygroups.updatedatetime",
+            "phonenumber",
+            "phonenumber.enddate",
+            "phonenumber.flags",
+            "phonenumber.flags.enddate",
+            "phonenumber.flags.flagtype",
+            "phonenumber.flags.updatedatetime",
+            "phonenumber.phonenumber",
+            "phonenumber.updatedatetime",
+            "sberprofileid",
+            "ucpid",
+            "uuid",
+            "uuid.externalsystemclientid",
+            "uuid.idtype",
+            "uuid.updatedatetime"
+          ],
+          "request_field_overlap_count": 37,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updateorcreate",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updateorcreate"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_66fac48fbbff9f922363",
+          "analysis_record_2f949c936391506492fb"
+        ],
+        "outbound_interface_record_id": "analysis_record_4cbcd3b2bb81e83da9b4",
+        "source_ingress_record_id": "analysis_record_71149c8f1dd90cc1a329",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000002"
+        ],
+        "target_ingress_record_id": "analysis_record_13bc0719f93dfef62d06"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_20b19f51a2c3d61ca1e7",
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000007",
+      "source_ingress_operation": "DeactivateProfileAttributesController.deactivateProfileAttributes",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/deactivate-profile-attributes",
+      "outbound_interface_id": "interface_000053",
+      "outbound_operation": "DeactivateProfileAttributesServiceImpl.deactivateProfileAttributes",
+      "http_method": "POST",
+      "outbound_endpoint": "/updateorcreate",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "target_ingress_interface_id": "interface_000002",
+      "target_ingress_operation": "SberprofileCreateUpdateRestController.createUpdate",
+      "target_ingress_endpoint": "/updateorcreate",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 1,
+      "call_chain_json": [
+        "DeactivateProfileAttributesController.deactivateProfileAttributes",
+        "DeactivateProfileAttributesServiceImpl.deactivateProfileAttributes"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "UpdateOrCreateRequestDto",
+          "outbound_request_payload_type": "UpdateProfileInfoRequest",
+          "request_field_overlap": [
+            "birthdate",
+            "birthdate.enddate",
+            "birthdate.updatedatetime",
+            "birthdate.value",
+            "electronicaddress",
+            "electronicaddress.electronicaddress",
+            "electronicaddress.enddate",
+            "electronicaddress.flags",
+            "electronicaddress.flags.enddate",
+            "electronicaddress.flags.flagtype",
+            "electronicaddress.flags.updatedatetime",
+            "electronicaddress.updatedatetime",
+            "enddate",
+            "name",
+            "name.enddate",
+            "name.name",
+            "name.patronymic",
+            "name.surname",
+            "name.updatedatetime",
+            "partytopartygroups",
+            "partytopartygroups.enddate",
+            "partytopartygroups.partygroup",
+            "partytopartygroups.updatedatetime",
+            "phonenumber",
+            "phonenumber.enddate",
+            "phonenumber.flags",
+            "phonenumber.flags.enddate",
+            "phonenumber.flags.flagtype",
+            "phonenumber.flags.updatedatetime",
+            "phonenumber.phonenumber",
+            "phonenumber.updatedatetime",
+            "sberprofileid",
+            "ucpid",
+            "uuid",
+            "uuid.externalsystemclientid",
+            "uuid.idtype",
+            "uuid.updatedatetime"
+          ],
+          "request_field_overlap_count": 37,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updateorcreate",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updateorcreate"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_74dd5b779384b50d9760"
+        ],
+        "outbound_interface_record_id": "analysis_record_a5dcc1feaf26becb67ce",
+        "source_ingress_record_id": "analysis_record_b1b6a2516fdbf30c5a54",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000002"
+        ],
+        "target_ingress_record_id": "analysis_record_13bc0719f93dfef62d06"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_70cbf1edf7e5b2cca596",
+      "interaction_id": "system_interaction_eabda07cc16271710ad9",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000015",
+      "source_ingress_operation": "ExternalGetProfileController.externalGetProfile",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/get-profile",
+      "outbound_interface_id": "interface_000046",
+      "outbound_operation": "UcpUserInfoByIdServiceImpl.getUserInfoById",
+      "http_method": "POST",
+      "outbound_endpoint": "/sberprofileid/search",
+      "target_repo_id": "gateway_sberid_userinfo_by_ucpid",
+      "target_ingress_interface_id": "interface_000003",
+      "target_ingress_operation": "SberProfileIdSearchRestService.sberProfileIdSearch",
+      "target_ingress_endpoint": "/sberprofileid/search",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 3,
+      "call_chain_json": [
+        "ExternalGetProfileController.externalGetProfile",
+        "ExternalGetProfileServiceImpl.externalGetProfile",
+        "ExternalGetProfileServiceImpl.getProfileByNewLogicUserInfoById",
+        "UcpUserInfoByIdServiceImpl.getUserInfoById"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "SberProfileIdRequestDto",
+          "outbound_request_payload_type": "UserInfoByIdRequest",
+          "request_field_overlap": [
+            "sberprofileid",
+            "scope"
+          ],
+          "request_field_overlap_count": 2,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/sberprofileid/search",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/sberprofileid/search"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_8881a4e4cfca69a2d224",
+          "analysis_record_e176e49f7059d0af8e81",
+          "analysis_record_44ceb1363d2f0101dbbe"
+        ],
+        "outbound_interface_record_id": "analysis_record_494344d449f602e89d3d",
+        "source_ingress_record_id": "analysis_record_709abe67625d2a35f46f",
+        "target_candidate_interface_ids": [
+          "interface_000003"
+        ],
+        "target_ingress_record_id": "analysis_record_61b09050be5160a18e34"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_6c117877532df1ec77c4",
+      "interaction_id": "system_interaction_86afb20cedb11fe135b7",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000023",
+      "source_ingress_operation": "ExternalUcpServiceUpdatePhoneFlagsController.updatePhoneFlags",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/update-phone-flags",
+      "outbound_interface_id": "interface_000061",
+      "outbound_operation": "UpdatePhoneFlagsProxyImpl.updatePhoneFlags",
+      "http_method": "POST",
+      "outbound_endpoint": "/updatephoneflags",
+      "target_repo_id": "gw_sberid_update_phone_flags",
+      "target_ingress_interface_id": "interface_000003",
+      "target_ingress_operation": "ArmeriaHttpController.updatePhoneFlags",
+      "target_ingress_endpoint": "/updatephoneflags",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 3,
+      "call_chain_json": [
+        "ExternalUcpServiceUpdatePhoneFlagsController.updatePhoneFlags",
+        "UpdatePhoneFlagsImpl.updatePhoneFlags",
+        "UpdatePhoneFlagsImpl.processingUpdatePhoneFlagsFromUcp",
+        "UpdatePhoneFlagsProxyImpl.updatePhoneFlags"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "SberidUpdatePhoneFlagsRq",
+          "outbound_request_payload_type": "UpdatePhoneFlagsFromUcpRequest",
+          "request_field_overlap": [
+            "phone",
+            "sberprofileid"
+          ],
+          "request_field_overlap_count": 2,
+          "request_field_similarity": 0.2,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updatephoneflags",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updatephoneflags"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_a30d4b697582afd81c8e",
+          "analysis_record_f4517645bf4ab945b6fd",
+          "analysis_record_b2e788ede35e8f1510a9"
+        ],
+        "outbound_interface_record_id": "analysis_record_648e37cc54a300ae80f0",
+        "source_ingress_record_id": "analysis_record_c7d948de3c2cc831c807",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000003"
+        ],
+        "target_ingress_record_id": "analysis_record_b517dbf7cbb4fa564835"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_5543a0bd7dab80c9b8e9",
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000027",
+      "source_ingress_operation": "GetOrCreateProfileByPartnerController.getOrCreateProfileByPartner",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/get-or-create-profile-by-partner",
+      "outbound_interface_id": "interface_000056",
+      "outbound_operation": "GetOrCreateProfileByPartnerServiceImpl.updateOrCreateLightClient",
+      "http_method": "POST",
+      "outbound_endpoint": "/updateorcreate",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "target_ingress_interface_id": "interface_000002",
+      "target_ingress_operation": "SberprofileCreateUpdateRestController.createUpdate",
+      "target_ingress_endpoint": "/updateorcreate",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 4,
+      "call_chain_json": [
+        "GetOrCreateProfileByPartnerController.getOrCreateProfileByPartner",
+        "GetOrCreateProfileByPartnerServiceImpl.getOrCreateProfileByPartner",
+        "GetOrCreateProfileByPartnerServiceImpl.startOperationWithUcp",
+        "GetOrCreateProfileByPartnerServiceImpl.processGetProfileByPhoneHttpStatusCode",
+        "GetOrCreateProfileByPartnerServiceImpl.updateOrCreateLightClient"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "UpdateOrCreateRequestDto",
+          "outbound_request_payload_type": "UpdateProfileInfoRequest",
+          "request_field_overlap": [
+            "birthdate",
+            "birthdate.enddate",
+            "birthdate.updatedatetime",
+            "birthdate.value",
+            "electronicaddress",
+            "electronicaddress.electronicaddress",
+            "electronicaddress.enddate",
+            "electronicaddress.flags",
+            "electronicaddress.flags.enddate",
+            "electronicaddress.flags.flagtype",
+            "electronicaddress.flags.updatedatetime",
+            "electronicaddress.updatedatetime",
+            "enddate",
+            "name",
+            "name.enddate",
+            "name.name",
+            "name.patronymic",
+            "name.surname",
+            "name.updatedatetime",
+            "partytopartygroups",
+            "partytopartygroups.enddate",
+            "partytopartygroups.partygroup",
+            "partytopartygroups.updatedatetime",
+            "phonenumber",
+            "phonenumber.enddate",
+            "phonenumber.flags",
+            "phonenumber.flags.enddate",
+            "phonenumber.flags.flagtype",
+            "phonenumber.flags.updatedatetime",
+            "phonenumber.phonenumber",
+            "phonenumber.updatedatetime",
+            "sberprofileid",
+            "ucpid",
+            "uuid",
+            "uuid.externalsystemclientid",
+            "uuid.idtype",
+            "uuid.updatedatetime"
+          ],
+          "request_field_overlap_count": 37,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updateorcreate",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updateorcreate"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_b4767fa4569a64eea185",
+          "analysis_record_b01a10708ff24f0c2bf7",
+          "analysis_record_5ab134b4ee70686e861a",
+          "analysis_record_befbd0fcf0a365972151"
+        ],
+        "outbound_interface_record_id": "analysis_record_4dba815cecfc4423a837",
+        "source_ingress_record_id": "analysis_record_81c9254aa833aeb37226",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000002"
+        ],
+        "target_ingress_record_id": "analysis_record_13bc0719f93dfef62d06"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_19276041549c35389fb3",
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000031",
+      "source_ingress_operation": "LkUpdateProfileController.lkUpdateProfile",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/lk/update-profile",
+      "outbound_interface_id": "interface_000063",
+      "outbound_operation": "LkUpdateProfileServiceImpl.lkUpdateProfileByNewLogic",
+      "http_method": "POST",
+      "outbound_endpoint": "/updateorcreate",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "target_ingress_interface_id": "interface_000002",
+      "target_ingress_operation": "SberprofileCreateUpdateRestController.createUpdate",
+      "target_ingress_endpoint": "/updateorcreate",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 2,
+      "call_chain_json": [
+        "LkUpdateProfileController.lkUpdateProfile",
+        "LkUpdateProfileServiceImpl.updateProfile",
+        "LkUpdateProfileServiceImpl.lkUpdateProfileByNewLogic"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "UpdateOrCreateRequestDto",
+          "outbound_request_payload_type": "UpdateProfileInfoRequest",
+          "request_field_overlap": [
+            "birthdate",
+            "birthdate.enddate",
+            "birthdate.updatedatetime",
+            "birthdate.value",
+            "electronicaddress",
+            "electronicaddress.electronicaddress",
+            "electronicaddress.enddate",
+            "electronicaddress.flags",
+            "electronicaddress.flags.enddate",
+            "electronicaddress.flags.flagtype",
+            "electronicaddress.flags.updatedatetime",
+            "electronicaddress.updatedatetime",
+            "enddate",
+            "name",
+            "name.enddate",
+            "name.name",
+            "name.patronymic",
+            "name.surname",
+            "name.updatedatetime",
+            "partytopartygroups",
+            "partytopartygroups.enddate",
+            "partytopartygroups.partygroup",
+            "partytopartygroups.updatedatetime",
+            "phonenumber",
+            "phonenumber.enddate",
+            "phonenumber.flags",
+            "phonenumber.flags.enddate",
+            "phonenumber.flags.flagtype",
+            "phonenumber.flags.updatedatetime",
+            "phonenumber.phonenumber",
+            "phonenumber.updatedatetime",
+            "sberprofileid",
+            "ucpid",
+            "uuid",
+            "uuid.externalsystemclientid",
+            "uuid.idtype",
+            "uuid.updatedatetime"
+          ],
+          "request_field_overlap_count": 37,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updateorcreate",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updateorcreate"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_692e3da3686679d0ec1d",
+          "analysis_record_ce884b5c65f6c6216f2b"
+        ],
+        "outbound_interface_record_id": "analysis_record_0c62540b38b1b83dfa84",
+        "source_ingress_record_id": "analysis_record_ea8f449f71a859da92c3",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000002"
+        ],
+        "target_ingress_record_id": "analysis_record_13bc0719f93dfef62d06"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_c44819a059dcda374140",
+      "interaction_id": "system_interaction_1a296dff113a0f54cea4",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000035",
+      "source_ingress_operation": "UpdateLightClientController.updateLightClient",
+      "source_ingress_endpoint": "/external/api/v1/ucp-integration/update-light-client",
+      "outbound_interface_id": "interface_000064",
+      "outbound_operation": "UpdateLightClientServiceImpl.updateLightClientByNewLogic",
+      "http_method": "POST",
+      "outbound_endpoint": "/updateorcreate",
+      "target_repo_id": "gw_sberprofile_create_update_extprofile",
+      "target_ingress_interface_id": "interface_000002",
+      "target_ingress_operation": "SberprofileCreateUpdateRestController.createUpdate",
+      "target_ingress_endpoint": "/updateorcreate",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 2,
+      "call_chain_json": [
+        "UpdateLightClientController.updateLightClient",
+        "UpdateLightClientServiceImpl.updateLightClient",
+        "UpdateLightClientServiceImpl.updateLightClientByNewLogic"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "UpdateOrCreateRequestDto",
+          "outbound_request_payload_type": "UpdateProfileInfoRequest",
+          "request_field_overlap": [
+            "birthdate",
+            "birthdate.enddate",
+            "birthdate.updatedatetime",
+            "birthdate.value",
+            "electronicaddress",
+            "electronicaddress.electronicaddress",
+            "electronicaddress.enddate",
+            "electronicaddress.flags",
+            "electronicaddress.flags.enddate",
+            "electronicaddress.flags.flagtype",
+            "electronicaddress.flags.updatedatetime",
+            "electronicaddress.updatedatetime",
+            "enddate",
+            "name",
+            "name.enddate",
+            "name.name",
+            "name.patronymic",
+            "name.surname",
+            "name.updatedatetime",
+            "partytopartygroups",
+            "partytopartygroups.enddate",
+            "partytopartygroups.partygroup",
+            "partytopartygroups.updatedatetime",
+            "phonenumber",
+            "phonenumber.enddate",
+            "phonenumber.flags",
+            "phonenumber.flags.enddate",
+            "phonenumber.flags.flagtype",
+            "phonenumber.flags.updatedatetime",
+            "phonenumber.phonenumber",
+            "phonenumber.updatedatetime",
+            "sberprofileid",
+            "ucpid",
+            "uuid",
+            "uuid.externalsystemclientid",
+            "uuid.idtype",
+            "uuid.updatedatetime"
+          ],
+          "request_field_overlap_count": 37,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/updateorcreate",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/updateorcreate"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_5b3eae5e0a4d465c2a4b",
+          "analysis_record_73b04ad0c29137323354"
+        ],
+        "outbound_interface_record_id": "analysis_record_e19ded9ad7511bdf3d6c",
+        "source_ingress_record_id": "analysis_record_6d5858f493c53aaf893c",
+        "target_candidate_interface_ids": [
+          "interface_000001",
+          "interface_000002"
+        ],
+        "target_ingress_record_id": "analysis_record_13bc0719f93dfef62d06"
+      }
+    },
+    {
+      "operation_interaction_id": "system_interaction_operation_5530f9a3dddea98df3d2",
+      "interaction_id": "system_interaction_eabda07cc16271710ad9",
+      "scope_id": "interaction-workspace",
+      "source_repo_id": "sbpr_ucp_integration",
+      "source_ingress_interface_id": "interface_000041",
+      "source_ingress_operation": "UserInfoByIdControllerV2.userInfoById",
+      "source_ingress_endpoint": "/internal/api/v2/ucp-integration/userinfo-by-id",
+      "outbound_interface_id": "interface_000046",
+      "outbound_operation": "UcpUserInfoByIdServiceImpl.getUserInfoById",
+      "http_method": "POST",
+      "outbound_endpoint": "/sberprofileid/search",
+      "target_repo_id": "gateway_sberid_userinfo_by_ucpid",
+      "target_ingress_interface_id": "interface_000003",
+      "target_ingress_operation": "SberProfileIdSearchRestService.sberProfileIdSearch",
+      "target_ingress_endpoint": "/sberprofileid/search",
+      "protocol": "http",
+      "match_status": "path_and_contract_confirmed",
+      "call_chain_length": 1,
+      "call_chain_json": [
+        "UserInfoByIdControllerV2.userInfoById",
+        "UcpUserInfoByIdServiceImpl.getUserInfoById"
+      ],
+      "match_basis_json": {
+        "contract": {
+          "inbound_request_payload_type": "SberProfileIdRequestDto",
+          "outbound_request_payload_type": "UserInfoByIdRequest",
+          "request_field_overlap": [
+            "sberprofileid",
+            "scope"
+          ],
+          "request_field_overlap_count": 2,
+          "request_field_similarity": 1.0,
+          "request_payload_type_match": false
+        },
+        "http_method": "POST",
+        "outbound_path": "/sberprofileid/search",
+        "path_basis": "exact_path",
+        "source_reachability": "shortest_observed_method_call_path",
+        "target_path": "/sberprofileid/search"
+      },
+      "provenance_json": {
+        "method_call_record_ids": [
+          "analysis_record_056f9fec93d96093dfb5"
+        ],
+        "outbound_interface_record_id": "analysis_record_494344d449f602e89d3d",
+        "source_ingress_record_id": "analysis_record_40e23ba873571e139ee6",
+        "target_candidate_interface_ids": [
+          "interface_000003"
+        ],
+        "target_ingress_record_id": "analysis_record_61b09050be5160a18e34"
+      }
+    }
+  ]
+}

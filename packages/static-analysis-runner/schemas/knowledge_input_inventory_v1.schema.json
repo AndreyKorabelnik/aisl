@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_input_inventory_v1.schema.json",
+  "title": "Knowledge Input Inventory v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "producer",
+    "scope",
+    "source_snapshots",
+    "typed_artifacts",
+    "knowledge_artifacts",
+    "producer_catalog",
+    "availability_policy",
+    "summary",
+    "diagnostics",
+    "inventory_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "knowledge_input_inventory/v1"
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "component",
+        "version"
+      ],
+      "properties": {
+        "component": {
+          "const": "static-analysis-runner"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "kind",
+        "scope_id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "repository",
+            "workspace",
+            "portfolio"
+          ]
+        },
+        "scope_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_snapshots": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "typed_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "knowledge_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "producer_catalog": {
+      "type": "object",
+      "required": [
+        "core_evidence_contract_catalog",
+        "knowledge_materialization_catalog"
+      ],
+      "properties": {
+        "core_evidence_contract_catalog": {
+          "type": "object"
+        },
+        "knowledge_materialization_catalog": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "availability_policy": {
+      "type": "object",
+      "required": [
+        "contract_presence_is_not_input_availability",
+        "producer_registration_is_not_source_availability",
+        "missing_required_input"
+      ],
+      "properties": {
+        "contract_presence_is_not_input_availability": {
+          "const": true
+        },
+        "producer_registration_is_not_source_availability": {
+          "const": true
+        },
+        "missing_required_input": {
+          "const": "blocking_diagnostic_no_fallback"
+        }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "source_snapshot_count",
+        "available_typed_artifact_count",
+        "available_knowledge_artifact_count",
+        "registered_core_producer_count",
+        "registered_materialization_count"
+      ],
+      "properties": {
+        "source_snapshot_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "available_typed_artifact_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "available_knowledge_artifact_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "registered_core_producer_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "registered_materialization_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "inventory_fingerprint": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

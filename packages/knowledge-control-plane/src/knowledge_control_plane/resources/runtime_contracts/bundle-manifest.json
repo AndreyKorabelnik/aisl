@@ -1,0 +1,29 @@
+{
+  "catalogs": {
+    "core_evidence": {
+      "catalog_fingerprint": "001d1a74dae33c7cff3a220e5cef4e270c65d3b87533c0429c5b95d5a8a8718c",
+      "file": "core-evidence-contract-catalog.json",
+      "schema_version": "core_evidence_contract_catalog/v1",
+      "sha256": "9861ddb4ea4400e901af3a25fa355bc15cba1697d2da8ac4156a9c23badcd78b"
+    },
+    "knowledge": {
+      "catalog_fingerprint": "cef9e98258d0a77659e6a6a4d92aa4749d6129ea65ae98b29da0d68fd3688b12",
+      "file": "knowledge-catalog.json",
+      "schema_version": "knowledge_catalog/v2",
+      "sha256": "f06c753f75db5b041505d536b45e85ebd96f674d4fe0454a37821b8781334eba"
+    },
+    "materialization": {
+      "catalog_fingerprint": "d2518425c55fa2964f6c4a884eba10407e401e9db4550a5adb4f4ad3db361b46",
+      "file": "knowledge-materialization-catalog.json",
+      "schema_version": "knowledge_materialization_catalog/v3",
+      "sha256": "59470a5b71633e4fe272c4c3f9c2882fcadb1dc69808d2d28de99d034eccd9a5"
+    }
+  },
+  "framework_baseline": {
+    "code_analyzer_core": "0.44.23a7",
+    "knowledge_layer_core": "0.61.0a39",
+    "static_analysis_runner": "0.10.28"
+  },
+  "purpose": "Pinned executable contract bundle used by Knowledge Control Plane to compile Knowledge Profiles into the current generic Runner execution plan.",
+  "schema_version": "knowledge_control_plane_runtime_contract_bundle/v2"
+}

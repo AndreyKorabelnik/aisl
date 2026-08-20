@@ -1,0 +1,96 @@
+{
+  "knowledge_api_version": "0.30.11",
+  "base_revision_id": "rev-1ef19edb4b8f99f927b30e38",
+  "composed_revision_id": "rev-1fed54320afb0632c144e098",
+  "base_revision_id_on_composed": "rev-1ef19edb4b8f99f927b30e38",
+  "product_count": 8,
+  "capability_count": 44,
+  "tool_count": 17,
+  "profile_scope": {
+    "system_id": "aisl-attribute-extension-final",
+    "revision_id": "rev-1fed54320afb0632c144e098",
+    "revision_binding": "pinned"
+  },
+  "profile_version": "12",
+  "cases": [
+    {
+      "case": "exact",
+      "confidence": "confirmed",
+      "cardinality": "one",
+      "classification": "confirmed",
+      "claim_kind": "existing_sql_join",
+      "recommended_action": "reuse_observed_sql_join",
+      "residual_checks": []
+    },
+    {
+      "case": "proposed",
+      "confidence": "strongly_supported",
+      "cardinality": "one",
+      "classification": "probable",
+      "claim_kind": "proposed_sql_join",
+      "recommended_action": "derive_join_from_published_reference_and_key_encoding",
+      "residual_checks": [
+        "confirm_source_sql_column_or_projection",
+        "locate_target_sql_representation"
+      ]
+    },
+    {
+      "case": "collection",
+      "confidence": "confirmed",
+      "cardinality": "many",
+      "classification": "strongly_supported",
+      "claim_kind": "collection_storage_navigation",
+      "recommended_action": "derive_parent_identity_from_child_storage_key",
+      "residual_checks": [
+        "preserve_or_reduce_collection_row_multiplicity"
+      ]
+    },
+    {
+      "case": "ambiguity",
+      "confidence": "confirmed",
+      "cardinality": "many",
+      "classification": "ambiguity",
+      "claim_kind": "polymorphic_collection_navigation",
+      "recommended_action": "select_concrete_target_or_representation_before_sql",
+      "residual_checks": [
+        "select_subtype_or_physical_representation"
+      ]
+    },
+    {
+      "case": "probable",
+      "confidence": "confirmed",
+      "cardinality": "one",
+      "classification": "probable",
+      "claim_kind": "proposed_direct_reference_join",
+      "recommended_action": "confirm_physical_sql_representation_before_join",
+      "residual_checks": [
+        "confirm_physical_reference_representation"
+      ]
+    },
+    {
+      "case": "unresolved",
+      "confidence": "unresolved",
+      "cardinality": "one",
+      "classification": "unresolved",
+      "claim_kind": "technical_join",
+      "recommended_action": "inspect_missing_storage_or_sql_evidence",
+      "residual_checks": [
+        "technical_join_semantics_not_established"
+      ]
+    }
+  ],
+  "target": {
+    "logical_target_name": "epk_client",
+    "score": 144,
+    "diagnostics": [
+      "source_column_hint_not_observed_in_candidate_context"
+    ]
+  },
+  "insertion": {
+    "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthplace_snp.sql",
+    "score": 167,
+    "propagation_status": "resolved",
+    "matched_column_hints": [],
+    "diagnostics": []
+  }
+}

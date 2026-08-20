@@ -1,0 +1,52 @@
+{
+  "version": "0.9.7",
+  "status": "passed",
+  "passed": 49,
+  "skipped": 0,
+  "failed": 0,
+  "files": [
+    {
+      "log": "test_cli.log",
+      "passed": 6,
+      "skipped": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.20s"
+    },
+    {
+      "log": "test_execution_runtime.log",
+      "passed": 2,
+      "skipped": 0,
+      "output": "..                                                                       [100%]\n2 passed in 2.03s"
+    },
+    {
+      "log": "test_knowledge_layer_materialization.log",
+      "passed": 2,
+      "skipped": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.58s"
+    },
+    {
+      "log": "test_profiles_and_paths.log",
+      "passed": 9,
+      "skipped": 0,
+      "output": ".........                                                                [100%]\n9 passed in 0.05s"
+    },
+    {
+      "log": "test_repository_runner.log",
+      "passed": 8,
+      "skipped": 0,
+      "output": "........                                                                 [100%]\n8 passed in 12.10s"
+    },
+    {
+      "log": "test_repository_suite.log",
+      "passed": 8,
+      "skipped": 0,
+      "output": "........                                                                 [100%]\n8 passed in 0.08s"
+    },
+    {
+      "log": "test_workspace_runner.log",
+      "passed": 14,
+      "skipped": 0,
+      "output": "..............                                                           [100%]\n14 passed in 14.13s"
+    }
+  ],
+  "combined_log": "test_all.log"
+}

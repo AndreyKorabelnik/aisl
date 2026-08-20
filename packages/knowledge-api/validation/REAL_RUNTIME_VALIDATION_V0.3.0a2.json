@@ -1,0 +1,30 @@
+{
+  "schema_version": "knowledge_api_real_runtime_validation/v1",
+  "knowledge_api_version": "0.3.0a2",
+  "components": {
+    "static_analysis_runner": "0.9.7",
+    "code_analyzer_core": "0.38.0",
+    "knowledge_layer_core": "0.24.0",
+    "duckdb": "1.5.5"
+  },
+  "source_repository": {
+    "files": 3,
+    "facts": 29,
+    "physical_tables": 2
+  },
+  "knowledge_layer": {
+    "byte_size": 17838080,
+    "published": true
+  },
+  "api_result": {
+    "system_id": "smoke-system",
+    "tables": ["address", "customer"],
+    "sample_table": {
+      "name": "address",
+      "fields": 3,
+      "keys": 1,
+      "relationships": 1
+    },
+    "markdown_report_returned": true
+  }
+}

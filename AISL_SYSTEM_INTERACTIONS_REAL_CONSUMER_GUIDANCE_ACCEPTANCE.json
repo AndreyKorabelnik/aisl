@@ -1,0 +1,117 @@
+{
+  "canonical_architecture_claim": "existing Core/Runner/KLC System Interactions producer reused; only consumer API/integration ergonomics changed",
+  "consumer_metrics": [
+    {
+      "confidence": "probable",
+      "execution_context_presented": 2,
+      "execution_context_source_total": 2,
+      "field_contract_presented": 2,
+      "field_contract_source_total": 2,
+      "field_contract_truncated": false,
+      "guidance_bytes": 8448,
+      "interaction_id": "system_interaction_eee91dc92bb2b9300f40",
+      "raw_detail_bytes": 157728,
+      "reduction_percent": 94.6,
+      "source_endpoint": "/sberProfileId/search",
+      "source_repo_id": "sbpr-ucp-intergation",
+      "target_endpoint": "/sberProfileId/search",
+      "target_repo_id": "gateway-sberid-userinfo-by-ucpid"
+    },
+    {
+      "confidence": "probable",
+      "execution_context_presented": 1,
+      "execution_context_source_total": 1,
+      "field_contract_presented": 7,
+      "field_contract_source_total": 7,
+      "field_contract_truncated": false,
+      "guidance_bytes": 11397,
+      "interaction_id": "system_interaction_a2df0cd970ba1d94cb85",
+      "raw_detail_bytes": 71917,
+      "reduction_percent": 84.2,
+      "source_endpoint": "/updatePhoneFlags",
+      "source_repo_id": "sbpr-ucp-intergation",
+      "target_endpoint": "/updatePhoneFlags",
+      "target_repo_id": "gw-sberid-update-phone-flags"
+    },
+    {
+      "confidence": "probable",
+      "execution_context_presented": 5,
+      "execution_context_source_total": 5,
+      "field_contract_presented": 20,
+      "field_contract_source_total": 37,
+      "field_contract_truncated": true,
+      "guidance_bytes": 47879,
+      "interaction_id": "system_interaction_98cdf3e67f38c6379ede",
+      "raw_detail_bytes": 1028267,
+      "reduction_percent": 95.3,
+      "source_endpoint": "/ucp/updateOrCreate",
+      "source_repo_id": "sbpr-ucp-intergation",
+      "target_endpoint": "/updateOrCreate",
+      "target_repo_id": "gw-sberprofile-create-update-extprofile"
+    }
+  ],
+  "consumer_profile": {
+    "added_tool": "get_system_interaction_context",
+    "after_profile_version": "2",
+    "after_tool_count": 8,
+    "before_profile_version": "1",
+    "before_tool_count": 7,
+    "profile_id": "system-interactions/v1",
+    "revision_binding": "pinned",
+    "revision_id": "rev-29fbde443c7bd63854ac8b1e"
+  },
+  "date": "2026-08-15",
+  "non_pass_or_diagnostics": [
+    "Monolithic Knowledge API test invocation timed out after approximately 77/99 progress with no reported failures; not counted as PASS. Complete split runs are authoritative.",
+    "First broad KCP suite run inherited real-run environment overrides and produced 92 PASS / 2 environment-dependent FAIL; clean-environment rerun produced 94/94 PASS. No KCP code was changed.",
+    "External LLM behavioral trace was not run; deterministic revision-pinned Consumer Kit/read acceptance is complete.",
+    "Cross-domain composition with historical rev-1fed54320afb0632c144e098 was not rerun: recovery contains acceptance metadata, not a live base publication/catalog; current interaction workspace is also a distinct system identity and must not be silently merged."
+  ],
+  "real_knowledge_counts": {
+    "repository_interaction_boundary": 44,
+    "system_boundary_interaction": 3,
+    "system_interaction": 3,
+    "system_interaction_execution_context": 8,
+    "system_interaction_field_contract": 46,
+    "system_interaction_match_diagnostic": 17
+  },
+  "real_run": {
+    "analyzer_execution_count": 12,
+    "execution_result_schema": "knowledge_execution_result/v2",
+    "finished_at": "2026-08-15T19:00:25.026156+00:00",
+    "job_id": "job-7633eb94b1e546f6ae74dd250f80b821",
+    "knowledge_artifact_count": 6,
+    "materialization_execution_count": 4,
+    "producer_build_count": 16,
+    "producer_reuse_count": 0,
+    "published_capabilities": [
+      "workspace.attribute-path-resolver",
+      "workspace.cross-repository-value-flow",
+      "workspace.repository-interaction-boundaries",
+      "workspace.repository-value-flow",
+      "workspace.system-interaction-field-contracts",
+      "workspace.system-interactions"
+    ],
+    "result_fingerprint": "df281da5d92c1d9e74cd7d3bca46717ebd6ac7b1a777dafff30afc892dd34270",
+    "revision_id": "rev-29fbde443c7bd63854ac8b1e",
+    "scenario_id": "analyze-system-interactions-v1",
+    "started_at": "2026-08-15T18:58:40.028066+00:00",
+    "status": "succeeded",
+    "system_id": "ucp-system-interactions"
+  },
+  "semantic_guards": [
+    "All three matched interactions remain probable; consumer projection does not upgrade confidence.",
+    "Update/create preserves address_basis=none and KLC match basis; field list is explicitly 37 total / 20 presented / truncated=true at default limits.",
+    "Unmatched /giveSberProfileId remains a diagnostic and is not materialized as a matched interaction.",
+    "Field-contract product absence is represented as not_available; unknown exact interaction returns 404."
+  ],
+  "status": "SYSTEM_INTERACTIONS_AISL_REAL_CONSUMER_GUIDANCE_BLOCK_COMPLETE",
+  "tests": {
+    "knowledge_api": "99/99 PASS (45/45 + 54/54 complete split runs)",
+    "knowledge_control_plane": "94/94 PASS in clean environment",
+    "knowledge_integration": "16/16 PASS",
+    "knowledge_layer_core": "252 PASS, 8 SKIPPED",
+    "real_kcp_runner_klc_publication": "PASS"
+  },
+  "title": "AISL System Interactions real production + consumer guidance acceptance"
+}

@@ -1,0 +1,8 @@
+14 passed in 1.73s
+
+Scope:
+- SQL workflow-context unit tests
+- workflow binding query contract
+- workflow context materialization contract
+- SQL target candidate ranking and validation
+- SQL attribute insertion context contract and validation

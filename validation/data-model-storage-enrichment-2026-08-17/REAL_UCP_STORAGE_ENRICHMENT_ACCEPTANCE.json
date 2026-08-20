@@ -1,0 +1,88 @@
+{
+  "schema_version": "data_model_storage_enrichment_acceptance/v1",
+  "status": "pass",
+  "system_id": "ucp-data-model-enriched",
+  "revision_id": "rev-88415df4d14df2ff3827b01c",
+  "runner_version": "0.10.28",
+  "published_derived_models": [
+    "code-declared-data-model",
+    "logical-storage-model-mapping",
+    "model-storage-semantics"
+  ],
+  "execution_evidence": [
+    {
+      "artifact_kind": "model-storage-evidence",
+      "repo_id": "ucp-api",
+      "coverage_status": "not_applicable"
+    },
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "repo_id": "ucp-api",
+      "coverage_status": "partial"
+    },
+    {
+      "artifact_kind": "model-storage-evidence",
+      "repo_id": "ucp-tsa-v4",
+      "coverage_status": "complete"
+    },
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "repo_id": "ucp-tsa-v4",
+      "coverage_status": "complete"
+    }
+  ],
+  "object": {
+    "object_id": "code_declared_type_83bb136d9020b4c05d7b",
+    "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+    "field_count": 52,
+    "relationship_count": 41,
+    "storage_context_status": "available",
+    "storage_identity_expressions": [
+      "\"Individual_\" + individualNode.get(\"id\").asText()",
+      "\"Individual_\" + individual.getId()"
+    ]
+  },
+  "birthPlace": {
+    "target_fqcn": "com.sbt.bm.ucp.retail.model.individual.BirthPlace",
+    "storage_semantics_status": "ambiguous",
+    "candidate_mapping_count": 2,
+    "candidate_mappings": [
+      {
+        "knowledge_class": "confirmed",
+        "target_alignment": "exact_declared_target",
+        "storage_key_expression": "parentKey + '.' + (checkExists != null ? fieldName + '_' + birthPlace.getId() : fieldName)"
+      },
+      {
+        "knowledge_class": "confirmed",
+        "target_alignment": "exact_declared_target",
+        "storage_key_expression": "parentKey + '.' + fieldName"
+      }
+    ],
+    "physical_mapping": {
+      "status": "not_observed",
+      "physical_join_confirmed": false,
+      "basis": "this read model contains declared-model and model-storage knowledge only; no physical SQL/PDM join is asserted"
+    }
+  },
+  "birthCountry": {
+    "storage_semantics_status": "not_observed",
+    "reference_value_derivations": [
+      "individualNode.get(\"birthCountry\").hasNonNull(\"code\") ? \"Country_\" + individualNode.get(\"birthCountry\").get(\"code\").asText() : null",
+      "\"Country_\" + individualNode.get(\"birthCountry\").asLong()",
+      "\"Country_\" + individual.getBirthCountry().getCode()"
+    ],
+    "physical_mapping": {
+      "status": "not_observed",
+      "physical_join_confirmed": false,
+      "basis": "this read model contains declared-model and model-storage knowledge only; no physical SQL/PDM join is asserted"
+    }
+  },
+  "consumer_tools": [
+    "get_data_model_object_context",
+    "get_declared_data_model_summary",
+    "get_declared_data_object",
+    "get_knowledge_item",
+    "search_declared_data_objects"
+  ],
+  "object_context_gap_count": 0
+}

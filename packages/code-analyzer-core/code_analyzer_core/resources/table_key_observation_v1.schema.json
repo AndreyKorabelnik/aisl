@@ -1,0 +1,306 @@
+{
+  "$defs": {
+    "KeyObservationKind": {
+      "enum": [
+        "declared_primary_key",
+        "declared_unique_key",
+        "declared_unique_index",
+        "orm_identity",
+        "merge_match_key",
+        "upsert_conflict_key",
+        "deduplication_partition_key",
+        "lookup_key_usage",
+        "partition_key",
+        "key_candidate_observation",
+        "unresolved_key_mapping"
+      ],
+      "title": "KeyObservationKind",
+      "type": "string"
+    },
+    "ObservationEvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "line_start": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Start"
+        },
+        "line_end": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line End"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "snippet": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snippet"
+        }
+      },
+      "required": [
+        "file",
+        "kind"
+      ],
+      "title": "ObservationEvidenceRef",
+      "type": "object"
+    },
+    "RelationshipSourceKind": {
+      "enum": [
+        "ddl",
+        "sql",
+        "orm",
+        "jooq",
+        "generated_schema",
+        "configuration",
+        "unknown"
+      ],
+      "title": "RelationshipSourceKind",
+      "type": "string"
+    },
+    "TableColumnRef": {
+      "additionalProperties": false,
+      "properties": {
+        "column_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Id"
+        },
+        "column_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Name"
+        },
+        "unresolved_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unresolved Name"
+        }
+      },
+      "title": "TableColumnRef",
+      "type": "object"
+    },
+    "TableRef": {
+      "additionalProperties": false,
+      "properties": {
+        "table_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Id"
+        },
+        "table_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Name"
+        },
+        "schema_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Schema Name"
+        },
+        "qualified_table_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Qualified Table Name"
+        },
+        "unresolved_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unresolved Name"
+        }
+      },
+      "title": "TableRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "table_key_observation/v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "observation_id": {
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "fact_type": {
+      "default": "table_key_observation",
+      "title": "Fact Type",
+      "type": "string"
+    },
+    "repo_id": {
+      "title": "Repo Id",
+      "type": "string"
+    },
+    "key_kind": {
+      "$ref": "#/$defs/KeyObservationKind"
+    },
+    "table": {
+      "$ref": "#/$defs/TableRef"
+    },
+    "columns": {
+      "items": {
+        "$ref": "#/$defs/TableColumnRef"
+      },
+      "minItems": 1,
+      "title": "Columns",
+      "type": "array"
+    },
+    "constraint_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Constraint Name"
+    },
+    "index_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Index Name"
+    },
+    "entity_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Entity Name"
+    },
+    "source_kind": {
+      "$ref": "#/$defs/RelationshipSourceKind"
+    },
+    "observation_basis": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Observation Basis",
+      "type": "array"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": true,
+      "title": "Properties"
+    },
+    "evidence_refs": {
+      "items": {
+        "$ref": "#/$defs/ObservationEvidenceRef"
+      },
+      "minItems": 1,
+      "title": "Evidence Refs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "observation_id",
+    "repo_id",
+    "key_kind",
+    "table",
+    "columns",
+    "source_kind",
+    "evidence_refs"
+  ],
+  "title": "TableKeyObservation",
+  "type": "object"
+}

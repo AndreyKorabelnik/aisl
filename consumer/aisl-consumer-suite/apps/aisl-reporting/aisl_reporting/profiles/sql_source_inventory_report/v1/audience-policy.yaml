@@ -1,0 +1,12 @@
+business:
+  opening_contract: Start with a plain-language summary of the source landscape and business implications.
+  terminology: Prefer Russian business language; keep exact table and field identifiers unchanged in catalogs.
+  detail: Explain what the inventory supports without describing implementation internals.
+architecture:
+  opening_contract: Start with scope, coverage and source-layer boundaries.
+  terminology: Preserve exact relation identities, roles and evidence boundaries.
+  detail: Emphasize source topology, reuse patterns and coverage limitations.
+engineering:
+  opening_contract: Start with exact inventory counts, schema version and evidence coverage.
+  terminology: Preserve exact relation IDs, field names, usage roles and source references.
+  detail: Include complete catalog and technical validation details.

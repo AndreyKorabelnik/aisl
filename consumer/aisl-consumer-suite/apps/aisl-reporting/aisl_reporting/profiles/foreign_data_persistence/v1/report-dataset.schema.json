@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "request", "scope", "coverage", "sections", "evidence_index", "interpretation_policy", "dataset_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "report_dataset/v1"},
+    "profile_id": {"const": "foreign-data-persistence-report/v1"},
+    "request": {"type": "object"},
+    "scope": {"type": "object", "required": ["kind", "id", "repository_ids"]},
+    "coverage": {"type": "object", "required": ["path_count", "source_to_storage_path_count", "storage_to_access_path_count", "complete_path_catalog", "business_fdp_decision_assigned"]},
+    "sections": {
+      "type": "object",
+      "required": ["executive_assessment", "complete_path_catalog", "source_to_storage_paths", "storage_to_access_paths", "mechanical_cases", "chain_completeness", "risk_and_governance", "gaps_and_blockers", "owner_questions"]
+    },
+    "evidence_index": {"type": "object", "additionalProperties": {"type": "object", "required": ["evidence_id", "repo_id", "path", "maturity"]}},
+    "interpretation_policy": {"type": "object"},
+    "dataset_fingerprint": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "validation": {"type": "object"}
+  },
+  "additionalProperties": false
+}

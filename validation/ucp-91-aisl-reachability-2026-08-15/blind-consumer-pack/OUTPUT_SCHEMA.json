@@ -1,0 +1,16 @@
+{
+  "schema_version": "ucp-attribute-agent-result/v1",
+  "results": [
+    {
+      "input_index": 1,
+      "attribute": "input attribute copied verbatim",
+      "object_fqcn": "fully qualified class name or null",
+      "field": "field name or null",
+      "repo_id": "repository id or null",
+      "status": "confirmed | strongly_supported | probable | ambiguous | unresolved",
+      "basis": "short evidence-grounded explanation",
+      "alternatives": [],
+      "analysis_gap": "remaining missing evidence or null"
+    }
+  ]
+}

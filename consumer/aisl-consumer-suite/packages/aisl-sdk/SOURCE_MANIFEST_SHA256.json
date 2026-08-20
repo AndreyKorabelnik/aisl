@@ -1,0 +1,101 @@
+{
+  "schema_version": "source_manifest_sha256/v1",
+  "file_count": 19,
+  "files": [
+    {
+      "path": "CHANGE_REPORT.md",
+      "sha256": "6fa23504700c3cf197283b755b4f37ec6c705221b00cdee8f0caf65d3ac807ce",
+      "size": 433
+    },
+    {
+      "path": "CHANGE_REPORT_V0.1.1.md",
+      "sha256": "5ed6855fffe3b056bf4cbec1bc8013822950ca3e0578d8fdb3f3a30719c90ac5",
+      "size": 236
+    },
+    {
+      "path": "README.md",
+      "sha256": "6fde1428d12aea808bcf02c41b62b6062945ff32a0bb088dd0f2ee07e03aecbf",
+      "size": 753
+    },
+    {
+      "path": "TEST_RESULTS.md",
+      "sha256": "bd2d1316dbb2ad5498ccbee16d6257325267fda77a4d22b76de4abed7a7f54fd",
+      "size": 445
+    },
+    {
+      "path": "VERSION",
+      "sha256": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0",
+      "size": 6
+    },
+    {
+      "path": "aisl_sdk/__init__.py",
+      "sha256": "e96db07966ba2550f91d59881cf8df1a6752dd610fd01b5e3452c1cd6cb2b5c9",
+      "size": 688
+    },
+    {
+      "path": "aisl_sdk/client.py",
+      "sha256": "423a67d689d4bfee82f17901f135a4ba3ee93da7f258472ede976b39404bca6c",
+      "size": 13480
+    },
+    {
+      "path": "aisl_sdk/data_model_projection.py",
+      "sha256": "fceb800a52e64d3cdd05d14cd17ffcf88dbf24d97052635a1bbe7eb4462feff4",
+      "size": 14866
+    },
+    {
+      "path": "aisl_sdk/errors.py",
+      "sha256": "628eb1658d9a6f882dd4aafd8f1ba789e6b60311e5c70f65c015ef91c44b2e37",
+      "size": 955
+    },
+    {
+      "path": "aisl_sdk/integration.py",
+      "sha256": "cabbf62a53aba037dbce068cb433bdcd8f016d9d6409597657a74af9a4986481",
+      "size": 6960
+    },
+    {
+      "path": "aisl_sdk/models.py",
+      "sha256": "9eb3c661a5d96a1d38294f1a71e92a692d45c55d6c0e25065e7936f1c2de4784",
+      "size": 3539
+    },
+    {
+      "path": "aisl_sdk/version.py",
+      "sha256": "56b5e91c3bb77ab933c25fd65eba883419bdc5691cc94cb9dc840e8f4e3674eb",
+      "size": 22
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "7f408df21569048605ded1014b8dae0af703a2e705fc74df0ff3019ba0f17f28",
+      "size": 598
+    },
+    {
+      "path": "examples/data_model_lookup.py",
+      "sha256": "fe0b8780d02f95e09d9d9f0c1e1338c1c6ecb2c63e1ee5474bcdd612ed95c4ea",
+      "size": 575
+    },
+    {
+      "path": "examples/inspect_revision.py",
+      "sha256": "b8be02a0c6b77e23bcad54eb3cf718a0a534cf6cfd73587d21bf7754d71fb533",
+      "size": 655
+    },
+    {
+      "path": "examples/list_systems.py",
+      "sha256": "f1de0f754b87efd3cf6c0406ca8c0dce8ac7943b62795c62f39a662726d67621",
+      "size": 280
+    },
+    {
+      "path": "examples/object_context.py",
+      "sha256": "4abf9580cbce0965f4aea282afb7cc30d7300fa032eb2314dd725281bfdc4087",
+      "size": 536
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "3f76579580a7c58f6e6ae087af6e8b328e3424b58382d374032d68d91394e3ab",
+      "size": 425
+    },
+    {
+      "path": "tests/test_client.py",
+      "sha256": "e8c2430a4a43e5cf6a78db2bc47bcf806522ca5f0b475887c7151e354749a66a",
+      "size": 19322
+    }
+  ]
+}

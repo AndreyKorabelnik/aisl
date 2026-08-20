@@ -1,0 +1,18 @@
+{
+  "schema_version": "knowledge_api_validation/v1",
+  "api_version": "0.2.1",
+  "physical_relational_fixture": {
+    "status": "passed",
+    "physical_table_count": 2,
+    "table_ids": ["table:ucp.address", "table:ucp.client"],
+    "address_field_count": 2,
+    "address_reference_encoding": "direct_column_pairs"
+  },
+  "real_ucp": {
+    "status": "passed",
+    "catalog_object_count": 312,
+    "individual_field_count": 53,
+    "individual_key_count": 1,
+    "individual_relationship_count": 40
+  }
+}

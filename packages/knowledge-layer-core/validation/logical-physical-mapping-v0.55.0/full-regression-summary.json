@@ -1,0 +1,18 @@
+{
+  "schema_version": "test_run_summary/v1",
+  "component": "knowledge-layer-core",
+  "version": "0.55.0",
+  "execution_mode": "all_collected_tests_in_isolated_groups",
+  "reason": "The monolithic process exceeded the environment time limit without a test failure; the order-sensitive workspace-data-model file was split into two groups.",
+  "groups": [
+    {"name": "foundation_and_data_model", "passed": 56, "failed": 0, "skipped": 7},
+    {"name": "runtime_mapping_queries", "passed": 69, "failed": 0, "skipped": 5},
+    {"name": "relationship_repository_sql", "passed": 37, "failed": 0, "skipped": 1},
+    {"name": "sql_quality_and_suite", "passed": 23, "failed": 0, "skipped": 0},
+    {"name": "system_interactions", "passed": 10, "failed": 0, "skipped": 0},
+    {"name": "tsa_data_model", "passed": 4, "failed": 0, "skipped": 0},
+    {"name": "tsa_materialization", "passed": 4, "failed": 0, "skipped": 0},
+    {"name": "workspace_data_model", "passed": 30, "failed": 0, "skipped": 0}
+  ],
+  "total": {"passed": 233, "failed": 0, "skipped": 13}
+}

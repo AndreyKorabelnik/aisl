@@ -1,0 +1,22 @@
+# Changed files — Analysis UI 2.0.0a50
+
+- `src/analysis_ui/api/generic_v1/models.py`
+- `src/analysis_ui/runtime/jobs.py`
+- `src/analysis_ui/runtime/pipeline.py`
+- `src/analysis_ui/runtime/knowledge_publication.py`
+- `src/analysis_ui/runtime/configuration.py`
+- `src/analysis_ui/runtime/commands.py`
+- `frontend/src/services/types.ts`
+- `frontend/src/services/api.ts`
+- `frontend/src/components/TaskHistory.vue`
+- `frontend/src/views/Analysis.vue`
+- `frontend/src/views/Revisions.vue`
+- `frontend/src/views/RevisionDetail.vue`
+- `frontend/package.json`
+- `frontend/package-lock.json`
+- `tests/test_runtime_backend.py`
+- `tests/test_knowledge_api_publication.py`
+- `tests/test_revision_first_ui.py`
+- `scripts/verify_frontend_visual_baseline.py`
+- `TEST_RESULTS_v2.0.0a50.md`
+- version, OpenAPI, release and source-manifest artifacts.

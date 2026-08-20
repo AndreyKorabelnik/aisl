@@ -1,0 +1,393 @@
+{
+  "architecture_goal": "Core extracts source-grounded evidence; Knowledge Layer composes evidence into knowledge; Runner orchestrates execution without defining evidence semantics.",
+  "completed_runtime_contracts": [
+    "core_evidence_runtime/v1",
+    "core_evidence_execution_request/v1",
+    "core_evidence_execution_result/v1",
+    "core_evidence_artifact_contract/v1"
+  ],
+  "contracts": {
+    "evidence_analyzer": {
+      "allowed_inputs": [
+        "repository_or_source_snapshot",
+        "declared Foundation sections",
+        "analyzer-specific normalized parameters"
+      ],
+      "contract_id": "core_evidence_analyzer_contract/v1",
+      "definition": "Public Core producer of one coherent source-grounded evidence family.",
+      "forbidden_inputs": [
+        "arbitrary shared AnalysisResult",
+        "output of another public evidence analyzer",
+        "task_id as evidence-semantic selector",
+        "suite_id as evidence-semantic selector"
+      ],
+      "invariants": [
+        "Analyzer output is deterministic for the same snapshot, Foundation fingerprint, version and evidence-affecting parameters.",
+        "Analyzer result does not depend on execution order of other public analyzers.",
+        "Source-understanding phases may depend on each other internally inside one analyzer.",
+        "Cross-evidence composition and subject-model assembly belong to Knowledge Layer.",
+        "Missing required inputs produce explicit diagnostics or failure; no hidden fallback to another analyzer."
+      ],
+      "owner": "code-analyzer-core",
+      "required_outputs": [
+        "typed evidence artifact",
+        "coverage",
+        "diagnostics",
+        "provenance"
+      ]
+    },
+    "evidence_artifact": {
+      "contract_id": "core_evidence_artifact_contract/v1",
+      "definition": "Self-describing persisted result of one independent Core evidence analyzer.",
+      "forbidden_semantic_selectors": [
+        "task_id",
+        "suite_id",
+        "report_profile_id"
+      ],
+      "invariants": [
+        "KLC imports evidence by artifact_kind and schema_version, not by task_id.",
+        "Artifact payload is independently consumable without reading another task directory.",
+        "Coverage and diagnostics are part of the contract, not optional log files.",
+        "Runtime-only values do not affect content_fingerprint.",
+        "Unsupported schema versions fail explicitly; no silent reinterpretation."
+      ],
+      "owner": "code-analyzer-core",
+      "required_fields": {
+        "artifact_kind": "stable semantic evidence kind",
+        "content_fingerprint": "canonical fingerprint excluding volatile runtime metadata",
+        "contract_version": "core_evidence_artifact_contract/v1",
+        "coverage": "machine-readable completeness and scope",
+        "diagnostics": "explicit unresolved, ambiguous and failed observations",
+        "foundation": {
+          "contract_version": "core_foundation_contract/v1 when used",
+          "fingerprint": "Foundation artifact fingerprint when used",
+          "sections": "declared consumed sections, empty when not used",
+          "used": "whether this analyzer consumed a Foundation artifact"
+        },
+        "parameters": "normalized evidence-affecting parameters",
+        "payload": "typed evidence payload or artifact references",
+        "producer": {
+          "analyzer_id": "stable analyzer identifier",
+          "analyzer_version": "producer implementation version",
+          "component": "code-analyzer-core"
+        },
+        "provenance": "source references and production trace",
+        "schema_version": "artifact payload schema version",
+        "source_snapshot": {
+          "fingerprint": "content or snapshot fingerprint",
+          "revision": "revision when available",
+          "source_id": "repository or source identifier"
+        }
+      },
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ]
+    },
+    "evidence_runtime": {
+      "contract_id": "core_evidence_runtime/v1",
+      "definition": "Core-owned registry and executor for independent typed evidence analyzers selected by artifact_kind and schema_version.",
+      "forbidden_behaviors": [
+        "knowledge_id-specific dispatch",
+        "task_id-specific dispatch",
+        "profile_id-specific dispatch",
+        "implicit publication from the monolithic analyze-java pipeline",
+        "compatibility adapters for legacy prepared-artifact manifest keys"
+      ],
+      "invariants": [
+        "Runtime dispatch is performed only by artifact_kind plus schema_version.",
+        "Task, Suite, Profile and knowledge identifiers are not analyzer selectors.",
+        "Every requested artifact must have exactly one registered analyzer.",
+        "Analyzer results are validated against core_evidence_artifact_contract/v1 before publication.",
+        "Missing registrations and invalid artifacts fail explicitly; legacy fallback and dual-write are forbidden."
+      ],
+      "owner": "code-analyzer-core",
+      "request_schema_version": "core_evidence_execution_request/v1",
+      "result_schema_version": "core_evidence_execution_result/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ]
+    },
+    "foundation": {
+      "allowed_content_categories": [
+        "repository_file_inventory",
+        "parsed_source_structure",
+        "symbol_and_type_index",
+        "call_index",
+        "configuration_index",
+        "build_dependency_index",
+        "openapi_or_spec_index",
+        "sql_parse_index",
+        "physical_schema_index",
+        "repository_metadata"
+      ],
+      "contract_id": "core_foundation_contract/v1",
+      "definition": "Immutable technical index of one repository/source snapshot, reusable by independent Core evidence analyzers.",
+      "forbidden_content_categories": [
+        "conceptual_or_effective_data_model",
+        "lineage_or_traceability_model",
+        "system_scenarios_or_system_summary",
+        "reference_data_knowledge",
+        "cross_fact_business_summary",
+        "cross_repository_knowledge",
+        "report_or_assistant_interpretation"
+      ],
+      "identity_basis": [
+        "repository_snapshot_fingerprint",
+        "core_indexer_version",
+        "normalized_indexer_configuration"
+      ],
+      "invariants": [
+        "Foundation is produced and versioned by Core.",
+        "Foundation is read-only for evidence analyzers.",
+        "Foundation identity is independent of task_id, suite_id and report profile.",
+        "Foundation contains technical source indexes, not subject knowledge.",
+        "Runner may manage lifecycle and reuse but must not define Foundation contents."
+      ],
+      "owner": "code-analyzer-core"
+    }
+  },
+  "contracts_fingerprint": "30b14b01f66728ad8a83b2619a217653a5c21bf0abf92b24bc78e2e483dfed38",
+  "core_version": "0.43.27",
+  "current_state_assessment": {
+    "evidence_analyzers": {
+      "compliant": false,
+      "contract_id": "core_evidence_analyzer_contract/v1",
+      "knowledge_materializations_inside_core": [
+        {
+          "produces": [
+            "code_conceptual_model_artifact"
+          ],
+          "required_transition": "replace_with_typed_evidence_inputs_and_KLC_materialization",
+          "stage_id": "code_conceptual_model_build",
+          "target_owner": "knowledge-layer-core"
+        },
+        {
+          "produces": [
+            "reference_data_fact_base_artifact"
+          ],
+          "required_transition": "replace_with_typed_evidence_inputs_and_KLC_materialization",
+          "stage_id": "reference_data_fact_base",
+          "target_owner": "knowledge-layer-core"
+        },
+        {
+          "produces": [
+            "system_description_view_facts"
+          ],
+          "required_transition": "replace_with_typed_evidence_inputs_and_KLC_materialization",
+          "stage_id": "system_description_enrichment",
+          "target_owner": "knowledge-layer-core"
+        },
+        {
+          "produces": [
+            "workspace_sql_mart_catalog"
+          ],
+          "required_transition": "replace_with_typed_evidence_inputs_and_KLC_materialization",
+          "stage_id": "workspace_sql_mart_catalog_build",
+          "target_owner": "knowledge-layer-core"
+        }
+      ],
+      "observed_public_dependency_findings": [
+        {
+          "dependencies": [
+            "declared_value_scan_optional"
+          ],
+          "recommended_action": "Keep in Core; require a typed declared-value fact bundle and remove repository-rescan fallback from the summary producer.",
+          "required_transition": "internalize_source_understanding_or_replace_with_explicit_non_public_input_contract",
+          "stage_id": "declared_value_summary_scan"
+        },
+        {
+          "dependencies": [
+            "java_persistence_lineage_build_optional"
+          ],
+          "recommended_action": "Split internal persistence fallback from data-model lineage and make persistence a required typed input; package persistence facts independently.",
+          "required_transition": "internalize_source_understanding_or_replace_with_explicit_non_public_input_contract",
+          "stage_id": "java_data_model_lineage_build"
+        },
+        {
+          "dependencies": [
+            "java_structural_scan"
+          ],
+          "recommended_action": "Keep in Core; persist and fingerprint the required interface/schema inputs before suite reuse.",
+          "required_transition": "internalize_source_understanding_or_replace_with_explicit_non_public_input_contract",
+          "stage_id": "java_field_flow_build"
+        },
+        {
+          "dependencies": [
+            "config_scan",
+            "java_structural_scan"
+          ],
+          "recommended_action": "Keep in Core and continue sharing through Foundation; make interface mutation explicit in the contract.",
+          "required_transition": "internalize_source_understanding_or_replace_with_explicit_non_public_input_contract",
+          "stage_id": "java_system_interaction_enrichment"
+        },
+        {
+          "dependencies": [
+            "java_structural_scan",
+            "db_schema_scan"
+          ],
+          "recommended_action": "Keep in Core; narrow the function signature to typed JPA facts and DB schema, then execute once per Suite.",
+          "required_transition": "internalize_source_understanding_or_replace_with_explicit_non_public_input_contract",
+          "stage_id": "java_table_observation_build"
+        },
+        {
+          "dependencies": [
+            "java_data_flow_build"
+          ],
+          "recommended_action": "Keep in Core; publish data-flow and traceability as separate typed evidence bundles with explicit dependency.",
+          "required_transition": "internalize_source_understanding_or_replace_with_explicit_non_public_input_contract",
+          "stage_id": "java_traceability_build"
+        }
+      ],
+      "observed_shared_analysis_result_findings": [
+        {
+          "analysis_result_reads": [
+            "interfaces",
+            "schemas"
+          ],
+          "reads_analysis_result": "selected_sections",
+          "required_transition": "replace_shared_state_with_declared_Foundation_sections_or_analyzer_internal_state",
+          "stage_id": "java_field_flow_build"
+        },
+        {
+          "analysis_result_reads": [
+            "config_facts",
+            "schemas",
+            "interfaces"
+          ],
+          "reads_analysis_result": "selected_sections",
+          "required_transition": "replace_shared_state_with_declared_Foundation_sections_or_analyzer_internal_state",
+          "stage_id": "java_system_interaction_enrichment"
+        },
+        {
+          "analysis_result_reads": [
+            "facts filtered to jpa_entity and jpa_relationship",
+            "db_schema"
+          ],
+          "reads_analysis_result": "complete_fact_list_parameter_but_narrow_actual_filter",
+          "required_transition": "replace_shared_state_with_declared_Foundation_sections_or_analyzer_internal_state",
+          "stage_id": "java_table_observation_build"
+        }
+      ],
+      "technical_packaging_stage_ids": [
+        "compact_package",
+        "core_output",
+        "evidence_coverage_build",
+        "normalize_facts",
+        "spec_to_standard_analysis_output"
+      ]
+    },
+    "evidence_artifacts": {
+      "contract_id": "core_evidence_artifact_contract/v1",
+      "current_status": "canonical_envelope_enforced_for_registered_runtime_artifacts",
+      "remaining_work": "register each remaining evidence family in the Core runtime when its independent analyzer is implemented",
+      "runtime_contract_id": "core_evidence_runtime/v1",
+      "semantic_routing_rule": "artifact_kind_plus_schema_version_not_task_id"
+    },
+    "evidence_runtime": {
+      "contract_id": "core_evidence_runtime/v1",
+      "dispatch_rule": "artifact_kind_plus_schema_version",
+      "dual_write": "not_supported",
+      "implicit_monolithic_publication": false,
+      "legacy_fallback": "not_supported",
+      "registered_analyzer_count": 1,
+      "registered_analyzers": [
+        {
+          "analyzer_id": "java-type-structure-analyzer",
+          "analyzer_version": "0.43.27",
+          "artifact_kind": "java-type-structure-evidence",
+          "artifact_relative_path": "evidence/java-type-structure-evidence.json",
+          "schema_version": "java-type-structure-evidence/v1"
+        }
+      ],
+      "request_schema_version": "core_evidence_execution_request/v1",
+      "result_schema_version": "core_evidence_execution_result/v1"
+    },
+    "foundation": {
+      "compliant": false,
+      "contract_id": "core_foundation_contract/v1",
+      "current_fragment_ids": [
+        "repository-analysis-foundation"
+      ],
+      "current_stage_ids": [
+        "scan_files",
+        "config_scan",
+        "maven_dependency_scan",
+        "gradle_dependency_scan",
+        "openapi_scan",
+        "java_structural_scan",
+        "java_source_observation_build",
+        "java_system_interaction_enrichment",
+        "sql_scan",
+        "db_schema_scan"
+      ],
+      "target_stage_ids_under_current_classification": [
+        "scan_files",
+        "config_scan",
+        "maven_dependency_scan",
+        "gradle_dependency_scan",
+        "openapi_scan",
+        "java_structural_scan",
+        "java_source_observation_build",
+        "sql_scan",
+        "db_schema_scan"
+      ],
+      "violations": [
+        {
+          "code": "non_base_stage_in_foundation",
+          "current_category": "derived_evidence",
+          "produces": [
+            "interaction_boundary_facts",
+            "enriched_interfaces"
+          ],
+          "reason": "Target Foundation is restricted to technical source indexes and base source observations.",
+          "required_transition": "move_to_independent_evidence_analyzer_or_knowledge_layer",
+          "stage_id": "java_system_interaction_enrichment"
+        }
+      ]
+    }
+  },
+  "execution_effect": "none",
+  "external_contract_requirements": [
+    {
+      "contract_id": "knowledge_materialization_contract/v2",
+      "owner": "knowledge-layer-core",
+      "required_rule": "Declare required and optional evidence artifact kinds and produced knowledge models."
+    },
+    {
+      "contract_id": "analysis_execution_result_contract/v1",
+      "owner": "static-analysis-runner",
+      "required_rule": "Record executed analyzers and produced evidence artifacts without assigning their subject semantics."
+    },
+    {
+      "contract_id": "evidence_semantic_routing/v1",
+      "owner": "shared-boundary",
+      "required_rule": "Evidence meaning is selected by artifact_kind plus schema_version; task_id may remain execution provenance only."
+    }
+  ],
+  "next_architectural_work": [
+    "add each new evidence family through a Core-owned analyzer registration and contract",
+    "keep Runner execution generic and selected only by artifact_kind plus schema_version",
+    "remove remaining knowledge materializations from the monolithic Core pipeline as their typed replacements become current"
+  ],
+  "purpose": "Core-owned target contracts and current-state boundary assessment for independent typed evidence analyzers.",
+  "schema_version": "core_target_analysis_contracts/v1",
+  "source": {
+    "core_catalog_fingerprint": "ad6082d068e41d4d65a26066a08f12a3e303c825ac3436451fb6c80f7263b1d0",
+    "core_catalog_schema_version": "core_analysis_catalog/v1",
+    "core_catalog_version": "0.43.27",
+    "target_definition_schema_version": "core_target_contract_definitions/v1"
+  },
+  "summary": {
+    "external_contract_requirement_count": 3,
+    "foundation_current_stage_count": 10,
+    "foundation_target_stage_count_under_current_classification": 9,
+    "foundation_violation_count": 1,
+    "knowledge_materialization_inside_core_count": 4,
+    "observed_public_dependency_count": 6,
+    "observed_shared_analysis_result_read_count": 3,
+    "registered_evidence_analyzer_count": 1,
+    "technical_packaging_stage_count": 5
+  }
+}

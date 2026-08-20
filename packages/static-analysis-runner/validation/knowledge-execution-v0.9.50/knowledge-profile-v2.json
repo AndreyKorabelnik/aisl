@@ -1,0 +1,15 @@
+{
+  "schema_version": "knowledge_profile/v2",
+  "profile_id": "knowledge-execute-real-smoke",
+  "title": "Knowledge execute real smoke",
+  "scope": {"kind": "repository", "scope_id": "real-smoke-repository"},
+  "knowledge": [
+    {"knowledge_id": "code-declared-data-model", "options": {"include_optional_sources": true, "minimum_coverage": null}}
+  ],
+  "presentation": {
+    "include_evidence": true,
+    "include_coverage": true,
+    "include_gaps": true,
+    "include_technical_details": true
+  }
+}

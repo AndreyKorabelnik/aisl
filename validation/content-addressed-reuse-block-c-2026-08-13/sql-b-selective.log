@@ -1,0 +1,1008 @@
+Checking code-analyzer-core version
+0.44.23a3
+REUSE analyzer:java-model-storage-analyzer:ucp-api key=bae6cd522b643d07 basis=content_addressed_completed_artifact
+REUSE analyzer:java-type-structure-analyzer:ucp-api key=66e01c50062c13b8 basis=content_addressed_completed_artifact
+REUSE analyzer:java-model-storage-analyzer:ucp-tsa-v4 key=9113d3e35462915e basis=content_addressed_completed_artifact
+REUSE analyzer:java-type-structure-analyzer:ucp-tsa-v4 key=532ab95cccedd673 basis=content_addressed_completed_artifact
+BUILD analyzer:sql-analysis-analyzer:custom_b2c_insurance reason=cache_miss
+Executing Core evidence analyzers for custom_b2c_insurance
+{"analyzer_execution_count": 1, "evidence_artifact_count": 1, "execution_id": 
+"core_evidence_execution_e5286714af84c93a74de0543", "output": 
+"/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/execution-nodes/003-
+source-source_snapshot_5ccbf5ec57a348a31336dbce/core-evidence", 
+"result_fingerprint": 
+"4cb0b24cf0ad9d0a67cc94e044730aa5be5a93eb63b3eca562ef00f4cb64e41e", 
+"schema_version": "core_evidence_execution_result/v1", "status": "partial"}
+REUSE materialization:code-declared-data-model key=c90cca1ce8b8b08d basis=effective_inputs_materializer_contract
+REUSE materialization:model-storage-semantics key=be0812ab940b1d7b basis=effective_inputs_materializer_contract
+REUSE materialization:physical-model key=382b34cedde43857 basis=effective_inputs_materializer_contract
+BUILD materialization:sql-analysis reason=cache_miss (4/8)
+[materialization:sql-analysis] started (4/8)
+[materialization:sql-analysis] worker started
+[materialization:sql-analysis][stderr] materialization sql-analysis handler started
+[materialization:sql-analysis][stderr] sql-analysis build repo=custom_b2c_insurance memory_limit=4GB threads=1
+[materialization:sql-analysis][stderr] sql-analysis database initialize started
+[materialization:sql-analysis][stderr] sql-analysis database initialize completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest all facts started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_statement records=3115 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_statement records=3115 completed; duration=0.4s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_statement records=2704 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_statement records=2704 completed; duration=0.3s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_call records=2216 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_call records=2216 completed; duration=0.3s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_binding records=1312 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_binding records=1312 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_embedded_sql records=490 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_embedded_sql records=490 completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_invocation records=525 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_invocation records=525 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_semantic_placeholder records=1574 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_semantic_placeholder records=1574 completed; duration=1.2s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_workflow_binding records=37755 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_workflow_binding records=37755 completed; duration=3.7s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_select_scope records=4084 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_select_scope records=4084 completed; duration=1.4s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_relation records=5280 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_relation records=5280 completed; duration=1.6s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_column_usage records=47109 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_column_usage records=47109 completed; duration=5.5s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_projection records=33706 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_projection records=33706 completed; duration=3.3s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_write_target records=2207 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_write_target records=2207 completed; duration=0.3s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_target_projection_binding records=14980 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_target_projection_binding records=14980 completed; duration=1.5s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_join_edge records=1092 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_join_edge records=1092 completed; duration=0.2s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_direct_column_lineage records=16331 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_direct_column_lineage records=16331 completed; duration=2.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_recursive_column_lineage records=20300 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_recursive_column_lineage records=20300 completed; duration=6.5s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_object_dependency records=3701 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_object_dependency records=3701 completed; duration=1.3s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_scoped_lineage_gap records=1346 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_scoped_lineage_gap records=1346 completed; duration=0.2s
+[materialization:sql-analysis][stderr] sql-analysis ingest summary sql_statement=3115, sql_script_statement=2704, sql_script_call=2216, sql_script_binding=1312, sql_script_embedded_sql=490, sql_script_invocation=525, sql_semantic_placeholder=1574, sql_workflow_binding=37755, sql_select_scope=4084, sql_relation=5280, sql_column_usage=47109, sql_projection=33706, sql_write_target=2207, sql_target_projection_binding=14980, sql_join_edge=1092, sql_direct_column_lineage=16331, sql_recursive_column_lineage=20300, sql_object_dependency=3701, sql_scoped_lineage_gap=1346
+[materialization:sql-analysis][stderr] sql-analysis ingest all facts completed; duration=29.7s
+[materialization:sql-analysis][stderr] sql-analysis workflow_context started
+[materialization:sql-analysis][stderr] workflow-context reset derived tables started
+[materialization:sql-analysis][stderr] workflow-context reset derived tables completed; duration=0.0s
+[materialization:sql-analysis][stderr] workflow-context load known files and bindings started
+[materialization:sql-analysis][stderr] workflow-context load known files and bindings completed; duration=0.4s
+[materialization:sql-analysis][stderr] workflow-context inventory known_files=1582 bindings=37755
+[materialization:sql-analysis][stderr] workflow-context binding references discovered=6752; duration=4.2s
+[materialization:sql-analysis][stderr] workflow-context script invocation references total=7277; unique_templates=1218; duration=0.9s
+[materialization:sql-analysis][stderr] workflow-context file references published=7277; duration=1.0s
+[materialization:sql-analysis][stderr] workflow-context placeholders loaded files=633 roots=242; duration=0.1s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=50/242 context_files=250 resolutions=0 elapsed=0.0s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=100/242 context_files=516 resolutions=0 elapsed=0.0s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=150/242 context_files=699 resolutions=0 elapsed=0.0s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=200/242 context_files=845 resolutions=0 elapsed=0.0s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=242/242 context_files=1827 resolutions=0 elapsed=6.8s
+[materialization:sql-analysis][stderr] workflow-context traversal completed; context_files=1827 resolutions=0; duration=6.8s
+[materialization:sql-analysis][stderr] workflow-context context rows published=1827; duration=0.1s
+[materialization:sql-analysis][stderr] workflow-context placeholder resolutions published=0; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis workflow_context completed; duration=13.6s
+[materialization:sql-analysis][stderr] sql-analysis workflow_context summary={'known_file_count': 1582, 'workflow_context_count': 242, 'file_reference_count': 7277, 'resolved_file_reference_count': 1484, 'ambiguous_file_reference_count': 128, 'unresolved_file_reference_count': 5665, 'workflow_context_file_count': 1827, 'placeholder_binding_resolution_count': 0, 'placeholder_binding_by_status': {}}
+[materialization:sql-analysis][stderr] sql-analysis workflow_target_lineage started
+[materialization:sql-analysis][stderr] workflow-target-lineage derive producer observations started
+[materialization:sql-analysis][stderr] workflow-target-lineage derive producer observations completed; duration=0.8s
+[materialization:sql-analysis][stderr] workflow-target-lineage producer observations materializations=1462 workflow_dependencies=0
+[materialization:sql-analysis][stderr] workflow-target-lineage build producer traversal started
+[materialization:sql-analysis][stderr] workflow-target-lineage build producer traversal completed; duration=0.6s
+[materialization:sql-analysis][stderr] workflow-target-lineage resolved sql contexts=1216
+[materialization:sql-analysis][stderr] workflow-target-lineage script-seeded traversal started
+[materialization:sql-analysis][stderr] workflow-target-lineage script-seeded traversal completed; duration=0.0s; transforms=0; target_columns=0; lineage_paths=0; gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage materialization-seeded traversal started; target_pairs=24
+[materialization:sql-analysis][stderr] workflow-target-lineage target 1/24 started; table=t_dim_accrual; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 1/24 contract resolved; table=t_dim_accrual; columns=36; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=accrual_dt; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=accrual_id; raw_paths=40; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=asbs_accrual_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=counterparty_id; raw_paths=375; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=end_dt; raw_paths=60; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=exchange_rate_rub_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=insurance_agr_id; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=insurance_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=obj_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=part_1_month; raw_paths=56; terminal_facts=29
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=payment_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=payment_ccy_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=payment_ord; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=payment_type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=period_end_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=period_start_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_ccy_amt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_ccy_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_ccy_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_comiss_ccy_amt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_comiss_rub_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_prem_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_prem_rub_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=risk_rub_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=row_hash; raw_paths=135; terminal_facts=54
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=sbs_accrual_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=sbszh_accrual_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_accrual; column=tariff_pct; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 1/24 completed; table=t_dim_accrual; duration=0.1s; new_lineage_paths=242; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 2/24 started; table=t_dim_appl_loss; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 2/24 contract resolved; table=t_dim_appl_loss; columns=37; direct_producers=4; usable_contracts=3; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=aggrieved_id; raw_paths=1225; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=appl_loss_dt; raw_paths=147; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=appl_loss_id; raw_paths=147; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=appl_loss_num; raw_paths=147; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=benef_not_insd_person_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=benef_not_policyholder_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=beneficiary_id; raw_paths=2450; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=claimant_id; raw_paths=1225; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=coverage_id; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=ctl_action; raw_paths=186; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=ctl_loading; raw_paths=43; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=ctl_validfrom; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=end_dt; raw_paths=14486; terminal_facts=51
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=event_type_name; raw_paths=147; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=insurance_agr_id; raw_paths=98; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=insurance_risk_id; raw_paths=2205; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=insured_event_dt; raw_paths=147; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=insured_person_id; raw_paths=1225; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=need_copy_add_agr_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=need_copy_confirming_payments_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=need_copy_ins_agr_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=need_copy_passport_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=need_copy_relative_with_payer_flag; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=notif_amt; raw_paths=98; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=obj_name; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=payment_amt; raw_paths=98; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=policyholder_id; raw_paths=2450; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=risk_name; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=risk_rub_amt; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage slow column; table=t_dim_appl_loss; column=row_hash; duration=1.7s; origins=32144
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=row_hash; raw_paths=32144; terminal_facts=94
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=sbs_appl_loss_sid; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=sbszh_appl_loss_sid; raw_paths=98; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=src_name; raw_paths=24; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=start_dt; raw_paths=54; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=status_dttm; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=status_name; raw_paths=98; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_appl_loss; column=tech_distr_name; raw_paths=24; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage target 2/24 completed; table=t_dim_appl_loss; duration=8.9s; new_lineage_paths=294; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 3/24 started; table=t_dim_beneficiary; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 3/24 contract resolved; table=t_dim_beneficiary; columns=13; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=beneficiary_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=ctl_action; raw_paths=16; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=end_dt; raw_paths=10; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=insurance_agr_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=prem_pct; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=row_hash; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=sbs_beneficiary_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=sbszh_beneficiary_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_beneficiary; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 3/24 completed; table=t_dim_beneficiary; duration=0.0s; new_lineage_paths=56; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 4/24 started; table=t_dim_counterparty; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 4/24 contract resolved; table=t_dim_counterparty; columns=34; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=asbs_counterparty_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=birth_dt; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=counterparty_id; raw_paths=25; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=docum_depart_name; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=docum_depart_num; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=docum_issue_dt; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=docum_num; raw_paths=40; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=docum_type_name; raw_paths=30; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=ekp_counterparty_sid; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=email; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=end_dt; raw_paths=128; terminal_facts=62
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=epk_id; raw_paths=45; terminal_facts=18
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=fact_addr_txt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=first_name; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=inn_num; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=kpp_num; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=last_name; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=legal_addr_txt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=middle_name; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=ogrn_num; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=org_name; raw_paths=95; terminal_facts=28
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=phone_num; raw_paths=25; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=row_hash; raw_paths=315; terminal_facts=120
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=sbs_counterparty_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=sbszh_counterparty_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=segment_name; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=short_org_name; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_counterparty; column=type_name; raw_paths=130; terminal_facts=32
+[materialization:sql-analysis][stderr] workflow-target-lineage target 4/24 completed; table=t_dim_counterparty; duration=0.1s; new_lineage_paths=401; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 5/24 started; table=t_dim_insurance_act; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 5/24 contract resolved; table=t_dim_insurance_act; columns=25; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_ccy_amt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_ccy_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_ccy_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_dt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_num; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=act_pay_ccy_amt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=appl_loss_id; raw_paths=1470; terminal_facts=7
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=claimed_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=ctl_action; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=end_dt; raw_paths=630; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=insurance_agr_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=refusal_ccy_amt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=refusal_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=refusal_reason_txt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=refusal_side_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=refusal_type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=row_hash; raw_paths=1560; terminal_facts=44
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=sbs_act_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=sbszh_act_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_act; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 5/24 completed; table=t_dim_insurance_act; duration=0.5s; new_lineage_paths=151; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 6/24 started; table=t_dim_insurance_agent; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 6/24 contract resolved; table=t_dim_insurance_agent; columns=17; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=agent_agr_num; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=agent_id; raw_paths=125; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=comiss_pct; raw_paths=15; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=ctl_action; raw_paths=65; terminal_facts=13
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=ctl_loading; raw_paths=9; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=end_dt; raw_paths=32; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=insurance_agr_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=name; raw_paths=15; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=principal_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=risk_comiss_ccy_amt; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=risk_name; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=risk_prem_ccy_amt; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=row_hash; raw_paths=65; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_agent; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 6/24 completed; table=t_dim_insurance_agent; duration=0.0s; new_lineage_paths=84; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 7/24 started; table=t_dim_insurance_agr; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 7/24 contract resolved; table=t_dim_insurance_agr; columns=68; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 7/24 completed; table=t_dim_insurance_agr; duration=0.0s; new_lineage_paths=67; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 8/24 started; table=t_dim_insurance_obj; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 8/24 contract resolved; table=t_dim_insurance_obj; columns=12; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=end_dt; raw_paths=7; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=obj_id; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=row_hash; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=sbs_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=start_dt; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_obj; column=type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 8/24 completed; table=t_dim_insurance_obj; duration=0.0s; new_lineage_paths=37; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 9/24 started; table=t_dim_insurance_risk; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 9/24 contract resolved; table=t_dim_insurance_risk; columns=16; direct_producers=4; usable_contracts=4; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=complex_risk_flag; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=ctl_action; raw_paths=274; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=ctl_loading; raw_paths=43; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=ctl_validfrom; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=end_dt; raw_paths=296; terminal_facts=11
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=name; raw_paths=392; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=parent_risk_flag; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=parent_risk_id; raw_paths=49; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=risk_id; raw_paths=441; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=row_hash; raw_paths=539; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=sbs_sid; raw_paths=98; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=sbszh_sid; raw_paths=294; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=src_name; raw_paths=24; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=src_table_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=start_dt; raw_paths=54; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insurance_risk; column=tech_distr_name; raw_paths=24; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage target 9/24 completed; table=t_dim_insurance_risk; duration=0.2s; new_lineage_paths=122; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 10/24 started; table=t_dim_insured_person; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 10/24 contract resolved; table=t_dim_insured_person; columns=11; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=ctl_action; raw_paths=87; terminal_facts=15
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=end_dt; raw_paths=152; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=insurance_agr_id; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=insured_person_id; raw_paths=375; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=insured_person_type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_insured_person; column=row_hash; raw_paths=375; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage target 10/24 completed; table=t_dim_insured_person; duration=0.1s; new_lineage_paths=70; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 11/24 started; table=t_dim_lack_doc_comm; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 11/24 contract resolved; table=t_dim_lack_doc_comm; columns=30; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=appl_loss_dt; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=appl_loss_id; raw_paths=735; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=appl_loss_num; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=call_decode_txt; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=call_type_code; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=campaign_ord; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=campaign_type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=claimant_full_name; raw_paths=20; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=claimant_phone_num; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=comm_id; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=ctl_action; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=end_dt; raw_paths=1240; terminal_facts=46
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=insurance_agr_id; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=insurance_agr_num; raw_paths=15; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=lack_doc_txt; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=obj_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=obj_type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=recall_type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=reg_msg_num; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=risk_id; raw_paths=2205; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=row_hash; raw_paths=3085; terminal_facts=73
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=sbs_sid; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=sbszh_sid; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=status_dttm; raw_paths=15; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_lack_doc_comm; column=status_txt; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 11/24 completed; table=t_dim_lack_doc_comm; duration=0.9s; new_lineage_paths=188; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 12/24 started; table=t_dim_payment_order; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 12/24 contract resolved; table=t_dim_payment_order; columns=20; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=act_id; raw_paths=100; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=ctl_action; raw_paths=14; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=end_dt; raw_paths=22; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=insurance_agr_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_ccy_amt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_ccy_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_ccy_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_order_create_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_order_id; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_order_num; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=payment_type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=recipient_id; raw_paths=125; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=row_hash; raw_paths=40; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=sbs_payment_order_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=sbszh_payment_order_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_payment_order; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 12/24 completed; table=t_dim_payment_order; duration=0.0s; new_lineage_paths=94; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 13/24 started; table=t_dim_ppo_event; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 13/24 contract resolved; table=t_dim_ppo_event; columns=17; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=end_dt; raw_paths=26; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=event_dttm; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=insurance_agr_id; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=last_change_dttm; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=payment_ccy_amt; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=payment_ccy_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=ppo_event_id; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=refusal_reason_txt; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=row_hash; raw_paths=60; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=sbszh_sid; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=status_name; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_ppo_event; column=type_name; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 13/24 completed; table=t_dim_ppo_event; duration=0.0s; new_lineage_paths=73; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 14/24 started; table=t_dim_realty; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 14/24 contract resolved; table=t_dim_realty; columns=17; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=address_norm_txt; raw_paths=225; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=address_txt; raw_paths=225; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=cadastr_num; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=end_dt; raw_paths=197; terminal_facts=11
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=fias_addres_type_code; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=fias_address_code; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=obj_estimate_value_rub_amt; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=realty_id; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=row_hash; raw_paths=485; terminal_facts=18
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=src_name; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=start_dt; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_realty; column=type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 14/24 completed; table=t_dim_realty; duration=0.1s; new_lineage_paths=59; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 15/24 started; table=t_dim_supp_agr; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 15/24 contract resolved; table=t_dim_supp_agr; columns=24; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=acc_sys_rec_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=agr_ccy_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=end_dt; raw_paths=33; terminal_facts=17
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=insurance_agr_id; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=num; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=prem_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=prem_ccy_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=prem_rub_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=rescission_type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=row_hash; raw_paths=75; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=rub_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=sbs_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=sign_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=start_dt; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=supp_agr_end_dt; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=supp_agr_id; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=supp_agr_start_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr; column=type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 15/24 completed; table=t_dim_supp_agr; duration=0.0s; new_lineage_paths=102; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 16/24 started; table=t_dim_supp_agr_x_risk_x_obj; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 16/24 contract resolved; table=t_dim_supp_agr_x_risk_x_obj; columns=25; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=end_dt; raw_paths=29; terminal_facts=15
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=obj_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=obj_type_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_before_change_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_ccy_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_change_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_comiss_before_change_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_end_after_change_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_end_before_change_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_prem_before_change_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_prem_change_ccy_amt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_start_after_change_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=risk_start_before_change_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=row_hash; raw_paths=65; terminal_facts=26
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=sbs_supp_agr_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=start_dt; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=supp_agr_id; raw_paths=15; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_supp_agr_x_risk_x_obj; column=tariff_pct; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 16/24 completed; table=t_dim_supp_agr_x_risk_x_obj; duration=0.0s; new_lineage_paths=106; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 17/24 started; table=t_dim_terr_struct; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 17/24 contract resolved; table=t_dim_terr_struct; columns=20; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=asbs_insurance_agr_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=ekp_insurance_agr_sid; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=end_dt; raw_paths=287; terminal_facts=61
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=gosb_name; raw_paths=205; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=gosb_num; raw_paths=80; terminal_facts=20
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=insurance_agr_id; raw_paths=20; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=row_hash; raw_paths=710; terminal_facts=118
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=sbs_insurance_agr_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=sbszh_insurance_agr_sid; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=start_dt; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=tb_name; raw_paths=45; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=tb_num; raw_paths=25; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=terr_struct_src_name; raw_paths=240; terminal_facts=20
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=vsp_name; raw_paths=40; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_terr_struct; column=vsp_num; raw_paths=75; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage target 17/24 completed; table=t_dim_terr_struct; duration=0.9s; new_lineage_paths=342; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 18/24 started; table=t_dim_vehicle; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 18/24 contract resolved; table=t_dim_vehicle; columns=22; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=body_num; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=brand_name; raw_paths=35; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=chassis_num; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=ctgry_name; raw_paths=30; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=end_dt; raw_paths=90; terminal_facts=37
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=engine_power_qty; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=grn_num; raw_paths=25; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=mnfctd_year_ord; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=model_name; raw_paths=35; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=model_transdkra_flag; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=national_car_flag; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=obj_id; raw_paths=25; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=primary_use_region_name; raw_paths=25; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=row_hash; raw_paths=210; terminal_facts=66
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=src_name; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=start_dt; raw_paths=6; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_id; raw_paths=30; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vin_num; raw_paths=15; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 18/24 completed; table=t_dim_vehicle; duration=0.1s; new_lineage_paths=186; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 19/24 started; table=t_fct_auto_activity; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 19/24 contract resolved; table=t_fct_auto_activity; columns=47; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=absolut_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=action_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=action_id; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=action_name; raw_paths=88; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=action_num; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=alpha_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=asbs_action_sid; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=astrovolga_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=bic_code; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=bsoinsur_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=credit_vehicle_flag; raw_paths=16; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ctl_action; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ctl_loading; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ctl_validfrom; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=energogarant_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=epk_id; raw_paths=12; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=gosb_num; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ingosstrakh_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ins_vehicle_rub_amt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=insurance_agr_id; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=insurance_company_name; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ldu_cnt; raw_paths=96; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=maks_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=market_vehicle_rub_amt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=max_market_vehicle_rub_amt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=min_market_vehicle_rub_amt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=preapproved_campaign_name; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=preapproved_casco_flag; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=product_group_name; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=product_name; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=renaissance_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=reso_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=rgs_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=row_hash; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=sales_channel_name; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=sbs_offer_txt; raw_paths=24; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=sogaz_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=soglasie_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=sovkombank_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=t_strakh_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=tb_num; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=tech_distr_name; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=ugsk_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=vehicle_id; raw_paths=120; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=vsk_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=vsp_num; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_auto_activity; column=zetta_offer_txt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 19/24 completed; table=t_fct_auto_activity; duration=0.1s; new_lineage_paths=103; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 20/24 started; table=t_fct_casco_activity; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 20/24 contract resolved; table=t_fct_casco_activity; columns=36; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=business_calculator_used_name; raw_paths=12; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=calculator_first_access_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=calculator_last_access_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=calculator_result_name; raw_paths=24; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=campaign_type_name; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=ctl_action; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=ctl_loading; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=ctl_validfrom; raw_paths=3; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=policy_channel_name; raw_paths=56; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=policy_num; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=policy_sign_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=policy_sign_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=renew_dt; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=renew_month_dt; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=request_channel_premier_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=request_channel_premier_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=request_channel_vsp_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=request_channel_vsp_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=request_sales_tab_num; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=row_hash; raw_paths=304; terminal_facts=76
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=site_entered_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=site_first_access_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=site_last_access_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=site_preapproved_visit_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=site_send_policy_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=site_visited_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=sms_send_policy_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_call_cnt; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_call_result_name; raw_paths=20; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_letter_type_name; raw_paths=84; terminal_facts=21
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_letter_vsp_name; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_max_call_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_max_create_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_min_call_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=tm_min_create_dttm; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_casco_activity; column=vin_num; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 20/24 completed; table=t_fct_casco_activity; duration=0.1s; new_lineage_paths=160; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 21/24 started; table=t_fct_csi_event; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 21/24 contract resolved; table=t_fct_csi_event; columns=29; direct_producers=2; usable_contracts=1; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=appl_channel_name; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=appl_decision_dt; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=appl_decision_name; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=appl_dt; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=appl_policy_end_dt; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=appl_policy_num; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=change_type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=counterparty_id; raw_paths=125; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=ctl_action; raw_paths=27; terminal_facts=25
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=dzo_product_name; raw_paths=20; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=end_dt; raw_paths=156; terminal_facts=51
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=epk_id; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=event_type_name; raw_paths=85; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=gosb_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=id; raw_paths=60; terminal_facts=11
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=insurance_agr_id; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=insurance_agr_num; raw_paths=10; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=payment_type_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=risk_category_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=risk_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=row_hash; raw_paths=385; terminal_facts=82
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=sbszh_sid; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=src_name; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=tb_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_csi_event; column=vsp_name; raw_paths=5; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 21/24 completed; table=t_fct_csi_event; duration=0.1s; new_lineage_paths=226; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 22/24 started; table=t_fct_payment; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 22/24 contract resolved; table=t_fct_payment; columns=25; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=asbs_payment_sid; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=fact_payment_dt; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=insurance_agr_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=insurance_ccy_amt; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=obj_name; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_ccy_amt; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_ccy_name; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_docum_type_name; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_dt; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_ord; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=payment_type_name; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=period_end_dt; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=period_start_dt; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=report_dt; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=risk_name; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=row_hash; raw_paths=32; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=sbs_payment_sid; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=sbszh_payment_sid; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_fct_payment; column=tariff_pct; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 22/24 completed; table=t_fct_payment; duration=0.0s; new_lineage_paths=51; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 23/24 started; table=t_link_insurance_agr_x_related_agr; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 23/24 contract resolved; table=t_link_insurance_agr_x_related_agr; columns=18; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=asbs_insurance_agr_sid; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=credit_agr_id; raw_paths=270; terminal_facts=18
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=credit_agr_num; raw_paths=275; terminal_facts=20
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=credit_sign_dt; raw_paths=1075; terminal_facts=18
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=credit_start_dt; raw_paths=170; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=credit_status_name; raw_paths=145; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=ctl_loading; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=ekp_insurance_agr_sid; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=end_dt; raw_paths=678; terminal_facts=40
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=insurance_agr_id; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=row_hash; raw_paths=1665; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=sbs_insurance_agr_sid; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=sbszh_insurance_agr_sid; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=src_name; raw_paths=10; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_related_agr; column=start_dt; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage target 23/24 completed; table=t_link_insurance_agr_x_related_agr; duration=0.5s; new_lineage_paths=235; new_gaps=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 24/24 started; table=t_link_insurance_agr_x_risk_x_obj; workflow=resources/ctl/ctl.yml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 24/24 contract resolved; table=t_link_insurance_agr_x_risk_x_obj; columns=54; direct_producers=3; usable_contracts=2; incomplete_branches=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=asbs_module_business_process_code; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=asbs_module_product_code; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=asbs_module_sid; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=asbs_module_status_name; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=base_prem_ccy_amt; raw_paths=28; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=base_prem_ccy_code; raw_paths=28; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=beneficiary_cnt; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=coverage_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=coverage_id; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=coverage_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=coverage_risk_id; raw_paths=2210; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=ctl_action; raw_paths=5406; terminal_facts=59
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=ctl_loading; raw_paths=13; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=end_dt; raw_paths=3424; terminal_facts=78
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=franchise_pct; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=franchise_rub_amt; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=franchise_type_name; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=insurance_agr_id; raw_paths=56; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=insurance_obj_id; raw_paths=98; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=insurance_risk_id; raw_paths=12362; terminal_facts=26
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=insured_adult_cnt; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=insured_child_cnt; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=module_name; raw_paths=70; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=obj_name; raw_paths=28; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=obj_type_name; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=part_1_month; raw_paths=3424; terminal_facts=78
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=payout_end_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=payout_period_name; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=payout_start_dt; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=premium_payment_period_code; raw_paths=5; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=realty_id; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_ccy_amt; raw_paths=56; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_ccy_code; raw_paths=28; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_ccy_name; raw_paths=15; terminal_facts=7
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_comiss_pct; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_comiss_rub_amt; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_duration_day_cnt; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_end_dt; raw_paths=42; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_name; raw_paths=56; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_period_day_cnt; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_prem_ccy_amt; raw_paths=42; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_prem_ccy_code; raw_paths=28; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_prem_ccy_name; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_prem_rub_amt; raw_paths=14; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_rub_amt; raw_paths=42; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=risk_start_dt; raw_paths=42; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=row_hash; raw_paths=7980; terminal_facts=148
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=self_insured_flag; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=src_name; raw_paths=8; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=tariff_pct; raw_paths=28; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=tech_distr_name; raw_paths=8; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_insurance_agr_x_risk_x_obj; column=vehicle_id; raw_paths=840; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage target 24/24 completed; table=t_link_insurance_agr_x_risk_x_obj; duration=3.9s; new_lineage_paths=594; new_gaps=1
+[materialization:sql-analysis][stderr] workflow-target-lineage materialization-seeded traversal completed; duration=18.4s; batch_rows=4043; total_lineage_paths=4043; gaps=10
+[materialization:sql-analysis][stderr] sql-analysis workflow_target_lineage completed; duration=20.3s
+[materialization:sql-analysis][stderr] sql-analysis workflow_target_lineage summary={'workflow_transform_count': 24, 'target_projection_count': 653, 'lineage_path_count': 4043, 'gap_count': 10}
+[materialization:sql-analysis][stderr] sql-analysis relation_semantic_roles started
+[materialization:sql-analysis][stderr] sql-analysis relation_semantic_roles completed; duration=2.2s
+[materialization:sql-analysis][stderr] sql-analysis relation_semantic_roles summary={'total_relations': 1162, 'hidden_by_default': 1002, 'visible_by_default': 160, 'by_role': {'external_source': 159, 'internal_intermediate': 1002, 'unknown': 1}, 'by_status': {'confirmed': 1145, 'probable': 16, 'unresolved': 1}}
+[materialization:sql-analysis][stderr] sql-analysis validation started
+[materialization:sql-analysis][stderr] sql-analysis validation completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis table counts started
+[materialization:sql-analysis][stderr] sql-analysis table counts completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis checkpoint started
+[materialization:sql-analysis][stderr] sql-analysis checkpoint completed; duration=0.2s
+[materialization:sql-analysis][stderr] sql-analysis database close started
+[materialization:sql-analysis][stderr] sql-analysis database close completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis manifest write started
+[materialization:sql-analysis][stderr] sql-analysis manifest write completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis atomic publish started
+[materialization:sql-analysis][stderr] sql-analysis atomic publish completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis completed counts sql_analysis_build=1, sql_analysis_repository=1, sql_column_usage=47109, sql_direct_column_lineage=16331, sql_join_edge=1092, sql_object_dependency=3701, sql_placeholder_binding_resolution=0, sql_projection=33706, sql_recursive_column_lineage=20300, sql_relation=5280, sql_relation_semantic_role=1162, sql_scoped_lineage_gap=1346, sql_script_binding=1312, sql_script_call=2216, sql_script_embedded_sql=490, sql_script_invocation=525, sql_script_statement=2704, sql_select_scope=4084, sql_semantic_placeholder=1574, sql_statement=3115, sql_target_projection_binding=14980, sql_workflow_binding=37755, sql_workflow_context_file=1827, sql_workflow_file_reference=7277, sql_workflow_target_column_lineage=4043, sql_workflow_target_lineage_gap=10, sql_write_target=2207
+[materialization:sql-analysis][stderr] materialization sql-analysis handler completed
+[materialization:sql-analysis] worker exited code=0; duration=66.7s
+[materialization:sql-analysis] completed; duration=66.7s; counts: sql_analysis_build=1, sql_analysis_repository=1, sql_column_usage=47109, sql_direct_column_lineage=16331, sql_join_edge=1092, sql_object_dependency=3701, sql_placeholder_binding_resolution=0, sql_projection=33706, sql_recursive_column_lineage=20300, sql_relation=5280, sql_relation_semantic_role=1162, sql_scoped_lineage_gap=1346, sql_script_binding=1312, sql_script_call=2216, sql_script_embedded_sql=490, sql_script_invocation=525, sql_script_statement=2704, sql_select_scope=4084, sql_semantic_placeholder=1574, sql_statement=3115, sql_target_projection_binding=14980, sql_workflow_binding=37755, sql_workflow_context_file=1827, sql_workflow_file_reference=7277, sql_workflow_target_column_lineage=4043, sql_workflow_target_lineage_gap=10, sql_write_target=2207
+REUSE materialization:logical-storage-mapping key=17856251a4017805 basis=effective_inputs_materializer_contract
+BUILD materialization:cross-artifact-data-model-mapping reason=cache_miss (6/8)
+[materialization:cross-artifact-data-model-mapping] started (6/8)
+[materialization:cross-artifact-data-model-mapping] worker started
+[materialization:cross-artifact-data-model-mapping][stderr] materialization cross-artifact-data-model-mapping handler started
+[materialization:cross-artifact-data-model-mapping][stderr] materialization cross-artifact-data-model-mapping handler completed
+[materialization:cross-artifact-data-model-mapping] worker exited code=0; duration=6.4s
+[materialization:cross-artifact-data-model-mapping] completed; duration=6.4s; counts: cross_artifact_logical_field_sql_usage=0, cross_artifact_mapping_build=1, cross_artifact_mapping_gap=0, cross_artifact_mapping_source=4, cross_artifact_relation_materialization=1438, cross_artifact_sql_physical_mapping=591, cross_artifact_storage_sql_mapping=0, cross_artifact_target_source_mapping=0, cross_artifact_value_origin_physical_lineage=0, cross_artifact_workflow_dependency=0, cross_artifact_workflow_projection_physical_mapping=0
+BUILD materialization:sql-target-source-mapping reason=cache_miss (7/8)
+[materialization:sql-target-source-mapping] started (7/8)
+[materialization:sql-target-source-mapping] worker started
+[materialization:sql-target-source-mapping][stderr] materialization sql-target-source-mapping handler started
+[materialization:sql-target-source-mapping][stderr] materialization sql-target-source-mapping handler completed
+[materialization:sql-target-source-mapping] worker exited code=0; duration=16.5s
+[materialization:sql-target-source-mapping] completed; duration=16.5s; counts: sql_observed_relation_materialization=1462, sql_observed_workflow_dependency=0, sql_target_source_mapping=5495, sql_target_source_mapping_build=1, sql_target_source_mapping_gap=3655, sql_target_source_mapping_source=2, sql_target_value_source_mapping=1575
+BUILD materialization:data-model-attribute-extension-context reason=cache_miss (8/8)
+[materialization:data-model-attribute-extension-context] started (8/8)
+[materialization:data-model-attribute-extension-context] worker started
+[materialization:data-model-attribute-extension-context][stderr] materialization data-model-attribute-extension-context handler started
+[materialization:data-model-attribute-extension-context][stderr] materialization data-model-attribute-extension-context handler completed
+[materialization:data-model-attribute-extension-context] worker exited code=0; duration=9.3s
+[materialization:data-model-attribute-extension-context] completed; duration=9.3s; counts: attribute_extension_context_build=1, attribute_extension_context_gap=1027, attribute_extension_context_source=5, attribute_extension_join_semantic=1573, attribute_extension_object_anchor=1326
+{
+  "evidence_artifact_count": 6,
+  "execution_order": [
+    "analyzer:java-model-storage-analyzer:ucp-api",
+    "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+    "analyzer:java-type-structure-analyzer:ucp-api",
+    "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+    "analyzer:sql-analysis-analyzer:custom_b2c_insurance",
+    "materialization:code-declared-data-model",
+    "materialization:model-storage-semantics",
+    "materialization:physical-model",
+    "materialization:sql-analysis",
+    "materialization:logical-storage-mapping",
+    "materialization:cross-artifact-data-model-mapping",
+    "materialization:sql-target-source-mapping",
+    "materialization:data-model-attribute-extension-context"
+  ],
+  "knowledge_artifact_count": 8,
+  "materialization_count": 8,
+  "output": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution",
+  "producer_reuse": {
+    "decisions": [
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/cache/core-repository-evidence/bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff/payload/repository_analysis_run_manifest.json",
+        "basis": "content_addressed_completed_artifact",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+        "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff",
+        "saved_seconds": null,
+        "source_id": "ucp-api"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/cache/core-repository-evidence/66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8/payload/repository_analysis_run_manifest.json",
+        "basis": "content_addressed_completed_artifact",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+        "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8",
+        "saved_seconds": null,
+        "source_id": "ucp-api"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/cache/core-repository-evidence/9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163/payload/repository_analysis_run_manifest.json",
+        "basis": "content_addressed_completed_artifact",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+        "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163",
+        "saved_seconds": null,
+        "source_id": "ucp-tsa-v4"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/cache/core-repository-evidence/532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04/payload/repository_analysis_run_manifest.json",
+        "basis": "content_addressed_completed_artifact",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+        "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04",
+        "saved_seconds": null,
+        "source_id": "ucp-tsa-v4"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/cache/core-repository-evidence/9b157ed7f3c8740d703999d9e4bd17b5d11b2d83efc3ae84ba4e748600e97fb3/payload/repository_analysis_run_manifest.json",
+        "basis": "canonical_producer_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 117.40790429199978,
+        "invalidation_reason": "cache_miss",
+        "node_id": "analyzer:sql-analysis-analyzer:custom_b2c_insurance",
+        "producer_id": "code-analyzer-core:sql-analysis-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "9b157ed7f3c8740d703999d9e4bd17b5d11b2d83efc3ae84ba4e748600e97fb3",
+        "saved_seconds": null,
+        "source_id": "custom_b2c_insurance"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/001-code-declared-data-model/materialization-result.json",
+        "basis": "effective_inputs_materializer_contract",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "materialization:code-declared-data-model",
+        "producer_id": "knowledge-layer-core:code-declared-data-model",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "c90cca1ce8b8b08d889236f8ebc0edc93e962c63ed626333a4eb12eb9a1e94d8",
+        "saved_seconds": 12.74694690399997,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/002-model-storage-semantics/materialization-result.json",
+        "basis": "effective_inputs_materializer_contract",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "materialization:model-storage-semantics",
+        "producer_id": "knowledge-layer-core:model-storage-semantics",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "be0812ab940b1d7b60b92d9a324b7aefa3751b5638f5b8d7ce0167794ef9364c",
+        "saved_seconds": 6.3124976320000314,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/003-physical-model/materialization-result.json",
+        "basis": "effective_inputs_materializer_contract",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "materialization:physical-model",
+        "producer_id": "knowledge-layer-core:physical-model",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "382b34cedde43857c84a0c7ba78716e46c06699dee00f526cd85ec88666be162",
+        "saved_seconds": 1.7478310209999108,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/004-sql-analysis/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 66.71728242799986,
+        "invalidation_reason": "cache_miss",
+        "node_id": "materialization:sql-analysis",
+        "producer_id": "knowledge-layer-core:sql-analysis",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "1ac8353f11ad6b69370a1d7422518a8a970993b167f70ca7d6981712105d5971",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "reused",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/005-logical-storage-mapping/materialization-result.json",
+        "basis": "effective_inputs_materializer_contract",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": null,
+        "node_id": "materialization:logical-storage-mapping",
+        "producer_id": "knowledge-layer-core:logical-storage-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "17856251a4017805853526bcace21b8a5447ebfb6fb36e86fe36b32a418daa43",
+        "saved_seconds": 1.5158697109999366,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/006-cross-artifact-data-model-mapping/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 6.357431686999917,
+        "invalidation_reason": "cache_miss",
+        "node_id": "materialization:cross-artifact-data-model-mapping",
+        "producer_id": "knowledge-layer-core:cross-artifact-data-model-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "1c1025314bdee4335c05f22e98c9108e56f1b9128640b4fc03aead00732a2e05",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/007-sql-target-source-mapping/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 16.471780968000076,
+        "invalidation_reason": "cache_miss",
+        "node_id": "materialization:sql-target-source-mapping",
+        "producer_id": "knowledge-layer-core:sql-target-source-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "ea57a5de96fed5fb79db3d64eb49330b350daf9915a2cd14eada42d34d8fbac4",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-b-selective/execution/materialization-execution/materializations/008-data-model-attribute-extension-context/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 9.281379302999994,
+        "invalidation_reason": "cache_miss",
+        "node_id": "materialization:data-model-attribute-extension-context",
+        "producer_id": "knowledge-layer-core:data-model-attribute-extension-context",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "fecfb95151f523ff9f3e431508bb16f4d8f0e909e3dc121013cb1244f90ac285",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      }
+    ],
+    "schema_version": "producer_reuse_decisions/v1",
+    "summary": {
+      "built": 5,
+      "reused": 8
+    }
+  },
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships",
+    "common.cross-artifact-data-model-mapping",
+    "common.data-model-agent-join-semantics",
+    "common.data-model-attribute-extension-context",
+    "common.data-model-sql-anchor-context",
+    "common.logical-field-sql-usage",
+    "common.logical-storage-identity",
+    "common.logical-storage-mapping",
+    "common.logical-storage-relationship",
+    "common.model-storage-semantics",
+    "common.physical-model",
+    "common.physical-model.columns",
+    "common.physical-model.gaps",
+    "common.physical-model.keys",
+    "common.physical-model.pdm",
+    "common.physical-model.relationships",
+    "common.physical-model.tables",
+    "common.relation-materialization",
+    "common.sql-analysis",
+    "common.sql-attribute-insertion-context",
+    "common.sql-field-calculation",
+    "common.sql-physical-correspondence",
+    "common.sql-relation-fields",
+    "common.sql-relation-materialization",
+    "common.sql-relation-semantic-roles",
+    "common.sql-source-inventory",
+    "common.sql-source-inventory-export",
+    "common.sql-target-column-lineage",
+    "common.sql-target-resolution",
+    "common.sql-target-source-mapping",
+    "common.sql-target-value-source-mapping",
+    "common.sql-workflow-bindings",
+    "common.sql-workflow-context",
+    "common.sql-workflow-dependency",
+    "common.storage-identities",
+    "common.storage-reference-lineage",
+    "common.storage-sql-correspondence",
+    "common.value-origin-physical-lineage",
+    "common.workflow-dependency",
+    "common.workflow-projection-physical-correspondence"
+  ],
+  "result_fingerprint": "2319d6f565b808545cbaef0db10247d283b8e6d738e1fe34d6cff244aa3534fb",
+  "schema_version": "knowledge_execution_result/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "ucp-data-model"
+  },
+  "status": "completed"
+}
+ELAPSED=221.72

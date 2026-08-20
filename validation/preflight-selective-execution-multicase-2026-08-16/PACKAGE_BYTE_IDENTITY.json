@@ -1,0 +1,53 @@
+{
+  "all_packages_byte_identical": true,
+  "baseline_canonical": "Block E / preflight applicability runner selection",
+  "date": "2026-08-16",
+  "packages": {
+    "code-analyzer-core": {
+      "byte_identical": true,
+      "file_count": 516,
+      "source_tree_manifest_sha256": "b18020c7167e94eb5abe6a581e8532320be2f1c5d9389aecc18928f99e3966f5"
+    },
+    "evidence-common": {
+      "byte_identical": true,
+      "file_count": 11,
+      "source_tree_manifest_sha256": "95ebbb5bbf0b01be196a5aa3c2bbf132a3d5dad3b4848ede688a72870719d60a"
+    },
+    "knowledge-api": {
+      "byte_identical": true,
+      "file_count": 237,
+      "source_tree_manifest_sha256": "8a51e0d90d226453fe1a95871db4ba7378c58800c99960329222cfc070dc96c8"
+    },
+    "knowledge-control-plane": {
+      "byte_identical": true,
+      "file_count": 393,
+      "source_tree_manifest_sha256": "2dc7370751bd6f190f745d43704aab30a44168ca6844be7580f820af4f7d377f"
+    },
+    "knowledge-integration": {
+      "byte_identical": true,
+      "file_count": 35,
+      "source_tree_manifest_sha256": "dbc4d7905e5ddd58ee17ced4e51c618b8b500efe47b2c99ed973720602d5270b"
+    },
+    "knowledge-layer-core": {
+      "byte_identical": true,
+      "file_count": 686,
+      "source_tree_manifest_sha256": "da75769dfbc3aaefb10e2242582a3e47acd17e662635718df37a8a45cbb1fd02"
+    },
+    "knowledge-reporting": {
+      "byte_identical": true,
+      "file_count": 256,
+      "source_tree_manifest_sha256": "1de9613dd527f0dd641a82289d20eb79cf23c59209aae043e14f9f1024a5b5d9"
+    },
+    "prepared-knowledge-runtime": {
+      "byte_identical": true,
+      "file_count": 48,
+      "source_tree_manifest_sha256": "01f1311c8fbe982eb5385e6f4aae6912008e7cfa0324f24e3ce4408056059770"
+    },
+    "static-analysis-runner": {
+      "byte_identical": true,
+      "file_count": 511,
+      "source_tree_manifest_sha256": "60a18b8d4c3f5ec629a972273f16d73aa9d1b08731732f0e347756a93bf56362"
+    }
+  },
+  "schema_version": "1"
+}

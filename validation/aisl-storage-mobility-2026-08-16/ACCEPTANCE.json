@@ -1,0 +1,25 @@
+{
+  "derived_read": "PASS",
+  "knowledge_products": [
+    {
+      "artifact_id": "java_type_structure_pilot",
+      "content_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "model_kind": "java-type-structure-evidence",
+      "origin_kind": "observed"
+    },
+    {
+      "artifact_id": "code-product",
+      "content_fingerprint": "df3022b05be79021d15a73a9f7c13cdd74226cf93431781b27239290de20ff0e",
+      "model_kind": "code-declared-data-model",
+      "origin_kind": "derived"
+    }
+  ],
+  "logical_locator_count": 3,
+  "new_store_exists": true,
+  "observed_read": "PASS",
+  "old_store_absent": true,
+  "producer_absent": true,
+  "revision_id": "rev-a9eb627642530740ceed95fa",
+  "revision_unchanged": true,
+  "status": "PASS"
+}

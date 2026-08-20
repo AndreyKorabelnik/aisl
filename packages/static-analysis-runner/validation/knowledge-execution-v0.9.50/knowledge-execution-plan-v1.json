@@ -1,0 +1,211 @@
+{
+  "diagnostics": [],
+  "expected_outputs": {
+    "capabilities": [
+      "common.code-declared-data-model",
+      "common.code-declared-entities",
+      "common.code-declared-fields",
+      "common.code-declared-inheritance",
+      "common.code-declared-relationships"
+    ],
+    "knowledge_models": [
+      "code-declared-data-model/v1"
+    ]
+  },
+  "foundation_requirements": [
+    "java_syntax_index",
+    "source_file_inventory"
+  ],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-type-structure-analyzer:repository",
+        "to": "evidence:planned_evidence_5cc0cf26ad9d449edab5518d"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_5cc0cf26ad9d449edab5518d",
+        "to": "materialization:code-declared-data-model"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:code-declared-data-model",
+        "to": "knowledge:planned_knowledge_396d95d0b0650e930a967e23"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:repository",
+        "to": "analyzer:java-type-structure-analyzer:repository"
+      }
+    ],
+    "execution_order": [
+      "analyzer:java-type-structure-analyzer:repository",
+      "materialization:code-declared-data-model"
+    ],
+    "nodes": [
+      {
+        "analyzer_id": "java-type-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "contract_fingerprint": "37d2c9d6e4fd794b4cadccf47b6996692913ca0999b6e820097f183a05335ca9",
+            "optional_by": [],
+            "required_by": [
+              "code-declared-data-model"
+            ],
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index",
+          "source_file_inventory"
+        ],
+        "node_id": "analyzer:java-type-structure-analyzer:repository",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "repository",
+        "source_snapshot_id": "source_snapshot_8ac73dae6f3c4c4af26d3a6a"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_5cc0cf26ad9d449edab5518d",
+          "artifact_kind": "java-type-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-type-structure-analyzer:repository",
+          "schema_version": "java-type-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_5cc0cf26ad9d449edab5518d",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_396d95d0b0650e930a967e23",
+          "availability": "planned",
+          "model_kind": "code-declared-data-model",
+          "producer_materialization_node_id": "materialization:code-declared-data-model",
+          "schema_version": "code-declared-data-model/v1",
+          "source_materialization_id": "code-declared-data-model"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.code-declared-data-model",
+          "common.code-declared-entities",
+          "common.code-declared-fields",
+          "common.code-declared-inheritance",
+          "common.code-declared-relationships"
+        ],
+        "expected_models": [
+          "code-declared-data-model/v1"
+        ],
+        "knowledge_id": "code-declared-data-model",
+        "materialization_id": "code-declared-data-model",
+        "node_id": "materialization:code-declared-data-model",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:repository",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "file_count": 1,
+          "languages": [
+            "java"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/work_iter2/real-smoke/repository"
+          },
+          "revision": {
+            "content_sha256": "9c518426cba2c5711fbc1984bff6418840a28a7f5094987445c2260335b0e258",
+            "kind": "content",
+            "revision": "sha256:9c518426cba2c5711fbc1984bff6418840a28a7f5094987445c2260335b0e258"
+          },
+          "snapshot_fingerprint": "8ac73dae6f3c4c4af26d3a6a1807f7e564053284d3bf022aacfc8d8993a064b2",
+          "snapshot_id": "source_snapshot_8ac73dae6f3c4c4af26d3a6a",
+          "source_id": "repository",
+          "source_kind": "repository"
+        }
+      }
+    ],
+    "topological_order": [
+      "source:repository",
+      "analyzer:java-type-structure-analyzer:repository",
+      "evidence:planned_evidence_5cc0cf26ad9d449edab5518d",
+      "materialization:code-declared-data-model",
+      "knowledge:planned_knowledge_396d95d0b0650e930a967e23"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "7f6c9b91a3b30611f6540731c465e7306228404659b95fb24b114c688e5d961d",
+    "knowledge_input_inventory_fingerprint": "f094fe0be2eedc201a99e0d452eede6c2ccae45d18b09901b0399e08fc5f7d98",
+    "knowledge_materialization_catalog_fingerprint": "25ab785a6ac859287824ff321b811bf42c0cbebbd2ddbd28f61e63e40f18357c"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "73b47489d779d61a62a158c7df5371fa9424ee72a4389f37d26df62a2b5b8a5d",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.9.49"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "726655ca796a0b5e747199a0fa1c2665fcdc1bcdfd14e88f86eee43008f3c01f",
+    "knowledge_profile_fingerprint": "6b8cdf45dac90bdebb90569baa7b41207db41c0273a84cee0dc707d24d09a5c0",
+    "knowledge_profile_id": "knowledge-execute-real-smoke",
+    "knowledge_resolution_plan_fingerprint": "dbeb453dcc11fd4ae1358274f945145443b9271fdf995f688663eeec61f84a13",
+    "resolved_knowledge_ids": [
+      "code-declared-data-model"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "real-smoke-repository"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "dual_write": "not_supported",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "legacy_fallback": "not_supported",
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 1,
+    "execution_node_count": 2,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  }
+}

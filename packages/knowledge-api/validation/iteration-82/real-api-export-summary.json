@@ -1,0 +1,39 @@
+{
+  "revision_id": "rev-335b70410d182bc87d8a2901",
+  "json_item_count": 201,
+  "json_byte_size": 1436568,
+  "json_elapsed_seconds": 0.341553,
+  "jsonl_record_count": 202,
+  "jsonl_byte_size": 1445593,
+  "jsonl_sha256": "0093cc47ef94dcb1af98dd8ec63217c272f5265c7da934fc0bac2488c7ebc2b4",
+  "jsonl_elapsed_seconds": 0.346589,
+  "source_inventory_coverage": {
+    "status": "partial",
+    "column_usages": {
+      "total": 11239,
+      "relation_field_candidates": 11061,
+      "resolved_relation_fields": 10854,
+      "unresolved_relation_fields": 207,
+      "relation_field_resolution_rate": 0.9812855980471928
+    },
+    "resolved_by_relation_kind": {
+      "cte": 5534,
+      "derived": 901,
+      "physical": 1393,
+      "physical_template": 3026
+    },
+    "non_source_values": {
+      "semantic_parameters": 151,
+      "projection_outputs": 0,
+      "generated_fields": 27
+    },
+    "limitations": {
+      "ambiguous_unqualified": 205,
+      "relation_unavailable": 2
+    },
+    "coverage_policy": "semantic parameters, projection outputs and generated LATERAL/EXPLODE values do not reduce source-field resolution"
+  },
+  "relation_evidence_count": 433,
+  "field_count": 1478,
+  "field_evidence_count": 3130
+}

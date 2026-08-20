@@ -1,0 +1,17 @@
+{
+  "artifact_count": 5,
+  "capability_count": 17,
+  "coverage_status": "complete",
+  "effective_table_count": 2,
+  "execution_schema": "knowledge_execution_result/v1",
+  "model_kinds": [
+    "code-declared-data-model",
+    "effective-data-model",
+    "logical-physical-model-mapping",
+    "model-domain-cluster-view",
+    "physical-data-model"
+  ],
+  "physical_table_count": 2,
+  "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+  "status": "passed"
+}

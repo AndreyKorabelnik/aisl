@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "forbidden_direct_dependencies": [],
+    "forbidden_production_tokens": {},
+    "knowledge_execution_only": true,
+    "legacy_database_rejected": true,
+    "openapi_forbidden_routes": [],
+    "openapi_missing_required_routes": [],
+    "openapi_path_count": 33,
+    "removed_files_absent": true,
+    "required_files_present": true,
+    "runtime_schema_v2": true,
+    "version": "2.0.0a81"
+  },
+  "errors": [],
+  "policies": {
+    "assistant_dispatch": "published_capabilities_only",
+    "dual_write": "not_supported",
+    "job_route": "knowledge_execution_only",
+    "legacy_fallback": "not_supported",
+    "runner_dispatch": "generic_contract_driven",
+    "runtime_database_migration": "not_supported",
+    "semantic_owner": "knowledge-api"
+  },
+  "schema_version": "analysis_ui_architecture_audit/v1",
+  "status": "passed"
+}

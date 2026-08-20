@@ -1,0 +1,16 @@
+{
+  "execution_fingerprint": "5bb5aedddc78bc2bb945339e829b726f928ae9adbc9763fcdc9ae754eccc5671",
+  "execution_order": ["code-declared-data-model"],
+  "knowledge_artifact_count": 1,
+  "materialization_count": 1,
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships"
+  ],
+  "schema_version": "knowledge_materialization_execution_run/v1",
+  "scope_id": "runner0946_smoke",
+  "status": "completed"
+}

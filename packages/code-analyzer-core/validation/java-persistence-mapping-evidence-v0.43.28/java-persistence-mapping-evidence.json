@@ -1,0 +1,286 @@
+{
+  "artifact_id": "java_persistence_mapping_0933b31e59a12fb7073419c6",
+  "artifact_kind": "java-persistence-mapping-evidence",
+  "content_fingerprint": "0933b31e59a12fb7073419c649e96fde46d1048962f9e7128708ebf0b68efe3b",
+  "contract_version": "core_evidence_artifact_contract/v1",
+  "coverage": {
+    "coverage_status": "complete",
+    "diagnostic_count": 0,
+    "java_files_failed": 0,
+    "java_files_in_scope": 1,
+    "java_files_parsed": 1,
+    "java_files_with_parse_errors": 0,
+    "mapping_gap_count": 0,
+    "persistence_field_mapping_count": 4,
+    "persistence_inheritance_mapping_count": 0,
+    "persistence_key_mapping_count": 2,
+    "persistence_relationship_mapping_count": 1,
+    "persistence_type_mapping_count": 2,
+    "unsupported_composite_annotation_count": 0
+  },
+  "diagnostics": [],
+  "foundation": {
+    "contract_version": null,
+    "fingerprint": null,
+    "sections": [],
+    "used": false
+  },
+  "parameters": {
+    "include_test_sources": true,
+    "jpa_default_naming_inference": false,
+    "language": "java",
+    "mapping_policy": "explicit_persistence_annotations_only",
+    "record_limit": null
+  },
+  "payload": {
+    "mapping_gaps": [],
+    "persistence_field_mappings": [
+      {
+        "annotation_ids": [
+          "java_annotation_cc15aa61a8c84a11d3506ee2",
+          "java_annotation_e85f25bf8806120d553a65a1"
+        ],
+        "candidate_target_type_ids": [],
+        "column_name_explicit": "address_id",
+        "column_table_name_explicit": null,
+        "declared_type_expression": "String",
+        "field_id": "java_field_cdc416ac40b948dc01169e4c",
+        "field_name": "id",
+        "join_column_name_explicit": null,
+        "mapping_basis": "explicit_java_persistence_annotations",
+        "nullable_declared": null,
+        "owner_fully_qualified_name": "example.model.Address",
+        "owner_type_id": "java_type_923561a6c65fd0b61bee03c1",
+        "persistence_field_mapping_id": "java_persistence_field_1c3ac81456b21821295700d5",
+        "persistence_role": "id",
+        "referenced_column_name_explicit": null,
+        "relationship_kind": null,
+        "relationship_mapped_by_explicit": null,
+        "resolved_target_type_id": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 10,
+          "line_start": 10,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "annotation_ids": [
+          "java_annotation_c66616d4accb85532072ada9",
+          "java_annotation_e9e0630ce0176b4998e6db74"
+        ],
+        "candidate_target_type_ids": [
+          "java_type_923561a6c65fd0b61bee03c1"
+        ],
+        "column_name_explicit": null,
+        "column_table_name_explicit": null,
+        "declared_type_expression": "Address",
+        "field_id": "java_field_ef48adc1daa9e0978a25ff34",
+        "field_name": "address",
+        "join_column_name_explicit": "address_id",
+        "mapping_basis": "explicit_java_persistence_annotations",
+        "nullable_declared": null,
+        "owner_fully_qualified_name": "example.model.Customer",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "persistence_field_mapping_id": "java_persistence_field_48ebb1701a20fd40507f1824",
+        "persistence_role": "relationship",
+        "referenced_column_name_explicit": "address_id",
+        "relationship_kind": "ManyToOne",
+        "relationship_mapped_by_explicit": null,
+        "resolved_target_type_id": "java_type_923561a6c65fd0b61bee03c1",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 7,
+          "line_start": 7,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "annotation_ids": [
+          "java_annotation_8e0e5d7f3a4e8a15a91ae99a",
+          "java_annotation_bdeacb78b0801e2be30a9d94"
+        ],
+        "candidate_target_type_ids": [],
+        "column_name_explicit": "customer_id",
+        "column_table_name_explicit": null,
+        "declared_type_expression": "String",
+        "field_id": "java_field_e869042b247e51d6f4966898",
+        "field_name": "id",
+        "join_column_name_explicit": null,
+        "mapping_basis": "explicit_java_persistence_annotations",
+        "nullable_declared": false,
+        "owner_fully_qualified_name": "example.model.Customer",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "persistence_field_mapping_id": "java_persistence_field_82209ac1a02aea3069f5fe8b",
+        "persistence_role": "id",
+        "referenced_column_name_explicit": null,
+        "relationship_kind": null,
+        "relationship_mapped_by_explicit": null,
+        "resolved_target_type_id": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 5,
+          "line_start": 5,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "annotation_ids": [
+          "java_annotation_ef0d196c837e24302ba99299"
+        ],
+        "candidate_target_type_ids": [],
+        "column_name_explicit": "full_name",
+        "column_table_name_explicit": null,
+        "declared_type_expression": "String",
+        "field_id": "java_field_ad1c22240629004388ab4db5",
+        "field_name": "name",
+        "join_column_name_explicit": null,
+        "mapping_basis": "explicit_java_persistence_annotations",
+        "nullable_declared": null,
+        "owner_fully_qualified_name": "example.model.Customer",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "persistence_field_mapping_id": "java_persistence_field_809639b76d123bac6685184b",
+        "persistence_role": "basic",
+        "referenced_column_name_explicit": null,
+        "relationship_kind": null,
+        "relationship_mapped_by_explicit": null,
+        "resolved_target_type_id": null,
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 6,
+          "line_start": 6,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      }
+    ],
+    "persistence_inheritance_mappings": [],
+    "persistence_key_mappings": [
+      {
+        "annotation_ids": [
+          "java_annotation_cc15aa61a8c84a11d3506ee2",
+          "java_annotation_e85f25bf8806120d553a65a1"
+        ],
+        "column_name_explicit": "address_id",
+        "field_id": "java_field_cdc416ac40b948dc01169e4c",
+        "id_class_expression": null,
+        "key_kind": "id",
+        "owner_type_id": "java_type_923561a6c65fd0b61bee03c1",
+        "persistence_key_mapping_id": "java_persistence_key_8888cb696ca81779d5f9d789",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 10,
+          "line_start": 10,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      },
+      {
+        "annotation_ids": [
+          "java_annotation_8e0e5d7f3a4e8a15a91ae99a",
+          "java_annotation_bdeacb78b0801e2be30a9d94"
+        ],
+        "column_name_explicit": "customer_id",
+        "field_id": "java_field_e869042b247e51d6f4966898",
+        "id_class_expression": null,
+        "key_kind": "id",
+        "owner_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "persistence_key_mapping_id": "java_persistence_key_bbcbd09f60e3ea0eb343db92",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 5,
+          "line_start": 5,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        }
+      }
+    ],
+    "persistence_relationship_mappings": [
+      {
+        "annotation_ids": [
+          "java_annotation_c66616d4accb85532072ada9",
+          "java_annotation_e9e0630ce0176b4998e6db74"
+        ],
+        "candidate_target_type_ids": [
+          "java_type_923561a6c65fd0b61bee03c1"
+        ],
+        "field_id": "java_field_ef48adc1daa9e0978a25ff34",
+        "join_column_name_explicit": "address_id",
+        "mapped_by_explicit": null,
+        "persistence_relationship_mapping_id": "java_persistence_relationship_48ebb1701a20fd40507f1824",
+        "referenced_column_name_explicit": "address_id",
+        "relationship_kind": "ManyToOne",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 7,
+          "line_start": 7,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "source_type_id": "java_type_eb225d6c951ed193ed3b358c",
+        "target_type_id": "java_type_923561a6c65fd0b61bee03c1"
+      }
+    ],
+    "persistence_type_mappings": [
+      {
+        "annotation_ids": [
+          "java_annotation_2358ed5a7096e9548e7c0802",
+          "java_annotation_789a8a6b2613b3d04b6ad63e"
+        ],
+        "catalog_name_explicit": null,
+        "entity_name_explicit": null,
+        "fully_qualified_name": "example.model.Address",
+        "mapping_basis": "explicit_java_persistence_annotations",
+        "persistence_kind": "entity",
+        "persistence_type_mapping_id": "java_persistence_type_92b6fc95d8fb6efd104092ef",
+        "schema_name_explicit": "crm",
+        "simple_name": "Address",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 9,
+          "line_start": 9,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "table_name_explicit": "address_tbl",
+        "type_id": "java_type_923561a6c65fd0b61bee03c1"
+      },
+      {
+        "annotation_ids": [
+          "java_annotation_35161d303a01e9948e4fd299",
+          "java_annotation_4bc5a4b2cc81a4b2437410f4"
+        ],
+        "catalog_name_explicit": null,
+        "entity_name_explicit": null,
+        "fully_qualified_name": "example.model.Customer",
+        "mapping_basis": "explicit_java_persistence_annotations",
+        "persistence_kind": "entity",
+        "persistence_type_mapping_id": "java_persistence_type_c766ad16eab89c84e23ec567",
+        "schema_name_explicit": "crm",
+        "simple_name": "Customer",
+        "source_ref": {
+          "extractor": "java_tree_sitter",
+          "line_end": 3,
+          "line_start": 3,
+          "repository_relative_path": "src/main/java/example/model/Customer.java"
+        },
+        "table_name_explicit": "customer_tbl",
+        "type_id": "java_type_eb225d6c951ed193ed3b358c"
+      }
+    ]
+  },
+  "producer": {
+    "analyzer_id": "java-persistence-mapping-analyzer",
+    "analyzer_version": "0.43.28",
+    "component": "code-analyzer-core"
+  },
+  "provenance": {
+    "execution_runtime": "core_evidence_runtime/v1",
+    "parser_provider": "tree_sitter",
+    "semantic_routing": "artifact_kind_plus_schema_version",
+    "source_structural_artifact_fingerprint": "15875066aa6a1b6e84c565b206a1e6bbf3dd69281faf5aec47b13ed2b97fb7b1"
+  },
+  "schema_version": "java-persistence-mapping-evidence/v1",
+  "source_snapshot": {
+    "file_count": 1,
+    "fingerprint": "4786aff5ce7e8adc79df3ed5f0a98f57d2adf031a55f7c3a2efc1c01e99baae2",
+    "revision": null,
+    "scope": "java_source_files",
+    "source_id": "core04328-smoke"
+  }
+}

@@ -1,0 +1,11 @@
+queries:
+  - get_scope_overview
+  - get_repository_composition
+  - get_technologies
+  - list_interfaces: {direction: inbound, boundary_kinds: [rest_request, kafka_consume]}
+  - list_integrations
+  - list_events
+  - list_data_objects: {representative: true}
+  - list_relationships
+  - get_gap_summary
+  - get_representative_journeys

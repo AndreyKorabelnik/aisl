@@ -1,0 +1,217 @@
+{
+  "job_id": "job-9084be7bacd348f299b074b5b9cb1989",
+  "display_name": "tiny-data-model-no-storage",
+  "kind": "knowledge_execution",
+  "status": "succeeded",
+  "scenario_id": "build-data-model-v1",
+  "knowledge_profile_id": "data-model-v1",
+  "production_id": null,
+  "production_revision": null,
+  "target": {
+    "repository_id": null,
+    "repository_ids": [
+      "tiny-no-storage-d6389bbf1f"
+    ],
+    "system_id": "tiny-data-model-no-storage",
+    "physical_model_path": null,
+    "knowledge_revisions": []
+  },
+  "progress": {
+    "current_stage": null,
+    "message": "Knowledge execution completed"
+  },
+  "created_at": "2026-08-17T16:54:39.469427Z",
+  "started_at": "2026-08-17T16:54:39.511519Z",
+  "finished_at": "2026-08-17T16:54:53.851238Z",
+  "schema_version": "generic_api/v1",
+  "knowledge_ids": [
+    "code-declared-data-model"
+  ],
+  "build_report": false,
+  "report_profile": null,
+  "audience": "architecture",
+  "detail_level": "standard",
+  "focus": [],
+  "parameters": {},
+  "source_snapshots": [],
+  "source_snapshot_fingerprint": null,
+  "output": {
+    "output_path": null,
+    "replace": false
+  },
+  "command": {
+    "executable": "static-analysis-runner",
+    "arguments": [
+      "knowledge-execute",
+      "--execution-plan",
+      "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/tiny-data-model-no-storage/build-data-model-v1/2026-08-17T16-54-39Z__job-9084be7b/contracts/knowledge-execution-plan.json",
+      "--core-evidence-catalog",
+      "/mnt/data/data_model_enrichment_work/auto-code-analysis-current-data-model-storage-enrichment-2026-08-17/packages/knowledge-control-plane/src/knowledge_control_plane/resources/runtime_contracts/core-evidence-contract-catalog.json",
+      "--materialization-catalog",
+      "/mnt/data/data_model_enrichment_work/auto-code-analysis-current-data-model-storage-enrichment-2026-08-17/packages/knowledge-control-plane/src/knowledge_control_plane/resources/runtime_contracts/knowledge-materialization-catalog.json",
+      "--output",
+      "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/tiny-data-model-no-storage/build-data-model-v1/2026-08-17T16-54-39Z__job-9084be7b/knowledge-execution",
+      "--replace",
+      "--producer-cache-root",
+      "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts",
+      "--duckdb-memory-limit",
+      "1GB",
+      "--duckdb-threads",
+      "1"
+    ],
+    "working_directory": "/mnt/data/data_model_enrichment_work/ucp_e2e",
+    "environment_names": [],
+    "secrets_redacted": true
+  },
+  "exit_code": 0,
+  "failure": null,
+  "artifact_count": 39,
+  "event_cursor": 228,
+  "stages": [
+    {
+      "stage_id": "checkout",
+      "name": "Подготовка репозитория",
+      "description": "Проверка или загрузка выбранной ревизии исходников",
+      "progress_mode": "indeterminate",
+      "status": "succeeded",
+      "progress_percent": null,
+      "started_at": "2026-08-17T16:54:39.537300Z",
+      "finished_at": "2026-08-17T16:54:39.636912Z",
+      "message": "Source repositories ready: 1",
+      "artifact_count": 0
+    },
+    {
+      "stage_id": "prepare_inputs",
+      "name": "Подготовка входов",
+      "description": "Формирование immutable Knowledge Profile snapshot и декларативного context",
+      "progress_mode": "indeterminate",
+      "status": "succeeded",
+      "progress_percent": null,
+      "started_at": "2026-08-17T16:54:39.706110Z",
+      "finished_at": "2026-08-17T16:54:41.088041Z",
+      "message": "Runner normalized execution inputs",
+      "artifact_count": 4
+    },
+    {
+      "stage_id": "runner_plan",
+      "name": "Построение плана Runner",
+      "description": "Runner валидирует профиль, нормализует входы и компилирует execution DAG",
+      "progress_mode": "indeterminate",
+      "status": "succeeded",
+      "progress_percent": null,
+      "started_at": "2026-08-17T16:54:41.125883Z",
+      "finished_at": "2026-08-17T16:54:42.828289Z",
+      "message": "Runner execution DAG is ready",
+      "artifact_count": 5
+    },
+    {
+      "stage_id": "runner_execution",
+      "name": "Выполнение Runner",
+      "description": "Runner выполняет канонический Producer plan и публикует Prepared Knowledge artifacts",
+      "progress_mode": "indeterminate",
+      "status": "succeeded",
+      "progress_percent": null,
+      "started_at": "2026-08-17T16:54:42.852651Z",
+      "finished_at": "2026-08-17T16:54:53.570309Z",
+      "message": "Runner completed; knowledge artifacts produced: 3",
+      "artifact_count": 39
+    },
+    {
+      "stage_id": "publication",
+      "name": "Публикация ревизии",
+      "description": "Публикация knowledge_execution_result/v2 в Knowledge API",
+      "progress_mode": "indeterminate",
+      "status": "succeeded",
+      "progress_percent": null,
+      "started_at": "2026-08-17T16:54:53.611316Z",
+      "finished_at": "2026-08-17T16:54:53.827684Z",
+      "message": "Revision published: rev-934a969e565484bb031236af",
+      "artifact_count": 39
+    }
+  ],
+  "reuse": {
+    "policy": "reuse_if_unchanged",
+    "producer_nodes": [
+      {
+        "node_id": "analyzer:java-model-storage-analyzer:tiny-no-storage",
+        "producer_kind": "core-repository-evidence",
+        "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+        "producer_version": "0.44.23a7",
+        "source_id": "tiny-no-storage",
+        "action": "built",
+        "reuse_key": "6be4e19645c58908afc765cc041ba61613da8eefb76e072f5651e429614c1297",
+        "basis": "canonical_producer_execution",
+        "invalidation_reason": "cache_miss",
+        "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts/core-repository-evidence/6be4e19645c58908afc765cc041ba61613da8eefb76e072f5651e429614c1297/payload/repository_analysis_run_manifest.json",
+        "elapsed_seconds": null,
+        "saved_seconds": null,
+        "diagnostics": []
+      },
+      {
+        "node_id": "analyzer:java-type-structure-analyzer:tiny-no-storage",
+        "producer_kind": "core-repository-evidence",
+        "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+        "producer_version": "0.44.23a7",
+        "source_id": "tiny-no-storage",
+        "action": "built",
+        "reuse_key": "8758fc6bce96523e50e1aed6a54d20d371fbd7ea32bc32b7518568904aee9310",
+        "basis": "canonical_producer_execution",
+        "invalidation_reason": "cache_miss",
+        "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts/core-repository-evidence/8758fc6bce96523e50e1aed6a54d20d371fbd7ea32bc32b7518568904aee9310/payload/repository_analysis_run_manifest.json",
+        "elapsed_seconds": null,
+        "saved_seconds": null,
+        "diagnostics": []
+      },
+      {
+        "node_id": "materialization:code-declared-data-model",
+        "producer_kind": "knowledge-materialization",
+        "producer_id": "knowledge-layer-core:code-declared-data-model",
+        "producer_version": "0.61.0a38",
+        "source_id": "tiny-data-model-no-storage",
+        "action": "built",
+        "reuse_key": "420b0026b6014fcc77a0caa354a9fbf9af85dcb18b8c114b48b22b746d3e5f5a",
+        "basis": "canonical_materialization_execution",
+        "invalidation_reason": "cache_miss",
+        "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/tiny-data-model-no-storage/build-data-model-v1/2026-08-17T16-54-39Z__job-9084be7b/knowledge-execution/materialization-execution/materializations/001-code-declared-data-model/materialization-result.json",
+        "elapsed_seconds": 1.350857786000006,
+        "saved_seconds": null,
+        "diagnostics": []
+      },
+      {
+        "node_id": "materialization:model-storage-semantics",
+        "producer_kind": "knowledge-materialization",
+        "producer_id": "knowledge-layer-core:model-storage-semantics",
+        "producer_version": "0.61.0a38",
+        "source_id": "tiny-data-model-no-storage",
+        "action": "built",
+        "reuse_key": "ebd68d2d44b0b8a13c4ff16fb86d96dd48318ae96343b9b73a513f4dbebcc16f",
+        "basis": "canonical_materialization_execution",
+        "invalidation_reason": "cache_miss",
+        "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/tiny-data-model-no-storage/build-data-model-v1/2026-08-17T16-54-39Z__job-9084be7b/knowledge-execution/materialization-execution/materializations/002-model-storage-semantics/materialization-result.json",
+        "elapsed_seconds": 1.2504302400000142,
+        "saved_seconds": null,
+        "diagnostics": []
+      },
+      {
+        "node_id": "materialization:logical-storage-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_id": "knowledge-layer-core:logical-storage-mapping",
+        "producer_version": "0.61.0a38",
+        "source_id": "tiny-data-model-no-storage",
+        "action": "built",
+        "reuse_key": "e2f1900c0e373d63d3b18c366f864c3e109215175630c5b5597270e1954efb95",
+        "basis": "canonical_materialization_execution",
+        "invalidation_reason": "cache_miss",
+        "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/tiny-data-model-no-storage/build-data-model-v1/2026-08-17T16-54-39Z__job-9084be7b/knowledge-execution/materialization-execution/materializations/003-logical-storage-mapping/materialization-result.json",
+        "elapsed_seconds": 1.2155247190000864,
+        "saved_seconds": null,
+        "diagnostics": []
+      }
+    ]
+  },
+  "publication": {
+    "system_id": "tiny-data-model-no-storage",
+    "revision_id": "rev-934a969e565484bb031236af",
+    "knowledge_api_url": "http://127.0.0.1:18080/api/knowledge/v1/systems/tiny-data-model-no-storage"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "artifact_store_root": "/mnt/data/aisl_persistence_pilot_work/real_e2e_final/aisl/artifact-store",
+  "base_revision_id": "rev-ca39be021ceb0824d1b7fc5f",
+  "catalog": "/mnt/data/aisl_persistence_pilot_work/real_e2e_final/aisl/catalog.sqlite3",
+  "composed_revision_id": "rev-a1c957654c74d11dc2e6dcf7",
+  "physical_location_is_aisl_managed": true,
+  "producer_workspaces_deleted": true,
+  "r1": {
+    "derived_exact_dependency_product_ids": [
+      "java_type_structure_37e029f6a95d4594283f9cce"
+    ],
+    "derived_product_id": "knowledge_artifact_8f92532e7a65b921acad",
+    "derived_read_after_workspace_delete": "pass",
+    "observed_product_id": "java_type_structure_37e029f6a95d4594283f9cce",
+    "observed_read_after_workspace_delete": "pass"
+  },
+  "r2": {
+    "base_revision_still_queryable_after_all_workspaces_deleted": "pass",
+    "derived_exact_dependency_product_ids": [
+      "java_type_structure_42d7a8eef790a1821a3653eb"
+    ],
+    "derived_product_id": "knowledge_artifact_43755eda1917a4a7032c",
+    "derived_read_after_workspace_delete": "pass",
+    "observed_product_id": "java_type_structure_42d7a8eef790a1821a3653eb",
+    "observed_read_after_workspace_delete": "pass"
+  },
+  "schema_version": "aisl_persistence_pilot_real_acceptance/v1",
+  "status": "pass",
+  "system_id": "pilot-java"
+}

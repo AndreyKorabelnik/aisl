@@ -1,0 +1,12 @@
+{
+  "source_region_matches": 10,
+  "target_logical_name": "epk_client",
+  "recommended_target_relation": "custom_b2c_profile_fl.epk_client",
+  "target_relation_recommendation_status": "confirmed_unique",
+  "target_relation_recommendation_reasons": [
+    "single_observed_target_relation"
+  ],
+  "insertion_file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthplace_snp.sql",
+  "insertion_propagation_status": "probable",
+  "pdm_match_count": 9
+}

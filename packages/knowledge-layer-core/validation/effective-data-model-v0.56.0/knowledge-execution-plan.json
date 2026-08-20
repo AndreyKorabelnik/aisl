@@ -1,0 +1,517 @@
+{
+  "diagnostics": [],
+  "expected_outputs": {
+    "capabilities": [
+      "common.code-declared-data-model",
+      "common.code-declared-entities",
+      "common.code-declared-fields",
+      "common.code-declared-inheritance",
+      "common.code-declared-relationships",
+      "common.cross-layer-data-model",
+      "common.effective-data-model",
+      "common.entity-table-mapping",
+      "common.field-column-mapping",
+      "common.logical-physical-mapping",
+      "common.physical-model",
+      "common.physical-model.columns",
+      "common.physical-model.gaps",
+      "common.physical-model.keys",
+      "common.physical-model.pdm",
+      "common.physical-model.relationships",
+      "common.physical-model.tables"
+    ],
+    "knowledge_models": [
+      "code-declared-data-model/v1",
+      "effective-data-model/v1",
+      "knowledge_layer_physical_model/v1",
+      "logical-physical-model-mapping/v1",
+      "model-domain-cluster-view/v1"
+    ]
+  },
+  "foundation_requirements": [
+    "java_syntax_index",
+    "source_file_inventory"
+  ],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-persistence-mapping-analyzer:repository",
+        "to": "evidence:planned_evidence_d0f507f53dd2c6e12bd45aef"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:java-type-structure-analyzer:repository",
+        "to": "evidence:planned_evidence_5cc0cf26ad9d449edab5518d"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:physical-model-fixture",
+        "to": "materialization:physical-model"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_5cc0cf26ad9d449edab5518d",
+        "to": "materialization:code-declared-data-model"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_d0f507f53dd2c6e12bd45aef",
+        "to": "materialization:logical-physical-mapping"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_0bdac5386fba58020703bc0e",
+        "model_kind": "logical-physical-model-mapping",
+        "schema_versions": [
+          "logical-physical-model-mapping/v1"
+        ],
+        "to": "materialization:effective-data-model"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+        "model_kind": "code-declared-data-model",
+        "schema_versions": [
+          "code-declared-data-model/v1"
+        ],
+        "to": "materialization:effective-data-model"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+        "model_kind": "code-declared-data-model",
+        "schema_versions": [
+          "code-declared-data-model/v1"
+        ],
+        "to": "materialization:logical-physical-mapping"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_783fbb8147ce9421dbab5314",
+        "model_kind": "physical-data-model",
+        "schema_versions": [
+          "knowledge_layer_physical_model/v1"
+        ],
+        "to": "materialization:effective-data-model"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:planned_knowledge_783fbb8147ce9421dbab5314",
+        "model_kind": "physical-data-model",
+        "schema_versions": [
+          "knowledge_layer_physical_model/v1"
+        ],
+        "to": "materialization:logical-physical-mapping"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:code-declared-data-model",
+        "to": "knowledge:planned_knowledge_396d95d0b0650e930a967e23"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:effective-data-model",
+        "to": "knowledge:planned_knowledge_5325362eae7d4284764d5877"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:effective-data-model",
+        "to": "knowledge:planned_knowledge_949232f78d8a6c2c9d174cdc"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:logical-physical-mapping",
+        "to": "knowledge:planned_knowledge_0bdac5386fba58020703bc0e"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:physical-model",
+        "to": "knowledge:planned_knowledge_783fbb8147ce9421dbab5314"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:repository",
+        "to": "analyzer:java-persistence-mapping-analyzer:repository"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:repository",
+        "to": "analyzer:java-type-structure-analyzer:repository"
+      }
+    ],
+    "execution_order": [
+      "analyzer:java-persistence-mapping-analyzer:repository",
+      "analyzer:java-type-structure-analyzer:repository",
+      "materialization:code-declared-data-model",
+      "materialization:physical-model",
+      "materialization:logical-physical-mapping",
+      "materialization:effective-data-model"
+    ],
+    "nodes": [
+      {
+        "analyzer_id": "java-persistence-mapping-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "java-persistence-mapping-evidence",
+            "contract_fingerprint": "a2a93b7c82251593c8409e1cb3ffbe7659d977b69a57f76e067cdb1be7ba9031",
+            "optional_by": [],
+            "required_by": [
+              "logical-physical-mapping"
+            ],
+            "schema_version": "java-persistence-mapping-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "java-persistence-mapping-evidence",
+            "schema_version": "java-persistence-mapping-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index",
+          "source_file_inventory"
+        ],
+        "node_id": "analyzer:java-persistence-mapping-analyzer:repository",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "repository",
+        "source_snapshot_id": "source_snapshot_8f2e7f69af12dc328d8bbb24"
+      },
+      {
+        "analyzer_id": "java-type-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "contract_fingerprint": "37d2c9d6e4fd794b4cadccf47b6996692913ca0999b6e820097f183a05335ca9",
+            "optional_by": [],
+            "required_by": [
+              "code-declared-data-model"
+            ],
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "schema_version": "java-type-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [
+          "java_syntax_index",
+          "source_file_inventory"
+        ],
+        "node_id": "analyzer:java-type-structure-analyzer:repository",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "repository",
+        "source_snapshot_id": "source_snapshot_8f2e7f69af12dc328d8bbb24"
+      },
+      {
+        "artifact": {
+          "artifact_id": "physical-model-fixture",
+          "artifact_kind": "physical-model",
+          "availability": "available",
+          "content_fingerprint": "4231b3589f0d6fe557550becaae87b5fa2cc018e2d914dd252124cbd149fc9fe",
+          "contract_version": null,
+          "location": {
+            "bytes": 2069,
+            "exists": true,
+            "kind": "file",
+            "path": "/mnt/data/work_iter3/second-family-e2e/physical-input/manifest.json",
+            "sha256": "0e9547038830bbb8920edaabf89b10ea0c8ff1de98efe4e3c8734176d30bfb1f"
+          },
+          "producer_kind": "external_or_previous_execution",
+          "provenance": {},
+          "registration_manifest_path": null,
+          "schema_version": "physical-model/v1",
+          "scope_id": null,
+          "status": "completed"
+        },
+        "execution_required": false,
+        "node_id": "evidence:physical-model-fixture",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "required_by": [
+          "physical-data-model"
+        ],
+        "satisfaction_mode": "existing_typed_artifact"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_5cc0cf26ad9d449edab5518d",
+          "artifact_kind": "java-type-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-type-structure-analyzer:repository",
+          "schema_version": "java-type-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_5cc0cf26ad9d449edab5518d",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_d0f507f53dd2c6e12bd45aef",
+          "artifact_kind": "java-persistence-mapping-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:java-persistence-mapping-analyzer:repository",
+          "schema_version": "java-persistence-mapping-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_d0f507f53dd2c6e12bd45aef",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "required_by": [
+          "logical-physical-mapping"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_0bdac5386fba58020703bc0e",
+          "availability": "planned",
+          "model_kind": "logical-physical-model-mapping",
+          "producer_materialization_node_id": "materialization:logical-physical-mapping",
+          "schema_version": "logical-physical-model-mapping/v1",
+          "source_materialization_id": "logical-physical-mapping"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_0bdac5386fba58020703bc0e",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_396d95d0b0650e930a967e23",
+          "availability": "planned",
+          "model_kind": "code-declared-data-model",
+          "producer_materialization_node_id": "materialization:code-declared-data-model",
+          "schema_version": "code-declared-data-model/v1",
+          "source_materialization_id": "code-declared-data-model"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_5325362eae7d4284764d5877",
+          "availability": "planned",
+          "model_kind": "model-domain-cluster-view",
+          "producer_materialization_node_id": "materialization:effective-data-model",
+          "schema_version": "model-domain-cluster-view/v1",
+          "source_materialization_id": "effective-data-model"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_5325362eae7d4284764d5877",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_783fbb8147ce9421dbab5314",
+          "availability": "planned",
+          "model_kind": "physical-data-model",
+          "producer_materialization_node_id": "materialization:physical-model",
+          "schema_version": "knowledge_layer_physical_model/v1",
+          "source_materialization_id": "physical-model"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_783fbb8147ce9421dbab5314",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_949232f78d8a6c2c9d174cdc",
+          "availability": "planned",
+          "model_kind": "effective-data-model",
+          "producer_materialization_node_id": "materialization:effective-data-model",
+          "schema_version": "effective-data-model/v1",
+          "source_materialization_id": "effective-data-model"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_949232f78d8a6c2c9d174cdc",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.code-declared-data-model",
+          "common.code-declared-entities",
+          "common.code-declared-fields",
+          "common.code-declared-inheritance",
+          "common.code-declared-relationships"
+        ],
+        "expected_models": [
+          "code-declared-data-model/v1"
+        ],
+        "knowledge_id": "code-declared-data-model",
+        "materialization_id": "code-declared-data-model",
+        "node_id": "materialization:code-declared-data-model",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.cross-layer-data-model",
+          "common.effective-data-model"
+        ],
+        "expected_models": [
+          "effective-data-model/v1",
+          "model-domain-cluster-view/v1"
+        ],
+        "knowledge_id": "effective-data-model",
+        "materialization_id": "effective-data-model",
+        "node_id": "materialization:effective-data-model",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.entity-table-mapping",
+          "common.field-column-mapping",
+          "common.logical-physical-mapping"
+        ],
+        "expected_models": [
+          "logical-physical-model-mapping/v1"
+        ],
+        "knowledge_id": "logical-physical-mapping",
+        "materialization_id": "logical-physical-mapping",
+        "node_id": "materialization:logical-physical-mapping",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.physical-model",
+          "common.physical-model.columns",
+          "common.physical-model.gaps",
+          "common.physical-model.keys",
+          "common.physical-model.pdm",
+          "common.physical-model.relationships",
+          "common.physical-model.tables"
+        ],
+        "expected_models": [
+          "knowledge_layer_physical_model/v1"
+        ],
+        "knowledge_id": "physical-data-model",
+        "materialization_id": "physical-model",
+        "node_id": "materialization:physical-model",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:repository",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "file_count": 1,
+          "languages": [
+            "java"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/work_iter3/second-family-e2e/repository"
+          },
+          "revision": {
+            "content_sha256": "6427593dcbac074fad47313b0370a13a4298da3ad164606cd453595aac4b5122",
+            "kind": "content",
+            "revision": "sha256:6427593dcbac074fad47313b0370a13a4298da3ad164606cd453595aac4b5122"
+          },
+          "snapshot_fingerprint": "8f2e7f69af12dc328d8bbb24cd6fa5c61320992f04175bbce960f409d8623275",
+          "snapshot_id": "source_snapshot_8f2e7f69af12dc328d8bbb24",
+          "source_id": "repository",
+          "source_kind": "repository"
+        }
+      }
+    ],
+    "topological_order": [
+      "evidence:physical-model-fixture",
+      "source:repository",
+      "analyzer:java-persistence-mapping-analyzer:repository",
+      "analyzer:java-type-structure-analyzer:repository",
+      "evidence:planned_evidence_5cc0cf26ad9d449edab5518d",
+      "evidence:planned_evidence_d0f507f53dd2c6e12bd45aef",
+      "materialization:code-declared-data-model",
+      "materialization:physical-model",
+      "knowledge:planned_knowledge_396d95d0b0650e930a967e23",
+      "knowledge:planned_knowledge_783fbb8147ce9421dbab5314",
+      "materialization:logical-physical-mapping",
+      "knowledge:planned_knowledge_0bdac5386fba58020703bc0e",
+      "materialization:effective-data-model",
+      "knowledge:planned_knowledge_5325362eae7d4284764d5877",
+      "knowledge:planned_knowledge_949232f78d8a6c2c9d174cdc"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "06f8e45140d1ca87c4ed5193352a9ed03eae120acb8168ca03759acad9129419",
+    "knowledge_input_inventory_fingerprint": "60d49eecc80fb2601d89989da438c85cdf0a0f0baf8563c137e42f0f4b126c62",
+    "knowledge_materialization_catalog_fingerprint": "e0ceeaac43de1dace8a810a9b66682bd586491e885ac9d3ecc8be078f40bcd31"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "b734f41123d3db9d27fe5b687b49a3889731bcb16d18ef8529cfc5a21be6b6a5",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.9.51"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "e7463b8df9bb99cc123848e720924a0c41b488d7e5d146b03be146394dbf64ac",
+    "knowledge_profile_fingerprint": "1cb59f0fbfb52eedff4ec58eaa2f2298f0cddf6cdaf59ca26db6751a073cdf1c",
+    "knowledge_profile_id": "effective-data-model-composition-smoke",
+    "knowledge_resolution_plan_fingerprint": "0f1d9d20d3365d1f389ba46fafffe0c94637a2fb3de9d9ecf43d9b0122737ba8",
+    "resolved_knowledge_ids": [
+      "code-declared-data-model",
+      "effective-data-model",
+      "logical-physical-mapping",
+      "physical-data-model"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "dual_write": "not_supported",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "legacy_fallback": "not_supported",
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 2,
+    "execution_node_count": 6,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 1,
+    "materialization_node_count": 4,
+    "overall": "ready"
+  }
+}

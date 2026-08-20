@@ -1,0 +1,120 @@
+{
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_9342d695c08ee95d4e293952",
+      "analyzer_id": "java-type-structure-analyzer",
+      "analyzer_version": "0.43.27",
+      "artifact_ids": [
+        "java_type_structure_84f8e83cd77c4ec42fb00eaa"
+      ],
+      "parameters": {},
+      "required_by": [
+        "code-declared-data-model"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "java-type-structure-evidence",
+          "schema_version": "java-type-structure-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "f0f58d596b9c8f4ff5eab15219b5f50978f7a3b9c6671ad293d7844c21f228ea"
+      ],
+      "source_snapshot_ids": [
+        "smoke-repository"
+      ],
+      "status": "completed"
+    }
+  ],
+  "diagnostics": [],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "java_type_structure_84f8e83cd77c4ec42fb00eaa",
+      "artifact_kind": "java-type-structure-evidence",
+      "content_fingerprint": "84f8e83cd77c4ec42fb00eaad849a3446ac376a922345cf89d4bd01083db836a",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 0,
+        "coverage_status": "complete",
+        "enum_constant_declaration_count": 0,
+        "field_declaration_count": 5,
+        "inheritance_declaration_count": 1,
+        "java_files_discovered": 3,
+        "java_files_failed": 0,
+        "java_files_in_scope": 3,
+        "java_files_parsed": 3,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 3,
+        "type_reference_count": 2,
+        "unresolved_type_reference_count": 0,
+        "unsupported_declaration_count": 0
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 10971,
+        "kind": "file",
+        "path": "evidence/java-type-structure-evidence.json",
+        "sha256": "a7707e4d20b8aef6eb4690d54a6f485ae7a5f060fee59463f491ecbc52a86aae"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_9342d695c08ee95d4e293952",
+      "provenance": {
+        "core_artifact_provenance": {
+          "execution_runtime": "core_evidence_runtime/v1",
+          "parser_provider": "tree_sitter",
+          "semantic_routing": "artifact_kind_plus_schema_version"
+        },
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "java-type-structure-analyzer",
+          "analyzer_version": "0.43.27",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "source_snapshot": {
+          "file_count": 3,
+          "fingerprint": "f0f58d596b9c8f4ff5eab15219b5f50978f7a3b9c6671ad293d7844c21f228ea",
+          "revision": null,
+          "scope": "java_source_files",
+          "source_id": "smoke-repository"
+        }
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "status": "completed"
+    }
+  ],
+  "execution_id": "core_evidence_execution_30c9372ce7586cd7db078696",
+  "producer": {
+    "component": "code-analyzer-core",
+    "version": "0.43.27"
+  },
+  "request_fingerprint": "76e761311beae1b6f7edd25bb4d9e59374ef5e3e4bc9dcbef85c430bc88d9ccf",
+  "result_fingerprint": "0ef3c5842761136463538646a174ae6db44c95204ae587714c324047fb3bbe34",
+  "runtime_contract_id": "core_evidence_runtime/v1",
+  "schema_version": "core_evidence_execution_result/v1",
+  "source": {
+    "source_id": "smoke-repository",
+    "source_kind": "repository"
+  },
+  "source_snapshots": [
+    {
+      "file_count": 3,
+      "fingerprint": "f0f58d596b9c8f4ff5eab15219b5f50978f7a3b9c6671ad293d7844c21f228ea",
+      "revision": null,
+      "scope": "java_source_files",
+      "source_id": "smoke-repository"
+    }
+  ],
+  "status": "completed"
+}

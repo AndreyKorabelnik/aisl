@@ -1,0 +1,10 @@
+report_type: sql-change-analysis-report
+version: v1
+audiences: [business, architecture, engineering]
+required_headings:
+  - Краткий вывод
+  - Расчёт и происхождение поля
+  - Кандидаты таблицы назначения
+  - Контекст добавления атрибута
+  - Target column lineage
+  - Ограничения и доказательства

@@ -1,0 +1,17 @@
+{
+  "baseline_catalog_fingerprint": "1addbe689403df5285a6596a4791202019b621e00775d61e35b9f10479ad1c86",
+  "baseline_runner_version": "0.10.6",
+  "current_catalog_fingerprint": "8875dd264024e27720f5c2194e2e0eda6fd7fa0eeaedfa969a2f0678bf514e4c",
+  "current_runner_version": "0.10.7",
+  "knowledge_product_catalog_fingerprint": "da33efdaaa7656892947f431ef5ecf88680f33c901f1b1d4b306f0bea937b836",
+  "knowledge_type_count": 16,
+  "normalized_differences_excluded": [
+    "runner_version",
+    "catalog_fingerprint",
+    "source.knowledge_product_catalog_schema",
+    "source.knowledge_product_catalog_fingerprint",
+    "source.knowledge_product_catalog_id",
+    "source.knowledge_product_catalog_source"
+  ],
+  "semantic_equal_after_normalization": true
+}

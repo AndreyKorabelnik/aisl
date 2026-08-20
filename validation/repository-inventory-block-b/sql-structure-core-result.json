@@ -1,0 +1,99 @@
+{
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_88a0c161c34c5772c8d52402",
+      "analyzer_id": "repository-structure-analyzer",
+      "analyzer_version": "0.44.23a4",
+      "artifact_ids": [
+        "repository_structure_94c8028350a81f6a37fc75f7"
+      ],
+      "parameters": {},
+      "required_by": [],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "repository-structure-evidence",
+          "schema_version": "repository-structure-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "9df2c8fd9d65846df960d72150b976d4bc6e97b0ef40df6b75eb479fcda0558d"
+      ],
+      "source_snapshot_ids": [
+        "sql-real"
+      ],
+      "status": "completed"
+    }
+  ],
+  "diagnostics": [],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "repository_structure_94c8028350a81f6a37fc75f7",
+      "artifact_kind": "repository-structure-evidence",
+      "content_fingerprint": "94c8028350a81f6a37fc75f725a570b0b8d1916414c21d64965010330f4bd952",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "all_file_count": 491,
+        "analyzer_eligible_file_count": 480,
+        "coverage_status": "complete",
+        "extension_family_count": 12,
+        "outside_analyzer_frontier_extension_family_count": 6,
+        "outside_analyzer_frontier_file_count": 11,
+        "unreadable_file_count": 0
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 235187,
+        "kind": "file",
+        "path": "evidence/repository-structure-evidence.json",
+        "sha256": "dc52e1fb085fb0a152e5d6a3ebde1ccb606a53ed2b0fa658754e3c88395e16e6"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_88a0c161c34c5772c8d52402",
+      "provenance": {
+        "core_artifact_provenance": {},
+        "foundation": {},
+        "producer": {
+          "analyzer_id": "repository-structure-analyzer",
+          "analyzer_version": "0.44.23a4",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [],
+        "source_snapshot": {
+          "file_count": 491,
+          "fingerprint": "9df2c8fd9d65846df960d72150b976d4bc6e97b0ef40df6b75eb479fcda0558d",
+          "revision": null,
+          "scope": "repository_all_files",
+          "source_id": "sql-real"
+        }
+      },
+      "schema_version": "repository-structure-evidence/v1",
+      "status": "completed"
+    }
+  ],
+  "execution_id": "core_evidence_execution_2de4a73233b5120a00d6df73",
+  "producer": {
+    "component": "code-analyzer-core",
+    "version": "0.44.23a4"
+  },
+  "request_fingerprint": "38f3ebc2cdb3b5b58be8ab34ffa9ceafcb975b9052e4a239d73af6eef0670643",
+  "result_fingerprint": "bb3772dea00ea85af1f2dc9a0acf688ef78ce623050f5e6d5e80ef2195f76554",
+  "runtime_contract_id": "core_evidence_runtime/v1",
+  "schema_version": "core_evidence_execution_result/v1",
+  "source": {
+    "source_id": "sql-real",
+    "source_kind": "repository"
+  },
+  "source_snapshots": [
+    {
+      "file_count": 491,
+      "fingerprint": "9df2c8fd9d65846df960d72150b976d4bc6e97b0ef40df6b75eb479fcda0558d",
+      "revision": null,
+      "scope": "repository_all_files",
+      "source_id": "sql-real"
+    }
+  ],
+  "status": "completed"
+}

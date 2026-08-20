@@ -1,0 +1,57 @@
+{
+  "conforms": true,
+  "deterministic_er": {
+    "applicable": true,
+    "applied": true,
+    "fragment_chars": 949,
+    "generator": "deterministic-data-model-mermaid/v1"
+  },
+  "er_correction": {
+    "applied": false,
+    "attempted": false,
+    "required": false,
+    "status": "not_required",
+    "supported": false
+  },
+  "errors": [],
+  "evidence_citation_count": 0,
+  "mermaid_normalization": {
+    "block_count": 2,
+    "changed_block_count": 0
+  },
+  "missing_attribute_journey_wire_paths": [],
+  "missing_required_headings": [],
+  "observed_er_diagram_count": 2,
+  "observed_heading_count": 19,
+  "observed_headings": [
+    "Краткий вывод",
+    "Область отчёта",
+    "Резюме модели данных",
+    "ER-диаграммы",
+    "Логическая ER-диаграмма",
+    "Физическая ER-диаграмма (объявленные связи схемы)",
+    "Идентификаторы на диаграммах",
+    "Каталог объектов",
+    "Детальное описание ключевых объектов",
+    "Атрибуты и наследование",
+    "Ключи",
+    "Связи и правила JOIN",
+    "Справочники",
+    "Межрепозиторные соответствия",
+    "Физическая модель",
+    "Архитектурные и бизнес-выводы",
+    "Приложение A. Полнота анализа и ограничения доказательности",
+    "Приложение B. Неоднозначности и вопросы для уточнения",
+    "Приложение C. Технические доказательства и provenance"
+  ],
+  "required_attribute_journey_count": 0,
+  "required_er_diagram_count": 2,
+  "required_er_diagram_layers": [
+    "logical_er",
+    "physical_er"
+  ],
+  "required_heading_count": 16,
+  "unknown_evidence_ids": [],
+  "valid": true,
+  "warnings": []
+}

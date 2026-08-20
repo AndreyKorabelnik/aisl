@@ -1,0 +1,15 @@
+# Changed files — 0.59.2
+
+- `knowledge_layer_core/interaction_field_contract_knowledge_schema.py`
+- `knowledge_layer_core/interaction_field_contract_knowledge_builder.py`
+- `knowledge_layer_core/materialization_runtime.py`
+- `knowledge_layer_core/materialization_contracts.py`
+- `knowledge_layer_core/version.py`
+- `tests/test_interaction_field_contract_typed_materialization.py`
+- `tests/test_materialization_runtime.py`
+- `tests/test_materialization_contracts.py`
+- `tests/test_offline_validation.py`
+- `pyproject.toml`
+- `README.md`
+- `RELEASE_NOTES_V0.59.2.md`
+- `SOURCE_TREE_MANIFEST.sha256`

@@ -1,0 +1,16 @@
+{
+  "inventory_fingerprint": "60d49eecc80fb2601d89989da438c85cdf0a0f0baf8563c137e42f0f4b126c62",
+  "output": "/mnt/data/work_iter4/effective-model-e2e/knowledge-input-inventory.json",
+  "schema_version": "knowledge_input_inventory/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "summary": {
+    "available_knowledge_artifact_count": 0,
+    "available_typed_artifact_count": 1,
+    "registered_core_producer_count": 2,
+    "registered_materialization_count": 4,
+    "source_snapshot_count": 1
+  }
+}

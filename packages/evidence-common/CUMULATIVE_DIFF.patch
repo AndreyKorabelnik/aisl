@@ -1,0 +1,225 @@
+diff -ruN a/README.md b/README.md
+--- a/README.md	2026-06-25 04:18:21.000000000 +0000
++++ b/README.md	2026-07-08 16:15:49.135218740 +0000
+@@ -11,3 +11,7 @@
+ - Duplicate `profile_id` values are a hard error.
+ - Prompt fragments continue to resolve relative to the concrete `profile.yaml` directory, supporting paths such as `../../shared/<fragment>.md`.
+ - No legacy flat-layout fallback is implemented.
++
++## Generated profile schema contracts
++
++The generated `@generated/profile_schema_contract` fragment now resolves local `$ref` definitions used by `finding.attributes`, lists conditional required attribute fields by `finding_type`, and renders nested object contracts referenced from attributes. This keeps the prompt contract aligned with strict profile JSON Schemas without duplicating business rules in prompt text.
+diff -ruN a/evidence_common/prompt_profile.py b/evidence_common/prompt_profile.py
+--- a/evidence_common/prompt_profile.py	2026-06-25 04:16:17.000000000 +0000
++++ b/evidence_common/prompt_profile.py	2026-07-08 16:02:56.436979700 +0000
+@@ -377,6 +377,23 @@
+     return {}
+ 
+ 
++def _resolved_spec(schema: dict[str, Any], spec: Any) -> dict[str, Any]:
++    """Resolve a local JSON Schema reference while preserving sibling keywords."""
++    if not isinstance(spec, dict):
++        return {}
++    ref = spec.get("$ref")
++    if not isinstance(ref, str):
++        return spec
++    resolved = _resolve_ref(schema, ref)
++    if resolved is None:
++        return spec
++    if len(spec) == 1:
++        return resolved
++    merged = dict(resolved)
++    merged.update({key: value for key, value in spec.items() if key != "$ref"})
++    return merged
++
++
+ def _properties(spec: Any) -> dict[str, Any]:
+     if isinstance(spec, dict) and isinstance(spec.get("properties"), dict):
+         return spec["properties"]
+@@ -443,6 +460,83 @@
+     return f"- `{name}`: " + "; ".join(markers)
+ 
+ 
++
++def _conditional_attribute_requirements(finding: dict[str, Any]) -> dict[str, list[str]]:
++    """Extract per-finding-type required attribute fields from common if/then schemas."""
++    result: dict[str, list[str]] = {}
++    clauses = finding.get("allOf") if isinstance(finding.get("allOf"), list) else []
++    for clause in clauses:
++        if not isinstance(clause, dict):
++            continue
++        condition = clause.get("if") if isinstance(clause.get("if"), dict) else {}
++        condition_properties = _properties(condition)
++        finding_type_spec = condition_properties.get("finding_type")
++        finding_types: list[str] = []
++        if isinstance(finding_type_spec, dict):
++            if isinstance(finding_type_spec.get("const"), str):
++                finding_types = [finding_type_spec["const"]]
++            elif isinstance(finding_type_spec.get("enum"), list):
++                finding_types = [str(value) for value in finding_type_spec["enum"]]
++        then = clause.get("then") if isinstance(clause.get("then"), dict) else {}
++        attributes_spec = _properties(then).get("attributes")
++        required: list[str] = []
++        if isinstance(attributes_spec, dict):
++            required.extend(_required(attributes_spec))
++            for nested in attributes_spec.get("allOf") if isinstance(attributes_spec.get("allOf"), list) else []:
++                required.extend(_required(nested))
++        if finding_types and required:
++            deduped = list(dict.fromkeys(required))
++            for finding_type in finding_types:
++                result[finding_type] = deduped
++    return result
++
++
++def _collect_local_refs(value: Any, *, out: list[str] | None = None) -> list[str]:
++    refs = out if out is not None else []
++    if isinstance(value, dict):
++        ref = value.get("$ref")
++        if isinstance(ref, str) and ref.startswith("#/$defs/") and ref not in refs:
++            refs.append(ref)
++        for item in value.values():
++            _collect_local_refs(item, out=refs)
++    elif isinstance(value, list):
++        for item in value:
++            _collect_local_refs(item, out=refs)
++    return refs
++
++
++def _render_nested_contract(schema: dict[str, Any], ref: str) -> list[str]:
++    spec = _resolve_ref(schema, ref)
++    if not isinstance(spec, dict):
++        return []
++    name = ref.rsplit("/", 1)[-1]
++    properties = _properties(spec)
++    required = set(_required(spec))
++    lines = [f"### Nested object `{name}`", f"- referenced as: `{ref}`"]
++    policy = _additional_policy(spec)
++    if policy:
++        lines.append(f"- {policy}")
++    lines.append(f"- required fields: {_format_list(list(required))}")
++    for field_name, field_spec in properties.items():
++        if not isinstance(field_spec, dict):
++            continue
++        lines.append(_field_summary(field_name, field_spec, required))
++        resolved = _resolved_spec(schema, field_spec)
++        items = resolved.get("items") if isinstance(resolved.get("items"), dict) else None
++        enum_values = _enum_values(resolved)
++        if enum_values:
++            lines.append(f"  - `{field_name}` enum: {_format_list(enum_values)}")
++        if items:
++            item_resolved = _resolved_spec(schema, items)
++            item_enum = _enum_values(item_resolved)
++            if item_enum:
++                lines.append(f"  - `{field_name}` item enum: {_format_list(item_enum)}")
++            if isinstance(items.get("$ref"), str):
++                lines.append(f"  - `{field_name}` items use `{items['$ref']}`")
++        if isinstance(field_spec.get("$ref"), str):
++            lines.append(f"  - `{field_name}` uses `{field_spec['$ref']}`")
++    return lines
++
+ def generate_profile_schema_contract(profile: PromptProfile, stage: str) -> tuple[str, dict[str, Any]]:
+     """Generate a machine-readable prompt contract from structured_result.schema.json.
+ 
+@@ -456,9 +550,11 @@
+     finding_properties = _properties(finding)
+     finding_required = _required(finding)
+     finding_required_set = set(finding_required)
+-    attributes = finding_properties.get("attributes") if isinstance(finding_properties.get("attributes"), dict) else {}
++    attributes_raw = finding_properties.get("attributes") if isinstance(finding_properties.get("attributes"), dict) else {}
++    attributes = _resolved_spec(schema, attributes_raw)
+     attribute_properties = _properties(attributes)
+     attribute_required = _required(attributes)
++    conditional_attribute_requirements = _conditional_attribute_requirements(finding)
+     attribute_required_set = set(attribute_required)
+ 
+     lines: list[str] = []
+@@ -569,6 +665,32 @@
+     else:
+         lines.append("- no `attributes` object is defined in the finding schema")
+ 
++    if conditional_attribute_requirements:
++        lines.append("")
++        lines.append("## Conditional required attributes by finding_type")
++        lines.append("These requirements are mandatory in addition to the base attributes contract:")
++        for finding_type, required_fields in conditional_attribute_requirements.items():
++            lines.append(f"- `{finding_type}`: {_format_list(required_fields)}")
++
++    refs = _collect_local_refs(attributes)
++    rendered_refs: set[str] = set()
++    if refs:
++        lines.append("")
++        lines.append("## Nested object contracts referenced from attributes")
++        queue = list(refs)
++        while queue:
++            ref = queue.pop(0)
++            if ref in rendered_refs:
++                continue
++            rendered_refs.add(ref)
++            nested = _resolve_ref(schema, ref)
++            if isinstance(nested, dict):
++                lines.append("")
++                lines.extend(_render_nested_contract(schema, ref))
++                for child_ref in _collect_local_refs(nested):
++                    if child_ref not in rendered_refs and child_ref not in queue:
++                        queue.append(child_ref)
++
+     lines.append("")
+     lines.append("Strict instruction: final structured output for this profile must satisfy this JSON Schema exactly.")
+ 
+@@ -586,6 +708,8 @@
+         "allowed_decisions": _enum_values(finding_properties.get("decision")),
+         "allowed_severities": _enum_values(finding_properties.get("severity")),
+         "allowed_attributes": list(attribute_properties.keys()),
++        "conditional_required_attributes": conditional_attribute_requirements,
++        "nested_contract_refs": sorted(rendered_refs),
+     }
+     return text, meta
+ 
+diff -ruN a/tests/test_prompt_profile.py b/tests/test_prompt_profile.py
+--- a/tests/test_prompt_profile.py	2026-06-25 04:16:32.000000000 +0000
++++ b/tests/test_prompt_profile.py	2026-07-08 16:15:17.938513379 +0000
+@@ -216,3 +216,44 @@
+     # No legacy fallback from llm-prompts/<profile_id> to llm-prompts/code/<profile_id>.
+     with pytest.raises(PromptProfileError):
+         resolve_prompt_profile_dir(root / "system-data-model-description")
++
++
++def test_generated_schema_contract_resolves_attribute_refs_and_conditional_requirements(tmp_path: Path):
++    profile = _write_profile(tmp_path)
++    schema_path = profile / "schemas" / "structured_result.schema.json"
++    schema = json.loads(schema_path.read_text(encoding="utf-8"))
++    schema["$defs"]["endpoint"] = {
++        "type": "object",
++        "additionalProperties": False,
++        "required": ["repo_ids", "system_id"],
++        "properties": {
++            "repo_ids": {"type": "array", "items": {"type": "string"}},
++            "system_id": {"type": ["string", "null"]},
++        },
++    }
++    schema["$defs"]["interaction_attributes"] = {
++        "type": "object",
++        "additionalProperties": False,
++        "properties": {
++            "workspace_systems": {"type": "array", "items": {"$ref": "#/$defs/endpoint"}},
++            "boundary_counts": {"type": "object"},
++            "human_validation_required": {"type": "boolean"},
++        },
++    }
++    finding = schema["$defs"]["finding"]
++    finding["properties"]["finding_type"]["enum"] = ["workspace_system_interaction_overview", "inter_system_data_exchange"]
++    finding["properties"]["attributes"] = {"$ref": "#/$defs/interaction_attributes"}
++    finding["allOf"] = [{
++        "if": {"properties": {"finding_type": {"const": "workspace_system_interaction_overview"}}},
++        "then": {"properties": {"attributes": {"allOf": [{"required": ["workspace_systems", "boundary_counts", "human_validation_required"]}]}}},
++    }]
++    schema_path.write_text(json.dumps(schema), encoding="utf-8")
++
++    prompt, meta = assemble_prompt_stage(profile, "initial")
++    assert "allowed profile-specific attributes: workspace_systems, boundary_counts, human_validation_required" in prompt
++    assert "Conditional required attributes by finding_type" in prompt
++    assert "`workspace_system_interaction_overview`: workspace_systems, boundary_counts, human_validation_required" in prompt
++    assert "Nested object `endpoint`" in prompt
++    assert "required fields: repo_ids, system_id" in prompt or "required fields: system_id, repo_ids" in prompt
++    generated = next(item for item in meta["fragments"] if item["generated"])
++    assert generated["declared_path"] == "@generated/profile_schema_contract"

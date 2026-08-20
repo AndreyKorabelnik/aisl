@@ -1,0 +1,187 @@
+{
+  "final_plan": {
+    "completed_at": "2026-08-16T08:21:21.460313Z",
+    "deleted_blob_count": 0,
+    "deleted_staging_file_count": 0,
+    "details_truncated": false,
+    "eligible_blob_count": 0,
+    "eligible_blob_sha256": [],
+    "eligible_staging_file_count": 0,
+    "eligible_staging_files": [],
+    "grace_period_seconds": 0,
+    "missing_referenced_blob_count": 0,
+    "missing_referenced_sha256": [],
+    "mode": "plan",
+    "reachable_digest_count": 0,
+    "referenced_blob_count": 0,
+    "retained_revision_count": 0,
+    "schema_version": "aisl_artifact_store_gc/v1",
+    "staging_file_count": 0,
+    "started_at": "2026-08-16T08:21:21.459468Z",
+    "store_blob_count": 0,
+    "unmanaged_entries": [],
+    "unmanaged_entry_count": 0,
+    "unreferenced_blob_count": 0,
+    "young_unreferenced_blob_count": 0
+  },
+  "final_sweep": {
+    "completed_at": "2026-08-16T08:21:21.441393Z",
+    "deleted_blob_count": 6,
+    "deleted_staging_file_count": 0,
+    "details_truncated": false,
+    "eligible_blob_count": 6,
+    "eligible_blob_sha256": [
+      "1f3ef809b18be6f00b26760f3544e065b5b72899601f7efda45d287b67f0b12b",
+      "1fd0a7c31241149d09d945b8a30a75f6e89c6c297823a4be11ccda230a88274a",
+      "470d8ab25c03cf36ccbe5dd5244f507c1ff4243abbb7b7864692c7c9ac93e2d3",
+      "6c2b8db327ce11a355ee3c057c5261e43ea912e796ed509be6bd8ec9f3a98472",
+      "9ab908d22850b262cf478489f764a18c93cacec1f0ee9e0467b1da0a6710bc9b",
+      "b2d673223dd5c298c51ea9a36af1b3f999f39c7c8246cc6b7e3805800499e110"
+    ],
+    "eligible_staging_file_count": 0,
+    "eligible_staging_files": [],
+    "grace_period_seconds": 0,
+    "missing_referenced_blob_count": 0,
+    "missing_referenced_sha256": [],
+    "mode": "sweep",
+    "reachable_digest_count": 0,
+    "referenced_blob_count": 0,
+    "retained_revision_count": 0,
+    "schema_version": "aisl_artifact_store_gc/v1",
+    "staging_file_count": 0,
+    "started_at": "2026-08-16T08:21:21.439713Z",
+    "store_blob_count": 6,
+    "unmanaged_entries": [],
+    "unmanaged_entry_count": 0,
+    "unreferenced_blob_count": 6,
+    "young_unreferenced_blob_count": 0
+  },
+  "invariants": {
+    "catalog_is_only_reachability_source": true,
+    "final_canonical_blob_count": 0,
+    "old_staging_deleted": true,
+    "orphan_blob_deleted": true,
+    "refcount_registry_added": false,
+    "superseded_revision_remained_readable": true
+  },
+  "post_system_delete_plan": {
+    "completed_at": "2026-08-16T08:21:21.435333Z",
+    "deleted_blob_count": 0,
+    "deleted_staging_file_count": 0,
+    "details_truncated": false,
+    "eligible_blob_count": 6,
+    "eligible_blob_sha256": [
+      "1f3ef809b18be6f00b26760f3544e065b5b72899601f7efda45d287b67f0b12b",
+      "1fd0a7c31241149d09d945b8a30a75f6e89c6c297823a4be11ccda230a88274a",
+      "470d8ab25c03cf36ccbe5dd5244f507c1ff4243abbb7b7864692c7c9ac93e2d3",
+      "6c2b8db327ce11a355ee3c057c5261e43ea912e796ed509be6bd8ec9f3a98472",
+      "9ab908d22850b262cf478489f764a18c93cacec1f0ee9e0467b1da0a6710bc9b",
+      "b2d673223dd5c298c51ea9a36af1b3f999f39c7c8246cc6b7e3805800499e110"
+    ],
+    "eligible_staging_file_count": 0,
+    "eligible_staging_files": [],
+    "grace_period_seconds": 0,
+    "missing_referenced_blob_count": 0,
+    "missing_referenced_sha256": [],
+    "mode": "plan",
+    "reachable_digest_count": 0,
+    "referenced_blob_count": 0,
+    "retained_revision_count": 0,
+    "schema_version": "aisl_artifact_store_gc/v1",
+    "staging_file_count": 0,
+    "started_at": "2026-08-16T08:21:21.433930Z",
+    "store_blob_count": 6,
+    "unmanaged_entries": [],
+    "unmanaged_entry_count": 0,
+    "unreferenced_blob_count": 6,
+    "young_unreferenced_blob_count": 0
+  },
+  "pre_sweep_plan": {
+    "completed_at": "2026-08-16T08:21:21.167738Z",
+    "deleted_blob_count": 0,
+    "deleted_staging_file_count": 0,
+    "details_truncated": false,
+    "eligible_blob_count": 1,
+    "eligible_blob_sha256": [
+      "88f6811ab5d8fc6d3177f9b7609ae0fcebfda187e5046b62d38bb539e88b74d7"
+    ],
+    "eligible_staging_file_count": 1,
+    "eligible_staging_files": [
+      "crash.tmp"
+    ],
+    "grace_period_seconds": 60,
+    "missing_referenced_blob_count": 0,
+    "missing_referenced_sha256": [],
+    "mode": "plan",
+    "reachable_digest_count": 6,
+    "referenced_blob_count": 6,
+    "retained_revision_count": 2,
+    "schema_version": "aisl_artifact_store_gc/v1",
+    "staging_file_count": 1,
+    "started_at": "2026-08-16T08:21:21.165786Z",
+    "store_blob_count": 7,
+    "unmanaged_entries": [],
+    "unmanaged_entry_count": 0,
+    "unreferenced_blob_count": 1,
+    "young_unreferenced_blob_count": 0
+  },
+  "producer_workspaces_deleted": true,
+  "retained_revision_reads_after_sweep": [
+    {
+      "derived_fqcn": "com.acme.Customer",
+      "derived_status": 200,
+      "observed_fqcn": "com.acme.Customer",
+      "observed_status": 200,
+      "revision_id": "rev-8a20e48cffdccfeacfc7ee63",
+      "state": "active"
+    },
+    {
+      "derived_fqcn": "com.acme.Customer",
+      "derived_status": 200,
+      "observed_fqcn": "com.acme.Customer",
+      "observed_status": 200,
+      "revision_id": "rev-1da90d7e46bade75caa407a9",
+      "state": "active"
+    }
+  ],
+  "revision_ids": [
+    "rev-8a20e48cffdccfeacfc7ee63",
+    "rev-1da90d7e46bade75caa407a9"
+  ],
+  "schema_version": "aisl_reachability_gc_acceptance/v1",
+  "status": "PASS",
+  "sweep": {
+    "completed_at": "2026-08-16T08:21:21.176702Z",
+    "deleted_blob_count": 1,
+    "deleted_staging_file_count": 1,
+    "details_truncated": false,
+    "eligible_blob_count": 1,
+    "eligible_blob_sha256": [
+      "88f6811ab5d8fc6d3177f9b7609ae0fcebfda187e5046b62d38bb539e88b74d7"
+    ],
+    "eligible_staging_file_count": 1,
+    "eligible_staging_files": [
+      "crash.tmp"
+    ],
+    "grace_period_seconds": 60,
+    "missing_referenced_blob_count": 0,
+    "missing_referenced_sha256": [],
+    "mode": "sweep",
+    "reachable_digest_count": 6,
+    "referenced_blob_count": 6,
+    "retained_revision_count": 2,
+    "schema_version": "aisl_artifact_store_gc/v1",
+    "staging_file_count": 1,
+    "started_at": "2026-08-16T08:21:21.175056Z",
+    "store_blob_count": 7,
+    "unmanaged_entries": [],
+    "unmanaged_entry_count": 0,
+    "unreferenced_blob_count": 1,
+    "young_unreferenced_blob_count": 0
+  },
+  "system_delete": {
+    "deleted_revision_count": 2,
+    "schema_version": "knowledge_api/v1",
+    "system_id": "gc-acceptance"
+  }
+}

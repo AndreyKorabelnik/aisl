@@ -1,0 +1,15 @@
+{
+  "capabilities": [
+    "common.system-description",
+    "workspace.repository-interaction-boundaries",
+    "workspace.repository-interaction-coverage",
+    "workspace.system-interaction-field-contracts",
+    "workspace.system-interactions"
+  ],
+  "knowledge_artifacts": [],
+  "scope": {
+    "revision_binding": "pinned",
+    "revision_id": "rev-narrow-interactions",
+    "system_id": "narrow-interactions"
+  }
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "repo_id": "gw-update-phone-flags",
+    "materialize_s": 0.44,
+    "files": 91,
+    "identity": {
+      "repository_id": "registry-gw",
+      "repository_name": "GW Update Phone Flags",
+      "source_kind": "bitbucket",
+      "repository_url": "https://bitbucket.example/scm/gw/update-phone-flags.git",
+      "default_branch": "master"
+    },
+    "languages": [
+      {
+        "language": "java",
+        "file_count": 51,
+        "basis": {
+          "extensions": [
+            ".java"
+          ]
+        }
+      }
+    ],
+    "technologies": [
+      {
+        "category": "build",
+        "technology": "maven"
+      },
+      {
+        "category": "container",
+        "technology": "docker"
+      },
+      {
+        "category": "deployment",
+        "technology": "helm"
+      },
+      {
+        "category": "api_spec",
+        "technology": "openapi"
+      }
+    ],
+    "concepts": {
+      "data_model": {
+        "status": "not_detected",
+        "evaluation": "evaluated",
+        "score": null
+      },
+      "data_flow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "system_interaction": {
+        "status": "strongly_supported",
+        "evaluation": "evaluated",
+        "score": 65.85
+      },
+      "workflow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "persistence": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "reference_data": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      }
+    },
+    "inputs": 2,
+    "outputs": 0,
+    "interfaces_evaluation": "evaluated",
+    "storage_evaluation": "not_evaluated",
+    "sql_files": 0
+  },
+  {
+    "repo_id": "ucp-tsa-v4",
+    "materialize_s": 1.031,
+    "files": 490,
+    "identity": {
+      "repository_id": null,
+      "repository_name": "ucp-tsa-v4",
+      "source_kind": null,
+      "repository_url": null,
+      "default_branch": null
+    },
+    "languages": [
+      {
+        "language": "java",
+        "file_count": 469,
+        "basis": {
+          "extensions": [
+            ".java"
+          ]
+        }
+      }
+    ],
+    "technologies": [
+      {
+        "category": "build",
+        "technology": "maven"
+      }
+    ],
+    "concepts": {
+      "data_model": {
+        "status": "strongly_supported",
+        "evaluation": "evaluated",
+        "score": 80.0
+      },
+      "data_flow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "system_interaction": {
+        "status": "not_detected",
+        "evaluation": "evaluated",
+        "score": null
+      },
+      "workflow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "persistence": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "reference_data": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      }
+    },
+    "inputs": 0,
+    "outputs": 0,
+    "interfaces_evaluation": "evaluated",
+    "storage_evaluation": "not_evaluated",
+    "sql_files": 0
+  },
+  {
+    "repo_id": "at900-client-profile",
+    "materialize_s": 1.923,
+    "files": 1048,
+    "identity": {
+      "repository_id": null,
+      "repository_name": "at900-client-profile",
+      "source_kind": null,
+      "repository_url": null,
+      "default_branch": null
+    },
+    "languages": [
+      {
+        "language": "java",
+        "file_count": 868,
+        "basis": {
+          "extensions": [
+            ".java"
+          ]
+        }
+      },
+      {
+        "language": "sql",
+        "file_count": 136,
+        "basis": {
+          "extensions": [
+            ".sql"
+          ]
+        }
+      }
+    ],
+    "technologies": [
+      {
+        "category": "build",
+        "technology": "gradle"
+      },
+      {
+        "category": "container",
+        "technology": "docker"
+      }
+    ],
+    "concepts": {
+      "data_model": {
+        "status": "probable",
+        "evaluation": "evaluated",
+        "score": 39.0
+      },
+      "data_flow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "system_interaction": {
+        "status": "strongly_supported",
+        "evaluation": "evaluated",
+        "score": 100.0
+      },
+      "workflow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "persistence": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "reference_data": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      }
+    },
+    "inputs": 35,
+    "outputs": 6,
+    "interfaces_evaluation": "evaluated",
+    "storage_evaluation": "not_evaluated",
+    "sql_files": 136
+  },
+  {
+    "repo_id": "sql-datamart",
+    "materialize_s": 0.718,
+    "files": 355,
+    "identity": {
+      "repository_id": null,
+      "repository_name": "sql-datamart",
+      "source_kind": null,
+      "repository_url": null,
+      "default_branch": null
+    },
+    "languages": [
+      {
+        "language": "sql",
+        "file_count": 306,
+        "basis": {
+          "extensions": [
+            ".sql"
+          ]
+        }
+      }
+    ],
+    "technologies": [],
+    "concepts": {
+      "data_model": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "data_flow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "system_interaction": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "workflow": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "persistence": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      },
+      "reference_data": {
+        "status": "not_evaluated",
+        "evaluation": "not_evaluated",
+        "score": null
+      }
+    },
+    "inputs": 0,
+    "outputs": 0,
+    "interfaces_evaluation": "not_evaluated",
+    "storage_evaluation": "not_evaluated",
+    "sql_files": 306
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "repo_id": "ucp-tsa-v4",
+    "structure_s": 0.088,
+    "materialize_s": 1.42,
+    "files": 490,
+    "languages": [
+      {
+        "language": "java",
+        "file_count": 469,
+        "basis": {
+          "extensions": [
+            ".java"
+          ]
+        }
+      }
+    ],
+    "concepts": {
+      "data_model": "strongly_supported",
+      "data_flow": "not_evaluated",
+      "system_interaction": "probable",
+      "workflow": "not_evaluated",
+      "persistence": "not_evaluated",
+      "reference_data": "not_evaluated"
+    },
+    "inputs": 0,
+    "outputs": 0,
+    "technologies": [
+      "maven"
+    ],
+    "sql_files": 0
+  },
+  {
+    "repo_id": "at900-client-profile",
+    "structure_s": 0.153,
+    "materialize_s": 2.389,
+    "files": 1048,
+    "languages": [
+      {
+        "language": "java",
+        "file_count": 868,
+        "basis": {
+          "extensions": [
+            ".java"
+          ]
+        }
+      },
+      {
+        "language": "sql",
+        "file_count": 136,
+        "basis": {
+          "extensions": [
+            ".sql"
+          ]
+        }
+      }
+    ],
+    "concepts": {
+      "data_model": "probable",
+      "data_flow": "not_evaluated",
+      "system_interaction": "strongly_supported",
+      "workflow": "not_evaluated",
+      "persistence": "not_evaluated",
+      "reference_data": "not_evaluated"
+    },
+    "inputs": 35,
+    "outputs": 6,
+    "technologies": [
+      "gradle",
+      "docker"
+    ],
+    "sql_files": 136
+  },
+  {
+    "repo_id": "sql-datamart",
+    "structure_s": 0.031,
+    "materialize_s": 1.727,
+    "files": 355,
+    "languages": [
+      {
+        "language": "sql",
+        "file_count": 306,
+        "basis": {
+          "extensions": [
+            ".sql"
+          ]
+        }
+      }
+    ],
+    "concepts": {
+      "data_model": "not_evaluated",
+      "data_flow": "not_evaluated",
+      "system_interaction": "not_evaluated",
+      "workflow": "not_evaluated",
+      "persistence": "not_evaluated",
+      "reference_data": "not_evaluated"
+    },
+    "inputs": 0,
+    "outputs": 0,
+    "technologies": [],
+    "sql_files": 306
+  }
+]

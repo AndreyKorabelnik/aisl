@@ -1,0 +1,87 @@
+{
+  "consumer": {
+    "integration_profile": "reference-data/v1",
+    "metrics": {
+      "global": {
+        "after_bytes": 91236,
+        "before_bytes": 2749405,
+        "reduction_percent": 96.7
+      },
+      "operator_id": {
+        "after_bytes": 34300,
+        "before_bytes": 978976,
+        "reduction_percent": 96.5
+      },
+      "product_price": {
+        "after_bytes": 33291,
+        "before_bytes": 284803,
+        "reduction_percent": 88.3
+      }
+    },
+    "profile_version": "2",
+    "schema": "reference-data-guidance/v1",
+    "semantic_derivation": "none",
+    "tool": "get_reference_data_context",
+    "tool_catalog_version": "8"
+  },
+  "date": "2026-08-16",
+  "gold_acceptance": {
+    "borderline": "4/4",
+    "controls": "11/11",
+    "policy_guards_exact": 25,
+    "runtime_gold_source": false,
+    "semantic_case_count": 22,
+    "semantic_definition_dimensions_exact": 25,
+    "strong_candidates": "7/7",
+    "technical_query_count": 25
+  },
+  "job_id": "job-2d8e2dd6fada45668205498e59ac5005",
+  "limitations": [
+    "First force-run wrapper expired after official Core completion; it is not counted as PASS.",
+    "Authoritative replay used official content-addressed Core reuse and completed publication.",
+    "No post-change external-LLM behavioral trace was run."
+  ],
+  "producer_code_changed": false,
+  "production": {
+    "capabilities": [
+      "common.declared-value-sets",
+      "common.reference-data",
+      "common.reference-data-facts"
+    ],
+    "core_reused_seconds": 63.147,
+    "klc_seconds": 65.697,
+    "publication": "pass",
+    "section_count": 15,
+    "source_file_count": 1038,
+    "status": "succeeded",
+    "subject_knowledge_records": 21828
+  },
+  "revision_id": "rev-7e8a9ec88020277028ac41cb",
+  "schema_version": "aisl_reference_data_real_consumer_guidance_acceptance/v1",
+  "semantic_boundaries": {
+    "global_definition_authority_established": false,
+    "human_or_llm_interpretation_required": true,
+    "mobileoperator_local_definition_count": 1,
+    "operator_id_local_definition_count": 0,
+    "own_nsi_status_assigned": false,
+    "reference_semantics_assigned": false
+  },
+  "status": "REFERENCE_DATA_AISL_BLOCK_COMPLETE",
+  "system_id": "at900-client-profile-reference-data",
+  "tests": {
+    "compile_import": "PASS",
+    "knowledge_api": "104/104 PASS",
+    "knowledge_control_plane": "95/95 PASS",
+    "knowledge_integration": "19/19 PASS",
+    "knowledge_layer_core": "252 PASS, 8 SKIPPED"
+  },
+  "versions": {
+    "aisl_contract": "0.3.0b4",
+    "code_analyzer_core": "0.44.23a5",
+    "knowledge_api": "0.30.16",
+    "knowledge_control_plane": "1.2.0a23",
+    "knowledge_integration": "0.1.15",
+    "knowledge_layer_core": "0.61.0a32",
+    "static_analysis_runner": "0.10.25"
+  }
+}

@@ -1,0 +1,828 @@
+{
+  "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+  "catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+  "contracts": [
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "contract_fingerprint": "a2a93b7c82251593c8409e1cb3ffbe7659d977b69a57f76e067cdb1be7ba9031",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_in_scope",
+          "java_files_parsed",
+          "java_files_failed",
+          "java_files_with_parse_errors",
+          "persistence_type_mapping_count",
+          "persistence_field_mapping_count",
+          "persistence_key_mapping_count",
+          "persistence_relationship_mapping_count",
+          "persistence_inheritance_mapping_count",
+          "mapping_gap_count",
+          "diagnostic_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "Method/property-access annotations are not normalized because java-persistence-mapping-evidence/v1 currently observes type and field declarations only.",
+        "Composite annotations such as JoinColumns, JoinTable and AttributeOverrides are retained as raw source annotations and diagnosed, but not normalized in v1.",
+        "JPA default table and column naming is intentionally not inferred."
+      ],
+      "definition": "Explicit Java persistence mapping declarations normalized from observed JPA/Jakarta annotations without matching them to a physical model or inferring default names.",
+      "diagnostic_contract": {
+        "failure_policy": "publish supported mapping declarations and explicit diagnostics for unsupported or non-literal annotation constructs",
+        "known_codes": [
+          "non_literal_persistence_annotation_argument",
+          "unsupported_composite_persistence_annotation",
+          "table_annotation_without_persistence_type_annotation"
+        ],
+        "required_fields": [
+          "code",
+          "severity",
+          "message",
+          "source_refs"
+        ]
+      },
+      "forbidden_semantics": [
+        "matching logical objects to physical tables or columns",
+        "physical-schema substitution",
+        "JPA default table or column naming inference",
+        "naming-similarity matching",
+        "observed SQL or storage usage as mapping proof",
+        "confidence score or probability",
+        "task_id, suite_id or profile_id as semantic selectors"
+      ],
+      "intended_knowledge_consumers": [
+        "logical-physical-mapping"
+      ],
+      "non_goals": [
+        "Do not decide whether an explicit table or column name exists in a supplied physical model.",
+        "Do not use storage calls, SQL joins or naming similarity to invent a mapping.",
+        "Do not merge persistence mapping with code-declared or physical-model knowledge inside Core.",
+        "Do not apply framework defaults when the source declaration is absent."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "persistence_type_mappings",
+          "persistence_field_mappings",
+          "persistence_key_mappings",
+          "persistence_relationship_mappings",
+          "persistence_inheritance_mappings",
+          "mapping_gaps"
+        ],
+        "sections": [
+          {
+            "optional_fields": [
+              "entity_name_explicit",
+              "table_name_explicit",
+              "schema_name_explicit",
+              "catalog_name_explicit"
+            ],
+            "record_identity": "persistence_type_mapping_id",
+            "required_fields": [
+              "persistence_type_mapping_id",
+              "type_id",
+              "fully_qualified_name",
+              "persistence_kind",
+              "annotation_ids",
+              "mapping_basis",
+              "source_ref"
+            ],
+            "section": "persistence_type_mappings"
+          },
+          {
+            "optional_fields": [
+              "column_name_explicit",
+              "column_table_name_explicit",
+              "nullable_declared",
+              "relationship_kind",
+              "relationship_mapped_by_explicit",
+              "join_column_name_explicit",
+              "referenced_column_name_explicit",
+              "resolved_target_type_id",
+              "candidate_target_type_ids"
+            ],
+            "record_identity": "persistence_field_mapping_id",
+            "required_fields": [
+              "persistence_field_mapping_id",
+              "field_id",
+              "owner_type_id",
+              "field_name",
+              "declared_type_expression",
+              "persistence_role",
+              "annotation_ids",
+              "mapping_basis",
+              "source_ref"
+            ],
+            "section": "persistence_field_mappings"
+          },
+          {
+            "optional_fields": [
+              "field_id",
+              "column_name_explicit",
+              "id_class_expression"
+            ],
+            "record_identity": "persistence_key_mapping_id",
+            "required_fields": [
+              "persistence_key_mapping_id",
+              "owner_type_id",
+              "key_kind",
+              "annotation_ids",
+              "source_ref"
+            ],
+            "section": "persistence_key_mappings"
+          },
+          {
+            "optional_fields": [
+              "target_type_id",
+              "candidate_target_type_ids",
+              "mapped_by_explicit",
+              "join_column_name_explicit",
+              "referenced_column_name_explicit"
+            ],
+            "record_identity": "persistence_relationship_mapping_id",
+            "required_fields": [
+              "persistence_relationship_mapping_id",
+              "source_type_id",
+              "field_id",
+              "relationship_kind",
+              "annotation_ids",
+              "source_ref"
+            ],
+            "section": "persistence_relationship_mappings"
+          },
+          {
+            "optional_fields": [
+              "strategy_expression",
+              "discriminator_column_name_explicit",
+              "discriminator_value_explicit"
+            ],
+            "record_identity": "persistence_inheritance_mapping_id",
+            "required_fields": [
+              "persistence_inheritance_mapping_id",
+              "type_id",
+              "fully_qualified_name",
+              "annotation_ids",
+              "source_ref"
+            ],
+            "section": "persistence_inheritance_mappings"
+          },
+          {
+            "record_identity": "mapping_gap_id",
+            "required_fields": [
+              "mapping_gap_id",
+              "gap_code",
+              "severity",
+              "owner_kind",
+              "owner_id",
+              "message",
+              "source_refs"
+            ],
+            "section": "mapping_gaps"
+          }
+        ]
+      },
+      "producer": {
+        "current_source_stage_ids": [],
+        "required_foundation_sections": [
+          "source_file_inventory",
+          "java_syntax_index"
+        ],
+        "source_language": "java",
+        "target_analyzer_id": "java-persistence-mapping-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported explicit persistence annotations on successfully parsed in-scope Java type and field declarations",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic_by_logical_owner_declaration_location_and_stable_id",
+        "partial_result_policy": "publish supported declarations with explicit diagnostics and mapping gaps",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "preserve_raw_annotation_in_source_structure_evidence_and_emit_diagnostic_without_invented_mapping"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [
+          "start_byte",
+          "end_byte",
+          "snippet_hash"
+        ],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/java-persistence-mapping-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-persistence-mapping-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "java-persistence-mapping-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Java persistence mapping evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "java-type-structure-evidence",
+      "contract_fingerprint": "37d2c9d6e4fd794b4cadccf47b6996692913ca0999b6e820097f183a05335ca9",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_discovered",
+          "java_files_in_scope",
+          "java_files_parsed",
+          "java_files_failed",
+          "java_files_with_parse_errors",
+          "type_declaration_count",
+          "field_declaration_count",
+          "inheritance_declaration_count",
+          "annotation_declaration_count",
+          "type_reference_count",
+          "unresolved_type_reference_count",
+          "ambiguous_type_reference_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "java_structural_facts",
+              "schemas",
+              "interfaces",
+              "relations",
+              "mapper_facts"
+            ],
+            "stage_id": "java_structural_scan"
+          },
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "source_observation_facts",
+              "source_observation_fact_store",
+              "module_resolution_facts",
+              "framework_observations_optional"
+            ],
+            "stage_id": "java_source_observation_build"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "Java annotation type declarations are diagnosed but not yet materialized as type records."
+      ],
+      "definition": "Complete source-observed Java type declarations and their structural members without persistence, physical, usage or effective-model interpretation.",
+      "diagnostic_contract": {
+        "failure_policy": "one_file_failure_does_not_drop_successfully_observed_declarations",
+        "known_codes": [
+          "java_parse_error",
+          "unresolved_type_reference",
+          "ambiguous_type_reference",
+          "unsupported_java_declaration",
+          "duplicate_type_identity",
+          "source_file_unreadable"
+        ],
+        "required_fields": [
+          "code",
+          "severity",
+          "message",
+          "source_refs"
+        ]
+      },
+      "forbidden_semantics": [
+        "JPA entity, table, column, key or relationship interpretation",
+        "logical-to-physical mapping",
+        "physical-schema substitution",
+        "SQL or storage usage",
+        "converter or builder attribute mapping",
+        "effective inherited fields",
+        "effective associations",
+        "domain or business-object classification",
+        "confidence score or probability",
+        "task_id, suite_id or profile_id as semantic selectors"
+      ],
+      "intended_knowledge_consumers": [
+        "code-declared-data-model"
+      ],
+      "non_goals": [
+        "Do not infer that a field type is a business association.",
+        "Do not decide which Java types are domain entities.",
+        "Do not calculate inherited effective fields inside Core.",
+        "Do not interpret persistence annotations in this analyzer."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "source_units",
+          "type_declarations",
+          "field_declarations",
+          "inheritance_declarations",
+          "annotation_declarations",
+          "type_reference_observations",
+          "enum_constant_declarations"
+        ],
+        "sections": [
+          {
+            "notes": "One record for every in-scope Java source file, including files with parse errors.",
+            "optional_fields": [
+              "source_set",
+              "content_sha256",
+              "bytes"
+            ],
+            "record_identity": "source_unit_id",
+            "required_fields": [
+              "source_unit_id",
+              "repository_relative_path",
+              "language",
+              "package_name",
+              "imports",
+              "parse_status",
+              "parse_error_count"
+            ],
+            "section": "source_units"
+          },
+          {
+            "allowed_type_kinds": [
+              "class",
+              "interface",
+              "enum",
+              "record",
+              "annotation_type"
+            ],
+            "optional_fields": [
+              "enclosing_type_id",
+              "documentation",
+              "source_set"
+            ],
+            "record_identity": "type_id",
+            "required_fields": [
+              "type_id",
+              "source_unit_id",
+              "fully_qualified_name",
+              "simple_name",
+              "package_name",
+              "type_kind",
+              "modifier_tokens",
+              "type_parameters",
+              "source_ref"
+            ],
+            "section": "type_declarations"
+          },
+          {
+            "notes": "Static fields are retained as declarations. KLC decides which members belong in a data-model view; Core does not silently discard them from evidence.",
+            "optional_fields": [
+              "normalized_type_expression",
+              "initializer_present",
+              "documentation"
+            ],
+            "record_identity": "field_id",
+            "required_fields": [
+              "field_id",
+              "owner_type_id",
+              "name",
+              "declared_type_expression",
+              "modifier_tokens",
+              "is_static",
+              "is_final",
+              "source_ref"
+            ],
+            "section": "field_declarations"
+          },
+          {
+            "allowed_relation_kinds": [
+              "extends",
+              "implements"
+            ],
+            "optional_fields": [
+              "resolved_supertype_id",
+              "candidate_supertype_ids",
+              "type_arguments",
+              "resolved_fqcn",
+              "candidate_fqcns"
+            ],
+            "record_identity": "inheritance_id",
+            "required_fields": [
+              "inheritance_id",
+              "subtype_id",
+              "relation_kind",
+              "declared_supertype_expression",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "inheritance_declarations"
+          },
+          {
+            "allowed_target_kinds": [
+              "type",
+              "field"
+            ],
+            "notes": "Raw annotations are evidence. Their JPA, serialization, validation or framework meaning is interpreted by separate analyzers/materializations.",
+            "optional_fields": [
+              "resolved_annotation_type",
+              "candidate_annotation_types"
+            ],
+            "record_identity": "annotation_id",
+            "required_fields": [
+              "annotation_id",
+              "target_kind",
+              "target_id",
+              "annotation_name",
+              "arguments_raw",
+              "structured_arguments",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "annotation_declarations"
+          },
+          {
+            "allowed_reference_roles": [
+              "field_type",
+              "extends_type",
+              "implements_type"
+            ],
+            "notes": "Method parameter/return references belong to broader source-code evidence and are outside the first code-declared data-model contract.",
+            "optional_fields": [
+              "resolved_type_id",
+              "candidate_type_ids",
+              "resolved_fqcn",
+              "candidate_fqcns"
+            ],
+            "record_identity": "type_reference_id",
+            "required_fields": [
+              "type_reference_id",
+              "owner_kind",
+              "owner_id",
+              "reference_role",
+              "declared_type_expression",
+              "referenced_type_token",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "type_reference_observations"
+          },
+          {
+            "notes": "Constants are preserved as declarations without classifying them as reference data.",
+            "record_identity": "enum_constant_id",
+            "required_fields": [
+              "enum_constant_id",
+              "owner_type_id",
+              "name",
+              "arguments_raw",
+              "source_ref"
+            ],
+            "section": "enum_constant_declarations"
+          }
+        ]
+      },
+      "producer": {
+        "current_source_stage_ids": [
+          "java_structural_scan",
+          "java_source_observation_build"
+        ],
+        "required_foundation_sections": [
+          "source_file_inventory",
+          "java_syntax_index"
+        ],
+        "source_language": "java",
+        "target_analyzer_id": "java-type-structure-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all declarations from every successfully parsed in-scope Java source file",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic_by_repository_relative_path_declaration_location_and_stable_id",
+        "partial_result_policy": "publish_observed_records_with_explicit_file_coverage_and_parse_diagnostics",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "diagnostic_without_invented_semantics"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [
+          "start_byte",
+          "end_byte",
+          "snippet_hash"
+        ],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/java-type-structure-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-type-structure-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Java type structure evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "sql-analysis",
+      "contract_fingerprint": "b6615cbcae81bbb05693adedfd035017d29c9ac735b11bd0d44d63fccbc7dbdb",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "sql_files_scanned",
+          "sql_unit_count",
+          "sql_statement_count",
+          "lineage_gap_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Repository SQL analysis evidence",
+      "forbidden_semantics": [
+        "Task/Suite/Profile semantic routing",
+        "LLM interpretation in canonical evidence",
+        "absolute machine paths"
+      ],
+      "intended_knowledge_consumers": [
+        "sql-analysis",
+        "workspace-sql-mart-catalog"
+      ],
+      "payload": {
+        "sections": [
+          {
+            "record_identity": "single_manifest",
+            "required_fields": [
+              "canonical_manifest_path",
+              "canonical_content_fingerprint"
+            ],
+            "section": "canonical_manifest_path"
+          },
+          {
+            "record_identity": "fact_type",
+            "required_fields": [
+              "fact_type",
+              "id_field",
+              "path",
+              "record_count",
+              "sha256",
+              "byte_size"
+            ],
+            "section": "fact_shards"
+          }
+        ]
+      },
+      "producer": {
+        "current_source_stage_ids": [],
+        "required_foundation_sections": [],
+        "source_language": "sql",
+        "target_analyzer_id": "sql-analysis-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported observations from in-scope files",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic",
+        "partial_result_policy": "publish supported facts with explicit diagnostics and gaps",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "emit diagnostics without invented facts"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/sql-analysis-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "sql-analysis-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "sql-analysis/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Repository SQL analysis evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "storage-usage-evidence",
+      "contract_fingerprint": "be7e7ba29fb2b1734a02c5979c691838360f6e49e5add86316a81738c70c2ad7",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_discovered",
+          "java_methods_indexed",
+          "storage_access_count",
+          "storage_read_count",
+          "storage_write_count",
+          "storage_gap_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Observed Java storage usage evidence",
+      "forbidden_semantics": [
+        "physical table inference from repository names",
+        "field lineage without explicit selected or bound fields",
+        "business ownership or risk classification"
+      ],
+      "intended_knowledge_consumers": [
+        "observed-storage-usage"
+      ],
+      "payload": {
+        "sections": [
+          {
+            "optional_fields": [
+              "storage_target_expression",
+              "storage_kind",
+              "payload_expression",
+              "selected_fields"
+            ],
+            "record_identity": "storage_access_id",
+            "required_fields": [
+              "storage_access_id",
+              "repo_id",
+              "operation",
+              "access_kind",
+              "storage_method",
+              "source_ref"
+            ],
+            "section": "storage_accesses"
+          },
+          {
+            "record_identity": "storage_read_id",
+            "required_fields": [
+              "storage_read_id",
+              "storage_access_id",
+              "repo_id",
+              "operation",
+              "source_ref"
+            ],
+            "section": "storage_reads"
+          },
+          {
+            "record_identity": "storage_write_id",
+            "required_fields": [
+              "storage_write_id",
+              "storage_access_id",
+              "repo_id",
+              "operation",
+              "source_ref"
+            ],
+            "section": "storage_writes"
+          },
+          {
+            "record_identity": "storage_usage_gap_id",
+            "required_fields": [
+              "storage_usage_gap_id",
+              "gap_code",
+              "severity",
+              "owner_kind",
+              "owner_id",
+              "message",
+              "source_refs"
+            ],
+            "section": "storage_usage_gaps"
+          }
+        ]
+      },
+      "producer": {
+        "current_source_stage_ids": [],
+        "required_foundation_sections": [],
+        "source_language": "java",
+        "target_analyzer_id": "java-storage-usage-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported observations from in-scope files",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic",
+        "partial_result_policy": "publish supported facts with explicit diagnostics and gaps",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "emit diagnostics without invented facts"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/storage-usage-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-storage-usage-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "storage-usage-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Observed Java storage usage evidence"
+    }
+  ],
+  "core_version": "0.44.0",
+  "execution_effect": "none",
+  "next_step": "compile Knowledge Resolution Plan evidence requirements into core_evidence_execution_request/v1",
+  "purpose": "Core-owned typed evidence payload contracts. The catalog is extensible; adding a new evidence kind does not add a new CLI command.",
+  "schema_version": "core_evidence_contract_catalog/v1",
+  "semantic_routing_rule": "artifact_kind_plus_schema_version_not_task_id",
+  "source": {
+    "core_catalog_fingerprint": "f30d43c87076d6b676dac84ce4567ef6eb195fb2574cd787c781b857ce233284",
+    "core_catalog_schema_version": "core_analysis_catalog/v1",
+    "core_target_contracts_fingerprint": "e444136c9b5baf2fcd9158d6c5f3024fa1a3d9d710a7a258ecc3cbf557aed8ea",
+    "core_target_contracts_schema_version": "core_target_analysis_contracts/v1",
+    "definition_schema_version": "core_evidence_contract_definitions/v1"
+  },
+  "summary": {
+    "contract_count": 4,
+    "defined_not_published_count": 0,
+    "runtime_published_count": 4
+  }
+}

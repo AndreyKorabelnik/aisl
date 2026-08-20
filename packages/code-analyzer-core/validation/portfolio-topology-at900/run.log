@@ -1,0 +1,61 @@
+▶ profile_load Loading analysis profile
+✓ profile_load Analysis profile loaded
+▶ analysis Static analysis started
+▶ scan_files Scanning repository /mnt/data/work_scale/at900-git
+✓ scan_files Files found: 1038
+▶ syntax_runtime_initialization Initializing Java syntax runtime
+✓ syntax_runtime_initialization Java syntax runtime initialized
+▶ config_scan Extracting config facts
+✓ config_scan Config facts: 1794
+▶ maven_dependency_scan Extracting source-declared Maven dependencies
+✓ maven_dependency_scan dependencies=0
+▶ gradle_dependency_scan Extracting source-declared Gradle modules and 
+dependencies
+✓ gradle_dependency_scan modules=4, module_dependencies=2, 
+external_dependencies=114
+▶ openapi_scan Extracting OpenAPI/Swagger contract facts
+✓ openapi_scan contracts=1, schemas=8, interfaces=4
+▶ java_structural_scan Extracting Tree-sitter Java structural facts
+✓ java_structural_scan facts=2679, schemas=629, interfaces=127, relations=30, 
+mappers=2209
+▶ java_system_interaction_enrichment Composing local HTTP/configuration boundary
+evidence
+✓ java_system_interaction_enrichment facts=1, interfaces_added=0, 
+composed_calls=0
+▶ core_output Writing slim machine-first core output
+✓ core_output Slim core JSON output written
+▶ normalize_facts Writing slim normalized fact indexes
+✓ normalize_facts normalized facts=8017, persisted=3308
+▶ compact_package Writing compact machine-first navigation
+✓ compact_package Navigation JSON written
+▶ syntax_runtime_release Releasing Java syntax runtime
+✓ syntax_runtime_release Java syntax runtime released
+✓ analysis Analysis completed
+Java analysis done. repo_id=client_profile 
+profile=/mnt/data/work_scale/code-analyzer-core-0.43.18/analysis-profiles/reposi
+tory-portfolio-topology.yaml interfaces=131 schemas=637 facts=3216
+Static analysis output: /mnt/data/work_scale/at900-topology-core-output
+Static analysis output: /mnt/data/work_scale/at900-topology-core-output
+	Command being timed: "/mnt/data/work_scale/bin/code-analyzer-core analyze-java /mnt/data/work_scale/at900-git --static-analysis-output /mnt/data/work_scale/at900-topology-core-output --analysis-profile /mnt/data/work_scale/code-analyzer-core-0.43.18/analysis-profiles/repository-portfolio-topology.yaml --project-code AT900 --system-name client-profile --repo-id client_profile --max-packages 80 --max-fields-per-schema 16"
+	User time (seconds): 11.60
+	System time (seconds): 0.70
+	Percent of CPU this job got: 109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 492900
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 137938
+	Voluntary context switches: 25
+	Involuntary context switches: 88
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 27336
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

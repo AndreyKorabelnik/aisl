@@ -1,0 +1,47 @@
+{
+  "schema_version": "iteration_28_2a_validation/v1",
+  "core_version": "0.40.2",
+  "runner_version": "0.9.10",
+  "knowledge_layer_core_version": "0.29.0",
+  "tests": {
+    "code_analyzer_core": {
+      "passed": 382,
+      "failed": 0
+    },
+    "static_analysis_runner": {
+      "passed": 51,
+      "failed": 0
+    }
+  },
+  "at900": {
+    "foundation": "complete",
+    "system_description": "complete",
+    "data_model": "complete",
+    "knowledge_layer": "complete",
+    "duckdb_size_bytes": 472395776,
+    "main_table_count": 78,
+    "baseline": {
+      "data_model_facts": 38835,
+      "storage_lineage_gaps": 1810,
+      "field_mapping_not_resolved": 980,
+      "unique_field_mapping_gap_ids": 490,
+      "data_model_lineage_gaps": 7062,
+      "constructor_mapping_not_resolved": 760
+    },
+    "iteration_28_2a": {
+      "data_model_facts": 32997,
+      "storage_lineage_gaps": 905,
+      "field_mapping_not_resolved": 490,
+      "unique_field_mapping_gap_ids": 490,
+      "data_model_lineage_gaps": 7062,
+      "constructor_mapping_not_resolved": 760
+    },
+    "workspace_missing_fact_count": 7967
+  },
+  "next_targets": [
+    "constructor_type_resolution",
+    "constructor_scope_classification",
+    "constant_default_arguments",
+    "typed_pass_through_provenance"
+  ]
+}

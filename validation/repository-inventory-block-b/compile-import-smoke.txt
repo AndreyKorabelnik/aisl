@@ -1,0 +1,7 @@
+packages/code-analyzer-core/code_analyzer_core COMPILE_PASS
+packages/knowledge-layer-core/knowledge_layer_core COMPILE_PASS
+packages/prepared-knowledge-runtime/prepared_knowledge_runtime COMPILE_PASS
+core 0.44.23a4
+klc 0.61.0a24
+prepared 0.1.0.post2
+repository-inventory-registered True

@@ -1,0 +1,23 @@
+{
+  "archive_name": "knowledge-api-0.16.0-knowledge-execution-publication.zip",
+  "compileall": "passed",
+  "execution_result_schema_sha256": "6ea529b928298988df08c7d508fd066d8f424bfec1bb0e694cceab285949b9a1",
+  "real_execution_publication_smoke": {
+    "coverage_status": "complete",
+    "effective_tables": 2,
+    "knowledge_artifacts": 5,
+    "physical_tables": 2,
+    "published_capabilities": 17,
+    "status": "passed"
+  },
+  "runner_schema_byte_parity": true,
+  "source_manifest_files": 135,
+  "status": "passed",
+  "tests": {
+    "failed": 0,
+    "passed": 51
+  },
+  "verification_scope": "clean extracted source archive; embedded report and source manifest are part of final content",
+  "version": "0.16.0",
+  "zip_integrity": "passed"
+}

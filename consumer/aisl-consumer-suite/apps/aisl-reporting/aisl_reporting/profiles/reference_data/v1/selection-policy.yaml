@@ -1,0 +1,15 @@
+complete_catalog:
+  include_all_dictionary_objects: true
+  include_all_declared_value_sets: true
+  separate_non_production: true
+detailed_candidates:
+  executive: 10
+  standard: 30
+  detailed: 80
+usage_samples_per_kind:
+  executive: 3
+  standard: 8
+  detailed: 20
+evidence:
+  max_per_candidate: 8
+  exact_repository_path_lines: true

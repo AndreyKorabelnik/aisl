@@ -1,0 +1,5 @@
+SQL analysis done. repo_id=datamart_profile_fl 
+profile=analysis-profiles/sql-mart-lineage.yaml queries=475 marts=182 
+column_lineage=3367
+Static analysis output: /mnt/data/work80/sqlout-final
+Static analysis output: /mnt/data/work80/sqlout-final

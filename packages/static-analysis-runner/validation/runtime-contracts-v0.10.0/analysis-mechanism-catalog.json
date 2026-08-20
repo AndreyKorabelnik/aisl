@@ -1,0 +1,3830 @@
+{
+  "artifact_layer": [],
+  "catalog_fingerprint": "0133a16c2bcea4685627e810928e742ebb7e12e5f46b7f859ee05baf292947fa",
+  "catalog_purpose": "read_only_typed_runtime_composition",
+  "core_layer": {
+    "all_profile_ids": [
+      "code-to-openspec-data-evidence",
+      "git-change-complexity-assessment",
+      "git-change-sql-spark-complexity-assessment",
+      "repository-data-model-static",
+      "repository-portfolio-topology",
+      "repository-system-data-model",
+      "spec-evidence-workspace"
+    ],
+    "catalog_fingerprint": "cde89e5253b4b73f8f6c66cdc84501a35dee5573e7f8bef536e373fb8f4a24dd",
+    "catalog_schema_version": "core_analysis_catalog/v1",
+    "core_version": "0.44.6",
+    "foundation_fragments": [
+      {
+        "architecture_diagnostics": [
+          {
+            "category": "derived_evidence",
+            "code": "foundation_contains_non_base_stage",
+            "severity": "architecture",
+            "stage_id": "java_system_interaction_enrichment"
+          }
+        ],
+        "capabilities": [
+          "repository.inventory",
+          "build.dependencies",
+          "system.interfaces",
+          "source.observations",
+          "data.physical-schema",
+          "system.interactions"
+        ],
+        "catalog_source": "core_analysis_catalog/v1",
+        "description": "Общая детерминированная основа для анализа Java-систем: состав репозитория, конфигурация, зависимости, интерфейсы, структурная модель, универсальные Tree-sitter observations, SQL, физическая схема и технические взаимодействия.\n",
+        "fragment_id": "repository-analysis-foundation",
+        "name": "Reusable Java repository analysis foundation",
+        "output_contract": {
+          "policy": {
+            "no_business_decisions": true,
+            "source_observation_fact_store_uncapped": true,
+            "universal_source_observations_available": true
+          },
+          "strict_evidence_policy": "deterministic_observed_facts_provenance_gaps"
+        },
+        "owner": "code-analyzer-core",
+        "profile_version": 1,
+        "source": {
+          "path": "analysis-profile-fragments/repository-analysis-foundation.yaml",
+          "sha256": "90a445e331eb022b35cd54a0064f1d53443e6cb8463e21f96327ffd474024bfa"
+        },
+        "stage_categories": {
+          "config_scan": "base_evidence",
+          "db_schema_scan": "base_evidence",
+          "gradle_dependency_scan": "base_evidence",
+          "java_source_observation_build": "base_evidence",
+          "java_structural_scan": "base_evidence",
+          "java_system_interaction_enrichment": "derived_evidence",
+          "maven_dependency_scan": "base_evidence",
+          "openapi_scan": "base_evidence",
+          "scan_files": "base_evidence",
+          "sql_scan": "base_evidence"
+        },
+        "stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "openapi_scan",
+          "java_structural_scan",
+          "java_source_observation_build",
+          "java_system_interaction_enrichment",
+          "sql_scan",
+          "db_schema_scan"
+        ]
+      }
+    ],
+    "global_architecture_diagnostics": [
+      {
+        "code": "java_stage_dependencies_hidden_in_python",
+        "finding": "Java profile stages are runtime-controlled, but dependency order and data passing are encoded in pipeline.py rather than stage contracts."
+      },
+      {
+        "code": "spec_profile_stages_not_runtime_controls",
+        "finding": "Spec profile pipeline.stages are descriptive labels; run_spec_analysis executes a fixed normalization pipeline and only reads profile metadata."
+      },
+      {
+        "code": "mutable_analysis_result_dependency",
+        "finding": "Several Java stages consume the whole accumulated AnalysisResult, preventing independent caching and making results depend on profile execution history."
+      },
+      {
+        "code": "knowledge_materialization_inside_core",
+        "finding": "Conceptual-model assembly still combines already extracted facts and remains a candidate for final KLC ownership; system description and reference data now publish typed Core evidence and materialize in KLC."
+      },
+      {
+        "code": "derived_stage_contracts_observed_but_not_declared",
+        "finding": "The catalog can now show observed Java requires/provides and mutation behavior, but Core profiles still do not declare or validate those contracts."
+      },
+      {
+        "code": "db_schema_stage_mixed_responsibility",
+        "finding": "db_schema_scan extracts physical declarations and also launches SQL table observations, mixing base and derived evidence in one stage."
+      }
+    ],
+    "known_boundaries": {
+      "foundation_current_role": "reusable repository analysis artifact built by Core and lifecycle-managed by external orchestration",
+      "foundation_owner": "code_analyzer_core",
+      "knowledge_materialization_owner_target": "knowledge_layer_core",
+      "profile_owner": "code_analyzer_core",
+      "task_and_suite_owner": "static_analysis_runner"
+    },
+    "owner": "code-analyzer-core",
+    "summary": {
+      "architecture_diagnostic_count": 26,
+      "execution_model_counts": {
+        "generic_evidence_runtime": 1,
+        "java_stage_controlled_pipeline": 5,
+        "spec_fixed_pipeline": 1
+      },
+      "fragment_count": 1,
+      "java_derived_contract_count": 9,
+      "profile_count": 7,
+      "stage_definition_count": 29
+    }
+  },
+  "core_stage_catalog": {
+    "architecture_findings": [
+      {
+        "code": "java_stage_dependencies_hidden_in_python",
+        "finding": "Java profile stages are runtime-controlled, but dependency order and data passing are encoded in pipeline.py rather than stage contracts."
+      },
+      {
+        "code": "spec_profile_stages_not_runtime_controls",
+        "finding": "Spec profile pipeline.stages are descriptive labels; run_spec_analysis executes a fixed normalization pipeline and only reads profile metadata."
+      },
+      {
+        "code": "mutable_analysis_result_dependency",
+        "finding": "Several Java stages consume the whole accumulated AnalysisResult, preventing independent caching and making results depend on profile execution history."
+      },
+      {
+        "code": "knowledge_materialization_inside_core",
+        "finding": "Conceptual-model assembly still combines already extracted facts and remains a candidate for final KLC ownership; system description and reference data now publish typed Core evidence and materialize in KLC."
+      },
+      {
+        "code": "derived_stage_contracts_observed_but_not_declared",
+        "finding": "The catalog can now show observed Java requires/provides and mutation behavior, but Core profiles still do not declare or validate those contracts."
+      },
+      {
+        "code": "db_schema_stage_mixed_responsibility",
+        "finding": "db_schema_scan extracts physical declarations and also launches SQL table observations, mixing base and derived evidence in one stage."
+      }
+    ],
+    "categories": {
+      "base_evidence": "Direct repository/spec declarations and source observations.",
+      "derived_evidence": "Deterministic facts derived from source observations with provenance and no business verdict.",
+      "knowledge_materialization_candidate": "Cross-fact task/model views that should be evaluated for relocation to Knowledge Layer.",
+      "technical_packaging": "Normalization, compatibility, coverage and output serialization."
+    },
+    "classification_policy": {
+      "no_new_execution_entity": true,
+      "no_runtime_effect": true,
+      "primary_boundary": "Core extracts direct and derived evidence; KLC assembles cross-fact knowledge; packaging serializes outputs.",
+      "uncertainty_policy": "A stage remains in Core when it produces evidence with provenance; only cross-fact model/view assembly is marked as a KLC candidate."
+    },
+    "java_derived_stage_contracts": {
+      "architecture_findings": [
+        {
+          "code": "derived_evidence_contracts_not_runtime_metadata",
+          "finding": "The observed requires/provides relations are encoded in pipeline.py and scanner signatures; profiles do not declare them."
+        },
+        {
+          "code": "data_model_lineage_output_depends_on_pipeline_history",
+          "finding": "java_data_model_lineage_build changes output composition and can rebuild persistence internally depending on whether persistence ran earlier."
+        },
+        {
+          "code": "table_observation_input_wider_than_actual_use",
+          "finding": "java_table_observation_build accepts all accumulated facts but currently filters only jpa_entity and jpa_relationship facts."
+        },
+        {
+          "code": "reuse_requires_typed_persisted_fact_bundles",
+          "finding": "Stages marked ready or conditional still need persisted typed bundles and fingerprints before Runner can safely execute them once per Suite."
+        }
+      ],
+      "contract_count": 9,
+      "contracts": [
+        {
+          "analysis_result_mutations": [
+            "facts.extend(declared_value_summary_facts)",
+            "coverage[declared_value_set_summary]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are persisted by later packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/declared_value_set_summary_status.json"
+          ],
+          "explicit_inputs": [
+            "declared_value_facts_or_repository_file_inventory",
+            "declared_value_status_optional"
+          ],
+          "fallback_behavior": "Uses current-stage raw facts, Foundation optional facts, or rescans repository files when neither is available.",
+          "implementation_source": {
+            "available": true,
+            "line": 738,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/declared_value_scanner.py",
+            "sha256": "f440ecce36513f12244415360b0fb40e868e42ae962621ea9961dd0156a698fc"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 298,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "declared_value_set_summary"
+          ],
+          "purpose": "Build bounded summaries from raw declared-value facts.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core; require a typed declared-value fact bundle and remove repository-rescan fallback from the summary producer.",
+          "reuse_blockers": [
+            "three fallback input paths are selected from pipeline history rather than one required input contract"
+          ],
+          "stage_id": "declared_value_summary_scan",
+          "suite_reuse_key": [
+            "declared_value_fact_bundle_fingerprint",
+            "summary_policy_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "declared_value_scan_optional"
+          ]
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(flow_facts)",
+            "coverage[java_data_flow]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_data_flow_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 423,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_flow_builder.py",
+            "sha256": "9b54e9fddc9731b5755025e1c792d67b3000e25c3c09cb5d95850978bcec8019"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 292,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "source_to_sink_flow",
+            "field_identifier_flow"
+          ],
+          "purpose": "Build lightweight method-parameter and field-to-outbound-sink flow evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core and make its fact bundle a reusable typed artifact.",
+          "reuse_blockers": [],
+          "stage_id": "java_data_flow_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "java_parser_version",
+            "data_flow_builder_version"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": []
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(candidate_facts)",
+            "coverage[data_model_candidate_scan]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "dedicated candidate-profile JSON plus facts later serialized by normal packaging",
+          "direct_artifacts": [
+            "compact/data_model_candidate_profile.json",
+            "diagnostics/data_model_candidate_scan_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_root",
+            "repository_file_inventory",
+            "repo_id",
+            "project_code",
+            "system_name",
+            "core_version"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 217,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/data_model_candidate_scanner.py",
+            "sha256": "8f45671d59112c36172cac779f38916ecb27cd0044390e8131cf5ff4521c3bf3"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 671,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "data_model_candidate"
+          ],
+          "purpose": "Detect repository-level evidence that the repository contains a data model worth deeper analysis.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core as evidence and allow one execution per repository snapshot.",
+          "reuse_blockers": [],
+          "stage_id": "java_data_model_candidate_scan",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "core_version",
+            "candidate_policy_implementation"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": []
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(data_model_facts)",
+            "coverage[java_data_model_lineage]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; progress/status have dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_data_model_lineage_progress.json",
+            "diagnostics/java_data_model_lineage_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "repository_metadata",
+            "model_annotation_contracts",
+            "persistence_facts_optional",
+            "persistence_status_optional"
+          ],
+          "fallback_behavior": "If persistence facts are absent, the builder runs persistence lineage internally. It may also copy persistence facts into its own output when include_persistence_facts=true.",
+          "implementation_source": {
+            "available": true,
+            "line": 619,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_trace_builder.py",
+            "sha256": "a8509028ecdada19f747bcb2408cdc0b62b2e47a60e901097ee0420bbabe564f"
+          },
+          "notes": [],
+          "options_affecting_result": [
+            "max_depth",
+            "model_annotation_contracts"
+          ],
+          "pipeline_binding_source": {
+            "line": 296,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "attribute_occurrence",
+            "persistent_structure",
+            "attribute_mapping",
+            "attribute_derivation",
+            "lineage_gap",
+            "type_inheritance",
+            "effective_entity_field",
+            "effective_entity_association"
+          ],
+          "purpose": "Build attribute occurrence, mapping, derivation, structure and lineage-gap evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Split internal persistence fallback from data-model lineage and make persistence a required typed input; package persistence facts independently.",
+          "reuse_blockers": [
+            "output composition changes depending on whether persistence was requested as a separate stage",
+            "the builder can execute persistence internally",
+            "include_persistence_facts is controlled by pipeline history rather than profile contract"
+          ],
+          "stage_id": "java_data_model_lineage_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "repository_metadata",
+            "max_depth",
+            "model_annotation_contracts",
+            "persistence_fact_bundle_fingerprint",
+            "include_persistence_facts"
+          ],
+          "suite_reuse_status": "blocked",
+          "upstream_stage_dependencies": [
+            "java_persistence_lineage_build_optional"
+          ]
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(field_flow_facts)",
+            "coverage[java_field_flow]"
+          ],
+          "analysis_result_reads": [
+            "interfaces",
+            "schemas"
+          ],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_field_flow_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "interfaces",
+            "schemas",
+            "repository_id",
+            "repository_root"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 3367,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_field_flow_builder.py",
+            "sha256": "c1dc84ed8608fcedd716e0d27b348540b6edbcb2c895b11dcde56ccb1f54afd1"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 293,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "field_flow_facts"
+          ],
+          "purpose": "Build local and bounded interprocedural field-flow evidence.",
+          "reads_analysis_result": "selected_sections",
+          "recommended_action": "Keep in Core; persist and fingerprint the required interface/schema inputs before suite reuse.",
+          "reuse_blockers": [
+            "interfaces and schemas are passed as mutable result sections without independent artifact fingerprints"
+          ],
+          "stage_id": "java_field_flow_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "interfaces_fingerprint",
+            "schemas_fingerprint",
+            "field_flow_builder_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "java_structural_scan"
+          ]
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(persistence_facts)",
+            "coverage[java_persistence_lineage]",
+            "coverage[java_persistence_runtime_guard]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; progress/status have dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_persistence_lineage_progress.json",
+            "diagnostics/java_persistence_lineage_status.json",
+            "diagnostics/java_persistence_runtime_guard.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 4486,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_persistence_lineage.py",
+            "sha256": "9a72618deab8291b222b6cddc450dffad171dce11500bf44a4170a54a317dc70"
+          },
+          "notes": [
+            "suspend_automatic_gc changes runtime behavior but not intended evidence semantics and therefore is not part of the evidence key"
+          ],
+          "options_affecting_result": [
+            "max_depth",
+            "deep",
+            "progress_interval"
+          ],
+          "pipeline_binding_source": {
+            "line": 295,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "data_source",
+            "persistent_write",
+            "stored_data_access",
+            "persistence_mapping_hint",
+            "source_inspection_request"
+          ],
+          "purpose": "Build neutral source-to-storage and storage-access lineage evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core and make the fact/status bundle a first reusable suite-local derived-evidence artifact.",
+          "reuse_blockers": [],
+          "stage_id": "java_persistence_lineage_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "max_depth",
+            "deep",
+            "persistence_builder_version"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": []
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(interaction_facts)",
+            "interfaces mutated by scanner",
+            "warnings.extend(interaction_warnings)",
+            "coverage[java_system_interaction_enrichment]"
+          ],
+          "analysis_result_reads": [
+            "config_facts",
+            "schemas",
+            "interfaces"
+          ],
+          "current_serialization": "facts/interfaces are persisted through Foundation or normal package; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_system_interaction_enrichment_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "config_facts",
+            "schemas",
+            "interfaces"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 765,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_interaction_enrichment.py",
+            "sha256": "0945d31712fe627ab7ae41dfffae72e9e3cd34ef07329da8c11efd5848dd1852"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 286,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "configuration_value_binding",
+            "interaction_boundary_facts",
+            "enriched_interface_observations"
+          ],
+          "purpose": "Compose local HTTP/configuration boundary evidence without cross-repository matching.",
+          "reads_analysis_result": "selected_sections",
+          "recommended_action": "Keep in Core and continue sharing through Foundation; make interface mutation explicit in the contract.",
+          "reuse_blockers": [],
+          "stage_id": "java_system_interaction_enrichment",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "config_facts_fingerprint",
+            "schemas_fingerprint",
+            "interfaces_fingerprint",
+            "scanner_version"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": [
+            "config_scan",
+            "java_structural_scan"
+          ]
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(table_observation_facts)",
+            "coverage[java_table_observations]",
+            "coverage[data_model_table_observations]",
+            "table_observations aggregate"
+          ],
+          "analysis_result_reads": [
+            "facts filtered to jpa_entity and jpa_relationship",
+            "db_schema"
+          ],
+          "current_serialization": "dedicated data-model observation artifact plus facts in normal package",
+          "direct_artifacts": [
+            "compact/data_model_table_observations.json",
+            "diagnostics/java_table_observation_status.json",
+            "diagnostics/data_model_table_observation_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_root",
+            "repository_file_inventory",
+            "repo_id",
+            "facts",
+            "db_schema"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 466,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_table_observations.py",
+            "sha256": "2cef8278b2ebcaf9310df6c32fc739b7fc92fa4a32a0d03c135650e4b157d54c"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 989,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "table_relationship_observation",
+            "table_key_observation"
+          ],
+          "purpose": "Build observed JPA/jOOQ relationship and key-usage evidence.",
+          "reads_analysis_result": "complete_fact_list_parameter_but_narrow_actual_filter",
+          "recommended_action": "Keep in Core; narrow the function signature to typed JPA facts and DB schema, then execute once per Suite.",
+          "reuse_blockers": [
+            "function accepts the complete mutable fact list although it currently reads only two fact types",
+            "input fact types have no independent persisted fingerprint"
+          ],
+          "stage_id": "java_table_observation_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "jpa_entity_fact_fingerprint",
+            "jpa_relationship_fact_fingerprint",
+            "db_schema_fingerprint",
+            "table_observation_scanner_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "java_structural_scan",
+            "db_schema_scan"
+          ]
+        },
+        {
+          "analysis_result_mutations": [
+            "facts.extend(trace_facts)",
+            "coverage[java_traceability]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_traceability_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "java_data_flow_facts"
+          ],
+          "fallback_behavior": "If java_data_flow_build is absent, the pipeline supplies an empty fact list and traceability still builds source/call/storage evidence.",
+          "implementation_source": {
+            "available": true,
+            "line": 918,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_trace_builder.py",
+            "sha256": "a8509028ecdada19f747bcb2408cdc0b62b2e47a60e901097ee0420bbabe564f"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 294,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "origin_facts",
+            "method_call_facts",
+            "storage_access_facts",
+            "trace_facts",
+            "field_lineage_facts",
+            "output_provenance_facts",
+            "call_chain_diagnostics",
+            "jooq_batch_bind_mappings"
+          ],
+          "purpose": "Build bounded ingress/call/storage traces and field-level provenance from Java source evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core; publish data-flow and traceability as separate typed evidence bundles with explicit dependency.",
+          "reuse_blockers": [
+            "the upstream data-flow bundle has no independent persisted contract/fingerprint"
+          ],
+          "stage_id": "java_traceability_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "java_data_flow_fact_bundle_fingerprint",
+            "traceability_builder_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "java_data_flow_build"
+          ]
+        }
+      ],
+      "purpose": "read_only_observed_contracts_for_current_java_derived_evidence_stages",
+      "schema_version": "java_derived_stage_contracts/v1",
+      "summary": {
+        "blocked_for_suite_reuse": [
+          "java_data_model_lineage_build"
+        ],
+        "conditional_for_suite_reuse": [
+          "declared_value_summary_scan",
+          "java_field_flow_build",
+          "java_table_observation_build",
+          "java_traceability_build"
+        ],
+        "hidden_or_history_dependent_inputs": [
+          "declared_value_summary_scan",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "java_traceability_build"
+        ],
+        "reads_analysis_result_counts": {
+          "complete_fact_list_parameter_but_narrow_actual_filter": 1,
+          "none": 6,
+          "selected_sections": 2
+        },
+        "ready_for_suite_reuse": [
+          "java_data_flow_build",
+          "java_data_model_candidate_scan",
+          "java_persistence_lineage_build",
+          "java_system_interaction_enrichment"
+        ],
+        "suite_reuse_status_counts": {
+          "blocked": 1,
+          "conditional": 4,
+          "ready": 4
+        }
+      }
+    },
+    "profile_execution_models": [
+      {
+        "declared_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "java_structural_scan",
+          "sql_scan",
+          "db_schema_scan",
+          "java_data_flow_build",
+          "java_field_flow_build",
+          "java_traceability_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "java_persistence_lineage_build",
+          "declared_value_scan",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "execution": {
+          "detail": "The resolved profile stage set controls explicit branches in code_analyzer_core.pipeline.",
+          "engine": "java_stage_controlled_pipeline",
+          "profile_stage_binding": "runtime_enforced_by_stage_set",
+          "source": {
+            "line": 388,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          }
+        },
+        "profile_id": "code-to-openspec-data-evidence",
+        "resolved_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "java_structural_scan",
+          "sql_scan",
+          "db_schema_scan",
+          "java_data_flow_build",
+          "java_field_flow_build",
+          "java_traceability_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "java_persistence_lineage_build",
+          "declared_value_scan",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml",
+          "sha256": "f283d28d5ec2b0901fe0c1d9be231404d3d392f70b1cf1fd46ab87e0bafff352"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml",
+            "sha256": "f283d28d5ec2b0901fe0c1d9be231404d3d392f70b1cf1fd46ab87e0bafff352"
+          }
+        ]
+      },
+      {
+        "declared_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "java_structural_scan",
+          "sql_scan",
+          "db_schema_scan",
+          "java_data_flow_build",
+          "java_field_flow_build",
+          "java_traceability_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "java_persistence_lineage_build",
+          "declared_value_scan",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "execution": {
+          "detail": "The resolved profile stage set controls explicit branches in code_analyzer_core.pipeline.",
+          "engine": "java_stage_controlled_pipeline",
+          "profile_stage_binding": "runtime_enforced_by_stage_set",
+          "source": {
+            "line": 388,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          }
+        },
+        "profile_id": "git-change-complexity-assessment",
+        "resolved_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "java_structural_scan",
+          "sql_scan",
+          "db_schema_scan",
+          "java_data_flow_build",
+          "java_field_flow_build",
+          "java_traceability_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "java_persistence_lineage_build",
+          "declared_value_scan",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml",
+          "sha256": "515c33bd78994b8778f10daeb1f4b2e3e71419e520a85e2f311007678cbbd905"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml",
+            "sha256": "515c33bd78994b8778f10daeb1f4b2e3e71419e520a85e2f311007678cbbd905"
+          }
+        ]
+      },
+      {
+        "declared_stage_ids": [],
+        "execution": {
+          "detail": "Typed sql-analysis/v1 requirements are executed by the Core-owned evidence registry; profile stages do not participate in routing.",
+          "engine": "generic_evidence_runtime",
+          "profile_stage_binding": "not_applicable",
+          "source": {
+            "line": 341,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/evidence_runtime.py",
+            "sha256": "689b59a487349673f46fca9de1eef2e93c83b62172e7e9f11f965ce86b3cb171"
+          }
+        },
+        "profile_id": "git-change-sql-spark-complexity-assessment",
+        "resolved_stage_ids": [],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-sql-spark-complexity-assessment.yaml",
+          "sha256": "4f9816034c33a7088e51b2746fa37906a7763b88b0ec0f58b9f3b22978740694"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-sql-spark-complexity-assessment.yaml",
+            "sha256": "4f9816034c33a7088e51b2746fa37906a7763b88b0ec0f58b9f3b22978740694"
+          }
+        ]
+      },
+      {
+        "declared_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "java_structural_scan",
+          "java_source_observation_build",
+          "sql_scan",
+          "db_schema_scan",
+          "java_persistence_lineage_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "code_conceptual_model_build",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "execution": {
+          "detail": "The resolved profile stage set controls explicit branches in code_analyzer_core.pipeline.",
+          "engine": "java_stage_controlled_pipeline",
+          "profile_stage_binding": "runtime_enforced_by_stage_set",
+          "source": {
+            "line": 388,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          }
+        },
+        "profile_id": "repository-data-model-static",
+        "resolved_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "java_structural_scan",
+          "java_source_observation_build",
+          "sql_scan",
+          "db_schema_scan",
+          "java_persistence_lineage_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "code_conceptual_model_build",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml",
+          "sha256": "d6ec323e8ce0857450301d6f2a60d82b3cbfabe31393919e13dbb401dcda2a44"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml",
+            "sha256": "d6ec323e8ce0857450301d6f2a60d82b3cbfabe31393919e13dbb401dcda2a44"
+          }
+        ]
+      },
+      {
+        "declared_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "openapi_scan",
+          "java_structural_scan",
+          "java_system_interaction_enrichment",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "execution": {
+          "detail": "The resolved profile stage set controls explicit branches in code_analyzer_core.pipeline.",
+          "engine": "java_stage_controlled_pipeline",
+          "profile_stage_binding": "runtime_enforced_by_stage_set",
+          "source": {
+            "line": 388,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          }
+        },
+        "profile_id": "repository-portfolio-topology",
+        "resolved_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "openapi_scan",
+          "java_structural_scan",
+          "java_system_interaction_enrichment",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml",
+          "sha256": "5fa3e976330feb11b6e75fe8339f9417d4a2f53956d85be1ae8a18a8280577b8"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml",
+            "sha256": "5fa3e976330feb11b6e75fe8339f9417d4a2f53956d85be1ae8a18a8280577b8"
+          }
+        ]
+      },
+      {
+        "declared_stage_ids": [
+          "java_persistence_lineage_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "code_conceptual_model_build",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "execution": {
+          "detail": "The resolved profile stage set controls explicit branches in code_analyzer_core.pipeline.",
+          "engine": "java_stage_controlled_pipeline",
+          "profile_stage_binding": "runtime_enforced_by_stage_set",
+          "source": {
+            "line": 388,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          }
+        },
+        "profile_id": "repository-system-data-model",
+        "resolved_stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "openapi_scan",
+          "java_structural_scan",
+          "java_source_observation_build",
+          "java_system_interaction_enrichment",
+          "sql_scan",
+          "db_schema_scan",
+          "java_persistence_lineage_build",
+          "java_data_model_lineage_build",
+          "java_table_observation_build",
+          "code_conceptual_model_build",
+          "core_output",
+          "normalize_facts",
+          "compact_package"
+        ],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml",
+          "sha256": "cbd03c54e7ee7edf2c800478a7eef54efec7ccda14e20987c5da10746e5facb3"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profile-fragments/repository-analysis-foundation.yaml",
+            "sha256": "90a445e331eb022b35cd54a0064f1d53443e6cb8463e21f96327ffd474024bfa"
+          },
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml",
+            "sha256": "cbd03c54e7ee7edf2c800478a7eef54efec7ccda14e20987c5da10746e5facb3"
+          }
+        ]
+      },
+      {
+        "declared_stage_ids": [
+          "spec_artifact_discovery",
+          "data_evidence_yaml_parse",
+          "spec_to_standard_analysis_output",
+          "evidence_coverage_build",
+          "compact_package"
+        ],
+        "execution": {
+          "detail": "run_spec_analysis reads profile metadata but executes a fixed normalization pipeline; pipeline.stages does not select phases.",
+          "engine": "spec_fixed_pipeline",
+          "profile_stage_binding": "declarative_not_runtime_enforced",
+          "source": {
+            "line": 572,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/spec_analysis.py",
+            "sha256": "e5de457e2ea00d72193579ec9519481e95835e8c0d263697a195a4bb83b694f2"
+          }
+        },
+        "profile_id": "spec-evidence-workspace",
+        "resolved_stage_ids": [
+          "spec_artifact_discovery",
+          "data_evidence_yaml_parse",
+          "spec_to_standard_analysis_output",
+          "evidence_coverage_build",
+          "compact_package"
+        ],
+        "source": {
+          "path": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml",
+          "sha256": "1739cdc90dc2ab851f59ce9338a44863093f87edb1283fed4ffc249a70fe59f3"
+        },
+        "source_chain": [
+          {
+            "path": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml",
+            "sha256": "1739cdc90dc2ab851f59ce9338a44863093f87edb1283fed4ffc249a70fe59f3"
+          }
+        ]
+      }
+    ],
+    "purpose": "read_only_classification_of_current_core_profile_stage_declarations_and_runtime_bindings",
+    "schema_version": "analysis_stage_taxonomy/v1",
+    "stages": [
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "knowledge_materialization_candidate",
+        "classification_status": "classified",
+        "notes": [
+          "C",
+          "o",
+          "n",
+          "s",
+          "e",
+          "r",
+          "v",
+          "a",
+          "t",
+          "i",
+          "v",
+          "e",
+          " ",
+          "c",
+          "a",
+          "n",
+          "d",
+          "i",
+          "d",
+          "a",
+          "t",
+          "e",
+          "s",
+          " ",
+          "a",
+          "n",
+          "d",
+          " ",
+          "p",
+          "r",
+          "o",
+          "v",
+          "e",
+          "n",
+          "a",
+          "n",
+          "c",
+          "e",
+          " ",
+          "m",
+          "a",
+          "y",
+          " ",
+          "r",
+          "e",
+          "m",
+          "a",
+          "i",
+          "n",
+          ",",
+          " ",
+          "b",
+          "u",
+          "t",
+          " ",
+          "t",
+          "h",
+          "e",
+          " ",
+          "c",
+          "r",
+          "o",
+          "s",
+          "s",
+          "-",
+          "f",
+          "a",
+          "c",
+          "t",
+          " ",
+          "m",
+          "o",
+          "d",
+          "e",
+          "l",
+          " ",
+          "a",
+          "s",
+          "s",
+          "e",
+          "m",
+          "b",
+          "l",
+          "y",
+          " ",
+          "b",
+          "e",
+          "l",
+          "o",
+          "n",
+          "g",
+          "s",
+          " ",
+          "t",
+          "o",
+          " ",
+          "t",
+          "h",
+          "e",
+          " ",
+          "K",
+          "n",
+          "o",
+          "w",
+          "l",
+          "e",
+          "d",
+          "g",
+          "e",
+          " ",
+          "L",
+          "a",
+          "y",
+          "e",
+          "r",
+          " ",
+          "b",
+          "o",
+          "u",
+          "n",
+          "d",
+          "a",
+          "r",
+          "y",
+          "."
+        ],
+        "produces": [
+          "code_conceptual_model_artifact"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1124,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1124,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Assembles a canonical conceptual/physical model from many previously extracted facts and schema artifacts.",
+        "recommended_boundary": "move_or_reimplement_in_klc",
+        "requires": [
+          "current_analysis_result",
+          "db_schema"
+        ],
+        "reuse_assessment": "materialize_once_from_persisted_facts",
+        "stage_id": "code_conceptual_model_build",
+        "state_dependency": "hidden_full_analysis_result"
+      },
+      {
+        "binding_statuses": {
+          "declarative_label_fixed_runtime": 1,
+          "runtime_enforced": 5
+        },
+        "category": "technical_packaging",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "compact_package"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1166,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1166,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1166,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1166,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1166,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          },
+          {
+            "binding_status": "declarative_label_fixed_runtime",
+            "declared_directly": true,
+            "execution_engine": "spec_fixed_pipeline",
+            "implementation_source": {
+              "line": 572,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/spec_analysis.py",
+              "sha256": "e5de457e2ea00d72193579ec9519481e95835e8c0d263697a195a4bb83b694f2"
+            },
+            "profile_id": "spec-evidence-workspace",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml"
+          }
+        ],
+        "rationale": "Builds compact navigation and machine-first package files from already materialized facts.",
+        "recommended_boundary": "keep_as_packaging",
+        "requires": [
+          "current_analysis_result"
+        ],
+        "reuse_assessment": "per_output_package",
+        "stage_id": "compact_package",
+        "state_dependency": "full_analysis_result_serialization"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 5
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "configuration_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 533,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 533,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 533,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 533,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 533,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts source-declared configuration values without business interpretation.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_fingerprint",
+        "stage_id": "config_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 5
+        },
+        "category": "technical_packaging",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "core_repository_json"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1147,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1147,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1147,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1147,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1147,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Writes the slim repository metadata part of the analysis-output contract.",
+        "recommended_boundary": "keep_as_packaging",
+        "requires": [
+          "analysis_result_metadata"
+        ],
+        "reuse_assessment": "per_output_package",
+        "stage_id": "core_output",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "declarative_label_fixed_runtime": 1
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "parsed_spec_evidence"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "declarative_label_fixed_runtime",
+            "declared_directly": true,
+            "execution_engine": "spec_fixed_pipeline",
+            "implementation_source": {
+              "line": 572,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/spec_analysis.py",
+              "sha256": "e5de457e2ea00d72193579ec9519481e95835e8c0d263697a195a4bb83b694f2"
+            },
+            "profile_id": "spec-evidence-workspace",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml"
+          }
+        ],
+        "rationale": "Parses user-supplied data-evidence.yaml as declared evidence input.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "spec_artifact_index"
+        ],
+        "reuse_assessment": "safe_with_spec_artifact_fingerprint",
+        "stage_id": "data_evidence_yaml_parse",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 4
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [
+          "C",
+          "u",
+          "r",
+          "r",
+          "e",
+          "n",
+          "t",
+          " ",
+          "i",
+          "m",
+          "p",
+          "l",
+          "e",
+          "m",
+          "e",
+          "n",
+          "t",
+          "a",
+          "t",
+          "i",
+          "o",
+          "n",
+          " ",
+          "a",
+          "l",
+          "s",
+          "o",
+          " ",
+          "i",
+          "n",
+          "v",
+          "o",
+          "k",
+          "e",
+          "s",
+          " ",
+          "S",
+          "Q",
+          "L",
+          " ",
+          "t",
+          "a",
+          "b",
+          "l",
+          "e",
+          "-",
+          "o",
+          "b",
+          "s",
+          "e",
+          "r",
+          "v",
+          "a",
+          "t",
+          "i",
+          "o",
+          "n",
+          " ",
+          "e",
+          "x",
+          "t",
+          "r",
+          "a",
+          "c",
+          "t",
+          "i",
+          "o",
+          "n",
+          ",",
+          " ",
+          "s",
+          "o",
+          " ",
+          "o",
+          "n",
+          "e",
+          " ",
+          "s",
+          "t",
+          "a",
+          "g",
+          "e",
+          " ",
+          "m",
+          "i",
+          "x",
+          "e",
+          "s",
+          " ",
+          "p",
+          "h",
+          "y",
+          "s",
+          "i",
+          "c",
+          "a",
+          "l",
+          " ",
+          "d",
+          "e",
+          "c",
+          "l",
+          "a",
+          "r",
+          "a",
+          "t",
+          "i",
+          "o",
+          "n",
+          "s",
+          " ",
+          "a",
+          "n",
+          "d",
+          " ",
+          "d",
+          "e",
+          "r",
+          "i",
+          "v",
+          "e",
+          "d",
+          " ",
+          "u",
+          "s",
+          "a",
+          "g",
+          "e",
+          " ",
+          "o",
+          "b",
+          "s",
+          "e",
+          "r",
+          "v",
+          "a",
+          "t",
+          "i",
+          "o",
+          "n",
+          "s",
+          "."
+        ],
+        "produces": [
+          "db_schema_facts",
+          "physical_schema_artifacts",
+          "sql_table_observations"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 718,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 718,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 718,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 718,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts confirmed physical schema declarations from schema-bearing sources.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_and_schema_scanner_version",
+        "stage_id": "db_schema_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "declared_value_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1036,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1036,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          }
+        ],
+        "rationale": "Extracts explicitly declared value sets without semantic reference-data classification.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_fingerprint",
+        "stage_id": "declared_value_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {},
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(declared_value_summary_facts)",
+            "coverage[declared_value_set_summary]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are persisted by later packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/declared_value_set_summary_status.json"
+          ],
+          "explicit_inputs": [
+            "declared_value_facts_or_repository_file_inventory",
+            "declared_value_status_optional"
+          ],
+          "fallback_behavior": "Uses current-stage raw facts, Foundation optional facts, or rescans repository files when neither is available.",
+          "implementation_source": {
+            "available": true,
+            "line": 738,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/declared_value_scanner.py",
+            "sha256": "f440ecce36513f12244415360b0fb40e868e42ae962621ea9961dd0156a698fc"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 298,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "declared_value_set_summary"
+          ],
+          "purpose": "Build bounded summaries from raw declared-value facts.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core; require a typed declared-value fact bundle and remove repository-rescan fallback from the summary producer.",
+          "reuse_blockers": [
+            "three fallback input paths are selected from pipeline history rather than one required input contract"
+          ],
+          "stage_id": "declared_value_summary_scan",
+          "suite_reuse_key": [
+            "declared_value_fact_bundle_fingerprint",
+            "summary_policy_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "declared_value_scan_optional"
+          ]
+        },
+        "produces": [
+          "declared_value_summary_facts"
+        ],
+        "profile_occurrences": [],
+        "rationale": "Builds bounded summaries of observed declared value sets without semantic classification.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "declared_value_facts_or_repository_files"
+        ],
+        "reuse_assessment": "safe_when_raw_declared_value_input_matches",
+        "stage_id": "declared_value_summary_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "declarative_label_fixed_runtime": 1
+        },
+        "category": "technical_packaging",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "evidence_coverage_artifact"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "declarative_label_fixed_runtime",
+            "declared_directly": true,
+            "execution_engine": "spec_fixed_pipeline",
+            "implementation_source": {
+              "line": 572,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/spec_analysis.py",
+              "sha256": "e5de457e2ea00d72193579ec9519481e95835e8c0d263697a195a4bb83b694f2"
+            },
+            "profile_id": "spec-evidence-workspace",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml"
+          }
+        ],
+        "rationale": "Writes coverage, limitations and source-type metadata for the output contract.",
+        "recommended_boundary": "keep_as_packaging",
+        "requires": [
+          "analysis_counts",
+          "source_metadata"
+        ],
+        "reuse_assessment": "per_output_package",
+        "stage_id": "evidence_coverage_build",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 3
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "dependency_facts",
+          "gradle_module_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 546,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 546,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 546,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts source-declared Gradle modules and dependencies.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_fingerprint",
+        "stage_id": "gradle_dependency_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(flow_facts)",
+            "coverage[java_data_flow]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_data_flow_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 423,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_flow_builder.py",
+            "sha256": "9b54e9fddc9731b5755025e1c792d67b3000e25c3c09cb5d95850978bcec8019"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 292,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "source_to_sink_flow",
+            "field_identifier_flow"
+          ],
+          "purpose": "Build lightweight method-parameter and field-to-outbound-sink flow evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core and make its fact bundle a reusable typed artifact.",
+          "reuse_blockers": [],
+          "stage_id": "java_data_flow_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "java_parser_version",
+            "data_flow_builder_version"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": []
+        },
+        "produces": [
+          "java_data_flow_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 852,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 852,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          }
+        ],
+        "rationale": "Builds deterministic source-to-sink flow evidence from Java syntax.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "strong_candidate_for_suite_local_reuse",
+        "stage_id": "java_data_flow_build",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {},
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(candidate_facts)",
+            "coverage[data_model_candidate_scan]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "dedicated candidate-profile JSON plus facts later serialized by normal packaging",
+          "direct_artifacts": [
+            "compact/data_model_candidate_profile.json",
+            "diagnostics/data_model_candidate_scan_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_root",
+            "repository_file_inventory",
+            "repo_id",
+            "project_code",
+            "system_name",
+            "core_version"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 217,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/data_model_candidate_scanner.py",
+            "sha256": "8f45671d59112c36172cac779f38916ecb27cd0044390e8131cf5ff4521c3bf3"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 671,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "data_model_candidate"
+          ],
+          "purpose": "Detect repository-level evidence that the repository contains a data model worth deeper analysis.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core as evidence and allow one execution per repository snapshot.",
+          "reuse_blockers": [],
+          "stage_id": "java_data_model_candidate_scan",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "core_version",
+            "candidate_policy_implementation"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": []
+        },
+        "produces": [
+          "data_model_candidate_facts",
+          "data_model_candidate_profile"
+        ],
+        "profile_occurrences": [],
+        "rationale": "Ranks observed repository signals into a data-model analysis candidate profile; it does not build the model.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory",
+          "java_structural_signals"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_and_candidate_policy_version",
+        "stage_id": "java_data_model_candidate_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 4
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(data_model_facts)",
+            "coverage[java_data_model_lineage]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; progress/status have dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_data_model_lineage_progress.json",
+            "diagnostics/java_data_model_lineage_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "repository_metadata",
+            "model_annotation_contracts",
+            "persistence_facts_optional",
+            "persistence_status_optional"
+          ],
+          "fallback_behavior": "If persistence facts are absent, the builder runs persistence lineage internally. It may also copy persistence facts into its own output when include_persistence_facts=true.",
+          "implementation_source": {
+            "available": true,
+            "line": 619,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_trace_builder.py",
+            "sha256": "a8509028ecdada19f747bcb2408cdc0b62b2e47a60e901097ee0420bbabe564f"
+          },
+          "notes": [],
+          "options_affecting_result": [
+            "max_depth",
+            "model_annotation_contracts"
+          ],
+          "pipeline_binding_source": {
+            "line": 296,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "attribute_occurrence",
+            "persistent_structure",
+            "attribute_mapping",
+            "attribute_derivation",
+            "lineage_gap",
+            "type_inheritance",
+            "effective_entity_field",
+            "effective_entity_association"
+          ],
+          "purpose": "Build attribute occurrence, mapping, derivation, structure and lineage-gap evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Split internal persistence fallback from data-model lineage and make persistence a required typed input; package persistence facts independently.",
+          "reuse_blockers": [
+            "output composition changes depending on whether persistence was requested as a separate stage",
+            "the builder can execute persistence internally",
+            "include_persistence_facts is controlled by pipeline history rather than profile contract"
+          ],
+          "stage_id": "java_data_model_lineage_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "repository_metadata",
+            "max_depth",
+            "model_annotation_contracts",
+            "persistence_fact_bundle_fingerprint",
+            "include_persistence_facts"
+          ],
+          "suite_reuse_status": "blocked",
+          "upstream_stage_dependencies": [
+            "java_persistence_lineage_build_optional"
+          ]
+        },
+        "produces": [
+          "data_model_lineage_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 961,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 961,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 961,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 961,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts attribute occurrences, mappings, derivations and lineage gaps from code; it may reuse persistence facts.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory",
+          "persistence_lineage_facts_optional"
+        ],
+        "reuse_assessment": "candidate_for_reuse_when_persistence_input_and_options_match",
+        "stage_id": "java_data_model_lineage_build",
+        "state_dependency": "explicit_upstream_stage_output_plus_repository_metadata"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(field_flow_facts)",
+            "coverage[java_field_flow]"
+          ],
+          "analysis_result_reads": [
+            "interfaces",
+            "schemas"
+          ],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_field_flow_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "interfaces",
+            "schemas",
+            "repository_id",
+            "repository_root"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 3367,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_field_flow_builder.py",
+            "sha256": "c1dc84ed8608fcedd716e0d27b348540b6edbcb2c895b11dcde56ccb1f54afd1"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 293,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "field_flow_facts"
+          ],
+          "purpose": "Build local and bounded interprocedural field-flow evidence.",
+          "reads_analysis_result": "selected_sections",
+          "recommended_action": "Keep in Core; persist and fingerprint the required interface/schema inputs before suite reuse.",
+          "reuse_blockers": [
+            "interfaces and schemas are passed as mutable result sections without independent artifact fingerprints"
+          ],
+          "stage_id": "java_field_flow_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "interfaces_fingerprint",
+            "schemas_fingerprint",
+            "field_flow_builder_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "java_structural_scan"
+          ]
+        },
+        "produces": [
+          "java_field_flow_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 860,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 860,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          }
+        ],
+        "rationale": "Builds local and interprocedural field-flow observations.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory",
+          "interfaces",
+          "schemas"
+        ],
+        "reuse_assessment": "candidate_for_reuse_if_interface_and_schema_inputs_match",
+        "stage_id": "java_field_flow_build",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 4
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(persistence_facts)",
+            "coverage[java_persistence_lineage]",
+            "coverage[java_persistence_runtime_guard]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; progress/status have dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_persistence_lineage_progress.json",
+            "diagnostics/java_persistence_lineage_status.json",
+            "diagnostics/java_persistence_runtime_guard.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 4486,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_persistence_lineage.py",
+            "sha256": "9a72618deab8291b222b6cddc450dffad171dce11500bf44a4170a54a317dc70"
+          },
+          "notes": [
+            "suspend_automatic_gc changes runtime behavior but not intended evidence semantics and therefore is not part of the evidence key"
+          ],
+          "options_affecting_result": [
+            "max_depth",
+            "deep",
+            "progress_interval"
+          ],
+          "pipeline_binding_source": {
+            "line": 295,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "data_source",
+            "persistent_write",
+            "stored_data_access",
+            "persistence_mapping_hint",
+            "source_inspection_request"
+          ],
+          "purpose": "Build neutral source-to-storage and storage-access lineage evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core and make the fact/status bundle a first reusable suite-local derived-evidence artifact.",
+          "reuse_blockers": [],
+          "stage_id": "java_persistence_lineage_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "max_depth",
+            "deep",
+            "persistence_builder_version"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": []
+        },
+        "produces": [
+          "persistence_lineage_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 885,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 885,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 885,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 885,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Resolves neutral source-to-storage and storage-access lineage from code evidence.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "strong_candidate_for_suite_local_reuse_when_options_match",
+        "stage_id": "java_persistence_lineage_build",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [
+          "Contains both universal observations and optional TSA interpretation; these should remain distinguishable in a future contract."
+        ],
+        "produces": [
+          "source_observation_facts",
+          "source_observation_fact_store",
+          "module_resolution_facts",
+          "framework_observations_optional"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 593,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 593,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Publishes universal source observations and a full observation store; optional framework interpretation is still evidence-oriented.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory",
+          "configuration_facts_optional",
+          "gradle_module_facts_optional"
+        ],
+        "reuse_assessment": "safe_when_framework_interpreter_options_match",
+        "stage_id": "java_source_observation_build",
+        "state_dependency": "explicit_source_inputs_plus_profile_options"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 5
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "java_structural_facts",
+          "schemas",
+          "interfaces",
+          "relations",
+          "mapper_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 577,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 577,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 577,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 577,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 577,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts Tree-sitter Java structural facts, schemas, interfaces and direct relations.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_and_parser_version",
+        "stage_id": "java_structural_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(interaction_facts)",
+            "interfaces mutated by scanner",
+            "warnings.extend(interaction_warnings)",
+            "coverage[java_system_interaction_enrichment]"
+          ],
+          "analysis_result_reads": [
+            "config_facts",
+            "schemas",
+            "interfaces"
+          ],
+          "current_serialization": "facts/interfaces are persisted through Foundation or normal package; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_system_interaction_enrichment_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "config_facts",
+            "schemas",
+            "interfaces"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 765,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_interaction_enrichment.py",
+            "sha256": "0945d31712fe627ab7ae41dfffae72e9e3cd34ef07329da8c11efd5848dd1852"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 286,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "configuration_value_binding",
+            "interaction_boundary_facts",
+            "enriched_interface_observations"
+          ],
+          "purpose": "Compose local HTTP/configuration boundary evidence without cross-repository matching.",
+          "reads_analysis_result": "selected_sections",
+          "recommended_action": "Keep in Core and continue sharing through Foundation; make interface mutation explicit in the contract.",
+          "reuse_blockers": [],
+          "stage_id": "java_system_interaction_enrichment",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "config_facts_fingerprint",
+            "schemas_fingerprint",
+            "interfaces_fingerprint",
+            "scanner_version"
+          ],
+          "suite_reuse_status": "ready",
+          "upstream_stage_dependencies": [
+            "config_scan",
+            "java_structural_scan"
+          ]
+        },
+        "produces": [
+          "interaction_boundary_facts",
+          "enriched_interfaces"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 690,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 690,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Composes local HTTP/configuration boundary evidence from direct configuration and interface observations.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "configuration_facts",
+          "schemas",
+          "interfaces",
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_if_required_sections_are_versioned_and_fingerprinted",
+        "stage_id": "java_system_interaction_enrichment",
+        "state_dependency": "explicit_current_result_sections"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 4
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [
+          "T",
+          "h",
+          "e",
+          " ",
+          "s",
+          "e",
+          "m",
+          "a",
+          "n",
+          "t",
+          "i",
+          "c",
+          " ",
+          "o",
+          "u",
+          "t",
+          "p",
+          "u",
+          "t",
+          " ",
+          "b",
+          "e",
+          "l",
+          "o",
+          "n",
+          "g",
+          "s",
+          " ",
+          "i",
+          "n",
+          " ",
+          "C",
+          "o",
+          "r",
+          "e",
+          " ",
+          "a",
+          "s",
+          " ",
+          "e",
+          "v",
+          "i",
+          "d",
+          "e",
+          "n",
+          "c",
+          "e",
+          ",",
+          " ",
+          "b",
+          "u",
+          "t",
+          " ",
+          "t",
+          "h",
+          "e",
+          " ",
+          "c",
+          "u",
+          "r",
+          "r",
+          "e",
+          "n",
+          "t",
+          " ",
+          "A",
+          "P",
+          "I",
+          " ",
+          "r",
+          "e",
+          "c",
+          "e",
+          "i",
+          "v",
+          "e",
+          "s",
+          " ",
+          "a",
+          "l",
+          "l",
+          " ",
+          "a",
+          "c",
+          "c",
+          "u",
+          "m",
+          "u",
+          "l",
+          "a",
+          "t",
+          "e",
+          "d",
+          " ",
+          "f",
+          "a",
+          "c",
+          "t",
+          "s",
+          " ",
+          "a",
+          "n",
+          "d",
+          " ",
+          "o",
+          "b",
+          "s",
+          "c",
+          "u",
+          "r",
+          "e",
+          "s",
+          " ",
+          "t",
+          "h",
+          "e",
+          " ",
+          "r",
+          "e",
+          "a",
+          "l",
+          " ",
+          "d",
+          "e",
+          "p",
+          "e",
+          "n",
+          "d",
+          "e",
+          "n",
+          "c",
+          "y",
+          " ",
+          "c",
+          "l",
+          "o",
+          "s",
+          "u",
+          "r",
+          "e",
+          "."
+        ],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(table_observation_facts)",
+            "coverage[java_table_observations]",
+            "coverage[data_model_table_observations]",
+            "table_observations aggregate"
+          ],
+          "analysis_result_reads": [
+            "facts filtered to jpa_entity and jpa_relationship",
+            "db_schema"
+          ],
+          "current_serialization": "dedicated data-model observation artifact plus facts in normal package",
+          "direct_artifacts": [
+            "compact/data_model_table_observations.json",
+            "diagnostics/java_table_observation_status.json",
+            "diagnostics/data_model_table_observation_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_root",
+            "repository_file_inventory",
+            "repo_id",
+            "facts",
+            "db_schema"
+          ],
+          "fallback_behavior": "none",
+          "implementation_source": {
+            "available": true,
+            "line": 466,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_table_observations.py",
+            "sha256": "2cef8278b2ebcaf9310df6c32fc739b7fc92fa4a32a0d03c135650e4b157d54c"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 989,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "table_relationship_observation",
+            "table_key_observation"
+          ],
+          "purpose": "Build observed JPA/jOOQ relationship and key-usage evidence.",
+          "reads_analysis_result": "complete_fact_list_parameter_but_narrow_actual_filter",
+          "recommended_action": "Keep in Core; narrow the function signature to typed JPA facts and DB schema, then execute once per Suite.",
+          "reuse_blockers": [
+            "function accepts the complete mutable fact list although it currently reads only two fact types",
+            "input fact types have no independent persisted fingerprint"
+          ],
+          "stage_id": "java_table_observation_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "jpa_entity_fact_fingerprint",
+            "jpa_relationship_fact_fingerprint",
+            "db_schema_fingerprint",
+            "table_observation_scanner_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "java_structural_scan",
+            "db_schema_scan"
+          ]
+        },
+        "produces": [
+          "table_relationship_observations",
+          "table_key_observations"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 989,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 989,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 989,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 989,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Produces observed JPA/jOOQ relationship and key-usage facts without declaring physical keys or business cardinality.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory",
+          "db_schema",
+          "selected_existing_facts"
+        ],
+        "reuse_assessment": "not_safe_until_fact_input_is_narrowed_and_versioned",
+        "stage_id": "java_table_observation_build",
+        "state_dependency": "hidden_full_analysis_result_facts"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "observed_execution_contract": {
+          "analysis_result_mutations": [
+            "facts.extend(trace_facts)",
+            "coverage[java_traceability]"
+          ],
+          "analysis_result_reads": [],
+          "current_serialization": "facts are only persisted by later normalized/compact packaging; status has dedicated JSON",
+          "direct_artifacts": [
+            "diagnostics/java_traceability_status.json"
+          ],
+          "explicit_inputs": [
+            "repository_file_inventory",
+            "java_data_flow_facts"
+          ],
+          "fallback_behavior": "If java_data_flow_build is absent, the pipeline supplies an empty fact list and traceability still builds source/call/storage evidence.",
+          "implementation_source": {
+            "available": true,
+            "line": 918,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/scanners/java_trace_builder.py",
+            "sha256": "a8509028ecdada19f747bcb2408cdc0b62b2e47a60e901097ee0420bbabe564f"
+          },
+          "notes": [],
+          "options_affecting_result": [],
+          "pipeline_binding_source": {
+            "line": 294,
+            "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+            "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+          },
+          "produced_fact_types": [
+            "origin_facts",
+            "method_call_facts",
+            "storage_access_facts",
+            "trace_facts",
+            "field_lineage_facts",
+            "output_provenance_facts",
+            "call_chain_diagnostics",
+            "jooq_batch_bind_mappings"
+          ],
+          "purpose": "Build bounded ingress/call/storage traces and field-level provenance from Java source evidence.",
+          "reads_analysis_result": "none",
+          "recommended_action": "Keep in Core; publish data-flow and traceability as separate typed evidence bundles with explicit dependency.",
+          "reuse_blockers": [
+            "the upstream data-flow bundle has no independent persisted contract/fingerprint"
+          ],
+          "stage_id": "java_traceability_build",
+          "suite_reuse_key": [
+            "repository_snapshot",
+            "java_data_flow_fact_bundle_fingerprint",
+            "traceability_builder_version"
+          ],
+          "suite_reuse_status": "conditional",
+          "upstream_stage_dependencies": [
+            "java_data_flow_build"
+          ]
+        },
+        "produces": [
+          "java_traceability_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 877,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 877,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          }
+        ],
+        "rationale": "Builds ingress/call/persistence trace evidence from source files and data-flow facts.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory",
+          "java_data_flow_facts"
+        ],
+        "reuse_assessment": "shareable_only_with_identical_data_flow_input",
+        "stage_id": "java_traceability_build",
+        "state_dependency": "explicit_upstream_stage_output_in_local_variable"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 3
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "dependency_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 538,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 538,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 538,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts source-declared Maven dependencies.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_fingerprint",
+        "stage_id": "maven_dependency_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 5
+        },
+        "category": "technical_packaging",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "normalized_fact_store"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1159,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1159,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1159,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1159,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 1159,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Writes normalized fact indexes from already materialized facts.",
+        "recommended_boundary": "keep_as_packaging",
+        "requires": [
+          "current_analysis_result"
+        ],
+        "reuse_assessment": "per_output_package",
+        "stage_id": "normalize_facts",
+        "state_dependency": "full_analysis_result_serialization"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 2
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "openapi_facts",
+          "declared_interfaces",
+          "declared_schemas"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 559,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 559,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts declared OpenAPI/Swagger interfaces and schemas.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_fingerprint",
+        "stage_id": "openapi_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "analyzer_owned_internal_pipeline": 1
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "reference_data_fact_base_artifact"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "analyzer_owned_internal_pipeline",
+            "declared_directly": true,
+            "execution_engine": "generic_evidence_runtime",
+            "implementation_source": {
+              "line": 1117,
+              "path": "code_analyzer_core/pipeline.py",
+              "sha256": "206787584a2edfb636e1e9c7856602b3a2936aaecdc46530353bf08b55b6eb3a"
+            },
+            "profile_id": "internal-subject-knowledge-evidence-v1",
+            "profile_source": "code_analyzer_core/prepared_artifacts/subject_knowledge_evidence.py"
+          }
+        ],
+        "rationale": "Deterministically prepares declared-value and literal-write observations for reference-data-evidence/v1; KLC owns persistence and query semantics.",
+        "recommended_boundary": "core_typed_evidence_preparation",
+        "requires": [
+          "current_analysis_result"
+        ],
+        "reuse_assessment": "shared_analyzer_owned_payload",
+        "stage_id": "reference_data_fact_base",
+        "state_dependency": "hidden_full_analysis_result"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 5
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [
+          "Technical prerequisite represented in the evidence layer because the four-category diagnostic has no separate orchestration category."
+        ],
+        "produces": [
+          "repository_file_inventory",
+          "detected_stack"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 394,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 394,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 394,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 394,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-portfolio-topology",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-portfolio-topology.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 394,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Discovers repository files and stack signals used by all later scanners.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [],
+        "reuse_assessment": "safe_with_repository_snapshot_fingerprint",
+        "stage_id": "scan_files",
+        "state_dependency": "repository_snapshot"
+      },
+      {
+        "binding_statuses": {
+          "declarative_label_fixed_runtime": 1
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "spec_artifact_index"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "declarative_label_fixed_runtime",
+            "declared_directly": true,
+            "execution_engine": "spec_fixed_pipeline",
+            "implementation_source": {
+              "line": 572,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/spec_analysis.py",
+              "sha256": "e5de457e2ea00d72193579ec9519481e95835e8c0d263697a195a4bb83b694f2"
+            },
+            "profile_id": "spec-evidence-workspace",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml"
+          }
+        ],
+        "rationale": "Discovers supplied specification and supporting evidence artifacts.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [],
+        "reuse_assessment": "safe_with_spec_artifact_fingerprint",
+        "stage_id": "spec_artifact_discovery",
+        "state_dependency": "spec_artifact_snapshot"
+      },
+      {
+        "binding_statuses": {
+          "declarative_label_fixed_runtime": 1
+        },
+        "category": "technical_packaging",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "standard_analysis_output"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "declarative_label_fixed_runtime",
+            "declared_directly": true,
+            "execution_engine": "spec_fixed_pipeline",
+            "implementation_source": {
+              "line": 572,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/spec_analysis.py",
+              "sha256": "e5de457e2ea00d72193579ec9519481e95835e8c0d263697a195a4bb83b694f2"
+            },
+            "profile_id": "spec-evidence-workspace",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/spec-evidence-workspace.yaml"
+          }
+        ],
+        "rationale": "Transforms parsed specification evidence into the standard analysis-output compatibility contract.",
+        "recommended_boundary": "keep_as_ingestion_packaging",
+        "requires": [
+          "parsed_spec_evidence"
+        ],
+        "reuse_assessment": "per_spec_snapshot",
+        "stage_id": "spec_to_standard_analysis_output",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "runtime_enforced": 4
+        },
+        "category": "base_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "sql_facts",
+          "sql_parse_summary",
+          "sql_parse_warnings"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 709,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "code-to-openspec-data-evidence",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/code-to-openspec-data-evidence.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 709,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "git-change-complexity-assessment",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/git-change-complexity-assessment.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": true,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 709,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-data-model-static",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-data-model-static.yaml"
+          },
+          {
+            "binding_status": "runtime_enforced",
+            "declared_directly": false,
+            "execution_engine": "java_stage_controlled_pipeline",
+            "implementation_source": {
+              "line": 709,
+              "path": "/mnt/data/work_step8/src/core/code_analyzer_core/pipeline.py",
+              "sha256": "51a0012e0cc324ad750d28ff351001251d6aaf0b4709bfd7b828b9e97a6fe536"
+            },
+            "profile_id": "repository-system-data-model",
+            "profile_source": "/mnt/data/work_step8/src/core/analysis-profiles/repository-system-data-model.yaml"
+          }
+        ],
+        "rationale": "Extracts SQL statements and parse diagnostics from repository files.",
+        "recommended_boundary": "keep_in_core",
+        "requires": [
+          "repository_file_inventory"
+        ],
+        "reuse_assessment": "safe_with_repository_snapshot_and_sql_parser_version",
+        "stage_id": "sql_scan",
+        "state_dependency": "explicit_inputs_or_source_files"
+      },
+      {
+        "binding_statuses": {
+          "analyzer_owned_internal_pipeline": 1
+        },
+        "category": "derived_evidence",
+        "classification_status": "classified",
+        "notes": [],
+        "produces": [
+          "system_description_view_facts"
+        ],
+        "profile_occurrences": [
+          {
+            "binding_status": "analyzer_owned_internal_pipeline",
+            "declared_directly": true,
+            "execution_engine": "generic_evidence_runtime",
+            "implementation_source": {
+              "line": 1097,
+              "path": "code_analyzer_core/pipeline.py",
+              "sha256": "206787584a2edfb636e1e9c7856602b3a2936aaecdc46530353bf08b55b6eb3a"
+            },
+            "profile_id": "internal-subject-knowledge-evidence-v1",
+            "profile_source": "code_analyzer_core/prepared_artifacts/subject_knowledge_evidence.py"
+          }
+        ],
+        "rationale": "Deterministically prepares observed interface, scenario, dependency and access evidence for system-description-evidence/v1; KLC owns persistence and query semantics.",
+        "recommended_boundary": "core_typed_evidence_preparation",
+        "requires": [
+          "current_analysis_result"
+        ],
+        "reuse_assessment": "shared_analyzer_owned_payload",
+        "stage_id": "system_description_enrichment",
+        "state_dependency": "hidden_full_analysis_result"
+      }
+    ],
+    "summary": {
+      "category_counts": {
+        "base_evidence": 12,
+        "derived_evidence": 11,
+        "knowledge_materialization_candidate": 1,
+        "technical_packaging": 5
+      },
+      "classified_stage_id_count": 29,
+      "declarative_only_stage_ids": [
+        "data_evidence_yaml_parse",
+        "evidence_coverage_build",
+        "spec_artifact_discovery",
+        "spec_to_standard_analysis_output"
+      ],
+      "declared_stage_id_count": 29,
+      "hidden_full_result_dependencies": [
+        "code_conceptual_model_build",
+        "java_table_observation_build",
+        "reference_data_fact_base",
+        "system_description_enrichment"
+      ],
+      "knowledge_materialization_candidates": [
+        "code_conceptual_model_build"
+      ],
+      "mixed_binding_stage_ids": [
+        "compact_package"
+      ],
+      "profile_count": 7,
+      "runtime_enforced_stage_ids": [
+        "code_conceptual_model_build",
+        "compact_package",
+        "config_scan",
+        "core_output",
+        "db_schema_scan",
+        "declared_value_scan",
+        "declared_value_summary_scan",
+        "gradle_dependency_scan",
+        "java_data_flow_build",
+        "java_data_model_candidate_scan",
+        "java_data_model_lineage_build",
+        "java_field_flow_build",
+        "java_persistence_lineage_build",
+        "java_source_observation_build",
+        "java_structural_scan",
+        "java_system_interaction_enrichment",
+        "java_table_observation_build",
+        "java_traceability_build",
+        "maven_dependency_scan",
+        "normalize_facts",
+        "openapi_scan",
+        "reference_data_fact_base",
+        "scan_files",
+        "sql_scan",
+        "system_description_enrichment"
+      ],
+      "unclassified_stage_ids": []
+    }
+  },
+  "foundation_layer": {
+    "all_fragments": [
+      {
+        "architecture_diagnostics": [
+          {
+            "category": "derived_evidence",
+            "code": "foundation_contains_non_base_stage",
+            "severity": "architecture",
+            "stage_id": "java_system_interaction_enrichment"
+          }
+        ],
+        "capabilities": [
+          "repository.inventory",
+          "build.dependencies",
+          "system.interfaces",
+          "source.observations",
+          "data.physical-schema",
+          "system.interactions"
+        ],
+        "catalog_source": "core_analysis_catalog/v1",
+        "description": "Общая детерминированная основа для анализа Java-систем: состав репозитория, конфигурация, зависимости, интерфейсы, структурная модель, универсальные Tree-sitter observations, SQL, физическая схема и технические взаимодействия.\n",
+        "fragment_id": "repository-analysis-foundation",
+        "name": "Reusable Java repository analysis foundation",
+        "output_contract": {
+          "policy": {
+            "no_business_decisions": true,
+            "source_observation_fact_store_uncapped": true,
+            "universal_source_observations_available": true
+          },
+          "strict_evidence_policy": "deterministic_observed_facts_provenance_gaps"
+        },
+        "owner": "code-analyzer-core",
+        "profile_version": 1,
+        "source": {
+          "path": "analysis-profile-fragments/repository-analysis-foundation.yaml",
+          "sha256": "90a445e331eb022b35cd54a0064f1d53443e6cb8463e21f96327ffd474024bfa"
+        },
+        "stage_categories": {
+          "config_scan": "base_evidence",
+          "db_schema_scan": "base_evidence",
+          "gradle_dependency_scan": "base_evidence",
+          "java_source_observation_build": "base_evidence",
+          "java_structural_scan": "base_evidence",
+          "java_system_interaction_enrichment": "derived_evidence",
+          "maven_dependency_scan": "base_evidence",
+          "openapi_scan": "base_evidence",
+          "scan_files": "base_evidence",
+          "sql_scan": "base_evidence"
+        },
+        "stage_ids": [
+          "scan_files",
+          "config_scan",
+          "maven_dependency_scan",
+          "gradle_dependency_scan",
+          "openapi_scan",
+          "java_structural_scan",
+          "java_source_observation_build",
+          "java_system_interaction_enrichment",
+          "sql_scan",
+          "db_schema_scan"
+        ]
+      }
+    ],
+    "architecture_diagnostics": [
+      {
+        "category": "derived_evidence",
+        "code": "foundation_contains_non_base_stage",
+        "severity": "architecture",
+        "stage_id": "java_system_interaction_enrichment"
+      }
+    ],
+    "capabilities": [
+      "repository.inventory",
+      "build.dependencies",
+      "system.interfaces",
+      "source.observations",
+      "data.physical-schema",
+      "system.interactions"
+    ],
+    "catalog_source": "core_analysis_catalog/v1",
+    "description": "Общая детерминированная основа для анализа Java-систем: состав репозитория, конфигурация, зависимости, интерфейсы, структурная модель, универсальные Tree-sitter observations, SQL, физическая схема и технические взаимодействия.\n",
+    "fragment_id": "repository-analysis-foundation",
+    "name": "Reusable Java repository analysis foundation",
+    "output_contract": {
+      "policy": {
+        "no_business_decisions": true,
+        "source_observation_fact_store_uncapped": true,
+        "universal_source_observations_available": true
+      },
+      "strict_evidence_policy": "deterministic_observed_facts_provenance_gaps"
+    },
+    "owner": "code-analyzer-core",
+    "profile_version": 1,
+    "runtime_description_source": "core_analysis_catalog/v1",
+    "source": {
+      "path": "analysis-profile-fragments/repository-analysis-foundation.yaml",
+      "sha256": "90a445e331eb022b35cd54a0064f1d53443e6cb8463e21f96327ffd474024bfa"
+    },
+    "stage_categories": {
+      "config_scan": "base_evidence",
+      "db_schema_scan": "base_evidence",
+      "gradle_dependency_scan": "base_evidence",
+      "java_source_observation_build": "base_evidence",
+      "java_structural_scan": "base_evidence",
+      "java_system_interaction_enrichment": "derived_evidence",
+      "maven_dependency_scan": "base_evidence",
+      "openapi_scan": "base_evidence",
+      "scan_files": "base_evidence",
+      "sql_scan": "base_evidence"
+    },
+    "stage_ids": [
+      "scan_files",
+      "config_scan",
+      "maven_dependency_scan",
+      "gradle_dependency_scan",
+      "openapi_scan",
+      "java_structural_scan",
+      "java_source_observation_build",
+      "java_system_interaction_enrichment",
+      "sql_scan",
+      "db_schema_scan"
+    ]
+  },
+  "knowledge_layer_routing": {
+    "available": true,
+    "current_materialization_ids": [
+      "code-declared-data-model",
+      "effective-data-model",
+      "interaction-coverage",
+      "interaction-field-contracts",
+      "interaction-islands",
+      "logical-physical-mapping",
+      "observed-storage-usage",
+      "persistence-lineage",
+      "physical-model",
+      "reference-data",
+      "repository-value-flow",
+      "sql-analysis",
+      "system-description",
+      "system-interactions",
+      "workspace-sql-catalog"
+    ],
+    "klc_version": "0.59.1",
+    "routing_basis": "materialization_id_plus_typed_dependencies",
+    "runtime_registered_materialization_ids": [
+      "code-declared-data-model",
+      "effective-data-model",
+      "logical-physical-mapping",
+      "observed-storage-usage",
+      "persistence-lineage",
+      "physical-model",
+      "reference-data",
+      "repository-value-flow",
+      "sql-analysis",
+      "system-description",
+      "system-interactions",
+      "workspace-sql-catalog"
+    ],
+    "sources": [
+      {
+        "path": "/mnt/data/step17_e2e_run/src/knowledge-layer-core-0.59.0-task-suite-runtime-removed-WIP/knowledge-layer-core-0.59.0-task-suite-runtime-removed-WIP/knowledge_layer_core/materialization_contracts.py",
+        "sha256": "6b597b1f09a6b72206eba3dbcea29b69772db068f3faced1c12e962963830c7c"
+      },
+      {
+        "path": "/mnt/data/step17_e2e_run/src/knowledge-layer-core-0.59.0-task-suite-runtime-removed-WIP/knowledge-layer-core-0.59.0-task-suite-runtime-removed-WIP/knowledge_layer_core/materialization_runtime.py",
+        "sha256": "9d8d7f80447170ba93eeaad33c25a652cabae579fcaba98d24fea9630a99d196"
+      },
+      {
+        "path": "/mnt/data/step17_e2e_run/src/knowledge-layer-core-0.59.0-task-suite-runtime-removed-WIP/knowledge-layer-core-0.59.0-task-suite-runtime-removed-WIP/knowledge_layer_core/version.py",
+        "sha256": "e9ffa12af753c8779add69d6839e30f8b34f1cf3666901bf472b466799f928c9"
+      }
+    ],
+    "task_semantic_routes": [],
+    "unregistered_current_materialization_ids": [
+      "interaction-coverage",
+      "interaction-field-contracts",
+      "interaction-islands"
+    ]
+  },
+  "known_architecture_tensions": [],
+  "model_summary": {
+    "artifact_manifest_role": "physical contract between Core, Runner and Knowledge Layer",
+    "core_analyzer_role": "publishes typed observed evidence",
+    "knowledge_profile_role": "selects typed knowledge requirements",
+    "materialization_role": "builds deterministic knowledge from typed evidence and knowledge dependencies"
+  },
+  "pipeline_layer": {
+    "available": true,
+    "pipelines": [],
+    "sources": [
+      {
+        "path": "/mnt/data/step17_e2e_run/src/analysis-ui-2.0.0a67-sql-product-profiles-recovery-step5-WIP/analysis-ui-2.0.0a67-sql-product-profiles-WIP/src/analysis_ui/runtime/pipeline.py",
+        "sha256": "da89bbc36049d9b8e47ba9ca419accf9b496c409d41192bd399c428babc9bf00"
+      },
+      {
+        "path": "/mnt/data/step17_e2e_run/src/analysis-ui-2.0.0a67-sql-product-profiles-recovery-step5-WIP/analysis-ui-2.0.0a67-sql-product-profiles-WIP/src/analysis_ui/runtime/profiles.py",
+        "sha256": "9c2a76f0cc0ef3be56ca15b4f9bad2c9d1d06adb8504a93b0d56e849cc56414b"
+      }
+    ]
+  },
+  "profile_layer": [],
+  "runtime_model": {
+    "evidence_selection": "artifact_kind_plus_schema_version",
+    "materialization_selection": "materialization_id_plus_typed_dependencies",
+    "portfolio_topology": "parked_outside_installed_runtime",
+    "product_runtime": "knowledge_execution_plan/v1",
+    "task_suite_orchestration": "removed"
+  },
+  "schema_version": "analysis_mechanism_catalog/v4",
+  "sources": {
+    "core_analysis_catalog": {
+      "path": "/mnt/data/step17_e2e_run/current-contracts-step19/core-analysis-catalog.json",
+      "sha256": "7201dcd1fb0c01e4b821042d6cbd4c5b510a4490fd111f5c0371055e3773e9f5"
+    },
+    "core_catalog_fingerprint": "cde89e5253b4b73f8f6c66cdc84501a35dee5573e7f8bef536e373fb8f4a24dd",
+    "core_catalog_schema_version": "core_analysis_catalog/v1",
+    "core_version": "0.44.6"
+  },
+  "suite_layer": [],
+  "task_layer": []
+}

@@ -1,0 +1,36 @@
+report_type: data-model-report
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- Which logical entities and dictionaries are present?
+- Which fields, inherited fields and keys define selected objects?
+- Which relationships and cardinalities are observed?
+- Which deterministic join encodings can be derived and which physical joins remain unconfirmed?
+- Which model facts are contributed across repositories?
+- Which logical fields flow through observed SQL transformations into physical target columns?
+- Which representative source-to-target data journeys are evidenced?
+- Which gaps require DDL, configuration or owner clarification?
+required_headings:
+- Краткий вывод
+- Область отчёта
+- Резюме модели данных
+- ER-диаграммы
+- Каталог объектов
+- Детальное описание ключевых объектов
+- Атрибуты и наследование
+- Ключи
+- Связи и правила JOIN
+- Справочники
+- Межрепозиторные соответствия
+- Физическая модель
+- Архитектурные и бизнес-выводы
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance
+appendix_policy:
+  limitations_and_coverage: Приложение A. Полнота анализа и ограничения доказательности
+  ambiguities_and_questions: Приложение B. Неоднозначности и вопросы для уточнения
+  evidence_and_provenance: Приложение C. Технические доказательства и provenance

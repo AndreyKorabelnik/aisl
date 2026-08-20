@@ -1,0 +1,16 @@
+{
+  "publication_seconds": 0.259,
+  "query_seconds": 0.198,
+  "revision_id": "rev-70516a342785e884db2835a4",
+  "total_external_relations": 284,
+  "returned": 10,
+  "coverage_status": "partial",
+  "first_relation": "custom_b2c_profile_fl.epk_client_email",
+  "first_field_count": 23,
+  "sql_capability": {
+    "id": "sql_analysis",
+    "status": "available",
+    "description": "Query SQL relations with actually used fields, roles, coverage and evidence.",
+    "metadata": {}
+  }
+}

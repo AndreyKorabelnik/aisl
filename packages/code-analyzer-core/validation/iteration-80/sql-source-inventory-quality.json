@@ -1,0 +1,600 @@
+{
+  "schema_version": "sql-source-inventory-quality-report/v1",
+  "fixture_id": "datamart_profile_fl-source-inventory-v1",
+  "repo_id": "datamart_profile_fl",
+  "metrics": {
+    "relation_true_positive": 163,
+    "relation_false_positive": 0,
+    "relation_false_negative": 0,
+    "relation_precision": 1.0,
+    "relation_recall": 1.0,
+    "classification_correct": 163,
+    "classification_total": 163,
+    "classification_accuracy": 1.0,
+    "field_true_positive": 72,
+    "field_false_positive": 0,
+    "field_false_negative": 0,
+    "field_precision": 1.0,
+    "field_recall": 1.0,
+    "field_role_correct": 72,
+    "field_role_total": 72,
+    "field_role_accuracy": 1.0,
+    "column_usages": 3153,
+    "unresolved_column_usages": 97,
+    "column_resolution_rate": 0.9692356485886457,
+    "case_count": 30,
+    "passed_cases": 30,
+    "failed_cases": 0
+  },
+  "target_gates": {
+    "relation_precision": {
+      "target": 0.99,
+      "actual": 1.0,
+      "passed": true
+    },
+    "relation_recall": {
+      "target": 0.98,
+      "actual": 1.0,
+      "passed": true
+    },
+    "classification_accuracy": {
+      "target": 0.98,
+      "actual": 1.0,
+      "passed": true
+    },
+    "field_precision": {
+      "target": 0.98,
+      "actual": 1.0,
+      "passed": true
+    },
+    "field_recall": {
+      "target": 0.98,
+      "actual": 1.0,
+      "passed": true
+    },
+    "field_role_accuracy": {
+      "target": 0.98,
+      "actual": 1.0,
+      "passed": true
+    }
+  },
+  "target_status": "passed",
+  "source_hash_mismatches": [],
+  "cases": [
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_phone_mapping/epk_phone_mapping.sql",
+      "tags": [
+        "cte",
+        "field_exact",
+        "published_mart_as_source"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 1,
+      "actual_relation_count": 1,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 116,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_persdata_mapping/epk_persdata_mapping.sql",
+      "tags": [
+        "complex_cte",
+        "union",
+        "known_parser_gap"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 172,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/epk_client.sql",
+      "tags": [
+        "large_join",
+        "technical_staging",
+        "known_relation_recall_gap"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 24,
+      "actual_relation_count": 24,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 332,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epkid_2_epkid/epkid_2_epkid.sql",
+      "tags": [
+        "field_exact",
+        "joins",
+        "template_sources"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 3,
+      "actual_relation_count": 3,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 39,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_client_link_dzo/t_client_link_dzo.sql",
+      "tags": [
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 4,
+      "actual_relation_count": 4,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 37,
+      "unresolved_column_usages": 4,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_interaction_profile/t_dim_interaction_profile.sql",
+      "tags": [
+        "cte",
+        "technical_only_direct_sources"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 3,
+      "actual_relation_count": 3,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 80,
+      "unresolved_column_usages": 8,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_uvsk_client_team/t_dim_uvsk_client_team.sql",
+      "tags": [
+        "field_exact",
+        "single_template_source",
+        "windows"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 1,
+      "actual_relation_count": 1,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 93,
+      "unresolved_column_usages": 1,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/product_color_list/product_color_list.sql",
+      "tags": [
+        "technical_staging",
+        "wildcard"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 1,
+      "actual_relation_count": 1,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 76,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/common/snp_inc_diff.sql",
+      "tags": [
+        "anti_join",
+        "generic_template",
+        "semantic_placeholders"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 3,
+      "actual_relation_count": 3,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 27,
+      "unresolved_column_usages": 6,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/common/hist_inc_diff.sql",
+      "tags": [
+        "generic_template",
+        "union"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 6,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_tags/epk_client_tags.sql",
+      "tags": [
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 5,
+      "actual_relation_count": 5,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 54,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_riskprofile.sql",
+      "tags": [
+        "dictionary_join",
+        "field_exact",
+        "history_snapshot_union"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 4,
+      "actual_relation_count": 4,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 33,
+      "unresolved_column_usages": 0,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "tags": [
+        "field_exact",
+        "range_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 55,
+      "unresolved_column_usages": 0,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_gender.sql",
+      "tags": [
+        "field_exact",
+        "range_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 53,
+      "unresolved_column_usages": 0,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_docs.sql",
+      "tags": [
+        "dictionary_join",
+        "field_exact",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 5,
+      "actual_relation_count": 5,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 66,
+      "unresolved_column_usages": 0,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/epk_client_email.sql",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 9,
+      "actual_relation_count": 9,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 208,
+      "unresolved_column_usages": 3,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/epk_client_phonenumber.sql",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 12,
+      "actual_relation_count": 12,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 150,
+      "unresolved_column_usages": 3,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_doc/epk_client_doc.sql",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 9,
+      "actual_relation_count": 9,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 268,
+      "unresolved_column_usages": 6,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_address/epk_client_address.sql",
+      "tags": [
+        "complex_cte",
+        "output_target_read",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 15,
+      "actual_relation_count": 15,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 339,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_lnk_host_id/epk_lnk_host_id.sql",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 5,
+      "actual_relation_count": 5,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 185,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "tags": [
+        "ddl_dml",
+        "template_sources",
+        "temporary_table"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 9,
+      "actual_relation_count": 9,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 122,
+      "unresolved_column_usages": 16,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_real_estate/t_dim_real_estate_pre.sql",
+      "tags": [
+        "ddl_dml",
+        "template_sources",
+        "temporary_table"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 11,
+      "actual_relation_count": 11,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 113,
+      "unresolved_column_usages": 4,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_individual_stg.sql",
+      "tags": [
+        "ddl_dml",
+        "field_exact",
+        "template_target"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 3,
+      "actual_relation_count": 3,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 52,
+      "unresolved_column_usages": 13,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "tags": [
+        "ddl_dml",
+        "intermediate_read",
+        "template_sources"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 6,
+      "actual_relation_count": 6,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 117,
+      "unresolved_column_usages": 1,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_docs_stg.sql",
+      "tags": [
+        "ddl_dml",
+        "intermediate_read",
+        "partial_columns"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 37,
+      "unresolved_column_usages": 1,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_real_estate/t_dim_real_estate_pre.sql",
+      "tags": [
+        "ddl_dml",
+        "template_sources",
+        "temporary_table"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 11,
+      "actual_relation_count": 11,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 113,
+      "unresolved_column_usages": 4,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_docs_bv_stg.sql",
+      "tags": [
+        "ddl_dml",
+        "field_exact",
+        "snapshot_history"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 5,
+      "actual_relation_count": 5,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 136,
+      "unresolved_column_usages": 2,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_client_team_type/t_dim_client_team_type_arc.sql",
+      "tags": [
+        "ddl_dml",
+        "field_exact",
+        "template_target"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 60,
+      "unresolved_column_usages": 1,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/epk_client_v2_stg.sql",
+      "tags": [
+        "ddl_dml",
+        "technical_only_direct_sources",
+        "wildcard"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 2,
+      "actual_relation_count": 2,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 14,
+      "unresolved_column_usages": 6,
+      "status": "passed"
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/interims_for_epk_client.sql",
+      "tags": [
+        "ddl_only",
+        "many_targets",
+        "no_sources"
+      ],
+      "source_hash_status": "not_checked",
+      "expected_relation_count": 0,
+      "actual_relation_count": 0,
+      "missing_relations": [],
+      "unexpected_relations": [],
+      "classification_mismatches": [],
+      "field_mismatches": [],
+      "column_usages": 0,
+      "unresolved_column_usages": 0,
+      "status": "passed"
+    }
+  ]
+}

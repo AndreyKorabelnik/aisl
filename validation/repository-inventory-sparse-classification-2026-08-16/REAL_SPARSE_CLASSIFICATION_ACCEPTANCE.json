@@ -1,0 +1,62 @@
+{
+  "cases": {
+    "datamart": {
+      "classification_representation": {
+        "absence_semantics": "detector_not_applicable_to_family_evidence_kind",
+        "mode": "sparse_relevant_evaluations",
+        "repository_concept_statuses": "dense",
+        "schema_version": "repository-inventory-concept-classification-representation/v1"
+      },
+      "classification_row_reduction": 167,
+      "classification_row_reduction_pct": 99.405,
+      "compact_dense_bytes": 529761,
+      "compact_reduction_bytes": 171312,
+      "compact_reduction_pct": 32.338,
+      "compact_sparse_bytes": 358449,
+      "concept_statuses_dense_count": 6,
+      "dense_classification_rows": 168,
+      "fresh_status": "PASS",
+      "pretty_dense_bytes_counterfactual": 748001,
+      "pretty_reduction_pct": 30.933,
+      "pretty_sparse_bytes_actual": 516623,
+      "report_sha256": "eb2412b87d3ba1b18c6c6821d478a635924e7e14b63fc88e7582c308aa5885f7",
+      "semantic_structural_dimensions_equal": true,
+      "sparse_classification_rows": 1,
+      "structural_family_count": 28
+    },
+    "gateway": {
+      "classification_representation": {
+        "absence_semantics": "detector_not_applicable_to_family_evidence_kind",
+        "mode": "sparse_relevant_evaluations",
+        "repository_concept_statuses": "dense",
+        "schema_version": "repository-inventory-concept-classification-representation/v1"
+      },
+      "classification_row_reduction": 124,
+      "classification_row_reduction_pct": 98.413,
+      "compact_dense_bytes": 208763,
+      "compact_reduction_bytes": 99340,
+      "compact_reduction_pct": 47.585,
+      "compact_sparse_bytes": 109423,
+      "concept_statuses_dense_count": 6,
+      "dense_classification_rows": 126,
+      "fresh_status": "PASS",
+      "pretty_dense_bytes_counterfactual": 288071,
+      "pretty_reduction_pct": 46.24,
+      "pretty_sparse_bytes_actual": 154867,
+      "report_sha256": "b5112e6dbf360e7587180c904a93c33aa0d27003fb9c824e85a46255f9d654dc",
+      "semantic_structural_dimensions_equal": true,
+      "sparse_classification_rows": 2,
+      "structural_family_count": 21
+    }
+  },
+  "date": "2026-08-16",
+  "invariants": {
+    "concept_status_remains_dense": true,
+    "no_source_reanalysis_inside_klc": true,
+    "only_irrelevant_family_detector_pairs_removed": true,
+    "relevant_negative_evaluations_preserved": true
+  },
+  "klc_version": "0.61.0a36",
+  "schema_version": "repository_inventory_sparse_classification_acceptance/v1",
+  "verdict": "PASS"
+}

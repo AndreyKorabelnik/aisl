@@ -1,0 +1,16 @@
+{
+  "files": [
+    "API_USAGE.md",
+    "CAPABILITIES.json",
+    "RETRIEVAL_GUIDE.md",
+    "SYSTEM_PROMPT.md",
+    "TOOL_CATALOG.json",
+    "llm_integration_profile.json"
+  ],
+  "fingerprint": "a7e75bb6761332817b1a725d12ed1c9e0844f4190da65fca87026dd2ad62d1f0",
+  "output": "/mnt/data/llm-integration-block-c-acceptance/live-http/consumer-kit",
+  "profile_id": "data-model/v1",
+  "revision_id": "rev-93e47b33327f47cf691cff55",
+  "status": "exported",
+  "system_id": "live-system"
+}

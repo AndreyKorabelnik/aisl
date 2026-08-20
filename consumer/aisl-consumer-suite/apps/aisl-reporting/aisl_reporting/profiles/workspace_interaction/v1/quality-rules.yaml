@@ -1,0 +1,7 @@
+max_dataset_bytes: 500000
+require_exact_evidence: true
+require_workspace_scope: true
+require_owner_questions: true
+require_diagram_data: true
+forbid_runtime_promotion: true
+forbid_final_response_dependency: true

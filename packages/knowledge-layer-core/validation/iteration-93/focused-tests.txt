@@ -1,0 +1,8 @@
+12 passed in 1.17s
+
+Command scope:
+- tests/test_sql_workflow_context.py
+- test_workflow_binding_query_preserves_literals_templates_and_evidence
+- test_workflow_context_resolves_placeholder_only_through_referenced_sql_file
+- test_sql_target_candidates_rank_published_business_target_before_intermediate
+- test_sql_target_candidates_validate_limit

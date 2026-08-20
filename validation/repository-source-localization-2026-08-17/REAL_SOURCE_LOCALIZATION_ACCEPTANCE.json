@@ -1,0 +1,119 @@
+{
+  "acceptance_cases": {
+    "analysis_scope_gap": {
+      "gap_occurrence_id": "repository_inventory_gap_bb5fab1b434dc81e6188",
+      "occurrence_count": 0,
+      "scope": "analysis_scope",
+      "status": "not_source_localized"
+    },
+    "java_known_concept_exact_span": {
+      "candidate_id": "repository_inventory_candidate_55c18776e0af54364022",
+      "concept_link_verified": true,
+      "family_id": "repository_inventory_family_e956bd338598618771a0",
+      "file_sha256_verified": true,
+      "line_end": 65,
+      "line_start": 6,
+      "occurrence_id": "repository_source_occurrence_10168ab13956a18ce2db",
+      "path": "ucp-common-api/src/main/java/com/sbt/bm/ucp/model/DedupEdge.java",
+      "precision": "exact_span"
+    },
+    "localized_coverage_gap": {
+      "gap_occurrence_id": "repository_inventory_gap_08aa9f3e235a171f3076",
+      "occurrence_count": 592,
+      "scope": "source_occurrence",
+      "status": "localized"
+    },
+    "miner_api_selection": {
+      "candidate_id": "repository_inventory_candidate_d37b0c04631b1a16003c",
+      "get_by_id_verified": true,
+      "miner_source_scan_required": false,
+      "selected_occurrence_id": "repository_source_occurrence_1949937c12b4e8129a92"
+    },
+    "portfolio_occurrence_refs": {
+      "localized_gap_ref_count": 592,
+      "source_paths_copied_to_candidate": false,
+      "unknown_candidate_ref_count": 2
+    },
+    "sql_statement_real_existing_evidence": {
+      "family_descriptor_source": "knowledge_layer_core.repository_inventory_builder._evidence_families",
+      "family_id": "repository_inventory_family_42dcc4fe065d046a63d8",
+      "family_label": "sql_statement",
+      "family_record_count": 475,
+      "file_sha256_verified": true,
+      "normalized_statement_occurrence_count": 475,
+      "note": "Validated against fresh official Core sql-analysis/v1 evidence via the official Repository Inventory family builder; preflight Repository Inventory intentionally treats sql-analysis as existing_only and does not produce it.",
+      "official_inventory_family_builder_verified": true,
+      "official_statement_fact_count": 475,
+      "sample": {
+        "content_sha256": "5ad4d2f84cfb104fed9dd2e0d2c2f03b27e4a8f25c1710f8662f5646b0441f26",
+        "line_end": 1,
+        "line_start": 1,
+        "localization_kind": "statement",
+        "occurrence_id": "repository_source_occurrence_6407e5f3eb711a590150",
+        "repository_relative_path": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/custom_b2c_profile_fl.t_dim_client_team_type.sql"
+      },
+      "source_evidence_artifact_id": "sql_analysis_6fa96bbdbc67e25f02c796cb",
+      "source_evidence_schema_version": "sql-analysis/v1"
+    },
+    "structural_family_multiple_occurrences": {
+      "family_id": "repository_inventory_family_e956bd338598618771a0",
+      "occurrence_count": 40
+    },
+    "structural_novelty": {
+      "candidate_id": "repository_inventory_candidate_be633ac3bff48065f6b9",
+      "family_id": "repository_inventory_extension_family_507fbe6e9b44575881d7",
+      "occurrence_count": 53
+    },
+    "unknown_primitive": {
+      "all_sampled_precision_file": true,
+      "candidate_id": "repository_inventory_candidate_d37b0c04631b1a16003c",
+      "family_id": "repository_inventory_extension_family_d40907c68cb75987d969",
+      "occurrence_count": 2
+    },
+    "unresolved_gap": {
+      "gap_occurrence_id": "repository_inventory_gap_c9dd77a632271156314e",
+      "occurrence_count": 0,
+      "scope": "unresolved",
+      "status": "unresolved"
+    },
+    "yaml_file_level": {
+      "content_sha256": "bda3a4fa749b1091d8bc6449acd1d03ff7bb6129c0d76af5ccbf551e8e4e26d8",
+      "localization_kind": "file",
+      "occurrence_id": "repository_source_occurrence_ee6bbbb20967ddd79eae",
+      "repository_relative_path": "entity/935120600 CI05502975 - Витрина Профиль ФЛ/935120601 custom_blago_b2c_profile_fl.epk_client.yaml"
+    }
+  },
+  "architecture_invariants": {
+    "core_changed": false,
+    "coverage_gaps_preserved": true,
+    "source_export_or_security_logic_added": false,
+    "source_occurrence_is_provenance_not_semantic_fact": true,
+    "source_parser_added": false
+  },
+  "date": "2026-08-17",
+  "fresh_publications": {
+    "datamart": {
+      "revision_id": "rev-2f7821f46c65b37826589675",
+      "source_occurrence_links": 2188,
+      "source_occurrences": 491,
+      "system_id": "source-occ-datamart"
+    },
+    "ucp": {
+      "revision_id": "rev-098c480dfa59d679c5633a89",
+      "source_occurrence_links": 2010,
+      "source_occurrences": 670,
+      "system_id": "source-occ-ucp"
+    }
+  },
+  "limitations": [
+    "Repository revision may remain unavailable for local source snapshots; v1 does not invent VCS revision identity.",
+    "Structured-file shape evidence currently provides honest file-level localization, not YAML/JSON node spans.",
+    "Default preflight Repository Inventory does not produce deep sql-analysis; statement localization is available when official sql-analysis/v1 evidence already exists.",
+    "Coverage gaps with analysis_scope/unresolved localization intentionally have no fabricated SourceOccurrence."
+  ],
+  "source_zips": {
+    "UCPDataModel(16).zip": "a05c27f61e0838f270de9a7ba61049de68d3a8c03cf731df5e784c6d85cd4519",
+    "datamart_profile_fl(4).zip": "d94b4bd47c8972a561a9120b6bf6b86e13557b21d5ca32dd6d656b44913bf66c"
+  },
+  "status": "PASS"
+}

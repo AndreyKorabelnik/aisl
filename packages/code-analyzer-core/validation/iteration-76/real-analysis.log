@@ -1,0 +1,8 @@
+analysis_status=partial
+content_fingerprint=364bc637a38465f4905cbfc0fd78428673fe468d1cfa8a4f954981e5da872a05
+expanded_intermediate_relations=236
+resolved_by_wildcard_contract=14
+ambiguous_unqualified_before=263
+ambiguous_unqualified_after=249
+source_field_resolution_before=0.976042
+source_field_resolution_after=0.977308

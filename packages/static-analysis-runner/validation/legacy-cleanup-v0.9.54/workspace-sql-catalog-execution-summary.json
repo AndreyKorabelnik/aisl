@@ -1,0 +1,28 @@
+{
+  "analyzer_execution_count": 0,
+  "evidence_artifact_count": 0,
+  "execution_node_count": 1,
+  "knowledge_artifact_count": 1,
+  "materialization_execution_count": 1,
+  "published_capabilities": [
+    "common.sql-analysis",
+    "common.sql-attribute-insertion-context",
+    "common.sql-field-calculation",
+    "common.sql-relation-fields",
+    "common.sql-relation-semantic-roles",
+    "common.sql-source-inventory",
+    "common.sql-source-inventory-export",
+    "common.sql-target-column-lineage",
+    "common.sql-target-resolution",
+    "common.sql-workflow-bindings",
+    "common.sql-workflow-context",
+    "common.workspace-sql-catalog"
+  ],
+  "result_fingerprint": "fefd0334e07cca54dc76b22590e9d4e4080f4cd8960d1f8a34e3d77173f4981d",
+  "schema_version": "knowledge_execution_summary/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "cleanup-block-1-workspace"
+  },
+  "status": "completed"
+}

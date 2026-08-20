@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "request", "scope", "audience_policy", "report_blueprint", "coverage", "sections", "evidence_index", "interpretation_policy", "dataset_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "report_dataset/v1"},
+    "profile_id": {"const": "sql-source-inventory-report/v1"},
+    "request": {"type": "object"},
+    "scope": {"type": "object", "required": ["kind", "id", "repository_ids"]},
+    "audience_policy": {"type": "object"},
+    "report_blueprint": {"type": "object"},
+    "coverage": {"type": "object", "required": ["source_count", "used_field_count"]},
+    "sections": {
+      "type": "object",
+      "required": ["summary", "source_inventory", "usage_analysis", "limitations", "technical_appendix"]
+    },
+    "evidence_index": {"type": "object"},
+    "interpretation_policy": {"type": "object"},
+    "dataset_fingerprint": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "validation": {"type": "object"}
+  },
+  "additionalProperties": false
+}

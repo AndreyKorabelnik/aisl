@@ -1,0 +1,165 @@
+{
+  "architecture_goal": "Core extracts source-grounded evidence; Knowledge Layer composes evidence into knowledge; Runner orchestrates execution without defining evidence semantics.",
+  "contracts": {
+    "evidence_analyzer": {
+      "allowed_inputs": [
+        "repository_or_source_snapshot",
+        "declared Foundation sections",
+        "analyzer-specific normalized parameters",
+        "analyzer-owned internal source-understanding state"
+      ],
+      "contract_id": "core_evidence_analyzer_contract/v1",
+      "definition": "Public Core producer of one coherent source-grounded evidence family.",
+      "forbidden_inputs": [
+        "mutable AnalysisResult or other state shared across public analyzer executions",
+        "output of another public evidence analyzer",
+        "task_id as evidence-semantic selector",
+        "suite_id as evidence-semantic selector"
+      ],
+      "invariants": [
+        "Analyzer output is deterministic for the same snapshot, Foundation fingerprint, version and evidence-affecting parameters.",
+        "Analyzer result does not depend on execution order of other public analyzers.",
+        "Source-understanding phases may depend on each other and share analyzer-owned internal state inside one analyzer.",
+        "Cross-evidence composition and subject-model assembly belong to Knowledge Layer.",
+        "Missing required inputs produce explicit diagnostics or failure; no hidden fallback to another analyzer."
+      ],
+      "owner": "code-analyzer-core",
+      "required_outputs": [
+        "typed evidence artifact",
+        "coverage",
+        "diagnostics",
+        "provenance"
+      ]
+    },
+    "evidence_artifact": {
+      "contract_id": "core_evidence_artifact_contract/v1",
+      "definition": "Self-describing persisted result of one independent Core evidence analyzer.",
+      "forbidden_semantic_selectors": [
+        "task_id",
+        "suite_id",
+        "report_profile_id"
+      ],
+      "invariants": [
+        "KLC imports evidence by artifact_kind and schema_version, not by task_id.",
+        "Artifact payload is independently consumable without reading another task directory.",
+        "Coverage and diagnostics are part of the contract, not optional log files.",
+        "Runtime-only values do not affect content_fingerprint.",
+        "Unsupported schema versions fail explicitly; no silent reinterpretation."
+      ],
+      "owner": "code-analyzer-core",
+      "required_fields": {
+        "artifact_kind": "stable semantic evidence kind",
+        "content_fingerprint": "canonical fingerprint excluding volatile runtime metadata",
+        "contract_version": "core_evidence_artifact_contract/v1",
+        "coverage": "machine-readable completeness and scope",
+        "diagnostics": "explicit unresolved, ambiguous and failed observations",
+        "foundation": {
+          "contract_version": "core_foundation_contract/v1 when used",
+          "fingerprint": "Foundation artifact fingerprint when used",
+          "sections": "declared consumed sections, empty when not used",
+          "used": "whether this analyzer consumed a Foundation artifact"
+        },
+        "parameters": "normalized evidence-affecting parameters",
+        "payload": "typed evidence payload or artifact references",
+        "producer": {
+          "analyzer_id": "stable analyzer identifier",
+          "analyzer_version": "producer implementation version",
+          "component": "code-analyzer-core"
+        },
+        "provenance": "source references and production trace",
+        "schema_version": "artifact payload schema version",
+        "source_snapshot": {
+          "fingerprint": "content or snapshot fingerprint",
+          "revision": "revision when available",
+          "source_id": "repository or source identifier"
+        }
+      },
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ]
+    },
+    "evidence_runtime": {
+      "contract_id": "core_evidence_runtime/v1",
+      "definition": "Core-owned registry and executor for independent typed evidence analyzers selected by artifact_kind and schema_version.",
+      "forbidden_behaviors": [
+        "knowledge_id-specific dispatch",
+        "task_id-specific dispatch",
+        "profile_id-specific dispatch",
+        "implicit publication from the monolithic analyze-java pipeline",
+        "compatibility adapters for legacy prepared-artifact manifest keys"
+      ],
+      "invariants": [
+        "Runtime dispatch is performed only by artifact_kind plus schema_version.",
+        "Task, Suite, Profile and knowledge identifiers are not analyzer selectors.",
+        "Every requested artifact must have exactly one registered analyzer.",
+        "Analyzer results are validated against core_evidence_artifact_contract/v1 before publication.",
+        "Missing registrations and invalid artifacts fail explicitly; legacy fallback and dual-write are forbidden."
+      ],
+      "owner": "code-analyzer-core",
+      "request_schema_version": "core_evidence_execution_request/v1",
+      "result_schema_version": "core_evidence_execution_result/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ]
+    },
+    "foundation": {
+      "allowed_content_categories": [
+        "repository_file_inventory",
+        "parsed_source_structure",
+        "symbol_and_type_index",
+        "call_index",
+        "configuration_index",
+        "build_dependency_index",
+        "openapi_or_spec_index",
+        "sql_parse_index",
+        "physical_schema_index",
+        "repository_metadata"
+      ],
+      "contract_id": "core_foundation_contract/v1",
+      "definition": "Immutable technical index of one repository/source snapshot, reusable by independent Core evidence analyzers.",
+      "forbidden_content_categories": [
+        "conceptual_or_effective_data_model",
+        "lineage_or_traceability_model",
+        "system_scenarios_or_system_summary",
+        "reference_data_knowledge",
+        "cross_fact_business_summary",
+        "cross_repository_knowledge",
+        "report_or_assistant_interpretation"
+      ],
+      "identity_basis": [
+        "repository_snapshot_fingerprint",
+        "core_indexer_version",
+        "normalized_indexer_configuration"
+      ],
+      "invariants": [
+        "Foundation is produced and versioned by Core.",
+        "Foundation is read-only for evidence analyzers.",
+        "Foundation identity is independent of task_id, suite_id and report profile.",
+        "Foundation contains technical source indexes, not subject knowledge.",
+        "Runner may manage lifecycle and reuse but must not define Foundation contents."
+      ],
+      "owner": "code-analyzer-core"
+    }
+  },
+  "external_contract_requirements": [
+    {
+      "contract_id": "knowledge_materialization_contract/v2",
+      "owner": "knowledge-layer-core",
+      "required_rule": "Declare required and optional evidence artifact kinds and produced knowledge models."
+    },
+    {
+      "contract_id": "analysis_execution_result_contract/v1",
+      "owner": "static-analysis-runner",
+      "required_rule": "Record executed analyzers and produced evidence artifacts without assigning their subject semantics."
+    },
+    {
+      "contract_id": "evidence_semantic_routing/v1",
+      "owner": "shared-boundary",
+      "required_rule": "Evidence meaning is selected by artifact_kind plus schema_version; task_id may remain execution provenance only."
+    }
+  ],
+  "purpose": "Core-owned target contracts for the technical source index, independent evidence analyzers and typed evidence artifacts.",
+  "schema_version": "core_target_contract_definitions/v1"
+}

@@ -1,0 +1,800 @@
+{
+  "schema_version": "sql-prior-direct-projection-alias-validation/v1",
+  "before": {
+    "content_fingerprint": "648bc8e3540ddfcaab0119d5284667cec5ef442cc3c32bb8afb84dc68d03932f",
+    "source_inventory": {
+      "non_source_values": {
+        "generated_value_usages": 27,
+        "semantic_parameter_usages": 151
+      },
+      "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+      "resolved_by_relation_kind": {
+        "cte": 5394,
+        "derived": 898,
+        "physical": 1376,
+        "physical_template": 3026
+      },
+      "resolved_source_field_usages": 10694,
+      "source_field_candidate_usages": 11061,
+      "source_field_resolution_rate": 0.96682,
+      "status": "partial",
+      "total_observed_usages": 11239,
+      "unresolved_by_basis": {
+        "ambiguous_unqualified": 365,
+        "relation_unavailable": 2
+      },
+      "unresolved_by_status": {
+        "ambiguous": 365,
+        "unresolved": 2
+      },
+      "unresolved_source_field_usages": 367
+    },
+    "recursive_lineage": {
+      "by_status": {
+        "confirmed": 25,
+        "inferred_target": 530,
+        "partial": 176
+      },
+      "by_terminal_source_kind": {
+        "column": 484,
+        "expression_without_column": 47,
+        "semantic_parameter": 24,
+        "unresolved": 176
+      }
+    },
+    "gaps": {
+      "by_kind": {
+        "intermediate_projection_unresolved": 4,
+        "intermediate_wildcard_unexpanded": 1,
+        "recursive_source_relation_ambiguous": 111,
+        "scoped_ast_source_coverage_incomplete": 2,
+        "source_relation_ambiguous": 60,
+        "target_column_unresolved": 41
+      },
+      "total": 219
+    }
+  },
+  "after": {
+    "content_fingerprint": "d7de0f0247b2921bcaf59ba3ee41b6e871c155cc6416fe225f04e1981edd42fb",
+    "source_inventory": {
+      "non_source_values": {
+        "generated_value_usages": 27,
+        "semantic_parameter_usages": 151
+      },
+      "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+      "resolved_by_relation_kind": {
+        "cte": 5437,
+        "derived": 898,
+        "physical": 1381,
+        "physical_template": 3026
+      },
+      "resolved_source_field_usages": 10742,
+      "source_field_candidate_usages": 11061,
+      "source_field_resolution_rate": 0.97116,
+      "status": "partial",
+      "total_observed_usages": 11239,
+      "unresolved_by_basis": {
+        "ambiguous_unqualified": 317,
+        "relation_unavailable": 2
+      },
+      "unresolved_by_status": {
+        "ambiguous": 317,
+        "unresolved": 2
+      },
+      "unresolved_source_field_usages": 319
+    },
+    "recursive_lineage": {
+      "by_status": {
+        "confirmed": 25,
+        "inferred_target": 566,
+        "partial": 140
+      },
+      "by_terminal_source_kind": {
+        "column": 520,
+        "expression_without_column": 47,
+        "semantic_parameter": 24,
+        "unresolved": 140
+      }
+    },
+    "gaps": {
+      "by_kind": {
+        "intermediate_projection_unresolved": 4,
+        "intermediate_wildcard_unexpanded": 1,
+        "recursive_source_relation_ambiguous": 111,
+        "scoped_ast_source_coverage_incomplete": 2,
+        "source_relation_ambiguous": 24,
+        "target_column_unresolved": 41
+      },
+      "total": 183
+    }
+  },
+  "resolved_by_prior_direct_projection_alias": 48,
+  "resolved_by_usage_role": {
+    "projection": 41,
+    "window_partition": 7
+  },
+  "resolved_by_relation_kind": {
+    "cte": 43,
+    "physical": 5
+  },
+  "trial_usage_ids": [
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_533f279850366249",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_deathdate.sql",
+      "column_name": "death_date",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4eb071965dae3268",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_deathdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_374a98f4aed015d5",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_40c0f63e503587ff"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8bb1154a86e9d743",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_f381bda4167a399f",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_7e95fcd787257de8",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_8ddc21ab56c3514c"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_c2af69903a461e9c",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_gender.sql",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_bcf1c892b8fa52d8",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_gender__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_a8650a7b5953f409",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_1d692eb8f0de66c5"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_d080a8d13f407def",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "column_name": "birth_date",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_f381bda4167a399f",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_d4f50e51855b8586",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_433ac6905416d794"
+    }
+  ],
+  "resolved_usages": [
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_02fb7804554355a6",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t3_birthdate_stg.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_bec0b962a5131d3a",
+      "relation_name": "cte_business_versioned_starts",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_308e89f6df2f5d97",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_7e1b080544d46d8e"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_04caa81468c051da",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0ce51bcc23abd91f",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0e0c8a063107befa",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t3_birthdate_stg.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_1a4155f5fd6af0a2",
+      "relation_name": "cte_exploded_start_dates",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_368f364255b75236",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_8d691f53e41cacff"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0e67d27e3414c569",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_10623e23b8cf89e4",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_11d3b57ee9b49e62",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_215119ac3f27c34d",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_215cfee9f5a10324",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_28444191528add45",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_2aa9fb5edee99b0d",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_3120c2f476e0d1b3",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_34627c86a2ce0762",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_40c95da1c9747719",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_4574f87bb03f1a0b",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_4763048c601b08ad",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t3_gender_stg.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_2bd826a5229da5ca",
+      "relation_name": "cte_business_versioned_starts",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_02031b293f440971",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_ede5ab43c46d034b"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_4ac8214ce8a48302",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_533f279850366249",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_deathdate.sql",
+      "column_name": "death_date",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4eb071965dae3268",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_deathdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_374a98f4aed015d5",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_40c0f63e503587ff"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_61c57666facb39cd",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_6518ad0ad8cb2c60",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_73e2658823bc7f85",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t3_deathdate_stg.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_9dc1abd87a6b8cf9",
+      "relation_name": "cte_exploded_start_dates",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_ae3b4c0ff1805abe",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_68c1904f1b685e0f"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_75639f54a2c17923",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_775e7d3f7c155b9c",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_7d3b33484db9396b",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8bb1154a86e9d743",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_f381bda4167a399f",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_7e95fcd787257de8",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_8ddc21ab56c3514c"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8c5322032712fa60",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_91ab4ae21fedb734",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_928b9ffdae2888b7",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_interaction_profile/t_dim_interaction_profile.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_5a6c2eefdf13afc3",
+      "relation_name": "cte_exploded_start_dates",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_6565e1599d236ecd",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_238de1a55d1692a1"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_9460f17e19ca7b62",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_98e85a875f853779",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t3_deathdate_stg.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_63503633f69f1539",
+      "relation_name": "cte_business_versioned_starts",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_f757ffc169354f3a",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_a163281cfef094cb"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_99235172100fdc3b",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ab4d241f9d9da08b",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_acc9bfae2534377f",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ae99dd26193e814b",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_b5a54be8e9137a26",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_bb1b24bbb69bbc62",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_bb4df3194d8115e7",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_be86e9d2cf55f535",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_c2af69903a461e9c",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_gender.sql",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_bcf1c892b8fa52d8",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_gender__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_a8650a7b5953f409",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_1d692eb8f0de66c5"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ca7a8e742222293c",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_d080a8d13f407def",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "column_name": "birth_date",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_f381bda4167a399f",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_d4f50e51855b8586",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_433ac6905416d794"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_d52f8a472395aa88",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_da544af535650101",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_dccf021246c38e13",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4cde5786a60d56b4",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_764302e0345593ad",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_571c9d75f743a017"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_df0e2a9898a4c36b",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_deathdate.sql",
+      "column_name": "active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_4eb071965dae3268",
+      "relation_name": "custom_b2c_profile_fl_stg.stg_epk_client_deathdate__joined",
+      "relation_kind": "physical",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_60906743b520a3e6",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_21425cb4825da3b4"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_e39cc6eb9f78d647",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_ecd19121b6e9ec97",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "column_name": "fio_active_flag",
+      "usage_role": "projection",
+      "relation_id": "sql_relation_datamart_profile_fl_d24aab768ba6a270",
+      "relation_name": "cte_final",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_520a16e2447e5f9d",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_efc8119493f93fab"
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_f99aa2d36ca813d0",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t3_gender_stg.sql",
+      "column_name": "epk_id",
+      "usage_role": "window_partition",
+      "relation_id": "sql_relation_datamart_profile_fl_3e82883b2e09af98",
+      "relation_name": "cte_exploded_start_dates",
+      "relation_kind": "cte",
+      "resolution_status": "resolved",
+      "resolution_basis": "prior_direct_projection_alias",
+      "resolution_source_projection_id": "sql_projection_datamart_profile_fl_3e1f4220c0491e50",
+      "resolution_source_column_usage_id": "sql_column_usage_datamart_profile_fl_586378a5a7160af8"
+    }
+  ]
+}

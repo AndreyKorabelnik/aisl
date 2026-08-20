@@ -1,0 +1,15 @@
+{
+  "analysis_contract_id": "repository-data-model-static",
+  "analysis_contract_kind": "profile",
+  "candidate_count": 2,
+  "knowledge_layer_manifest": "workspace/knowledge-layer-manifest.json",
+  "repository_analyses_completed": 2,
+  "repository_analyses_failed": 0,
+  "schema_version": "static_workspace_analysis_run_summary/v2",
+  "selection_mode": "data-model",
+  "selection_origin": "preselected-manifest",
+  "status": "completed",
+  "workspace_built": true,
+  "workspace_id": "static-data-model-7f62d9df01e0d487a7bdbc9b",
+  "workspace_output": "workspace"
+}

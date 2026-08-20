@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "warning_count": 0,
+  "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+  "input_artifact": null,
+  "selected_model_kind": "effective-data-model",
+  "model_object_count": 2,
+  "physical_object_count": 2,
+  "dataset_valid": true,
+  "deterministic_er_applied": true,
+  "mermaid_present": true
+}

@@ -1,0 +1,14 @@
+{
+  "audit_fingerprint": "ef6f1b294a9983e9404bff1905bb8221d668b1c56300527d3f5e89672d756efc",
+  "audited_knowledge_ids": [
+    "code-declared-data-model"
+  ],
+  "blocked_gate_count": 5,
+  "markdown": "/tmp/audit-clean.md",
+  "next_step": "remove_specialized_Core_conceptual-model-evidence-sufficiency_command_then_define_java-type-structure-evidence/v1",
+  "output": "/tmp/audit-clean.json",
+  "schema_version": "knowledge_architecture_audit/v1",
+  "target_status_counts": {
+    "current_business_available_target_migration_required": 1
+  }
+}

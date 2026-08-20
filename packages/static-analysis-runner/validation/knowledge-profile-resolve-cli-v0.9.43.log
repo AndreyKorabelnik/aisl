@@ -1,0 +1,14 @@
+{
+  "execution_effect": "none",
+  "markdown": "validation/knowledge-resolution-plan-v1-0.9.43.md",
+  "output": "validation/knowledge-resolution-plan-v1-0.9.43.json",
+  "overall_status": "current_runtime_requires_boundary_migration",
+  "plan_fingerprint": "4fb8d21021f100515b20bfb1b095e28e13e1930c91ff3976d91f54c7673579b0",
+  "profile_id": "client-workspace-knowledge",
+  "schema_version": "knowledge_resolution_plan/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "client-profile"
+  },
+  "selected_knowledge_count": 4
+}

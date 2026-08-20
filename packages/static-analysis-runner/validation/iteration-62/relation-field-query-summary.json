@@ -1,0 +1,11 @@
+{
+  "schema_version": "sql_relation_field_query_validation/v1",
+  "repo_id": "datamart_profile_fl",
+  "relation_kind": "physical_template",
+  "total_count": 195,
+  "sample_relation": "${$app.pa.schema.name}.$pa_table",
+  "sample_fields": ["flags_txt", "part_1_month", "sid"],
+  "sample_usage_roles": ["join", "projection"],
+  "coverage_status": "partial",
+  "status": "passed"
+}

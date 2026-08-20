@@ -1,0 +1,385 @@
+{
+  "$defs": {
+    "MatchedDeclaredKeyRef": {
+      "additionalProperties": false,
+      "properties": {
+        "side": {
+          "title": "Side",
+          "type": "string"
+        },
+        "key_id": {
+          "title": "Key Id",
+          "type": "string"
+        },
+        "key_kind": {
+          "title": "Key Kind",
+          "type": "string"
+        },
+        "matched_columns": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Matched Columns",
+          "type": "array"
+        }
+      },
+      "required": [
+        "side",
+        "key_id",
+        "key_kind",
+        "matched_columns"
+      ],
+      "title": "MatchedDeclaredKeyRef",
+      "type": "object"
+    },
+    "ObservationEvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "line_start": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Start"
+        },
+        "line_end": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line End"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "snippet": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snippet"
+        }
+      },
+      "required": [
+        "file",
+        "kind"
+      ],
+      "title": "ObservationEvidenceRef",
+      "type": "object"
+    },
+    "RelationshipKind": {
+      "enum": [
+        "declared_foreign_key",
+        "orm_mapping",
+        "sql_join_predicate",
+        "correlated_subquery_predicate",
+        "data_movement",
+        "view_dependency",
+        "partition_parent",
+        "shared_key_usage"
+      ],
+      "title": "RelationshipKind",
+      "type": "string"
+    },
+    "RelationshipSourceKind": {
+      "enum": [
+        "ddl",
+        "sql",
+        "orm",
+        "jooq",
+        "generated_schema",
+        "configuration",
+        "unknown"
+      ],
+      "title": "RelationshipSourceKind",
+      "type": "string"
+    },
+    "TableColumnPair": {
+      "additionalProperties": false,
+      "properties": {
+        "left": {
+          "$ref": "#/$defs/TableColumnRef"
+        },
+        "operator": {
+          "default": "=",
+          "title": "Operator",
+          "type": "string"
+        },
+        "right": {
+          "$ref": "#/$defs/TableColumnRef"
+        },
+        "predicate_ordinal": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predicate Ordinal"
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "title": "TableColumnPair",
+      "type": "object"
+    },
+    "TableColumnRef": {
+      "additionalProperties": false,
+      "properties": {
+        "column_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Id"
+        },
+        "column_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Name"
+        },
+        "unresolved_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unresolved Name"
+        }
+      },
+      "title": "TableColumnRef",
+      "type": "object"
+    },
+    "TableRef": {
+      "additionalProperties": false,
+      "properties": {
+        "table_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Id"
+        },
+        "table_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Name"
+        },
+        "schema_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Schema Name"
+        },
+        "qualified_table_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Qualified Table Name"
+        },
+        "unresolved_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unresolved Name"
+        }
+      },
+      "title": "TableRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "table_relationship_observation/v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "observation_id": {
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "fact_type": {
+      "default": "table_relationship_observation",
+      "title": "Fact Type",
+      "type": "string"
+    },
+    "repo_id": {
+      "title": "Repo Id",
+      "type": "string"
+    },
+    "relation_kind": {
+      "$ref": "#/$defs/RelationshipKind"
+    },
+    "left_table": {
+      "$ref": "#/$defs/TableRef"
+    },
+    "right_table": {
+      "$ref": "#/$defs/TableRef"
+    },
+    "column_pairs": {
+      "items": {
+        "$ref": "#/$defs/TableColumnPair"
+      },
+      "title": "Column Pairs",
+      "type": "array"
+    },
+    "source_kind": {
+      "$ref": "#/$defs/RelationshipSourceKind"
+    },
+    "statement_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Statement Id"
+    },
+    "query_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Query Id"
+    },
+    "join_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Join Type"
+    },
+    "direction": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Direction"
+    },
+    "matched_declared_keys": {
+      "items": {
+        "$ref": "#/$defs/MatchedDeclaredKeyRef"
+      },
+      "title": "Matched Declared Keys",
+      "type": "array"
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": true,
+      "title": "Properties"
+    },
+    "evidence_refs": {
+      "items": {
+        "$ref": "#/$defs/ObservationEvidenceRef"
+      },
+      "minItems": 1,
+      "title": "Evidence Refs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "observation_id",
+    "repo_id",
+    "relation_kind",
+    "left_table",
+    "right_table",
+    "source_kind",
+    "evidence_refs"
+  ],
+  "title": "TableRelationshipObservation",
+  "type": "object"
+}

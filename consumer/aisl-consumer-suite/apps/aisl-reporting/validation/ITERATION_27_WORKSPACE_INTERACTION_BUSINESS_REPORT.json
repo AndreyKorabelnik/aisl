@@ -1,0 +1,63 @@
+{
+  "schema_version": "aisl_reporting_validation/v1",
+  "release": "0.12.0",
+  "profile_id": "workspace-interaction/v1",
+  "old_prompt_reference": "llm-prompts-0.31.0/workspace-system-interaction-business-report",
+  "compatibility_policy": "replacement; no legacy correspondence dataset and no dual-write",
+  "validation": {
+    "two_repository_workspace": {
+      "repository_count": 2,
+      "boundary_interaction_count": 1,
+      "reported_interaction_count": 1,
+      "field_contract_count": 7,
+      "transport_edge_count": 7,
+      "available_journey_candidate_count": 7,
+      "selected_journey_count": 5,
+      "selected_journey_statuses": [
+        "probable_complete",
+        "probable_complete",
+        "probable_complete",
+        "probable_complete",
+        "probable_complete"
+      ],
+      "evidence_count": 12,
+      "dataset_bytes": 79434,
+      "absolute_evidence_paths": 0
+    },
+    "four_repository_workspace": {
+      "repository_count": 4,
+      "boundary_interaction_count": 8,
+      "reported_interaction_count": 8,
+      "field_contract_count": 231,
+      "transport_edge_count": 231,
+      "available_journey_candidate_count": 20,
+      "selected_journey_count": 5,
+      "selected_journey_statuses": [
+        "probable_complete",
+        "probable_complete",
+        "probable_complete",
+        "probable_complete",
+        "probable_complete"
+      ],
+      "evidence_count": 21,
+      "dataset_bytes": 362714,
+      "absolute_evidence_paths": 0
+    },
+    "four_repository_prepare_elapsed_seconds": 11.61,
+    "pre_optimization_external_timeout_seconds": 300,
+    "external_llm_render_executed": false
+  },
+  "required_sections": [
+    "Краткий вывод",
+    "Бизнесовая картина контура",
+    "Роли систем",
+    "Основные бизнес-взаимодействия",
+    "Какие данные проходят через контур",
+    "Архитектурные выводы",
+    "Истории движения атрибутов",
+    "Что можно спросить у агента",
+    "Открытые вопросы",
+    "Качество доказательств и ограничения",
+    "Техническое приложение"
+  ]
+}

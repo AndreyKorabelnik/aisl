@@ -1,0 +1,24 @@
+report_type: declared-data-model-report
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- What types, fields, inheritance and declared type-reference relationships are published in the declared data model?
+- Which repositories and source sets contribute to the model?
+- Which optional storage semantics are published for selected structural objects?
+- Where are storage relations ambiguous or not observed?
+- Which gaps limit interpretation of the declared model?
+required_headings:
+- Краткий вывод
+- Состав объявленной модели
+- Каталог объектов
+- Ключевые объекты и поля
+- Объявленные связи
+- Наблюдаемая storage-семантика
+- Неоднозначности и пробелы
+- Рекомендации и следующий шаг
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance

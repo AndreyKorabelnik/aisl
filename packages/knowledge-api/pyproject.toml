@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knowledge-api"
+version = "0.40.3"
+description = "Canonical versioned publication and query API over Prepared Knowledge"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115",
+  "knowledge-integration>=0.1.17,<0.2.0",
+  "pydantic>=2.7",
+  "uvicorn>=0.30",
+  "jsonschema>=4.23",
+  "prepared-knowledge-runtime>=0.1.0,<0.2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+knowledge-api = "knowledge_api.cli:main"
+knowledge-api-export-openapi = "knowledge_api.contract_openapi_export:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["knowledge_api*"]
+
+[tool.setuptools.package-data]
+"knowledge_api.schemas" = ["*.json"]

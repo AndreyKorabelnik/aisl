@@ -1,0 +1,62 @@
+{
+  "core_version": "0.42.2",
+  "knowledge_layer": {
+    "manifest": "knowledge-layer/knowledge-layer-manifest.json",
+    "mode": "sql",
+    "output": "knowledge-layer",
+    "producer": "knowledge-layer-core",
+    "requested": true,
+    "status": "complete",
+    "version": "0.50.0"
+  },
+  "knowledge_layer_capabilities": [
+    "common.sql-analysis",
+    "common.sql-relation-fields"
+  ],
+  "knowledge_layer_core_version": "0.50.0",
+  "knowledge_layer_counts": {
+    "sql_analysis_build": 1,
+    "sql_analysis_repository": 1,
+    "sql_column_usage": 10636,
+    "sql_direct_column_lineage": 427,
+    "sql_join_edge": 292,
+    "sql_object_dependency": 537,
+    "sql_projection": 7217,
+    "sql_recursive_column_lineage": 731,
+    "sql_relation": 1426,
+    "sql_scoped_lineage_gap": 217,
+    "sql_script_binding": 815,
+    "sql_script_embedded_sql": 140,
+    "sql_script_invocation": 158,
+    "sql_script_statement": 1866,
+    "sql_select_scope": 1164,
+    "sql_semantic_placeholder": 915,
+    "sql_statement": 475,
+    "sql_target_projection_binding": 402,
+    "sql_write_target": 182
+  },
+  "process": {
+    "elapsed_seconds": 16.013,
+    "max_rss_kb": 678044,
+    "stack_dump_requests": 0,
+    "timed_out": false
+  },
+  "repo_id": "datamart_profile_fl",
+  "runner_version": "0.9.26",
+  "schema_version": "iteration_62_real_sql_e2e/v1",
+  "source_content_fingerprint": "5fffb63d9f7e5ebbdd2261b13aec0e33ee7eae9ef0cc8b3b324edfc3674a6c69",
+  "sql_analysis": {
+    "analysis_status": "partial",
+    "content_fingerprint": "5fffb63d9f7e5ebbdd2261b13aec0e33ee7eae9ef0cc8b3b324edfc3674a6c69",
+    "error_codes": [],
+    "fact_count": 27600,
+    "manifest": "static-analysis-output/sql-analysis/manifest.json",
+    "requested": true,
+    "schema_version": "sql-analysis/v1",
+    "validation_status": "valid",
+    "warning_codes": [
+      "analysis_partial"
+    ]
+  },
+  "status": "completed"
+}

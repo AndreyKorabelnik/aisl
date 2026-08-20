@@ -1,0 +1,29 @@
+{
+  "module_version": "0.8.0",
+  "internal_data_model_schema": "data_model_api/v4",
+  "fixture": "Individual.birthDate",
+  "full_relationship_json_bytes": 9309,
+  "compact_relationship_json_bytes": 534,
+  "reduction_percent": 94.26,
+  "compact_keys": [
+    "relationship_id",
+    "kind",
+    "source_field",
+    "cardinality",
+    "target",
+    "join"
+  ],
+  "join": {
+    "method": "storage_reference_requires_encoding",
+    "source_fields": [
+      "birthDate"
+    ],
+    "target_fields": [
+      "key"
+    ],
+    "target_kind": "storage_key",
+    "requires_encoding_interpretation": true,
+    "physical_join_confirmed": false
+  },
+  "full_detail_preserved": true
+}

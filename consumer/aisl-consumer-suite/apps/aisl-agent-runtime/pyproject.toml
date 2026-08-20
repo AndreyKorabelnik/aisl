@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aisl-agent-runtime"
+version = "0.2.1"
+description = "External agent runtime for Consumer Kit / Knowledge API based AISL chat"
+requires-python = ">=3.10"
+dependencies = [
+  "aisl-sdk>=0.3.0,<0.4",
+  "httpx>=0.27,<1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+aisl-agent-runtime = "aisl_agent_runtime.cli:main"
+aisl-agent = "aisl_agent_runtime.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aisl_agent_runtime*"]

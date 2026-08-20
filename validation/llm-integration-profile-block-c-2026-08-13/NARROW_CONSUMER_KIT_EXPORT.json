@@ -1,0 +1,16 @@
+{
+  "files": [
+    "API_USAGE.md",
+    "CAPABILITIES.json",
+    "RETRIEVAL_GUIDE.md",
+    "SYSTEM_PROMPT.md",
+    "TOOL_CATALOG.json",
+    "llm_integration_profile.json"
+  ],
+  "fingerprint": "f10d8f7bbb97afa0448c456e335a6e85b425cd8c21cd3cb2e28f5faab56c59e6",
+  "output": "/mnt/data/llm-integration-block-c-acceptance/narrow-kit",
+  "profile_id": "system-interactions/v1",
+  "revision_id": "rev-narrow-interactions",
+  "status": "exported",
+  "system_id": "narrow-interactions"
+}

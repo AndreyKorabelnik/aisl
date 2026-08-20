@@ -1,0 +1,49 @@
+{
+  "schema_version": "ucp-91-external-blind-stand/v1",
+  "date": "2026-08-15",
+  "status": "external_agent_run_required",
+  "system_id": "ucp-91-blind",
+  "expected_revision_id": "rev-828b3d5897d6bf2f09d6b0c4",
+  "execution_result_schema": "knowledge_execution_result/v2",
+  "execution_result_fingerprint": "34479d0fcad4a55991a267c7e3aa0f976e996eab369a20dd5a146fc16e8c63e7",
+  "execution_result_sha256": "6961883bfd7ecee2d19ae36a6d0a98e94cdebb5c26c370ebe8e3e5f2131287f9",
+  "knowledge_artifact_id": "knowledge_artifact_1bb528e2ed90efc88f03",
+  "consumer_kit_fingerprint": "5ab7de36460ef6cc48e3ca494db8d8213e93780dc96f717c91d05f585b6ed865",
+  "required_versions": {
+    "prepared-knowledge-runtime": "0.1.0.post7",
+    "knowledge-api": "0.30.10",
+    "knowledge-integration": "0.1.8"
+  },
+  "runtime_exclusions": [
+    "Manual Gold",
+    "historical Gold diff",
+    "Gold target FQCN/field hints",
+    "Core source analysis",
+    "Runner production",
+    "KLC materialization"
+  ],
+  "one_shot_runner": "scripts/run_blind_once.py",
+  "one_shot_lifecycle": [
+    "publish_revision",
+    "serve_knowledge_api",
+    "external_agent",
+    "pre_gold_freeze",
+    "frozen_result_bundle",
+    "shutdown_api"
+  ],
+  "accepted_llm_env": {
+    "endpoint": [
+      "LLM_BASE_URL",
+      "LLM_ENDPOINT"
+    ],
+    "model": [
+      "LLM_MODEL",
+      "LLM_DEFAULT_MODEL"
+    ],
+    "auth": [
+      "LLM_API_KEY",
+      "LLM_CERT_FILE+LLM_KEY_FILE",
+      "LLM_CA_FILE(optional)"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "analysis_contract": {
+    "kind": "profile",
+    "path": "/mnt/data/iteration28_work/modules/code-analyzer-core/analysis-profiles/repository-data-model-static.yaml",
+    "profile_id": "repository-data-model-static",
+    "sha256": "d6ec323e8ce0857450301d6f2a60d82b3cbfabe31393919e13dbb401dcda2a44"
+  },
+  "completed_at": "2026-07-30T10:11:54.459700+00:00",
+  "discovery_profile": null,
+  "repository_runs": [
+    {
+      "repo_id": "ucp_api",
+      "repository_analysis_manifest": "repository-analysis/ucp_api/repository-analysis-manifest.json",
+      "run_manifest": "repository-analysis/ucp_api/repository_analysis_run_manifest.json"
+    },
+    {
+      "repo_id": "ucp_tsa_v4",
+      "repository_analysis_manifest": "repository-analysis/ucp_tsa_v4/repository-analysis-manifest.json",
+      "run_manifest": "repository-analysis/ucp_tsa_v4/repository_analysis_run_manifest.json"
+    }
+  ],
+  "repository_selection": {
+    "manifest": "selected-repositories/selected_repositories_manifest.json",
+    "origin": "preselected-manifest",
+    "resolved_manifest": "selected-repositories/selected_repositories_resolved.json",
+    "selection_id": "preselected-data-model-e809a6811eb23d041ab5766c"
+  },
+  "run_fingerprint": "cf2dd224e9ab385a0cfad07d3f0c90483693143fb7c01d264dd68f71199a20c0",
+  "runner": {
+    "producer": "static-analysis-runner",
+    "version": "0.9.11"
+  },
+  "schema_version": "static_workspace_analysis_run_manifest/v2",
+  "selection_manifest": "candidate_selection_manifest.json",
+  "selection_mode": "data-model",
+  "selection_origin": "preselected-manifest",
+  "source": {
+    "kind": "preselected-manifest",
+    "selected_repositories_manifest": "/mnt/data/iteration28_work/ucp_selected_repositories_0_40_7.json"
+  },
+  "started_at": "2026-07-30T10:10:35.260985+00:00",
+  "status": "completed",
+  "tools": {
+    "candidate_selector": {
+      "invoked": false,
+      "reason": "repositories were provided by preselected-manifest"
+    },
+    "code_analyzer_core": {
+      "command": "code-analyzer-core",
+      "minimum_version": "0.36.27",
+      "version": "0.40.7",
+      "version_log": "logs/core-version.log"
+    },
+    "knowledge_layer": {
+      "producer": "knowledge-layer-core",
+      "version": "0.29.1"
+    }
+  },
+  "workspace_id": "static-data-model-7f62d9df01e0d487a7bdbc9b",
+  "workspace_output": "workspace"
+}

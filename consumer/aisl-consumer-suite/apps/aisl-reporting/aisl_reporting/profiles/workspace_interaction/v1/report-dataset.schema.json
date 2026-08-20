@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile_id",
+    "request",
+    "scope",
+    "coverage",
+    "sections",
+    "evidence_index",
+    "interpretation_policy",
+    "dataset_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "report_dataset/v1"
+    },
+    "profile_id": {
+      "const": "workspace-interaction/v1"
+    },
+    "request": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "kind",
+        "id",
+        "repository_ids"
+      ],
+      "properties": {
+        "kind": {
+          "const": "workspace"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_ids": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "repository_count",
+        "boundary_interaction_count",
+        "field_contract_count",
+        "count_basis"
+      ]
+    },
+    "sections": {
+      "type": "object",
+      "required": [
+        "workspace_overview",
+        "repository_roles",
+        "business_interactions",
+        "data_exchange",
+        "architecture_observations",
+        "diagrams",
+        "coverage_and_limitations",
+        "owner_questions",
+        "technical_appendix"
+      ],
+      "properties": {
+        "workspace_overview": {
+          "type": "object"
+        },
+        "repository_roles": {
+          "type": "object",
+          "required": [
+            "items",
+            "policy"
+          ]
+        },
+        "business_interactions": {
+          "type": "object",
+          "required": [
+            "items",
+            "total_count",
+            "confidence_counts",
+            "protocol_counts"
+          ]
+        },
+        "data_exchange": {
+          "type": "object",
+          "required": [
+            "top_level_field_groups",
+            "field_contract_count",
+            "policy"
+          ]
+        },
+        "architecture_observations": {
+          "type": "object",
+          "required": [
+            "items"
+          ]
+        },
+        "diagrams": {
+          "type": "object",
+          "required": [
+            "nodes",
+            "interaction_edges"
+          ]
+        },
+        "coverage_and_limitations": {
+          "type": "object",
+          "required": [
+            "summary",
+            "repositories",
+            "unmatched_or_ambiguous_outbound_operations",
+            "unmatched_inbound_operations",
+            "rules"
+          ]
+        },
+        "owner_questions": {
+          "type": "array"
+        },
+        "technical_appendix": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_index": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "repo_id",
+          "path",
+          "maturity"
+        ]
+      }
+    },
+    "interpretation_policy": {
+      "type": "object"
+    },
+    "dataset_fingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "validation": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

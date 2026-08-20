@@ -1,0 +1,14 @@
+{
+  "audit_fingerprint": "d0a81c717f95fa95f4636b0ada4fa4d062cc5c24258d8650f86a9a30aa9b5492",
+  "audited_knowledge_ids": [
+    "code-declared-data-model"
+  ],
+  "blocked_gate_count": 0,
+  "markdown": "/mnt/data/work_iter2/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-v0.9.50/knowledge-architecture-audit-v1-0.9.50.md",
+  "next_step": "next_independent_evidence_and_materializer",
+  "output": "/mnt/data/work_iter2/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-v0.9.50/knowledge-architecture-audit-v1-0.9.50.json",
+  "schema_version": "knowledge_architecture_audit/v1",
+  "target_status_counts": {
+    "target_ready": 1
+  }
+}

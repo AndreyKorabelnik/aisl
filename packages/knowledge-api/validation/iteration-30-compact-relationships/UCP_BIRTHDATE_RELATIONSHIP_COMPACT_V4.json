@@ -1,0 +1,28 @@
+{
+  "relationship_id": "model_relationship_2e2d5c588e3267580c14",
+  "kind": "owned_reference",
+  "source_field": "birthDate",
+  "cardinality": "one",
+  "target": {
+    "object": {
+      "id": "owned_type:com.sbt.bm.ucp.retail.model.individual.BirthDate",
+      "name": "BirthDate",
+      "kind": "owned_type"
+    },
+    "aliases": [
+      "com.sbt.bm.ucp.retail.model.individual.BirthDate"
+    ]
+  },
+  "join": {
+    "method": "storage_reference_requires_encoding",
+    "source_fields": [
+      "birthDate"
+    ],
+    "target_fields": [
+      "key"
+    ],
+    "target_kind": "storage_key",
+    "requires_encoding_interpretation": true,
+    "physical_join_confirmed": false
+  }
+}

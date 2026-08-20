@@ -1,0 +1,9 @@
+queries:
+  - list_foreign_data_persistence_paths
+  - list_foreign_data_persistence_cases
+  - get_foreign_data_persistence_landscape
+  - get_scope_overview
+selection:
+  complete_path_catalog: true
+  complete_case_catalog: true
+  include_exact_evidence: true

@@ -1,0 +1,57 @@
+{
+  "$id": "core_evidence_execution_result/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "analyzer_executions": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "evidence_artifacts": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "request_fingerprint": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "result_fingerprint": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "runtime_contract_id": {
+      "const": "core_evidence_runtime/v1"
+    },
+    "schema_version": {
+      "const": "core_evidence_execution_result/v1"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "partial",
+        "failed"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "runtime_contract_id",
+    "request_fingerprint",
+    "status",
+    "analyzer_executions",
+    "evidence_artifacts",
+    "result_fingerprint"
+  ],
+  "title": "Core Evidence Execution Result v1",
+  "type": "object"
+}

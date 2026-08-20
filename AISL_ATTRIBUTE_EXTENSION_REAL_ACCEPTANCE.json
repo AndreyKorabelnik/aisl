@@ -1,0 +1,60 @@
+{
+  "schema_version": "aisl_attribute_extension_real_acceptance/v1",
+  "date": "2026-08-15",
+  "status": "pass_with_explicit_residual_check",
+  "system_id": "aisl-attribute-extension-real",
+  "revision_id": "rev-cfb071123bdb5e8b54eb06a1",
+  "execution_result_fingerprint": "883c28b2afe3fc8a0f8d595d48bec23a552072c2383ef178552b08cba27cd626",
+  "knowledge_product_count": 8,
+  "published_capability_count": 44,
+  "consumer_profile": {
+    "profile_id": "attribute-addition-plan/v1",
+    "profile_version": 11,
+    "tool_count": 17,
+    "fingerprint": "776dadab53139e9e5ad134d16e1164bacef9813d3f117ab19785d27da56a8e25"
+  },
+  "request": "название региона рождения клиента",
+  "preferred_path": [
+    "Individual.birthPlace",
+    "BirthPlace.regionCode",
+    "Region.name"
+  ],
+  "alternative": {
+    "field": "BirthPlace.region",
+    "meaning": "Регион (историческое название)"
+  },
+  "relationship": {
+    "source": "com.sbt.bm.ucp.retail.model.individual.BirthPlace.regionCode",
+    "target": "com.sbt.bm.ucp.common.model.dictionary.Region",
+    "join_method": "resolve_reference_value_to_target_key",
+    "confidence": "confirmed",
+    "sql_generation_status": "transformation_required",
+    "storage_reference_observation_count": 3,
+    "source_relationship_field_observed_in_sql": false,
+    "exact_relationship_sql_join_observed": false,
+    "sql_join_example_relevance_counts": {
+      "target_key_analog": 3,
+      "target_relation_analog": 1
+    },
+    "diagnostics": [
+      "storage_reference_field_not_observed_in_current_sql",
+      "observed_sql_join_examples_are_related_analogs"
+    ]
+  },
+  "target": {
+    "table": "custom_b2c_profile_fl.epk_client",
+    "rank": 1,
+    "score": 154,
+    "pdm_name": "Клиент ФЛ",
+    "pdm_column_count": 91
+  },
+  "insertion": {
+    "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthplace_snp.sql",
+    "score": 177,
+    "propagation_status": "resolved"
+  },
+  "proposal": {
+    "classification": "strongly_supported",
+    "residual_gap": "raw BirthPlace SQL column for regionCode is not explicitly observed in current SQL evidence"
+  }
+}

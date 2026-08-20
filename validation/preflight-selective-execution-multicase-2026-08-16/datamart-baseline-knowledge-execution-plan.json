@@ -1,0 +1,526 @@
+{
+  "diagnostics": [
+    {
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "java-persistence-mapping-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "java-type-structure-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "model-storage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "model-storage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "persistence-lineage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "persistence-lineage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "reference-data-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "reference-data-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "sql-analysis",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "sql-analysis/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "storage-usage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "storage-usage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "system-description-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "system-description-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "value-flow-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "value-flow-evidence/v1",
+      "severity": "info"
+    }
+  ],
+  "expected_outputs": {
+    "capabilities": [
+      "common.repository-concept-candidates",
+      "common.repository-coverage",
+      "common.repository-coverage-gaps",
+      "common.repository-data-footprint",
+      "common.repository-discovery",
+      "common.repository-identity",
+      "common.repository-inputs-outputs",
+      "common.repository-interfaces",
+      "common.repository-inventory",
+      "common.repository-novelty",
+      "common.repository-storage-footprint",
+      "common.repository-structural-families",
+      "common.repository-technologies"
+    ],
+    "knowledge_models": [
+      "repository-inventory/v3"
+    ]
+  },
+  "foundation_requirements": [],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:data-model-candidate-analyzer:datamart_profile_fl",
+        "to": "evidence:planned_evidence_17f63bbd05ac595107236b30"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:interaction-boundary-analyzer:datamart_profile_fl",
+        "to": "evidence:planned_evidence_e8e8b780aed650dae6daebfc"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:repository-structure-analyzer:datamart_profile_fl",
+        "to": "evidence:planned_evidence_6bbfd2eabcab8c1b961f1a2d"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:structured-file-shape-analyzer:datamart_profile_fl",
+        "to": "evidence:planned_evidence_27a8360303edca65c1260006"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_17f63bbd05ac595107236b30",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_27a8360303edca65c1260006",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_6bbfd2eabcab8c1b961f1a2d",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_e8e8b780aed650dae6daebfc",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:repository-inventory",
+        "to": "knowledge:planned_knowledge_7ec8466da979080cae0065d2"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:datamart_profile_fl",
+        "to": "analyzer:data-model-candidate-analyzer:datamart_profile_fl"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:datamart_profile_fl",
+        "to": "analyzer:interaction-boundary-analyzer:datamart_profile_fl"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:datamart_profile_fl",
+        "to": "analyzer:repository-structure-analyzer:datamart_profile_fl"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:datamart_profile_fl",
+        "to": "analyzer:structured-file-shape-analyzer:datamart_profile_fl"
+      }
+    ],
+    "execution_order": [
+      "analyzer:data-model-candidate-analyzer:datamart_profile_fl",
+      "analyzer:interaction-boundary-analyzer:datamart_profile_fl",
+      "analyzer:repository-structure-analyzer:datamart_profile_fl",
+      "analyzer:structured-file-shape-analyzer:datamart_profile_fl",
+      "materialization:repository-inventory"
+    ],
+    "nodes": [
+      {
+        "analyzer_id": "data-model-candidate-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "contract_fingerprint": "50eb699550f99be0088e68ba74d0cbfb191ff0eb9a4398f7fa7758ef2ffdd779",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "data-model-candidate-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "schema_version": "data-model-candidate-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:data-model-candidate-analyzer:datamart_profile_fl",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "datamart_profile_fl",
+        "source_snapshot_id": "source_snapshot_1fbcee64bf96a8ce707a782f"
+      },
+      {
+        "analyzer_id": "interaction-boundary-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_fingerprint": "67c6d2667dfaea030d8d1efade29f7120fc3c36c5a32be380b7fc17d149cae6f",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "interaction-boundary-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "schema_version": "interaction-boundary-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:interaction-boundary-analyzer:datamart_profile_fl",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "datamart_profile_fl",
+        "source_snapshot_id": "source_snapshot_1fbcee64bf96a8ce707a782f"
+      },
+      {
+        "analyzer_id": "repository-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "repository-structure-evidence",
+            "contract_fingerprint": "75b0b1e721c92c97bbc587185ff74df3f041610e4b90b2e61ece37c08efc6f80",
+            "optional_by": [],
+            "production_policy": "produce_if_missing",
+            "required_by": [
+              "repository-inventory"
+            ],
+            "schema_version": "repository-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "repository-structure-evidence",
+            "schema_version": "repository-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:repository-structure-analyzer:datamart_profile_fl",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "datamart_profile_fl",
+        "source_snapshot_id": "source_snapshot_1fbcee64bf96a8ce707a782f"
+      },
+      {
+        "analyzer_id": "structured-file-shape-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "structured-file-shape-evidence",
+            "contract_fingerprint": "caba59d50cf1165a203f064c94404283bdc9fd4384c4752f7b5c198c0c223ac9",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "structured-file-shape-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "structured-file-shape-evidence",
+            "schema_version": "structured-file-shape-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:structured-file-shape-analyzer:datamart_profile_fl",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "datamart_profile_fl",
+        "source_snapshot_id": "source_snapshot_1fbcee64bf96a8ce707a782f"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_17f63bbd05ac595107236b30",
+          "artifact_kind": "data-model-candidate-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:data-model-candidate-analyzer:datamart_profile_fl",
+          "schema_version": "data-model-candidate-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_17f63bbd05ac595107236b30",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_27a8360303edca65c1260006",
+          "artifact_kind": "structured-file-shape-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:structured-file-shape-analyzer:datamart_profile_fl",
+          "schema_version": "structured-file-shape-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_27a8360303edca65c1260006",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_6bbfd2eabcab8c1b961f1a2d",
+          "artifact_kind": "repository-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:repository-structure-analyzer:datamart_profile_fl",
+          "schema_version": "repository-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_6bbfd2eabcab8c1b961f1a2d",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "production_policy": "produce_if_missing",
+        "required_by": [
+          "repository-inventory"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_e8e8b780aed650dae6daebfc",
+          "artifact_kind": "interaction-boundary-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:interaction-boundary-analyzer:datamart_profile_fl",
+          "schema_version": "interaction-boundary-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_e8e8b780aed650dae6daebfc",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_7ec8466da979080cae0065d2",
+          "availability": "planned",
+          "model_kind": "repository-inventory",
+          "producer_materialization_node_id": "materialization:repository-inventory",
+          "schema_version": "repository-inventory/v3",
+          "source_materialization_id": "repository-inventory"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_7ec8466da979080cae0065d2",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "conditional_capabilities": [
+          "common.repository-structural-members"
+        ],
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.repository-concept-candidates",
+          "common.repository-coverage",
+          "common.repository-coverage-gaps",
+          "common.repository-data-footprint",
+          "common.repository-discovery",
+          "common.repository-identity",
+          "common.repository-inputs-outputs",
+          "common.repository-interfaces",
+          "common.repository-inventory",
+          "common.repository-novelty",
+          "common.repository-storage-footprint",
+          "common.repository-structural-families",
+          "common.repository-technologies"
+        ],
+        "expected_models": [
+          "repository-inventory/v3"
+        ],
+        "knowledge_id": "repository-inventory",
+        "materialization_id": "repository-inventory",
+        "node_id": "materialization:repository-inventory",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:datamart_profile_fl",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "file_count": 491,
+          "languages": [
+            "json",
+            "properties",
+            "scala",
+            "sql",
+            "yaml"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/work_block_d/real_sources/datamart/datamart_profile_fl"
+          },
+          "revision": {
+            "content_sha256": "1e065a3ae13635ca3cd4a45bd654a7661dcefdd68ba5499bbafe84e668ed0f35",
+            "kind": "content",
+            "revision": "sha256:1e065a3ae13635ca3cd4a45bd654a7661dcefdd68ba5499bbafe84e668ed0f35"
+          },
+          "snapshot_fingerprint": "1fbcee64bf96a8ce707a782f9b187c79f4d5f5dc5db078358fad642512f78fcb",
+          "snapshot_id": "source_snapshot_1fbcee64bf96a8ce707a782f",
+          "source_id": "datamart_profile_fl",
+          "source_kind": "repository",
+          "source_metadata": {
+            "default_branch": null,
+            "repository_id": "datamart_profile_fl-c93816583c",
+            "repository_name": "datamart_profile_fl",
+            "source_kind": "local"
+          }
+        }
+      }
+    ],
+    "topological_order": [
+      "source:datamart_profile_fl",
+      "analyzer:data-model-candidate-analyzer:datamart_profile_fl",
+      "analyzer:interaction-boundary-analyzer:datamart_profile_fl",
+      "analyzer:repository-structure-analyzer:datamart_profile_fl",
+      "analyzer:structured-file-shape-analyzer:datamart_profile_fl",
+      "evidence:planned_evidence_17f63bbd05ac595107236b30",
+      "evidence:planned_evidence_27a8360303edca65c1260006",
+      "evidence:planned_evidence_6bbfd2eabcab8c1b961f1a2d",
+      "evidence:planned_evidence_e8e8b780aed650dae6daebfc",
+      "materialization:repository-inventory",
+      "knowledge:planned_knowledge_7ec8466da979080cae0065d2"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "b2a76d677a5fb6a2daa7e4bbcd9b86be289431b5042916cddeb3b55ee3d47ea8",
+    "knowledge_input_inventory_fingerprint": "56fc1faa5b04152a7b3fd4a2c22420617ed2d050f53504a7e69de7ef538e0881",
+    "knowledge_materialization_catalog_fingerprint": "f1f7d500c9ba8a427269274f79d67c0a746205c8706571005fd9cb0bdf6bf183"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "ca03c705a2b3e54f1640ce0785a35a4df3cd0cb0c60c3aa8a4b5e952db7899c9",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.10.26"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "731f8fb623913244728c7648ebdf0be80b67f1b82ec7835aeab4b431c5e0ee72",
+    "knowledge_profile_fingerprint": "a6d68a73811dfed35146df3d2138dfbf5946a14d49828d5bcee65334da15ac3d",
+    "knowledge_profile_id": "repository-inventory-v1",
+    "knowledge_resolution_plan_fingerprint": "bb118c16ee8be0170af832039010d2fe2b26d8813a0b82484dd29b49d2f98784",
+    "resolved_knowledge_ids": [
+      "repository-inventory"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "blockd-registry-datamart"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 4,
+    "execution_node_count": 5,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  }
+}

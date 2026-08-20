@@ -1,0 +1,14 @@
+smoke_passed=true
+core_version=true
+runner_version=true
+klc_version=true
+legacy_not_consumed=true
+runner_no_legacy_fallback=true
+runner_no_dual_write=true
+deleted_java_registrar_absent=true
+deleted_java_test_absent=true
+core_runtime_present=true
+runner_executor_present=true
+no_concrete_java_evidence_identity_in_runner_production=true
+no_deleted_registrar_import=true
+all_passed=true

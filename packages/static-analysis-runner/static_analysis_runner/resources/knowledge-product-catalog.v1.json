@@ -1,0 +1,397 @@
+{
+  "catalog_fingerprint": "f12429a6c8ae5759c14d935aaef85772c5fd8f74fdf355f604edef7ee7bbc94a",
+  "catalog_id": "default",
+  "internal_materializations": [
+    {
+      "materialization_id": "logical-storage-mapping",
+      "reason_not_user_selectable": "Техническое точное связывание logical model с storage identities; используется внутри составных data-model продуктов."
+    },
+    {
+      "materialization_id": "model-storage-semantics",
+      "reason_not_user_selectable": "Техническая нормализация наблюдаемых storage identities, references и key derivations; используется внутри составных data-model продуктов."
+    },
+    {
+      "materialization_id": "sql-target-source-mapping",
+      "reason_not_user_selectable": "Технический рекурсивный SQL target/source mapping; используется API и составными знаниями, но не является отдельным пользовательским выбором."
+    },
+    {
+      "materialization_id": "cross-artifact-data-model-mapping",
+      "reason_not_user_selectable": "Техническая cross-artifact композиция storage, SQL lineage и PDM correspondence; используется внутри agent-ready data-model продуктов."
+    }
+  ],
+  "knowledge_types": [
+    {
+      "category": "lineage",
+      "contains": [
+        "локальные потоки значений",
+        "присваивания и передачи параметров",
+        "локальные пути атрибутов",
+        "связи с хранилищами и интерфейсными boundary fields",
+        "пробелы lineage"
+      ],
+      "knowledge_id": "attribute-lineage",
+      "materialization_id": "repository-value-flow",
+      "summary": "Граф движения значений и пути атрибутов внутри анализируемых репозиториев без транспортного соединения между ними.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Локальное происхождение и пути атрибутов"
+    },
+    {
+      "category": "data-model",
+      "contains": [
+        "типы и сущности, объявленные в коде",
+        "поля и их типы",
+        "объявленные связи между типами",
+        "наследование",
+        "покрытие, доказательства и пробелы анализа кода"
+      ],
+      "knowledge_id": "code-declared-data-model",
+      "materialization_id": "code-declared-data-model",
+      "optional_internal_materializations": [
+        "logical-storage-mapping"
+      ],
+      "source_note": "Физические таблицы не подменяют сущности, объявленные в коде.",
+      "summary": "Типы, поля, объявленные связи и наследование, непосредственно наблюдаемые в исходном коде.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Модель данных, объявленная в коде"
+    },
+    {
+      "category": "lineage",
+      "contains": [
+        "локальные потоки значений",
+        "межрепозиторные transport edges",
+        "сквозные пути атрибутов через HTTP",
+        "confirmed / derived / candidate knowledge representations",
+        "покрытие и ограничения transport correspondence"
+      ],
+      "knowledge_id": "cross-repository-attribute-lineage",
+      "materialization_id": "cross-repository-value-flow",
+      "required_knowledge_dependencies": [
+        "attribute-lineage",
+        "system-interactions",
+        "interaction-field-contracts"
+      ],
+      "source_note": "Использует только typed KLC knowledge dependencies; Suite/Task и topology не требуются.",
+      "summary": "Единый value-flow graph с HTTP transport edges между сопоставленными репозиториями и детерминированными knowledge classes.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Сквозные пути атрибутов между репозиториями"
+    },
+    {
+      "category": "data-model",
+      "contains": [
+        "agent-ready technical join semantics для связей логической модели",
+        "cardinality и polymorphic relationship context",
+        "составные storage keys и reference-value/key correspondences",
+        "наблюдаемые SQL anchors, transformations и join examples",
+        "наблюдаемые physical candidates без FQCN-guessing",
+        "provenance, confidence и явные gaps для SQL-agent"
+      ],
+      "knowledge_id": "data-model-attribute-extension",
+      "materialization_id": "data-model-attribute-extension-context",
+      "required_knowledge_dependencies": [
+        "code-declared-data-model",
+        "physical-data-model",
+        "sql-source-inventory"
+      ],
+      "source_note": "Низкоуровневые storage/cross-artifact materializations являются внутренними зависимостями и не выбираются пользователем. KLC публикует technical join semantics и evidence; SQL генерирует downstream agent.",
+      "summary": "Agent-ready контекст для добавления атрибутов в существующие витрины: собирает logical relationship, key/reference encoding, SQL anchors и physical evidence в один KLC knowledge product без генерации SQL.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Контекст расширения модели данных и витрины"
+    },
+    {
+      "category": "data-model",
+      "contains": [
+        "слой модели, объявленной в коде",
+        "слой физической модели",
+        "доказанные логико-физические соответствия",
+        "составные домены и кластеры",
+        "необязательный контекст наблюдаемого SQL и storage usage",
+        "происхождение каждого объекта по слоям"
+      ],
+      "knowledge_id": "effective-data-model",
+      "materialization_id": "effective-data-model",
+      "recommended_knowledge_dependencies": [
+        "sql-source-inventory",
+        "observed-storage-usage"
+      ],
+      "required_knowledge_dependencies": [
+        "code-declared-data-model",
+        "physical-data-model",
+        "logical-physical-mapping"
+      ],
+      "source_note": "Это KLC-композиция самостоятельных знаний, а не единая модель из взаимозаменяемых источников.",
+      "summary": "Составное представление, связывающее независимо построенные модель из кода, физическую модель и доказанные логико-физические соответствия.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Эффективное представление модели данных"
+    },
+    {
+      "category": "quality",
+      "contains": [
+        "покрытие интерфейсов",
+        "неразрешённые границы",
+        "неоднозначные сопоставления",
+        "диагностика по репозиториям"
+      ],
+      "knowledge_id": "interaction-coverage",
+      "materialization_id": "interaction-coverage",
+      "summary": "Покрытие и диагностика входящих и исходящих интерфейсов по репозиториям.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Покрытие анализа взаимодействий"
+    },
+    {
+      "category": "lineage",
+      "contains": [
+        "поля входящих и исходящих сообщений",
+        "сопоставления полей",
+        "пути атрибутов через границы систем",
+        "пробелы и неоднозначности полевых контрактов"
+      ],
+      "knowledge_id": "interaction-field-contracts",
+      "materialization_id": "interaction-field-contracts",
+      "required_knowledge_dependencies": [
+        "system-interactions",
+        "attribute-lineage"
+      ],
+      "summary": "Связи полей и атрибутов на сопоставленных межсистемных взаимодействиях.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Контракты полей во взаимодействиях"
+    },
+    {
+      "category": "interactions",
+      "contains": [
+        "строгие острова",
+        "расширенные острова",
+        "изолированные репозитории",
+        "состав и покрытие островов"
+      ],
+      "knowledge_dependencies": [
+        "system-interactions"
+      ],
+      "knowledge_id": "interaction-islands",
+      "materialization_id": "interaction-islands",
+      "summary": "Связные группы репозиториев по подтверждённым и вероятным взаимодействиям.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Острова взаимодействующих репозиториев"
+    },
+    {
+      "category": "data-model",
+      "contains": [
+        "сущность → таблица",
+        "атрибут → колонка",
+        "ключ модели → физический ключ",
+        "связь модели → физическая связь",
+        "конфликты и неразрешённые соответствия"
+      ],
+      "knowledge_id": "logical-physical-mapping",
+      "materialization_id": "logical-physical-mapping",
+      "required_knowledge_dependencies": [
+        "code-declared-data-model",
+        "physical-data-model"
+      ],
+      "source_note": "Наблюдаемое использование и совпадение имён сами по себе не являются доказанным mapping.",
+      "summary": "Доказательные соответствия сущностей и атрибутов из кода таблицам, колонкам, ключам и связям физической модели.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Логико-физическое соответствие"
+    },
+    {
+      "category": "data-usage",
+      "contains": [
+        "чтения из хранилищ",
+        "записи в хранилища",
+        "используемые таблицы, коллекции и поля",
+        "точки доступа в коде",
+        "неразрешённые цели хранения"
+      ],
+      "knowledge_id": "observed-storage-usage",
+      "materialization_id": "observed-storage-usage",
+      "recommended_knowledge_dependencies": [
+        "code-declared-data-model",
+        "physical-data-model"
+      ],
+      "source_note": "Наблюдаемое использование не становится объявленной моделью или persistence mapping.",
+      "summary": "Фактически наблюдаемые чтения, записи и обращения к объектам хранения из кода.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Наблюдаемое использование хранилищ"
+    },
+    {
+      "category": "lineage",
+      "contains": [
+        "source-to-storage lineage",
+        "storage-to-access lineage",
+        "наблюдаемые записи и чтения",
+        "соответствия полей источника и хранения",
+        "явные пробелы persistence lineage"
+      ],
+      "knowledge_id": "persistence-lineage",
+      "materialization_id": "persistence-lineage",
+      "source_note": "Материализация сохраняет наблюдаемые сегменты и не назначает бизнес-вердикт FDP.",
+      "summary": "Доказательные пути от внешних и кодовых источников к физическому хранению и от хранилища к границам доступа.",
+      "supported_scopes": [
+        "repository"
+      ],
+      "title": "Происхождение данных через хранилища"
+    },
+    {
+      "category": "data-model",
+      "contains": [
+        "таблицы",
+        "колонки",
+        "первичные и альтернативные ключи",
+        "внешние ключи и связи",
+        "ограничения",
+        "пробелы физической модели"
+      ],
+      "knowledge_id": "physical-data-model",
+      "materialization_id": "physical-model",
+      "source_note": "Требует отдельного артефакта физической модели; он не извлекается только из кода.",
+      "summary": "Таблицы, колонки, ключи, ограничения, связи и пробелы предоставленной физической модели.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Физическая модель данных"
+    },
+    {
+      "category": "reference-data",
+      "contains": [
+        "объявленные значения и перечисления",
+        "наблюдаемые литеральные записи",
+        "наборы значений",
+        "кандидаты справочников",
+        "контекст хранения и использования",
+        "неразрешённые альтернативы"
+      ],
+      "knowledge_id": "reference-data",
+      "materialization_id": "reference-data",
+      "summary": "Наблюдаемые значения, записи литералов, кандидаты справочников и контекст использования.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Справочные данные"
+    },
+    {
+      "category": "system",
+      "contains": [
+        "идентичность репозитория и ссылка на Bitbucket при наличии в registry",
+        "языки, расширения, технологии и data/storage footprint",
+        "bounded concept statuses с confidence/basis и not_evaluated для дорогого evidence",
+        "входящие и исходящие интерфейсы из official interaction evidence",
+        "coverage frontier, structural families, novelty и UNCLASSIFIED candidates",
+        "diagnostics и provenance до official evidence"
+      ],
+      "knowledge_id": "repository-inventory",
+      "materialization_id": "repository-inventory",
+      "source_note": "Default inventory is bounded: only repository structure plus explicitly cheap evidence may be produced; deep optional evidence is consumed only when already available.",
+      "summary": "Дешёвый технический паспорт репозитория: состав, технологии, концепты, входы/выходы, coverage, novelty и gaps без обязательного deep-analysis.",
+      "supported_scopes": [
+        "repository"
+      ],
+      "title": "Технический паспорт репозитория"
+    },
+    {
+      "category": "sql",
+      "contains": [
+        "SQL-операторы и области видимости",
+        "таблицы-источники и назначения",
+        "используемые поля",
+        "роли полей: projection, join, filter и другие",
+        "JOIN и условия связи",
+        "source-to-target lineage",
+        "неразрешённые ссылки и покрытие"
+      ],
+      "knowledge_id": "sql-source-inventory",
+      "materialization_id": "sql-analysis",
+      "required_internal_materializations": [
+        "sql-target-source-mapping"
+      ],
+      "scope_behavior": "Для workspace строится по репозиториям; workspace-агрегация является отдельным видом знания.",
+      "summary": "SQL-операторы, таблицы, поля, роли использования, JOIN и доказательный source-to-target lineage.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "SQL-инвентарь источников и назначений"
+    },
+    {
+      "category": "system",
+      "contains": [
+        "системные сценарии",
+        "внешние зависимости",
+        "используемые хранилища",
+        "источники данных",
+        "границы доступа",
+        "покрытие и пробелы"
+      ],
+      "knowledge_id": "system-description",
+      "materialization_id": "system-description",
+      "summary": "Сценарии, внешние зависимости, хранилища, источники данных и границы доступа.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Описание системы"
+    },
+    {
+      "category": "interactions",
+      "contains": [
+        "входящие и исходящие границы",
+        "протоколы и адреса",
+        "межрепозиторные взаимодействия",
+        "межсистемные взаимодействия",
+        "неоднозначные и неразрешённые сопоставления"
+      ],
+      "knowledge_id": "system-interactions",
+      "materialization_id": "system-interactions",
+      "summary": "Подтверждённые и вероятные связи между входящими и исходящими интерфейсами.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Взаимодействия систем и репозиториев"
+    },
+    {
+      "category": "sql",
+      "contains": [
+        "общий SQL-инвентарь workspace",
+        "источники и назначения по репозиториям",
+        "поля и роли использования",
+        "расчёты и происхождение полей",
+        "target lineage, candidates и контекст добавления атрибута",
+        "покрытие и пробелы по репозиториям"
+      ],
+      "knowledge_id": "workspace-sql-source-inventory",
+      "knowledge_input_mode": "existing_artifacts_only",
+      "materialization_id": "workspace-sql-catalog",
+      "source_note": "Требует уже опубликованных repository SQL knowledge artifacts; исходный код повторно не анализируется.",
+      "summary": "Детерминированная композиция опубликованных SQL-знаний нескольких репозиториев без повторного анализа исходников.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Общий SQL-каталог workspace"
+    }
+  ],
+  "schema_version": "knowledge_product_catalog/v1"
+}

@@ -1,0 +1,48 @@
+=== tests/test_workspace_runner.py::test_workspace_runner_end_to_end ===
+.                                                                        [100%]
+1 passed in 2.08s
+=== tests/test_workspace_runner.py::test_workspace_does_not_build_when_repository_fails ===
+.                                                                        [100%]
+1 passed in 2.09s
+=== tests/test_workspace_runner.py::test_preselected_workspace_skips_candidate_selector ===
+.                                                                        [100%]
+1 passed in 1.60s
+=== tests/test_workspace_runner.py::test_preselected_manifest_supports_explicit_repository_paths_without_symlinks ===
+.                                                                        [100%]
+1 passed in 1.56s
+=== tests/test_workspace_runner.py::test_preselected_manifest_rejects_symbolic_link_repository_path ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_preselected_workspace_rejects_discovery_profile ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_preselected_workspace_rejects_output_inside_input ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_preselected_workspace_rejects_normalized_repo_id_collision ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_preselected_workspace_rejects_repository_changed_during_analysis ===
+.                                                                        [100%]
+1 passed in 1.06s
+=== tests/test_workspace_runner.py::test_workspace_materializer_invokes_knowledge_layer_core ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_workspace_materializer_rejects_wrong_knowledge_layer_core_version ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_workspace_rejects_old_code_analyzer_core_version ===
+.                                                                        [100%]
+1 passed in 0.55s
+=== tests/test_workspace_runner.py::test_preselected_workspace_runs_suite_for_every_repository_and_builds_one_knowledge_layer ===
+.                                                                        [100%]
+1 passed in 0.06s
+=== tests/test_workspace_runner.py::test_workspace_rejects_profile_and_suite_together ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_workspace_rejects_collision_after_core_canonicalization ===
+.                                                                        [100%]
+1 passed in 0.05s
+=== tests/test_workspace_runner.py::test_missing_core_is_checked_before_output_replacement ===
+.                                                                        [100%]
+1 passed in 0.05s

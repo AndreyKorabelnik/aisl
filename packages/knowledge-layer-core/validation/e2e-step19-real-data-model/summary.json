@@ -1,0 +1,105 @@
+{
+  "core_analyzer_execution_count": 0,
+  "dual_write_used": false,
+  "elapsed_seconds": 27.32,
+  "execution_order": [
+    "materialization:code-declared-data-model",
+    "materialization:physical-model",
+    "materialization:logical-physical-mapping",
+    "materialization:effective-data-model"
+  ],
+  "existing_typed_artifact_count": 3,
+  "fallback_used": false,
+  "knowledge_artifact_count": 5,
+  "materialization_count": 4,
+  "materializations": {
+    "001-code-declared-data-model": {
+      "counts": {
+        "code_declared_annotation": 2208,
+        "code_declared_effective_field": 3284,
+        "code_declared_enum_constant": 564,
+        "code_declared_field": 4010,
+        "code_declared_inheritance": 459,
+        "code_declared_model_build": 1,
+        "code_declared_model_gap": 62,
+        "code_declared_model_source": 1,
+        "code_declared_relationship": 1640,
+        "code_declared_source_unit": 868,
+        "code_declared_type": 909,
+        "code_declared_type_reference": 4171
+      },
+      "coverage": null,
+      "producer_version": "0.59.1",
+      "validation_status": null
+    },
+    "002-physical-model": {
+      "counts": {
+        "physical_model_build": 1,
+        "physical_model_column": 11940,
+        "physical_model_gap": 0,
+        "physical_model_key": 498,
+        "physical_model_relationship": 370,
+        "physical_model_source": 1,
+        "physical_model_table": 522
+      },
+      "coverage": null,
+      "producer_version": "0.59.1",
+      "validation_status": null
+    },
+    "003-logical-physical-mapping": {
+      "counts": {
+        "logical_physical_entity_mapping": 0,
+        "logical_physical_field_mapping": 0,
+        "logical_physical_key_mapping": 0,
+        "logical_physical_mapping_build": 1,
+        "logical_physical_mapping_gap": 0,
+        "logical_physical_mapping_source": 1,
+        "logical_physical_relationship_mapping": 0
+      },
+      "coverage": {
+        "gap_count": 0,
+        "status": "complete"
+      },
+      "producer_version": "0.59.1",
+      "validation_status": null
+    },
+    "004-effective-data-model": {
+      "counts": {
+        "effective_data_model_build": 1,
+        "effective_data_model_coverage": 11,
+        "effective_data_model_entity": 909,
+        "effective_data_model_field": 3284,
+        "effective_data_model_gap": 62,
+        "effective_data_model_key": 0,
+        "effective_data_model_relationship": 1640,
+        "effective_data_model_source": 3,
+        "effective_data_model_unmapped_physical_object": 13330,
+        "model_domain": 99,
+        "model_entity_cluster": 260
+      },
+      "coverage": {
+        "gap_count": 62,
+        "logical_entity_count": 909,
+        "logical_field_count": 3284,
+        "status": "partial",
+        "unmapped_physical_object_count": 13330
+      },
+      "producer_version": "0.59.1",
+      "validation_status": null
+    }
+  },
+  "published_capability_count": 17,
+  "result_fingerprint": "e5440c888d9c3d2614fddf54390dedd22c8488416f2861f0b52de83dc01c438d",
+  "scenario_id": "step19-client-profile-plus-pdm-reuse",
+  "schema_version": "final_e2e_data_model_summary/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "semantic_observation": {
+    "coverage_status": "partial",
+    "logical_physical_mapping_count": 0,
+    "reason_not_inferred": "No name-similarity or physical substitution is permitted; this source repository is not assumed to correspond to the supplied PDM."
+  },
+  "status": "completed"
+}

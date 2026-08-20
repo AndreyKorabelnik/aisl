@@ -1,0 +1,341 @@
+{
+  "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+  "catalog_fingerprint": "7f6c9b91a3b30611f6540731c465e7306228404659b95fb24b114c688e5d961d",
+  "contracts": [
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "java-type-structure-evidence",
+      "contract_fingerprint": "37d2c9d6e4fd794b4cadccf47b6996692913ca0999b6e820097f183a05335ca9",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_discovered",
+          "java_files_in_scope",
+          "java_files_parsed",
+          "java_files_failed",
+          "java_files_with_parse_errors",
+          "type_declaration_count",
+          "field_declaration_count",
+          "inheritance_declaration_count",
+          "annotation_declaration_count",
+          "type_reference_count",
+          "unresolved_type_reference_count",
+          "ambiguous_type_reference_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "java_structural_facts",
+              "schemas",
+              "interfaces",
+              "relations",
+              "mapper_facts"
+            ],
+            "stage_id": "java_structural_scan"
+          },
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "source_observation_facts",
+              "source_observation_fact_store",
+              "module_resolution_facts",
+              "framework_observations_optional"
+            ],
+            "stage_id": "java_source_observation_build"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "Java annotation type declarations are diagnosed but not yet materialized as type records."
+      ],
+      "definition": "Complete source-observed Java type declarations and their structural members without persistence, physical, usage or effective-model interpretation.",
+      "diagnostic_contract": {
+        "failure_policy": "one_file_failure_does_not_drop_successfully_observed_declarations",
+        "known_codes": [
+          "java_parse_error",
+          "unresolved_type_reference",
+          "ambiguous_type_reference",
+          "unsupported_java_declaration",
+          "duplicate_type_identity",
+          "source_file_unreadable"
+        ],
+        "required_fields": [
+          "code",
+          "severity",
+          "message",
+          "source_refs"
+        ]
+      },
+      "forbidden_semantics": [
+        "JPA entity, table, column, key or relationship interpretation",
+        "logical-to-physical mapping",
+        "physical-schema substitution",
+        "SQL or storage usage",
+        "converter or builder attribute mapping",
+        "effective inherited fields",
+        "effective associations",
+        "domain or business-object classification",
+        "confidence score or probability",
+        "task_id, suite_id or profile_id as semantic selectors"
+      ],
+      "intended_knowledge_consumers": [
+        "code-declared-data-model"
+      ],
+      "non_goals": [
+        "Do not infer that a field type is a business association.",
+        "Do not decide which Java types are domain entities.",
+        "Do not calculate inherited effective fields inside Core.",
+        "Do not interpret persistence annotations in this analyzer."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "source_units",
+          "type_declarations",
+          "field_declarations",
+          "inheritance_declarations",
+          "annotation_declarations",
+          "type_reference_observations",
+          "enum_constant_declarations"
+        ],
+        "sections": [
+          {
+            "notes": "One record for every in-scope Java source file, including files with parse errors.",
+            "optional_fields": [
+              "source_set",
+              "content_sha256",
+              "bytes"
+            ],
+            "record_identity": "source_unit_id",
+            "required_fields": [
+              "source_unit_id",
+              "repository_relative_path",
+              "language",
+              "package_name",
+              "imports",
+              "parse_status",
+              "parse_error_count"
+            ],
+            "section": "source_units"
+          },
+          {
+            "allowed_type_kinds": [
+              "class",
+              "interface",
+              "enum",
+              "record",
+              "annotation_type"
+            ],
+            "optional_fields": [
+              "enclosing_type_id",
+              "documentation",
+              "source_set"
+            ],
+            "record_identity": "type_id",
+            "required_fields": [
+              "type_id",
+              "source_unit_id",
+              "fully_qualified_name",
+              "simple_name",
+              "package_name",
+              "type_kind",
+              "modifier_tokens",
+              "type_parameters",
+              "source_ref"
+            ],
+            "section": "type_declarations"
+          },
+          {
+            "notes": "Static fields are retained as declarations. KLC decides which members belong in a data-model view; Core does not silently discard them from evidence.",
+            "optional_fields": [
+              "normalized_type_expression",
+              "initializer_present",
+              "documentation"
+            ],
+            "record_identity": "field_id",
+            "required_fields": [
+              "field_id",
+              "owner_type_id",
+              "name",
+              "declared_type_expression",
+              "modifier_tokens",
+              "is_static",
+              "is_final",
+              "source_ref"
+            ],
+            "section": "field_declarations"
+          },
+          {
+            "allowed_relation_kinds": [
+              "extends",
+              "implements"
+            ],
+            "optional_fields": [
+              "resolved_supertype_id",
+              "candidate_supertype_ids",
+              "type_arguments",
+              "resolved_fqcn",
+              "candidate_fqcns"
+            ],
+            "record_identity": "inheritance_id",
+            "required_fields": [
+              "inheritance_id",
+              "subtype_id",
+              "relation_kind",
+              "declared_supertype_expression",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "inheritance_declarations"
+          },
+          {
+            "allowed_target_kinds": [
+              "type",
+              "field"
+            ],
+            "notes": "Raw annotations are evidence. Their JPA, serialization, validation or framework meaning is interpreted by separate analyzers/materializations.",
+            "optional_fields": [
+              "resolved_annotation_type",
+              "candidate_annotation_types"
+            ],
+            "record_identity": "annotation_id",
+            "required_fields": [
+              "annotation_id",
+              "target_kind",
+              "target_id",
+              "annotation_name",
+              "arguments_raw",
+              "structured_arguments",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "annotation_declarations"
+          },
+          {
+            "allowed_reference_roles": [
+              "field_type",
+              "extends_type",
+              "implements_type"
+            ],
+            "notes": "Method parameter/return references belong to broader source-code evidence and are outside the first code-declared data-model contract.",
+            "optional_fields": [
+              "resolved_type_id",
+              "candidate_type_ids",
+              "resolved_fqcn",
+              "candidate_fqcns"
+            ],
+            "record_identity": "type_reference_id",
+            "required_fields": [
+              "type_reference_id",
+              "owner_kind",
+              "owner_id",
+              "reference_role",
+              "declared_type_expression",
+              "referenced_type_token",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "type_reference_observations"
+          },
+          {
+            "notes": "Constants are preserved as declarations without classifying them as reference data.",
+            "record_identity": "enum_constant_id",
+            "required_fields": [
+              "enum_constant_id",
+              "owner_type_id",
+              "name",
+              "arguments_raw",
+              "source_ref"
+            ],
+            "section": "enum_constant_declarations"
+          }
+        ]
+      },
+      "producer": {
+        "current_source_stage_ids": [
+          "java_structural_scan",
+          "java_source_observation_build"
+        ],
+        "required_foundation_sections": [
+          "source_file_inventory",
+          "java_syntax_index"
+        ],
+        "source_language": "java",
+        "target_analyzer_id": "java-type-structure-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all declarations from every successfully parsed in-scope Java source file",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic_by_repository_relative_path_declaration_location_and_stable_id",
+        "partial_result_policy": "publish_observed_records_with_explicit_file_coverage_and_parse_diagnostics",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "diagnostic_without_invented_semantics"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [
+          "start_byte",
+          "end_byte",
+          "snippet_hash"
+        ],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/java-type-structure-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-type-structure-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Java type structure evidence"
+    }
+  ],
+  "core_version": "0.43.27",
+  "execution_effect": "none",
+  "next_step": "compile Knowledge Resolution Plan evidence requirements into core_evidence_execution_request/v1",
+  "purpose": "Core-owned typed evidence payload contracts. The catalog is extensible; adding a new evidence kind does not add a new CLI command.",
+  "schema_version": "core_evidence_contract_catalog/v1",
+  "semantic_routing_rule": "artifact_kind_plus_schema_version_not_task_id",
+  "source": {
+    "core_catalog_fingerprint": "ad6082d068e41d4d65a26066a08f12a3e303c825ac3436451fb6c80f7263b1d0",
+    "core_catalog_schema_version": "core_analysis_catalog/v1",
+    "core_target_contracts_fingerprint": "30b14b01f66728ad8a83b2619a217653a5c21bf0abf92b24bc78e2e483dfed38",
+    "core_target_contracts_schema_version": "core_target_analysis_contracts/v1",
+    "definition_schema_version": "core_evidence_contract_definitions/v1"
+  },
+  "summary": {
+    "contract_count": 1,
+    "defined_not_published_count": 0,
+    "runtime_published_count": 1
+  }
+}

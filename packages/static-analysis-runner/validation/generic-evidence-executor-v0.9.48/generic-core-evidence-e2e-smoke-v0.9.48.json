@@ -1,0 +1,84 @@
+{
+  "evidence": {
+    "analyzer_id": "java-type-structure-analyzer",
+    "artifact_kind": "java-type-structure-evidence",
+    "coverage_status": "complete",
+    "diagnostic_count": 0,
+    "field_count": 5,
+    "inheritance_count": 1,
+    "schema_version": "java-type-structure-evidence/v1",
+    "source_unit_count": 3,
+    "type_count": 3
+  },
+  "fingerprints": {
+    "evidence_run": "80ea92d377c8b05f7246ab4a07fff3619c0c57ee2b93da37aa16a106c26a1d32",
+    "knowledge_result": "b9210cbdb5e36543ed9adcc8b24df43ae6a819295bef314919f10b5329c6376c",
+    "knowledge_run": "d0cc2f83b36efd3da88ba3987768ebbf04c9bca2e59b8989e774c58e51d340ee",
+    "resolution_plan": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712"
+  },
+  "knowledge": {
+    "artifact_count": 1,
+    "counts": {
+      "code_declared_annotation": 0,
+      "code_declared_effective_field": 6,
+      "code_declared_enum_constant": 0,
+      "code_declared_field": 5,
+      "code_declared_inheritance": 1,
+      "code_declared_model_build": 1,
+      "code_declared_model_gap": 0,
+      "code_declared_model_source": 1,
+      "code_declared_relationship": 1,
+      "code_declared_source_unit": 3,
+      "code_declared_type": 3,
+      "code_declared_type_reference": 2
+    },
+    "execution_order": [
+      "code-declared-data-model"
+    ],
+    "legacy_code_conceptual_model_consumed": false,
+    "published_capabilities": [
+      "common.code-declared-data-model",
+      "common.code-declared-entities",
+      "common.code-declared-fields",
+      "common.code-declared-inheritance",
+      "common.code-declared-relationships"
+    ],
+    "status": "completed"
+  },
+  "path": [
+    "knowledge_profile/v2",
+    "knowledge_resolution_plan/v2",
+    "core_evidence_execution_request/v1",
+    "core_evidence_runtime/v1",
+    "static_repository_analysis_run_manifest/v1",
+    "knowledge_materialization_runtime/v1",
+    "knowledge_materialization_execution_result/v1"
+  ],
+  "policies": {
+    "klc_legacy_policy": "not_supported",
+    "runner_evidence": {
+      "dual_write": "not_supported",
+      "evidence_dispatch": "generic_contract_driven",
+      "legacy_fallback": "not_supported",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "task_suite_profile_semantics": "not_used"
+    },
+    "runner_materialization": {
+      "capability_publication": "completed_materialization_results_only",
+      "klc_dispatch": "materialization_id_to_klc_owned_handler",
+      "legacy_fallback": "not_supported",
+      "runner_dispatch": "generic_contract_driven",
+      "task_suite_profile_semantics": "not_used"
+    }
+  },
+  "schema_version": "generic_core_evidence_end_to_end_smoke/v1",
+  "status": "passed",
+  "versions": {
+    "core": "0.43.27",
+    "klc": "0.54.1",
+    "runner": "0.9.48"
+  }
+}

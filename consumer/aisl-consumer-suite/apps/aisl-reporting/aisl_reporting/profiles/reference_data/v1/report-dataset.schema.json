@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "request", "scope", "coverage", "sections", "evidence_index", "interpretation_policy", "dataset_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "report_dataset/v1"},
+    "profile_id": {"const": "reference-data-report/v1"},
+    "request": {"type": "object"},
+    "scope": {
+      "type": "object",
+      "required": ["kind", "id", "repository_ids"],
+      "properties": {
+        "kind": {"enum": ["repository", "workspace"]},
+        "id": {"type": "string", "minLength": 1},
+        "repository_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["candidate_representation_count", "dictionary_object_count", "declared_value_set_count", "complete_candidate_catalog", "semantic_classification_performed", "official_nsi_status_established"],
+      "properties": {
+        "complete_candidate_catalog": {"const": true},
+        "semantic_classification_performed": {"const": false},
+        "official_nsi_status_established": {"const": false}
+      }
+    },
+    "sections": {
+      "type": "object",
+      "required": ["landscape", "complete_candidate_catalog", "production_and_migration_candidates", "non_production_and_unknown_candidates", "detailed_candidates", "declared_value_sets", "literal_population_observations", "reads_writes_and_population", "conflicts_and_possible_duplicates", "gaps_and_coverage", "owner_questions"]
+    },
+    "evidence_index": {
+      "type": "object",
+      "additionalProperties": {"type": "object", "required": ["evidence_id", "repo_id", "path", "maturity"]}
+    },
+    "interpretation_policy": {"type": "object"},
+    "dataset_fingerprint": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": false
+}

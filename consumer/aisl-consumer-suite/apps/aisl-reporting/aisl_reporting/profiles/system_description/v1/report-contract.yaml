@@ -1,0 +1,65 @@
+report_type: system-description
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- What is the apparent purpose and boundary of the analyzed scope?
+- Which functional capabilities are visible in interfaces, events and data objects?
+- Which modules and technologies are observed?
+- Which inbound interfaces, events, and outbound integrations exist?
+- Which data groups, storage objects and relationships are material?
+- Which representative scenarios are directly or partially evidenced?
+- Which conclusions are incomplete or require owner confirmation?
+required_content:
+  business_opening:
+  - plain-language explanation of the system role and practical business value
+  - principal business capabilities without implementation identifiers
+  - main data domains and interaction model in business terms
+  - one concise uncertainty statement at the end, without detailed gap counts
+  summary:
+  - interpreted system purpose and scope limitation
+  - five to eight functional capability candidates when evidence permits
+  - principal architecture and data observations
+  boundaries:
+  - repository and module composition with conservative role hints
+  - inbound REST, Kafka and other observed channels
+  - outbound HTTP, Kafka and other observed channels
+  - system-boundary diagram built only from observed boundary kinds
+  scenarios:
+  - two to four representative journeys or explicitly marked boundary-only fragments when available
+  - exact interface or journey identifiers
+  - confirmed chain boundary and unresolved continuation
+  data_and_storage:
+  - storage inventory counts
+  - interpreted data groups and representative objects
+  - explicit foreign keys separated from observed SQL joins
+  - relationship diagram built only from dataset edges
+  interface_map:
+  - direction, channel, exact operation or address, payload and provenance
+  limitations:
+  - material gap categories and their practical effect
+  - owner questions that are not answered by static evidence
+  technical_appendix:
+  - exact identifiers
+  - evidence IDs
+  - source path and line ranges
+  - fact, interpretation and unresolved boundary
+audience_required_headings:
+  business:
+  - О системе
+required_headings:
+- Краткий вывод
+- Границы и окружение
+- Основные сценарии
+- Использование данных и хранилищ
+- Карта интерфейсов
+- Архитектурные и бизнес-выводы
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance
+appendix_policy:
+  limitations_and_coverage: Приложение A. Полнота анализа и ограничения доказательности
+  ambiguities_and_questions: Приложение B. Неоднозначности и вопросы для уточнения
+  evidence_and_provenance: Приложение C. Технические доказательства и provenance

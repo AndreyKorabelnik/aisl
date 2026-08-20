@@ -1,0 +1,73 @@
+{
+  "execution": {
+    "execution_fingerprint": "5bb5aedddc78bc2bb945339e829b726f928ae9adbc9763fcdc9ae754eccc5671",
+    "execution_order": [
+      "code-declared-data-model"
+    ],
+    "execution_run_schema": "knowledge_materialization_execution_run/v1",
+    "knowledge_artifact_count": 1,
+    "materialization_count": 1,
+    "materialization_runtime_contract": "knowledge_materialization_runtime/v1",
+    "published_capabilities": [
+      "common.code-declared-data-model",
+      "common.code-declared-entities",
+      "common.code-declared-fields",
+      "common.code-declared-inheritance",
+      "common.code-declared-relationships"
+    ],
+    "resolution_plan_schema": "knowledge_resolution_plan/v2",
+    "semantic_policy": {
+      "capability_publication": "completed_materialization_results_only",
+      "klc_dispatch": "materialization_id_to_klc_owned_handler",
+      "legacy_fallback": "not_supported",
+      "runner_dispatch": "generic_contract_driven",
+      "task_suite_profile_semantics": "not_used"
+    }
+  },
+  "genericity_assertions": {
+    "capabilities_from_completed_results_only": true,
+    "klc_dispatch_uses_materialization_registry": true,
+    "legacy_code_conceptual_model_consumed": false,
+    "legacy_fallback_not_supported": true,
+    "runner_dispatch_is_contract_driven": true,
+    "task_suite_profile_semantics_not_used": true
+  },
+  "input": {
+    "artifact_id": "java_type_structure_553d460d0affd42cf1a26904",
+    "content_fingerprint": "553d460d0affd42cf1a269043d586a990bf4d07218c69a6e091ff549b3bff613",
+    "evidence_semantic_identity": {
+      "artifact_kind": "java-type-structure-evidence",
+      "schema_version": "java-type-structure-evidence/v1"
+    },
+    "repository_run_manifest": "/mnt/data/work_runner0946/real-smoke/output/repository_analysis_run_manifest.json"
+  },
+  "klc_version": "0.54.1",
+  "knowledge_counts": {
+    "code_declared_annotation": 0,
+    "code_declared_effective_field": 6,
+    "code_declared_enum_constant": 0,
+    "code_declared_field": 5,
+    "code_declared_inheritance": 1,
+    "code_declared_model_build": 1,
+    "code_declared_model_gap": 0,
+    "code_declared_model_source": 1,
+    "code_declared_relationship": 1,
+    "code_declared_source_unit": 3,
+    "code_declared_type": 3,
+    "code_declared_type_reference": 2
+  },
+  "runner_version": "0.9.47",
+  "schema_version": "universal_knowledge_materialization_smoke/v1",
+  "scope_id": "runner0946_smoke",
+  "smoke_fingerprint": "29e37ad3d06aa0d0269413d0c401aaec2181be0580cd05645ec93d553c158758",
+  "status": "completed",
+  "validation": {
+    "duplicate_effective_field_names": 0,
+    "legacy_code_conceptual_model_consumed": false,
+    "orphan_effective_fields": 0,
+    "orphan_fields": 0,
+    "semantic_routing": "artifact_kind_plus_schema_version",
+    "source_count_matches": true,
+    "status": "complete"
+  }
+}

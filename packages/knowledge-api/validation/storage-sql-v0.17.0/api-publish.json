@@ -1,0 +1,37 @@
+{
+  "active": true,
+  "capabilities": [
+    "common.observed-storage-usage",
+    "common.sql-analysis",
+    "common.sql-attribute-insertion-context",
+    "common.sql-relation-fields",
+    "common.sql-relation-semantic-roles",
+    "common.sql-source-inventory",
+    "common.sql-source-inventory-export",
+    "common.sql-target-column-lineage",
+    "common.sql-target-resolution",
+    "common.sql-workflow-bindings",
+    "common.sql-workflow-context",
+    "common.storage-access-gaps",
+    "common.storage-read-write-inventory"
+  ],
+  "effective_entity_count": 0,
+  "effective_field_count": 0,
+  "effective_relationship_count": 0,
+  "execution_result_path": "/mnt/data/work-next/e2e-storage-sql/execution/knowledge_execution_result.json",
+  "execution_result_sha256": "e9e8538a736db39eef383cb548f053635d7f5788e934acf59e1b2cecdc7ca686",
+  "knowledge_artifact_count": 2,
+  "model_kinds": [
+    "observed-storage-usage",
+    "sql-observed-data-usage"
+  ],
+  "physical_model_table_count": 0,
+  "report_path": null,
+  "report_sha256": null,
+  "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+  "sql_relation_count": 1,
+  "state": "active",
+  "status": "published",
+  "system_id": "demo-storage-sql",
+  "warnings": []
+}

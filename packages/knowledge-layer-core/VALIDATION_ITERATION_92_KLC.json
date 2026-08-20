@@ -1,0 +1,21 @@
+{
+  "iteration": 92,
+  "module": "knowledge-layer-core",
+  "version": "0.52.7",
+  "focused_tests": {"passed": 16, "failed": 0},
+  "full_suite_run": false,
+  "full_suite_reason": "Read-only ranking query only; no schema, ingestion or builder changes.",
+  "real_smoke": {
+    "artifact": "datamart_profile_fl knowledge-layer.duckdb from KLC 0.52.6",
+    "candidate_count": 77,
+    "rank_1": "epk_client",
+    "rank_1_kind": "published_or_terminal",
+    "rank_1_score": 87,
+    "rank_1_reasons": [
+      "business_entity_primary_suffix",
+      "declared_workflow_target",
+      "target_consumed_outside_own_workflow"
+    ],
+    "artifact_rebuilt": false
+  }
+}

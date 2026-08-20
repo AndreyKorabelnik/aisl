@@ -1,0 +1,342 @@
+{
+  "architecture_rules": [
+    "One generic audit evaluates every knowledge type; adding knowledge must not add a new CLI command.",
+    "Different source families remain different evidence and knowledge; the audit never treats them as interchangeable alternatives.",
+    "Core catalogs declare observations and producer boundaries; KLC catalogs declare materialization requirements; Runner evaluates the cross-module readiness.",
+    "Task, Suite and Core Profile may appear only as current execution provenance and migration diagnostics, not as knowledge semantics.",
+    "The audit does not inspect source code implementation internals and does not replace historical one-time forensic reports."
+  ],
+  "assessments": [
+    {
+      "blocked_gate_ids": [
+        "klc_materialization_runtime",
+        "legacy_semantic_routing_removed"
+      ],
+      "business_availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "code-declared portions of Core code_conceptual_model/v2 + KLC common-data-model ingestion",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "data-model",
+      "current_source_stage_ids": [
+        "java_data_model_lineage_build",
+        "java_persistence_lineage_build",
+        "java_source_observation_build",
+        "java_structural_scan"
+      ],
+      "foundation_requirements": [
+        "java-structure-index",
+        "repository-file-index",
+        "symbol-and-type-index"
+      ],
+      "gates": [
+        {
+          "explanation": "Knowledge type and KLC materialization requirements are declared in official catalogs.",
+          "gate_id": "knowledge_contract",
+          "status": "pass"
+        },
+        {
+          "explanation": "Required source observations are mapped to current producers.",
+          "gate_id": "required_source_observations",
+          "status": "pass"
+        },
+        {
+          "explanation": "All required evidence schemas are defined.",
+          "gate_id": "typed_evidence_contracts",
+          "status": "pass"
+        },
+        {
+          "explanation": "All required evidence artifacts are published by current runtime.",
+          "gate_id": "core_runtime_publication",
+          "status": "pass"
+        },
+        {
+          "explanation": "Required Core evidence is registered by Runner.",
+          "gate_id": "runner_artifact_registration",
+          "status": "pass"
+        },
+        {
+          "explanation": "Target KLC materialization is declared but runtime implementation is not current.",
+          "gate_id": "klc_materialization_runtime",
+          "lifecycle": "planned_core_to_klc_migration",
+          "status": "blocked"
+        },
+        {
+          "explanation": "Current Task-based routes still carry legacy knowledge semantics.",
+          "gate_id": "legacy_semantic_routing_removed",
+          "status": "blocked"
+        }
+      ],
+      "knowledge_id": "code-declared-data-model",
+      "legacy_semantic_routes": [
+        {
+          "current_selector": "task_id",
+          "required_transition": "publish_capabilities_from_materialization_results_not_requested_tasks",
+          "route_id": "suite.capability-publication",
+          "source_ref": "knowledge_layer_core.suite_builder._suite_capabilities",
+          "target_selector": "successfully materialized KLC model capability",
+          "task_ids": [
+            "system-description",
+            "data-model",
+            "reference-data",
+            "flow-lineage",
+            "interaction-lineage",
+            "persistence-lineage",
+            "system-interaction",
+            "conceptual-data-model",
+            "sql-mart",
+            "git-change-complexity"
+          ]
+        },
+        {
+          "current_selector": "task_id",
+          "required_transition": "replace_legacy_data_model_task_route_with_code_declared_physical_mapping_and_effective_materializations",
+          "route_id": "suite.common-data-model-selection",
+          "source_ref": "knowledge_layer_core.suite_builder._data_model_repositories",
+          "target_selector": "typed artifacts and KLC model dependencies for decomposed data-model materializations",
+          "task_ids": [
+            "data-model"
+          ]
+        }
+      ],
+      "materialization": {
+        "catalog_section": "planned_core_to_klc_materializations",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "code-declared-data-model",
+        "outputs": {
+          "capabilities": [
+            "common.code-declared-data-model",
+            "common.code-declared-entities",
+            "common.code-declared-relationships",
+            "common.code-declared-inheritance"
+          ],
+          "materialized_marts": [
+            "code-declared-entities",
+            "code-declared-fields",
+            "code-declared-relationships",
+            "code-declared-inheritance"
+          ],
+          "models": [
+            "code-declared-data-model/v1"
+          ],
+          "required_metadata": [
+            "coverage",
+            "diagnostics",
+            "provenance",
+            "content_fingerprint"
+          ]
+        },
+        "readiness": "typed_source_contract_required",
+        "source_core_stage": "code_conceptual_model_build"
+      },
+      "next_actions": [
+        {
+          "action": "implement_klc_materialization",
+          "description": "Implement the target KLC materialization over typed evidence and publish coverage, diagnostics and provenance.",
+          "priority": 1,
+          "subject": "code-declared-data-model"
+        },
+        {
+          "action": "run_scoped_parity",
+          "description": "Compare only the semantics of this knowledge type with the corresponding legacy bundle sections.",
+          "priority": 2,
+          "subject": "code-declared-data-model"
+        },
+        {
+          "action": "remove_legacy_semantic_routes",
+          "description": "Remove relevant task_id routes and legacy bundle selection after scoped parity; do not keep a compatibility adapter.",
+          "priority": 3,
+          "subject": "code-declared-data-model"
+        }
+      ],
+      "optional_evidence": [
+        {
+          "artifact_kind": "model-evidence-gap",
+          "blockers": [
+            "typed_evidence_contract_missing",
+            "typed_runtime_artifact_not_published",
+            "runner_typed_artifact_registration_missing"
+          ],
+          "core_evidence_contract_fingerprints": [],
+          "foundation_requirements": [
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "model-evidence-gap",
+          "observation_status": "current_observations_exist",
+          "overall": "optional_not_ready",
+          "payload_completeness_status": "not_proven_until_typed_contract",
+          "producer_kind": "core",
+          "purpose": "Explicit extraction and resolution gaps for the declared code model.",
+          "required": false,
+          "runner_registration_status": "blocked_by_runtime_publication",
+          "runtime_publication_status": "not_implemented",
+          "schema_versions": [
+            "model-evidence-gap/v1"
+          ],
+          "stage_assessments": [
+            {
+              "category": "derived_evidence",
+              "dependency_review_disposition": "none_at_responsibility_boundary_phase",
+              "dependency_review_required": false,
+              "produces": [
+                "data_model_lineage_facts"
+              ],
+              "recommended_boundary": "keep_in_core",
+              "stage_id": "java_data_model_lineage_build",
+              "state_dependency": "explicit_upstream_stage_output_plus_repository_metadata",
+              "status": "current",
+              "target_owner": "code-analyzer-core",
+              "target_role": "independent_evidence_analyzer"
+            },
+            {
+              "category": "derived_evidence",
+              "dependency_review_disposition": "none_at_responsibility_boundary_phase",
+              "dependency_review_required": false,
+              "produces": [
+                "persistence_lineage_facts"
+              ],
+              "recommended_boundary": "keep_in_core",
+              "stage_id": "java_persistence_lineage_build",
+              "state_dependency": "explicit_inputs_or_source_files",
+              "status": "current",
+              "target_owner": "code-analyzer-core",
+              "target_role": "independent_evidence_analyzer"
+            }
+          ],
+          "title": "Пробелы evidence модели данных",
+          "typed_contract_status": "missing_proposed"
+        }
+      ],
+      "recommended_knowledge_dependencies": [],
+      "required_evidence": [
+        {
+          "artifact_kind": "java-type-structure-evidence",
+          "blockers": [],
+          "core_evidence_contract_fingerprints": [
+            "cf5cc4f5fb0de861380086ee34e89e9ddb80e298ade5a0f7eb67189eb6f42e9f"
+          ],
+          "foundation_requirements": [
+            "java-structure-index",
+            "repository-file-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "java-type-structure",
+          "observation_status": "current_observations_exist",
+          "overall": "ready",
+          "payload_completeness_status": "contract_defined",
+          "producer_kind": "core",
+          "purpose": "Observed model type, field, relationship and inheritance declarations from source code.",
+          "required": true,
+          "runner_registration_status": "current",
+          "runtime_publication_status": "current",
+          "schema_versions": [
+            "java-type-structure-evidence/v1"
+          ],
+          "stage_assessments": [
+            {
+              "category": "base_evidence",
+              "dependency_review_disposition": "foundation_internal_dependency_only",
+              "dependency_review_required": false,
+              "produces": [
+                "interfaces",
+                "java_structural_facts",
+                "mapper_facts",
+                "relations",
+                "schemas"
+              ],
+              "recommended_boundary": "keep_in_core",
+              "stage_id": "java_structural_scan",
+              "state_dependency": "explicit_inputs_or_source_files",
+              "status": "current",
+              "target_owner": "code-analyzer-core",
+              "target_role": "foundation_source_index"
+            },
+            {
+              "category": "base_evidence",
+              "dependency_review_disposition": "foundation_internal_dependency_only",
+              "dependency_review_required": false,
+              "produces": [
+                "framework_observations_optional",
+                "module_resolution_facts",
+                "source_observation_fact_store",
+                "source_observation_facts"
+              ],
+              "recommended_boundary": "keep_in_core",
+              "stage_id": "java_source_observation_build",
+              "state_dependency": "explicit_source_inputs_plus_profile_options",
+              "status": "current",
+              "target_owner": "code-analyzer-core",
+              "target_role": "foundation_source_index"
+            }
+          ],
+          "title": "Объявления типов и полей в исходном коде",
+          "typed_contract_status": "defined_current"
+        }
+      ],
+      "required_knowledge_dependencies": [],
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "target_status": "current_business_available_target_migration_required",
+      "title": "Модель данных, объявленная в коде"
+    }
+  ],
+  "audit_fingerprint": "bd052c8fa690cf0b551e044cbf2f78fc7a75266be132f676df8df07f5c9c0a38",
+  "contract": {
+    "audit_basis": "official_catalogs_only",
+    "contract_id": "knowledge_architecture_audit_contract/v1",
+    "execution_effect": "none",
+    "owner": "static-analysis-runner",
+    "semantic_unit": "knowledge_id"
+  },
+  "execution_effect": "none",
+  "known_limits": [
+    "The audit evaluates official declared contracts and current catalog mappings; it does not parse Core or KLC source code.",
+    "Payload completeness cannot be proven before a typed evidence contract and runtime artifact exist.",
+    "Actual repository source availability and per-run coverage are outside this architecture audit.",
+    "Current business availability may rely on legacy mixed artifacts even when the target boundary is blocked."
+  ],
+  "next_step": "implement_KLC_code-declared-data-model_materialization_over_java-type-structure-evidence/v1",
+  "purpose": "Generically assess whether each user-facing knowledge type can be produced through the target typed-evidence and KLC materialization boundary.",
+  "runner_version": "0.9.46",
+  "schema_version": "knowledge_architecture_audit/v1",
+  "selection": {
+    "audited_knowledge_ids": [
+      "code-declared-data-model"
+    ],
+    "default_selection": null,
+    "requested_knowledge_ids": [
+      "code-declared-data-model"
+    ]
+  },
+  "source": {
+    "core_catalog_fingerprint": "35879aadbb4bb8f0988a5f94d9c17bc030748665a0a368bee68531be91999046",
+    "core_catalog_schema": "core_analysis_catalog/v1",
+    "core_evidence_catalog_fingerprint": "358dd4e6075c2ecbdaa653c976e7e8121db054e745e3d1fdcd451707f6fe188e",
+    "core_evidence_catalog_schema": "core_evidence_contract_catalog/v1",
+    "core_target_contracts_fingerprint": "544fa6b1d931ca7548d3aaded8452b3e85cec145347585656c880654e4194d79",
+    "core_target_contracts_schema": "core_target_analysis_contracts/v1",
+    "execution_catalog_fingerprint": "b3dd9e18d30e0a88cf4d96806828be218674b5c1094fff93c018502c03c947a0",
+    "execution_catalog_schema": "analysis_execution_result_catalog/v1",
+    "klc_catalog_fingerprint": "011a879e98c25e6002c57ab28063c9699d2eb62cd9e1b2d7cfb6374acbdcea42",
+    "klc_catalog_schema": "knowledge_materialization_catalog/v2",
+    "knowledge_catalog_fingerprint": "3aae461fe16bb1b7ea6f85a907321e0acba36ba3e1efd658b42e911d2790dea1",
+    "knowledge_catalog_schema": "knowledge_catalog/v2",
+    "responsibility_map_fingerprint": "5456c1fd15ff8f49671964f0a6d4a4c1f3f0e0c759a385a3efccef20614fce5e",
+    "responsibility_map_schema": "core_klc_responsibility_map/v1"
+  },
+  "summary": {
+    "audited_knowledge_count": 1,
+    "blocked_gate_count": 2,
+    "migration_required_count": 1,
+    "planned_blocked_count": 0,
+    "target_ready_count": 0,
+    "target_status_counts": {
+      "current_business_available_target_migration_required": 1
+    }
+  }
+}

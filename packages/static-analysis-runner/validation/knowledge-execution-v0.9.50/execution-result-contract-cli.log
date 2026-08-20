@@ -1,0 +1,11 @@
+{
+  "catalog_fingerprint": "219f61d620053457ff236b25ba5a287b6ee7a1c0ee3e2f1ad0e14990020423d0",
+  "current_klc_task_semantic_route_count": 7,
+  "current_manifest_variant_count": 6,
+  "fully_compliant_manifest_count": 3,
+  "markdown": "/mnt/data/work_iter2/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-v0.9.50/analysis-execution-result-contract-v1-0.9.50.md",
+  "next_step": "next_independent_evidence_and_materializer",
+  "output": "/mnt/data/work_iter2/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-v0.9.50/analysis-execution-result-contract-v1-0.9.50.json",
+  "schema_version": "analysis_execution_result_catalog/v1",
+  "task_semantic_coupled_variant_count": 3
+}

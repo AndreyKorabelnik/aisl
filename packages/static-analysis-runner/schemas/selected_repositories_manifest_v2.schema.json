@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "selected_repositories_manifest/v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "selection_id",
+    "selection_origin",
+    "selection_mode",
+    "source",
+    "analysis_contract",
+    "repositories"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "selected_repositories_manifest/v2"
+    },
+    "selection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selection_origin": {
+      "enum": [
+        "preselected-directory",
+        "preselected-manifest"
+      ]
+    },
+    "selection_mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object"
+    },
+    "analysis_contract": {
+      "type": "object",
+      "required": [
+        "kind",
+        "id",
+        "sha256"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "profile",
+            "suite"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "repositories": {
+      "type": "array",
+      "minItems": 1
+    }
+  },
+  "additionalProperties": true
+}

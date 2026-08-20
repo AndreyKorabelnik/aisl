@@ -1,0 +1,101 @@
+{
+  "date": "2026-07-29",
+  "historical_detail_matches": true,
+  "individual": {
+    "direct_field_count": 22,
+    "field_count": 53,
+    "identification_targets": [
+      "Inn",
+      "OtherDocument",
+      "CertificateOnDisability",
+      "DeathCertificate",
+      "GreenCard",
+      "IndividualIdentification",
+      "IndividualLegalCapacityDocument",
+      "MigrationCard"
+    ],
+    "inherited_field_count": 31,
+    "key_count": 1,
+    "party_group_targets": [
+      "PartyToPartyGroup",
+      "PartyToPartyGroupAccessibility",
+      "PartyToPartyGroupHighRisk",
+      "PartyToPartyGroupIncreasedInterest",
+      "PartyToPartyGroupInsiderInfo",
+      "PartyToPartyGroupInvestorInfo",
+      "PartyToPartyGroupInvestorRiskProfile",
+      "PartyToPartyGroupPFR",
+      "PartyToPartyGroupProduct",
+      "PartyToPartyGroupVipClientCategory",
+      "PartyToPartyGroupVision"
+    ],
+    "reference_encoding": "source_field_contains_target_key",
+    "relationship_candidate_count": 2,
+    "relationship_count": 40,
+    "relationship_kind_counts": {
+      "owned_collection": 9,
+      "owned_reference": 22,
+      "polymorphic_owned_collection": 2,
+      "reference": 7
+    },
+    "summary_relationship_count": 40,
+    "table_id": "replica:com.sbt.bm.ucp.retail.model.individual.Individual"
+  },
+  "knowledge_api_version": "0.3.0a3",
+  "knowledge_layer": {
+    "byte_size": 528494592,
+    "filename": "knowledge-layer.duckdb",
+    "media_type": "application/vnd.duckdb",
+    "schema_version": "workspace_data_model/v13",
+    "sha256": "ef1cee1cbd8eead2379cb856e10be64c7b2c83912035855dec2162ccf3d1b000",
+    "uri": "file:///mnt/data/work_iter18_full/full_run/workspace/knowledge-layer.duckdb"
+  },
+  "proxy": {
+    "all_identical": true,
+    "checked_routes": 8,
+    "identical_routes": 8
+  },
+  "report": {
+    "errors": 0,
+    "latest_bytes": 34342,
+    "latest_sha256": "11c75c74dc36b0a4dc79b3985201c304e60977e0044683f1d5c23af1dd58f93d",
+    "matches_source": true,
+    "required_headings": 12,
+    "total": 1,
+    "unique_evidence_citations": 153,
+    "unknown_evidence_ids": 0,
+    "warnings": 0
+  },
+  "revision_id": "rev-bd21615de67a279a5241141d",
+  "runner": {
+    "repositories_completed": 2,
+    "repositories_failed": 0,
+    "repositories_total": 2,
+    "workspace_id": "static-data-model-f3db75fa0d360b00bb23c3b9"
+  },
+  "schema_version": "knowledge_api_full_source_validation/v1",
+  "source_archives": {
+    "UCPDataModel(13).zip": "a05c27f61e0838f270de9a7ba61049de68d3a8c03cf731df5e784c6d85cd4519",
+    "UCPucp-tsa-v4(10).zip": "f1dab5a62ac5d3b800b2579200d681b5b3b7cfcc1d6b56c27a6c4b1693ee4bf6"
+  },
+  "table_catalog": {
+    "kind_counts": {
+      "dictionary": 74,
+      "owned_type": 148,
+      "replica": 18,
+      "versioned_dictionary": 72
+    },
+    "returned": 312,
+    "revision_id": "rev-bd21615de67a279a5241141d",
+    "total": 312
+  },
+  "timings_seconds": {
+    "GET /api/knowledge/v1/health": 0.013,
+    "GET /api/knowledge/v1/systems/ucp/data-model/tables": 0.536,
+    "GET /api/knowledge/v1/systems/ucp/data-model/tables/replica:com.sbt.bm.ucp.retail.model.individual.Individual": 0.538,
+    "GET /api/knowledge/v1/systems/ucp/reports": 0.002,
+    "GET /api/knowledge/v1/systems/ucp/reports/latest/content": 0.002,
+    "POST /api/knowledge/v1/systems": 0.006,
+    "POST /api/knowledge/v1/systems/ucp/revisions": 7.46
+  }
+}

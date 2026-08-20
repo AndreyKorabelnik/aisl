@@ -1,0 +1,158 @@
+{
+  "generic_fact_count": 35,
+  "interpreted_fact_count": 2,
+  "reference_operations": [
+    {
+      "name": "example.ParentConverter:referenceField",
+      "properties": {
+        "observation_id": "e5f2033babff499a2273e850",
+        "tsa_observation_kind": "reference_field_call",
+        "owner_fqcn": "example.ParentConverter",
+        "owner_operation": "ParentConverter.convert",
+        "receiver_expression": "ceb",
+        "method": "referenceField",
+        "call_observation_id": "call_22dcf9ec526ac9541920",
+        "argument_expressions": [
+          "\"first\"",
+          "refKey"
+        ],
+        "argument_input_symbols": [
+          [],
+          [
+            "refKey"
+          ]
+        ],
+        "argument_expression_trees": [
+          {
+            "node_type": "string_literal",
+            "text": "\"first\"",
+            "start_byte": 232,
+            "end_byte": 239,
+            "value": "\"first\"",
+            "children": [
+              {
+                "node_type": "string_fragment",
+                "value": "first"
+              }
+            ]
+          },
+          {
+            "node_type": "identifier",
+            "text": "refKey",
+            "start_byte": 241,
+            "end_byte": 247,
+            "value": "refKey"
+          }
+        ],
+        "nested_call_observation_ids": [],
+        "observation_policy": "observed TSA reference API call only; no FK, cardinality, or join verdict"
+      }
+    },
+    {
+      "name": "example.ParentConverter:referenceField",
+      "properties": {
+        "observation_id": "3eaba5a07e2c46b5aac01d2c",
+        "tsa_observation_kind": "reference_field_call",
+        "owner_fqcn": "example.ParentConverter",
+        "owner_operation": "ParentConverter.convert",
+        "receiver_expression": "ceb",
+        "method": "referenceField",
+        "call_observation_id": "call_a934525224ff458d0c18",
+        "argument_expressions": [
+          "\"second\"",
+          "refKey"
+        ],
+        "argument_input_symbols": [
+          [],
+          [
+            "refKey"
+          ]
+        ],
+        "argument_expression_trees": [
+          {
+            "node_type": "string_literal",
+            "text": "\"second\"",
+            "start_byte": 370,
+            "end_byte": 378,
+            "value": "\"second\"",
+            "children": [
+              {
+                "node_type": "string_fragment",
+                "value": "second"
+              }
+            ]
+          },
+          {
+            "node_type": "identifier",
+            "text": "refKey",
+            "start_byte": 380,
+            "end_byte": 386,
+            "value": "refKey"
+          }
+        ],
+        "nested_call_observation_ids": [],
+        "observation_policy": "observed TSA reference API call only; no FK, cardinality, or join verdict"
+      }
+    }
+  ],
+  "result_bindings": [
+    {
+      "name": "ParentConverter.convert:convertFirst result",
+      "properties": {
+        "observation_id": "call_result_binding_6d5a8bedd5f6618bdda5",
+        "owner_type": "ParentConverter",
+        "owner_fqcn": "example.ParentConverter",
+        "owner_operation": "ParentConverter.convert",
+        "owner_scope_kind": "method",
+        "owner_method": "convert",
+        "call_observation_id": "call_60e92bf0afb51419c54d",
+        "caller_operation": "ParentConverter.convert",
+        "callee_owner_fqcn": "example.ParentConverter",
+        "callee_operation": "ParentConverter.convertFirst",
+        "callee_signature": "example.ParentConverter#convertFirst(Child)",
+        "callee_method": "convertFirst",
+        "callee_return_type": "String",
+        "result_target_kind": "assigned_variable",
+        "target_variable": "refKey",
+        "target_declared_type": "String",
+        "resolution": "exact_same_class_name_and_arity",
+        "syntax_provider": "tree_sitter",
+        "observation_policy": "exact syntactic call-result placement only; no return-value equivalence or semantic verdict"
+      }
+    },
+    {
+      "name": "ParentConverter.convert:convertSecond result",
+      "properties": {
+        "observation_id": "call_result_binding_9ec8fa4c8407898c71cc",
+        "owner_type": "ParentConverter",
+        "owner_fqcn": "example.ParentConverter",
+        "owner_operation": "ParentConverter.convert",
+        "owner_scope_kind": "method",
+        "owner_method": "convert",
+        "call_observation_id": "call_5926364778f624c0810c",
+        "caller_operation": "ParentConverter.convert",
+        "callee_owner_fqcn": "example.ParentConverter",
+        "callee_operation": "ParentConverter.convertSecond",
+        "callee_signature": "example.ParentConverter#convertSecond(Child)",
+        "callee_method": "convertSecond",
+        "callee_return_type": "String",
+        "result_target_kind": "assigned_variable",
+        "target_variable": "refKey",
+        "target_declared_type": "String",
+        "resolution": "exact_same_class_name_and_arity",
+        "syntax_provider": "tree_sitter",
+        "observation_policy": "exact syntactic call-result placement only; no return-value equivalence or semantic verdict"
+      }
+    }
+  ],
+  "reference_value_derivations": [],
+  "status": {
+    "status": "completed",
+    "source_facts_evaluated": 35,
+    "observations_emitted": 2,
+    "counts_by_kind": {
+      "reference_field_call": 2
+    },
+    "facts_only_policy": "TSA vocabulary and API/config occurrences only; no table, key, FK, join, confidence, or business verdict"
+  }
+}

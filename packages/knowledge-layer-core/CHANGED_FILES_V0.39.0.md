@@ -1,0 +1,22 @@
+# Changed files — 0.39.0
+
+- `knowledge_layer_core/interaction_graph.py`
+  - canonical normalized boundary inventory
+  - authority/service identity extraction
+  - indexed target lookup
+  - explicit ambiguity/address-conflict diagnostics
+- `knowledge_layer_core/suite_schema.py`
+  - suite schema v8
+  - `repository_interaction_boundary` table
+- `knowledge_layer_core/query.py`
+  - `repository_interaction_boundaries()` query
+- `knowledge_layer_core/evidence.py`
+  - boundary inventory evidence tool
+- `knowledge_layer_core/suite_builder.py`
+  - boundary capability and materialized mart publication
+- `tests/test_system_interaction_graph.py`
+  - same-path/different-service regression tests
+  - indexed lookup assertions
+- `tests/test_offline_validation.py`
+  - version expectation
+- package/release/handover metadata

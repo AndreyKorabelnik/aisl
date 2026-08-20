@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_materialization_execution_run_v1.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "runner",
+    "knowledge_layer_core",
+    "scope_id",
+    "execution_order",
+    "materialization_executions",
+    "knowledge_artifacts",
+    "published_capabilities",
+    "semantic_policy",
+    "status",
+    "execution_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {"const": "knowledge_materialization_execution_run/v1"},
+    "status": {"const": "completed"},
+    "scope_id": {"type": "string", "minLength": 1},
+    "execution_order": {"type": "array", "items": {"type": "string"}},
+    "materialization_executions": {"type": "array", "items": {"type": "object"}},
+    "knowledge_artifacts": {"type": "array", "items": {"type": "object"}},
+    "published_capabilities": {"type": "array", "items": {"type": "string"}},
+    "execution_fingerprint": {"type": "string", "minLength": 64, "maxLength": 64}
+  },
+  "additionalProperties": true
+}

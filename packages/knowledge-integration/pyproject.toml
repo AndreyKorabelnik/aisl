@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knowledge-integration"
+version = "0.1.17"
+description = "Public capability-gated LLM integration contract over Knowledge API revisions"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["knowledge_integration*"]
+
+[tool.setuptools.package-data]
+knowledge_integration = ["*.md", "profiles/*.md", "schemas/*.json"]

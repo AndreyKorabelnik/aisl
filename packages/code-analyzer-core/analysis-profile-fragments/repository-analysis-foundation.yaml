@@ -1,0 +1,33 @@
+fragment_id: repository-analysis-foundation
+profile_version: 1
+name: Reusable Java repository analysis foundation
+description: >
+  Общая детерминированная основа для анализа Java-систем: состав репозитория,
+  конфигурация, зависимости, интерфейсы, структурная модель, универсальные
+  Tree-sitter observations, SQL, физическая схема и технические взаимодействия.
+workspace_types: [java]
+capabilities:
+  - repository.inventory
+  - build.dependencies
+  - system.interfaces
+  - source.observations
+  - data.physical-schema
+pipeline:
+  stages:
+    - id: scan_files
+    - id: config_scan
+    - id: maven_dependency_scan
+    - id: gradle_dependency_scan
+    - id: openapi_scan
+    - id: java_structural_scan
+    - id: java_source_observation_build
+      options:
+        framework_interpreters: []
+    - id: sql_scan
+    - id: db_schema_scan
+output_contract:
+  strict_evidence_policy: deterministic_observed_facts_provenance_gaps
+  policy:
+    no_business_decisions: true
+    universal_source_observations_available: true
+    source_observation_fact_store_uncapped: true

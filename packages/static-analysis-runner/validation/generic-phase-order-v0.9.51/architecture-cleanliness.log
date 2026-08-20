@@ -1,0 +1,10 @@
+Checked production files:
+- static_analysis_runner/knowledge_execution_planning.py
+- static_analysis_runner/knowledge_execution.py
+
+No occurrences of:
+- java-persistence-mapping
+- logical-physical-mapping
+- physical-model
+
+The phase-order implementation dispatches only by generic node_kind.

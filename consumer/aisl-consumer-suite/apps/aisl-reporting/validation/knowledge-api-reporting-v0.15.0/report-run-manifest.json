@@ -1,0 +1,98 @@
+{
+  "dataset_path": "/mnt/data/work_iter6_reporting/smoke-reporting-build-final2/out/report-dataset.json",
+  "dataset_sha256": "4ebae30f381b6ffa43fc51a476df65845f907eeb9ece07407fb07ae0b0daa089",
+  "log_path": "/mnt/data/work_iter6_reporting/smoke-reporting-build-final2/out/report-run.log",
+  "prompt_path": "/mnt/data/work_iter6_reporting/smoke-reporting-build-final2/out/renderer-prompt.md",
+  "prompt_sha256": "9a8de0e1b6baf8abea7d3b015bd72c3fbe071ed91cf27cbaa9df683636619444",
+  "report_path": "/mnt/data/work_iter6_reporting/smoke-reporting-build-final2/out/report.md",
+  "report_sha256": "6cac5119ec0d85779bf12c9f2059eb68d4e9e9f83c6be31e07fd2e8ece6ab5c4",
+  "request": {
+    "audience": "architecture",
+    "detail_level": "standard",
+    "focus": [],
+    "include_evidence": true,
+    "input_artifact": null,
+    "input_kind": "knowledge_api_revision",
+    "instruction_files": [],
+    "knowledge_api": {
+      "api_url": "http://127.0.0.1:8765",
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "system_id": "client-profile"
+    },
+    "output_format": "markdown",
+    "output_name": "report.md",
+    "profile_id": "data-model-report/v1",
+    "report_type": "data-model-report",
+    "report_version": "v1",
+    "schema_version": "report_request/v4"
+  },
+  "schema_version": "report_run/v2",
+  "status": "completed",
+  "validation": {
+    "dataset": {
+      "dangling_evidence_ids": [],
+      "dataset_bytes": 17270,
+      "evidence_count": 0,
+      "valid": true
+    },
+    "report": {
+      "conforms": true,
+      "deterministic_er": {
+        "applicable": true,
+        "applied": true,
+        "fragment_chars": 949,
+        "generator": "deterministic-data-model-mermaid/v1"
+      },
+      "er_correction": {
+        "applied": false,
+        "attempted": false,
+        "required": false,
+        "status": "not_required",
+        "supported": false
+      },
+      "errors": [],
+      "evidence_citation_count": 0,
+      "mermaid_normalization": {
+        "block_count": 2,
+        "changed_block_count": 0
+      },
+      "missing_attribute_journey_wire_paths": [],
+      "missing_required_headings": [],
+      "observed_er_diagram_count": 2,
+      "observed_heading_count": 19,
+      "observed_headings": [
+        "Краткий вывод",
+        "Область отчёта",
+        "Резюме модели данных",
+        "ER-диаграммы",
+        "Логическая ER-диаграмма",
+        "Физическая ER-диаграмма (объявленные связи схемы)",
+        "Идентификаторы на диаграммах",
+        "Каталог объектов",
+        "Детальное описание ключевых объектов",
+        "Атрибуты и наследование",
+        "Ключи",
+        "Связи и правила JOIN",
+        "Справочники",
+        "Межрепозиторные соответствия",
+        "Физическая модель",
+        "Архитектурные и бизнес-выводы",
+        "Приложение A. Полнота анализа и ограничения доказательности",
+        "Приложение B. Неоднозначности и вопросы для уточнения",
+        "Приложение C. Технические доказательства и provenance"
+      ],
+      "required_attribute_journey_count": 0,
+      "required_er_diagram_count": 2,
+      "required_er_diagram_layers": [
+        "logical_er",
+        "physical_er"
+      ],
+      "required_heading_count": 16,
+      "unknown_evidence_ids": [],
+      "valid": true,
+      "warnings": []
+    }
+  },
+  "validation_path": "/mnt/data/work_iter6_reporting/smoke-reporting-build-final2/out/report-validation.json",
+  "warnings": []
+}

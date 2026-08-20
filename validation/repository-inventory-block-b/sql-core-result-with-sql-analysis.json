@@ -1,0 +1,194 @@
+{
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_06f610a9930a95aaa1e85a05",
+      "analyzer_id": "repository-structure-analyzer",
+      "analyzer_version": "0.44.23a4",
+      "artifact_ids": [
+        "repository_structure_d25dd7178f2c46fb5687266f"
+      ],
+      "parameters": {},
+      "required_by": [
+        "repository-inventory"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "repository-structure-evidence",
+          "schema_version": "repository-structure-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "9df2c8fd9d65846df960d72150b976d4bc6e97b0ef40df6b75eb479fcda0558d"
+      ],
+      "source_snapshot_ids": [
+        "sql-real"
+      ],
+      "status": "completed"
+    },
+    {
+      "analyzer_execution_id": "core_analyzer_execution_5c06bde446fbce3465343671",
+      "analyzer_id": "sql-analysis-analyzer",
+      "analyzer_version": "0.44.23a4",
+      "artifact_ids": [
+        "sql_analysis_d1052312cbfbd11767b78380"
+      ],
+      "parameters": {},
+      "required_by": [
+        "repository-inventory"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "sql-analysis",
+          "schema_version": "sql-analysis/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "c41da4cb30a1b59e222fb99e414db6491dda6664acabc5a83c85300881fd2001"
+      ],
+      "source_snapshot_ids": [
+        "sql-real"
+      ],
+      "status": "partial"
+    }
+  ],
+  "diagnostics": [],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "repository_structure_d25dd7178f2c46fb5687266f",
+      "artifact_kind": "repository-structure-evidence",
+      "content_fingerprint": "d25dd7178f2c46fb5687266f47888a3d1134ac21176201904d0996397a9fcc76",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "all_file_count": 491,
+        "analyzer_eligible_file_count": 480,
+        "coverage_status": "complete",
+        "extension_family_count": 12,
+        "unreadable_file_count": 0,
+        "unsupported_extension_family_count": 6,
+        "unsupported_file_count": 11
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 234973,
+        "kind": "file",
+        "path": "evidence/repository-structure-evidence.json",
+        "sha256": "396bc21ed79a018b3550ec37269f2cec282fa0be758d15e9b9b576e3d1a5e719"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_06f610a9930a95aaa1e85a05",
+      "provenance": {
+        "core_artifact_provenance": {},
+        "foundation": {},
+        "producer": {
+          "analyzer_id": "repository-structure-analyzer",
+          "analyzer_version": "0.44.23a4",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [
+          "repository-inventory"
+        ],
+        "source_snapshot": {
+          "file_count": 491,
+          "fingerprint": "9df2c8fd9d65846df960d72150b976d4bc6e97b0ef40df6b75eb479fcda0558d",
+          "revision": null,
+          "scope": "repository_all_files",
+          "source_id": "sql-real"
+        }
+      },
+      "schema_version": "repository-structure-evidence/v1",
+      "status": "completed"
+    },
+    {
+      "artifact_id": "sql_analysis_d1052312cbfbd11767b78380",
+      "artifact_kind": "sql-analysis",
+      "content_fingerprint": "d1052312cbfbd11767b7838045ef51e7d68a96ad59fef38bdeaf6962f17e7238",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "coverage_status": "partial",
+        "lineage_gap_count": 70,
+        "sql_files_scanned": 480,
+        "sql_statement_count": 475,
+        "sql_unit_count": 306
+      },
+      "diagnostics": {
+        "code_counts": {
+          "sql_analysis_partial": 1
+        },
+        "count": 1,
+        "severity_counts": {
+          "warning": 1
+        }
+      },
+      "location": {
+        "bytes": 7768,
+        "kind": "file",
+        "path": "evidence/sql-analysis-evidence.json",
+        "sha256": "92b88f5bca9e3364caf00a35e56ad0f16ddb73e0316262864d3b99f08b3d774c"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_5c06bde446fbce3465343671",
+      "provenance": {
+        "core_artifact_provenance": {
+          "canonical_payload_contract": "sql-analysis/v1-jsonl-shards",
+          "execution_runtime": "core_evidence_runtime/v1",
+          "semantic_routing": "artifact_kind_plus_schema_version"
+        },
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "sql-analysis-analyzer",
+          "analyzer_version": "0.44.23a4",
+          "component": "code-analyzer-core"
+        },
+        "required_by": [
+          "repository-inventory"
+        ],
+        "source_snapshot": {
+          "file_count": 480,
+          "fingerprint": "c41da4cb30a1b59e222fb99e414db6491dda6664acabc5a83c85300881fd2001",
+          "revision": null,
+          "scope": "sql_analysis_sources",
+          "source_id": "sql-real"
+        }
+      },
+      "schema_version": "sql-analysis/v1",
+      "status": "partial"
+    }
+  ],
+  "execution_id": "core_evidence_execution_73656b7f3a214809db466d45",
+  "producer": {
+    "component": "code-analyzer-core",
+    "version": "0.44.23a4"
+  },
+  "request_fingerprint": "db1294cdeb7e289334588f985b0965be1fd8fd65a8d4a6b3778cdfc48cde448e",
+  "result_fingerprint": "2ef731c068c1805250febe24d8157368dc77c072a82712b908280a5722e30a15",
+  "runtime_contract_id": "core_evidence_runtime/v1",
+  "schema_version": "core_evidence_execution_result/v1",
+  "source": {
+    "source_id": "sql-real",
+    "source_kind": "repository"
+  },
+  "source_snapshots": [
+    {
+      "file_count": 491,
+      "fingerprint": "9df2c8fd9d65846df960d72150b976d4bc6e97b0ef40df6b75eb479fcda0558d",
+      "revision": null,
+      "scope": "repository_all_files",
+      "source_id": "sql-real"
+    },
+    {
+      "file_count": 480,
+      "fingerprint": "c41da4cb30a1b59e222fb99e414db6491dda6664acabc5a83c85300881fd2001",
+      "revision": null,
+      "scope": "sql_analysis_sources",
+      "source_id": "sql-real"
+    }
+  ],
+  "status": "partial"
+}

@@ -1,0 +1,1709 @@
+{
+  "schema_version": "sql-source-inventory-quality/v1",
+  "fixture_id": "datamart_profile_fl-source-inventory-v1",
+  "repo_id": "datamart_profile_fl",
+  "source_basis": "manual review of repository SQL FROM/JOIN/DDL clauses; source_sha256 pins each case",
+  "cases": [
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_phone_mapping/epk_phone_mapping.sql",
+      "source_sha256": "a411534c61f444029ea8fce34ba1d1dc73fd75b3f0c45942a7f3ebfbb6d58866",
+      "tags": [
+        "cte",
+        "field_exact",
+        "published_mart_as_source"
+      ],
+      "expected_relations": [
+        {
+          "identity": "custom_b2c_profile_fl.epk_client_phonenumber",
+          "relation_kind": "physical",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "custom_b2c_profile_fl.epk_client_phonenumber",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "active_flag",
+              "roles": [
+                "filter"
+              ]
+            },
+            {
+              "name": "contact_status",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "contact_type",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "epk_id",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "phone_number",
+              "roles": [
+                "filter",
+                "projection"
+              ]
+            },
+            {
+              "name": "row_actual_from",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "row_actual_to",
+              "roles": [
+                "filter",
+                "projection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_persdata_mapping/epk_persdata_mapping.sql",
+      "source_sha256": "0779298040f13b53df03c792b4f6c6c6c269a689f75aef04599bf16d6ff568be",
+      "tags": [
+        "complex_cte",
+        "union",
+        "known_parser_gap"
+      ],
+      "expected_relations": [
+        {
+          "identity": "custom_b2c_profile_fl.epk_client_doc",
+          "relation_kind": "physical",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl.epk_client",
+          "relation_kind": "physical",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/epk_client.sql",
+      "source_sha256": "acddac3cc835ed281e30bc3e3e973999c3eea72c65bbd5276e9ee9819a24e9c2",
+      "tags": [
+        "large_join",
+        "technical_staging",
+        "known_relation_recall_gap"
+      ],
+      "expected_relations": [
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_individual_bv",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_citizenship",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_names",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_maritalstatus_bv",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_deathdate",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_birthplace_bv",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_education_bv",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_gender",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_deathinfo",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_docs",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_relgroups",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_segment",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_literacy",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_currencyresident",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_centaur_flag",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_riskprofile",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_distantmanager",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_selfempl",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_domain_client",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_gendertype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partystatustype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_country",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partygroup",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epkid_2_epkid/epkid_2_epkid.sql",
+      "source_sha256": "33f8e339efe288cee28b42b043ecb23334fb135850fa6a749650d6f2ea1ba889",
+      "tags": [
+        "field_exact",
+        "joins",
+        "template_sources"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_mergeclientinfo",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_unmergeclientinfo",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_individual",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_mergeclientinfo",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "key",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "partyid",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            }
+          ]
+        },
+        {
+          "relation_identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_unmergeclientinfo",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "key",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "partyid",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            }
+          ]
+        },
+        {
+          "relation_identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_individual",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "enddate",
+              "roles": [
+                "filter",
+                "projection"
+              ]
+            },
+            {
+              "name": "id",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "mergeclientinfoend",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "startdate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "unmergenewclientinfo",
+              "roles": [
+                "filter",
+                "join"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_client_link_dzo/t_client_link_dzo.sql",
+      "source_sha256": "ba2c0f63c16f82602cb457dac5d83133312e4d1fe2642f94b427ca4c81d53cda",
+      "tags": [
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_equivalentsystemtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_t_client_link_dzo_personsdo",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_t_client_link_dzo_ucpidsdo",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_t_client_link_dzo_ucpidsdo_hist",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_interaction_profile/t_dim_interaction_profile.sql",
+      "source_sha256": "a9913e510b97f9fde2b2e93893054d9e53eba81c4aeef10d26c7c8eba3186158",
+      "tags": [
+        "cte",
+        "technical_only_direct_sources"
+      ],
+      "expected_relations": [
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_t_dim_interaction_profile_frontmarker_union",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_t_dim_interaction_profile_ucpclientdatachangeinitiator",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_t_dim_interaction_profile_ucpfrontendclientmarker",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_uvsk_client_team/t_dim_uvsk_client_team.sql",
+      "source_sha256": "0f6e8957ca1bbe077db3de64405c672591095f256a3eeb9db2e5441ac1690244",
+      "tags": [
+        "field_exact",
+        "single_template_source",
+        "windows"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_uvsk_schema_name}.ru_sbrf_pprb_tsm_model_domain_history_clientteamhistory",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "${snp_src_uvsk_schema_name}.ru_sbrf_pprb_tsm_model_domain_history_clientteamhistory",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "createdate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "createhistorydate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "ctl_validfrom",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "entityid",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "epkid",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "key",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "status",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "teamid",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "typeid",
+              "roles": [
+                "projection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/product_color_list/product_color_list.sql",
+      "source_sha256": "7c8b94348ee689f7f7d97822a0aab42fa9f2fc2646df8f70b7a9472bc9c6448a",
+      "tags": [
+        "technical_staging",
+        "wildcard"
+      ],
+      "expected_relations": [
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_creditpotential_json",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/common/snp_inc_diff.sql",
+      "source_sha256": "72dc5338dd3d1112b658ac190a7bf74cae0fc757a608b4f9d9bad20669b0990c",
+      "tags": [
+        "anti_join",
+        "generic_template",
+        "semantic_placeholders"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${pa_schema_name}.${main_table_name}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_source}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_diff_keys",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/common/hist_inc_diff.sql",
+      "source_sha256": "510b05350e12c3be87ad50d2dfe6cf524e1b1cf64a636982f737fcc9b875405f",
+      "tags": [
+        "generic_template",
+        "union"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${pa_schema_name}.${main_table_name}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_source}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_tags/epk_client_tags.sql",
+      "source_sha256": "c6d7ba1463841850a7cdb1b969935f0e41bb05c0c6eee31f7599652495394031",
+      "tags": [
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_equivalentsystemtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpcustomerknowledgecategory",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_userinfo",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_tags_customerknowledge",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_tags_marker",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_riskprofile.sql",
+      "source_sha256": "2d79e47f66c71e0d560346cf23c00304bf2ce72409347db69701e4671778230b",
+      "tags": [
+        "dictionary_join",
+        "field_exact",
+        "history_snapshot_union"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${hist_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpinvestorriskprofilescore_hist",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpinvestorriskprofilescore",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_extrablocks",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_extrablocks_riskprofile",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_extrablocks_riskprofile",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "enddate",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "id",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "investinghorizon",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "investorriskprofilescore",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "updatedatetime",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "versionstartdate",
+              "roles": [
+                "projection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "source_sha256": "629938c20029676a8698cd29f6b4349617630d51e0f3dfd038c3a8826f1cc697",
+      "tags": [
+        "field_exact",
+        "range_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate__joined",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "custom_b2c_profile_fl_stg.stg_epk_client_birthdate__joined",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "active_flag",
+              "roles": [
+                "projection",
+                "window_order"
+              ]
+            },
+            {
+              "name": "birth_date",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "birthdate_qc_cd",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "epk_id",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "row_actual_from",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "row_actual_to",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "updatedatetime",
+              "roles": [
+                "projection",
+                "window_order"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_gender.sql",
+      "source_sha256": "dcd62a94d6e09d11115a937b97782ab0bae6a495feeb4ed71cc2fa88e2b9985e",
+      "tags": [
+        "field_exact",
+        "range_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_gender__joined",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "custom_b2c_profile_fl_stg.stg_epk_client_gender__joined",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "active_flag",
+              "roles": [
+                "projection",
+                "window_order"
+              ]
+            },
+            {
+              "name": "epk_id",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "gender_cd",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "gender_qc_cd",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "row_actual_from",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "row_actual_to",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "updatedatetime",
+              "roles": [
+                "projection",
+                "window_order"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_docs.sql",
+      "source_sha256": "fe72afdac0a98c0fc98aadf70710f45a7fceccdea1537ab49102df64b40c454b",
+      "tags": [
+        "dictionary_join",
+        "field_exact",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partyidentificationtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_extension_identificationserviceattributes",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_identification_individualidentification",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_client_individual_bv",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "${snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_identification_individualidentification",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "documentnumber",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "documentseries",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "documenttype",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "enddate",
+              "roles": [
+                "filter",
+                "projection"
+              ]
+            },
+            {
+              "name": "id",
+              "roles": [
+                "projection",
+                "window_partition"
+              ]
+            },
+            {
+              "name": "identificationserviceattributes",
+              "roles": [
+                "join"
+              ]
+            },
+            {
+              "name": "key",
+              "roles": [
+                "join",
+                "projection"
+              ]
+            },
+            {
+              "name": "startdate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "updatedatetime",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "versionstartdate",
+              "roles": [
+                "projection",
+                "window_order"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/epk_client_email.sql",
+      "source_sha256": "2ce84c15cbaf6abb0da95af68fc2a0f122ca73dd273f0ee73c1e2fa479728265",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_contactstatus",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_contactusagetype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_electronicaddresssubtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_email_centaur",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_email_contact_contactflag_aggr",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_email_contact_electronicaddress_union",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_email_extension_addressserviceattributes",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_email_individual",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/epk_client_phonenumber.sql",
+      "source_sha256": "4138202d84bc3476a29f37ccf1fcf16573c6397342b8245b3080fdedd9b5cd5c",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_contactstatus",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_contactusagetype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_region",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_timezone",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_extension_phonenumberserviceattributes",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_phonenumber_centaur",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_phonenumber_contact_contactflag",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_phonenumber_contact_phonenumber_merged",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_phonenumber_contacttocontactgroup",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_phonenumber_def_services_x_operators",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_phonenumber_rozn_mnp_hist_final",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_doc/epk_client_doc.sql",
+      "source_sha256": "07ca912d88ffa454769a8ff1fbe40717b490405c746ce37c3b693aa9d95fb19d",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partyidentificationcategory",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partyidentificationstatus",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partyidentificationtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_aux.interim_epk_client_individual",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_doc_centaur",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_doc_documentflag",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_doc_extension_identificationserviceattributes",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_doc_merged_union",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_address/epk_client_address.sql",
+      "source_sha256": "7166977b38c45341d8c21aad31d4a310c368374738935dec1128a0a8e447cbc1",
+      "tags": [
+        "complex_cte",
+        "output_target_read",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_addresssubtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_citytype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_contactstatus",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_contactusagetype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_country",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_districttype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_regiontype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_settlementtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_streettype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_aux.interim_epk_client_individual",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_addr_centaur",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_addr_contact_address_union",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_addr_contact_contactflag",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_addr_extension_addressserviceattributes",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_lnk_host_id/epk_lnk_host_id.sql",
+      "source_sha256": "ce86b078116a611c3bcaadc6bcd0a2b395b474899a9e6359aee479a5801181f1",
+      "tags": [
+        "complex_cte",
+        "dictionary_join",
+        "technical_staging"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_equivalentsystemtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_identifiertype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_lnk_host_id_centaur",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_lnk_host_id_equivalent_union",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.stg_epk_lnk_host_id_individual",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "source_sha256": "a33924b9c888cd6394d305c92cbedc58555e96f495ca7aef139f64c788ad6f58",
+      "tags": [
+        "ddl_dml",
+        "template_sources",
+        "temporary_table"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$delta_src_schema_name}.${$src_delta_table}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpbodystyle",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpdrivetype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucptransmissiontype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpvehiclebrand",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpvehiclecategory",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_ucpvehiclemodel",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_smpr_mileage",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_smpr_smartprofile",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/t_dim_real_estate/t_dim_real_estate_pre.sql",
+      "source_sha256": "a8e4d07fdf259549899b77e4bda14fd8c2bc8ea946456681353a00b064e40a6f",
+      "tags": [
+        "ddl_dml",
+        "template_sources",
+        "temporary_table"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_citytype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_country",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_districttype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_region",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_regiontype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_streettype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_extension_addressserviceattributes",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_smpr_realestateaddress",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_smpr_smartprofile",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.interim_t_dim_real_estate_realestate",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_individual_stg.sql",
+      "source_sha256": "2f0a7cc104dd23e9a6523e5e42f2fa38243bc0bcbe9a3655eeed62f9e3cbd7b1",
+      "tags": [
+        "ddl_dml",
+        "field_exact",
+        "template_target"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$delta_src_schema_name}.${$src_delta_table}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_country",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partystatustype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "${$delta_src_schema_name}.${$src_delta_table}",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "countryresident",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "ctl_action",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "ctl_loading",
+              "roles": [
+                "filter",
+                "projection"
+              ]
+            },
+            {
+              "name": "ctl_loading_part",
+              "roles": [
+                "filter"
+              ]
+            },
+            {
+              "name": "ctl_pa_loading",
+              "roles": [
+                "filter"
+              ]
+            },
+            {
+              "name": "ctl_validfrom",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "enddate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "id",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "key",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "partystatus",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "startdate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "versionstartdate",
+              "roles": [
+                "filter",
+                "projection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "source_sha256": "ce440bcf6d845cd165d20181f625201899b39bae21723eac6690d1bf65bcf0c6",
+      "tags": [
+        "ddl_dml",
+        "intermediate_read",
+        "template_sources"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$delta_src_schema_name}.${$src_delta_table}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$delta_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_extension_individualnameserviceattributes_delta",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_nametype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_extension_individualnameserviceattributes",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.interim_epk_client_individualname_bv_stg",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_docs_stg.sql",
+      "source_sha256": "8c2c58ae40e3012a61445388d87d4e4afa5f9fd5c102d75f3d83f681ae1bb295",
+      "tags": [
+        "ddl_dml",
+        "intermediate_read",
+        "partial_columns"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$delta_src_schema_name}.com_sbt_bm_ucp_retail_model_individual_individual_delta",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.interim_epk_client_docs_bv_stg",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_real_estate/t_dim_real_estate_pre.sql",
+      "source_sha256": "438dae7e03898dc6a65e669ec0d0ee53f343fe36ae291243df30fa83e899a948",
+      "tags": [
+        "ddl_dml",
+        "template_sources",
+        "temporary_table"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_citytype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_country",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_districttype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_region",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_regiontype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_streettype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_extension_addressserviceattributes",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_smpr_realestateaddress",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_smpr_smartprofile",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.interim_t_dim_real_estate_realestate",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_docs_bv_stg.sql",
+      "source_sha256": "552f136709b65b2a7dbf4b511d0ec6e9904b17cdb489b05e2d925f4e1c07caa7",
+      "tags": [
+        "ddl_dml",
+        "field_exact",
+        "snapshot_history"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$hist_src_schema_name}.${$src_hist_table}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.${$src_snp_table}",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_partyidentificationtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_dictionary_qualitycode",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$snp_src_schema_name}.com_sbt_bm_ucp_common_model_party_extension_identificationserviceattributes",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_client_team_type/t_dim_client_team_type_arc.sql",
+      "source_sha256": "a13ffa4de6c4a2c2e1b0d9f11c36054781a101d61db8306db0211f7bacaf97f2",
+      "tags": [
+        "ddl_dml",
+        "field_exact",
+        "template_target"
+      ],
+      "expected_relations": [
+        {
+          "identity": "${$uvsk_hist_schema}.ru_sbrf_pprb_tsm_model_domain_clientteamtype_hist",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        },
+        {
+          "identity": "${$uvsk_src_schema}.ru_sbrf_pprb_tsm_model_domain_clientteamtype",
+          "relation_kind": "physical_template",
+          "expected_view": "business_sources"
+        }
+      ],
+      "field_expectations": [
+        {
+          "relation_identity": "${$uvsk_src_schema}.ru_sbrf_pprb_tsm_model_domain_clientteamtype",
+          "mode": "exact",
+          "fields": [
+            {
+              "name": "ctl_validfrom",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "description",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "id",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "lastchangedate",
+              "roles": [
+                "projection"
+              ]
+            },
+            {
+              "name": "name",
+              "roles": [
+                "projection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/epk_client_v2_stg.sql",
+      "source_sha256": "c7deaff09f3d215d22a916123e7225996e08fd612fa079ca6d5f1dcd5ea165f1",
+      "tags": [
+        "ddl_dml",
+        "technical_only_direct_sources",
+        "wildcard"
+      ],
+      "expected_relations": [
+        {
+          "identity": "custom_b2c_profile_fl_stg.$all_joined_table_name",
+          "relation_kind": "physical_template",
+          "expected_view": "technical"
+        },
+        {
+          "identity": "custom_b2c_profile_fl_stg.interim_epk_client_centaurs",
+          "relation_kind": "physical",
+          "expected_view": "technical"
+        }
+      ],
+      "field_expectations": []
+    },
+    {
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/interims_for_epk_client.sql",
+      "source_sha256": "8ee06f4fd3db2cb5e9c2e7fa73f060d4037db2fb24195a66aac8cf955eeccf61",
+      "tags": [
+        "ddl_only",
+        "many_targets",
+        "no_sources"
+      ],
+      "expected_relations": [],
+      "field_expectations": []
+    }
+  ]
+}

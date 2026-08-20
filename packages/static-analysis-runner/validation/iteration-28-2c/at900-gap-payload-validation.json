@@ -1,0 +1,20 @@
+{
+  "constructor_diagnostic_fields": {
+    "candidate_target_fqcns": null,
+    "constructor_argument_expression_kind": "method_call",
+    "constructor_argument_index": 0,
+    "source_scope": "production_code",
+    "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+    "target_resolution_kind": "explicit_import",
+    "target_type_reference": "PprbProfileByUcpIdRs"
+  },
+  "constructor_gap_occurrence_id": "gap_0148f544816b5764ba87",
+  "constructor_local_gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001140_04F14F8C9B0F20AE",
+  "detail_evidence_ref_count": 1,
+  "duckdb_gap_count": 7391,
+  "duckdb_with_source_gap_payload": 7391,
+  "jsonl_gap_count": 7391,
+  "jsonl_with_source_gap_payload": 7391,
+  "list_is_compact": true,
+  "tool_same_payload": true
+}

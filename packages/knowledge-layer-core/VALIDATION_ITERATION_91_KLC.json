@@ -1,0 +1,30 @@
+{
+  "iteration": 91,
+  "module": "knowledge-layer-core",
+  "version": "0.52.6",
+  "focused_tests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "full_suite_run": false,
+  "full_suite_reason": "Only the SQL workflow-context materialization/query contour changed; focused tests and a real datamart build cover it.",
+  "real_smoke": {
+    "repository": "datamart_profile_fl",
+    "build_status": "complete",
+    "file_references": 418,
+    "workflow_context_paths": 1100,
+    "placeholder_binding_resolutions": 248,
+    "file_reference_status": {
+      "resolved": 179,
+      "ambiguous": 13,
+      "unresolved": 226
+    },
+    "placeholder_resolution_status": {
+      "resolved": 209,
+      "probable": 9,
+      "partial": 30
+    },
+    "t0_individual_interim_paths": 2,
+    "mixed_branch_paths": 0
+  }
+}

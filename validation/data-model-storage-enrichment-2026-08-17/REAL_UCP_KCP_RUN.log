@@ -1,0 +1,246 @@
+run_log=/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/logs/jobs/job-766cc300a3fb460b8be8b060234536be/run.log
+2026-08-17T16:50:43.161084+00:00 INFO    Knowledge execution job created
+2026-08-17T16:50:43.223994+00:00 INFO    [checkout] Preparing 2 source repository revision(s)
+2026-08-17T16:50:43.246899+00:00 INFO    [checkout] Repository is ready: ucp-api-8b14d41f22
+2026-08-17T16:50:43.260320+00:00 INFO    [checkout] Repository is ready: ucp-tsa-v4-b24b3e5a1b
+2026-08-17T16:50:43.278319+00:00 SUCCESS [checkout] Source repositories ready: 2; duration=0.1s
+2026-08-17T16:50:43.311581+00:00 INFO    [prepare_inputs] Preparing Knowledge Profile and typed inputs
+2026-08-17T16:50:44.436724+00:00 INFO    [prepare_inputs] {
+2026-08-17T16:50:44.454276+00:00 INFO    [prepare_inputs]   "inventory_fingerprint": "ee0aea4c6dce0e96ce0b55b7477fe8455a2c969128c68a9ee7547786c3b0f1c2",
+2026-08-17T16:50:44.472948+00:00 INFO    [prepare_inputs]   "output": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/ucp-data-model-enriched/build-data-model-v1/2026-08-17T16-50-43Z__job-766cc300/contracts/knowledge-input-inventory.json",
+2026-08-17T16:50:44.488108+00:00 INFO    [prepare_inputs]   "schema_version": "knowledge_input_inventory/v1",
+2026-08-17T16:50:44.504316+00:00 INFO    [prepare_inputs]   "scope": {
+2026-08-17T16:50:44.535783+00:00 INFO    [prepare_inputs]     "kind": "workspace",
+2026-08-17T16:50:44.555876+00:00 INFO    [prepare_inputs]     "scope_id": "ucp-data-model-enriched"
+2026-08-17T16:50:44.579037+00:00 INFO    [prepare_inputs]   },
+2026-08-17T16:50:44.595417+00:00 INFO    [prepare_inputs]   "summary": {
+2026-08-17T16:50:44.607785+00:00 INFO    [prepare_inputs]     "available_knowledge_artifact_count": 0,
+2026-08-17T16:50:44.621143+00:00 INFO    [prepare_inputs]     "available_typed_artifact_count": 0,
+2026-08-17T16:50:44.641338+00:00 INFO    [prepare_inputs]     "registered_core_producer_count": 13,
+2026-08-17T16:50:44.654062+00:00 INFO    [prepare_inputs]     "registered_materialization_count": 20,
+2026-08-17T16:50:44.665015+00:00 INFO    [prepare_inputs]     "source_snapshot_count": 2
+2026-08-17T16:50:44.705673+00:00 INFO    [prepare_inputs]   }
+2026-08-17T16:50:44.718057+00:00 INFO    [prepare_inputs] }
+2026-08-17T16:50:44.760611+00:00 SUCCESS [prepare_inputs] Runner normalized execution inputs; duration=1.4s
+2026-08-17T16:50:44.793087+00:00 INFO    [runner_plan] Runner is compiling the execution DAG
+2026-08-17T16:50:45.739361+00:00 INFO    [runner_plan] {
+2026-08-17T16:50:45.756267+00:00 INFO    [runner_plan]   "execution_order": [
+2026-08-17T16:50:45.781681+00:00 INFO    [runner_plan]     "analyzer:java-model-storage-analyzer:ucp-api",
+2026-08-17T16:50:45.857975+00:00 INFO    [runner_plan]     "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+2026-08-17T16:50:45.877668+00:00 INFO    [runner_plan]     "analyzer:java-type-structure-analyzer:ucp-api",
+2026-08-17T16:50:45.887382+00:00 INFO    [runner_plan]     "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+2026-08-17T16:50:45.898847+00:00 INFO    [runner_plan]     "materialization:code-declared-data-model",
+2026-08-17T16:50:45.919493+00:00 INFO    [runner_plan]     "materialization:model-storage-semantics",
+2026-08-17T16:50:45.930620+00:00 INFO    [runner_plan]     "materialization:logical-storage-mapping"
+2026-08-17T16:50:45.949491+00:00 INFO    [runner_plan]   ],
+2026-08-17T16:50:45.960134+00:00 INFO    [runner_plan]   "output": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/ucp-data-model-enriched/build-data-model-v1/2026-08-17T16-50-43Z__job-766cc300/contracts/knowledge-execution-plan.json",
+2026-08-17T16:50:45.971185+00:00 INFO    [runner_plan]   "plan_fingerprint": "2bf8f20c427eaf6f4d67f7b28b847202de9cc52ab35891eece15d960194009e7",
+2026-08-17T16:50:45.986266+00:00 INFO    [runner_plan]   "schema_version": "knowledge_execution_plan/v1",
+2026-08-17T16:50:45.996935+00:00 INFO    [runner_plan]   "scope": {
+2026-08-17T16:50:46.006443+00:00 INFO    [runner_plan]     "kind": "workspace",
+2026-08-17T16:50:46.018243+00:00 INFO    [runner_plan]     "scope_id": "ucp-data-model-enriched"
+2026-08-17T16:50:46.029012+00:00 INFO    [runner_plan]   },
+2026-08-17T16:50:46.041570+00:00 INFO    [runner_plan]   "status": {
+2026-08-17T16:50:46.058222+00:00 INFO    [runner_plan]     "blocking_diagnostic_count": 0,
+2026-08-17T16:50:46.068915+00:00 INFO    [runner_plan]     "core_analyzer_node_count": 4,
+2026-08-17T16:50:46.091996+00:00 INFO    [runner_plan]     "execution_node_count": 7,
+2026-08-17T16:50:46.107822+00:00 INFO    [runner_plan]     "existing_knowledge_artifact_count": 0,
+2026-08-17T16:50:46.119155+00:00 INFO    [runner_plan]     "existing_typed_artifact_count": 0,
+2026-08-17T16:50:46.130710+00:00 INFO    [runner_plan]     "materialization_node_count": 3,
+2026-08-17T16:50:46.144426+00:00 INFO    [runner_plan]     "overall": "ready"
+2026-08-17T16:50:46.155112+00:00 INFO    [runner_plan]   }
+2026-08-17T16:50:46.167335+00:00 INFO    [runner_plan] }
+2026-08-17T16:50:46.224824+00:00 SUCCESS [runner_plan] Runner execution DAG is ready; duration=1.4s
+2026-08-17T16:50:46.256319+00:00 INFO    [runner_execution] Runner is executing the canonical Producer plan
+2026-08-17T16:50:47.177094+00:00 INFO    [runner_execution] Checking code-analyzer-core version
+2026-08-17T16:50:48.682164+00:00 INFO    [runner_execution] 0.44.23a7
+2026-08-17T16:50:49.506535+00:00 INFO    [runner_execution] REUSE analyzer:java-model-storage-analyzer:ucp-api key=4f21848fd824024c basis=content_addressed_completed_artifact
+2026-08-17T16:50:49.973597+00:00 INFO    [runner_execution] REUSE analyzer:java-type-structure-analyzer:ucp-api key=f7d818ba066b1465 basis=content_addressed_completed_artifact
+2026-08-17T16:50:51.264742+00:00 INFO    [runner_execution] REUSE analyzer:java-model-storage-analyzer:ucp-tsa-v4 key=ec847b8427dedbf2 basis=content_addressed_completed_artifact
+2026-08-17T16:50:52.504905+00:00 INFO    [runner_execution] REUSE analyzer:java-type-structure-analyzer:ucp-tsa-v4 key=dfef0b9560a64897 basis=content_addressed_completed_artifact
+2026-08-17T16:50:52.636977+00:00 INFO    [runner_execution] BUILD materialization:code-declared-data-model reason=cache_miss (1/3)
+2026-08-17T16:50:52.651027+00:00 INFO    [runner_execution] [materialization:code-declared-data-model] started (1/3)
+2026-08-17T16:50:52.663648+00:00 INFO    [runner_execution] [materialization:code-declared-data-model] worker started
+2026-08-17T16:50:53.572127+00:00 INFO    [runner_execution] [materialization:code-declared-data-model][stderr] materialization code-declared-data-model handler started
+2026-08-17T16:51:11.739996+00:00 INFO    [runner_execution] [materialization:code-declared-data-model][stderr] materialization code-declared-data-model handler completed
+2026-08-17T16:51:11.792544+00:00 INFO    [runner_execution] [materialization:code-declared-data-model] worker exited code=0; duration=19.1s
+2026-08-17T16:51:11.865150+00:00 INFO    [runner_execution] [materialization:code-declared-data-model] completed; duration=19.1s; counts: code_declared_annotation=2507, code_declared_effective_field=7165, code_declared_enum_constant=77, code_declared_field=6045, code_declared_inheritance=984, code_declared_model_build=1, code_declared_model_gap=31, code_declared_model_source=2, code_declared_relationship=1573, code_declared_source_unit=1061, code_declared_type=1326, code_declared_type_reference=4246
+2026-08-17T16:51:11.895072+00:00 INFO    [runner_execution] BUILD materialization:model-storage-semantics reason=cache_miss (2/3)
+2026-08-17T16:51:11.914294+00:00 INFO    [runner_execution] [materialization:model-storage-semantics] started (2/3)
+2026-08-17T16:51:11.950131+00:00 INFO    [runner_execution] [materialization:model-storage-semantics] worker started
+2026-08-17T16:51:12.823482+00:00 INFO    [runner_execution] [materialization:model-storage-semantics][stderr] materialization model-storage-semantics handler started
+2026-08-17T16:51:27.539958+00:00 INFO    [runner_execution] [materialization:model-storage-semantics][stderr] materialization model-storage-semantics handler completed
+2026-08-17T16:51:27.566521+00:00 INFO    [runner_execution] [materialization:model-storage-semantics] worker exited code=0; duration=15.7s
+2026-08-17T16:51:27.651779+00:00 INFO    [runner_execution] [materialization:model-storage-semantics] completed; duration=15.7s; counts: model_storage_build=1, model_storage_key_lineage=238, model_storage_record=723, model_storage_reference=250, model_storage_reference_derivation=1436, model_storage_source=2
+2026-08-17T16:51:27.694129+00:00 INFO    [runner_execution] BUILD materialization:logical-storage-mapping reason=cache_miss (3/3)
+2026-08-17T16:51:27.716222+00:00 INFO    [runner_execution] [materialization:logical-storage-mapping] started (3/3)
+2026-08-17T16:51:27.731639+00:00 INFO    [runner_execution] [materialization:logical-storage-mapping] worker started
+2026-08-17T16:51:28.635435+00:00 INFO    [runner_execution] [materialization:logical-storage-mapping][stderr] materialization logical-storage-mapping handler started
+2026-08-17T16:51:30.084437+00:00 INFO    [runner_execution] [materialization:logical-storage-mapping][stderr] materialization logical-storage-mapping handler completed
+2026-08-17T16:51:30.115715+00:00 INFO    [runner_execution] [materialization:logical-storage-mapping] worker exited code=0; duration=2.5s
+2026-08-17T16:51:30.150155+00:00 INFO    [runner_execution] [materialization:logical-storage-mapping] completed; duration=2.5s; counts: logical_storage_entity_mapping=723, logical_storage_mapping_build=1, logical_storage_mapping_gap=0, logical_storage_mapping_source=1, logical_storage_relationship_mapping=488
+2026-08-17T16:51:30.203505+00:00 INFO    [runner_execution] {
+2026-08-17T16:51:30.255906+00:00 INFO    [runner_execution]   "evidence_artifact_count": 4,
+2026-08-17T16:51:30.271414+00:00 INFO    [runner_execution]   "execution_order": [
+2026-08-17T16:51:30.285074+00:00 INFO    [runner_execution]     "analyzer:java-model-storage-analyzer:ucp-api",
+2026-08-17T16:51:30.317427+00:00 INFO    [runner_execution]     "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+2026-08-17T16:51:30.332542+00:00 INFO    [runner_execution]     "analyzer:java-type-structure-analyzer:ucp-api",
+2026-08-17T16:51:30.360386+00:00 INFO    [runner_execution]     "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+2026-08-17T16:51:30.375483+00:00 INFO    [runner_execution]     "materialization:code-declared-data-model",
+2026-08-17T16:51:30.388602+00:00 INFO    [runner_execution]     "materialization:model-storage-semantics",
+2026-08-17T16:51:30.402384+00:00 INFO    [runner_execution]     "materialization:logical-storage-mapping"
+2026-08-17T16:51:30.417195+00:00 INFO    [runner_execution]   ],
+2026-08-17T16:51:30.445126+00:00 INFO    [runner_execution]   "knowledge_artifact_count": 3,
+2026-08-17T16:51:30.455848+00:00 INFO    [runner_execution]   "materialization_count": 3,
+2026-08-17T16:51:30.470707+00:00 INFO    [runner_execution]   "output": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/ucp-data-model-enriched/build-data-model-v1/2026-08-17T16-50-43Z__job-766cc300/knowledge-execution",
+2026-08-17T16:51:30.483594+00:00 INFO    [runner_execution]   "producer_reuse": {
+2026-08-17T16:51:30.502882+00:00 INFO    [runner_execution]     "decisions": [
+2026-08-17T16:51:30.513713+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:30.524590+00:00 INFO    [runner_execution]         "action": "reused",
+2026-08-17T16:51:30.550585+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts/core-repository-evidence/4f21848fd824024c85bcf21533ea133f11ea5c2d7f4c6110914766b402e8ca1a/payload/repository_analysis_run_manifest.json",
+2026-08-17T16:51:30.572501+00:00 INFO    [runner_execution]         "basis": "content_addressed_completed_artifact",
+2026-08-17T16:51:30.617183+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:30.630597+00:00 INFO    [runner_execution]         "elapsed_seconds": null,
+2026-08-17T16:51:30.640669+00:00 INFO    [runner_execution]         "invalidation_reason": null,
+2026-08-17T16:51:30.652489+00:00 INFO    [runner_execution]         "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+2026-08-17T16:51:30.671761+00:00 INFO    [runner_execution]         "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+2026-08-17T16:51:30.683155+00:00 INFO    [runner_execution]         "producer_kind": "core-repository-evidence",
+2026-08-17T16:51:30.706631+00:00 INFO    [runner_execution]         "producer_version": "0.44.23a7",
+2026-08-17T16:51:30.721891+00:00 INFO    [runner_execution]         "reuse_key": "4f21848fd824024c85bcf21533ea133f11ea5c2d7f4c6110914766b402e8ca1a",
+2026-08-17T16:51:30.852652+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:30.867654+00:00 INFO    [runner_execution]         "source_id": "ucp-api"
+2026-08-17T16:51:30.880386+00:00 INFO    [runner_execution]       },
+2026-08-17T16:51:30.910017+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:30.937749+00:00 INFO    [runner_execution]         "action": "reused",
+2026-08-17T16:51:30.953154+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts/core-repository-evidence/f7d818ba066b1465141d41b666bc06f80d72f1cd7eb9519b6e02e8c697613017/payload/repository_analysis_run_manifest.json",
+2026-08-17T16:51:30.969221+00:00 INFO    [runner_execution]         "basis": "content_addressed_completed_artifact",
+2026-08-17T16:51:30.982522+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:30.996435+00:00 INFO    [runner_execution]         "elapsed_seconds": null,
+2026-08-17T16:51:31.017248+00:00 INFO    [runner_execution]         "invalidation_reason": null,
+2026-08-17T16:51:31.031625+00:00 INFO    [runner_execution]         "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+2026-08-17T16:51:31.042717+00:00 INFO    [runner_execution]         "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+2026-08-17T16:51:31.060089+00:00 INFO    [runner_execution]         "producer_kind": "core-repository-evidence",
+2026-08-17T16:51:31.072869+00:00 INFO    [runner_execution]         "producer_version": "0.44.23a7",
+2026-08-17T16:51:31.084081+00:00 INFO    [runner_execution]         "reuse_key": "f7d818ba066b1465141d41b666bc06f80d72f1cd7eb9519b6e02e8c697613017",
+2026-08-17T16:51:31.096781+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:31.112614+00:00 INFO    [runner_execution]         "source_id": "ucp-api"
+2026-08-17T16:51:31.143469+00:00 INFO    [runner_execution]       },
+2026-08-17T16:51:31.175583+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:31.201805+00:00 INFO    [runner_execution]         "action": "reused",
+2026-08-17T16:51:31.226745+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts/core-repository-evidence/ec847b8427dedbf2741d1b3c0cb87fb4d98df916c3111db8293b336610b71d31/payload/repository_analysis_run_manifest.json",
+2026-08-17T16:51:31.243026+00:00 INFO    [runner_execution]         "basis": "content_addressed_completed_artifact",
+2026-08-17T16:51:31.253154+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:31.268057+00:00 INFO    [runner_execution]         "elapsed_seconds": null,
+2026-08-17T16:51:31.283655+00:00 INFO    [runner_execution]         "invalidation_reason": null,
+2026-08-17T16:51:31.297323+00:00 INFO    [runner_execution]         "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+2026-08-17T16:51:31.318746+00:00 INFO    [runner_execution]         "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+2026-08-17T16:51:31.331524+00:00 INFO    [runner_execution]         "producer_kind": "core-repository-evidence",
+2026-08-17T16:51:31.345225+00:00 INFO    [runner_execution]         "producer_version": "0.44.23a7",
+2026-08-17T16:51:31.360004+00:00 INFO    [runner_execution]         "reuse_key": "ec847b8427dedbf2741d1b3c0cb87fb4d98df916c3111db8293b336610b71d31",
+2026-08-17T16:51:31.375780+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:31.386856+00:00 INFO    [runner_execution]         "source_id": "ucp-tsa-v4"
+2026-08-17T16:51:31.410304+00:00 INFO    [runner_execution]       },
+2026-08-17T16:51:31.423486+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:31.485893+00:00 INFO    [runner_execution]         "action": "reused",
+2026-08-17T16:51:31.603842+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/control-plane/producer-artifacts/core-repository-evidence/dfef0b9560a648973f28df78d3929e196adc9fd95a361b4e49573cc049c6abde/payload/repository_analysis_run_manifest.json",
+2026-08-17T16:51:31.635374+00:00 INFO    [runner_execution]         "basis": "content_addressed_completed_artifact",
+2026-08-17T16:51:31.664330+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:31.700344+00:00 INFO    [runner_execution]         "elapsed_seconds": null,
+2026-08-17T16:51:31.720228+00:00 INFO    [runner_execution]         "invalidation_reason": null,
+2026-08-17T16:51:31.731517+00:00 INFO    [runner_execution]         "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+2026-08-17T16:51:31.756378+00:00 INFO    [runner_execution]         "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+2026-08-17T16:51:31.768781+00:00 INFO    [runner_execution]         "producer_kind": "core-repository-evidence",
+2026-08-17T16:51:31.782670+00:00 INFO    [runner_execution]         "producer_version": "0.44.23a7",
+2026-08-17T16:51:31.794851+00:00 INFO    [runner_execution]         "reuse_key": "dfef0b9560a648973f28df78d3929e196adc9fd95a361b4e49573cc049c6abde",
+2026-08-17T16:51:31.806947+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:31.818532+00:00 INFO    [runner_execution]         "source_id": "ucp-tsa-v4"
+2026-08-17T16:51:31.830767+00:00 INFO    [runner_execution]       },
+2026-08-17T16:51:31.856457+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:31.890903+00:00 INFO    [runner_execution]         "action": "built",
+2026-08-17T16:51:31.910391+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/ucp-data-model-enriched/build-data-model-v1/2026-08-17T16-50-43Z__job-766cc300/knowledge-execution/materialization-execution/materializations/001-code-declared-data-model/materialization-result.json",
+2026-08-17T16:51:31.922336+00:00 INFO    [runner_execution]         "basis": "canonical_materialization_execution",
+2026-08-17T16:51:31.933889+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:31.950835+00:00 INFO    [runner_execution]         "elapsed_seconds": 19.131548319000103,
+2026-08-17T16:51:31.963387+00:00 INFO    [runner_execution]         "invalidation_reason": "cache_miss",
+2026-08-17T16:51:31.973989+00:00 INFO    [runner_execution]         "node_id": "materialization:code-declared-data-model",
+2026-08-17T16:51:31.988183+00:00 INFO    [runner_execution]         "producer_id": "knowledge-layer-core:code-declared-data-model",
+2026-08-17T16:51:31.997922+00:00 INFO    [runner_execution]         "producer_kind": "knowledge-materialization",
+2026-08-17T16:51:32.021576+00:00 INFO    [runner_execution]         "producer_version": "0.61.0a38",
+2026-08-17T16:51:32.039190+00:00 INFO    [runner_execution]         "reuse_key": "5e984f84e6cfed9360e97dcf07811715c4eac6cc8b582d19e8400c07f2e310df",
+2026-08-17T16:51:32.072933+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:32.100100+00:00 INFO    [runner_execution]         "source_id": "ucp-data-model-enriched"
+2026-08-17T16:51:32.114081+00:00 INFO    [runner_execution]       },
+2026-08-17T16:51:32.126920+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:32.141297+00:00 INFO    [runner_execution]         "action": "built",
+2026-08-17T16:51:32.151425+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/ucp-data-model-enriched/build-data-model-v1/2026-08-17T16-50-43Z__job-766cc300/knowledge-execution/materialization-execution/materializations/002-model-storage-semantics/materialization-result.json",
+2026-08-17T16:51:32.168248+00:00 INFO    [runner_execution]         "basis": "canonical_materialization_execution",
+2026-08-17T16:51:32.192722+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:32.226522+00:00 INFO    [runner_execution]         "elapsed_seconds": 15.69195865100005,
+2026-08-17T16:51:32.241493+00:00 INFO    [runner_execution]         "invalidation_reason": "cache_miss",
+2026-08-17T16:51:32.255776+00:00 INFO    [runner_execution]         "node_id": "materialization:model-storage-semantics",
+2026-08-17T16:51:32.279370+00:00 INFO    [runner_execution]         "producer_id": "knowledge-layer-core:model-storage-semantics",
+2026-08-17T16:51:32.295308+00:00 INFO    [runner_execution]         "producer_kind": "knowledge-materialization",
+2026-08-17T16:51:32.317950+00:00 INFO    [runner_execution]         "producer_version": "0.61.0a38",
+2026-08-17T16:51:32.334474+00:00 INFO    [runner_execution]         "reuse_key": "181a0d8e8e5c245029db8b43dd12eab726afdf75451bee8e011b6a972033a113",
+2026-08-17T16:51:32.363662+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:32.378014+00:00 INFO    [runner_execution]         "source_id": "ucp-data-model-enriched"
+2026-08-17T16:51:32.393333+00:00 INFO    [runner_execution]       },
+2026-08-17T16:51:32.409098+00:00 INFO    [runner_execution]       {
+2026-08-17T16:51:32.425498+00:00 INFO    [runner_execution]         "action": "built",
+2026-08-17T16:51:32.439500+00:00 INFO    [runner_execution]         "artifact_reference": "/mnt/data/data_model_enrichment_work/ucp_e2e/analysis/ucp-data-model-enriched/build-data-model-v1/2026-08-17T16-50-43Z__job-766cc300/knowledge-execution/materialization-execution/materializations/003-logical-storage-mapping/materialization-result.json",
+2026-08-17T16:51:32.463529+00:00 INFO    [runner_execution]         "basis": "canonical_materialization_execution",
+2026-08-17T16:51:32.490426+00:00 INFO    [runner_execution]         "diagnostics": [],
+2026-08-17T16:51:32.515229+00:00 INFO    [runner_execution]         "elapsed_seconds": 2.452355531999956,
+2026-08-17T16:51:32.529993+00:00 INFO    [runner_execution]         "invalidation_reason": "cache_miss",
+2026-08-17T16:51:32.542815+00:00 INFO    [runner_execution]         "node_id": "materialization:logical-storage-mapping",
+2026-08-17T16:51:32.556273+00:00 INFO    [runner_execution]         "producer_id": "knowledge-layer-core:logical-storage-mapping",
+2026-08-17T16:51:32.576436+00:00 INFO    [runner_execution]         "producer_kind": "knowledge-materialization",
+2026-08-17T16:51:32.600582+00:00 INFO    [runner_execution]         "producer_version": "0.61.0a38",
+2026-08-17T16:51:32.624967+00:00 INFO    [runner_execution]         "reuse_key": "fbd2439e78a2112e851a1b9dd47fc07756b3b9ef323545e29a795e0a7f474d1b",
+2026-08-17T16:51:32.637577+00:00 INFO    [runner_execution]         "saved_seconds": null,
+2026-08-17T16:51:32.651627+00:00 INFO    [runner_execution]         "source_id": "ucp-data-model-enriched"
+2026-08-17T16:51:32.665120+00:00 INFO    [runner_execution]       }
+2026-08-17T16:51:32.687263+00:00 INFO    [runner_execution]     ],
+2026-08-17T16:51:32.709159+00:00 INFO    [runner_execution]     "schema_version": "producer_reuse_decisions/v1",
+2026-08-17T16:51:32.720345+00:00 INFO    [runner_execution]     "summary": {
+2026-08-17T16:51:32.740449+00:00 INFO    [runner_execution]       "built": 3,
+2026-08-17T16:51:32.755656+00:00 INFO    [runner_execution]       "reused": 4
+2026-08-17T16:51:32.766762+00:00 INFO    [runner_execution]     }
+2026-08-17T16:51:32.793180+00:00 INFO    [runner_execution]   },
+2026-08-17T16:51:32.804740+00:00 INFO    [runner_execution]   "published_capabilities": [
+2026-08-17T16:51:32.827439+00:00 INFO    [runner_execution]     "common.code-declared-data-model",
+2026-08-17T16:51:32.841127+00:00 INFO    [runner_execution]     "common.code-declared-entities",
+2026-08-17T16:51:32.851660+00:00 INFO    [runner_execution]     "common.code-declared-fields",
+2026-08-17T16:51:32.862089+00:00 INFO    [runner_execution]     "common.code-declared-inheritance",
+2026-08-17T16:51:32.877269+00:00 INFO    [runner_execution]     "common.code-declared-relationships",
+2026-08-17T16:51:32.903305+00:00 INFO    [runner_execution]     "common.logical-storage-identity",
+2026-08-17T16:51:32.938438+00:00 INFO    [runner_execution]     "common.logical-storage-mapping",
+2026-08-17T16:51:33.052707+00:00 INFO    [runner_execution]     "common.logical-storage-relationship",
+2026-08-17T16:51:33.079645+00:00 INFO    [runner_execution]     "common.model-storage-semantics",
+2026-08-17T16:51:33.123352+00:00 INFO    [runner_execution]     "common.storage-identities",
+2026-08-17T16:51:33.143358+00:00 INFO    [runner_execution]     "common.storage-reference-lineage"
+2026-08-17T16:51:33.164674+00:00 INFO    [runner_execution]   ],
+2026-08-17T16:51:33.201257+00:00 INFO    [runner_execution]   "result_fingerprint": "95bd873da9c7ec51b2cd2b9c079d570f7db14abc0e7af0860083afb114b407de",
+2026-08-17T16:51:33.214879+00:00 INFO    [runner_execution]   "schema_version": "knowledge_execution_result/v2",
+2026-08-17T16:51:33.227746+00:00 INFO    [runner_execution]   "scope": {
+2026-08-17T16:51:33.244765+00:00 INFO    [runner_execution]     "kind": "workspace",
+2026-08-17T16:51:33.259199+00:00 INFO    [runner_execution]     "scope_id": "ucp-data-model-enriched"
+2026-08-17T16:51:33.275146+00:00 INFO    [runner_execution]   },
+2026-08-17T16:51:33.287684+00:00 INFO    [runner_execution]   "status": "completed"
+2026-08-17T16:51:33.302227+00:00 INFO    [runner_execution] }
+2026-08-17T16:51:33.340017+00:00 SUCCESS [runner_execution] REUSE analyzer:java-model-storage-analyzer:ucp-api key=4f21848fd824024c basis=content_addressed_completed_artifact
+2026-08-17T16:51:33.363131+00:00 SUCCESS [runner_execution] REUSE analyzer:java-type-structure-analyzer:ucp-api key=f7d818ba066b1465 basis=content_addressed_completed_artifact
+2026-08-17T16:51:33.413796+00:00 SUCCESS [runner_execution] REUSE analyzer:java-model-storage-analyzer:ucp-tsa-v4 key=ec847b8427dedbf2 basis=content_addressed_completed_artifact
+2026-08-17T16:51:33.439951+00:00 SUCCESS [runner_execution] REUSE analyzer:java-type-structure-analyzer:ucp-tsa-v4 key=dfef0b9560a64897 basis=content_addressed_completed_artifact
+2026-08-17T16:51:33.452567+00:00 INFO    [runner_execution] BUILD materialization:code-declared-data-model reason=cache_miss key=5e984f84e6cfed93
+2026-08-17T16:51:33.466042+00:00 INFO    [runner_execution] BUILD materialization:model-storage-semantics reason=cache_miss key=181a0d8e8e5c2450
+2026-08-17T16:51:33.479263+00:00 INFO    [runner_execution] BUILD materialization:logical-storage-mapping reason=cache_miss key=fbd2439e78a2112e
+2026-08-17T16:51:33.493432+00:00 INFO    [runner_execution] Materialization code-declared-data-model counts: code_declared_annotation=2507, code_declared_effective_field=7165, code_declared_enum_constant=77, code_declared_field=6045, code_declared_inheritance=984, code_declared_model_build=1, code_declared_model_gap=31, code_declared_model_source=2, code_declared_relationship=1573, code_declared_source_unit=1061, code_declared_type=1326, code_declared_type_reference=4246
+2026-08-17T16:51:33.542403+00:00 INFO    [runner_execution] Materialization model-storage-semantics counts: model_storage_build=1, model_storage_key_lineage=238, model_storage_record=723, model_storage_reference=250, model_storage_reference_derivation=1436, model_storage_source=2
+2026-08-17T16:51:33.558638+00:00 INFO    [runner_execution] Materialization logical-storage-mapping counts: logical_storage_entity_mapping=723, logical_storage_mapping_build=1, logical_storage_mapping_gap=0, logical_storage_mapping_source=1, logical_storage_relationship_mapping=488
+2026-08-17T16:51:33.573855+00:00 INFO    [runner_execution] Runner process completed; scanning output artifacts
+2026-08-17T16:51:33.887428+00:00 SUCCESS [runner_execution] Runner artifact scan completed; registered=27; duration=0.3s
+2026-08-17T16:51:33.910587+00:00 SUCCESS [runner_execution] Runner completed; knowledge artifacts produced: 3; duration=47.7s
+2026-08-17T16:51:33.947534+00:00 INFO    [publication] Publishing Knowledge API revision
+2026-08-17T16:51:35.762450+00:00 SUCCESS [publication] Revision published: rev-88415df4d14df2ff3827b01c; duration=1.8s
+2026-08-17T16:51:35.807126+00:00 SUCCESS Knowledge execution completed; duration=52.6s

@@ -1,0 +1,16 @@
+{
+  "execution_effect": "none",
+  "implicit_required_dependency_count": 0,
+  "markdown": "/mnt/data/knowledge-resolution-plan-v2-0.9.47.md",
+  "output": "/mnt/data/knowledge-resolution-plan-v2-0.9.47.json",
+  "overall_status": "current_typed",
+  "plan_fingerprint": "0efea68bfc9abd9ab7ac07c74fa0c905f125d70d81990557b53f1af7e3ce70d8",
+  "profile_id": "code-declared-model",
+  "requested_knowledge_count": 1,
+  "resolved_knowledge_count": 1,
+  "schema_version": "knowledge_resolution_plan/v2",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "repo-a"
+  }
+}

@@ -1,0 +1,4 @@
+Looking in indexes: https://reader:****@packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/pypi/pypi-public/simple
+Processing /mnt/data/wheel_runner040/static_analysis_runner-0.9.40-py3-none-any.whl
+Installing collected packages: static-analysis-runner
+Successfully installed static-analysis-runner-0.9.40

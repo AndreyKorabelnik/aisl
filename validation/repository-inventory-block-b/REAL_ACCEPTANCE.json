@@ -1,0 +1,271 @@
+{
+  "schema_version": "repository_inventory_block_b_acceptance/v1",
+  "status": "block_b_checkpoint_complete_with_known_gaps",
+  "observed_facts": {
+    "sql_core_execution": {
+      "repository_structure": "completed",
+      "sql_analysis": "partial",
+      "elapsed_seconds": 18.25,
+      "partial_basis": "official Core SQL diagnostic for unsupported/partially parsed SQL syntax; runtime completed"
+    },
+    "sql_repository_structure_refresh": {
+      "status": "completed",
+      "elapsed_seconds": 0.052
+    },
+    "sql_repository_inventory_materialization": {
+      "status": "completed",
+      "elapsed_seconds": 1.304
+    },
+    "ucp_repository_structure": {
+      "status": "completed",
+      "elapsed_seconds": 0.066
+    },
+    "ucp_repository_inventory_materialization": {
+      "status": "completed",
+      "elapsed_seconds": 1.011
+    },
+    "ucp_reference_data_attempt": {
+      "status": "timeout_not_pass",
+      "timeout_seconds": 300,
+      "interpretation": "heavy Core reference-data request entered broader Java pipeline; no completed reference-data evidence was available for this checkpoint"
+    }
+  },
+  "comparisons": {
+    "sql": {
+      "standalone_summary": {
+        "detected_concept_count": 2,
+        "detected_concepts": [
+          "data_flow",
+          "data_model"
+        ],
+        "extension_family_count": 12,
+        "novel_candidate_count": 24,
+        "root_file_count": 491,
+        "structural_family_count": 168,
+        "unclassified_candidate_count": 14
+      },
+      "official_inventory_summary": {
+        "root_file_count": 491,
+        "extension_family_count": 12,
+        "structural_family_count": 31,
+        "novel_candidate_count": 29,
+        "detected_concepts": [
+          "data_model",
+          "data_flow",
+          "workflow"
+        ],
+        "detected_concept_count": 3,
+        "unclassified_candidate_count": 19
+      },
+      "root_file_count_equal": true,
+      "extension_distribution_equal_after_noext_normalization": true,
+      "official_frontier": [
+        {
+          "extension": ".iml",
+          "file_count": 1,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": ".sbt",
+          "file_count": 2,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": ".scala",
+          "file_count": 3,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": ".txt",
+          "file_count": 1,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": ".xlsx",
+          "file_count": 1,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": "<none>",
+          "file_count": 3,
+          "status": "outside_analyzer_frontier"
+        }
+      ],
+      "official_diagnostics": [
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept system_interaction remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "interaction-boundary-evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence",
+              "sql-analysis"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept persistence remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "persistence-lineage/storage-usage/model-storage/java-persistence-mapping evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence",
+              "sql-analysis"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept reference_data remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "reference-data-evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence",
+              "sql-analysis"
+            ]
+          }
+        }
+      ]
+    },
+    "ucp": {
+      "standalone_summary": {
+        "detected_concept_count": 1,
+        "detected_concepts": [
+          "reference_data"
+        ],
+        "extension_family_count": 8,
+        "novel_candidate_count": 72,
+        "root_file_count": 490,
+        "structural_family_count": 84,
+        "unclassified_candidate_count": 69
+      },
+      "official_inventory_summary": {
+        "root_file_count": 490,
+        "extension_family_count": 8,
+        "structural_family_count": 8,
+        "novel_candidate_count": 5,
+        "detected_concepts": [],
+        "detected_concept_count": 0,
+        "unclassified_candidate_count": 5
+      },
+      "root_file_count_equal": true,
+      "extension_distribution_equal_after_noext_normalization": true,
+      "official_frontier": [
+        {
+          "extension": ".jks",
+          "file_count": 1,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": ".md",
+          "file_count": 1,
+          "status": "outside_analyzer_frontier"
+        },
+        {
+          "extension": "<none>",
+          "file_count": 1,
+          "status": "outside_analyzer_frontier"
+        }
+      ],
+      "official_diagnostics": [
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept data_model remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "data-model-candidate-evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept data_flow remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "sql-analysis or value-flow-evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept system_interaction remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "interaction-boundary-evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept workflow remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "system-description/sql/value-flow evidence with workflow-shaped contract labels",
+            "available_artifact_kinds": [
+              "repository-structure-evidence"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept persistence remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "persistence-lineage/storage-usage/model-storage/java-persistence-mapping evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence"
+            ]
+          }
+        },
+        {
+          "code": "repository_inventory_concept_unresolved",
+          "severity": "info",
+          "message": "Concept reference_data remains unresolved/unclassified from supplied official evidence.",
+          "basis": {
+            "expected_official_evidence": "reference-data-evidence",
+            "available_artifact_kinds": [
+              "repository-structure-evidence"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "semantic_assessment": {
+    "sql": {
+      "classification": "strongly_supported_acceptance",
+      "basis": [
+        "exact repository file count",
+        "exact extension distribution",
+        "standalone data_model/data_flow both reproduced",
+        "additional workflow classification is grounded in official sql_workflow_binding with 3142 records"
+      ],
+      "difference": "structural family counts are intentionally not count-parity: standalone families come from its own parsers; official Inventory families come from Core evidence sections/fact shards"
+    },
+    "ucp": {
+      "classification": "partial_acceptance_with_evidence_gap",
+      "basis": [
+        "exact repository file count",
+        "exact extension distribution",
+        "outside analyzer frontier visible"
+      ],
+      "gap": "standalone reference_data classification cannot yet be compared because official reference-data evidence did not complete within the bounded acceptance run; new Inventory correctly emits unresolved instead of guessing"
+    }
+  },
+  "parked": [
+    "generic JSON structural-shape evidence in Core",
+    "generic config structural-shape evidence in Core",
+    "generic CSV/tabular profile evidence in Core",
+    "Block C product/scenario/API registration",
+    "Benchmark Miner/UI/portfolio/scenario-discovery consumers"
+  ]
+}

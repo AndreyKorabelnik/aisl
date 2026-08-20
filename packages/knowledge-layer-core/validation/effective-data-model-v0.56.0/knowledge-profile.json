@@ -1,0 +1,24 @@
+{
+  "knowledge": [
+    {
+      "knowledge_id": "effective-data-model",
+      "options": {
+        "include_optional_sources": true,
+        "minimum_coverage": null
+      }
+    }
+  ],
+  "presentation": {
+    "include_coverage": true,
+    "include_evidence": true,
+    "include_gaps": true,
+    "include_technical_details": true
+  },
+  "profile_id": "effective-data-model-composition-smoke",
+  "schema_version": "knowledge_profile/v2",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "title": "Effective data model KLC composition smoke"
+}

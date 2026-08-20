@@ -1,0 +1,50 @@
+{
+  "schema_version": "analysis_ui_production_structure_real_smoke/v2",
+  "status": "PASS",
+  "counts": {
+    "core_evidence": 6,
+    "klc_materialization": 7,
+    "prepared_knowledge": 7
+  },
+  "capability_count": 41,
+  "diagnostic_count": 0,
+  "klc_example": {
+    "node_id": "materialization:code-declared-data-model",
+    "node_kind": "klc_materialization",
+    "title": "code-declared-data-model",
+    "status": "completed",
+    "model_kind": "code-declared-data-model",
+    "schema_version": "code-declared-data-model/v1",
+    "producer_id": "code-declared-data-model",
+    "artifact_id": null,
+    "fingerprint": "53100f6873880392fb35b96aa4b05e1436ccafc2702fb5b88cf343f26f7bf08a",
+    "coverage": {},
+    "diagnostics": [],
+    "metadata": {
+      "started_at": "2026-08-09T14:12:28.927723+00:00",
+      "completed_at": "2026-08-09T14:12:40.815853+00:00",
+      "duration_ms": null,
+      "input_artifact_ids": [
+        "java_type_structure_0e048bef31a1cede5387de8b",
+        "java_type_structure_8935546eb670ce6b26c98c2e"
+      ],
+      "input_knowledge_artifact_ids": [],
+      "knowledge_artifact_ids": [
+        "knowledge_artifact_2123e58ba525d9c5d160"
+      ],
+      "published_capabilities": [
+        "common.code-declared-data-model",
+        "common.code-declared-entities",
+        "common.code-declared-fields",
+        "common.code-declared-inheritance",
+        "common.code-declared-relationships"
+      ],
+      "producer": {
+        "component": "knowledge-layer-core",
+        "version": "0.59.46"
+      },
+      "request": "materialization-execution/materializations/001-code-declared-data-model/materialization-request.json",
+      "result": "materialization-execution/materializations/001-code-declared-data-model/materialization-result.json"
+    }
+  }
+}

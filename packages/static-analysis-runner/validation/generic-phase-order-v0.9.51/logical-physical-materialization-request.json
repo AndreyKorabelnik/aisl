@@ -1,0 +1,128 @@
+{
+  "inputs": {
+    "evidence_artifacts": [
+      {
+        "artifact_id": "java_persistence_mapping_f4c680d13df8f752073c838d",
+        "artifact_kind": "java-persistence-mapping-evidence",
+        "content_fingerprint": "f4c680d13df8f752073c838da3fbfbe63b5e6c240c18f9dde603389e76825770",
+        "contract_version": "core_evidence_artifact_contract/v1",
+        "coverage": {
+          "coverage_status": "complete",
+          "diagnostic_count": 0,
+          "java_files_failed": 0,
+          "java_files_in_scope": 1,
+          "java_files_parsed": 1,
+          "java_files_with_parse_errors": 0,
+          "mapping_gap_count": 0,
+          "persistence_field_mapping_count": 5,
+          "persistence_inheritance_mapping_count": 0,
+          "persistence_key_mapping_count": 2,
+          "persistence_relationship_mapping_count": 1,
+          "persistence_type_mapping_count": 2,
+          "unsupported_composite_annotation_count": 0
+        },
+        "diagnostics": {
+          "code_counts": {},
+          "count": 0,
+          "severity_counts": {}
+        },
+        "location": {
+          "bytes": 12294,
+          "kind": "file",
+          "path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/execution-nodes/001-analyzer-java-persistence-mapping-analyzer-client-profile/core-evidence/evidence/java-persistence-mapping-evidence.json",
+          "sha256": "645f1b3ae41d184440aa602206a10649c491abf68354c70c17b7fa208326604b"
+        },
+        "producer_analyzer_execution_id": "core_analyzer_execution_e9ab9050591a3609e170b5a0",
+        "provenance": {
+          "core_artifact_provenance": {
+            "execution_runtime": "core_evidence_runtime/v1",
+            "parser_provider": "tree_sitter",
+            "semantic_routing": "artifact_kind_plus_schema_version",
+            "source_structural_artifact_fingerprint": "16fffb94fb58a4233d94a3196144acbdeb863c688d5d0940f5df72b5c7ec3d06"
+          },
+          "core_execution_result": "core-evidence/core-evidence-execution-result.json",
+          "foundation": {
+            "contract_version": null,
+            "fingerprint": null,
+            "sections": [],
+            "used": false
+          },
+          "producer": {
+            "analyzer_id": "java-persistence-mapping-analyzer",
+            "analyzer_version": "0.43.28",
+            "component": "code-analyzer-core"
+          },
+          "request": {
+            "core_evidence_catalog_fingerprint": "06f8e45140d1ca87c4ed5193352a9ed03eae120acb8168ca03759acad9129419",
+            "execution_node_id": "analyzer:java-persistence-mapping-analyzer:client-profile",
+            "knowledge_execution_plan_fingerprint": "10d67a4937b9b2d358b0231af10df8df980c5722649a3684cedd05fe65950a43",
+            "knowledge_profile_id": "logical-physical-mapping-second-family-smoke",
+            "semantic_role": "execution_request_provenance_only"
+          },
+          "required_by": [
+            "logical-physical-mapping"
+          ],
+          "source_snapshot": {
+            "file_count": 1,
+            "fingerprint": "b7d50116dacc443fbfb66ac9d8d6b7a4b203257ca725f591282e65e40dc9eeb7",
+            "revision": null,
+            "scope": "java_source_files",
+            "source_id": "client-profile"
+          }
+        },
+        "registration_manifest_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/execution-nodes/001-analyzer-java-persistence-mapping-analyzer-client-profile/repository_analysis_run_manifest.json",
+        "repo_id": "client-profile",
+        "schema_version": "java-persistence-mapping-evidence/v1",
+        "semantic_identity": {
+          "artifact_kind": "java-persistence-mapping-evidence",
+          "schema_version": "java-persistence-mapping-evidence/v1"
+        },
+        "status": "completed"
+      }
+    ],
+    "knowledge_artifacts": [
+      {
+        "artifact_id": "knowledge_artifact_16dedf16617496261076",
+        "content_fingerprint": "6e233706344f6ca43236c82f0660b90c7e1ee35e22625dd909f0f2034ed9e754",
+        "coverage": {},
+        "diagnostics": [],
+        "location": {
+          "kind": "knowledge-layer",
+          "manifest_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/materialization-execution/materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer-manifest.json",
+          "output_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/materialization-execution/materializations/001-code-declared-data-model/knowledge-layer"
+        },
+        "materialization_result_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/materialization-execution/materializations/001-code-declared-data-model/materialization-result.json",
+        "model_kind": "code-declared-data-model",
+        "schema_version": "code-declared-data-model/v1",
+        "source_materialization_id": "code-declared-data-model",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "knowledge_artifact_805b300f677d504d72c7",
+        "content_fingerprint": "ec80fa4aca5b4ecb4ad76e1cbbbb93df0bbf10da0037769469a9411390444fad",
+        "coverage": {},
+        "diagnostics": [],
+        "location": {
+          "kind": "knowledge-layer",
+          "manifest_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/materialization-execution/materializations/002-physical-model/knowledge-layer/knowledge-layer-manifest.json",
+          "output_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/materialization-execution/materializations/002-physical-model/knowledge-layer"
+        },
+        "materialization_result_path": "/mnt/data/work_iter3/second-family-e2e/knowledge-execution/materialization-execution/materializations/002-physical-model/materialization-result.json",
+        "model_kind": "physical-data-model",
+        "schema_version": "knowledge_layer_physical_model/v1",
+        "source_materialization_id": "physical-model",
+        "status": "completed"
+      }
+    ]
+  },
+  "materialization_id": "logical-physical-mapping",
+  "orchestration": {
+    "execution_node_id": "materialization:logical-physical-mapping",
+    "knowledge_execution_plan_fingerprint": "10d67a4937b9b2d358b0231af10df8df980c5722649a3684cedd05fe65950a43",
+    "materialization_catalog_fingerprint": "3f58aa5fec7761360c07bdc82acc9271e60644597fa3877fc8c8e626f11aa911",
+    "runner_version": "0.9.51"
+  },
+  "parameters": {},
+  "schema_version": "knowledge_materialization_request/v1",
+  "scope_id": "client-profile"
+}

@@ -1,0 +1,15 @@
+14 profiles matched canonical Core resolver
+code-to-openspec-data-evidence.yaml
+git-change-complexity-assessment.yaml
+git-change-sql-spark-complexity-assessment.yaml
+repository-data-model-discovery.yaml
+repository-data-model-static.yaml
+repository-flow-lineage.yaml
+repository-interaction-lineage.yaml
+repository-persistence-lineage.yaml
+repository-portfolio-topology.yaml
+repository-reference-data.yaml
+repository-system-data-model.yaml
+repository-system-description.yaml
+spec-evidence-workspace.yaml
+sql-mart-lineage.yaml

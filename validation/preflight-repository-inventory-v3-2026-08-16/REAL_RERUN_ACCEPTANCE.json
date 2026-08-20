@@ -1,0 +1,279 @@
+{
+  "acceptance": {
+    "all_12_concept_rows_exact": true,
+    "both_end_to_end_succeeded": true,
+    "counts_match_preserved_dead_chat_acceptance": true,
+    "no_automatic_unclassified_concept_candidate": true
+  },
+  "all_exact": true,
+  "cases": [
+    {
+      "actual_counts": {
+        "coverage_gap_count": 15,
+        "discovery_candidate_count": 11,
+        "evaluation_phase": "preflight",
+        "structural_novelty_candidate_count": 7,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 3
+      },
+      "case": "gateway",
+      "concept_rows": [
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "data_flow",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": 25.0,
+            "confidence": "probable_inference",
+            "status": "probable",
+            "top_family_id": "repository_inventory_family_88abdb3386693f94df08"
+          },
+          "concept_id": "data_model",
+          "exact": true,
+          "expected": {
+            "concept_score": 25.0,
+            "confidence": "probable_inference",
+            "status": "probable",
+            "top_family_id": "repository_inventory_family_88abdb3386693f94df08"
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "persistence",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "reference_data",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": 65.85,
+            "confidence": "strongly_supported_inference",
+            "status": "strongly_supported",
+            "top_family_id": "repository_inventory_family_ff31b8208dee3ca7614f"
+          },
+          "concept_id": "system_interaction",
+          "exact": true,
+          "expected": {
+            "concept_score": 65.85,
+            "confidence": "strongly_supported_inference",
+            "status": "strongly_supported",
+            "top_family_id": "repository_inventory_family_ff31b8208dee3ca7614f"
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "workflow",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        }
+      ],
+      "counts_exact": true,
+      "expected_counts": {
+        "coverage_gap_count": 15,
+        "discovery_candidate_count": 11,
+        "evaluation_phase": "preflight",
+        "structural_novelty_candidate_count": 7,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 3
+      },
+      "inventory_sha256": "18da6ad6c8ad016bec235cd8f2db55c1daa7e4ecd894d4b72e8e69cccc382246",
+      "job_status": "succeeded",
+      "publication": {
+        "knowledge_api_url": "http://127.0.0.1:18080/api/knowledge/v1/systems/real-v3-gateway",
+        "revision_id": "rev-eaa54c4a369ef5cb579e387a",
+        "system_id": "real-v3-gateway"
+      },
+      "repository": "gateway-sberid-userinfo-by-ucpid",
+      "result_fingerprint": "146db053f9c33c945f105a31162f2594a388792dad03414627d07464d957af8f"
+    },
+    {
+      "actual_counts": {
+        "coverage_gap_count": 21,
+        "discovery_candidate_count": 17,
+        "evaluation_phase": "preflight",
+        "structural_novelty_candidate_count": 10,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 6
+      },
+      "case": "datamart",
+      "concept_rows": [
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "data_flow",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": 27.0,
+            "confidence": "probable_inference",
+            "status": "probable",
+            "top_family_id": "repository_inventory_family_c23e4bb7bf95226637b8"
+          },
+          "concept_id": "data_model",
+          "exact": true,
+          "expected": {
+            "concept_score": 27.0,
+            "confidence": "probable_inference",
+            "status": "probable",
+            "top_family_id": "repository_inventory_family_c23e4bb7bf95226637b8"
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "persistence",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "reference_data",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_detected",
+            "status": "not_detected",
+            "top_family_id": null
+          },
+          "concept_id": "system_interaction",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_detected",
+            "status": "not_detected",
+            "top_family_id": null
+          }
+        },
+        {
+          "actual": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          },
+          "concept_id": "workflow",
+          "exact": true,
+          "expected": {
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "status": "not_evaluated",
+            "top_family_id": null
+          }
+        }
+      ],
+      "counts_exact": true,
+      "expected_counts": {
+        "coverage_gap_count": 21,
+        "discovery_candidate_count": 17,
+        "evaluation_phase": "preflight",
+        "structural_novelty_candidate_count": 10,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 6
+      },
+      "inventory_sha256": "3b821753dcc7911eb1c143c46b77604bcd112a90591dcbfebcfd9b632f9b25a3",
+      "job_status": "succeeded",
+      "publication": {
+        "knowledge_api_url": "http://127.0.0.1:18080/api/knowledge/v1/systems/real-v3-datamart",
+        "revision_id": "rev-fb79d696dc982139081866f0",
+        "system_id": "real-v3-datamart"
+      },
+      "repository": "datamart_profile_fl",
+      "result_fingerprint": "18664f3c0ca486e557ad9ba1f94c9087e70a576886dcc94cca53ba97d62ede4d"
+    }
+  ],
+  "date": "2026-08-16",
+  "execution": {
+    "force_rebuild": true,
+    "publication_through_knowledge_api": true,
+    "scenario_id": "build-repository-inventory-v1"
+  },
+  "framework_versions": {
+    "code-analyzer-core": "0.44.23a6",
+    "knowledge-api": "0.35.0",
+    "knowledge-control-plane": "1.2.0a25",
+    "knowledge-layer-core": "0.61.0a34",
+    "static-analysis-runner": "0.10.26"
+  },
+  "schema_version": "repository-inventory-v3-real-rerun-acceptance/v1"
+}

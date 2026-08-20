@@ -1,0 +1,436 @@
+{
+  "capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships",
+    "common.logical-storage-identity",
+    "common.logical-storage-mapping",
+    "common.logical-storage-relationship",
+    "common.model-storage-semantics",
+    "common.storage-identities",
+    "common.storage-reference-lineage"
+  ],
+  "generated_from": {
+    "capabilities_fingerprint": "af28a301f2afc315c704ec981f55ecbb1d6f9417aafaee1a9e8308dd6718da1b",
+    "consumer_policy_fingerprint": "09253aa996085d88523e06cddb70e4ae3331755f8ce1edaf36d2a76bb5afa005",
+    "retrieval_profile_fingerprint": "3c0d8d072381b921679fced847d76ffb84ecf0d8a9d499b57902ddce5a72acbd",
+    "revision_id": "rev-88415df4d14df2ff3827b01c",
+    "tool_catalog_fingerprint": "c26d97ab3b95d55551e88fad620b121046ede08e16812214d9ade3d566cb9060",
+    "tool_catalog_version": "9"
+  },
+  "integration_profile": {
+    "fingerprint": "b175ebc249631700557c19edb6d57abc9c7bf65f9908bca2184788caa933a2b8",
+    "profile_fingerprint": "3c0d8d072381b921679fced847d76ffb84ecf0d8a9d499b57902ddce5a72acbd",
+    "profile_id": "data-model/v1",
+    "profile_version": "2"
+  },
+  "knowledge_artifacts": [
+    {
+      "artifact_id": "java_type_structure_496036cecc061dd5f711dbac",
+      "capabilities": [],
+      "content_fingerprint": "496036cecc061dd5f711dbaca711d68254f7c2339496a32f440a79bfca83c4f0",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 2357,
+        "coverage_status": "partial",
+        "enum_constant_declaration_count": 52,
+        "field_declaration_count": 4872,
+        "inheritance_declaration_count": 604,
+        "java_files_discovered": 592,
+        "java_files_failed": 0,
+        "java_files_in_scope": 592,
+        "java_files_parsed": 592,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 828,
+        "type_reference_count": 2823,
+        "unresolved_type_reference_count": 7,
+        "unsupported_declaration_count": 17
+      },
+      "diagnostic_count": 24,
+      "model_kind": "java-type-structure-evidence",
+      "schema_version": "java-type-structure-evidence/v1",
+      "source_materialization_id": null
+    },
+    {
+      "artifact_id": "java_type_structure_70b50d86600aed4daeb40671",
+      "capabilities": [],
+      "content_fingerprint": "70b50d86600aed4daeb406719718ee7f6063e7cbdfad108e5bf7511b9b96ad4a",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 150,
+        "coverage_status": "complete",
+        "enum_constant_declaration_count": 25,
+        "field_declaration_count": 1173,
+        "inheritance_declaration_count": 380,
+        "java_files_discovered": 469,
+        "java_files_failed": 0,
+        "java_files_in_scope": 469,
+        "java_files_parsed": 469,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 498,
+        "type_reference_count": 1423,
+        "unresolved_type_reference_count": 7,
+        "unsupported_declaration_count": 0
+      },
+      "diagnostic_count": 7,
+      "model_kind": "java-type-structure-evidence",
+      "schema_version": "java-type-structure-evidence/v1",
+      "source_materialization_id": null
+    },
+    {
+      "artifact_id": "knowledge_artifact_be5c6f82c4c3f0360732",
+      "capabilities": [
+        "common.model-storage-semantics",
+        "common.storage-identities",
+        "common.storage-reference-lineage"
+      ],
+      "content_fingerprint": "a6b05c31aaf818f5948d84885980b5f9f589cc698b13aef809a52e2274c086fa",
+      "coverage": {},
+      "diagnostic_count": 0,
+      "model_kind": "model-storage-semantics",
+      "schema_version": "model-storage-semantics/v1",
+      "source_materialization_id": "model-storage-semantics"
+    },
+    {
+      "artifact_id": "knowledge_artifact_ce86ab58b7d571cc7d2f",
+      "capabilities": [
+        "common.logical-storage-identity",
+        "common.logical-storage-mapping",
+        "common.logical-storage-relationship"
+      ],
+      "content_fingerprint": "d1ddf6094eaf32c8d87406c4121c63ab88a82e1c759802574af91be284b6e2e0",
+      "coverage": {},
+      "diagnostic_count": 0,
+      "model_kind": "logical-storage-model-mapping",
+      "schema_version": "logical-storage-model-mapping/v1",
+      "source_materialization_id": "logical-storage-mapping"
+    },
+    {
+      "artifact_id": "knowledge_artifact_dd887435482f9340d7a1",
+      "capabilities": [
+        "common.code-declared-data-model",
+        "common.code-declared-entities",
+        "common.code-declared-fields",
+        "common.code-declared-inheritance",
+        "common.code-declared-relationships"
+      ],
+      "content_fingerprint": "3c5f3950013d4e5eb959d1de3a54fee1beab0e715b5ba0103be29f1c9d782b58",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "analysis_status": "partial",
+        "java_files_failed": 0,
+        "java_files_in_scope": 1061,
+        "java_files_parsed": 1061,
+        "java_files_with_parse_errors": 0,
+        "model_gap_count": 31,
+        "repository_count": 2,
+        "repository_status_counts": {
+          "complete": 1,
+          "partial": 1
+        },
+        "source_coverage_by_repository": {
+          "ucp-api": {
+            "ambiguous_type_reference_count": 0,
+            "annotation_declaration_count": 2357,
+            "coverage_status": "partial",
+            "enum_constant_declaration_count": 52,
+            "field_declaration_count": 4872,
+            "inheritance_declaration_count": 604,
+            "java_files_discovered": 592,
+            "java_files_failed": 0,
+            "java_files_in_scope": 592,
+            "java_files_parsed": 592,
+            "java_files_with_parse_errors": 0,
+            "type_declaration_count": 828,
+            "type_reference_count": 2823,
+            "unresolved_type_reference_count": 7,
+            "unsupported_declaration_count": 17
+          },
+          "ucp-tsa-v4": {
+            "ambiguous_type_reference_count": 0,
+            "annotation_declaration_count": 150,
+            "coverage_status": "complete",
+            "enum_constant_declaration_count": 25,
+            "field_declaration_count": 1173,
+            "inheritance_declaration_count": 380,
+            "java_files_discovered": 469,
+            "java_files_failed": 0,
+            "java_files_in_scope": 469,
+            "java_files_parsed": 469,
+            "java_files_with_parse_errors": 0,
+            "type_declaration_count": 498,
+            "type_reference_count": 1423,
+            "unresolved_type_reference_count": 7,
+            "unsupported_declaration_count": 0
+          }
+        },
+        "unresolved_type_reference_count": 14,
+        "unsupported_declaration_count": 17
+      },
+      "diagnostic_count": 0,
+      "model_kind": "code-declared-data-model",
+      "schema_version": "code-declared-data-model/v1",
+      "source_materialization_id": "code-declared-data-model"
+    }
+  ],
+  "policy": {
+    "evidence_statuses": [
+      "observed",
+      "strongly_supported",
+      "probable",
+      "ambiguity",
+      "unresolved",
+      "gap"
+    ],
+    "grounding": "# Каноническая политика Knowledge Consumer\n\n## Роль и источник фактов\n\n- Ты consumer над **закреплённой ревизией Knowledge API**.\n- Раздел `scope` текущего Integration Profile задаёт точные `system_id`/`revision_id`; `capabilities` и `tools` содержат только знания и операции, опубликованные для этой ревизии.\n- Отвечай на фактические вопросы только по результатам разрешённых Knowledge API tools текущего исследования.\n- LLM организует поиск и объясняет результат, но не является источником фактов.\n- Не обращайся к DuckDB, локальным файлам Knowledge Layer, Task, Suite, Core/Runner/KLC или исходникам, если они не представлены разрешённым публичным tool contract.\n- Не вызывай инструмент, отсутствующий в разделе `tools` текущего Integration Profile. Его отсутствие означает, что соответствующая capability не опубликована в закреплённой ревизии, а не что функциональность системы отсутствует в реальности.\n- Для технических утверждений сохраняй provenance/evidence identifiers, реально присутствующие в результатах вызванных tools.\n- Перед категорическим выводом об отсутствии используй `get_analysis_coverage`, если этот tool доступен. Пустой каталог и `not_observed` не доказывают отсутствие функциональности.\n- Coverage counts — диагностические occurrences, а не процент точности.\n- Различай observed/confirmed, strongly supported, probable/candidate, ambiguity, unresolved и gap. Не повышай статус доказательности.\n- Partial lineage не является полным end-to-end процессом.\n\n## Выбор инструментов\n\n- Сначала используй `scope`, `capabilities`, `knowledge_artifacts` и `generated_from` текущего Integration Profile, когда вопрос требует понять состав доступных знаний или причину отсутствия инструмента.\n- `get_knowledge_item` — универсальный exact-read AISL. Используй его, когда уже известны `artifact_id`, `item_kind` и `local_id` и нужно детерминированно проверить конкретный knowledge item, evidence, issues или опубликованную correspondence. Он не заменяет discovery/search.\n- В ответе `get_knowledge_item` состояния `unsupported` и `not_available` не означают отсутствие факта: первое означает отсутствие универсальной projection для этого facet/product, второе — что typed product не публикует этот факт для данного item.\n- Candidate, найденный через внешний semantic/vector retrieval, не является evidence. Если candidate адресуем в AISL, проверяй его exact-read инструментом до фактического утверждения.\n- Для effective-model knowledge используй `search_data_objects`, затем `get_data_object` и при необходимости `get_data_object_relationship`, если эти tools присутствуют.\n- Для code-declared-model knowledge используй `search_declared_data_objects`, затем `get_declared_data_object`, если они присутствуют. Это observed/derived declared structure с документацией, inheritance и source provenance; она не доказывает storage JOIN или physical mapping.\n- Если retrieval guidance допускает оба model read-surface, выбирай только tools, присутствующие в текущем Integration Profile; отсутствие effective-model tools не является основанием скрывать доступные code-declared факты.\n- Для физической структуры используй доступные `search_physical_model_tables`, `get_physical_model_table`, `list_physical_model_relationships` и `list_physical_model_gaps`.\n- Для SQL используй только опубликованные SQL-tools. `probable`, `partial`, `ambiguous`, `unresolved` и gaps сохраняй в ответе.\n- Все tools одного Integration Profile работают только с одной закреплённой prepared revision. Разные типы knowledge внутри неё различаются capabilities/artifacts, а не отдельными revision bindings. Не пытайся передать или изменить `revision_id` в arguments.\n- Если API сообщает invalid arguments, исправь аргументы по публичному tool/API contract и повтори вызов; не меняй revision scope.\n\n## Модель и физическое хранение\n\n- Эффективная логическая модель и физическая модель являются разными типизированными знаниями.\n- Не превращай совпадение названий в доказанное logical/physical mapping.\n- Physical-model facts подтверждают структуру, но не назначают SQL-роли `read`/`write` и не заменяют observed SQL JOIN evidence.\n- Для storage references различай logical identity, physical storage key, aliases, encoding inputs и join status.\n- Не придумывай separator, нормализацию alias, контейнерную семантику или SQL-функцию без явного evidence/retrieval guidance.\n- Не объявляй физический JOIN подтверждённым без соответствующего статуса в Knowledge API result.\n\n## Пользовательский ответ\n\n- Формируй готовый самостоятельный ответ человеку на языке пользователя.\n- Начинай с прямого содержательного ответа, а не с описания tools или методологии.\n- Сначала показывай подтверждённые объекты, поля, связи, операции и маршруты; ограничения размещай после результата.\n- Probable/candidate, ambiguity, unresolved и gap сведения маркируй локально и не смешивай с confirmed facts.\n- Не перегружай текст внутренними runtime IDs, schema names и названиями tools, если пользователь не просит трассировку.\n- Если доказательств недостаточно, сначала сообщи подтверждённую часть, затем точно укажи, какого опубликованного knowledge/evidence не хватает.\n- Существенные gaps и ограничения собери отдельно; не создавай такой раздел без необходимости.\n- Не придумывай бизнес-смысл по одному имени объекта.\n\n## Диаграммы\n\n- Если пользователь явно просит схему, диаграмму, архитектуру, поток или карту связей, используй только связи из результатов tools текущего исследования.\n- Confirmed, probable и unresolved связи различай; unresolved не превращай в подтверждённое ребро.\n- Для зависимостей и процессов предпочитай `flowchart`, для последовательности — `sequenceDiagram`, `erDiagram` используй только для подтверждённых связей.\n- По умолчанию не более 25 узлов в одной схеме.\n\n## Model-facing result projections\n\n- Tool results presented to an LLM may be an explicit bounded projection of the raw Knowledge API response. Treat `view.projection`, `view.truncated`, counts and `continuation_available` as evidence about retrieval coverage.\n- A compact projection is not evidence that omitted details do not exist. If `truncated=true` or continuation is available, do not make completeness/absence claims from that projection alone.\n- Raw Knowledge API results remain provenance outside LLM context; do not ask for broad `include_fields=true` listings merely to reconstruct raw payloads. Prefer discovery cards followed by an exact object read.",
+    "rules": {
+      "facts_require_tool_results": true,
+      "no_relation_or_join_guessing": true,
+      "no_schema_guessing": true,
+      "preserve_confidence_and_basis": true,
+      "preserve_diagnostics_and_gaps": true
+    }
+  },
+  "retrieval_guidance": {
+    "content": "# Code-declared Data Model scenario policy\n\nUse the generic Knowledge Assistant against one pinned prepared revision containing `code-declared-data-model` knowledge. The same policy applies whether that revision was produced from one repository or a workspace of several repositories. Never request Core, Runner or KLC production for a follow-up question.\n\n## Evidence-first workflow\n\n1. Start with the Integration Profile `scope`/`capabilities`, then `get_declared_data_model_summary` without semantic filters. Inspect repository scope, raw counts, observed type/field annotation frequencies and explicit gaps.\n2. If the user asks for the system/domain model rather than every declared Java type, infer a semantic projection only from observed technical markers and documentation. Select exact marker names using `type_annotations`; if ignore/exclusion markers are explicitly observed and relevant, pass them through `exclude_field_annotations` to the summary. State the selected markers and why they are a strongly supported projection. Do not encode application-specific annotation names in the runtime or assume that every annotation has business semantics.\n3. Use `search_declared_data_objects` with the same exact `type_annotations` projection when listing/searching model objects. Treat `search` as a lexical discovery term: prefer one short exact/technical token per call and issue alternative synonyms/translations as independent calls rather than concatenating many terms into one string. If the consumer runtime supports batching independent read calls, batching those short searches is preferred. Use `retrieval_score` only for deterministic candidate ordering; it is not semantic confidence. Read bounded `match_evidence` to see which observed type/field caused a hit and `binding_summary` to distinguish an observed bound type from a merely co-present dictionary/type. A short or business-facing name may return several grounded candidates: never select the first result mechanically. Compare FQCN, `repo_id`, match evidence, observed bindings, annotations/documentation and source path. If the projected search has insufficient evidence, explicitly repeat the strongest short search term with no `type_annotations` filter (`search_scope=all_declared_types`) before concluding `unresolved`; this is an observable scope expansion, never a silent fallback. If evidence still does not disambiguate candidates, preserve the ambiguity. For an exact type, prefer `get_data_model_object_context`: it returns the exact declared object plus any exact logical-storage/model-storage semantics already published in the pinned revision, with missing storage context explicit. Use `get_declared_data_object` only when the question is intentionally limited to declared-code structure. Preserve direct vs inherited fields, observed annotations, inheritance depth, incoming/outgoing binding summary, source repository and provenance.\n4. Treat explicit ignore annotations as two simultaneous facts: the declaration exists in code, and the selected semantic projection may exclude it. Never erase the declaration from evidence.\n5. Relationship `cardinality_hint` is KLC knowledge with an explicit `cardinality_basis`; preserve the basis. Inheritance and relationship resolution statuses remain visible.\n6. For a multi-repository revision, distinguish facts by `repo_id`/source provenance. Do not interpret repository co-presence as ownership, duplication or a cross-repository relation unless the knowledge explicitly supports it.\n7. Before claiming completeness, inspect gaps from the summary/detail. `partial` evidence does not make useful model knowledge unusable, but unresolved types/declarations must remain visible.\n\n## Boundary discipline\n\nThe base product describes structure declared in source code. `get_data_model_object_context` may additionally expose exact storage semantics only when the selected revision already publishes the corresponding storage products. It does **not** by itself prove physical tables, columns, PK/FK constraints or SQL JOIN predicates. Never derive those facts from class/field names, declared relationships or storage aliases. If storage products are absent, preserve `not_available`; if physical SQL/PDM evidence is absent, preserve `physical_mapping.status=not_observed`.\n\nA useful domain-model classification may be a strongly supported inference over observed code annotations/documentation. Label that inference and its basis; do not present it as a universal framework rule or official business taxonomy.\n\n## Semantic confidence discipline\n\nWhen using declared-model evidence for semantic matching, separate retrieval from meaning. Classify the evidence role before assigning confidence:\n\n- `direct_field`: an observed field/documentation directly expresses the requested concept;\n- `bound_type`: an observed relationship binds the candidate type/dictionary to the relevant owner object;\n- `unbound_type`: the type/dictionary exists but no relevant observed binding is visible;\n- `partial_component`: evidence covers only one component of a compound business attribute;\n- `related_concept`: observed semantics are related but materially different;\n- `generic_container`: the structure can store arbitrary facts/text but no observed producer/type/value proves this particular business concept;\n- `no_candidate`: no supported candidate.\n\nA generic container's capacity to store X is not observed evidence that X is stored there. A related-but-different concept is not a positive match. An unbound dictionary/type must not be promoted to a unique strong client-attribute match solely because its name is similar. For compound attributes preserve `covered_components`, `uncovered_components` and `match_scope=partial|complete`; one matching component does not prove the whole attribute.",
+    "profile_id": "data-model/v1",
+    "profile_version": "2"
+  },
+  "schema_version": "llm_integration_profile/v1",
+  "scope": {
+    "revision_binding": "pinned",
+    "revision_id": "rev-88415df4d14df2ff3827b01c",
+    "system_id": "ucp-data-model-enriched"
+  },
+  "tools": [
+    {
+      "api_binding": {
+        "arguments": {
+          "object_id": {
+            "location": "path",
+            "name": "object_id",
+            "transform": "url_segment"
+          }
+        },
+        "binding_kind": "knowledge_api_http",
+        "expected_schema_versions": [
+          "data_model_object_context/v1"
+        ],
+        "fixed_query": {},
+        "method": "GET",
+        "operation_id": "get_data_model_object_context_api_knowledge_v1_systems__system_id__data_model_object_context__object_id__get",
+        "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/object-context/{object_id}",
+        "revision_binding": {
+          "location": "query",
+          "name": "revision_id",
+          "value_from": "scope.revision_id"
+        }
+      },
+      "arguments": {
+        "object_id": "string"
+      },
+      "description": "Return one exact object-centric technical data-model context for an external LLM: declared object/fields/relationships plus exact published logical-storage and model-storage semantics when those products exist in the pinned revision. Missing storage knowledge is explicit as not_available/not_observed. The tool never invents a physical SQL JOIN or upgrades an ambiguous mapping.",
+      "name": "get_data_model_object_context",
+      "required_capabilities": [
+        "common.code-declared-data-model"
+      ],
+      "warnings": [
+        "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+      ]
+    },
+    {
+      "api_binding": {
+        "arguments": {
+          "exclude_field_annotations": {
+            "location": "query",
+            "name": "exclude_field_annotations",
+            "transform": "csv"
+          },
+          "repo_id": {
+            "location": "query",
+            "name": "repo_id",
+            "transform": "identity"
+          },
+          "type_annotations": {
+            "location": "query",
+            "name": "type_annotations",
+            "transform": "csv"
+          }
+        },
+        "binding_kind": "knowledge_api_http",
+        "expected_schema_versions": [
+          "knowledge_api/v1"
+        ],
+        "fixed_query": {},
+        "method": "GET",
+        "operation_id": "summarize_declared_data_model_api_knowledge_v1_systems__system_id__data_model_declared_summary_get",
+        "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-summary",
+        "revision_binding": {
+          "location": "query",
+          "name": "revision_id",
+          "value_from": "scope.revision_id"
+        }
+      },
+      "arguments": {
+        "exclude_field_annotations": "array[string]",
+        "repo_id": "string|null",
+        "type_annotations": "array[string]"
+      },
+      "description": "Summarize the code-declared model in the pinned revision with raw/filtered counts, observed type/field annotation frequencies and explicit model gaps. Exact annotation filters are caller-selected evidence projections, not framework-owned business semantics.",
+      "name": "get_declared_data_model_summary",
+      "required_capabilities": [
+        "common.code-declared-data-model"
+      ],
+      "warnings": [
+        "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+      ]
+    },
+    {
+      "api_binding": {
+        "arguments": {
+          "object_id": {
+            "location": "path",
+            "name": "object_id",
+            "transform": "url_segment"
+          }
+        },
+        "binding_kind": "knowledge_api_http",
+        "expected_schema_versions": [
+          "knowledge_api/v1"
+        ],
+        "fixed_query": {},
+        "method": "GET",
+        "operation_id": "get_declared_data_object_api_knowledge_v1_systems__system_id__data_model_declared_objects__object_id__get",
+        "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-objects/{object_id}",
+        "revision_binding": {
+          "location": "query",
+          "name": "revision_id",
+          "value_from": "scope.revision_id"
+        }
+      },
+      "arguments": {
+        "object_id": "string"
+      },
+      "description": "Return one exact code-declared data object with effective inherited fields, declared relationships, inheritance, source references and provenance. Declared relationships do not by themselves prove storage JOIN semantics.",
+      "name": "get_declared_data_object",
+      "required_capabilities": [
+        "common.code-declared-data-model"
+      ],
+      "warnings": [
+        "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+      ]
+    },
+    {
+      "api_binding": {
+        "arguments": {
+          "artifact_id": {
+            "location": "path",
+            "name": "artifact_id",
+            "transform": "url_segment"
+          },
+          "item_kind": {
+            "location": "path",
+            "name": "item_kind",
+            "transform": "url_segment"
+          },
+          "local_id": {
+            "location": "path",
+            "name": "local_id",
+            "transform": "url_segment"
+          }
+        },
+        "binding_kind": "knowledge_api_http",
+        "expected_schema_versions": [
+          "knowledge_api/v1"
+        ],
+        "fixed_query": {},
+        "method": "GET",
+        "operation_id": "get_aisl_knowledge_item_api_knowledge_v1_systems__system_id__knowledge_items__artifact_id___item_kind___local_id__get",
+        "path_template": "/api/knowledge/v1/systems/{system_id}/knowledge-items/{artifact_id}/{item_kind}/{local_id}",
+        "revision_binding": {
+          "location": "query",
+          "name": "revision_id",
+          "value_from": "scope.revision_id"
+        }
+      },
+      "arguments": {
+        "artifact_id": "string",
+        "item_kind": "string",
+        "local_id": "string"
+      },
+      "description": "Read one exact published AISL knowledge item by artifact_id, item_kind and local_id in the pinned revision. Use this as deterministic verification after candidate discovery. The response preserves typed payload, available evidence/issues/correspondence and explicit available/not_available/unsupported facet states. This tool does not perform semantic search and unsupported/not_available never proves absence.",
+      "name": "get_knowledge_item",
+      "required_capabilities": [],
+      "warnings": [
+        "This is an exact AISL item read, not semantic discovery. A facet state of unsupported or not_available must not be interpreted as evidence that the underlying fact is absent."
+      ]
+    },
+    {
+      "api_binding": {
+        "arguments": {
+          "include_fields": {
+            "location": "query",
+            "name": "include_fields",
+            "transform": "bool"
+          },
+          "limit": {
+            "location": "query",
+            "name": "limit",
+            "transform": "bounded_int"
+          },
+          "offset": {
+            "location": "query",
+            "name": "offset",
+            "transform": "bounded_int"
+          },
+          "repo_id": {
+            "location": "query",
+            "name": "repo_id",
+            "transform": "identity"
+          },
+          "search": {
+            "location": "query",
+            "name": "search",
+            "transform": "identity"
+          },
+          "type_annotations": {
+            "location": "query",
+            "name": "type_annotations",
+            "transform": "csv"
+          }
+        },
+        "binding_kind": "knowledge_api_http",
+        "expected_schema_versions": [
+          "knowledge_api/v1"
+        ],
+        "fixed_query": {},
+        "method": "GET",
+        "operation_id": "list_declared_data_objects_api_knowledge_v1_systems__system_id__data_model_declared_objects_get",
+        "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-objects",
+        "revision_binding": {
+          "location": "query",
+          "name": "revision_id",
+          "value_from": "scope.revision_id"
+        }
+      },
+      "arguments": {
+        "include_fields": "boolean",
+        "limit": "integer",
+        "offset": "integer",
+        "repo_id": "string|null",
+        "search": "string|null",
+        "type_annotations": "array[string]"
+      },
+      "description": "List or search code-declared data objects in the pinned prepared revision, including observed annotations, documentation and inherited effective field occurrences. The search argument is lexical discovery: use one short token or short phrase per call; issue synonyms/translations as independent calls instead of concatenating them. Results are deterministically ranked and may include bounded match_evidence showing which observed type/field caused the hit plus binding_summary for observed incoming/outgoing declared relationships. retrieval_score is ranking metadata, never semantic confidence. Optional exact annotation filters select a caller-defined evidence projection; declared-code facts do not prove storage mappings or physical JOIN semantics.",
+      "name": "search_declared_data_objects",
+      "required_capabilities": [
+        "common.code-declared-data-model"
+      ],
+      "warnings": [
+        "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+      ]
+    }
+  ]
+}

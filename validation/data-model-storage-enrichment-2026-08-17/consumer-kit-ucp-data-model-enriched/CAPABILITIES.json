@@ -1,0 +1,169 @@
+{
+  "capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships",
+    "common.logical-storage-identity",
+    "common.logical-storage-mapping",
+    "common.logical-storage-relationship",
+    "common.model-storage-semantics",
+    "common.storage-identities",
+    "common.storage-reference-lineage"
+  ],
+  "knowledge_artifacts": [
+    {
+      "artifact_id": "java_type_structure_496036cecc061dd5f711dbac",
+      "capabilities": [],
+      "content_fingerprint": "496036cecc061dd5f711dbaca711d68254f7c2339496a32f440a79bfca83c4f0",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 2357,
+        "coverage_status": "partial",
+        "enum_constant_declaration_count": 52,
+        "field_declaration_count": 4872,
+        "inheritance_declaration_count": 604,
+        "java_files_discovered": 592,
+        "java_files_failed": 0,
+        "java_files_in_scope": 592,
+        "java_files_parsed": 592,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 828,
+        "type_reference_count": 2823,
+        "unresolved_type_reference_count": 7,
+        "unsupported_declaration_count": 17
+      },
+      "diagnostic_count": 24,
+      "model_kind": "java-type-structure-evidence",
+      "schema_version": "java-type-structure-evidence/v1",
+      "source_materialization_id": null
+    },
+    {
+      "artifact_id": "java_type_structure_70b50d86600aed4daeb40671",
+      "capabilities": [],
+      "content_fingerprint": "70b50d86600aed4daeb406719718ee7f6063e7cbdfad108e5bf7511b9b96ad4a",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 150,
+        "coverage_status": "complete",
+        "enum_constant_declaration_count": 25,
+        "field_declaration_count": 1173,
+        "inheritance_declaration_count": 380,
+        "java_files_discovered": 469,
+        "java_files_failed": 0,
+        "java_files_in_scope": 469,
+        "java_files_parsed": 469,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 498,
+        "type_reference_count": 1423,
+        "unresolved_type_reference_count": 7,
+        "unsupported_declaration_count": 0
+      },
+      "diagnostic_count": 7,
+      "model_kind": "java-type-structure-evidence",
+      "schema_version": "java-type-structure-evidence/v1",
+      "source_materialization_id": null
+    },
+    {
+      "artifact_id": "knowledge_artifact_be5c6f82c4c3f0360732",
+      "capabilities": [
+        "common.model-storage-semantics",
+        "common.storage-identities",
+        "common.storage-reference-lineage"
+      ],
+      "content_fingerprint": "a6b05c31aaf818f5948d84885980b5f9f589cc698b13aef809a52e2274c086fa",
+      "coverage": {},
+      "diagnostic_count": 0,
+      "model_kind": "model-storage-semantics",
+      "schema_version": "model-storage-semantics/v1",
+      "source_materialization_id": "model-storage-semantics"
+    },
+    {
+      "artifact_id": "knowledge_artifact_ce86ab58b7d571cc7d2f",
+      "capabilities": [
+        "common.logical-storage-identity",
+        "common.logical-storage-mapping",
+        "common.logical-storage-relationship"
+      ],
+      "content_fingerprint": "d1ddf6094eaf32c8d87406c4121c63ab88a82e1c759802574af91be284b6e2e0",
+      "coverage": {},
+      "diagnostic_count": 0,
+      "model_kind": "logical-storage-model-mapping",
+      "schema_version": "logical-storage-model-mapping/v1",
+      "source_materialization_id": "logical-storage-mapping"
+    },
+    {
+      "artifact_id": "knowledge_artifact_dd887435482f9340d7a1",
+      "capabilities": [
+        "common.code-declared-data-model",
+        "common.code-declared-entities",
+        "common.code-declared-fields",
+        "common.code-declared-inheritance",
+        "common.code-declared-relationships"
+      ],
+      "content_fingerprint": "3c5f3950013d4e5eb959d1de3a54fee1beab0e715b5ba0103be29f1c9d782b58",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "analysis_status": "partial",
+        "java_files_failed": 0,
+        "java_files_in_scope": 1061,
+        "java_files_parsed": 1061,
+        "java_files_with_parse_errors": 0,
+        "model_gap_count": 31,
+        "repository_count": 2,
+        "repository_status_counts": {
+          "complete": 1,
+          "partial": 1
+        },
+        "source_coverage_by_repository": {
+          "ucp-api": {
+            "ambiguous_type_reference_count": 0,
+            "annotation_declaration_count": 2357,
+            "coverage_status": "partial",
+            "enum_constant_declaration_count": 52,
+            "field_declaration_count": 4872,
+            "inheritance_declaration_count": 604,
+            "java_files_discovered": 592,
+            "java_files_failed": 0,
+            "java_files_in_scope": 592,
+            "java_files_parsed": 592,
+            "java_files_with_parse_errors": 0,
+            "type_declaration_count": 828,
+            "type_reference_count": 2823,
+            "unresolved_type_reference_count": 7,
+            "unsupported_declaration_count": 17
+          },
+          "ucp-tsa-v4": {
+            "ambiguous_type_reference_count": 0,
+            "annotation_declaration_count": 150,
+            "coverage_status": "complete",
+            "enum_constant_declaration_count": 25,
+            "field_declaration_count": 1173,
+            "inheritance_declaration_count": 380,
+            "java_files_discovered": 469,
+            "java_files_failed": 0,
+            "java_files_in_scope": 469,
+            "java_files_parsed": 469,
+            "java_files_with_parse_errors": 0,
+            "type_declaration_count": 498,
+            "type_reference_count": 1423,
+            "unresolved_type_reference_count": 7,
+            "unsupported_declaration_count": 0
+          }
+        },
+        "unresolved_type_reference_count": 14,
+        "unsupported_declaration_count": 17
+      },
+      "diagnostic_count": 0,
+      "model_kind": "code-declared-data-model",
+      "schema_version": "code-declared-data-model/v1",
+      "source_materialization_id": "code-declared-data-model"
+    }
+  ],
+  "scope": {
+    "revision_binding": "pinned",
+    "revision_id": "rev-88415df4d14df2ff3827b01c",
+    "system_id": "ucp-data-model-enriched"
+  }
+}

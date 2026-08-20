@@ -1,0 +1,14 @@
+{
+  "audit_fingerprint": "1cd7bd6addeb32f150d0d9ccd35d0841bf681deca79059cded5f82c849075720",
+  "audited_knowledge_ids": [
+    "code-declared-data-model"
+  ],
+  "blocked_gate_count": 0,
+  "markdown": "/mnt/data/knowledge-architecture-audit-v1-0.9.47.md",
+  "next_step": "execute_target_ready_knowledge_via_generic_materialization_runtime",
+  "output": "/mnt/data/knowledge-architecture-audit-v1-0.9.47.json",
+  "schema_version": "knowledge_architecture_audit/v1",
+  "target_status_counts": {
+    "target_ready": 1
+  }
+}

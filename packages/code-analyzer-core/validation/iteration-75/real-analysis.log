@@ -1,0 +1,7 @@
+analysis_status=partial
+content_fingerprint=61ca6816f5af4b19c65e0603b71ed786fe75b8437cf5fb703b3a344c84f48ec5
+resolved_by_complete_intermediate_contract=54
+ambiguous_unqualified_before=317
+ambiguous_unqualified_after=263
+source_field_resolution_before=0.97116
+source_field_resolution_after=0.976042

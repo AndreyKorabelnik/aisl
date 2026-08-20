@@ -1,0 +1,20 @@
+{
+  "decisions": [
+    {
+      "action": "built",
+      "artifact_reference": "/mnt/data/blockc_acceptance/cache/physical-model/f0f39a5e65134682fa5276f3a3eb5d37d03c4f50d2a3126b31ed5a7d7a6e50f9/payload/manifest.json",
+      "basis": "canonical_producer_execution",
+      "diagnostics": [],
+      "elapsed_seconds": 1.5017291899999918,
+      "invalidation_reason": "cache_miss",
+      "node_id": "physical-model:ucp-data-model",
+      "producer_id": "code-analyzer-core:analyze-physical-model",
+      "producer_kind": "physical-model",
+      "producer_version": "0.44.23a3",
+      "reuse_key": "f0f39a5e65134682fa5276f3a3eb5d37d03c4f50d2a3126b31ed5a7d7a6e50f9",
+      "saved_seconds": null,
+      "source_id": "ucp-data-model"
+    }
+  ],
+  "schema_version": "producer_reuse_decisions/v1"
+}

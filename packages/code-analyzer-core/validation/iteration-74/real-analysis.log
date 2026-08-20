@@ -1,0 +1,6 @@
+SQL analysis done. repo_id=datamart_profile_fl 
+profile=/mnt/data/work74/code-analyzer-core-0.43.2/analysis-profiles/sql-mart-li
+neage.yaml queries=475 marts=182 column_lineage=3367
+Static analysis output: /mnt/data/work74/sqlout
+Static analysis output: /mnt/data/work74/sqlout
+elapsed=18.20 maxrss_kb=740140

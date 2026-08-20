@@ -1,0 +1,1163 @@
+{
+  "baseline": {
+    "behavior": "all current bounded P0/P1 Repository Inventory analyzers execute",
+    "canonical": "Concept Detector Registry / Block D",
+    "core": "0.44.23a6",
+    "klc": "0.61.0a35",
+    "runner": "0.10.26"
+  },
+  "cases": {
+    "datamart": {
+      "baseline": {
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 27.0,
+            "confidence": "probable_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "probable"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": null,
+            "confidence": "not_detected",
+            "evidence_evaluation_status": "evaluated",
+            "status": "not_detected"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 9.312,
+        "job_id": "job-5d7704ca6e3e45939b5d33148c734f9c",
+        "published_revision": "rev-90e01fd54b53750e6a33c799",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 5,
+            "not_evaluated": 4,
+            "partial": 1,
+            "supported_with_gaps": 1
+          },
+          "coverage_gap_count": 21,
+          "detected_concept_count": 1,
+          "detected_concepts": [
+            "data_model"
+          ],
+          "discovery_candidate_count": 17,
+          "discovery_counts": {
+            "known_concept": 1,
+            "none": 12,
+            "structural_novelty": 10,
+            "unknown_primitive": 6
+          },
+          "extension_family_count": 12,
+          "inbound_interface_count": 0,
+          "outbound_interface_count": 0,
+          "root_file_count": 491,
+          "structural_family_count": 29,
+          "structural_member_count": 156,
+          "structural_novelty_candidate_count": 10,
+          "structured_shape_family_count": 14,
+          "technology_count": 0,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 6
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "interaction-boundary-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "observed_source_snapshot": {
+        "extensions": [
+          ".conf",
+          ".iml",
+          ".json",
+          ".properties",
+          ".sbt",
+          ".scala",
+          ".sql",
+          ".txt",
+          ".xlsx",
+          ".yaml",
+          ".yml"
+        ],
+        "file_count": 491,
+        "languages": [
+          "json",
+          "properties",
+          "scala",
+          "sql",
+          "yaml"
+        ],
+        "source_id": "datamart_profile_fl"
+      },
+      "selection_delta": {
+        "added_core_analyzers": [],
+        "baseline_count": 4,
+        "selective_count": 3,
+        "skipped_core_analyzers": [
+          "interaction-boundary-analyzer"
+        ]
+      },
+      "selective": {
+        "applicability_diagnostics": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "diagnostic_id": "evidence_applicability_unresolved_execution_preserved",
+            "effect": "Applicability is unresolved; Runner preserves execution eligibility instead of hard-skipping.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "not_formalized",
+                "observed_extensions": [
+                  ".conf",
+                  ".iml",
+                  ".json",
+                  ".properties",
+                  ".sbt",
+                  ".scala",
+                  ".sql",
+                  ".txt",
+                  ".xlsx",
+                  ".yaml",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "json",
+                  "properties",
+                  "scala",
+                  "sql",
+                  "yaml"
+                ],
+                "reason": "core_applicability_not_formalized",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [],
+                "source_id": "datamart_profile_fl",
+                "status": "unresolved"
+              }
+            ]
+          },
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "diagnostic_id": "evidence_observed_not_applicable_for_source",
+            "effect": "Automatic production is omitted only for source snapshots that are observed non-applicable; other sources remain eligible.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "formalized",
+                "failed_dimensions": [
+                  "required_languages_any_of"
+                ],
+                "observed_extensions": [
+                  ".conf",
+                  ".iml",
+                  ".json",
+                  ".properties",
+                  ".sbt",
+                  ".scala",
+                  ".sql",
+                  ".txt",
+                  ".xlsx",
+                  ".yaml",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "json",
+                  "properties",
+                  "scala",
+                  "sql",
+                  "yaml"
+                ],
+                "reason": "observed_source_landscape_does_not_match_core_predicate",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [
+                  "java"
+                ],
+                "source_id": "datamart_profile_fl",
+                "status": "not_applicable"
+              }
+            ]
+          }
+        ],
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 27.0,
+            "confidence": "probable_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "probable"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 8.156,
+        "job_id": "job-12ef2df94bdf4edcb38709fae80104eb",
+        "published_revision": "rev-b502620788d3320e99528e5e",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 3,
+            "not_evaluated": 5,
+            "partial": 1,
+            "supported_with_gaps": 1
+          },
+          "coverage_gap_count": 22,
+          "detected_concept_count": 1,
+          "detected_concepts": [
+            "data_model"
+          ],
+          "discovery_candidate_count": 17,
+          "discovery_counts": {
+            "known_concept": 1,
+            "none": 11,
+            "structural_novelty": 10,
+            "unknown_primitive": 6
+          },
+          "extension_family_count": 12,
+          "inbound_interface_count": 0,
+          "outbound_interface_count": 0,
+          "root_file_count": 491,
+          "structural_family_count": 28,
+          "structural_member_count": 156,
+          "structural_novelty_candidate_count": 10,
+          "structured_shape_family_count": 14,
+          "technology_count": 0,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 6
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "semantic_structural_invariants": {
+        "composition_equal": true,
+        "detected_concepts_equal": true,
+        "evaluation_phase_equal": true,
+        "extension_family_count_equal": true,
+        "positive_concepts_equal": true,
+        "root_file_count_equal": true,
+        "structural_member_count_equal": true,
+        "structural_novelty_candidate_count_equal": true,
+        "structured_shape_family_count_equal": true,
+        "unclassified_concept_candidate_count_equal": true,
+        "unknown_primitive_count_equal": true
+      },
+      "skipped_baseline_observation": {
+        "artifact_kind": "interaction-boundary-evidence",
+        "boundary_count": 0,
+        "coverage_status": "complete",
+        "inbound_boundary_count": 0,
+        "outbound_boundary_count": 0
+      },
+      "source_zip": {
+        "name": "datamart_profile_fl(4).zip",
+        "sha256": "d94b4bd47c8972a561a9120b6bf6b86e13557b21d5ca32dd6d656b44913bf66c"
+      }
+    },
+    "gateway": {
+      "baseline": {
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 25.0,
+            "confidence": "probable_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "probable"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": 65.85,
+            "confidence": "strongly_supported_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "strongly_supported"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 10.512,
+        "job_id": "job-462ebbd8af384dd493af79943a5f480a",
+        "published_revision": "rev-287ac00e05ee0276163713cf",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 4,
+            "not_evaluated": 4,
+            "partial": 1,
+            "supported_with_gaps": 2
+          },
+          "coverage_gap_count": 15,
+          "detected_concept_count": 2,
+          "detected_concepts": [
+            "data_model",
+            "system_interaction"
+          ],
+          "discovery_candidate_count": 11,
+          "discovery_counts": {
+            "known_concept": 2,
+            "none": 9,
+            "structural_novelty": 7,
+            "unknown_primitive": 3
+          },
+          "extension_family_count": 9,
+          "inbound_interface_count": 2,
+          "outbound_interface_count": 0,
+          "root_file_count": 151,
+          "structural_family_count": 21,
+          "structural_member_count": 12,
+          "structural_novelty_candidate_count": 7,
+          "structured_shape_family_count": 9,
+          "technology_count": 3,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 3
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "interaction-boundary-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "observed_source_snapshot": {
+        "extensions": [
+          ".java",
+          ".json",
+          ".md",
+          ".property",
+          ".sh",
+          ".xml",
+          ".yaml",
+          ".yml"
+        ],
+        "file_count": 151,
+        "languages": [
+          "java",
+          "json",
+          "xml",
+          "yaml"
+        ],
+        "source_id": "gateway-sberid-userinfo-by-ucpid"
+      },
+      "selection_delta": {
+        "added_core_analyzers": [],
+        "baseline_count": 4,
+        "selective_count": 4,
+        "skipped_core_analyzers": []
+      },
+      "selective": {
+        "applicability_diagnostics": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "diagnostic_id": "evidence_applicability_unresolved_execution_preserved",
+            "effect": "Applicability is unresolved; Runner preserves execution eligibility instead of hard-skipping.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "not_formalized",
+                "observed_extensions": [
+                  ".java",
+                  ".json",
+                  ".md",
+                  ".property",
+                  ".sh",
+                  ".xml",
+                  ".yaml",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "java",
+                  "json",
+                  "xml",
+                  "yaml"
+                ],
+                "reason": "core_applicability_not_formalized",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [],
+                "source_id": "gateway-sberid-userinfo-by-ucpid",
+                "status": "unresolved"
+              }
+            ]
+          }
+        ],
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 25.0,
+            "confidence": "probable_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "probable"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": 65.85,
+            "confidence": "strongly_supported_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "strongly_supported"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 11.115,
+        "job_id": "job-63b87b31705442adb8a146b397f0ce27",
+        "published_revision": "rev-08085462cece47940c2aac24",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 4,
+            "not_evaluated": 4,
+            "partial": 1,
+            "supported_with_gaps": 2
+          },
+          "coverage_gap_count": 15,
+          "detected_concept_count": 2,
+          "detected_concepts": [
+            "data_model",
+            "system_interaction"
+          ],
+          "discovery_candidate_count": 11,
+          "discovery_counts": {
+            "known_concept": 2,
+            "none": 9,
+            "structural_novelty": 7,
+            "unknown_primitive": 3
+          },
+          "extension_family_count": 9,
+          "inbound_interface_count": 2,
+          "outbound_interface_count": 0,
+          "root_file_count": 151,
+          "structural_family_count": 21,
+          "structural_member_count": 12,
+          "structural_novelty_candidate_count": 7,
+          "structured_shape_family_count": 9,
+          "technology_count": 3,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 3
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "interaction-boundary-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "semantic_structural_invariants": {
+        "composition_equal": true,
+        "detected_concepts_equal": true,
+        "evaluation_phase_equal": true,
+        "extension_family_count_equal": true,
+        "positive_concepts_equal": true,
+        "root_file_count_equal": true,
+        "structural_member_count_equal": true,
+        "structural_novelty_candidate_count_equal": true,
+        "structured_shape_family_count_equal": true,
+        "unclassified_concept_candidate_count_equal": true,
+        "unknown_primitive_count_equal": true
+      },
+      "skipped_baseline_observation": null,
+      "source_zip": {
+        "name": "gateway-sberid-userinfo-by-ucpid(1).zip",
+        "sha256": "e215b47c8d6eb38f73736cc370e7154ace2ce88bafc3073f02a176cd997f02d0"
+      }
+    },
+    "insurance": {
+      "baseline": {
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 20.0,
+            "confidence": "probable_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "probable"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": null,
+            "confidence": "not_detected",
+            "evidence_evaluation_status": "evaluated",
+            "status": "not_detected"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 18.381,
+        "job_id": "job-e232b6965932452d87e9017f784af881",
+        "published_revision": "rev-7acc91522c70ded79ca99bd4",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 5,
+            "not_evaluated": 4,
+            "partial": 1,
+            "supported_with_gaps": 1
+          },
+          "coverage_gap_count": 11,
+          "detected_concept_count": 1,
+          "detected_concepts": [
+            "data_model"
+          ],
+          "discovery_candidate_count": 7,
+          "discovery_counts": {
+            "known_concept": 1,
+            "none": 4,
+            "structural_novelty": 6
+          },
+          "extension_family_count": 3,
+          "inbound_interface_count": 0,
+          "outbound_interface_count": 0,
+          "root_file_count": 1596,
+          "structural_family_count": 11,
+          "structural_member_count": 255,
+          "structural_novelty_candidate_count": 6,
+          "structured_shape_family_count": 5,
+          "technology_count": 0,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 0
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "interaction-boundary-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "observed_source_snapshot": {
+        "extensions": [
+          ".json",
+          ".sql",
+          ".yml"
+        ],
+        "file_count": 1596,
+        "languages": [
+          "json",
+          "sql",
+          "yaml"
+        ],
+        "source_id": "custom_b2c_insurance"
+      },
+      "selection_delta": {
+        "added_core_analyzers": [],
+        "baseline_count": 4,
+        "selective_count": 3,
+        "skipped_core_analyzers": [
+          "interaction-boundary-analyzer"
+        ]
+      },
+      "selective": {
+        "applicability_diagnostics": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "diagnostic_id": "evidence_applicability_unresolved_execution_preserved",
+            "effect": "Applicability is unresolved; Runner preserves execution eligibility instead of hard-skipping.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "not_formalized",
+                "observed_extensions": [
+                  ".json",
+                  ".sql",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "json",
+                  "sql",
+                  "yaml"
+                ],
+                "reason": "core_applicability_not_formalized",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [],
+                "source_id": "custom_b2c_insurance",
+                "status": "unresolved"
+              }
+            ]
+          },
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "diagnostic_id": "evidence_observed_not_applicable_for_source",
+            "effect": "Automatic production is omitted only for source snapshots that are observed non-applicable; other sources remain eligible.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "formalized",
+                "failed_dimensions": [
+                  "required_languages_any_of"
+                ],
+                "observed_extensions": [
+                  ".json",
+                  ".sql",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "json",
+                  "sql",
+                  "yaml"
+                ],
+                "reason": "observed_source_landscape_does_not_match_core_predicate",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [
+                  "java"
+                ],
+                "source_id": "custom_b2c_insurance",
+                "status": "not_applicable"
+              }
+            ]
+          }
+        ],
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 20.0,
+            "confidence": "probable_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "probable"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 12.472,
+        "job_id": "job-065c9fb5caea472789e2c711c6c73e8c",
+        "published_revision": "rev-af433b0c6d91eb46b76e8109",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 3,
+            "not_evaluated": 5,
+            "partial": 1,
+            "supported_with_gaps": 1
+          },
+          "coverage_gap_count": 12,
+          "detected_concept_count": 1,
+          "detected_concepts": [
+            "data_model"
+          ],
+          "discovery_candidate_count": 7,
+          "discovery_counts": {
+            "known_concept": 1,
+            "none": 3,
+            "structural_novelty": 6
+          },
+          "extension_family_count": 3,
+          "inbound_interface_count": 0,
+          "outbound_interface_count": 0,
+          "root_file_count": 1596,
+          "structural_family_count": 10,
+          "structural_member_count": 255,
+          "structural_novelty_candidate_count": 6,
+          "structured_shape_family_count": 5,
+          "technology_count": 0,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 0
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "semantic_structural_invariants": {
+        "composition_equal": true,
+        "detected_concepts_equal": true,
+        "evaluation_phase_equal": true,
+        "extension_family_count_equal": true,
+        "positive_concepts_equal": true,
+        "root_file_count_equal": true,
+        "structural_member_count_equal": true,
+        "structural_novelty_candidate_count_equal": true,
+        "structured_shape_family_count_equal": true,
+        "unclassified_concept_candidate_count_equal": true,
+        "unknown_primitive_count_equal": true
+      },
+      "skipped_baseline_observation": {
+        "artifact_kind": "interaction-boundary-evidence",
+        "boundary_count": 0,
+        "coverage_status": "complete",
+        "inbound_boundary_count": 0,
+        "outbound_boundary_count": 0
+      },
+      "source_zip": {
+        "name": "custom_b2c_insurance(1).zip",
+        "sha256": "c75703ada146293c1153978f625c5e16bf505b5dbd6ecb00a974e8432de357ec"
+      }
+    },
+    "ucp_data_model": {
+      "baseline": {
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 80.0,
+            "confidence": "strongly_supported_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "strongly_supported"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": null,
+            "confidence": "not_detected",
+            "evidence_evaluation_status": "evaluated",
+            "status": "not_detected"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 15.706,
+        "job_id": "job-5920974209f84b6a92a0e374a33528fd",
+        "published_revision": "rev-7fca9985956005fd7f387e74",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 6,
+            "not_evaluated": 4,
+            "supported_with_gaps": 1
+          },
+          "coverage_gap_count": 8,
+          "detected_concept_count": 1,
+          "detected_concepts": [
+            "data_model"
+          ],
+          "discovery_candidate_count": 5,
+          "discovery_counts": {
+            "known_concept": 1,
+            "none": 2,
+            "structural_novelty": 2,
+            "unknown_primitive": 2
+          },
+          "extension_family_count": 4,
+          "inbound_interface_count": 0,
+          "outbound_interface_count": 0,
+          "root_file_count": 630,
+          "structural_family_count": 7,
+          "structural_member_count": 0,
+          "structural_novelty_candidate_count": 2,
+          "structured_shape_family_count": 0,
+          "technology_count": 1,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 2
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "interaction-boundary-analyzer",
+          "repository-structure-analyzer",
+          "structured-file-shape-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "observed_source_snapshot": {
+        "extensions": [
+          ".java",
+          ".md",
+          ".xml"
+        ],
+        "file_count": 630,
+        "languages": [
+          "java",
+          "xml"
+        ],
+        "source_id": "ucp-api"
+      },
+      "selection_delta": {
+        "added_core_analyzers": [],
+        "baseline_count": 4,
+        "selective_count": 3,
+        "skipped_core_analyzers": [
+          "structured-file-shape-analyzer"
+        ]
+      },
+      "selective": {
+        "applicability_diagnostics": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "diagnostic_id": "evidence_applicability_unresolved_execution_preserved",
+            "effect": "Applicability is unresolved; Runner preserves execution eligibility instead of hard-skipping.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "not_formalized",
+                "observed_extensions": [
+                  ".java",
+                  ".md",
+                  ".xml"
+                ],
+                "observed_languages": [
+                  "java",
+                  "xml"
+                ],
+                "reason": "core_applicability_not_formalized",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [],
+                "source_id": "ucp-api",
+                "status": "unresolved"
+              }
+            ]
+          },
+          {
+            "artifact_kind": "structured-file-shape-evidence",
+            "diagnostic_id": "evidence_observed_not_applicable_for_source",
+            "effect": "Automatic production is omitted only for source snapshots that are observed non-applicable; other sources remain eligible.",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "formalized",
+                "failed_dimensions": [
+                  "required_extensions_any_of"
+                ],
+                "observed_extensions": [
+                  ".java",
+                  ".md",
+                  ".xml"
+                ],
+                "observed_languages": [
+                  "java",
+                  "xml"
+                ],
+                "reason": "observed_source_landscape_does_not_match_core_predicate",
+                "required_extensions_any_of": [
+                  ".json",
+                  ".yaml",
+                  ".yml"
+                ],
+                "required_languages_any_of": [],
+                "source_id": "ucp-api",
+                "status": "not_applicable"
+              }
+            ]
+          }
+        ],
+        "concepts": [
+          {
+            "concept_id": "data_model",
+            "concept_score": 80.0,
+            "confidence": "strongly_supported_inference",
+            "evidence_evaluation_status": "evaluated",
+            "status": "strongly_supported"
+          },
+          {
+            "concept_id": "data_flow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "system_interaction",
+            "concept_score": null,
+            "confidence": "not_detected",
+            "evidence_evaluation_status": "evaluated",
+            "status": "not_detected"
+          },
+          {
+            "concept_id": "workflow",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "persistence",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          },
+          {
+            "concept_id": "reference_data",
+            "concept_score": null,
+            "confidence": "not_evaluated",
+            "evidence_evaluation_status": "not_evaluated",
+            "status": "not_evaluated"
+          }
+        ],
+        "duration_seconds": 15.492,
+        "job_id": "job-b5b1fbf460a645369b8a40857c8281d6",
+        "published_revision": "rev-fa9eb07f351f0b6e2ac79aaa",
+        "repository_inventory_summary": {
+          "completeness_counts": {
+            "complete": 5,
+            "not_evaluated": 4,
+            "supported_with_gaps": 1
+          },
+          "coverage_gap_count": 8,
+          "detected_concept_count": 1,
+          "detected_concepts": [
+            "data_model"
+          ],
+          "discovery_candidate_count": 5,
+          "discovery_counts": {
+            "known_concept": 1,
+            "none": 1,
+            "structural_novelty": 2,
+            "unknown_primitive": 2
+          },
+          "extension_family_count": 4,
+          "inbound_interface_count": 0,
+          "outbound_interface_count": 0,
+          "root_file_count": 630,
+          "structural_family_count": 6,
+          "structural_member_count": 0,
+          "structural_novelty_candidate_count": 2,
+          "structured_shape_family_count": 0,
+          "technology_count": 1,
+          "unclassified_concept_candidate_count": 0,
+          "unknown_primitive_count": 2
+        },
+        "selected_core_analyzers": [
+          "data-model-candidate-analyzer",
+          "interaction-boundary-analyzer",
+          "repository-structure-analyzer"
+        ],
+        "status": "succeeded"
+      },
+      "semantic_structural_invariants": {
+        "composition_equal": true,
+        "detected_concepts_equal": true,
+        "evaluation_phase_equal": true,
+        "extension_family_count_equal": true,
+        "positive_concepts_equal": true,
+        "root_file_count_equal": true,
+        "structural_member_count_equal": true,
+        "structural_novelty_candidate_count_equal": true,
+        "structured_shape_family_count_equal": true,
+        "unclassified_concept_candidate_count_equal": true,
+        "unknown_primitive_count_equal": true
+      },
+      "skipped_baseline_observation": {
+        "artifact_kind": "structured-file-shape-evidence",
+        "candidate_file_count": 0,
+        "coverage_status": "complete",
+        "member_count": 0,
+        "members_count": 0,
+        "parsed_file_count": 0
+      },
+      "source_zip": {
+        "name": "UCPDataModel(16).zip",
+        "sha256": "a05c27f61e0838f270de9a7ba61049de68d3a8c03cf731df5e784c6d85cd4519"
+      }
+    }
+  },
+  "date": "2026-08-16",
+  "global_acceptance": {
+    "all_composition_preserved": true,
+    "all_core_semantic_structural_invariants_pass": true,
+    "all_jobs_succeeded": true,
+    "all_positive_concepts_preserved": true,
+    "case_count": 4,
+    "datamart_skips_interaction_only": true,
+    "gateway_no_skip_when_applicable": true,
+    "insurance_skips_interaction_only": true,
+    "no_selective_added_analyzers": true,
+    "ucp_skips_structured_file_only": true
+  },
+  "performance_note": "Observed durations are single-run provenance only and are not treated as a benchmark.",
+  "schema_version": "preflight_selective_execution_multicase_acceptance/v1",
+  "selective": {
+    "behavior": "Core-owned applicability may omit only proven non-applicable optional automatic evidence",
+    "canonical": "Preflight applicability / Block E",
+    "core": "0.44.23a7",
+    "klc": "0.61.0a35",
+    "runner": "0.10.27"
+  },
+  "verdict": "PASS"
+}

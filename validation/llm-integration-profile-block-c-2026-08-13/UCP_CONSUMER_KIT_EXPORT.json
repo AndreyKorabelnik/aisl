@@ -1,0 +1,16 @@
+{
+  "files": [
+    "API_USAGE.md",
+    "CAPABILITIES.json",
+    "RETRIEVAL_GUIDE.md",
+    "SYSTEM_PROMPT.md",
+    "TOOL_CATALOG.json",
+    "llm_integration_profile.json"
+  ],
+  "fingerprint": "0ecb7e26ce197410243d5827c645b2ae5f9e563d05cb497332c0534cc954a246",
+  "output": "/mnt/data/llm-integration-block-c-acceptance/ucp-sql-pdm-kit",
+  "profile_id": "attribute-addition-plan/v1",
+  "revision_id": "rev-real-ucp-sql-pdm",
+  "status": "exported",
+  "system_id": "ucp-sql-pdm"
+}

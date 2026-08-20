@@ -1,0 +1,1654 @@
+{
+  "architecture_goal": {
+    "core": "Core owns a read-only technical Foundation and independent producers of source-grounded evidence.",
+    "knowledge_layer": "KLC composes persisted evidence into knowledge models, cross-fact views, coverage, gaps and capabilities.",
+    "public_core_independence": "Public Core analyzers must not depend on outputs of other public analyzers; source-understanding phases may remain internal to one analyzer.",
+    "runner": "Runner orchestrates processes and lifecycle but does not define Core internals or knowledge semantics."
+  },
+  "decision_policy": {
+    "base_evidence": "keep in Core; Foundation only when it is a reusable technical source index",
+    "derived_evidence": "keep in Core as independent source-grounded evidence analyzer; remove public analyzer dependencies later",
+    "knowledge_materialization_candidate": "move or reimplement in KLC",
+    "technical_packaging": "keep as technical output packaging, not knowledge semantics"
+  },
+  "execution_effect": "none",
+  "known_limits": [
+    "This map records target ownership decisions but does not alter Core or KLC execution.",
+    "Evidence sufficiency for each migration candidate must be proven against real outputs before removal from Core.",
+    "Task/Suite orchestration is absent from the installed runtime; parked topology is outside this map.",
+    "Performance optimization and duplicate stage elimination are intentionally deferred."
+  ],
+  "map_fingerprint": "1c5ee832716a9cf81ef908329e18d2accbe68aea0a2d551c9455d37ae23a9b7a",
+  "map_purpose": "deterministic_read_only_target_responsibility_map_for_core_and_knowledge_layer",
+  "migration_sequence": [
+    {
+      "priority": 1,
+      "readiness": "partial_existing_klc_consumer",
+      "stage_id": "code_conceptual_model_build",
+      "target_materialization": "knowledge-layer common/workspace data-model materialization"
+    }
+  ],
+  "result_responsibilities": [
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "move_or_reimplement_in_klc",
+      "migration_priority": 1,
+      "producer_stage_id": "code_conceptual_model_build",
+      "result_id": "code_conceptual_model_artifact",
+      "target_owner": "knowledge-layer-core",
+      "target_role": "knowledge_materialization"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_as_packaging",
+      "migration_priority": null,
+      "producer_stage_id": "compact_package",
+      "result_id": "compact_package",
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "config_scan",
+      "result_id": "configuration_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_as_packaging",
+      "migration_priority": null,
+      "producer_stage_id": "core_output",
+      "result_id": "core_repository_json",
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_data_model_candidate_scan",
+      "result_id": "data_model_candidate_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_data_model_candidate_scan",
+      "result_id": "data_model_candidate_profile",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_data_model_lineage_build",
+      "result_id": "data_model_lineage_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "db_schema_scan",
+      "result_id": "db_schema_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "openapi_scan",
+      "result_id": "declared_interfaces",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "openapi_scan",
+      "result_id": "declared_schemas",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "declared_value_scan",
+      "result_id": "declared_value_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "declared_value_summary_scan",
+      "result_id": "declared_value_summary_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "gradle_dependency_scan",
+      "result_id": "dependency_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "maven_dependency_scan",
+      "result_id": "dependency_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "scan_files",
+      "result_id": "detected_stack",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_system_interaction_enrichment",
+      "result_id": "enriched_interfaces",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_as_packaging",
+      "migration_priority": null,
+      "producer_stage_id": "evidence_coverage_build",
+      "result_id": "evidence_coverage_artifact",
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_source_observation_build",
+      "result_id": "framework_observations_optional",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "gradle_dependency_scan",
+      "result_id": "gradle_module_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_system_interaction_enrichment",
+      "result_id": "interaction_boundary_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_structural_scan",
+      "result_id": "interfaces",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_data_flow_build",
+      "result_id": "java_data_flow_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_field_flow_build",
+      "result_id": "java_field_flow_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_structural_scan",
+      "result_id": "java_structural_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_traceability_build",
+      "result_id": "java_traceability_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_structural_scan",
+      "result_id": "mapper_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_source_observation_build",
+      "result_id": "module_resolution_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_as_packaging",
+      "migration_priority": null,
+      "producer_stage_id": "normalize_facts",
+      "result_id": "normalized_fact_store",
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "openapi_scan",
+      "result_id": "openapi_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "data_evidence_yaml_parse",
+      "result_id": "parsed_spec_evidence",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_persistence_lineage_build",
+      "result_id": "persistence_lineage_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "db_schema_scan",
+      "result_id": "physical_schema_artifacts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "reference_data_fact_base",
+      "result_id": "reference_data_fact_base_artifact",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_structural_scan",
+      "result_id": "relations",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "scan_files",
+      "result_id": "repository_file_inventory",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_structural_scan",
+      "result_id": "schemas",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_source_observation_build",
+      "result_id": "source_observation_fact_store",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "java_source_observation_build",
+      "result_id": "source_observation_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "spec_artifact_discovery",
+      "result_id": "spec_artifact_index",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "sql_scan",
+      "result_id": "sql_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "sql_scan",
+      "result_id": "sql_parse_summary",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "sql_scan",
+      "result_id": "sql_parse_warnings",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_foundation",
+      "migration_priority": null,
+      "producer_stage_id": "db_schema_scan",
+      "result_id": "sql_table_observations",
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_as_packaging",
+      "migration_priority": null,
+      "producer_stage_id": "spec_to_standard_analysis_output",
+      "result_id": "standard_analysis_output",
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "system_description_enrichment",
+      "result_id": "system_description_view_facts",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_table_observation_build",
+      "result_id": "table_key_observations",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "current_owner": "code-analyzer-core",
+      "decision": "keep_in_core_evidence",
+      "migration_priority": null,
+      "producer_stage_id": "java_table_observation_build",
+      "result_id": "table_relationship_observations",
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    }
+  ],
+  "schema_version": "core_klc_responsibility_map/v1",
+  "source": {
+    "path": "/mnt/data/auto_analysis_work/modules/static-analysis-runner/validation/runtime-contracts-v0.10.4/analysis-mechanism-catalog.json",
+    "sha256": "9433d6950b08141aa4890db37f36fde0c7f6af2a49cf0c38456d60937c3ec697"
+  },
+  "source_mechanism_catalog_fingerprint": "e83f766748cb79dd207160acd61c41a0c5e3f41bc2721dc0a0b0af6838cc8f46",
+  "source_mechanism_catalog_schema_version": "analysis_mechanism_catalog/v4",
+  "stage_responsibilities": [
+    {
+      "affected_profiles": [
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "knowledge_materialization_candidate",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "knowledge_materialization_inside_core",
+      "decision": "move_or_reimplement_in_klc",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "current_analysis_result",
+          "db_schema"
+        ],
+        "disposition": "replace_current_analysis_result_with_persisted_evidence_inputs",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {
+        "evidence_gaps": [
+          "KLC currently requires compact/code_conceptual_model artifacts from Core for repository data-model materialization.",
+          "The raw evidence families used by the current Core materializer must be enumerated and proven sufficient before removing that artifact.",
+          "Result parity must be checked on real repositories before the Core materializer is deleted."
+        ],
+        "migration_priority": 1,
+        "migration_readiness": "partial_existing_klc_consumer",
+        "target_materialization": "knowledge-layer common/workspace data-model materialization",
+        "what_moves_to_klc": [
+          "conceptual entities and fields projection",
+          "effective associations and inheritance composition",
+          "logical-to-physical model composition"
+        ],
+        "what_stays_in_core": [
+          "java structural evidence",
+          "persistence mapping evidence",
+          "mapping and relationship observations",
+          "physical schema evidence",
+          "source provenance and gaps"
+        ]
+      },
+      "produces": [
+        "code_conceptual_model_artifact"
+      ],
+      "rationale": "Assembles a canonical conceptual/physical model from many previously extracted facts and schema artifacts.",
+      "recommended_boundary": "move_or_reimplement_in_klc",
+      "requires": [
+        "current_analysis_result",
+        "db_schema"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "code_conceptual_model_build",
+      "state_dependency": "hidden_full_analysis_result",
+      "target_foundation_member": false,
+      "target_owner": "knowledge-layer-core",
+      "target_role": "knowledge_materialization"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model",
+        "spec-evidence-workspace"
+      ],
+      "current_category": "technical_packaging",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "technical_packaging",
+      "decision": "keep_as_packaging",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "current_analysis_result"
+        ],
+        "disposition": "not_a_public_evidence_analyzer",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "compact_package"
+      ],
+      "rationale": "Builds compact navigation and machine-first package files from already materialized facts.",
+      "recommended_boundary": "keep_as_packaging",
+      "requires": [
+        "current_analysis_result"
+      ],
+      "runtime_bindings": {
+        "declarative_label_fixed_runtime": 1,
+        "runtime_enforced": 6
+      },
+      "stage_id": "compact_package",
+      "state_dependency": "full_analysis_result_serialization",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "configuration_facts"
+      ],
+      "rationale": "Extracts source-declared configuration values without business interpretation.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 5
+      },
+      "stage_id": "config_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "technical_packaging",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "technical_packaging",
+      "decision": "keep_as_packaging",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "analysis_result_metadata"
+        ],
+        "disposition": "not_a_public_evidence_analyzer",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "core_repository_json"
+      ],
+      "rationale": "Writes the slim repository metadata part of the analysis-output contract.",
+      "recommended_boundary": "keep_as_packaging",
+      "requires": [
+        "analysis_result_metadata"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 6
+      },
+      "stage_id": "core_output",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "affected_profiles": [
+        "spec-evidence-workspace"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "spec_artifact_index"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "parsed_spec_evidence"
+      ],
+      "rationale": "Parses user-supplied data-evidence.yaml as declared evidence input.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "spec_artifact_index"
+      ],
+      "runtime_bindings": {
+        "declarative_label_fixed_runtime": 1
+      },
+      "stage_id": "data_evidence_yaml_parse",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "db_schema_facts",
+        "physical_schema_artifacts",
+        "sql_table_observations"
+      ],
+      "rationale": "Extracts confirmed physical schema declarations from schema-bearing sources.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "db_schema_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "declared_value_facts"
+      ],
+      "rationale": "Extracts explicitly declared value sets without semantic reference-data classification.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "declared_value_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "declared_value_facts_or_repository_files"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "declared_value_summary_facts"
+      ],
+      "rationale": "Builds bounded summaries of observed declared value sets without semantic classification.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "declared_value_facts_or_repository_files"
+      ],
+      "runtime_bindings": {},
+      "stage_id": "declared_value_summary_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "spec-evidence-workspace"
+      ],
+      "current_category": "technical_packaging",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "technical_packaging",
+      "decision": "keep_as_packaging",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "analysis_counts",
+          "source_metadata"
+        ],
+        "disposition": "not_a_public_evidence_analyzer",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "evidence_coverage_artifact"
+      ],
+      "rationale": "Writes coverage, limitations and source-type metadata for the output contract.",
+      "recommended_boundary": "keep_as_packaging",
+      "requires": [
+        "analysis_counts",
+        "source_metadata"
+      ],
+      "runtime_bindings": {
+        "declarative_label_fixed_runtime": 1
+      },
+      "stage_id": "evidence_coverage_build",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "affected_profiles": [
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "dependency_facts",
+        "gradle_module_facts"
+      ],
+      "rationale": "Extracts source-declared Gradle modules and dependencies.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "gradle_dependency_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "java_data_flow_facts"
+      ],
+      "rationale": "Builds deterministic source-to-sink flow evidence from Java syntax.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "java_data_flow_build",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "repository-data-model-discovery"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory",
+          "java_structural_signals"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "data_model_candidate_facts",
+        "data_model_candidate_profile"
+      ],
+      "rationale": "Ranks observed repository signals into a data-model analysis candidate profile; it does not build the model.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory",
+        "java_structural_signals"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 1
+      },
+      "stage_id": "java_data_model_candidate_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory",
+          "persistence_lineage_facts_optional"
+        ],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "data_model_lineage_facts"
+      ],
+      "rationale": "Extracts attribute occurrences, mappings, derivations and lineage gaps from code; it may reuse persistence facts.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory",
+        "persistence_lineage_facts_optional"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "java_data_model_lineage_build",
+      "state_dependency": "explicit_upstream_stage_output_plus_repository_metadata",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory",
+          "interfaces",
+          "schemas"
+        ],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "java_field_flow_facts"
+      ],
+      "rationale": "Builds local and interprocedural field-flow observations.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory",
+        "interfaces",
+        "schemas"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "java_field_flow_build",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "persistence_lineage_facts"
+      ],
+      "rationale": "Resolves neutral source-to-storage and storage-access lineage from code evidence.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "java_persistence_lineage_build",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory",
+          "configuration_facts_optional",
+          "gradle_module_facts_optional"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "source_observation_facts",
+        "source_observation_fact_store",
+        "module_resolution_facts",
+        "framework_observations_optional"
+      ],
+      "rationale": "Publishes universal source observations and a full observation store; optional framework interpretation is still evidence-oriented.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory",
+        "configuration_facts_optional",
+        "gradle_module_facts_optional"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "java_source_observation_build",
+      "state_dependency": "explicit_source_inputs_plus_profile_options",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "java_structural_facts",
+        "schemas",
+        "interfaces",
+        "relations",
+        "mapper_facts"
+      ],
+      "rationale": "Extracts Tree-sitter Java structural facts, schemas, interfaces and direct relations.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 6
+      },
+      "stage_id": "java_structural_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "configuration_facts",
+          "schemas",
+          "interfaces",
+          "repository_file_inventory"
+        ],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "extract_from_foundation_to_independent_evidence_analyzer",
+      "migration": {},
+      "produces": [
+        "interaction_boundary_facts",
+        "enriched_interfaces"
+      ],
+      "rationale": "Composes local HTTP/configuration boundary evidence from direct configuration and interface observations.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "configuration_facts",
+        "schemas",
+        "interfaces",
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "java_system_interaction_enrichment",
+      "state_dependency": "explicit_current_result_sections",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory",
+          "db_schema",
+          "selected_existing_facts"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "table_relationship_observations",
+        "table_key_observations"
+      ],
+      "rationale": "Produces observed JPA/jOOQ relationship and key-usage facts without declaring physical keys or business cardinality.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory",
+        "db_schema",
+        "selected_existing_facts"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "java_table_observation_build",
+      "state_dependency": "hidden_full_analysis_result_facts",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory",
+          "java_data_flow_facts"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "java_traceability_facts"
+      ],
+      "rationale": "Builds ingress/call/persistence trace evidence from source files and data-flow facts.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory",
+        "java_data_flow_facts"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "java_traceability_build",
+      "state_dependency": "explicit_upstream_stage_output_in_local_variable",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "dependency_facts"
+      ],
+      "rationale": "Extracts source-declared Maven dependencies.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "maven_dependency_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "technical_packaging",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "technical_packaging",
+      "decision": "keep_as_packaging",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "current_analysis_result"
+        ],
+        "disposition": "not_a_public_evidence_analyzer",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "normalized_fact_store"
+      ],
+      "rationale": "Writes normalized fact indexes from already materialized facts.",
+      "recommended_boundary": "keep_as_packaging",
+      "requires": [
+        "current_analysis_result"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 6
+      },
+      "stage_id": "normalize_facts",
+      "state_dependency": "full_analysis_result_serialization",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "affected_profiles": [
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "openapi_facts",
+        "declared_interfaces",
+        "declared_schemas"
+      ],
+      "rationale": "Extracts declared OpenAPI/Swagger interfaces and schemas.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 2
+      },
+      "stage_id": "openapi_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "internal-subject-knowledge-evidence-v1"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "current_analysis_result"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {
+        "evidence_gaps": [],
+        "migration_priority": null,
+        "migration_readiness": "completed_typed_evidence_runtime",
+        "target_materialization": "knowledge-layer reference-data materialization",
+        "what_moves_to_klc": [
+          "typed subject-knowledge record persistence",
+          "facts-only reference-data query surfaces",
+          "reference-data capabilities and materialization provenance"
+        ],
+        "what_stays_in_core": [
+          "declared-value and literal-write observation extraction",
+          "source provenance, coverage and diagnostics",
+          "typed reference-data-evidence/v1 publication"
+        ]
+      },
+      "produces": [
+        "reference_data_fact_base_artifact"
+      ],
+      "rationale": "Deterministically prepares declared-value and literal-write observations for reference-data-evidence/v1; KLC owns persistence and query semantics.",
+      "recommended_boundary": "core_typed_evidence_preparation",
+      "requires": [
+        "current_analysis_result"
+      ],
+      "runtime_bindings": {
+        "analyzer_owned_internal_pipeline": 1
+      },
+      "stage_id": "reference_data_fact_base",
+      "state_dependency": "hidden_full_analysis_result",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-discovery",
+        "repository-data-model-static",
+        "repository-portfolio-topology",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "repository_file_inventory",
+        "detected_stack"
+      ],
+      "rationale": "Discovers repository files and stack signals used by all later scanners.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [],
+      "runtime_bindings": {
+        "runtime_enforced": 6
+      },
+      "stage_id": "scan_files",
+      "state_dependency": "repository_snapshot",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "spec-evidence-workspace"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [],
+        "disposition": "none_at_responsibility_boundary_phase",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "spec_artifact_index"
+      ],
+      "rationale": "Discovers supplied specification and supporting evidence artifacts.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [],
+      "runtime_bindings": {
+        "declarative_label_fixed_runtime": 1
+      },
+      "stage_id": "spec_artifact_discovery",
+      "state_dependency": "spec_artifact_snapshot",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    },
+    {
+      "affected_profiles": [
+        "spec-evidence-workspace"
+      ],
+      "current_category": "technical_packaging",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "technical_packaging",
+      "decision": "keep_as_packaging",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "parsed_spec_evidence"
+        ],
+        "disposition": "not_a_public_evidence_analyzer",
+        "required": false
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {},
+      "produces": [
+        "standard_analysis_output"
+      ],
+      "rationale": "Transforms parsed specification evidence into the standard analysis-output compatibility contract.",
+      "recommended_boundary": "keep_as_ingestion_packaging",
+      "requires": [
+        "parsed_spec_evidence"
+      ],
+      "runtime_bindings": {
+        "declarative_label_fixed_runtime": 1
+      },
+      "stage_id": "spec_to_standard_analysis_output",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "technical_output_packaging"
+    },
+    {
+      "affected_profiles": [
+        "code-to-openspec-data-evidence",
+        "git-change-complexity-assessment",
+        "repository-data-model-static",
+        "repository-system-data-model"
+      ],
+      "current_category": "base_evidence",
+      "current_foundation_member": true,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_foundation",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "repository_file_inventory"
+        ],
+        "disposition": "foundation_internal_dependency_only",
+        "required": false
+      },
+      "foundation_transition": "remain_in_foundation",
+      "migration": {},
+      "produces": [
+        "sql_facts",
+        "sql_parse_summary",
+        "sql_parse_warnings"
+      ],
+      "rationale": "Extracts SQL statements and parse diagnostics from repository files.",
+      "recommended_boundary": "keep_in_core",
+      "requires": [
+        "repository_file_inventory"
+      ],
+      "runtime_bindings": {
+        "runtime_enforced": 4
+      },
+      "stage_id": "sql_scan",
+      "state_dependency": "explicit_inputs_or_source_files",
+      "target_foundation_member": true,
+      "target_owner": "code-analyzer-core",
+      "target_role": "foundation_source_index"
+    },
+    {
+      "affected_profiles": [
+        "internal-subject-knowledge-evidence-v1"
+      ],
+      "current_category": "derived_evidence",
+      "current_foundation_member": false,
+      "current_owner": "code-analyzer-core",
+      "current_role": "foundation_or_evidence_extraction",
+      "decision": "keep_in_core_evidence",
+      "dependency_boundary_review": {
+        "current_requires": [
+          "current_analysis_result"
+        ],
+        "disposition": "later_split_into_independent_public_analyzer_or_internal_source_understanding_phases",
+        "required": true
+      },
+      "foundation_transition": "not_foundation",
+      "migration": {
+        "evidence_gaps": [],
+        "migration_priority": null,
+        "migration_readiness": "completed_typed_evidence_runtime",
+        "target_materialization": "knowledge-layer system-description materialization",
+        "what_moves_to_klc": [
+          "typed subject-knowledge record persistence",
+          "system interface and scenario query surfaces",
+          "system-description capabilities and materialization provenance"
+        ],
+        "what_stays_in_core": [
+          "observed interface, scenario, configuration, dependency and storage-access evidence extraction",
+          "source provenance, coverage and diagnostics",
+          "typed system-description-evidence/v1 publication"
+        ]
+      },
+      "produces": [
+        "system_description_view_facts"
+      ],
+      "rationale": "Deterministically prepares observed interface, scenario, dependency and access evidence for system-description-evidence/v1; KLC owns persistence and query semantics.",
+      "recommended_boundary": "core_typed_evidence_preparation",
+      "requires": [
+        "current_analysis_result"
+      ],
+      "runtime_bindings": {
+        "analyzer_owned_internal_pipeline": 1
+      },
+      "stage_id": "system_description_enrichment",
+      "state_dependency": "hidden_full_analysis_result",
+      "target_foundation_member": false,
+      "target_owner": "code-analyzer-core",
+      "target_role": "independent_evidence_analyzer"
+    }
+  ],
+  "summary": {
+    "current_foundation_stage_count": 10,
+    "dependency_boundary_review_stage_ids": [
+      "code_conceptual_model_build",
+      "data_evidence_yaml_parse",
+      "declared_value_summary_scan",
+      "java_data_model_candidate_scan",
+      "java_table_observation_build",
+      "java_traceability_build",
+      "reference_data_fact_base",
+      "system_description_enrichment"
+    ],
+    "foundation_extraction_stage_ids": [
+      "java_system_interaction_enrichment"
+    ],
+    "foundation_stage_count": 9,
+    "independent_evidence_analyzer_stage_count": 14,
+    "knowledge_materialization_move_count": 1,
+    "migration_stage_ids": [
+      "code_conceptual_model_build"
+    ],
+    "result_count": 47,
+    "stage_count": 29,
+    "target_owner_counts": {
+      "code-analyzer-core": 28,
+      "knowledge-layer-core": 1
+    },
+    "technical_packaging_stage_count": 5
+  }
+}

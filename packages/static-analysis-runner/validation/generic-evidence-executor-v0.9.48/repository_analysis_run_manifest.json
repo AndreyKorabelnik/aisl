@@ -1,0 +1,230 @@
+{
+  "analysis_profile": null,
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_9342d695c08ee95d4e293952",
+      "analyzer_id": "java-type-structure-analyzer",
+      "analyzer_version": "0.43.27",
+      "artifact_ids": [
+        "java_type_structure_84f8e83cd77c4ec42fb00eaa"
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "process": {
+            "command": [
+              "/mnt/data/work-current/smoke-generic-evidence-0.9.48/code-analyzer-core",
+              "evidence-execute",
+              "--repository",
+              "/mnt/data/work-current/smoke-generic-evidence-0.9.48/repository",
+              "--request",
+              "/mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence-execution-request.json",
+              "--output",
+              "/mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence",
+              "--repo-id",
+              "smoke-repository"
+            ],
+            "command_display": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/code-analyzer-core evidence-execute --repository /mnt/data/work-current/smoke-generic-evidence-0.9.48/repository --request /mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence-execution-request.json --output /mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence --repo-id smoke-repository",
+            "elapsed_seconds": 1.001,
+            "log": "logs/core-evidence.log",
+            "max_rss_kb": 118200,
+            "returncode": 0,
+            "stack_dump_requests": 0,
+            "timed_out": false
+          },
+          "status": "completed"
+        }
+      ],
+      "parameters": {},
+      "request_provenance": {
+        "core_evidence_catalog_fingerprint": "7f6c9b91a3b30611f6540731c465e7306228404659b95fb24b114c688e5d961d",
+        "knowledge_profile_id": "generic-core-evidence-smoke",
+        "knowledge_resolution_plan_fingerprint": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712",
+        "semantic_role": "execution_request_provenance_only"
+      },
+      "required_by": [
+        "code-declared-data-model"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "java-type-structure-evidence",
+          "schema_version": "java-type-structure-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "f0f58d596b9c8f4ff5eab15219b5f50978f7a3b9c6671ad293d7844c21f228ea"
+      ],
+      "source_snapshot_ids": [
+        "smoke-repository"
+      ],
+      "status": "completed"
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "java_type_structure_84f8e83cd77c4ec42fb00eaa",
+      "artifact_kind": "java-type-structure-evidence",
+      "content_fingerprint": "84f8e83cd77c4ec42fb00eaad849a3446ac376a922345cf89d4bd01083db836a",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "ambiguous_type_reference_count": 0,
+        "annotation_declaration_count": 0,
+        "coverage_status": "complete",
+        "enum_constant_declaration_count": 0,
+        "field_declaration_count": 5,
+        "inheritance_declaration_count": 1,
+        "java_files_discovered": 3,
+        "java_files_failed": 0,
+        "java_files_in_scope": 3,
+        "java_files_parsed": 3,
+        "java_files_with_parse_errors": 0,
+        "type_declaration_count": 3,
+        "type_reference_count": 2,
+        "unresolved_type_reference_count": 0,
+        "unsupported_declaration_count": 0
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 10971,
+        "kind": "file",
+        "path": "core-evidence/evidence/java-type-structure-evidence.json",
+        "sha256": "a7707e4d20b8aef6eb4690d54a6f485ae7a5f060fee59463f491ecbc52a86aae"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_9342d695c08ee95d4e293952",
+      "provenance": {
+        "core_artifact_provenance": {
+          "execution_runtime": "core_evidence_runtime/v1",
+          "parser_provider": "tree_sitter",
+          "semantic_routing": "artifact_kind_plus_schema_version"
+        },
+        "core_execution_result": "core-evidence/core-evidence-execution-result.json",
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "java-type-structure-analyzer",
+          "analyzer_version": "0.43.27",
+          "component": "code-analyzer-core"
+        },
+        "request": {
+          "core_evidence_catalog_fingerprint": "7f6c9b91a3b30611f6540731c465e7306228404659b95fb24b114c688e5d961d",
+          "knowledge_profile_id": "generic-core-evidence-smoke",
+          "knowledge_resolution_plan_fingerprint": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712",
+          "semantic_role": "execution_request_provenance_only"
+        },
+        "required_by": [
+          "code-declared-data-model"
+        ],
+        "source_snapshot": {
+          "file_count": 3,
+          "fingerprint": "f0f58d596b9c8f4ff5eab15219b5f50978f7a3b9c6671ad293d7844c21f228ea",
+          "revision": null,
+          "scope": "java_source_files",
+          "source_id": "smoke-repository"
+        }
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "java-type-structure-evidence",
+        "schema_version": "java-type-structure-evidence/v1"
+      },
+      "status": "completed"
+    }
+  ],
+  "evidence_execution": {
+    "core_evidence_catalog": {
+      "catalog_fingerprint": "7f6c9b91a3b30611f6540731c465e7306228404659b95fb24b114c688e5d961d",
+      "path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/contracts/core-evidence-contract-catalog-v1.json"
+    },
+    "core_result": "core-evidence/core-evidence-execution-result.json",
+    "request": "core-evidence-execution-request.json",
+    "resolution_plan": {
+      "path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/contracts/knowledge-resolution-plan-v2.json",
+      "plan_fingerprint": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712"
+    },
+    "runtime_contract_id": "core_evidence_runtime/v1"
+  },
+  "failure": null,
+  "foundation": {
+    "artifacts": [],
+    "requested": false
+  },
+  "knowledge_artifacts": [],
+  "knowledge_layer": {
+    "requested": false,
+    "status": "not-requested"
+  },
+  "lifecycle": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "process": {
+          "command": [
+            "/mnt/data/work-current/smoke-generic-evidence-0.9.48/code-analyzer-core",
+            "evidence-execute",
+            "--repository",
+            "/mnt/data/work-current/smoke-generic-evidence-0.9.48/repository",
+            "--request",
+            "/mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence-execution-request.json",
+            "--output",
+            "/mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence",
+            "--repo-id",
+            "smoke-repository"
+          ],
+          "command_display": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/code-analyzer-core evidence-execute --repository /mnt/data/work-current/smoke-generic-evidence-0.9.48/repository --request /mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence-execution-request.json --output /mnt/data/work-current/smoke-generic-evidence-0.9.48/evidence-run/core-evidence --repo-id smoke-repository",
+          "elapsed_seconds": 1.001,
+          "log": "logs/core-evidence.log",
+          "max_rss_kb": 118200,
+          "returncode": 0,
+          "stack_dump_requests": 0,
+          "timed_out": false
+        },
+        "status": "completed"
+      }
+    ],
+    "completed_at": "2026-08-05T15:08:13.561449+00:00",
+    "diagnostics": [],
+    "started_at": "2026-08-05T15:08:12.558830+00:00"
+  },
+  "materialization_executions": [],
+  "published_capabilities": [],
+  "repository": {
+    "repo_id": "smoke-repository",
+    "requested_repo_id": "smoke-repository",
+    "revision": {
+      "content_sha256": "4fedd2bb1553b8c99edb4394a0cd9c9395674bb65e24f8c859299b3e585d5746",
+      "kind": "content",
+      "revision": "sha256:4fedd2bb1553b8c99edb4394a0cd9c9395674bb65e24f8c859299b3e585d5746"
+    },
+    "source_path": "/mnt/data/work-current/smoke-generic-evidence-0.9.48/repository"
+  },
+  "run_fingerprint": "80ea92d377c8b05f7246ab4a07fff3619c0c57ee2b93da37aa16a106c26a1d32",
+  "runner": {
+    "producer": "static-analysis-runner",
+    "version": "0.9.48"
+  },
+  "schema_version": "static_repository_analysis_run_manifest/v1",
+  "semantic_policy": {
+    "dual_write": "not_supported",
+    "evidence_dispatch": "generic_contract_driven",
+    "legacy_fallback": "not_supported",
+    "semantic_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "task_suite_profile_semantics": "not_used"
+  },
+  "status": "completed",
+  "tool": {
+    "minimum_version": "0.43.27",
+    "producer": "code-analyzer-core",
+    "version": "0.43.27"
+  }
+}

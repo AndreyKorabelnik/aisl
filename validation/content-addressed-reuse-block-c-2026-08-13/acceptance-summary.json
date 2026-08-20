@@ -1,0 +1,690 @@
+{
+  "acceptance": {
+    "exact_repeat_all_runner_nodes_reused": true,
+    "force_rebuild_all_runner_nodes_built": true,
+    "sql_b_selective_expected_summary": true
+  },
+  "measured": {
+    "cold_sql_a_seconds": 219.53,
+    "exact_repeat_seconds": 7.76,
+    "exact_repeat_speedup": 28.29,
+    "force_rebuild_seconds": 215.88,
+    "sql_b_selective_seconds": 221.72
+  },
+  "runs": {
+    "sql-a-build": {
+      "decisions": [
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "cache_miss",
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "cache_miss",
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "cache_miss",
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "cache_miss",
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": 19.086266249999994,
+          "invalidation_reason": "cache_miss",
+          "node_id": "analyzer:sql-analysis-analyzer:datamart_profile_fl",
+          "producer_id": "code-analyzer-core:sql-analysis-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "27fee399f7b65b98840960fa1bf48c84cfd239cccaa1f8c7ebaf8d59a3835f48",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 12.74694690399997,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:code-declared-data-model",
+          "producer_id": "knowledge-layer-core:code-declared-data-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "c90cca1ce8b8b08d889236f8ebc0edc93e962c63ed626333a4eb12eb9a1e94d8",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 6.3124976320000314,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:model-storage-semantics",
+          "producer_id": "knowledge-layer-core:model-storage-semantics",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "be0812ab940b1d7b60b92d9a324b7aefa3751b5638f5b8d7ce0167794ef9364c",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 1.7478310209999108,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:physical-model",
+          "producer_id": "knowledge-layer-core:physical-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "382b34cedde43857c84a0c7ba78716e46c06699dee00f526cd85ec88666be162",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 50.88855494400002,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:sql-analysis",
+          "producer_id": "knowledge-layer-core:sql-analysis",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "0d9823ecdf78eb8eabb13f21deea954ed950e64a0f07167f60c82361962c4fd9",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 1.5158697109999366,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:logical-storage-mapping",
+          "producer_id": "knowledge-layer-core:logical-storage-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "17856251a4017805853526bcace21b8a5447ebfb6fb36e86fe36b32a418daa43",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 34.293210493999936,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:cross-artifact-data-model-mapping",
+          "producer_id": "knowledge-layer-core:cross-artifact-data-model-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "f8a09df490e2abecdba6ce875e76a6620b97e13fa226f7d0f607cb86070b4c70",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 43.64703532100009,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:sql-target-source-mapping",
+          "producer_id": "knowledge-layer-core:sql-target-source-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "dbd30c8f1d1f6798da55ba2d8e4087c1a5c87df8288c03954f632ac6dbc16439",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 17.918261361000077,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:data-model-attribute-extension-context",
+          "producer_id": "knowledge-layer-core:data-model-attribute-extension-context",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "f9c7804b7113d73e12bf6fbc2b879dcd3a988f7288c445e719d6a34885e7161c",
+          "saved_seconds": null
+        }
+      ],
+      "elapsed_seconds": 219.53,
+      "exit_code": 0,
+      "result_fingerprint": "593c4c913f4d47d7079a539ccf42d2c41c1fb0783e1c73ff0ab00af85baf8922",
+      "status": "completed",
+      "summary": {
+        "built": 13,
+        "reused": 0
+      }
+    },
+    "sql-a-force": {
+      "decisions": [
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": null,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": 18.556183434000104,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "analyzer:sql-analysis-analyzer:datamart_profile_fl",
+          "producer_id": "code-analyzer-core:sql-analysis-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "27fee399f7b65b98840960fa1bf48c84cfd239cccaa1f8c7ebaf8d59a3835f48",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 12.318572270999994,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:code-declared-data-model",
+          "producer_id": "knowledge-layer-core:code-declared-data-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "c90cca1ce8b8b08d889236f8ebc0edc93e962c63ed626333a4eb12eb9a1e94d8",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 7.239076834999878,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:model-storage-semantics",
+          "producer_id": "knowledge-layer-core:model-storage-semantics",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "be0812ab940b1d7b60b92d9a324b7aefa3751b5638f5b8d7ce0167794ef9364c",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 1.6314193799998975,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:physical-model",
+          "producer_id": "knowledge-layer-core:physical-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "382b34cedde43857c84a0c7ba78716e46c06699dee00f526cd85ec88666be162",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 50.42413105299988,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:sql-analysis",
+          "producer_id": "knowledge-layer-core:sql-analysis",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "0d9823ecdf78eb8eabb13f21deea954ed950e64a0f07167f60c82361962c4fd9",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 1.4345839259999593,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:logical-storage-mapping",
+          "producer_id": "knowledge-layer-core:logical-storage-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "17856251a4017805853526bcace21b8a5447ebfb6fb36e86fe36b32a418daa43",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 32.91182374999994,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:cross-artifact-data-model-mapping",
+          "producer_id": "knowledge-layer-core:cross-artifact-data-model-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "f8a09df490e2abecdba6ce875e76a6620b97e13fa226f7d0f607cb86070b4c70",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 40.88299188099995,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:sql-target-source-mapping",
+          "producer_id": "knowledge-layer-core:sql-target-source-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "dbd30c8f1d1f6798da55ba2d8e4087c1a5c87df8288c03954f632ac6dbc16439",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 19.333563239000114,
+          "invalidation_reason": "force_rebuild",
+          "node_id": "materialization:data-model-attribute-extension-context",
+          "producer_id": "knowledge-layer-core:data-model-attribute-extension-context",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "f9c7804b7113d73e12bf6fbc2b879dcd3a988f7288c445e719d6a34885e7161c",
+          "saved_seconds": null
+        }
+      ],
+      "elapsed_seconds": 215.88,
+      "exit_code": 0,
+      "result_fingerprint": "25d6ff6020b4d8cd990640192404102e9c87824c2ddde1738d2db10e1df015f5",
+      "status": "completed",
+      "summary": {
+        "built": 13,
+        "reused": 0
+      }
+    },
+    "sql-a-repeat-final": {
+      "decisions": [
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:sql-analysis-analyzer:datamart_profile_fl",
+          "producer_id": "code-analyzer-core:sql-analysis-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "27fee399f7b65b98840960fa1bf48c84cfd239cccaa1f8c7ebaf8d59a3835f48",
+          "saved_seconds": 19.086266249999994
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:code-declared-data-model",
+          "producer_id": "knowledge-layer-core:code-declared-data-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "c90cca1ce8b8b08d889236f8ebc0edc93e962c63ed626333a4eb12eb9a1e94d8",
+          "saved_seconds": 12.74694690399997
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:model-storage-semantics",
+          "producer_id": "knowledge-layer-core:model-storage-semantics",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "be0812ab940b1d7b60b92d9a324b7aefa3751b5638f5b8d7ce0167794ef9364c",
+          "saved_seconds": 6.3124976320000314
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:physical-model",
+          "producer_id": "knowledge-layer-core:physical-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "382b34cedde43857c84a0c7ba78716e46c06699dee00f526cd85ec88666be162",
+          "saved_seconds": 1.7478310209999108
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:sql-analysis",
+          "producer_id": "knowledge-layer-core:sql-analysis",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "0d9823ecdf78eb8eabb13f21deea954ed950e64a0f07167f60c82361962c4fd9",
+          "saved_seconds": 50.88855494400002
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:logical-storage-mapping",
+          "producer_id": "knowledge-layer-core:logical-storage-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "17856251a4017805853526bcace21b8a5447ebfb6fb36e86fe36b32a418daa43",
+          "saved_seconds": 1.5158697109999366
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:cross-artifact-data-model-mapping",
+          "producer_id": "knowledge-layer-core:cross-artifact-data-model-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "f8a09df490e2abecdba6ce875e76a6620b97e13fa226f7d0f607cb86070b4c70",
+          "saved_seconds": 34.293210493999936
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:sql-target-source-mapping",
+          "producer_id": "knowledge-layer-core:sql-target-source-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "dbd30c8f1d1f6798da55ba2d8e4087c1a5c87df8288c03954f632ac6dbc16439",
+          "saved_seconds": 43.64703532100009
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:data-model-attribute-extension-context",
+          "producer_id": "knowledge-layer-core:data-model-attribute-extension-context",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "f9c7804b7113d73e12bf6fbc2b879dcd3a988f7288c445e719d6a34885e7161c",
+          "saved_seconds": 17.918261361000077
+        }
+      ],
+      "elapsed_seconds": 7.76,
+      "exit_code": 0,
+      "result_fingerprint": "fb135b5afddc8aa06b101e98eddb297f40708edd64542ac3d1343db1af6801d9",
+      "status": "completed",
+      "summary": {
+        "built": 0,
+        "reused": 13
+      }
+    },
+    "sql-b-selective": {
+      "decisions": [
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "content_addressed_completed_artifact",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+          "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_producer_execution",
+          "elapsed_seconds": 117.40790429199978,
+          "invalidation_reason": "cache_miss",
+          "node_id": "analyzer:sql-analysis-analyzer:custom_b2c_insurance",
+          "producer_id": "code-analyzer-core:sql-analysis-analyzer",
+          "producer_kind": "core-repository-evidence",
+          "producer_version": "0.44.23a3",
+          "reuse_key": "9b157ed7f3c8740d703999d9e4bd17b5d11b2d83efc3ae84ba4e748600e97fb3",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:code-declared-data-model",
+          "producer_id": "knowledge-layer-core:code-declared-data-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "c90cca1ce8b8b08d889236f8ebc0edc93e962c63ed626333a4eb12eb9a1e94d8",
+          "saved_seconds": 12.74694690399997
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:model-storage-semantics",
+          "producer_id": "knowledge-layer-core:model-storage-semantics",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "be0812ab940b1d7b60b92d9a324b7aefa3751b5638f5b8d7ce0167794ef9364c",
+          "saved_seconds": 6.3124976320000314
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:physical-model",
+          "producer_id": "knowledge-layer-core:physical-model",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "382b34cedde43857c84a0c7ba78716e46c06699dee00f526cd85ec88666be162",
+          "saved_seconds": 1.7478310209999108
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 66.71728242799986,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:sql-analysis",
+          "producer_id": "knowledge-layer-core:sql-analysis",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "1ac8353f11ad6b69370a1d7422518a8a970993b167f70ca7d6981712105d5971",
+          "saved_seconds": null
+        },
+        {
+          "action": "reused",
+          "basis": "effective_inputs_materializer_contract",
+          "elapsed_seconds": null,
+          "invalidation_reason": null,
+          "node_id": "materialization:logical-storage-mapping",
+          "producer_id": "knowledge-layer-core:logical-storage-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "17856251a4017805853526bcace21b8a5447ebfb6fb36e86fe36b32a418daa43",
+          "saved_seconds": 1.5158697109999366
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 6.357431686999917,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:cross-artifact-data-model-mapping",
+          "producer_id": "knowledge-layer-core:cross-artifact-data-model-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "1c1025314bdee4335c05f22e98c9108e56f1b9128640b4fc03aead00732a2e05",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 16.471780968000076,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:sql-target-source-mapping",
+          "producer_id": "knowledge-layer-core:sql-target-source-mapping",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "ea57a5de96fed5fb79db3d64eb49330b350daf9915a2cd14eada42d34d8fbac4",
+          "saved_seconds": null
+        },
+        {
+          "action": "built",
+          "basis": "canonical_materialization_execution",
+          "elapsed_seconds": 9.281379302999994,
+          "invalidation_reason": "cache_miss",
+          "node_id": "materialization:data-model-attribute-extension-context",
+          "producer_id": "knowledge-layer-core:data-model-attribute-extension-context",
+          "producer_kind": "knowledge-materialization",
+          "producer_version": "0.61.0a23",
+          "reuse_key": "fecfb95151f523ff9f3e431508bb16f4d8f0e909e3dc121013cb1244f90ac285",
+          "saved_seconds": null
+        }
+      ],
+      "elapsed_seconds": 221.72,
+      "exit_code": 0,
+      "result_fingerprint": "2319d6f565b808545cbaef0db10247d283b8e6d738e1fe34d6cff244aa3534fb",
+      "status": "completed",
+      "summary": {
+        "built": 5,
+        "reused": 8
+      }
+    }
+  },
+  "scenario": "extend-data-model-attribute-v1",
+  "schema_version": "content_addressed_reuse_block_c_acceptance/v1"
+}

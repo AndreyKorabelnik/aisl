@@ -1,0 +1,5674 @@
+{
+  "schema_version": "sql-set-operation-output-contract-validation/v1",
+  "before": {
+    "producer_version": "0.43.4",
+    "content_fingerprint": "364bc637a38465f4905cbfc0fd78428673fe468d1cfa8a4f954981e5da872a05",
+    "source_inventory": {
+      "non_source_values": {
+        "generated_value_usages": 27,
+        "semantic_parameter_usages": 151
+      },
+      "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+      "resolved_by_relation_kind": {
+        "cte": 5502,
+        "derived": 901,
+        "physical": 1381,
+        "physical_template": 3026
+      },
+      "resolved_source_field_usages": 10810,
+      "source_field_candidate_usages": 11061,
+      "source_field_resolution_rate": 0.977308,
+      "status": "partial",
+      "total_observed_usages": 11239,
+      "unresolved_by_basis": {
+        "ambiguous_unqualified": 249,
+        "relation_unavailable": 2
+      },
+      "unresolved_by_status": {
+        "ambiguous": 249,
+        "unresolved": 2
+      },
+      "unresolved_source_field_usages": 251
+    },
+    "projections": {
+      "by_resolution_status": {
+        "partial": 744,
+        "resolved": 6766
+      }
+    },
+    "joins": {
+      "by_resolution_status": {
+        "confirmed": 314,
+        "partial": 9
+      },
+      "by_type": {
+        "inner": 56,
+        "left": 266,
+        "left_anti": 1
+      },
+      "physical_join_confirmed": 129
+    },
+    "recursive_lineage": {
+      "by_status": {
+        "confirmed": 25,
+        "inferred_target": 566,
+        "partial": 140
+      },
+      "by_terminal_source_kind": {
+        "column": 520,
+        "expression_without_column": 47,
+        "semantic_parameter": 24,
+        "unresolved": 140
+      }
+    },
+    "gaps": {
+      "by_kind": {
+        "intermediate_projection_unresolved": 4,
+        "intermediate_wildcard_unexpanded": 1,
+        "recursive_source_relation_ambiguous": 111,
+        "scoped_ast_source_coverage_incomplete": 2,
+        "source_relation_ambiguous": 24,
+        "target_column_unresolved": 41
+      },
+      "total": 183
+    }
+  },
+  "after": {
+    "producer_version": "0.43.5",
+    "content_fingerprint": "186f05e4b13ca9c7293fc649edf723c7be77b3fdb507cbbb1a070c1167ac0a14",
+    "source_inventory": {
+      "non_source_values": {
+        "generated_value_usages": 27,
+        "semantic_parameter_usages": 151
+      },
+      "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+      "resolved_by_relation_kind": {
+        "cte": 5508,
+        "derived": 901,
+        "physical": 1381,
+        "physical_template": 3026
+      },
+      "resolved_source_field_usages": 10816,
+      "source_field_candidate_usages": 11061,
+      "source_field_resolution_rate": 0.97785,
+      "status": "partial",
+      "total_observed_usages": 11239,
+      "unresolved_by_basis": {
+        "ambiguous_unqualified": 243,
+        "relation_unavailable": 2
+      },
+      "unresolved_by_status": {
+        "ambiguous": 243,
+        "unresolved": 2
+      },
+      "unresolved_source_field_usages": 245
+    },
+    "projections": {
+      "by_resolution_status": {
+        "partial": 740,
+        "resolved": 6770
+      }
+    },
+    "joins": {
+      "by_resolution_status": {
+        "confirmed": 314,
+        "partial": 9
+      },
+      "by_type": {
+        "inner": 56,
+        "left": 266,
+        "left_anti": 1
+      },
+      "physical_join_confirmed": 129
+    },
+    "recursive_lineage": {
+      "by_status": {
+        "confirmed": 25,
+        "inferred_target": 566,
+        "partial": 140
+      },
+      "by_terminal_source_kind": {
+        "column": 520,
+        "expression_without_column": 47,
+        "semantic_parameter": 24,
+        "unresolved": 140
+      }
+    },
+    "gaps": {
+      "by_kind": {
+        "intermediate_projection_unresolved": 4,
+        "intermediate_wildcard_unexpanded": 1,
+        "recursive_source_relation_ambiguous": 111,
+        "scoped_ast_source_coverage_incomplete": 2,
+        "source_relation_ambiguous": 24,
+        "target_column_unresolved": 41
+      },
+      "total": 183
+    }
+  },
+  "complete_set_operation_relation_count": 72,
+  "partial_set_operation_relation_count": 1,
+  "complete_relations": [
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_b55febb718dd625a",
+      "relation_name": "tgt_with_delta",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/common/snp_inc_diff.sql",
+      "output_columns": [
+        "${all_columns}"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0bf30d462b54a950",
+          "output_columns": [
+            "${all_columns}"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0bc9ebf3a5a2971a",
+          "output_columns": [
+            "${all_columns}"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_a47230a23c6d5e3a",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/epk_client.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_fe9d1f2e0e742eab",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7cf50d0e6eacfc8d",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_32102261937e5857",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5c1b54c58974aead",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 5,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7807fcaf2d1c431f",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 6,
+          "scope_id": "sql_select_scope_datamart_profile_fl_1ad11f799bf832c6",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 7,
+          "scope_id": "sql_select_scope_datamart_profile_fl_cb74e34a30998b8e",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 8,
+          "scope_id": "sql_select_scope_datamart_profile_fl_998af2ed5983f4ad",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 9,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8ee3d3ffef726cb7",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 10,
+          "scope_id": "sql_select_scope_datamart_profile_fl_827aacb312abd39c",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 11,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ae33ab84485150ab",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 12,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ffb17ab1f98e251a",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 13,
+          "scope_id": "sql_select_scope_datamart_profile_fl_507165b2fbea4aab",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 14,
+          "scope_id": "sql_select_scope_datamart_profile_fl_50f658affacc3d04",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 15,
+          "scope_id": "sql_select_scope_datamart_profile_fl_23e318db13068b9a",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 16,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3c094cf5cfee7d51",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 17,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d76b62cc18578222",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 18,
+          "scope_id": "sql_select_scope_datamart_profile_fl_c926b8f767a854eb",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_816ca831c01a9e35",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ce7df3b65bc4e81c",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3f78268d0ccf1157",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1cc2b816608f7d41",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_birthdate__joined.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b0521cb4cdef6221",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_1623a42f940d57f7",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d31f464407ea1003",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_dbd61af0f306c765",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1a7b505572b1f51e",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_citizenship.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7858e192bd097732",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_eab7f3dc1f1aff77",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_53949fb1e22a5fee",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_47e35bbd919be8ed",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_c2ba2e17bb37237b",
+      "relation_name": "duls_emigration_priority",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_citizenship.sql",
+      "output_columns": [
+        "doctype",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_30f794de5f08cba4",
+          "output_columns": [
+            "doctype",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_aefc157eefbb5c12",
+          "output_columns": [
+            "doctype",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_34a1b11746eae0f3",
+          "output_columns": [
+            "doctype",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_ee3c2465736f8e6e",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_deathdate.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_72d5e4835944d97c",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0ebeef14289b3da5",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_71e524f0b7ce523f",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_deathdate__joined.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_389f0edd0c645b65",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4dadbbd9ca27f74d",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ec3d7864776392b3",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_367b025e8c11287e",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_b10e9da5331368a6",
+      "relation_name": "duls_emigration_priority",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_docs.sql",
+      "output_columns": [
+        "doctype",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_94bc3bc4c870e9cb",
+          "output_columns": [
+            "doctype",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_c74ffa338fea1851",
+          "output_columns": [
+            "doctype",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a59a1348d6c4a906",
+          "output_columns": [
+            "doctype",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1f6d8f1d416f35df",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_emigration__joined.sql",
+      "output_columns": [
+        "epk_id",
+        "em_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e235e464c408ca80",
+          "output_columns": [
+            "epk_id",
+            "em_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a5549f0432bcd628",
+          "output_columns": [
+            "epk_id",
+            "em_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_78b155fba64ba754",
+          "output_columns": [
+            "epk_id",
+            "em_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_66933857c6c3e6f1",
+          "output_columns": [
+            "epk_id",
+            "em_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_9baa2a614f089381",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_gender.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_428ef20ea7315dc5",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5c7dcab9191fee63",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_c4a32c1a316b6fa9",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_gender__joined.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_09419aa699624fc2",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7442dee48445aaf3",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e029ef3f2d05120e",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7ff595c459bbbd02",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_74de8bd6b95bc0cd",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_identification__joined.sql",
+      "output_columns": [
+        "epk_id",
+        "doc_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_af70cb0fdb6f64af",
+          "output_columns": [
+            "epk_id",
+            "doc_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3ecec2eb92189c1e",
+          "output_columns": [
+            "epk_id",
+            "doc_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_2628774be5a0add3",
+          "output_columns": [
+            "epk_id",
+            "doc_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0b93726874044f15",
+          "output_columns": [
+            "epk_id",
+            "doc_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1dd363fb379197d0",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_individualname__joined.sql",
+      "output_columns": [
+        "epk_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_136c4d9efcbc0a15",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_2e9281ea7618f1c4",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_81b18f1c35695dfe",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_fca0a74571134c44",
+          "output_columns": [
+            "epk_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1e84b7e0e63ba0e9",
+      "relation_name": "relgroups",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_relgroups.sql",
+      "output_columns": [
+        "key",
+        "epk_id",
+        "clientFlag",
+        "notClientFlag",
+        "bankrupt_stage_155_nflag",
+        "bankrupt_stage_156_nflag",
+        "bankrupt_stage_157_nflag",
+        "bankrupt_stage_158_nflag",
+        "bankrupt_stage_159_nflag",
+        "bankrupt_stage_160_nflag",
+        "bankrupt_stage_161_nflag",
+        "bankrupt_stage_162_nflag",
+        "incapable_nflag",
+        "militpens_27_nflag",
+        "dzo_60_nflag",
+        "sbrf_employee_59_nflag",
+        "partyGroup"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_de098653358a1aff",
+          "output_columns": [
+            "key",
+            "epk_id",
+            "clientFlag",
+            "notClientFlag",
+            "bankrupt_stage_155_nflag",
+            "bankrupt_stage_156_nflag",
+            "bankrupt_stage_157_nflag",
+            "bankrupt_stage_158_nflag",
+            "bankrupt_stage_159_nflag",
+            "bankrupt_stage_160_nflag",
+            "bankrupt_stage_161_nflag",
+            "bankrupt_stage_162_nflag",
+            "incapable_nflag",
+            "militpens_27_nflag",
+            "dzo_60_nflag",
+            "sbrf_employee_59_nflag",
+            "partyGroup"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_032cff38df6dd7ba",
+          "output_columns": [
+            "key",
+            "epk_id",
+            "clientFlag",
+            "notClientFlag",
+            "bankrupt_stage_155_nflag",
+            "bankrupt_stage_156_nflag",
+            "bankrupt_stage_157_nflag",
+            "bankrupt_stage_158_nflag",
+            "bankrupt_stage_159_nflag",
+            "bankrupt_stage_160_nflag",
+            "bankrupt_stage_161_nflag",
+            "bankrupt_stage_162_nflag",
+            "incapable_nflag",
+            "militpens_27_nflag",
+            "dzo_60_nflag",
+            "sbrf_employee_59_nflag",
+            "partyGroup"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_3e095b661b5aba6a",
+      "relation_name": "riskprofile_dict",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_riskprofile.sql",
+      "output_columns": [
+        "key",
+        "name",
+        "description",
+        "score"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b9c554ead1606143",
+          "output_columns": [
+            "key",
+            "name",
+            "description",
+            "score"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_32f688187adcdebc",
+          "output_columns": [
+            "key",
+            "name",
+            "description",
+            "score"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_6c480d5a0577428d",
+      "relation_name": "relgroups",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_segment.sql",
+      "output_columns": [
+        "key",
+        "epk_id",
+        "partyGroup_cd",
+        "updatedatetime",
+        "startdate",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_72d1241a07e4f9ba",
+          "output_columns": [
+            "key",
+            "epk_id",
+            "partyGroup_cd",
+            "updatedatetime",
+            "startdate",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a170857da3449f88",
+          "output_columns": [
+            "key",
+            "epk_id",
+            "partygroup_cd",
+            "updatedatetime",
+            "startdate",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_9773f64f557d1e2d",
+      "relation_name": "addresses_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_address/epk_client_address.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to_new",
+        "addr_active_flag_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "addr_active_flag",
+        "st_date",
+        "hashf",
+        "rn_key",
+        "key",
+        "epk_id",
+        "addr_id",
+        "versionstartdate",
+        "startdate",
+        "updatedatetime",
+        "contactstatus",
+        "line2",
+        "enddate",
+        "region",
+        "district",
+        "city",
+        "settlement",
+        "street",
+        "house",
+        "bulk",
+        "building",
+        "apartment",
+        "wayofliving",
+        "kladrcode",
+        "fiascode",
+        "postindex",
+        "citytype",
+        "usagetype",
+        "country",
+        "addresssubtype",
+        "regiontype",
+        "streettype",
+        "settlementtype",
+        "districttype",
+        "startdate_date",
+        "versionstartdate_date",
+        "ctl_loading",
+        "ctl_validfrom",
+        "month",
+        "priority",
+        "rn_snp_hist"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_be907e6722e747e5",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "addr_active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "addr_active_flag",
+            "st_date",
+            "hashf",
+            "rn_key",
+            "key",
+            "epk_id",
+            "addr_id",
+            "versionstartdate",
+            "startdate",
+            "updatedatetime",
+            "contactstatus",
+            "line2",
+            "enddate",
+            "region",
+            "district",
+            "city",
+            "settlement",
+            "street",
+            "house",
+            "bulk",
+            "building",
+            "apartment",
+            "wayofliving",
+            "kladrcode",
+            "fiascode",
+            "postindex",
+            "citytype",
+            "usagetype",
+            "country",
+            "addresssubtype",
+            "regiontype",
+            "streettype",
+            "settlementtype",
+            "districttype",
+            "startdate_date",
+            "versionstartdate_date",
+            "ctl_loading",
+            "ctl_validfrom",
+            "month",
+            "priority",
+            "rn_snp_hist"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0813c197f979ebd0",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "addr_active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "addr_active_flag",
+            "st_date",
+            "hashf",
+            "rn_key",
+            "key",
+            "epk_id",
+            "addr_id",
+            "versionstartdate",
+            "startdate",
+            "updatedatetime",
+            "contactstatus",
+            "line2",
+            "enddate",
+            "region",
+            "district",
+            "city",
+            "settlement",
+            "street",
+            "house",
+            "bulk",
+            "building",
+            "apartment",
+            "wayofliving",
+            "kladrcode",
+            "fiascode",
+            "postindex",
+            "citytype",
+            "usagetype",
+            "country",
+            "addresssubtype",
+            "regiontype",
+            "streettype",
+            "settlementtype",
+            "districttype",
+            "startdate_date",
+            "versionstartdate_date",
+            "ctl_loading",
+            "ctl_validfrom",
+            "month",
+            "priority",
+            "rn_snp_hist"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_3301a3eb80b96ca2",
+      "relation_name": "docs_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_doc/epk_client_doc.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to_new",
+        "doc_active_flag_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "hashf",
+        "epk_id",
+        "key",
+        "doc_id",
+        "doc_type",
+        "doc_series",
+        "doc_number",
+        "doc_status",
+        "doc_issue_organization",
+        "doc_issue_code",
+        "doc_plan_end_dt",
+        "doc_issue_dt",
+        "doc_valid_flag",
+        "doc_qualitycode",
+        "doc_qualitycode_id",
+        "documentNumberQualityCode",
+        "documentTypeQualityCode",
+        "issuedByOrganizationQualityCode",
+        "issuedByOrganizationQualityCode_id",
+        "issuedDateQualityCode",
+        "issueddatequalitycode_id",
+        "standardFlag",
+        "doc_category",
+        "doc_type_id",
+        "doc_active_flag",
+        "doc_flag",
+        "centaur_flag",
+        "updateDateTime",
+        "startdate_date",
+        "startDate",
+        "endDate",
+        "versionstartdate_date",
+        "doc_full_nbr_hash",
+        "doc_full_nbr_hash2",
+        "rn_key"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_f743a798fdef1539",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "doc_active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "doc_id",
+            "doc_type",
+            "doc_series",
+            "doc_number",
+            "doc_status",
+            "doc_issue_organization",
+            "doc_issue_code",
+            "doc_plan_end_dt",
+            "doc_issue_dt",
+            "doc_valid_flag",
+            "doc_qualitycode",
+            "doc_qualitycode_id",
+            "documentNumberQualityCode",
+            "documentTypeQualityCode",
+            "issuedByOrganizationQualityCode",
+            "issuedByOrganizationQualityCode_id",
+            "issuedDateQualityCode",
+            "issueddatequalitycode_id",
+            "standardFlag",
+            "doc_category",
+            "doc_type_id",
+            "doc_active_flag",
+            "doc_flag",
+            "centaur_flag",
+            "updateDateTime",
+            "startdate_date",
+            "startDate",
+            "endDate",
+            "versionstartdate_date",
+            "doc_full_nbr_hash",
+            "doc_full_nbr_hash2",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b6230d65bad099c9",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "doc_active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "doc_id",
+            "doc_type",
+            "doc_series",
+            "doc_number",
+            "doc_status",
+            "doc_issue_organization",
+            "doc_issue_code",
+            "doc_plan_end_dt",
+            "doc_issue_dt",
+            "doc_valid_flag",
+            "doc_qualitycode",
+            "doc_qualitycode_id",
+            "documentNumberQualityCode",
+            "documentTypeQualityCode",
+            "issuedByOrganizationQualityCode",
+            "issuedByOrganizationQualityCode_id",
+            "issuedDateQualityCode",
+            "issueddatequalitycode_id",
+            "standardFlag",
+            "doc_category",
+            "doc_type_id",
+            "doc_active_flag",
+            "doc_flag",
+            "centaur_flag",
+            "updateDateTime",
+            "startdate_date",
+            "startDate",
+            "endDate",
+            "versionstartdate_date",
+            "doc_full_nbr_hash",
+            "doc_full_nbr_hash2",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_120f40566f674331",
+      "relation_name": "union_src",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_doc/stg_epk_doc_merged.sql",
+      "output_columns": [
+        "epk_id",
+        "id",
+        "key",
+        "documentNumber",
+        "documentSeries",
+        "documentStatus",
+        "documentType",
+        "endDate",
+        "identificationServiceAttributes",
+        "issuedDate",
+        "issuerCode",
+        "plannedEndDate",
+        "updateDateTime",
+        "startDate",
+        "issuedByOrganization",
+        "versionStartDate",
+        "ctl_loading",
+        "ctl_action",
+        "ctl_validfrom",
+        "documenttype_join"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_db24e7751aee895f",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_6ab83ce353e399ac",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8825a817f7b77426",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b43563071de2f727",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 5,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5c01f0558b2548a7",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 6,
+          "scope_id": "sql_select_scope_datamart_profile_fl_26a2ecf86a09a35e",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 7,
+          "scope_id": "sql_select_scope_datamart_profile_fl_cac88f868ae980d4",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 8,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d5b681b4848ccc39",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_8c59746e98e5aad6",
+      "relation_name": "union_src",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_doc/stg_epk_doc_merged_hist.sql",
+      "output_columns": [
+        "epk_id",
+        "id",
+        "key",
+        "documentNumber",
+        "documentSeries",
+        "documentStatus",
+        "documentType",
+        "endDate",
+        "identificationServiceAttributes",
+        "issuedDate",
+        "issuerCode",
+        "plannedEndDate",
+        "updateDateTime",
+        "startDate",
+        "issuedByOrganization",
+        "versionStartDate",
+        "ctl_loading",
+        "ctl_action",
+        "ctl_validfrom",
+        "documenttype_join",
+        "month"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_029e31e5f598d750",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3892279203f60988",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4f356837097a1903",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b0fd931834a53613",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 5,
+          "scope_id": "sql_select_scope_datamart_profile_fl_2d839676a7e4d0f2",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 6,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ab87679c19d1c12d",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 7,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e8bcbb8daaee804f",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 8,
+          "scope_id": "sql_select_scope_datamart_profile_fl_16dc0f19cc86f599",
+          "output_columns": [
+            "epk_id",
+            "id",
+            "key",
+            "documentNumber",
+            "documentSeries",
+            "documentStatus",
+            "documentType",
+            "endDate",
+            "identificationServiceAttributes",
+            "issuedDate",
+            "issuerCode",
+            "plannedEndDate",
+            "updateDateTime",
+            "startDate",
+            "issuedByOrganization",
+            "versionStartDate",
+            "ctl_loading",
+            "ctl_action",
+            "ctl_validfrom",
+            "documenttype_join",
+            "month"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_442b6bf93b53205f",
+      "relation_name": "reorg_dates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_doc_flags/epk_client_doc_flags.sql",
+      "output_columns": [
+        "start_dt_new",
+        "end_dt_new",
+        "active_doc_flag_new",
+        "enddate_new",
+        "versionstartdate_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "rn_key",
+        "rn_snp_hist",
+        "documenttype",
+        "startdate",
+        "updateDateTime",
+        "versionstartdate",
+        "enddate",
+        "active_doc_flag",
+        "flag_id",
+        "flag_cd",
+        "doc_id",
+        "epk_id",
+        "key",
+        "ctl_validfrom",
+        "documenttype_join",
+        "flag_cd_join",
+        "startdate_date",
+        "versionstartdate_date",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_582618bd56da620a",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "active_doc_flag_new",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "rn_snp_hist",
+            "documenttype",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "active_doc_flag",
+            "flag_id",
+            "flag_cd",
+            "doc_id",
+            "epk_id",
+            "key",
+            "ctl_validfrom",
+            "documenttype_join",
+            "flag_cd_join",
+            "startdate_date",
+            "versionstartdate_date",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_22a541816b531148",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "active_doc_flag_new",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "rn_snp_hist",
+            "documenttype",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "active_doc_flag",
+            "flag_id",
+            "flag_cd",
+            "doc_id",
+            "epk_id",
+            "key",
+            "ctl_validfrom",
+            "documenttype_join",
+            "flag_cd_join",
+            "startdate_date",
+            "versionstartdate_date",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_39d2c77cd927c4ac",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/epk_client_email.sql",
+      "output_columns": [
+        "epk_id",
+        "email_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_228536e245d2b329",
+          "output_columns": [
+            "epk_id",
+            "email_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_cd4a3d0ecc67f01b",
+          "output_columns": [
+            "epk_id",
+            "email_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_09308871d14b84f6",
+          "output_columns": [
+            "epk_id",
+            "email_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_592f009af71060ce",
+          "output_columns": [
+            "epk_id",
+            "email_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_aa5111af5d056acb",
+      "relation_name": "electronic_addresses_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/epk_client_email.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to_new",
+        "active_flag_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "hashf",
+        "epk_id",
+        "key",
+        "email_id",
+        "email_address",
+        "active_flag",
+        "e_mail_valid_flag",
+        "centaur_flag",
+        "usagetype_nm",
+        "usagetype_cd",
+        "contact_status",
+        "contact_status_cd",
+        "cl_verified_flag",
+        "e_mail_subtype",
+        "e_mail_subtype_cd",
+        "startDate",
+        "startdate_date",
+        "endDate",
+        "updateDateTime",
+        "versionstartdate_date",
+        "email_address_hash",
+        "rn_key"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4070acd69df5a6a5",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "email_id",
+            "email_address",
+            "active_flag",
+            "e_mail_valid_flag",
+            "centaur_flag",
+            "usagetype_nm",
+            "usagetype_cd",
+            "contact_status",
+            "contact_status_cd",
+            "cl_verified_flag",
+            "e_mail_subtype",
+            "e_mail_subtype_cd",
+            "startDate",
+            "startdate_date",
+            "endDate",
+            "updateDateTime",
+            "versionstartdate_date",
+            "email_address_hash",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a146994b373e0836",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "email_id",
+            "email_address",
+            "active_flag",
+            "e_mail_valid_flag",
+            "centaur_flag",
+            "usagetype_nm",
+            "usagetype_cd",
+            "contact_status",
+            "contact_status_cd",
+            "cl_verified_flag",
+            "e_mail_subtype",
+            "e_mail_subtype_cd",
+            "startDate",
+            "startdate_date",
+            "endDate",
+            "updateDateTime",
+            "versionstartdate_date",
+            "email_address_hash",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_617775e42cae743f",
+      "relation_name": "electronic_addresses_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/epk_client_email.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to_new",
+        "active_flag_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "hashf",
+        "epk_id",
+        "key",
+        "email_id",
+        "email_address",
+        "active_flag",
+        "e_mail_valid_flag",
+        "centaur_flag",
+        "usagetype_nm",
+        "usagetype_cd",
+        "contact_status",
+        "contact_status_cd",
+        "cl_verified_flag",
+        "e_mail_subtype",
+        "e_mail_subtype_cd",
+        "startDate",
+        "startdate_date",
+        "endDate",
+        "updateDateTime",
+        "versionstartdate_date",
+        "email_address_hash",
+        "rn_key"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4070acd69df5a6a5",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "email_id",
+            "email_address",
+            "active_flag",
+            "e_mail_valid_flag",
+            "centaur_flag",
+            "usagetype_nm",
+            "usagetype_cd",
+            "contact_status",
+            "contact_status_cd",
+            "cl_verified_flag",
+            "e_mail_subtype",
+            "e_mail_subtype_cd",
+            "startDate",
+            "startdate_date",
+            "endDate",
+            "updateDateTime",
+            "versionstartdate_date",
+            "email_address_hash",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a146994b373e0836",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "email_id",
+            "email_address",
+            "active_flag",
+            "e_mail_valid_flag",
+            "centaur_flag",
+            "usagetype_nm",
+            "usagetype_cd",
+            "contact_status",
+            "contact_status_cd",
+            "cl_verified_flag",
+            "e_mail_subtype",
+            "e_mail_subtype_cd",
+            "startDate",
+            "startdate_date",
+            "endDate",
+            "updateDateTime",
+            "versionstartdate_date",
+            "email_address_hash",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_c449df9cefb18bf7",
+      "relation_name": "electronic_addresses_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/epk_client_email.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to_new",
+        "active_flag_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "hashf",
+        "epk_id",
+        "key",
+        "email_id",
+        "email_address",
+        "active_flag",
+        "e_mail_valid_flag",
+        "centaur_flag",
+        "usagetype_nm",
+        "usagetype_cd",
+        "contact_status",
+        "contact_status_cd",
+        "cl_verified_flag",
+        "e_mail_subtype",
+        "e_mail_subtype_cd",
+        "startDate",
+        "startdate_date",
+        "endDate",
+        "updateDateTime",
+        "versionstartdate_date",
+        "email_address_hash",
+        "rn_key"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4070acd69df5a6a5",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "email_id",
+            "email_address",
+            "active_flag",
+            "e_mail_valid_flag",
+            "centaur_flag",
+            "usagetype_nm",
+            "usagetype_cd",
+            "contact_status",
+            "contact_status_cd",
+            "cl_verified_flag",
+            "e_mail_subtype",
+            "e_mail_subtype_cd",
+            "startDate",
+            "startdate_date",
+            "endDate",
+            "updateDateTime",
+            "versionstartdate_date",
+            "email_address_hash",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a146994b373e0836",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "hashf",
+            "epk_id",
+            "key",
+            "email_id",
+            "email_address",
+            "active_flag",
+            "e_mail_valid_flag",
+            "centaur_flag",
+            "usagetype_nm",
+            "usagetype_cd",
+            "contact_status",
+            "contact_status_cd",
+            "cl_verified_flag",
+            "e_mail_subtype",
+            "e_mail_subtype_cd",
+            "startDate",
+            "startdate_date",
+            "endDate",
+            "updateDateTime",
+            "versionstartdate_date",
+            "email_address_hash",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_7b633f9fb2131bc1",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/stg_epk_email_contact_contactflag_aggr.sql",
+      "output_columns": [
+        "epk_id",
+        "email_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4e098f0e0f2d9589",
+          "output_columns": [
+            "epk_id",
+            "email_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b41f07ee4a7d9f8c",
+          "output_columns": [
+            "epk_id",
+            "email_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_8fe3e34eb8aa58a5",
+      "relation_name": "reorg_dates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email/stg_epk_email_contact_contactflag_bv.sql",
+      "output_columns": [
+        "start_dt_new",
+        "end_dt_new",
+        "active_contact_flag_new",
+        "enddate_new",
+        "versionstartdate_new",
+        "min_st_date",
+        "min_versionstartdate",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "rn_key",
+        "rn_snp_hist",
+        "key",
+        "startdate",
+        "updateDateTime",
+        "versionstartdate",
+        "enddate",
+        "flag_id",
+        "epk_id",
+        "email_id",
+        "active_contact_flag",
+        "usagetype",
+        "flagtype",
+        "ctl_validfrom",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5eefe7526e3f3c0a",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "active_contact_flag_new",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "rn_snp_hist",
+            "key",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "flag_id",
+            "epk_id",
+            "email_id",
+            "active_contact_flag",
+            "usagetype",
+            "flagtype",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_95621bdae6b51a0e",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "active_contact_flag_new",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "rn_snp_hist",
+            "key",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "flag_id",
+            "epk_id",
+            "email_id",
+            "active_contact_flag",
+            "usagetype",
+            "flagtype",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_ac80e6b0e19fe27f",
+      "relation_name": "reorg_dates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_email_flags/epk_client_email_flags.sql",
+      "output_columns": [
+        "start_dt_new",
+        "end_dt_new",
+        "active_contact_flag_new",
+        "enddate_new",
+        "versionstartdate_new",
+        "min_st_date",
+        "min_versionstartdate",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "rn_key",
+        "rn_snp_hist",
+        "key",
+        "startdate",
+        "updateDateTime",
+        "versionstartdate",
+        "enddate",
+        "flag_id",
+        "epk_id",
+        "email_id",
+        "active_contact_flag",
+        "usagetype",
+        "flagtype",
+        "ctl_validfrom",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_eff3652aa7063234",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "active_contact_flag_new",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "rn_snp_hist",
+            "key",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "flag_id",
+            "epk_id",
+            "email_id",
+            "active_contact_flag",
+            "usagetype",
+            "flagtype",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5459b716d84ff3b2",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "active_contact_flag_new",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "rn_snp_hist",
+            "key",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "flag_id",
+            "epk_id",
+            "email_id",
+            "active_contact_flag",
+            "usagetype",
+            "flagtype",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_add2bbb629d8d284",
+      "relation_name": "unioned",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/stg_epk_phonenumber_rozn_mnp_hist_final.sql",
+      "output_columns": [
+        "num",
+        "telecom_code",
+        "row_actual_date_from",
+        "row_actual_date_to"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_042b02cc8f4ba75d",
+          "output_columns": [
+            "num",
+            "telecom_code",
+            "row_actual_date_from",
+            "row_actual_date_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_53ae606b25bfbc78",
+          "output_columns": [
+            "num",
+            "telecom_code",
+            "row_actual_date_from",
+            "row_actual_date_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_6a464e30b12db2d0",
+      "relation_name": "reorg_dates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber_flags/epk_client_phonenumber_flags.sql",
+      "output_columns": [
+        "start_dt_new",
+        "end_dt_new",
+        "new_active_contact_flag",
+        "enddate_new",
+        "versionstartdate_new",
+        "min_st_date",
+        "min_versionstartdate_date",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "epk_id",
+        "key",
+        "phone_id",
+        "flag_id",
+        "contact_cd",
+        "contact_type",
+        "flag_cd",
+        "flag_name",
+        "startdate",
+        "updateDateTime",
+        "versionstartdate",
+        "enddate",
+        "flag_group_cd",
+        "flag_group",
+        "active_flag",
+        "active_contact_flag",
+        "active_client_flag",
+        "startdate_date",
+        "versionstartdate_date",
+        "priority",
+        "ctl_validfrom",
+        "rn_snp_hist",
+        "rn_key"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_167d3636cbd66687",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "new_active_contact_flag",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "epk_id",
+            "key",
+            "phone_id",
+            "flag_id",
+            "contact_cd",
+            "contact_type",
+            "flag_cd",
+            "flag_name",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "flag_group_cd",
+            "flag_group",
+            "active_flag",
+            "active_contact_flag",
+            "active_client_flag",
+            "startdate_date",
+            "versionstartdate_date",
+            "priority",
+            "ctl_validfrom",
+            "rn_snp_hist",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_056e13ab9b3adf9a",
+          "output_columns": [
+            "start_dt_new",
+            "end_dt_new",
+            "new_active_contact_flag",
+            "enddate_new",
+            "versionstartdate_new",
+            "min_st_date",
+            "min_versionstartdate_date",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "epk_id",
+            "key",
+            "phone_id",
+            "flag_id",
+            "contact_cd",
+            "contact_type",
+            "flag_cd",
+            "flag_name",
+            "startdate",
+            "updateDateTime",
+            "versionstartdate",
+            "enddate",
+            "flag_group_cd",
+            "flag_group",
+            "active_flag",
+            "active_contact_flag",
+            "active_client_flag",
+            "startdate_date",
+            "versionstartdate_date",
+            "priority",
+            "ctl_validfrom",
+            "rn_snp_hist",
+            "rn_key"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_a0b78847135f1999",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_lnk_host_id/epk_lnk_host_id.sql",
+      "output_columns": [
+        "external_system",
+        "external_system_client_id",
+        "version_date"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0dc4ab8dc4b5ff94",
+          "output_columns": [
+            "external_system",
+            "external_system_client_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8d411c595ab4ce7d",
+          "output_columns": [
+            "external_system",
+            "external_system_client_id",
+            "version_date"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_87708f39a97b71f1",
+      "relation_name": "lnk_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_lnk_host_id/epk_lnk_host_id.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to",
+        "new_active_flag",
+        "min_st_date",
+        "min_versionstartdate",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "rn_key",
+        "version_per_day_number",
+        "epk_id",
+        "key",
+        "external_system",
+        "external_system_name",
+        "external_system_client_id",
+        "startdate",
+        "updatedatetime",
+        "versionstartdate_date",
+        "enddate",
+        "cl_verified_flag",
+        "partystatus",
+        "identifier_type_cd",
+        "identifier_type",
+        "active_flag",
+        "centaur_flag",
+        "cl_startdate",
+        "ctl_validfrom",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d5cc9b2bb5d519aa",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to",
+            "new_active_flag",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "version_per_day_number",
+            "epk_id",
+            "key",
+            "external_system",
+            "external_system_name",
+            "external_system_client_id",
+            "startdate",
+            "updatedatetime",
+            "versionstartdate_date",
+            "enddate",
+            "cl_verified_flag",
+            "partystatus",
+            "identifier_type_cd",
+            "identifier_type",
+            "active_flag",
+            "centaur_flag",
+            "cl_startdate",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_eae99319d80b9adc",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to",
+            "new_active_flag",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "version_per_day_number",
+            "epk_id",
+            "key",
+            "external_system",
+            "external_system_name",
+            "external_system_client_id",
+            "startdate",
+            "updatedatetime",
+            "versionstartdate_date",
+            "enddate",
+            "cl_verified_flag",
+            "partystatus",
+            "identifier_type_cd",
+            "identifier_type",
+            "active_flag",
+            "centaur_flag",
+            "cl_startdate",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_79fe64a8fc5895ae",
+      "relation_name": "lnk_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_lnk_host_id/epk_lnk_host_id.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to",
+        "new_active_flag",
+        "min_st_date",
+        "min_versionstartdate",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "rn_key",
+        "version_per_day_number",
+        "epk_id",
+        "key",
+        "external_system",
+        "external_system_name",
+        "external_system_client_id",
+        "startdate",
+        "updatedatetime",
+        "versionstartdate_date",
+        "enddate",
+        "cl_verified_flag",
+        "partystatus",
+        "identifier_type_cd",
+        "identifier_type",
+        "active_flag",
+        "centaur_flag",
+        "cl_startdate",
+        "ctl_validfrom",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d5cc9b2bb5d519aa",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to",
+            "new_active_flag",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "version_per_day_number",
+            "epk_id",
+            "key",
+            "external_system",
+            "external_system_name",
+            "external_system_client_id",
+            "startdate",
+            "updatedatetime",
+            "versionstartdate_date",
+            "enddate",
+            "cl_verified_flag",
+            "partystatus",
+            "identifier_type_cd",
+            "identifier_type",
+            "active_flag",
+            "centaur_flag",
+            "cl_startdate",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_eae99319d80b9adc",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to",
+            "new_active_flag",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "version_per_day_number",
+            "epk_id",
+            "key",
+            "external_system",
+            "external_system_name",
+            "external_system_client_id",
+            "startdate",
+            "updatedatetime",
+            "versionstartdate_date",
+            "enddate",
+            "cl_verified_flag",
+            "partystatus",
+            "identifier_type_cd",
+            "identifier_type",
+            "active_flag",
+            "centaur_flag",
+            "cl_startdate",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_de6f8c4545f3470e",
+      "relation_name": "lnk_bv",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_lnk_host_id/epk_lnk_host_id.sql",
+      "output_columns": [
+        "row_actual_from",
+        "row_actual_to",
+        "new_active_flag",
+        "min_st_date",
+        "min_versionstartdate",
+        "min_rn_key",
+        "samehash_rn",
+        "grp",
+        "st_date",
+        "rn_key",
+        "version_per_day_number",
+        "epk_id",
+        "key",
+        "external_system",
+        "external_system_name",
+        "external_system_client_id",
+        "startdate",
+        "updatedatetime",
+        "versionstartdate_date",
+        "enddate",
+        "cl_verified_flag",
+        "partystatus",
+        "identifier_type_cd",
+        "identifier_type",
+        "active_flag",
+        "centaur_flag",
+        "cl_startdate",
+        "ctl_validfrom",
+        "priority"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d5cc9b2bb5d519aa",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to",
+            "new_active_flag",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "version_per_day_number",
+            "epk_id",
+            "key",
+            "external_system",
+            "external_system_name",
+            "external_system_client_id",
+            "startdate",
+            "updatedatetime",
+            "versionstartdate_date",
+            "enddate",
+            "cl_verified_flag",
+            "partystatus",
+            "identifier_type_cd",
+            "identifier_type",
+            "active_flag",
+            "centaur_flag",
+            "cl_startdate",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_eae99319d80b9adc",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to",
+            "new_active_flag",
+            "min_st_date",
+            "min_versionstartdate",
+            "min_rn_key",
+            "samehash_rn",
+            "grp",
+            "st_date",
+            "rn_key",
+            "version_per_day_number",
+            "epk_id",
+            "key",
+            "external_system",
+            "external_system_name",
+            "external_system_client_id",
+            "startdate",
+            "updatedatetime",
+            "versionstartdate_date",
+            "enddate",
+            "cl_verified_flag",
+            "partystatus",
+            "identifier_type_cd",
+            "identifier_type",
+            "active_flag",
+            "centaur_flag",
+            "cl_startdate",
+            "ctl_validfrom",
+            "priority"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1e0caab9f1739f3a",
+      "relation_name": "validdates",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_persdata_mapping/epk_persdata_mapping.sql",
+      "output_columns": [
+        "epk_id",
+        "row_actual_from"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_80ab53e0f25d1e3f",
+          "output_columns": [
+            "epk_id",
+            "row_actual_from"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_10c871f313e803d3",
+          "output_columns": [
+            "epk_id",
+            "row_actual_from"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7788de8407d15e12",
+          "output_columns": [
+            "epk_id",
+            "row_actual_from"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4ca1351f7d086386",
+          "output_columns": [
+            "epk_id",
+            "row_actual_from"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_23a03abdcfb1ee53",
+      "relation_name": "t",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_phone_mapping/epk_phone_mapping.sql",
+      "output_columns": [
+        "epk_id",
+        "contact",
+        "trust_lvl",
+        "row_actual_from",
+        "row_actual_to"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7cb9bc672de4adb3",
+          "output_columns": [
+            "epk_id",
+            "contact",
+            "trust_lvl",
+            "row_actual_from",
+            "row_actual_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_65eb94c0cefa8727",
+          "output_columns": [
+            "epk_id",
+            "contact",
+            "trust_lvl",
+            "row_actual_from",
+            "row_actual_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e484ccb26b894d6d",
+          "output_columns": [
+            "epk_id",
+            "contact",
+            "trust_lvl",
+            "row_actual_from",
+            "row_actual_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_8a811795b31fd739",
+      "relation_name": "t",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epkid_2_epkid/epkid_2_epkid.sql",
+      "output_columns": [
+        "epk_id",
+        "merge_epk_id",
+        "merge_dt",
+        "startdate"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e6cc40118105caad",
+          "output_columns": [
+            "epk_id",
+            "merge_epk_id",
+            "merge_dt",
+            "startdate"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7509f82e2b993008",
+          "output_columns": [
+            "epk_id",
+            "merge_epk_id",
+            "merge_dt",
+            "startdate"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_d7756776d45e7a63",
+      "relation_name": "t1",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epkid_2_finalepkid/epkid_2_finalepkid.sql",
+      "output_columns": [
+        "actual_epk_id",
+        "merge_epk_id",
+        "row_actual_from",
+        "last_merge_dt"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_90d1bbbe77d03050",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b937d190ccc1c2e6",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_c688c11662780459",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_f1ddeab519069de5",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 5,
+          "scope_id": "sql_select_scope_datamart_profile_fl_6ffe52645c9dc144",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 6,
+          "scope_id": "sql_select_scope_datamart_profile_fl_05601ba26fca1fba",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 7,
+          "scope_id": "sql_select_scope_datamart_profile_fl_c444d440da91bc68",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 8,
+          "scope_id": "sql_select_scope_datamart_profile_fl_24ae1c8aa4df409f",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 9,
+          "scope_id": "sql_select_scope_datamart_profile_fl_f130c4f485a53410",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 10,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5a95069db61735d0",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 11,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0d69f0aa14543949",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 12,
+          "scope_id": "sql_select_scope_datamart_profile_fl_da0a5a9f6f18b0d1",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 13,
+          "scope_id": "sql_select_scope_datamart_profile_fl_bcb9dcb19aadc5c1",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 14,
+          "scope_id": "sql_select_scope_datamart_profile_fl_30ac82fb7421dda0",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 15,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a53c598828be01b2",
+          "output_columns": [
+            "actual_epk_id",
+            "merge_epk_id",
+            "row_actual_from",
+            "last_merge_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_1bfa4d13e69a9d5a",
+      "relation_name": "snp_hist_union",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_client_team_type/t_dim_client_team_type_arc.sql",
+      "output_columns": [
+        "priority",
+        "sid",
+        "name",
+        "description_txt",
+        "lastchangedate",
+        "ctl_validfrom"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e3a4bb57bbd539fe",
+          "output_columns": [
+            "priority",
+            "sid",
+            "name",
+            "description_txt",
+            "lastchangedate",
+            "ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7f9c687f5c76e8e7",
+          "output_columns": [
+            "priority",
+            "sid",
+            "name",
+            "description_txt",
+            "lastchangedate",
+            "ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_b28b3c6e0f6c2d77",
+      "relation_name": "united_records",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_uvsk_client_team/t_dim_uvsk_client_team.sql",
+      "output_columns": [
+        "entity_id",
+        "epk_id",
+        "team_id",
+        "type_id",
+        "create_history_date",
+        "create_date",
+        "status",
+        "key",
+        "start_dt",
+        "end_dt"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_120d7d24f97c6a39",
+          "output_columns": [
+            "entity_id",
+            "epk_id",
+            "team_id",
+            "type_id",
+            "create_history_date",
+            "create_date",
+            "status",
+            "key",
+            "start_dt",
+            "end_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a7ff2959c740023a",
+          "output_columns": [
+            "entity_id",
+            "epk_id",
+            "team_id",
+            "type_id",
+            "create_history_date",
+            "create_date",
+            "status",
+            "key",
+            "start_dt",
+            "end_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_25625e176a8d58fb",
+      "relation_name": "t1",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_dim_uvsk_client_team/t_dim_uvsk_client_team.sql",
+      "output_columns": [
+        "temp_pk",
+        "temp_start_dt"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d33e84fa78ba18bd",
+          "output_columns": [
+            "temp_pk",
+            "temp_start_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_299b62b7faede8ee",
+          "output_columns": [
+            "temp_pk",
+            "temp_start_dt"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_f3b990398bbc7c92",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_emigration_bv_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "em_id",
+        "versionstartdate_date",
+        "emigr_active_flag",
+        "country_key",
+        "emigrationserviceattributes_key",
+        "startdate",
+        "versionstartdate",
+        "enddate",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_695a9a0bfcaf7812",
+          "output_columns": [
+            "epk_id",
+            "em_id",
+            "versionstartdate_date",
+            "emigr_active_flag",
+            "country_key",
+            "emigrationserviceattributes_key",
+            "startdate",
+            "versionstartdate",
+            "enddate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b1f6b51fbd79985e",
+          "output_columns": [
+            "epk_id",
+            "em_id",
+            "versionstartdate_date",
+            "emigr_active_flag",
+            "country_key",
+            "emigrationserviceattributes_key",
+            "startdate",
+            "versionstartdate",
+            "enddate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_d834ff0306db5891",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_individual_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "key",
+        "versionstartdate_date",
+        "active_flag",
+        "partystatus_key",
+        "countryresident_key",
+        "startdate",
+        "versionstartdate",
+        "enddate",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_7aa5278e95032165",
+          "output_columns": [
+            "epk_id",
+            "key",
+            "versionstartdate_date",
+            "active_flag",
+            "partystatus_key",
+            "countryresident_key",
+            "startdate",
+            "versionstartdate",
+            "enddate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_be645012cc831475",
+          "output_columns": [
+            "epk_id",
+            "key",
+            "versionstartdate_date",
+            "active_flag",
+            "partystatus_key",
+            "countryresident_key",
+            "startdate",
+            "versionstartdate",
+            "enddate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_984604926ea8a2c3",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_individualname_bv_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "name_id",
+        "versionstartdate_date",
+        "fio_active_flag",
+        "last_name",
+        "first_name",
+        "middle_name",
+        "nametype_key",
+        "serviceattributes_key",
+        "language_key",
+        "startdate",
+        "versionstartdate",
+        "enddate",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_f50754adc1f15df2",
+          "output_columns": [
+            "epk_id",
+            "name_id",
+            "versionstartdate_date",
+            "fio_active_flag",
+            "last_name",
+            "first_name",
+            "middle_name",
+            "nametype_key",
+            "serviceattributes_key",
+            "language_key",
+            "startdate",
+            "versionstartdate",
+            "enddate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_15e01daa912f440f",
+          "output_columns": [
+            "epk_id",
+            "name_id",
+            "versionstartdate_date",
+            "fio_active_flag",
+            "last_name",
+            "first_name",
+            "middle_name",
+            "nametype_key",
+            "serviceattributes_key",
+            "language_key",
+            "startdate",
+            "versionstartdate",
+            "enddate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_63f9b637372876f1",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_birthplace_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "bp_value",
+        "bp_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0717834558688b56",
+          "output_columns": [
+            "epk_id",
+            "bp_value",
+            "bp_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ea7f4b4b6689261f",
+          "output_columns": [
+            "epk_id",
+            "bp_value",
+            "bp_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_54c1d0190a82228a",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_currencyresident_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "currencyresident",
+        "resident_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_00621ebdc4602fe9",
+          "output_columns": [
+            "epk_id",
+            "currencyresident",
+            "resident_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_139459f52ba4c149",
+          "output_columns": [
+            "epk_id",
+            "currencyresident",
+            "resident_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_f03c45af4072900b",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_deathinfo_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "di_value",
+        "di_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ae15d3ee68e287b5",
+          "output_columns": [
+            "epk_id",
+            "di_value",
+            "di_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3680f3712e106856",
+          "output_columns": [
+            "epk_id",
+            "di_value",
+            "di_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_58e138853704d4b5",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_distantmanager_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "pon_managercode",
+        "dm_active_flag",
+        "versionstartdate",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_9cbd7dc3f24dd7c4",
+          "output_columns": [
+            "epk_id",
+            "pon_managercode",
+            "dm_active_flag",
+            "versionstartdate",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8f8048fdb84bd55d",
+          "output_columns": [
+            "epk_id",
+            "pon_managercode",
+            "dm_active_flag",
+            "versionstartdate",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_5f1214a41bf382fe",
+      "relation_name": "docs_src_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_docs_bv_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "doc_active_flag",
+        "updatedatetime",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "doc_id",
+        "doc_series",
+        "doc_number",
+        "doc_valid_flag",
+        "doc_priority",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ef7a344e1425a401",
+          "output_columns": [
+            "epk_id",
+            "doc_active_flag",
+            "updatedatetime",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "doc_id",
+            "doc_series",
+            "doc_number",
+            "doc_valid_flag",
+            "doc_priority",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8043b277bea8f292",
+          "output_columns": [
+            "epk_id",
+            "doc_active_flag",
+            "updatedatetime",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "doc_id",
+            "doc_series",
+            "doc_number",
+            "doc_valid_flag",
+            "doc_priority",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_283dee623fc61c2f",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_domain_client.sql",
+      "output_columns": [
+        "epk_id",
+        "lastchangedate",
+        "change_date",
+        "segment",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3b05fbc398bf4e07",
+          "output_columns": [
+            "epk_id",
+            "lastchangedate",
+            "change_date",
+            "segment",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_c8895694e2bb066e",
+          "output_columns": [
+            "epk_id",
+            "lastchangedate",
+            "change_date",
+            "segment",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_b21f439cd68c7297",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_education_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "ed_value",
+        "ed_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_20552f5824aa59ca",
+          "output_columns": [
+            "epk_id",
+            "ed_value",
+            "ed_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_13ea163d4eb3e006",
+          "output_columns": [
+            "epk_id",
+            "ed_value",
+            "ed_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_fcc9f05a08ed3be0",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_literacy_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "literacy_active_flag",
+        "literacy_value",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_9afd0381c93a09fe",
+          "output_columns": [
+            "epk_id",
+            "literacy_active_flag",
+            "literacy_value",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8be7d4a1ef46fb01",
+          "output_columns": [
+            "epk_id",
+            "literacy_active_flag",
+            "literacy_value",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_c740d6fc51984cb5",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_maritalstatus_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "ms_value",
+        "ms_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_372358249e6ab463",
+          "output_columns": [
+            "epk_id",
+            "ms_value",
+            "ms_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_0e85046b43de78f7",
+          "output_columns": [
+            "epk_id",
+            "ms_value",
+            "ms_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_e0f9b29da5e11a52",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_relgroups_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "partygroup_active_flag",
+        "partygroup",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_1c028599a376396a",
+          "output_columns": [
+            "epk_id",
+            "partygroup_active_flag",
+            "partygroup",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d670f64509208e1f",
+          "output_columns": [
+            "epk_id",
+            "partygroup_active_flag",
+            "partygroup",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 3,
+          "scope_id": "sql_select_scope_datamart_profile_fl_15569cd9be1b5812",
+          "output_columns": [
+            "epk_id",
+            "partygroup_active_flag",
+            "partygroup",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 4,
+          "scope_id": "sql_select_scope_datamart_profile_fl_39e5f0c3ad678397",
+          "output_columns": [
+            "epk_id",
+            "partygroup_active_flag",
+            "partygroup",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_24cdd59019cf990a",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_riskprofile_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "updatedatetime",
+        "investinghorizon",
+        "investorriskprofilescore",
+        "riskprofile_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_146600b54df6c8c4",
+          "output_columns": [
+            "epk_id",
+            "updatedatetime",
+            "investinghorizon",
+            "investorriskprofilescore",
+            "riskprofile_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_75b58a55bbf05141",
+          "output_columns": [
+            "epk_id",
+            "updatedatetime",
+            "investinghorizon",
+            "investorriskprofilescore",
+            "riskprofile_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_652cf1bdc92abcc3",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t1_selfemployment_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "selfemployment_nflag",
+        "selfemployment_active_flag",
+        "startdate_date",
+        "versionstartdate",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_48b7509567210d09",
+          "output_columns": [
+            "epk_id",
+            "selfemployment_nflag",
+            "selfemployment_active_flag",
+            "startdate_date",
+            "versionstartdate",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_348a248e9004e08a",
+          "output_columns": [
+            "epk_id",
+            "selfemployment_nflag",
+            "selfemployment_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_a3c56aaf3b1784f5",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t3_birthdate_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "birth_dt",
+        "birth_active_flag",
+        "serviceattributes_key",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_92deb39021c73f1c",
+          "output_columns": [
+            "epk_id",
+            "birth_dt",
+            "birth_active_flag",
+            "serviceattributes_key",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_9632f5c76951c12a",
+          "output_columns": [
+            "epk_id",
+            "birth_dt",
+            "birth_active_flag",
+            "serviceattributes_key",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_085907c20941a6b6",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t3_deathdate_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "death_dt",
+        "death_flag",
+        "death_active_flag",
+        "serviceattributes_key",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_22df796e5af29b1c",
+          "output_columns": [
+            "epk_id",
+            "death_dt",
+            "death_flag",
+            "death_active_flag",
+            "serviceattributes_key",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_bd05d61ce9a1f585",
+          "output_columns": [
+            "epk_id",
+            "death_dt",
+            "death_flag",
+            "death_active_flag",
+            "serviceattributes_key",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_f0f2d2fe580a2fb0",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/interim_epk_client_t3_gender_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "gender_cd",
+        "gender_active_flag",
+        "serviceattributes_key",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a948373cac386ec1",
+          "output_columns": [
+            "epk_id",
+            "gender_cd",
+            "gender_active_flag",
+            "serviceattributes_key",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_be7f878e449dc76f",
+          "output_columns": [
+            "epk_id",
+            "gender_cd",
+            "gender_active_flag",
+            "serviceattributes_key",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_8edf9b54160206c6",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_real_estate/t_dim_real_estate_contactflags.sql",
+      "output_columns": [
+        "sid",
+        "flag_active_flag",
+        "flag_code",
+        "versionstartdate_date",
+        "startdate_date",
+        "versionstartdate",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_3bc9b0eaf631ba7f",
+          "output_columns": [
+            "sid",
+            "flag_active_flag",
+            "flag_code",
+            "versionstartdate_date",
+            "startdate_date",
+            "versionstartdate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_66edfde177a00452",
+          "output_columns": [
+            "sid",
+            "flag_active_flag",
+            "flag_code",
+            "versionstartdate_date",
+            "startdate_date",
+            "versionstartdate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_0cbd891ceaffcd5b",
+      "relation_name": "cte_united_snp_hist_realestate",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_real_estate/t_dim_real_estate_realestate.sql",
+      "output_columns": [
+        "rs_key",
+        "re_active_flag",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "area",
+        "cadastralcost",
+        "cadastralnumber",
+        "cadastralvaluedate",
+        "constructionyear",
+        "commisioningyear",
+        "floorscount",
+        "isrestrictive",
+        "latitude",
+        "longitude",
+        "numberofowners",
+        "registrationdate",
+        "rooms",
+        "sharesize",
+        "realestateaddress_key",
+        "renovation_key",
+        "accomodationtype_key",
+        "buildingassignment_key",
+        "burdentype_key",
+        "landcategory_key",
+        "ownershiptype_key",
+        "realestatetypelocal_key",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_ddea80f2834a5020",
+          "output_columns": [
+            "rs_key",
+            "re_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "area",
+            "cadastralcost",
+            "cadastralnumber",
+            "cadastralvaluedate",
+            "constructionyear",
+            "commisioningyear",
+            "floorscount",
+            "isrestrictive",
+            "latitude",
+            "longitude",
+            "numberofowners",
+            "registrationdate",
+            "rooms",
+            "sharesize",
+            "realestateaddress_key",
+            "renovation_key",
+            "accomodationtype_key",
+            "buildingassignment_key",
+            "burdentype_key",
+            "landcategory_key",
+            "ownershiptype_key",
+            "realestatetypelocal_key",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e06fbe8d1da61db5",
+          "output_columns": [
+            "rs_key",
+            "re_active_flag",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "area",
+            "cadastralcost",
+            "cadastralnumber",
+            "cadastralvaluedate",
+            "constructionyear",
+            "commisioningyear",
+            "floorscount",
+            "isrestrictive",
+            "latitude",
+            "longitude",
+            "numberofowners",
+            "registrationdate",
+            "rooms",
+            "sharesize",
+            "realestateaddress_key",
+            "renovation_key",
+            "accomodationtype_key",
+            "buildingassignment_key",
+            "burdentype_key",
+            "landcategory_key",
+            "ownershiptype_key",
+            "realestatetypelocal_key",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_d665198decbae8e4",
+      "relation_name": "cte_united_snp_hist_vehicle",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_interim.sql",
+      "output_columns": [
+        "key",
+        "bodystyle_key",
+        "transmissiontype_key",
+        "vehiclecategory_key",
+        "vehiclemake_key",
+        "vehiclemodel_key",
+        "enginetype_key",
+        "mileage_key",
+        "drivetype_key",
+        "versionstartdate",
+        "versionstartdate_date",
+        "active_flag",
+        "vehicle_ownership_flag",
+        "engine_volume_qty",
+        "engine_power_hp_val",
+        "engine_power_kwt_qty",
+        "register_num",
+        "right_hand_drive_flag",
+        "vehicle_body_num",
+        "vehicle_chassis_num",
+        "vehicle_identification_num",
+        "vehicle_production_dt",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_a204553a2ef12ac3",
+          "output_columns": [
+            "key",
+            "bodystyle_key",
+            "transmissiontype_key",
+            "vehiclecategory_key",
+            "vehiclemake_key",
+            "vehiclemodel_key",
+            "enginetype_key",
+            "mileage_key",
+            "drivetype_key",
+            "versionstartdate",
+            "versionstartdate_date",
+            "active_flag",
+            "vehicle_ownership_flag",
+            "engine_volume_qty",
+            "engine_power_hp_val",
+            "engine_power_kwt_qty",
+            "register_num",
+            "right_hand_drive_flag",
+            "vehicle_body_num",
+            "vehicle_chassis_num",
+            "vehicle_identification_num",
+            "vehicle_production_dt",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_35167b758941e1fc",
+          "output_columns": [
+            "key",
+            "bodystyle_key",
+            "transmissiontype_key",
+            "vehiclecategory_key",
+            "vehiclemake_key",
+            "vehiclemodel_key",
+            "enginetype_key",
+            "mileage_key",
+            "drivetype_key",
+            "versionstartdate",
+            "versionstartdate_date",
+            "active_flag",
+            "vehicle_ownership_flag",
+            "engine_volume_qty",
+            "engine_power_hp_val",
+            "engine_power_kwt_qty",
+            "register_num",
+            "right_hand_drive_flag",
+            "vehicle_body_num",
+            "vehicle_chassis_num",
+            "vehicle_identification_num",
+            "vehicle_production_dt",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_fe40601a663921b7",
+      "relation_name": "cte_united_snp_hist",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/t_dim_vehicle/t_dim_vehicle_smartprofileflags.sql",
+      "output_columns": [
+        "sid",
+        "flag_active_flag",
+        "flag_code",
+        "versionstartdate_date",
+        "startdate_date",
+        "versionstartdate",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_654b1f59868d7d43",
+          "output_columns": [
+            "sid",
+            "flag_active_flag",
+            "flag_code",
+            "versionstartdate_date",
+            "startdate_date",
+            "versionstartdate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_d027564193d8ffa8",
+          "output_columns": [
+            "sid",
+            "flag_active_flag",
+            "flag_code",
+            "versionstartdate_date",
+            "startdate_date",
+            "versionstartdate",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_f196f9fceac5e364",
+      "relation_name": "snp_delta",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_citizenship_stg.sql",
+      "output_columns": [
+        "key",
+        "emigrationqualitycode",
+        "ctl_loading"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_e9e219f517bcd883",
+          "output_columns": [
+            "key",
+            "emigrationqualitycode",
+            "ctl_loading"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_f8519e9a7406b2ce",
+          "output_columns": [
+            "key",
+            "emigrationqualitycode",
+            "ctl_loading"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_88dc1f9c756b2247",
+      "relation_name": "snp_delta",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_names_stg.sql",
+      "output_columns": [
+        "key",
+        "fullnamequalitycode",
+        "fullnamerecognitionstatus",
+        "namequalitycode",
+        "patronymicqualitycode",
+        "surnamequalitycode",
+        "confirmedbyoperator",
+        "standardflag",
+        "ctl_loading"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_40b43425ef957913",
+          "output_columns": [
+            "key",
+            "fullnamequalitycode",
+            "fullnamerecognitionstatus",
+            "namequalitycode",
+            "patronymicqualitycode",
+            "surnamequalitycode",
+            "confirmedbyoperator",
+            "standardflag",
+            "ctl_loading"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_4eee05d89eaeed20",
+          "output_columns": [
+            "key",
+            "fullnamequalitycode",
+            "fullnamerecognitionstatus",
+            "namequalitycode",
+            "patronymicqualitycode",
+            "surnamequalitycode",
+            "confirmedbyoperator",
+            "standardflag",
+            "ctl_loading"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_b12e091dce40fc93",
+      "relation_name": "snp_delta",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_docs_bv_stg.sql",
+      "output_columns": [
+        "key",
+        "documentnumberqualitycode",
+        "ctl_loading"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_10ffad7c416092ad",
+          "output_columns": [
+            "key",
+            "documentnumberqualitycode",
+            "ctl_loading"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b6049e5bd4beabaf",
+          "output_columns": [
+            "key",
+            "documentnumberqualitycode",
+            "ctl_loading"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_aeba923bcc819c06",
+      "relation_name": "t1",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_domain_client.sql",
+      "output_columns": [
+        "epk_id",
+        "pon_channel_nflag",
+        "row_actual_from",
+        "row_actual_to"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_72080dff9aef3952",
+          "output_columns": [
+            "epk_id",
+            "pon_channel_nflag",
+            "row_actual_from",
+            "row_actual_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_16818b4292a073ce",
+          "output_columns": [
+            "epk_id",
+            "pon_channel_nflag",
+            "row_actual_from",
+            "row_actual_to"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_75393599cd971dc7",
+      "relation_name": "cte_united_delta",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_relgroups_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "key",
+        "partygroup_active_flag",
+        "partygroup",
+        "versionstartdate",
+        "startdate_date",
+        "versionstartdate_date",
+        "src_ctl_action",
+        "src_ctl_loading",
+        "src_ctl_validfrom",
+        "snp_flag"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_43f6350e6f794153",
+          "output_columns": [
+            "epk_id",
+            "key",
+            "partygroup_active_flag",
+            "partygroup",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_87e23b002cc0dc5f",
+          "output_columns": [
+            "epk_id",
+            "key",
+            "partygroup_active_flag",
+            "partygroup",
+            "versionstartdate",
+            "startdate_date",
+            "versionstartdate_date",
+            "src_ctl_action",
+            "src_ctl_loading",
+            "src_ctl_validfrom",
+            "snp_flag"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_a61a36aa13f03220",
+      "relation_name": "cte_delta_cents",
+      "relation_kind": "cte",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t3_centaurs_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "client_centaur_flag",
+        "record_priority",
+        "source_ctl_validfrom"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_b35ff56f913dc3fb",
+          "output_columns": [
+            "epk_id",
+            "client_centaur_flag",
+            "record_priority",
+            "source_ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_f99f6a56265951f4",
+          "output_columns": [
+            "epk_id",
+            "client_centaur_flag",
+            "record_priority",
+            "source_ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_e41a7225e75c2e8b",
+      "relation_name": "t1",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t3_centaurs_stg.sql",
+      "output_columns": [
+        "epk_id",
+        "client_centaur_flag",
+        "record_priority",
+        "source_ctl_validfrom"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_67ebbeb4928e85c4",
+          "output_columns": [
+            "epk_id",
+            "client_centaur_flag",
+            "record_priority",
+            "source_ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_5b568168ca5f983b",
+          "output_columns": [
+            "epk_id",
+            "client_centaur_flag",
+            "record_priority",
+            "source_ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "expanded_intermediate_wildcard"
+        }
+      ]
+    },
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_49229a2348bd7814",
+      "relation_name": "snp_delta",
+      "relation_kind": "derived",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t3_qc_sattr_stg.sql",
+      "output_columns": [
+        "qc_type",
+        "qc_cd",
+        "key",
+        "ctl_loading",
+        "ctl_validfrom"
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_bac53811dd4aac2b",
+          "output_columns": [
+            "qc_type",
+            "qc_cd",
+            "key",
+            "ctl_loading",
+            "ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_406e1cbec6d15a6f",
+          "output_columns": [
+            "qc_type",
+            "qc_cd",
+            "key",
+            "ctl_loading",
+            "ctl_validfrom"
+          ],
+          "output_contract_status": "complete",
+          "output_contract_basis": "explicit_select_projections"
+        }
+      ]
+    }
+  ],
+  "partial_relations": [
+    {
+      "sql_relation_id": "sql_relation_datamart_profile_fl_d4c2d99ed03c6112",
+      "relation_name": "phonenumber_business_versions",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client_phonenumber/epk_client_phonenumber.sql",
+      "basis": "set_operation_branch_incomplete",
+      "diagnostics": [
+        {
+          "code": "set_operation_branch_incomplete",
+          "branch_ordinal": 1,
+          "details": "partial"
+        },
+        {
+          "code": "set_operation_branch_incomplete",
+          "branch_ordinal": 2,
+          "details": "partial"
+        }
+      ],
+      "branches": [
+        {
+          "branch_ordinal": 1,
+          "scope_id": "sql_select_scope_datamart_profile_fl_edc960601d9f6da7",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag"
+          ],
+          "output_contract_status": "partial",
+          "output_contract_basis": "wildcard_expansion_partial"
+        },
+        {
+          "branch_ordinal": 2,
+          "scope_id": "sql_select_scope_datamart_profile_fl_8af2dd41c58ac874",
+          "output_columns": [
+            "row_actual_from",
+            "row_actual_to_new",
+            "active_flag"
+          ],
+          "output_contract_status": "partial",
+          "output_contract_basis": "wildcard_expansion_partial"
+        }
+      ]
+    }
+  ],
+  "resolved_usage_count": 6,
+  "resolved_by_role": {
+    "projection": 6
+  },
+  "resolved_usages": [
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_0164dad23fabc26c",
+      "column_name": "emigration_dense",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_citizenship.sql",
+      "line_start": 1,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_c5006bd53bec1687",
+        "relation_name": "validdateranges_attrs",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_7d4c8e55236b6119",
+      "column_name": "partygroup",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_relgroups_stg.sql",
+      "line_start": 15,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_72d238af14574ae0",
+        "relation_name": "cte_business_versioned_starts",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "expanded_intermediate_wildcard"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_83107c972b3185ee",
+      "column_name": "partygroup_active_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_relgroups_stg.sql",
+      "line_start": 15,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_72d238af14574ae0",
+        "relation_name": "cte_business_versioned_starts",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "expanded_intermediate_wildcard"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_b67c07c00bcba59d",
+      "column_name": "partygroup",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_relgroups_stg.sql",
+      "line_start": 15,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_72d238af14574ae0",
+        "relation_name": "cte_business_versioned_starts",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "expanded_intermediate_wildcard"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_bd7ddfc9ccd8b2e2",
+      "column_name": "emigration_dist_dense",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_client/stg_epk_client_citizenship.sql",
+      "line_start": 1,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_c5006bd53bec1687",
+        "relation_name": "validdateranges_attrs",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "explicit_select_projections"
+      }
+    },
+    {
+      "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_e9374efd4b04cdaf",
+      "column_name": "partygroup_active_flag",
+      "usage_role": "projection",
+      "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/interim_epk_client_t1_relgroups_stg.sql",
+      "line_start": 15,
+      "before": {
+        "resolution_status": "ambiguous",
+        "resolution_basis": "ambiguous_unqualified",
+        "relation_id": null,
+        "relation_name": null
+      },
+      "after": {
+        "resolution_status": "resolved",
+        "resolution_basis": "unique_complete_intermediate_output_contract",
+        "relation_id": "sql_relation_datamart_profile_fl_72d238af14574ae0",
+        "relation_name": "cte_business_versioned_starts",
+        "relation_kind": "cte",
+        "resolution_contract_status": "complete",
+        "resolution_contract_basis": "expanded_intermediate_wildcard"
+      }
+    }
+  ],
+  "safety_checks": {
+    "usage_id_set_preserved": true,
+    "all_complete_contracts_have_equal_branch_cardinality": true,
+    "first_branch_defines_external_names": true,
+    "all_branches_preserved": true,
+    "cardinality_mismatch_published_as_partial": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "test_run_summary/v1",
+  "component": "static-analysis-runner",
+  "version": "0.9.51",
+  "execution_mode": "all_test_files_in_isolated_groups",
+  "reason": "The monolithic process exceeded the environment time limit without a test failure; the historically order-sensitive workspace file was executed separately.",
+  "groups": [
+    {"name": "base_cli_execution", "passed": 28, "failed": 0, "skipped": 0},
+    {"name": "knowledge_and_physical_pipeline", "passed": 63, "failed": 0, "skipped": 0},
+    {"name": "portfolio_repository_sql", "passed": 51, "failed": 0, "skipped": 0},
+    {"name": "workspace", "passed": 16, "failed": 0, "skipped": 0}
+  ],
+  "total": {"passed": 158, "failed": 0, "skipped": 0}
+}

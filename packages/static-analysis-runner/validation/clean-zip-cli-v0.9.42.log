@@ -1,0 +1,11 @@
+{
+  "catalog_fingerprint": "b32a8b80f962dee8fa00a821d63d77f32c2fc5f7a2f88c5f46af990d7ab1b04c",
+  "current_klc_task_semantic_route_count": 8,
+  "current_manifest_variant_count": 4,
+  "fully_compliant_manifest_count": 0,
+  "markdown": "/tmp/runner0942-clean-execution.md",
+  "next_step": "conceptual_model_evidence_sufficiency/v1",
+  "output": "/tmp/runner0942-clean-execution.json",
+  "schema_version": "analysis_execution_result_catalog/v1",
+  "task_semantic_coupled_variant_count": 3
+}

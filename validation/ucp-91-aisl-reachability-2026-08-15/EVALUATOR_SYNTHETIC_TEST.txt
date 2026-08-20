@@ -1,0 +1,14 @@
+{
+  "schema_version": "ucp-91-structural-diff/v1",
+  "result_sha256": "7e70f204f2ba8a4b19a3a2f0d4d9b2531f4107e0ea58065457f748021c8efc23",
+  "gold_positive_count": 1,
+  "accepted_positive_count": 1,
+  "result_positive_count": 1,
+  "positive_recall": 1.0,
+  "positive_precision": 1.0,
+  "classification_counts": {
+    "accepted_positive": 1,
+    "aligned_unresolved": 1,
+    "ambiguity_preserved": 1
+  }
+}

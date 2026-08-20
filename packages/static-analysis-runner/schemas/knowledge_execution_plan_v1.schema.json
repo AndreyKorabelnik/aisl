@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_execution_plan_v1.schema.json",
+  "title": "Knowledge Execution Plan v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "producer",
+    "scope",
+    "request",
+    "inputs",
+    "graph",
+    "foundation_requirements",
+    "expected_outputs",
+    "status",
+    "semantic_policy",
+    "diagnostics",
+    "next_step",
+    "plan_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "knowledge_execution_plan/v1"
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "component",
+        "version"
+      ],
+      "properties": {
+        "component": {
+          "const": "static-analysis-runner"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "kind",
+        "scope_id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "repository",
+            "workspace",
+            "portfolio"
+          ]
+        },
+        "scope_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "request": {
+      "type": "object",
+      "required": [
+        "knowledge_profile_id",
+        "knowledge_profile_fingerprint",
+        "knowledge_catalog_fingerprint",
+        "knowledge_resolution_plan_fingerprint",
+        "resolved_knowledge_ids"
+      ],
+      "properties": {
+        "knowledge_profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledge_profile_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "knowledge_catalog_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "knowledge_resolution_plan_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "resolved_knowledge_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "knowledge_input_inventory_fingerprint",
+        "core_evidence_contract_catalog_fingerprint",
+        "knowledge_materialization_catalog_fingerprint"
+      ],
+      "properties": {
+        "knowledge_input_inventory_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "core_evidence_contract_catalog_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "knowledge_materialization_catalog_fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "graph": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges",
+        "topological_order",
+        "execution_order"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "node_id",
+              "node_kind",
+              "execution_required"
+            ],
+            "properties": {
+              "node_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "node_kind": {
+                "enum": [
+                  "source_snapshot",
+                  "core_evidence_analyzer",
+                  "typed_evidence_artifact",
+                  "knowledge_artifact",
+                  "knowledge_materialization"
+                ]
+              },
+              "execution_required": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "from",
+              "to",
+              "edge_kind"
+            ],
+            "properties": {
+              "from": {
+                "type": "string",
+                "minLength": 1
+              },
+              "to": {
+                "type": "string",
+                "minLength": 1
+              },
+              "edge_kind": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "topological_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "execution_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "foundation_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_outputs": {
+      "type": "object"
+    },
+    "status": {
+      "type": "object",
+      "required": [
+        "overall",
+        "blocking_diagnostic_count",
+        "execution_node_count"
+      ],
+      "properties": {
+        "overall": {
+          "enum": [
+            "ready",
+            "blocked"
+          ]
+        },
+        "blocking_diagnostic_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "execution_node_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "semantic_policy": {
+      "type": "object",
+      "required": [
+        "evidence_identity",
+        "knowledge_identity",
+        "core_dispatch",
+        "klc_dispatch",
+        "orchestration_semantics"
+      ],
+      "properties": {
+        "evidence_identity": {
+          "const": [
+            "artifact_kind",
+            "schema_version"
+          ]
+        },
+        "knowledge_identity": {
+          "const": [
+            "model_kind",
+            "schema_version",
+            "source_materialization_id"
+          ]
+        },
+        "core_dispatch": {
+          "const": "core_owned_analyzer_registry"
+        },
+        "klc_dispatch": {
+          "const": "materialization_id_to_klc_owned_handler"
+        },
+        "orchestration_semantics": {
+          "const": "knowledge_contracts_only"
+        }
+      },
+      "additionalProperties": false
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "next_step": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_fingerprint": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

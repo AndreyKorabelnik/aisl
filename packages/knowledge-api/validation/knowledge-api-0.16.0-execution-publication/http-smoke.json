@@ -1,0 +1,698 @@
+{
+  "artifacts": {
+    "body": {
+      "items": [
+        {
+          "artifact_id": "knowledge_artifact_0b4a53e81d8ecec77ddb",
+          "capabilities": [
+            "common.code-declared-data-model",
+            "common.code-declared-entities",
+            "common.code-declared-fields",
+            "common.code-declared-inheritance",
+            "common.code-declared-relationships"
+          ],
+          "content_fingerprint": "c62b22572cfb537e18359f8a54adee461581780ff013aa86c5ce2f446c9e0b0c",
+          "coverage": {},
+          "database": {
+            "byte_size": 6828032,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "code-declared-data-model/v1",
+            "sha256": "69cb9f79a39de3c24c2ee7da48fa73b05994aca40e451abbcc7694ec308ea9ce",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 3320,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "63dec966563f31c9bcc9ff0b5bc5598c9609c2af29f369889ad1606b9d8aacbc",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "code-declared-data-model",
+          "schema_version": "code-declared-data-model/v1",
+          "source_materialization_id": "code-declared-data-model"
+        },
+        {
+          "artifact_id": "knowledge_artifact_85e686e23c7509f3dc95",
+          "capabilities": [
+            "common.cross-layer-data-model",
+            "common.effective-data-model"
+          ],
+          "content_fingerprint": "094daaf86d2d16d9f0758981e4802382d27a969e65292a43fd66aa213a4de796",
+          "coverage": {
+            "gap_count": 0,
+            "logical_entity_count": 2,
+            "logical_field_count": 5,
+            "status": "complete",
+            "unmapped_physical_object_count": 0
+          },
+          "database": {
+            "byte_size": 6828032,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "effective-data-model/v1",
+            "sha256": "300243e3ab73dd38b1641239ec76ff737272b65c65edb47a996f2c28a44ae233",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 4605,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "94ece13459c90082829fbd08b01113b2d3aadb628a46591f68e9829a83c5d70b",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "effective-data-model",
+          "schema_version": "effective-data-model/v1",
+          "source_materialization_id": "effective-data-model"
+        },
+        {
+          "artifact_id": "knowledge_artifact_e161263beb0d221ee418",
+          "capabilities": [
+            "common.entity-table-mapping",
+            "common.field-column-mapping",
+            "common.logical-physical-mapping"
+          ],
+          "content_fingerprint": "8674f90557bd937e6043e494b2d07859f0555efe1d39ac5b29ad7c82ceb57aa1",
+          "coverage": {
+            "gap_count": 0,
+            "status": "complete"
+          },
+          "database": {
+            "byte_size": 4993024,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "logical-physical-model-mapping/v1",
+            "sha256": "96d3f6ab897e8a53dab5da5d71775f06a4c8735b12409b6df3acc95ae797a45d",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/003-logical-physical-mapping/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 3518,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "6ad856813e887830903d32cb71d5196165ab1ab37cc938718eb7373833477d76",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/003-logical-physical-mapping/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "logical-physical-model-mapping",
+          "schema_version": "logical-physical-model-mapping/v1",
+          "source_materialization_id": "logical-physical-mapping"
+        },
+        {
+          "artifact_id": "knowledge_artifact_3c898a9ef42c466cbfc8",
+          "capabilities": [
+            "common.cross-layer-data-model",
+            "common.effective-data-model"
+          ],
+          "content_fingerprint": "094daaf86d2d16d9f0758981e4802382d27a969e65292a43fd66aa213a4de796",
+          "coverage": {
+            "gap_count": 0,
+            "logical_entity_count": 2,
+            "logical_field_count": 5,
+            "status": "complete",
+            "unmapped_physical_object_count": 0
+          },
+          "database": {
+            "byte_size": 6828032,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "model-domain-cluster-view/v1",
+            "sha256": "300243e3ab73dd38b1641239ec76ff737272b65c65edb47a996f2c28a44ae233",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 4605,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "94ece13459c90082829fbd08b01113b2d3aadb628a46591f68e9829a83c5d70b",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "model-domain-cluster-view",
+          "schema_version": "model-domain-cluster-view/v1",
+          "source_materialization_id": "effective-data-model"
+        },
+        {
+          "artifact_id": "knowledge_artifact_91442ca8288936d71eda",
+          "capabilities": [
+            "common.physical-model",
+            "common.physical-model.columns",
+            "common.physical-model.gaps",
+            "common.physical-model.keys",
+            "common.physical-model.pdm",
+            "common.physical-model.relationships",
+            "common.physical-model.tables"
+          ],
+          "content_fingerprint": "09348e600e35dee99e82244ba8191db3480782927456b8ed7273b05a61a217c3",
+          "coverage": {},
+          "database": {
+            "byte_size": 4993024,
+            "filename": "knowledge-layer.duckdb",
+            "media_type": "application/vnd.duckdb",
+            "schema_version": "knowledge_layer_physical_model/v1",
+            "sha256": "da1b2fee58c7b714cf020175c478de9c4d3108f45b7ca52557ef9688ddb85990",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/002-physical-model/knowledge-layer/knowledge-layer.duckdb"
+          },
+          "diagnostics": [],
+          "manifest": {
+            "byte_size": 3178,
+            "filename": "knowledge-layer-manifest.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_layer/v1",
+            "sha256": "08da4e45e7494971d1d032f70a00f20d7e7780d96bf7d5776d8a1397d6786383",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/002-physical-model/knowledge-layer/knowledge-layer-manifest.json"
+          },
+          "model_kind": "physical-data-model",
+          "schema_version": "knowledge_layer_physical_model/v1",
+          "source_materialization_id": "physical-model"
+        }
+      ],
+      "page": {
+        "limit": 50,
+        "offset": 0,
+        "total": 5
+      },
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "capabilities": {
+    "body": {
+      "capabilities": [
+        "common.code-declared-data-model",
+        "common.code-declared-entities",
+        "common.code-declared-fields",
+        "common.code-declared-inheritance",
+        "common.code-declared-relationships",
+        "common.cross-layer-data-model",
+        "common.effective-data-model",
+        "common.entity-table-mapping",
+        "common.field-column-mapping",
+        "common.logical-physical-mapping",
+        "common.physical-model",
+        "common.physical-model.columns",
+        "common.physical-model.gaps",
+        "common.physical-model.keys",
+        "common.physical-model.pdm",
+        "common.physical-model.relationships",
+        "common.physical-model.tables"
+      ],
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "coverage": {
+    "body": {
+      "count_basis": "materialized_effective_model_rows",
+      "domains": {
+        "analysis_gaps": {
+          "known_gap_count": 0,
+          "status": "complete",
+          "status_counts": {}
+        },
+        "data_model": {
+          "relationship_count": 1,
+          "status": "complete",
+          "unresolved_relationship_candidate_count": 0
+        },
+        "physical_storage": {
+          "physical_join_observation_count": 1,
+          "requires_interpretation_count": 0,
+          "status": "available",
+          "storage_evidence_relationship_count": 1
+        },
+        "source_facts": {
+          "observed_fact_count": 10,
+          "status": "available"
+        }
+      },
+      "limitations": [],
+      "limitations_total_groups": 0,
+      "limitations_truncated": false,
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "schema_version": "analysis_coverage/v1",
+      "statement": "Coverage is derived from effective-data-model/v1 materialized facts and explicit gaps.",
+      "status": "complete",
+      "summary": {
+        "conflicting_count": 0,
+        "known_gap_count": 0,
+        "not_observed_count": 0,
+        "observed_fact_count": 10,
+        "physical_join_observation_count": 1,
+        "repository_count": 1,
+        "requires_interpretation_count": 0,
+        "unresolved_count": 0,
+        "unsupported_count": 0
+      },
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "effective_tables": {
+    "body": {
+      "items": [
+        {
+          "description": "Effective entity; physical table address_tbl; mapping status matched.",
+          "display_name": null,
+          "field_count": 1,
+          "fields": [
+            {
+              "description": null,
+              "inherited": false,
+              "name": "id",
+              "nullable": null,
+              "type": null
+            }
+          ],
+          "relationship_count": 0,
+          "table_id": "effective_data_model_entity_38725a25af54244343b0",
+          "table_kind": "table",
+          "table_name": "Address"
+        },
+        {
+          "description": "Effective entity; physical table customer_tbl; mapping status matched.",
+          "display_name": null,
+          "field_count": 4,
+          "fields": [
+            {
+              "description": null,
+              "inherited": false,
+              "name": "address",
+              "nullable": null,
+              "type": null
+            },
+            {
+              "description": null,
+              "inherited": false,
+              "name": "computed",
+              "nullable": null,
+              "type": null
+            },
+            {
+              "description": null,
+              "inherited": false,
+              "name": "id",
+              "nullable": null,
+              "type": null
+            },
+            {
+              "description": null,
+              "inherited": false,
+              "name": "name",
+              "nullable": null,
+              "type": null
+            }
+          ],
+          "relationship_count": 1,
+          "table_id": "effective_data_model_entity_37d0b258f790899a5d93",
+          "table_kind": "table",
+          "table_name": "Customer"
+        }
+      ],
+      "page": {
+        "limit": 50,
+        "offset": 0,
+        "total": 2
+      },
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "physical_model": {
+    "body": {
+      "counts": {
+        "columns": 4,
+        "gaps": 0,
+        "keys": 2,
+        "relationships": 1,
+        "tables": 2
+      },
+      "gap_kinds": {},
+      "key_kinds": {
+        "primary": 2
+      },
+      "physical_model_schema_version": "physical-model-query/v1",
+      "relationship_resolution": {
+        "resolved": 1
+      },
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "schema_version": "knowledge_api/v1",
+      "sources": [
+        {
+          "content_fingerprint": "4231b3589f0d6fe557550becaae87b5fa2cc018e2d914dd252124cbd149fc9fe",
+          "core_version": "fixture",
+          "coverage_status": "complete",
+          "gap_count": 0,
+          "manifest_path": "/mnt/data/work_iter3/second-family-e2e/physical-input/manifest.json",
+          "metadata": {
+            "core_version": "fixture",
+            "model_code": "customer",
+            "model_name": "Customer PDM",
+            "model_object_id": "model-customer",
+            "physical_model_source_id": "customer-pdm",
+            "schema_version": "physical-model/v1",
+            "source_file": "customer.pdm",
+            "source_sha256": "32e579f80ac505713c3801e4ed50e9974d34cf6d14e97f46e136a62f2fc7d586"
+          },
+          "model_code": "customer",
+          "model_name": "Customer PDM",
+          "model_object_id": "model-customer",
+          "physical_model_source_id": "customer-pdm",
+          "source_file": "customer.pdm",
+          "source_schema_version": "physical-model/v1",
+          "source_sha256": "32e579f80ac505713c3801e4ed50e9974d34cf6d14e97f46e136a62f2fc7d586"
+        }
+      ],
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "physical_tables": {
+    "body": {
+      "items": [
+        {
+          "column_count": 1,
+          "evidence": {},
+          "inbound_relationship_count": 0,
+          "key_count": 1,
+          "logical_identity": "crm.address_tbl",
+          "model_code": "customer",
+          "model_name": "Customer PDM",
+          "outbound_relationship_count": 1,
+          "package_code_path": [
+            "crm"
+          ],
+          "package_path": [
+            "CRM"
+          ],
+          "pdm_object_id": "ta",
+          "physical_model_source_id": "customer-pdm",
+          "physical_model_table_id": "table-address",
+          "source_file": "customer.pdm",
+          "table_code": "address_tbl",
+          "table_name": "Address"
+        },
+        {
+          "column_count": 3,
+          "evidence": {},
+          "inbound_relationship_count": 1,
+          "key_count": 1,
+          "logical_identity": "crm.customer_tbl",
+          "model_code": "customer",
+          "model_name": "Customer PDM",
+          "outbound_relationship_count": 0,
+          "package_code_path": [
+            "crm"
+          ],
+          "package_path": [
+            "CRM"
+          ],
+          "pdm_object_id": "tc",
+          "physical_model_source_id": "customer-pdm",
+          "physical_model_table_id": "table-customer",
+          "source_file": "customer.pdm",
+          "table_code": "customer_tbl",
+          "table_name": "Customer"
+        }
+      ],
+      "page": {
+        "limit": 50,
+        "offset": 0,
+        "total": 2
+      },
+      "physical_model_schema_version": "physical-model-query/v1",
+      "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "schema_version": "knowledge_api/v1",
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "revisions": {
+    "body": {
+      "items": [
+        {
+          "capabilities": [
+            "common.code-declared-data-model",
+            "common.code-declared-entities",
+            "common.code-declared-fields",
+            "common.code-declared-inheritance",
+            "common.code-declared-relationships",
+            "common.cross-layer-data-model",
+            "common.effective-data-model",
+            "common.entity-table-mapping",
+            "common.field-column-mapping",
+            "common.logical-physical-mapping",
+            "common.physical-model",
+            "common.physical-model.columns",
+            "common.physical-model.gaps",
+            "common.physical-model.keys",
+            "common.physical-model.pdm",
+            "common.physical-model.relationships",
+            "common.physical-model.tables"
+          ],
+          "created_at": "2026-08-05T18:54:43.079073Z",
+          "execution": {
+            "completed_at": "2026-08-05T18:12:24.752941Z",
+            "knowledge_profile_id": "effective-data-model-composition-smoke",
+            "plan_fingerprint": "b734f41123d3db9d27fe5b687b49a3889731bcb16d18ef8529cfc5a21be6b6a5",
+            "result_fingerprint": "80aa46f7a7181a587556ed09beabf2a10e9858a7198aa45965a2ca79279d55c8",
+            "runner_version": "0.9.51",
+            "schema_version": "knowledge_execution_result/v1",
+            "scope_id": "client-profile",
+            "scope_kind": "repository",
+            "semantic_policy": {
+              "capability_publication": "completed_materialization_results_only",
+              "core_dispatch": "artifact_identity_to_core_owned_analyzer",
+              "dual_write": "not_supported",
+              "evidence_registration": "all_validated_core_result_artifacts",
+              "klc_dispatch": "materialization_id_to_klc_owned_handler",
+              "legacy_fallback": "not_supported",
+              "plan_dispatch": "knowledge_execution_plan_topological_order",
+              "task_suite_profile_semantics": "not_used"
+            },
+            "started_at": "2026-08-05T18:12:20.142777Z",
+            "status": "completed"
+          },
+          "execution_result": {
+            "byte_size": 32228,
+            "filename": "knowledge_execution_result.json",
+            "media_type": "application/json",
+            "schema_version": "knowledge_execution_result/v1",
+            "sha256": "b4fe0ef277af499421fafea22e2d6838d2a12e81b0712e5b7a656bad1e703df1",
+            "uri": "file:///mnt/data/work_iter4/verify-final-e2e/knowledge_execution_result.json"
+          },
+          "knowledge_artifacts": [
+            {
+              "artifact_id": "knowledge_artifact_0b4a53e81d8ecec77ddb",
+              "capabilities": [
+                "common.code-declared-data-model",
+                "common.code-declared-entities",
+                "common.code-declared-fields",
+                "common.code-declared-inheritance",
+                "common.code-declared-relationships"
+              ],
+              "content_fingerprint": "c62b22572cfb537e18359f8a54adee461581780ff013aa86c5ce2f446c9e0b0c",
+              "coverage": {},
+              "database": {
+                "byte_size": 6828032,
+                "filename": "knowledge-layer.duckdb",
+                "media_type": "application/vnd.duckdb",
+                "schema_version": "code-declared-data-model/v1",
+                "sha256": "69cb9f79a39de3c24c2ee7da48fa73b05994aca40e451abbcc7694ec308ea9ce",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer.duckdb"
+              },
+              "diagnostics": [],
+              "manifest": {
+                "byte_size": 3320,
+                "filename": "knowledge-layer-manifest.json",
+                "media_type": "application/json",
+                "schema_version": "knowledge_layer/v1",
+                "sha256": "63dec966563f31c9bcc9ff0b5bc5598c9609c2af29f369889ad1606b9d8aacbc",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/001-code-declared-data-model/knowledge-layer/knowledge-layer-manifest.json"
+              },
+              "model_kind": "code-declared-data-model",
+              "schema_version": "code-declared-data-model/v1",
+              "source_materialization_id": "code-declared-data-model"
+            },
+            {
+              "artifact_id": "knowledge_artifact_91442ca8288936d71eda",
+              "capabilities": [
+                "common.physical-model",
+                "common.physical-model.columns",
+                "common.physical-model.gaps",
+                "common.physical-model.keys",
+                "common.physical-model.pdm",
+                "common.physical-model.relationships",
+                "common.physical-model.tables"
+              ],
+              "content_fingerprint": "09348e600e35dee99e82244ba8191db3480782927456b8ed7273b05a61a217c3",
+              "coverage": {},
+              "database": {
+                "byte_size": 4993024,
+                "filename": "knowledge-layer.duckdb",
+                "media_type": "application/vnd.duckdb",
+                "schema_version": "knowledge_layer_physical_model/v1",
+                "sha256": "da1b2fee58c7b714cf020175c478de9c4d3108f45b7ca52557ef9688ddb85990",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/002-physical-model/knowledge-layer/knowledge-layer.duckdb"
+              },
+              "diagnostics": [],
+              "manifest": {
+                "byte_size": 3178,
+                "filename": "knowledge-layer-manifest.json",
+                "media_type": "application/json",
+                "schema_version": "knowledge_layer/v1",
+                "sha256": "08da4e45e7494971d1d032f70a00f20d7e7780d96bf7d5776d8a1397d6786383",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/002-physical-model/knowledge-layer/knowledge-layer-manifest.json"
+              },
+              "model_kind": "physical-data-model",
+              "schema_version": "knowledge_layer_physical_model/v1",
+              "source_materialization_id": "physical-model"
+            },
+            {
+              "artifact_id": "knowledge_artifact_e161263beb0d221ee418",
+              "capabilities": [
+                "common.entity-table-mapping",
+                "common.field-column-mapping",
+                "common.logical-physical-mapping"
+              ],
+              "content_fingerprint": "8674f90557bd937e6043e494b2d07859f0555efe1d39ac5b29ad7c82ceb57aa1",
+              "coverage": {
+                "gap_count": 0,
+                "status": "complete"
+              },
+              "database": {
+                "byte_size": 4993024,
+                "filename": "knowledge-layer.duckdb",
+                "media_type": "application/vnd.duckdb",
+                "schema_version": "logical-physical-model-mapping/v1",
+                "sha256": "96d3f6ab897e8a53dab5da5d71775f06a4c8735b12409b6df3acc95ae797a45d",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/003-logical-physical-mapping/knowledge-layer/knowledge-layer.duckdb"
+              },
+              "diagnostics": [],
+              "manifest": {
+                "byte_size": 3518,
+                "filename": "knowledge-layer-manifest.json",
+                "media_type": "application/json",
+                "schema_version": "knowledge_layer/v1",
+                "sha256": "6ad856813e887830903d32cb71d5196165ab1ab37cc938718eb7373833477d76",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/003-logical-physical-mapping/knowledge-layer/knowledge-layer-manifest.json"
+              },
+              "model_kind": "logical-physical-model-mapping",
+              "schema_version": "logical-physical-model-mapping/v1",
+              "source_materialization_id": "logical-physical-mapping"
+            },
+            {
+              "artifact_id": "knowledge_artifact_85e686e23c7509f3dc95",
+              "capabilities": [
+                "common.cross-layer-data-model",
+                "common.effective-data-model"
+              ],
+              "content_fingerprint": "094daaf86d2d16d9f0758981e4802382d27a969e65292a43fd66aa213a4de796",
+              "coverage": {
+                "gap_count": 0,
+                "logical_entity_count": 2,
+                "logical_field_count": 5,
+                "status": "complete",
+                "unmapped_physical_object_count": 0
+              },
+              "database": {
+                "byte_size": 6828032,
+                "filename": "knowledge-layer.duckdb",
+                "media_type": "application/vnd.duckdb",
+                "schema_version": "effective-data-model/v1",
+                "sha256": "300243e3ab73dd38b1641239ec76ff737272b65c65edb47a996f2c28a44ae233",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer.duckdb"
+              },
+              "diagnostics": [],
+              "manifest": {
+                "byte_size": 4605,
+                "filename": "knowledge-layer-manifest.json",
+                "media_type": "application/json",
+                "schema_version": "knowledge_layer/v1",
+                "sha256": "94ece13459c90082829fbd08b01113b2d3aadb628a46591f68e9829a83c5d70b",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer-manifest.json"
+              },
+              "model_kind": "effective-data-model",
+              "schema_version": "effective-data-model/v1",
+              "source_materialization_id": "effective-data-model"
+            },
+            {
+              "artifact_id": "knowledge_artifact_3c898a9ef42c466cbfc8",
+              "capabilities": [
+                "common.cross-layer-data-model",
+                "common.effective-data-model"
+              ],
+              "content_fingerprint": "094daaf86d2d16d9f0758981e4802382d27a969e65292a43fd66aa213a4de796",
+              "coverage": {
+                "gap_count": 0,
+                "logical_entity_count": 2,
+                "logical_field_count": 5,
+                "status": "complete",
+                "unmapped_physical_object_count": 0
+              },
+              "database": {
+                "byte_size": 6828032,
+                "filename": "knowledge-layer.duckdb",
+                "media_type": "application/vnd.duckdb",
+                "schema_version": "model-domain-cluster-view/v1",
+                "sha256": "300243e3ab73dd38b1641239ec76ff737272b65c65edb47a996f2c28a44ae233",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer.duckdb"
+              },
+              "diagnostics": [],
+              "manifest": {
+                "byte_size": 4605,
+                "filename": "knowledge-layer-manifest.json",
+                "media_type": "application/json",
+                "schema_version": "knowledge_layer/v1",
+                "sha256": "94ece13459c90082829fbd08b01113b2d3aadb628a46591f68e9829a83c5d70b",
+                "uri": "file:///mnt/data/work_iter4/verify-final-e2e/materialization-execution/materializations/004-effective-data-model/knowledge-layer/knowledge-layer-manifest.json"
+              },
+              "model_kind": "model-domain-cluster-view",
+              "schema_version": "model-domain-cluster-view/v1",
+              "source_materialization_id": "effective-data-model"
+            }
+          ],
+          "labels": [],
+          "metadata": {},
+          "ordinal": 1,
+          "report": null,
+          "revision_id": "rev-e5deeca20d481a86b05d2b1a",
+          "state": "active",
+          "system_id": "client-profile"
+        }
+      ],
+      "page": {
+        "limit": 50,
+        "offset": 0,
+        "total": 1
+      },
+      "schema_version": "knowledge_api/v1",
+      "system_id": "client-profile"
+    },
+    "status_code": 200
+  },
+  "system": {
+    "body": {
+      "active_revision_id": "rev-e5deeca20d481a86b05d2b1a",
+      "created_at": "2026-08-05T18:54:42.989857Z",
+      "description": null,
+      "display_name": "Client Profile",
+      "metadata": {},
+      "revision_count": 1,
+      "system_id": "client-profile",
+      "updated_at": "2026-08-05T18:54:43.079073Z"
+    },
+    "status_code": 200
+  }
+}

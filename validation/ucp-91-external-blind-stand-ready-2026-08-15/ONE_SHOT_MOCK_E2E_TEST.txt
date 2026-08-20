@@ -1,0 +1,23 @@
+UCP 91 external blind one-shot orchestration test
+Date: 2026-08-15
+Purpose: orchestration-only validation; NOT an agent quality result.
+
+Mock OpenAI-compatible endpoint behavior:
+- returns one structurally valid final JSON response per batch;
+- performs no semantic reasoning and no Gold access;
+- marks every item unresolved.
+
+Observed result:
+- publication: PASS
+- pinned revision: rev-828b3d5897d6bf2f09d6b0c4
+- Knowledge API readiness: PASS
+- batch lifecycle: 10 batches covering 91 inputs PASS
+- structural result validation: 91/91 PASS
+- pre-Gold freeze: PASS
+- result SHA-256: 7ac0dfeb466596d836fd23e656678dd5486946ddc6e55f31dfaec41ef62d6cc6
+- frozen result bundle creation: PASS
+- API process cleanup: PASS; test port closed after completion
+- total orchestration duration in this container: 10.063 s
+
+Interpretation:
+This proves the one-shot blind-run plumbing only. It is deliberately not used as recall/precision evidence because the mock model performed no knowledge retrieval/reasoning.

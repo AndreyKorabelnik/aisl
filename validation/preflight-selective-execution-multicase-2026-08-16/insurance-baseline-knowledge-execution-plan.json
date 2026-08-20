@@ -1,0 +1,524 @@
+{
+  "diagnostics": [
+    {
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "java-persistence-mapping-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "java-type-structure-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "model-storage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "model-storage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "persistence-lineage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "persistence-lineage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "reference-data-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "reference-data-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "sql-analysis",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "sql-analysis/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "storage-usage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "storage-usage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "system-description-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "system-description-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "value-flow-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "value-flow-evidence/v1",
+      "severity": "info"
+    }
+  ],
+  "expected_outputs": {
+    "capabilities": [
+      "common.repository-concept-candidates",
+      "common.repository-coverage",
+      "common.repository-coverage-gaps",
+      "common.repository-data-footprint",
+      "common.repository-discovery",
+      "common.repository-identity",
+      "common.repository-inputs-outputs",
+      "common.repository-interfaces",
+      "common.repository-inventory",
+      "common.repository-novelty",
+      "common.repository-storage-footprint",
+      "common.repository-structural-families",
+      "common.repository-technologies"
+    ],
+    "knowledge_models": [
+      "repository-inventory/v3"
+    ]
+  },
+  "foundation_requirements": [],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:data-model-candidate-analyzer:custom_b2c_insurance",
+        "to": "evidence:planned_evidence_db0a65e3cb1849e719223005"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:interaction-boundary-analyzer:custom_b2c_insurance",
+        "to": "evidence:planned_evidence_a88a471eea42b7c6f7a83888"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:repository-structure-analyzer:custom_b2c_insurance",
+        "to": "evidence:planned_evidence_be936e483b3391eb6ed07db7"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:structured-file-shape-analyzer:custom_b2c_insurance",
+        "to": "evidence:planned_evidence_90d8f6ad4303a0daf63a991f"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_90d8f6ad4303a0daf63a991f",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_a88a471eea42b7c6f7a83888",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_be936e483b3391eb6ed07db7",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_db0a65e3cb1849e719223005",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:repository-inventory",
+        "to": "knowledge:planned_knowledge_7ec8466da979080cae0065d2"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:custom_b2c_insurance",
+        "to": "analyzer:data-model-candidate-analyzer:custom_b2c_insurance"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:custom_b2c_insurance",
+        "to": "analyzer:interaction-boundary-analyzer:custom_b2c_insurance"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:custom_b2c_insurance",
+        "to": "analyzer:repository-structure-analyzer:custom_b2c_insurance"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:custom_b2c_insurance",
+        "to": "analyzer:structured-file-shape-analyzer:custom_b2c_insurance"
+      }
+    ],
+    "execution_order": [
+      "analyzer:data-model-candidate-analyzer:custom_b2c_insurance",
+      "analyzer:interaction-boundary-analyzer:custom_b2c_insurance",
+      "analyzer:repository-structure-analyzer:custom_b2c_insurance",
+      "analyzer:structured-file-shape-analyzer:custom_b2c_insurance",
+      "materialization:repository-inventory"
+    ],
+    "nodes": [
+      {
+        "analyzer_id": "data-model-candidate-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "contract_fingerprint": "50eb699550f99be0088e68ba74d0cbfb191ff0eb9a4398f7fa7758ef2ffdd779",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "data-model-candidate-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "schema_version": "data-model-candidate-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:data-model-candidate-analyzer:custom_b2c_insurance",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "custom_b2c_insurance",
+        "source_snapshot_id": "source_snapshot_5ccbf5ec57a348a31336dbce"
+      },
+      {
+        "analyzer_id": "interaction-boundary-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_fingerprint": "67c6d2667dfaea030d8d1efade29f7120fc3c36c5a32be380b7fc17d149cae6f",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "interaction-boundary-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "schema_version": "interaction-boundary-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:interaction-boundary-analyzer:custom_b2c_insurance",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "custom_b2c_insurance",
+        "source_snapshot_id": "source_snapshot_5ccbf5ec57a348a31336dbce"
+      },
+      {
+        "analyzer_id": "repository-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "repository-structure-evidence",
+            "contract_fingerprint": "75b0b1e721c92c97bbc587185ff74df3f041610e4b90b2e61ece37c08efc6f80",
+            "optional_by": [],
+            "production_policy": "produce_if_missing",
+            "required_by": [
+              "repository-inventory"
+            ],
+            "schema_version": "repository-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "repository-structure-evidence",
+            "schema_version": "repository-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:repository-structure-analyzer:custom_b2c_insurance",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "custom_b2c_insurance",
+        "source_snapshot_id": "source_snapshot_5ccbf5ec57a348a31336dbce"
+      },
+      {
+        "analyzer_id": "structured-file-shape-analyzer",
+        "evidence_requirements": [
+          {
+            "artifact_kind": "structured-file-shape-evidence",
+            "contract_fingerprint": "caba59d50cf1165a203f064c94404283bdc9fd4384c4752f7b5c198c0c223ac9",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "structured-file-shape-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "structured-file-shape-evidence",
+            "schema_version": "structured-file-shape-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:structured-file-shape-analyzer:custom_b2c_insurance",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "custom_b2c_insurance",
+        "source_snapshot_id": "source_snapshot_5ccbf5ec57a348a31336dbce"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_90d8f6ad4303a0daf63a991f",
+          "artifact_kind": "structured-file-shape-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:structured-file-shape-analyzer:custom_b2c_insurance",
+          "schema_version": "structured-file-shape-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_90d8f6ad4303a0daf63a991f",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_a88a471eea42b7c6f7a83888",
+          "artifact_kind": "interaction-boundary-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:interaction-boundary-analyzer:custom_b2c_insurance",
+          "schema_version": "interaction-boundary-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_a88a471eea42b7c6f7a83888",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_be936e483b3391eb6ed07db7",
+          "artifact_kind": "repository-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:repository-structure-analyzer:custom_b2c_insurance",
+          "schema_version": "repository-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_be936e483b3391eb6ed07db7",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "production_policy": "produce_if_missing",
+        "required_by": [
+          "repository-inventory"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_db0a65e3cb1849e719223005",
+          "artifact_kind": "data-model-candidate-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:data-model-candidate-analyzer:custom_b2c_insurance",
+          "schema_version": "data-model-candidate-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_db0a65e3cb1849e719223005",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_7ec8466da979080cae0065d2",
+          "availability": "planned",
+          "model_kind": "repository-inventory",
+          "producer_materialization_node_id": "materialization:repository-inventory",
+          "schema_version": "repository-inventory/v3",
+          "source_materialization_id": "repository-inventory"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_7ec8466da979080cae0065d2",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "conditional_capabilities": [
+          "common.repository-structural-members"
+        ],
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.repository-concept-candidates",
+          "common.repository-coverage",
+          "common.repository-coverage-gaps",
+          "common.repository-data-footprint",
+          "common.repository-discovery",
+          "common.repository-identity",
+          "common.repository-inputs-outputs",
+          "common.repository-interfaces",
+          "common.repository-inventory",
+          "common.repository-novelty",
+          "common.repository-storage-footprint",
+          "common.repository-structural-families",
+          "common.repository-technologies"
+        ],
+        "expected_models": [
+          "repository-inventory/v3"
+        ],
+        "knowledge_id": "repository-inventory",
+        "materialization_id": "repository-inventory",
+        "node_id": "materialization:repository-inventory",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:custom_b2c_insurance",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "file_count": 1596,
+          "languages": [
+            "json",
+            "sql",
+            "yaml"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/work_block_f/real_sources/insurance/custom_b2c_insurance"
+          },
+          "revision": {
+            "content_sha256": "6146094c0848efc0ee55e45f0aa181653b56bb0fc48121bce77817b8287e2729",
+            "kind": "content",
+            "revision": "sha256:6146094c0848efc0ee55e45f0aa181653b56bb0fc48121bce77817b8287e2729"
+          },
+          "snapshot_fingerprint": "5ccbf5ec57a348a31336dbcebb279c806c78a2fec48ffb95d683678996f74f8e",
+          "snapshot_id": "source_snapshot_5ccbf5ec57a348a31336dbce",
+          "source_id": "custom_b2c_insurance",
+          "source_kind": "repository",
+          "source_metadata": {
+            "default_branch": null,
+            "repository_id": "custom_b2c_insurance-80ab853da9",
+            "repository_name": "custom_b2c_insurance",
+            "source_kind": "local"
+          }
+        }
+      }
+    ],
+    "topological_order": [
+      "source:custom_b2c_insurance",
+      "analyzer:data-model-candidate-analyzer:custom_b2c_insurance",
+      "analyzer:interaction-boundary-analyzer:custom_b2c_insurance",
+      "analyzer:repository-structure-analyzer:custom_b2c_insurance",
+      "analyzer:structured-file-shape-analyzer:custom_b2c_insurance",
+      "evidence:planned_evidence_90d8f6ad4303a0daf63a991f",
+      "evidence:planned_evidence_a88a471eea42b7c6f7a83888",
+      "evidence:planned_evidence_be936e483b3391eb6ed07db7",
+      "evidence:planned_evidence_db0a65e3cb1849e719223005",
+      "materialization:repository-inventory",
+      "knowledge:planned_knowledge_7ec8466da979080cae0065d2"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "b2a76d677a5fb6a2daa7e4bbcd9b86be289431b5042916cddeb3b55ee3d47ea8",
+    "knowledge_input_inventory_fingerprint": "f0b8a93201ac42c831d2c784635976fa4a58af810bbf276b26f73e6ecee6a93a",
+    "knowledge_materialization_catalog_fingerprint": "eafbdcc722f8a93f19dbc9d1d4ed04716f287ecfa646fb76adad5b3e5ba2a855"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "fe0f6aa70435d2e4ea671db8e326282b9ca3842da1b61d51d0b2927d072fb642",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.10.26"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "097847d864836a0e0fd455bf8fd79700fd32a835a6aec37dcc069c6ab71a3b07",
+    "knowledge_profile_fingerprint": "033edd63085663c48b61871fb59467fc69b3bbc61622d3a1369bc04493667f61",
+    "knowledge_profile_id": "repository-inventory-v1",
+    "knowledge_resolution_plan_fingerprint": "51c7cbbedef6a20bda67512270d36d9aedf6671ff029ae1f69510afd5488f40f",
+    "resolved_knowledge_ids": [
+      "repository-inventory"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "blockf-baseline-insurance"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 4,
+    "execution_node_count": 5,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  }
+}

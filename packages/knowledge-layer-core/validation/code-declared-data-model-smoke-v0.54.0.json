@@ -1,0 +1,63 @@
+{
+  "capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-relationships",
+    "common.code-declared-inheritance"
+  ],
+  "counts": {
+    "code_declared_annotation": 0,
+    "code_declared_effective_field": 6,
+    "code_declared_enum_constant": 0,
+    "code_declared_field": 5,
+    "code_declared_inheritance": 1,
+    "code_declared_model_build": 1,
+    "code_declared_model_gap": 0,
+    "code_declared_model_source": 1,
+    "code_declared_relationship": 1,
+    "code_declared_source_unit": 3,
+    "code_declared_type": 3,
+    "code_declared_type_reference": 2
+  },
+  "klc_version": "0.54.0",
+  "legacy_input_used": false,
+  "repository_ids": [
+    "runner0946_smoke"
+  ],
+  "schema_version": "code_declared_data_model_smoke/v1",
+  "scope_id": "runner0946_smoke",
+  "source_evidence": [
+    {
+      "artifact_id": "java_type_structure_553d460d0affd42cf1a26904",
+      "artifact_kind": "java-type-structure-evidence",
+      "content_fingerprint": "553d460d0affd42cf1a269043d586a990bf4d07218c69a6e091ff549b3bff613",
+      "imported_counts": {
+        "code_declared_annotation": 0,
+        "code_declared_effective_field": 6,
+        "code_declared_enum_constant": 0,
+        "code_declared_field": 5,
+        "code_declared_inheritance": 1,
+        "code_declared_model_gap": 0,
+        "code_declared_relationship": 1,
+        "code_declared_source_unit": 3,
+        "code_declared_type": 3,
+        "code_declared_type_reference": 2
+      },
+      "repo_id": "runner0946_smoke",
+      "runner_manifest": "/mnt/data/work_runner0946/real-smoke/output/repository_analysis_run_manifest.json",
+      "schema_version": "java-type-structure-evidence/v1",
+      "source_snapshot_fingerprint": "4b35302b7bf36e496be25e6c791dca1a7423053c66789062d8d50e1c0158da01"
+    }
+  ],
+  "status": "complete",
+  "validation": {
+    "duplicate_effective_field_names": 0,
+    "legacy_code_conceptual_model_consumed": false,
+    "orphan_effective_fields": 0,
+    "orphan_fields": 0,
+    "semantic_routing": "artifact_kind_plus_schema_version",
+    "source_count_matches": true,
+    "status": "complete"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "evidence_requirements": [
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "parameters": {},
+      "required_by": [
+        "code-declared-data-model"
+      ],
+      "schema_version": "java-type-structure-evidence/v1"
+    }
+  ],
+  "orchestration": {
+    "core_evidence_catalog_fingerprint": "7f6c9b91a3b30611f6540731c465e7306228404659b95fb24b114c688e5d961d",
+    "legacy_fallback": "not_supported",
+    "producer": "static-analysis-runner",
+    "resolution_plan_fingerprint": "7b780f17de81478f8ad0caa0dbdc352de67ea190b7148447ce9a577101c55712",
+    "runner_version": "0.9.48",
+    "semantic_routing": "artifact_kind_plus_schema_version",
+    "task_suite_profile_semantics": "not_used"
+  },
+  "request_fingerprint": "76e761311beae1b6f7edd25bb4d9e59374ef5e3e4bc9dcbef85c430bc88d9ccf",
+  "schema_version": "core_evidence_execution_request/v1",
+  "source": {
+    "source_id": "smoke-repository",
+    "source_kind": "repository"
+  }
+}

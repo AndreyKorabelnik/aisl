@@ -1,0 +1,17 @@
+0.9.40
+{
+  "catalog_fingerprint": "b1fd1c0ae9391f5fe9d4aa0ebedd6b76b658b8c95aa081d879f72d945eb650b6",
+  "core_catalog_fingerprint": "321ac8f5ee0d31db1e550c1e6b5c1bbbf9123d3fd2c0e8931a0cf78937df3020",
+  "core_profiles": 14,
+  "core_version": "0.43.21",
+  "declared_stage_ids": 48,
+  "java_derived_stage_contracts": 9,
+  "knowledge_materialization_candidates": 4,
+  "output": "/mnt/data/runner040-wheel-smoke-catalog.json",
+  "pipeline_profiles": 0,
+  "schema_version": "analysis_mechanism_catalog/v4",
+  "stage_contracts_markdown": null,
+  "suites": 7,
+  "task_linked_profiles": 8,
+  "tasks": 8
+}

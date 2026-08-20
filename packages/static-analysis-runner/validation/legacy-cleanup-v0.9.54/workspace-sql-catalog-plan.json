@@ -1,0 +1,205 @@
+{
+  "diagnostics": [],
+  "expected_outputs": {
+    "capabilities": [
+      "common.sql-analysis",
+      "common.sql-attribute-insertion-context",
+      "common.sql-field-calculation",
+      "common.sql-relation-fields",
+      "common.sql-relation-semantic-roles",
+      "common.sql-source-inventory",
+      "common.sql-source-inventory-export",
+      "common.sql-target-column-lineage",
+      "common.sql-target-resolution",
+      "common.sql-workflow-bindings",
+      "common.sql-workflow-context",
+      "common.workspace-sql-catalog"
+    ],
+    "knowledge_models": [
+      "workspace-sql-catalog/v1"
+    ]
+  },
+  "foundation_requirements": [],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:knowledge_artifact_6257d62c62090d14a464",
+        "model_kind": "sql-observed-data-usage",
+        "schema_versions": [
+          "knowledge_layer_sql/v2"
+        ],
+        "to": "materialization:workspace-sql-catalog"
+      },
+      {
+        "edge_kind": "required_knowledge",
+        "from": "knowledge:knowledge_artifact_d6804ebe12e4523ebeae",
+        "model_kind": "sql-observed-data-usage",
+        "schema_versions": [
+          "knowledge_layer_sql/v2"
+        ],
+        "to": "materialization:workspace-sql-catalog"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:workspace-sql-catalog",
+        "to": "knowledge:planned_knowledge_a5faf9c633c24a200c5a024c"
+      }
+    ],
+    "execution_order": [
+      "materialization:workspace-sql-catalog"
+    ],
+    "nodes": [
+      {
+        "artifact": {
+          "artifact_id": "knowledge_artifact_6257d62c62090d14a464",
+          "availability": "available",
+          "content_fingerprint": "d2451202531eb3f287976702bc9fafca51b7bac05fc0d09de5f598765bd80c2b",
+          "location": {
+            "bytes": 5914,
+            "exists": true,
+            "kind": "knowledge-layer",
+            "manifest_path": "/mnt/data/recovery_work_step3/e2e-datamart/output/materialization-execution/materializations/001-sql-analysis/knowledge-layer/knowledge-layer-manifest.json",
+            "output_path": "/mnt/data/recovery_work_step3/e2e-datamart/output/materialization-execution/materializations/001-sql-analysis/knowledge-layer",
+            "path": "/mnt/data/recovery_work_step3/e2e-datamart/output/materialization-execution/materializations/001-sql-analysis/knowledge-layer/knowledge-layer-manifest.json",
+            "sha256": "206588b582379e6ea9bdaa78d650fe304240d17c29b176e4317017f0c9eb26cd"
+          },
+          "materialization_result_path": "/mnt/data/recovery_work_step3/e2e-datamart/output/knowledge_execution_result.json",
+          "model_kind": "sql-observed-data-usage",
+          "provenance": {},
+          "schema_version": "knowledge_layer_sql/v2",
+          "scope_id": null,
+          "source_materialization_id": "sql-analysis",
+          "status": "completed"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:knowledge_artifact_6257d62c62090d14a464",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "existing_knowledge_artifact"
+      },
+      {
+        "artifact": {
+          "artifact_id": "knowledge_artifact_d6804ebe12e4523ebeae",
+          "availability": "available",
+          "content_fingerprint": "60fbe4b3757af992aaa3784672a497905dc31bc09aae97f06b62c9702d68d1fd",
+          "location": {
+            "bytes": 5636,
+            "exists": true,
+            "kind": "knowledge-layer",
+            "manifest_path": "/mnt/data/recovery_work_step3/e2e-at900-client-profile/output/materialization-execution/materializations/001-sql-analysis/knowledge-layer/knowledge-layer-manifest.json",
+            "output_path": "/mnt/data/recovery_work_step3/e2e-at900-client-profile/output/materialization-execution/materializations/001-sql-analysis/knowledge-layer",
+            "path": "/mnt/data/recovery_work_step3/e2e-at900-client-profile/output/materialization-execution/materializations/001-sql-analysis/knowledge-layer/knowledge-layer-manifest.json",
+            "sha256": "629bab73bab0c7c60592b110b697613dd1f25fc0d933379909c54c01335141e5"
+          },
+          "materialization_result_path": "/mnt/data/recovery_work_step3/e2e-at900-client-profile/output/knowledge_execution_result.json",
+          "model_kind": "sql-observed-data-usage",
+          "provenance": {},
+          "schema_version": "knowledge_layer_sql/v2",
+          "scope_id": null,
+          "source_materialization_id": "sql-analysis",
+          "status": "completed"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:knowledge_artifact_d6804ebe12e4523ebeae",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "existing_knowledge_artifact"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_a5faf9c633c24a200c5a024c",
+          "availability": "planned",
+          "model_kind": "workspace-sql-catalog",
+          "producer_materialization_node_id": "materialization:workspace-sql-catalog",
+          "schema_version": "workspace-sql-catalog/v1",
+          "source_materialization_id": "workspace-sql-catalog"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_a5faf9c633c24a200c5a024c",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.sql-analysis",
+          "common.sql-attribute-insertion-context",
+          "common.sql-field-calculation",
+          "common.sql-relation-fields",
+          "common.sql-relation-semantic-roles",
+          "common.sql-source-inventory",
+          "common.sql-source-inventory-export",
+          "common.sql-target-column-lineage",
+          "common.sql-target-resolution",
+          "common.sql-workflow-bindings",
+          "common.sql-workflow-context",
+          "common.workspace-sql-catalog"
+        ],
+        "expected_models": [
+          "workspace-sql-catalog/v1"
+        ],
+        "knowledge_id": "workspace-sql-source-inventory",
+        "materialization_id": "workspace-sql-catalog",
+        "node_id": "materialization:workspace-sql-catalog",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      }
+    ],
+    "topological_order": [
+      "knowledge:knowledge_artifact_6257d62c62090d14a464",
+      "knowledge:knowledge_artifact_d6804ebe12e4523ebeae",
+      "materialization:workspace-sql-catalog",
+      "knowledge:planned_knowledge_a5faf9c633c24a200c5a024c"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+    "knowledge_input_inventory_fingerprint": "f31f0ab31f6c68896a71b93b46b5aba12c8cbfb8285879a5a880783f41f44f5c",
+    "knowledge_materialization_catalog_fingerprint": "6692b8ecf0dd8b0258c016330c24dd04715690cd847b9ec34802784d40942140"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "dec5c4effc2ac318c895ec29c3b1e2b147e4914360cd368f29526a5bd8fa6dbb",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.9.54"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "8a584d35c2f1023028ef2755f8d6d67aefbaf21d666ba500e05372bd8bdc4533",
+    "knowledge_profile_fingerprint": "a29ebca2491f2481d5252748678a6b088268456f9c20dbfd3e8c0d0a4b2b2d4b",
+    "knowledge_profile_id": "cleanup-block-1-workspace-sql",
+    "knowledge_resolution_plan_fingerprint": "908a59bed7e12f7a8303da093e14599083c0c63931547b8388c8c0950b8e8741",
+    "resolved_knowledge_ids": [
+      "workspace-sql-source-inventory"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "cleanup-block-1-workspace"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "dual_write": "not_supported",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "legacy_fallback": "not_supported",
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 0,
+    "execution_node_count": 1,
+    "existing_knowledge_artifact_count": 2,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  }
+}

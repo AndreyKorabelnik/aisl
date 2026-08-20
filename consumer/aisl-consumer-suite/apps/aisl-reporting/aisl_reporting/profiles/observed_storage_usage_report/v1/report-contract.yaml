@@ -1,0 +1,9 @@
+report_type: observed-storage-usage-report
+version: v1
+audiences: [business, architecture, engineering]
+required_headings:
+  - Краткий вывод
+  - Наблюдаемые чтения
+  - Наблюдаемые записи
+  - Неразрешённые обращения и ограничения
+  - Технические доказательства и provenance

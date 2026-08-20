@@ -1,0 +1,28 @@
+{
+  "iteration": 93,
+  "module": "knowledge-layer-core",
+  "version": "0.52.8",
+  "input": {
+    "repository": "datamart_profile_fl",
+    "canonical_sql_manifest": "/mnt/data/iter90_core_smoke_packaged/static-analysis-output/sql-analysis/manifest.json"
+  },
+  "build": {
+    "status": "complete",
+    "output": "/mnt/data/iter93_klc_context_smoke_v2",
+    "sql_workflow_context_file_count": 934,
+    "sql_placeholder_binding_resolution_count": 254
+  },
+  "workflow": {
+    "source_path_suffix": "b2c_profile_fl_epk_client.yaml",
+    "resolved_prep_src_count": 1,
+    "resolved_final_sql_count": 1,
+    "resolved_final_sql_suffix": "wf/dml/epk_client/epk_client.sql",
+    "final_sql_hop_count": 4,
+    "resolution_status": "resolved"
+  },
+  "constraints": {
+    "datamart_dir_inferred": false,
+    "global_same_name_matching": false,
+    "full_test_suite_run": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "url": "http://127.0.0.1:8765/api/knowledge/v1/systems/live-system/data-model/declared-objects?include_fields=true&limit=20&offset=0&search=%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B0&revision_id=rev-93e47b33327f47cf691cff55",
+  "tool": "search_declared_data_objects",
+  "response": {
+    "schema_version": "knowledge_api/v1",
+    "declared_model_query_schema_version": "code-declared-data-model-query/v1",
+    "declared_model_schema_version": "code-declared-data-model/v1",
+    "system_id": "live-system",
+    "revision_id": "rev-93e47b33327f47cf691cff55",
+    "filters": {
+      "search": "Страна",
+      "type_annotations": []
+    },
+    "items": [
+      {
+        "object_id": "t-country",
+        "repo_id": "repo",
+        "fqcn": "com.acme.Country",
+        "name": "Country",
+        "package_name": "com.acme",
+        "type_kind": "class",
+        "source_set": "main",
+        "documentation": {
+          "display_name": "Страна"
+        },
+        "source_ref": {
+          "repository_relative_path": "Country.java",
+          "line_start": 1,
+          "line_end": 20
+        },
+        "annotations": [],
+        "field_count": 0,
+        "relationship_count": 0,
+        "fields": []
+      },
+      {
+        "object_id": "t-ind",
+        "repo_id": "repo",
+        "fqcn": "com.acme.Individual",
+        "name": "Individual",
+        "package_name": "com.acme",
+        "type_kind": "class",
+        "source_set": "main",
+        "documentation": {
+          "display_name": "Физическое лицо"
+        },
+        "source_ref": {
+          "repository_relative_path": "Individual.java",
+          "line_start": 1,
+          "line_end": 50
+        },
+        "annotations": [],
+        "field_count": 1,
+        "relationship_count": 1,
+        "fields": [
+          {
+            "effective_field_occurrence_id": "ef-birth",
+            "field_occurrence_id": "f-birth",
+            "declaring_type_occurrence_id": "t-ind",
+            "name": "birthCountry",
+            "inherited_depth": 0,
+            "is_inherited": false,
+            "derivation_kind": "declared",
+            "declared_type_expression": "Country",
+            "is_static": false,
+            "is_final": false,
+            "documentation": {
+              "description": "Страна рождения"
+            },
+            "source_ref": {
+              "repository_relative_path": "Individual.java",
+              "line_start": 10,
+              "line_end": 10
+            },
+            "provenance": {},
+            "annotations": []
+          }
+        ]
+      }
+    ],
+    "page": {
+      "offset": 0,
+      "limit": 20,
+      "total": 2
+    }
+  }
+}
+EXTERNAL_HTTP_TOOL_CALL_PASS

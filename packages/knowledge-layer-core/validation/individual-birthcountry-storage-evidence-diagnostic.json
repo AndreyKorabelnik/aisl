@@ -1,0 +1,453 @@
+{
+  "diagnostic_schema": "relationship_storage_evidence_diagnostic/v1",
+  "logical_identity": {
+    "field_names": [
+      "code"
+    ],
+    "key_observations": [
+      {
+        "annotation_fqcn": "ru.sbrf.ucp.meta.annotations.MetaDictionary",
+        "annotation_name": "MetaDictionary",
+        "key_observation_id": "model_object_key_93a73052d31ae1816b68",
+        "line_end": 10,
+        "line_start": 10,
+        "object_fqcn": "com.sbt.bm.ucp.common.model.dictionary.Country",
+        "observation_basis": "annotation_field_roles",
+        "repo_id": "ucp_api",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_api/ucp-models/ucp-common-model/src/main/java/com/sbt/bm/ucp/common/model/dictionary/Country.java"
+      }
+    ],
+    "members": [
+      {
+        "field_name": "code",
+        "field_owner_fqcn": "com.sbt.bm.ucp.common.model.common.DictionaryBase",
+        "field_resolution_kind": "inherited_field",
+        "key_observation_id": "model_object_key_93a73052d31ae1816b68",
+        "position": 1,
+        "role_name": "code"
+      }
+    ],
+    "status": "observed"
+  },
+  "logical_key_correspondence": {
+    "canonicalization_fields": [
+      "code"
+    ],
+    "correspondences": [
+      {
+        "composed_reference_value_expression": "\"Country_\" + individual.getBirthCountry().getCode()",
+        "correspondence_id": "model_relationship_reference_value_key_correspondence_1f2b81a206570054a49a",
+        "match_basis": "exact_structural_expression_signature",
+        "observation_basis": "observed TSA referenceField value plus exact Java call/return bindings only; no target-key equivalence, SQL, FK, or join verdict",
+        "reference_operation": "referenceField",
+        "reference_value_observation_occurrence_id": "source_observation_3afaf2e9390535d8a135",
+        "relationship_field": "birthCountry",
+        "source_alias": "com.sbt.bm.ucp.retail.model.individual.Individual",
+        "source_operation": "IndividualToChangeVectorConverter.convert",
+        "target_alias": "com.sbt.bm.ucp.common.model.dictionary.Country",
+        "target_key_expression": "\"Country_\" + country.getCode()",
+        "target_key_fields_json": "[\"code\"]",
+        "target_key_observation_occurrence_id": "source_observation_3a55dea19303c5557db7",
+        "value_converter_operation": "IndividualToChangeVectorConverter.convertCountry"
+      }
+    ],
+    "status": "observed"
+  },
+  "physical_join": {
+    "confirmed": false,
+    "reason": "A physical join requires a first-class storage key, resolved reference value flow, and observed encoding semantics.",
+    "status": "unresolved"
+  },
+  "reference_encoding": {
+    "diagnostic_note": "No physical encoding or alias normalization is inferred from separate alias(...) and key(...) calls.",
+    "semantic_observations": [],
+    "status": "unresolved"
+  },
+  "reference_value_flow": {
+    "local_result_binding_diagnostics": [
+      {
+        "candidate_count": 27,
+        "candidates": [
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCountry",
+            "line_end": 76,
+            "line_start": 76,
+            "observation_id": "source_observation_7c079794bf047aea11dc",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthDate",
+            "line_end": 83,
+            "line_start": 83,
+            "observation_id": "source_observation_209cb0ba2df2efc7c3b7",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertBirthPlace",
+            "line_end": 90,
+            "line_start": 90,
+            "observation_id": "source_observation_3bb7bd6e8c4e291f975a",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCountry",
+            "line_end": 102,
+            "line_start": 102,
+            "observation_id": "source_observation_6e33bde6d01e87c7f00f",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCreditHistory",
+            "line_end": 109,
+            "line_start": 109,
+            "observation_id": "source_observation_4a250a8b71f0bf61cd0d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertCurrencyResident",
+            "line_end": 116,
+            "line_start": 116,
+            "observation_id": "source_observation_fce4270d4cbb653f5742",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertDeathDate",
+            "line_end": 123,
+            "line_start": 123,
+            "observation_id": "source_observation_a43c44f2b735b9e0d43b",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertDeathInfo",
+            "line_end": 130,
+            "line_start": 130,
+            "observation_id": "source_observation_7244d54e389bff9846f9",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertEducation",
+            "line_end": 137,
+            "line_start": 137,
+            "observation_id": "source_observation_e649f767c909503515e7",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertExtraBlocks",
+            "line_end": 164,
+            "line_start": 164,
+            "observation_id": "source_observation_5e70dd9ae8f5365c365d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertGender",
+            "line_end": 171,
+            "line_start": 171,
+            "observation_id": "source_observation_4ee694770f0a461ba930",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertLiteracy",
+            "line_end": 199,
+            "line_start": 199,
+            "observation_id": "source_observation_b8a216b925a482eff94d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertManagerEmployeeInfo",
+            "line_end": 206,
+            "line_start": 206,
+            "observation_id": "source_observation_57792ef38751aae3a184",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMaritalStatus",
+            "line_end": 213,
+            "line_start": 213,
+            "observation_id": "source_observation_50311eae3e9ad555c5ab",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMergeClientInfo",
+            "line_end": 220,
+            "line_start": 220,
+            "observation_id": "source_observation_1122ad909334246ac687",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMergeClientInfo",
+            "line_end": 227,
+            "line_start": 227,
+            "observation_id": "source_observation_9240f57a1045c3db712c",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertMergeHistory",
+            "line_end": 234,
+            "line_start": 234,
+            "observation_id": "source_observation_fae84944ffc236a45624",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertPartyServiceAttributes",
+            "line_end": 249,
+            "line_start": 249,
+            "observation_id": "source_observation_e5755c10575ef4309f1d",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertPartyStatusType",
+            "line_end": 256,
+            "line_start": 256,
+            "observation_id": "source_observation_2df2570aa0bf6e495b86",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertPreferences",
+            "line_end": 287,
+            "line_start": 287,
+            "observation_id": "source_observation_e935f3946d8571553d8e",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertSelfEmployment",
+            "line_end": 298,
+            "line_start": 298,
+            "observation_id": "source_observation_f4fb026c2c24b1dbb739",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertServiceZone",
+            "line_end": 314,
+            "line_start": 314,
+            "observation_id": "source_observation_cf69810a277a7f47d770",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 325,
+            "line_start": 325,
+            "observation_id": "source_observation_8942007a36e162b9999c",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 332,
+            "line_start": 332,
+            "observation_id": "source_observation_40de28730479cb74e579",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUnmergeClientInfo",
+            "line_end": 339,
+            "line_start": 339,
+            "observation_id": "source_observation_a16dfb99d5b462e2bc79",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertUserInfo",
+            "line_end": 350,
+            "line_start": 350,
+            "observation_id": "source_observation_9d2af296b3ae27c134a9",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          },
+          {
+            "callee_operation": "JsonIndividualToChangeVectorConverter.convertWelfare",
+            "line_end": 365,
+            "line_start": 365,
+            "observation_id": "source_observation_600e67d969bc58a9111e",
+            "resolution": "exact_same_class_name_and_arity",
+            "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+          }
+        ],
+        "current_core_matching_key": [
+          "JsonIndividualToChangeVectorConverter.convert",
+          "refKey"
+        ],
+        "diagnostic_note": "The current interpreter groups result bindings by owner operation and local variable name; it does not use lexical scope or source position to select a dominating assignment.",
+        "nearest_preceding_candidate": {
+          "callee_operation": "JsonIndividualToChangeVectorConverter.convertCountry",
+          "line_end": 76,
+          "line_start": 76,
+          "observation_id": "source_observation_7c079794bf047aea11dc",
+          "resolution": "exact_same_class_name_and_arity",
+          "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java"
+        },
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "reference_observation_id": "source_observation_9e356c2ec2a0f7c46926",
+        "status": "ambiguous_reused_local_name",
+        "value_expression": "refKey",
+        "value_identifier": "refKey"
+      },
+      {
+        "candidate_count": 0,
+        "candidates": [],
+        "owner_operation": "IndividualToChangeVectorConverter.convert",
+        "reference_observation_id": "source_observation_b8c3cb633da036337488",
+        "status": "not_applicable_or_inline",
+        "value_expression": "convertCountry(individual.getBirthCountry())"
+      }
+    ],
+    "reference_operations": [
+      {
+        "line_end": 78,
+        "line_start": 78,
+        "observation_id": "source_observation_9e356c2ec2a0f7c46926",
+        "owner_operation": "JsonIndividualToChangeVectorConverter.convert",
+        "reference_operation": "referenceField",
+        "relationship_field": "birthCountry",
+        "repo_id": "ucp_tsa_v4",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/JsonIndividualToChangeVectorConverter.java",
+        "value_expression": "refKey",
+        "value_identifier": "refKey"
+      },
+      {
+        "line_end": 195,
+        "line_start": 195,
+        "observation_id": "source_observation_b8c3cb633da036337488",
+        "owner_operation": "IndividualToChangeVectorConverter.convert",
+        "reference_operation": "referenceField",
+        "relationship_field": "birthCountry",
+        "repo_id": "ucp_tsa_v4",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/IndividualToChangeVectorConverter.java",
+        "value_expression": "convertCountry(individual.getBirthCountry())",
+        "value_identifier": null
+      }
+    ],
+    "reference_value_derivations": [
+      {
+        "binding_path_json": "[{\"call_observation_id\":\"call_035a655f99691677ae04\",\"callee_operation\":\"IndividualToChangeVectorConverter.convertCountry\",\"callee_parameter\":\"country\",\"caller_expression\":\"individual.getBirthCountry()\",\"caller_operation\":\"IndividualToChangeVectorConverter.convert\",\"resolution\":\"exact_same_class_name_and_arity\",\"resolved_expression\":\"individual.getBirthCountry()\"}]",
+        "composed_reference_value_expression": "\"Country_\" + individual.getBirthCountry().getCode()",
+        "observation_policy": "observed TSA referenceField value plus exact Java call/return bindings only; no target-key equivalence, SQL, FK, or join verdict",
+        "reference_operation": "referenceField",
+        "reference_value_expression": "convertCountry(individual.getBirthCountry())",
+        "relationship_field": "birthCountry",
+        "repo_id": "ucp_tsa_v4",
+        "return_expression_template": "\"Country_\" + country.getCode()",
+        "source_alias": "com.sbt.bm.ucp.retail.model.individual.Individual",
+        "source_observation_occurrence_id": "source_observation_3afaf2e9390535d8a135",
+        "source_operation": "IndividualToChangeVectorConverter.convert",
+        "value_converter_operation": "IndividualToChangeVectorConverter.convertCountry",
+        "value_converter_parameter_bindings_json": "[{\"parameter\":\"country\",\"resolved_expression\":\"individual.getBirthCountry()\",\"source_observation_id\":\"call_parameter_binding_0ad0ac04ebc7e358b3a3\"}]"
+      }
+    ],
+    "status": "observed"
+  },
+  "relationship": {
+    "cardinality": "one",
+    "relation_kind": "reference_field",
+    "relationship_id": "model_relationship_2da0fe6066d473361306",
+    "source_field_name": "birthCountry",
+    "source_object_fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+    "source_repo_id": "ucp_api",
+    "target_repo_id": "ucp_api",
+    "target_type_fqcn": "com.sbt.bm.ucp.common.model.dictionary.Country"
+  },
+  "root_causes": [
+    {
+      "code": "scope_insensitive_local_result_binding",
+      "effect": "return-to-referenceField derivation is not emitted when a local name is reused",
+      "evidence": [
+        "source_observation_9e356c2ec2a0f7c46926"
+      ],
+      "layer": "code-analyzer-core"
+    },
+    {
+      "code": "storage_record_key_not_first_class",
+      "effect": "observed builder key assignments remain expressions and cannot become a canonical physical target field",
+      "evidence": [
+        "source_observation_87ec81f5e47382a3f36d",
+        "source_observation_ea014024eb40fc435148"
+      ],
+      "layer": "knowledge-layer-core schema/materialization"
+    },
+    {
+      "code": "reference_encoding_semantics_not_observed",
+      "effect": "alias and key calls do not by themselves prove an encoded source value or alias normalization rule",
+      "evidence": [],
+      "layer": "evidence contract"
+    }
+  ],
+  "safety": {
+    "alias_normalization_inferred": false,
+    "domain_specific_rules_used": false,
+    "physical_join_inferred": false
+  },
+  "storage_key_evidence": {
+    "first_class_storage_tables": [],
+    "relationship_target_expressions": [],
+    "status": "observed_not_first_class",
+    "storage_lineages": [],
+    "target_alias_assignments": [
+      {
+        "line_end": 33,
+        "line_start": 33,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.CountryToChangeVectorConverter",
+        "owner_operation": "CountryToChangeVectorConverter.convert",
+        "repo_id": "ucp_tsa_v4",
+        "source_expression": "\"com.sbt.bm.ucp.common.model.dictionary.Country\"",
+        "source_observation_occurrence_id": "source_observation_ade551ceedc3ec39adf9",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/CountryToChangeVectorConverter.java"
+      },
+      {
+        "line_end": 27,
+        "line_start": 27,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.dict.JsonCountryToChangeVectorConverter",
+        "owner_operation": "JsonCountryToChangeVectorConverter.convert",
+        "repo_id": "ucp_tsa_v4",
+        "source_expression": "\"com.sbt.bm.ucp.common.model.dictionary.Country\"",
+        "source_observation_occurrence_id": "source_observation_b477c04a2a9477bf5abb",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/dict/JsonCountryToChangeVectorConverter.java"
+      }
+    ],
+    "target_key_assignments": [
+      {
+        "key_expression": "key",
+        "key_expression_tree_json": "{\"end_byte\":1406,\"node_type\":\"identifier\",\"start_byte\":1403,\"text\":\"key\",\"value\":\"key\"}",
+        "line_end": 32,
+        "line_start": 32,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.pojo.CountryToChangeVectorConverter",
+        "owner_operation": "CountryToChangeVectorConverter.convert",
+        "repo_id": "ucp_tsa_v4",
+        "source_observation_occurrence_id": "source_observation_87ec81f5e47382a3f36d",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/pojo/CountryToChangeVectorConverter.java"
+      },
+      {
+        "key_expression": "key",
+        "key_expression_tree_json": "{\"end_byte\":1701,\"node_type\":\"identifier\",\"start_byte\":1698,\"text\":\"key\",\"value\":\"key\"}",
+        "line_end": 38,
+        "line_start": 38,
+        "owner_fqcn": "ru.sbrf.ucp.tsa4.converter.json.dict.JsonCountryToChangeVectorConverter",
+        "owner_operation": "JsonCountryToChangeVectorConverter.convert",
+        "repo_id": "ucp_tsa_v4",
+        "source_observation_occurrence_id": "source_observation_ea014024eb40fc435148",
+        "source_path": "/mnt/data/work_iter18_full/selected_repositories/ucp_tsa_v4/ucp-tsa4-plugin/src/main/java/ru/sbrf/ucp/tsa4/converter/json/dict/JsonCountryToChangeVectorConverter.java"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "evidence_artifact_count": 1,
+  "execution_order": [
+    "analyzer:java-type-structure-analyzer:repository",
+    "materialization:code-declared-data-model"
+  ],
+  "knowledge_artifact_count": 1,
+  "materialization_count": 1,
+  "output": "/mnt/data/work_iter2/real-smoke/execution-clean-zip-v0.9.50",
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships"
+  ],
+  "result_fingerprint": "1796e43eca77d723c102a619af617df1177e21db55c74b2ce8f5f335f0bc938c",
+  "schema_version": "knowledge_execution_result/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "real-smoke-repository"
+  },
+  "status": "completed"
+}

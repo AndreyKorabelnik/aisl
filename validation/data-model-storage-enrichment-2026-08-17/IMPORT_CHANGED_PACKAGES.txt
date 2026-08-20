@@ -1,0 +1,4 @@
+static-analysis-runner 0.10.28
+knowledge-control-plane 1.2.0a31
+optional_internal_materializations ['logical-storage-mapping']
+imports=PASS

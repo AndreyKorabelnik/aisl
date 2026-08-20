@@ -1,0 +1,324 @@
+{
+  "architecture_goal": {
+    "core": "Core publishes self-describing typed evidence artifacts.",
+    "knowledge_layer": "KLC selects evidence by artifact_kind + schema_version and owns knowledge materialization outputs.",
+    "runner": "Runner records execution, retries and artifact registrations without defining evidence or knowledge semantics."
+  },
+  "catalog_fingerprint": "5807dacc85953235c774c8850b30bbb0096a9b4d61a766ee85b58b6504989c65",
+  "contract": {
+    "allowed_runner_responsibilities": [
+      "resolve and record source snapshots",
+      "orchestrate Core analyzer processes",
+      "orchestrate Foundation lifecycle without defining its contents",
+      "record attempts, timeouts, resource usage and failures",
+      "register self-describing evidence artifacts",
+      "invoke KLC materializations and record their manifests",
+      "compose repository, workspace and portfolio execution scopes"
+    ],
+    "contract_id": "analysis_execution_result_contract/v1",
+    "definition": "Self-describing record of analysis execution and produced typed evidence artifacts. Runner owns lifecycle, process, retry and artifact registration; Core owns evidence semantics; KLC owns knowledge materialization semantics.",
+    "execution_scopes": [
+      "repository",
+      "workspace",
+      "portfolio"
+    ],
+    "forbidden_runner_responsibilities": [
+      "define evidence semantics from task_id, suite_id, profile_id or output path",
+      "infer source-code meaning",
+      "rewrite unsupported evidence into a different schema",
+      "publish a knowledge capability merely because a Task was requested",
+      "hide analyzer or materialization failures behind fallback execution"
+    ],
+    "identity_rules": {
+      "excluded_from_semantic_identity": [
+        "absolute paths",
+        "process ids",
+        "timestamps",
+        "retry attempt numbers",
+        "log paths"
+      ],
+      "execution_fingerprint_inputs": [
+        "source snapshot fingerprints",
+        "Foundation fingerprints",
+        "analyzer ids and versions",
+        "evidence-affecting parameters",
+        "requested execution composition"
+      ]
+    },
+    "owner": "static-analysis-runner",
+    "required_sections": {
+      "analyzer_executions": {
+        "allowed_request_provenance": [
+          "profile_id",
+          "task_id",
+          "suite_id",
+          "pipeline_profile_id"
+        ],
+        "cardinality": "zero_or_more",
+        "required_fields": [
+          "analyzer_execution_id",
+          "analyzer_id",
+          "analyzer_version",
+          "source_snapshot_ids",
+          "status",
+          "attempts"
+        ],
+        "semantic_rule": "request provenance never defines artifact meaning"
+      },
+      "evidence_artifacts": {
+        "cardinality": "zero_or_more",
+        "contract_id": "core_evidence_artifact_contract/v1",
+        "forbidden_semantic_selectors": [
+          "task_id",
+          "suite_id",
+          "profile_id",
+          "directory_name"
+        ],
+        "required_fields": [
+          "artifact_id",
+          "artifact_kind",
+          "schema_version",
+          "producer_analyzer_execution_id",
+          "content_fingerprint",
+          "status",
+          "coverage",
+          "diagnostics",
+          "provenance",
+          "location"
+        ],
+        "semantic_identity": [
+          "artifact_kind",
+          "schema_version"
+        ]
+      },
+      "foundation_artifacts": {
+        "cardinality": "zero_or_more",
+        "contract_id": "core_foundation_contract/v1",
+        "required_fields": [
+          "contract_id",
+          "artifact_fingerprint",
+          "source_snapshot_ids",
+          "status"
+        ]
+      },
+      "identity": {
+        "fields": [
+          "execution_id",
+          "execution_fingerprint",
+          "scope",
+          "status"
+        ],
+        "status_values": [
+          "completed",
+          "partial",
+          "failed",
+          "cancelled"
+        ]
+      },
+      "lifecycle": {
+        "failure_rule": "Missing or unsupported evidence is explicit; no hidden fallback or silent reinterpretation.",
+        "required_fields": [
+          "started_at",
+          "completed_at",
+          "attempts",
+          "diagnostics"
+        ],
+        "retry_rule": "Every attempt is preserved; successful retry does not erase prior failure provenance."
+      },
+      "materialization_executions": {
+        "cardinality": "zero_or_more",
+        "contract_id": "knowledge_materialization_contract/v2",
+        "ownership_rule": "Runner records execution references; KLC defines inputs, outputs, coverage and capabilities.",
+        "required_fields": [
+          "materialization_execution_id",
+          "materialization_id",
+          "status",
+          "input_artifact_ids",
+          "output_manifest"
+        ]
+      },
+      "source_snapshots": {
+        "cardinality": "one_or_more",
+        "machine_local_paths": "provenance_only_not_identity",
+        "required_fields": [
+          "source_id",
+          "source_kind",
+          "revision",
+          "content_fingerprint"
+        ]
+      }
+    }
+  },
+  "cross_contract_rules": {
+    "capability_rule": "capability_is_published_only_from_successful_KLC_materialization_output",
+    "evidence_artifact_contract": "core_evidence_artifact_contract/v1",
+    "materialization_contract": "knowledge_materialization_contract/v2",
+    "semantic_routing_contract": "evidence_semantic_routing/v1",
+    "task_profile_suite_rule": "allowed_as_execution_request_and_provenance_only"
+  },
+  "current_manifest_assessment": [
+    {
+      "analyzer_execution_status": "missing",
+      "foundation_identity_status": "incomplete",
+      "gaps": [
+        "does not enumerate requested or executed public analyzers",
+        "does not register general evidence artifacts by artifact_kind and schema_version",
+        "Foundation reference records path/request only and not a validated Foundation fingerprint",
+        "non-SQL evidence semantics remain delegated to the Core repository manifest and file layout",
+        "retry attempts are not represented for direct profile execution"
+      ],
+      "implementation_ref": "static_analysis_runner.repository.run_repository_analysis",
+      "schema_version": "static_repository_analysis_run_manifest/v1",
+      "scope": "repository_profile",
+      "strengths": [
+        "records repository revision and run fingerprint",
+        "records Core process lifecycle, timeout and resource diagnostics",
+        "links repository_analysis_manifest",
+        "validates and records typed sql-analysis/v1 metadata when SQL is selected",
+        "records downstream KLC materialization manifest"
+      ],
+      "target_compliance": "partial",
+      "task_semantic_coupling": false,
+      "typed_evidence_registry_status": "sql_only_partial"
+    },
+    {
+      "analyzer_execution_status": "profile_process_only",
+      "foundation_identity_status": "present",
+      "gaps": [
+        "does not record repository revision/content fingerprint directly",
+        "does not enumerate public analyzers executed inside each profile",
+        "does not register typed evidence artifacts produced by each analyzer",
+        "task_id and task output directories remain the practical artifact-discovery boundary",
+        "capabilities are copied from downstream manifest but current KLC production remains partly Task-coupled"
+      ],
+      "implementation_ref": "static_analysis_runner.suite.run_repository_suite",
+      "schema_version": "analysis_suite_run_manifest/v1",
+      "scope": "repository_suite",
+      "strengths": [
+        "records canonical repository identity",
+        "records shared Foundation schema and artifact fingerprint",
+        "records ordered Task composition, profiles, process summaries and all retry attempts",
+        "records downstream suite KLC materialization manifest and capabilities"
+      ],
+      "target_compliance": "partial",
+      "task_semantic_coupling": true,
+      "typed_evidence_registry_status": "missing"
+    },
+    {
+      "analyzer_execution_status": "indirect",
+      "foundation_identity_status": "indirect",
+      "gaps": [
+        "typed evidence is not aggregated into one workspace artifact registry",
+        "analyzer and Foundation identities are indirect through nested repository/suite manifests",
+        "workspace completion does not itself prove required evidence availability for a materialization",
+        "suite-mode semantics inherit task_id-coupled artifact discovery"
+      ],
+      "implementation_ref": "static_analysis_runner.workspace.run_workspace_analysis",
+      "schema_version": "static_workspace_analysis_run_manifest/v2",
+      "scope": "workspace",
+      "strengths": [
+        "records selected repository set and analysis contract",
+        "links every repository profile or suite execution",
+        "records workspace KLC output and tool versions",
+        "preserves selected repository revision data in the resolved selection manifest"
+      ],
+      "target_compliance": "partial",
+      "task_semantic_coupling": true,
+      "typed_evidence_registry_status": "indirect_missing"
+    },
+    {
+      "analyzer_execution_status": "specialized_process_only",
+      "foundation_identity_status": "not_applicable_or_missing",
+      "gaps": [
+        "reuses the suite manifest schema for a specialized non-suite result",
+        "selects portfolio topology evidence through task_id=portfolio-topology",
+        "does not expose a typed repository-interface-catalog evidence registration",
+        "profile and artifact identities are incomplete on failed results"
+      ],
+      "implementation_ref": "static_analysis_runner.portfolio_topology",
+      "schema_version": "analysis_suite_run_manifest/v1",
+      "scope": "portfolio_repository",
+      "strengths": [
+        "preserves per-repository clone/analysis failure stage and code",
+        "uses a compact repository result suitable for partial portfolio completion"
+      ],
+      "target_compliance": "low",
+      "task_semantic_coupling": true,
+      "typed_evidence_registry_status": "missing",
+      "variant": "portfolio_topology_repository_result"
+    }
+  ],
+  "execution_effect": "none",
+  "planning_conclusions": {
+    "explicitly_deferred": [
+      "broad removal of all task_id routes before typed evidence exists",
+      "universal evidence envelope implementation for every current stage",
+      "Task/Suite redesign",
+      "caching, DAG execution and suite-local reuse"
+    ],
+    "main_finding": "Runner already records lifecycle and retries reasonably well, but it cannot yet tell KLC what evidence exists without Task/profile/file-layout knowledge. The missing runtime boundary is a typed evidence artifact registry, not another redesign of Task or Suite.",
+    "revised_sequence": [
+      {
+        "priority": 1,
+        "reason": "Use one generic Runner-owned audit to compare KLC knowledge requirements with Core evidence capabilities; begin with code-declared-data-model.",
+        "step": "knowledge_architecture_audit/v1"
+      },
+      {
+        "priority": 2,
+        "reason": "Define only complete raw type, field, relationship, inheritance and gap evidence required by the first independent knowledge type.",
+        "step": "code_declared_data_model_typed_evidence_contracts/v1"
+      },
+      {
+        "priority": 3,
+        "reason": "Core publishes typed code-declaration evidence and Runner registers it in analysis_execution_result/v1 without universalizing all analyzers.",
+        "step": "vertical_runtime_registration"
+      },
+      {
+        "priority": 4,
+        "reason": "KLC imports typed code declarations by artifact_kind + schema_version and removes the matching legacy data-model Task semantics.",
+        "step": "vertical_klc_code_declared_import_and_task_decoupling"
+      },
+      {
+        "priority": 5,
+        "reason": "Compare only code-declared model semantics, switch consumers for that knowledge, and remove the corresponding legacy umbrella path without compatibility adapters.",
+        "step": "scoped_parity_and_switch"
+      },
+      {
+        "priority": 6,
+        "reason": "Add persistence mapping only after code-declared and physical models exist as independent knowledge.",
+        "step": "logical_physical_mapping_vertical_slice"
+      },
+      {
+        "priority": 7,
+        "reason": "Build the effective model last from independent KLC models while preserving source-layer provenance.",
+        "step": "effective_data_model_composition"
+      }
+    ],
+    "what_this_contract_does_not_solve": [
+      "It does not define the payload fields needed to rebuild the conceptual model.",
+      "It does not make current Core outputs independent evidence artifacts.",
+      "It does not remove task_id routing from KLC by itself.",
+      "It does not justify a generic all-analyzer runtime refactor before the first materialization slice is understood."
+    ]
+  },
+  "purpose": "Runner-owned target execution-result contract and current runtime-manifest gap assessment.",
+  "runner_version": "0.9.44",
+  "schema_version": "analysis_execution_result_catalog/v1",
+  "source": {
+    "core_target_contracts_fingerprint": "55766fdf9a92712569015372b90d906215e31b50eeabadfcd58780b50d7880d7",
+    "core_target_contracts_schema_version": "core_target_analysis_contracts/v1",
+    "core_version": "0.43.23",
+    "klc_materialization_catalog_fingerprint": "011a879e98c25e6002c57ab28063c9699d2eb62cd9e1b2d7cfb6374acbdcea42",
+    "klc_materialization_catalog_schema_version": "knowledge_materialization_catalog/v2",
+    "klc_version": "0.53.9"
+  },
+  "summary": {
+    "current_klc_task_semantic_route_count": 8,
+    "current_manifest_variant_count": 4,
+    "fully_compliant_manifest_count": 0,
+    "manifest_variants_with_any_typed_registry_count": 1,
+    "manifest_variants_with_direct_or_indirect_foundation_identity_count": 2,
+    "planned_core_to_klc_materialization_count": 7,
+    "task_semantic_coupled_variant_count": 3
+  }
+}

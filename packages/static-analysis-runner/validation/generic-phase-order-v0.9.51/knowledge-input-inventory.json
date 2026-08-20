@@ -1,0 +1,268 @@
+{
+  "availability_policy": {
+    "contract_presence_is_not_input_availability": true,
+    "legacy_fallback": "not_supported",
+    "missing_required_input": "blocking_diagnostic_no_fallback",
+    "producer_registration_is_not_source_availability": true
+  },
+  "diagnostics": [],
+  "inventory_fingerprint": "31ab434e6ffe731a221f7dbdd29f70b6e7da047f3d83d1278c7a28111c589929",
+  "knowledge_artifacts": [],
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.9.51"
+  },
+  "producer_catalog": {
+    "core_evidence_contract_catalog": {
+      "catalog_fingerprint": "06f8e45140d1ca87c4ed5193352a9ed03eae120acb8168ca03759acad9129419",
+      "contracts": [
+        {
+          "analyzer_id": "java-persistence-mapping-analyzer",
+          "artifact_kind": "java-persistence-mapping-evidence",
+          "contract_fingerprint": "a2a93b7c82251593c8409e1cb3ffbe7659d977b69a57f76e067cdb1be7ba9031",
+          "contract_known": true,
+          "foundation_requirements": [
+            "java_syntax_index",
+            "source_file_inventory"
+          ],
+          "producer_kind": "core",
+          "producer_registered": true,
+          "runtime_contract_id": "core_evidence_runtime/v1",
+          "schema_version": "java-persistence-mapping-evidence/v1",
+          "source_language": "java"
+        },
+        {
+          "analyzer_id": "java-type-structure-analyzer",
+          "artifact_kind": "java-type-structure-evidence",
+          "contract_fingerprint": "37d2c9d6e4fd794b4cadccf47b6996692913ca0999b6e820097f183a05335ca9",
+          "contract_known": true,
+          "foundation_requirements": [
+            "java_syntax_index",
+            "source_file_inventory"
+          ],
+          "producer_kind": "core",
+          "producer_registered": true,
+          "runtime_contract_id": "core_evidence_runtime/v1",
+          "schema_version": "java-type-structure-evidence/v1",
+          "source_language": "java"
+        }
+      ],
+      "schema_version": "core_evidence_contract_catalog/v1"
+    },
+    "knowledge_materialization_catalog": {
+      "catalog_fingerprint": "3f58aa5fec7761360c07bdc82acc9271e60644597fa3877fc8c8e626f11aa911",
+      "materializations": [
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": "code-declared-data-model",
+          "lifecycle": "current_typed_input",
+          "materialization_id": "code-declared-data-model",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": true
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "retired_legacy_umbrella",
+          "materialization_id": "common-data-model",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "planned_core_to_klc_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "planned_klc_composite_materialization",
+          "materialization_id": "effective-data-model",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current",
+          "materialization_id": "interaction-coverage",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current",
+          "materialization_id": "interaction-field-contracts",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current",
+          "materialization_id": "interaction-islands",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": "logical-physical-mapping",
+          "lifecycle": "current_typed_input",
+          "materialization_id": "logical-physical-mapping",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": true
+        },
+        {
+          "catalog_section": "planned_core_to_klc_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "planned_core_to_klc_migration",
+          "materialization_id": "observed-storage-usage",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": "physical-model",
+          "lifecycle": "current_typed_input",
+          "materialization_id": "physical-model",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": true
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current_profile_task_coupled",
+          "materialization_id": "portfolio-topology",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "planned_core_to_klc_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "planned_core_to_klc_migration",
+          "materialization_id": "reference-data",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current_task_semantics_removal_required",
+          "materialization_id": "repository-value-flow",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current_typed_input",
+          "materialization_id": "sql-analysis",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current_task_semantics_removal_required",
+          "materialization_id": "suite-evidence-registry",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "planned_core_to_klc_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "planned_core_to_klc_migration",
+          "materialization_id": "system-description",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "current_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "current_partial_evidence_contract",
+          "materialization_id": "system-interactions",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        },
+        {
+          "catalog_section": "planned_core_to_klc_materializations",
+          "contract_known": true,
+          "handler_id": null,
+          "lifecycle": "planned_core_to_klc_migration",
+          "materialization_id": "workspace-sql-mart-catalog",
+          "runtime_contract_id": "knowledge_materialization_runtime/v1",
+          "runtime_registered": false
+        }
+      ],
+      "schema_version": "knowledge_materialization_catalog/v2"
+    }
+  },
+  "schema_version": "knowledge_input_inventory/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "source_snapshots": [
+    {
+      "availability": "available",
+      "file_count": 1,
+      "languages": [
+        "java"
+      ],
+      "location": {
+        "kind": "directory",
+        "path": "/mnt/data/work_iter3/second-family-e2e/repository"
+      },
+      "revision": {
+        "content_sha256": "6427593dcbac074fad47313b0370a13a4298da3ad164606cd453595aac4b5122",
+        "kind": "content",
+        "revision": "sha256:6427593dcbac074fad47313b0370a13a4298da3ad164606cd453595aac4b5122"
+      },
+      "snapshot_fingerprint": "628e6e8f6c0eb92c74567d48b8511ae5926a02ae49741468535a74c44412d5a9",
+      "snapshot_id": "source_snapshot_628e6e8f6c0eb92c74567d48",
+      "source_id": "client-profile",
+      "source_kind": "repository"
+    }
+  ],
+  "summary": {
+    "available_knowledge_artifact_count": 0,
+    "available_typed_artifact_count": 1,
+    "registered_core_producer_count": 2,
+    "registered_materialization_count": 3,
+    "source_snapshot_count": 1
+  },
+  "typed_artifacts": [
+    {
+      "artifact_id": "physical-model-fixture",
+      "artifact_kind": "physical-model",
+      "availability": "available",
+      "content_fingerprint": "4231b3589f0d6fe557550becaae87b5fa2cc018e2d914dd252124cbd149fc9fe",
+      "contract_version": null,
+      "location": {
+        "bytes": 2069,
+        "exists": true,
+        "kind": "file",
+        "path": "/mnt/data/work_iter3/second-family-e2e/physical-input/manifest.json",
+        "sha256": "0e9547038830bbb8920edaabf89b10ea0c8ff1de98efe4e3c8734176d30bfb1f"
+      },
+      "producer_kind": "external_or_previous_execution",
+      "provenance": {},
+      "registration_manifest_path": null,
+      "schema_version": "physical-model/v1",
+      "scope_id": null,
+      "status": "completed"
+    }
+  ]
+}

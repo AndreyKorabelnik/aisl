@@ -1,0 +1,524 @@
+{
+  "analyzer_executions": [
+    {
+      "analyzer_execution_id": "core_analyzer_execution_e33c70dbb24653a870de743f",
+      "analyzer_id": "java-storage-usage-analyzer",
+      "analyzer_version": "0.44.0",
+      "artifact_ids": [
+        "storage_usage_8a9cbbe2e9df5497c4f887e2"
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "process": {
+            "command": [
+              "/mnt/data/work-next/e2e-storage-sql/core-command",
+              "evidence-execute",
+              "--repository",
+              "/mnt/data/work-next/e2e-storage-sql/repository",
+              "--request",
+              "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/core-evidence-execution-request.json",
+              "--output",
+              "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/core-evidence",
+              "--repo-id",
+              "demo-repository"
+            ],
+            "command_display": "/mnt/data/work-next/e2e-storage-sql/core-command evidence-execute --repository /mnt/data/work-next/e2e-storage-sql/repository --request /mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/core-evidence-execution-request.json --output /mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/core-evidence --repo-id demo-repository",
+            "elapsed_seconds": 1.001,
+            "log": "logs/core-evidence.log",
+            "max_rss_kb": 123052,
+            "returncode": 0,
+            "stack_dump_requests": 0,
+            "timed_out": false
+          },
+          "status": "completed"
+        }
+      ],
+      "parameters": {},
+      "request_provenance": {
+        "core_evidence_catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+        "execution_node_id": "analyzer:java-storage-usage-analyzer:demo-repository",
+        "knowledge_execution_plan_fingerprint": "2dbda3f9699f2e6143d6bad5fcd0026942145e288ffd62ec6dcef1a4124f5a39",
+        "knowledge_profile_id": "storage-and-sql",
+        "semantic_role": "execution_request_provenance_only"
+      },
+      "required_by": [
+        "observed-storage-usage"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "storage-usage-evidence",
+          "schema_version": "storage-usage-evidence/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "bc474fae3e8cd59aadbf257f318f1e81c3327711c53b973804c9beb27aeeab2c"
+      ],
+      "source_snapshot_ids": [
+        "demo-repository"
+      ],
+      "status": "completed"
+    },
+    {
+      "analyzer_execution_id": "core_analyzer_execution_369c84e260fe38a0e77b44b5",
+      "analyzer_id": "sql-analysis-analyzer",
+      "analyzer_version": "0.44.0",
+      "artifact_ids": [
+        "sql_analysis_21e03484f6fe4b138810bd66"
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "process": {
+            "command": [
+              "/mnt/data/work-next/e2e-storage-sql/core-command",
+              "evidence-execute",
+              "--repository",
+              "/mnt/data/work-next/e2e-storage-sql/repository",
+              "--request",
+              "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/core-evidence-execution-request.json",
+              "--output",
+              "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/core-evidence",
+              "--repo-id",
+              "demo-repository"
+            ],
+            "command_display": "/mnt/data/work-next/e2e-storage-sql/core-command evidence-execute --repository /mnt/data/work-next/e2e-storage-sql/repository --request /mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/core-evidence-execution-request.json --output /mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/core-evidence --repo-id demo-repository",
+            "elapsed_seconds": 1.001,
+            "log": "logs/core-evidence.log",
+            "max_rss_kb": 115648,
+            "returncode": 0,
+            "stack_dump_requests": 0,
+            "timed_out": false
+          },
+          "status": "completed"
+        }
+      ],
+      "parameters": {},
+      "request_provenance": {
+        "core_evidence_catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+        "execution_node_id": "analyzer:sql-analysis-analyzer:demo-repository",
+        "knowledge_execution_plan_fingerprint": "2dbda3f9699f2e6143d6bad5fcd0026942145e288ffd62ec6dcef1a4124f5a39",
+        "knowledge_profile_id": "storage-and-sql",
+        "semantic_role": "execution_request_provenance_only"
+      },
+      "required_by": [
+        "sql-source-inventory"
+      ],
+      "semantic_outputs": [
+        {
+          "artifact_kind": "sql-analysis",
+          "schema_version": "sql-analysis/v1"
+        }
+      ],
+      "source_snapshot_fingerprints": [
+        "2b2bace351367f43af333db56d3decd652e48cf850474e90acf6fc58cca76755"
+      ],
+      "source_snapshot_ids": [
+        "demo-repository"
+      ],
+      "status": "completed"
+    }
+  ],
+  "catalogs": {
+    "core_evidence_contract_catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+    "knowledge_materialization_catalog_fingerprint": "205958d7081ba11d2038ec9edfb147004d855ab12afce59d4fc7b8671c462120"
+  },
+  "completed_at": "2026-08-06T02:37:38.644924+00:00",
+  "diagnostics": [],
+  "evidence_artifacts": [
+    {
+      "artifact_id": "storage_usage_8a9cbbe2e9df5497c4f887e2",
+      "artifact_kind": "storage-usage-evidence",
+      "content_fingerprint": "8a9cbbe2e9df5497c4f887e272112d983a83c283b4f793858ec2a303750b6521",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "access_kind_counts": {
+          "read": 1,
+          "write": 1
+        },
+        "coverage_status": "complete",
+        "java_files_discovered": 1,
+        "java_methods_indexed": 4,
+        "storage_access_count": 2,
+        "storage_gap_count": 0,
+        "storage_kind_counts": {
+          "repository_or_storage_api": 2
+        },
+        "storage_read_count": 1,
+        "storage_write_count": 1
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 5857,
+        "kind": "file",
+        "path": "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/core-evidence/evidence/storage-usage-evidence.json",
+        "sha256": "97ac7859a18844e9d0e1a5578e61601d2f063300a20e09ba08b574e7e8160728"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_e33c70dbb24653a870de743f",
+      "provenance": {
+        "core_artifact_provenance": {
+          "execution_runtime": "core_evidence_runtime/v1",
+          "inference_policy": "observed_calls_only_no_physical_name_guessing",
+          "observation_source": "code_analyzer_core.scanners.java_call_observations._build_storage_facts",
+          "parser_provider": "tree_sitter",
+          "semantic_routing": "artifact_kind_plus_schema_version"
+        },
+        "core_execution_result": "core-evidence/core-evidence-execution-result.json",
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "java-storage-usage-analyzer",
+          "analyzer_version": "0.44.0",
+          "component": "code-analyzer-core"
+        },
+        "request": {
+          "core_evidence_catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+          "execution_node_id": "analyzer:java-storage-usage-analyzer:demo-repository",
+          "knowledge_execution_plan_fingerprint": "2dbda3f9699f2e6143d6bad5fcd0026942145e288ffd62ec6dcef1a4124f5a39",
+          "knowledge_profile_id": "storage-and-sql",
+          "semantic_role": "execution_request_provenance_only"
+        },
+        "required_by": [
+          "observed-storage-usage"
+        ],
+        "source_snapshot": {
+          "file_count": 1,
+          "fingerprint": "bc474fae3e8cd59aadbf257f318f1e81c3327711c53b973804c9beb27aeeab2c",
+          "revision": null,
+          "scope": "java_storage_usage_sources",
+          "source_id": "demo-repository"
+        }
+      },
+      "registration_manifest_path": "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/repository_analysis_run_manifest.json",
+      "repo_id": "demo-repository",
+      "schema_version": "storage-usage-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "storage-usage-evidence",
+        "schema_version": "storage-usage-evidence/v1"
+      },
+      "status": "completed"
+    },
+    {
+      "artifact_id": "sql_analysis_21e03484f6fe4b138810bd66",
+      "artifact_kind": "sql-analysis",
+      "content_fingerprint": "21e03484f6fe4b138810bd66f1a38a4b12117e7fb3813d31ad074ef1e2e7015d",
+      "contract_version": "core_evidence_artifact_contract/v1",
+      "coverage": {
+        "coverage_status": "complete",
+        "lineage_gap_count": 0,
+        "sql_files_scanned": 2,
+        "sql_statement_count": 1,
+        "sql_unit_count": 1
+      },
+      "diagnostics": {
+        "code_counts": {},
+        "count": 0,
+        "severity_counts": {}
+      },
+      "location": {
+        "bytes": 7184,
+        "kind": "file",
+        "path": "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/core-evidence/evidence/sql-analysis-evidence.json",
+        "sha256": "d9bcbf463b4755aca2581eac35aaa995a724e312a62b11a61581aa0343f6f5c9"
+      },
+      "producer_analyzer_execution_id": "core_analyzer_execution_369c84e260fe38a0e77b44b5",
+      "provenance": {
+        "core_artifact_provenance": {
+          "canonical_payload_contract": "sql-analysis/v1-jsonl-shards",
+          "execution_runtime": "core_evidence_runtime/v1",
+          "legacy_task_suite_profile_semantics": "not_used",
+          "semantic_routing": "artifact_kind_plus_schema_version"
+        },
+        "core_execution_result": "core-evidence/core-evidence-execution-result.json",
+        "foundation": {
+          "contract_version": null,
+          "fingerprint": null,
+          "sections": [],
+          "used": false
+        },
+        "producer": {
+          "analyzer_id": "sql-analysis-analyzer",
+          "analyzer_version": "0.44.0",
+          "component": "code-analyzer-core"
+        },
+        "request": {
+          "core_evidence_catalog_fingerprint": "de0868da7b0f9e835a20d894b07e47822f7eb26d72d3e0d69fe5022a9b9c2c80",
+          "execution_node_id": "analyzer:sql-analysis-analyzer:demo-repository",
+          "knowledge_execution_plan_fingerprint": "2dbda3f9699f2e6143d6bad5fcd0026942145e288ffd62ec6dcef1a4124f5a39",
+          "knowledge_profile_id": "storage-and-sql",
+          "semantic_role": "execution_request_provenance_only"
+        },
+        "required_by": [
+          "sql-source-inventory"
+        ],
+        "source_snapshot": {
+          "file_count": 2,
+          "fingerprint": "2b2bace351367f43af333db56d3decd652e48cf850474e90acf6fc58cca76755",
+          "revision": null,
+          "scope": "sql_analysis_sources",
+          "source_id": "demo-repository"
+        }
+      },
+      "registration_manifest_path": "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/repository_analysis_run_manifest.json",
+      "repo_id": "demo-repository",
+      "schema_version": "sql-analysis/v1",
+      "semantic_identity": {
+        "artifact_kind": "sql-analysis",
+        "schema_version": "sql-analysis/v1"
+      },
+      "status": "completed"
+    }
+  ],
+  "execution_order": [
+    "analyzer:java-storage-usage-analyzer:demo-repository",
+    "analyzer:sql-analysis-analyzer:demo-repository",
+    "materialization:observed-storage-usage",
+    "materialization:sql-analysis"
+  ],
+  "knowledge_artifacts": [
+    {
+      "artifact_id": "knowledge_artifact_86e0213102bca4a56c0b",
+      "content_fingerprint": "587cc6b9a19379b95eb1a3d9589835e2778275ec3331094b801700580ffb6e02",
+      "coverage": {
+        "access_kind_counts": {
+          "read": 1,
+          "write": 1
+        },
+        "coverage_status": "complete",
+        "java_files_discovered": 1,
+        "java_methods_indexed": 4,
+        "storage_access_count": 2,
+        "storage_gap_count": 0,
+        "storage_kind_counts": {
+          "repository_or_storage_api": 2
+        },
+        "storage_read_count": 1,
+        "storage_write_count": 1
+      },
+      "diagnostics": [],
+      "location": {
+        "kind": "knowledge-layer",
+        "manifest_path": "/mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/001-observed-storage-usage/knowledge-layer/knowledge-layer-manifest.json",
+        "output_path": "/mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/001-observed-storage-usage/knowledge-layer"
+      },
+      "materialization_result_path": "/mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/001-observed-storage-usage/materialization-result.json",
+      "model_kind": "observed-storage-usage",
+      "schema_version": "observed-storage-usage/v1",
+      "source_materialization_id": "observed-storage-usage",
+      "status": "completed"
+    },
+    {
+      "artifact_id": "knowledge_artifact_703fffbf71e3e15b0dc9",
+      "content_fingerprint": "d56dd8ea49cb7b0777487b18b6c5e700ff68253be5d55cbc534f4625561aeb5d",
+      "coverage": {},
+      "diagnostics": [],
+      "location": {
+        "kind": "knowledge-layer",
+        "manifest_path": "/mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/002-sql-analysis/knowledge-layer/knowledge-layer-manifest.json",
+        "output_path": "/mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/002-sql-analysis/knowledge-layer"
+      },
+      "materialization_result_path": "/mnt/data/work-next/e2e-storage-sql/execution/materialization-execution/materializations/002-sql-analysis/materialization-result.json",
+      "model_kind": "sql-observed-data-usage",
+      "schema_version": "knowledge_layer_sql/v2",
+      "source_materialization_id": "sql-analysis",
+      "status": "completed"
+    }
+  ],
+  "knowledge_execution_plan": {
+    "path": "/mnt/data/work-next/e2e-storage-sql/execution-plan.json",
+    "plan_fingerprint": "2dbda3f9699f2e6143d6bad5fcd0026942145e288ffd62ec6dcef1a4124f5a39"
+  },
+  "materialization_executions": [
+    {
+      "completed_at": "2026-08-06T02:37:38.439350+00:00",
+      "execution_node_id": "materialization:observed-storage-usage",
+      "input_artifact_ids": [
+        "storage_usage_8a9cbbe2e9df5497c4f887e2"
+      ],
+      "input_knowledge_artifact_ids": [],
+      "knowledge_artifact_ids": [
+        "knowledge_artifact_86e0213102bca4a56c0b"
+      ],
+      "materialization_execution_id": "knowledge_materialization_execution_efe7888a00a7f3c6ec20",
+      "materialization_id": "observed-storage-usage",
+      "output_manifest": "materialization-execution/materializations/001-observed-storage-usage/knowledge-layer/knowledge-layer-manifest.json",
+      "producer": {
+        "component": "knowledge-layer-core",
+        "version": "0.57.0"
+      },
+      "published_capabilities": [
+        "common.observed-storage-usage",
+        "common.storage-access-gaps",
+        "common.storage-read-write-inventory"
+      ],
+      "request": "materialization-execution/materializations/001-observed-storage-usage/materialization-request.json",
+      "result": "materialization-execution/materializations/001-observed-storage-usage/materialization-result.json",
+      "started_at": "2026-08-06T02:37:38.354506+00:00",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2026-08-06T02:37:38.643814+00:00",
+      "execution_node_id": "materialization:sql-analysis",
+      "input_artifact_ids": [
+        "sql_analysis_21e03484f6fe4b138810bd66"
+      ],
+      "input_knowledge_artifact_ids": [],
+      "knowledge_artifact_ids": [
+        "knowledge_artifact_703fffbf71e3e15b0dc9"
+      ],
+      "materialization_execution_id": "knowledge_materialization_execution_0e1027f20d03c727b418",
+      "materialization_id": "sql-analysis",
+      "output_manifest": "materialization-execution/materializations/002-sql-analysis/knowledge-layer/knowledge-layer-manifest.json",
+      "producer": {
+        "component": "knowledge-layer-core",
+        "version": "0.57.0"
+      },
+      "published_capabilities": [
+        "common.sql-analysis",
+        "common.sql-attribute-insertion-context",
+        "common.sql-relation-fields",
+        "common.sql-relation-semantic-roles",
+        "common.sql-source-inventory",
+        "common.sql-source-inventory-export",
+        "common.sql-target-column-lineage",
+        "common.sql-target-resolution",
+        "common.sql-workflow-bindings",
+        "common.sql-workflow-context"
+      ],
+      "request": "materialization-execution/materializations/002-sql-analysis/materialization-request.json",
+      "result": "materialization-execution/materializations/002-sql-analysis/materialization-result.json",
+      "started_at": "2026-08-06T02:37:38.440675+00:00",
+      "status": "completed"
+    }
+  ],
+  "node_executions": [
+    {
+      "evidence_artifact_ids": [
+        "storage_usage_8a9cbbe2e9df5497c4f887e2"
+      ],
+      "execution_node_id": "analyzer:java-storage-usage-analyzer:demo-repository",
+      "node_kind": "core_evidence_analyzer",
+      "repository_run_manifest": "execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/repository_analysis_run_manifest.json",
+      "run_fingerprint": "43b17c92219e32e4ee32f81d644c6eb30d0161b5c6f2ae7f4408d3520762a9a1",
+      "source_snapshot_id": "source_snapshot_c443107927bb85c9d7eae0e3",
+      "status": "completed"
+    },
+    {
+      "evidence_artifact_ids": [
+        "sql_analysis_21e03484f6fe4b138810bd66"
+      ],
+      "execution_node_id": "analyzer:sql-analysis-analyzer:demo-repository",
+      "node_kind": "core_evidence_analyzer",
+      "repository_run_manifest": "execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/repository_analysis_run_manifest.json",
+      "run_fingerprint": "6ad1aca7646809a0ff47bb4f10a76bcf775efac187226d1b0b0ca765631bb23f",
+      "source_snapshot_id": "source_snapshot_c443107927bb85c9d7eae0e3",
+      "status": "completed"
+    },
+    {
+      "execution_node_id": "materialization:observed-storage-usage",
+      "input_artifact_ids": [
+        "storage_usage_8a9cbbe2e9df5497c4f887e2"
+      ],
+      "input_knowledge_artifact_ids": [],
+      "knowledge_artifact_ids": [
+        "knowledge_artifact_86e0213102bca4a56c0b"
+      ],
+      "materialization_execution_id": "knowledge_materialization_execution_efe7888a00a7f3c6ec20",
+      "materialization_id": "observed-storage-usage",
+      "node_kind": "knowledge_materialization",
+      "published_capabilities": [
+        "common.observed-storage-usage",
+        "common.storage-access-gaps",
+        "common.storage-read-write-inventory"
+      ],
+      "result": "materialization-execution/materializations/001-observed-storage-usage/materialization-result.json",
+      "status": "completed"
+    },
+    {
+      "execution_node_id": "materialization:sql-analysis",
+      "input_artifact_ids": [
+        "sql_analysis_21e03484f6fe4b138810bd66"
+      ],
+      "input_knowledge_artifact_ids": [],
+      "knowledge_artifact_ids": [
+        "knowledge_artifact_703fffbf71e3e15b0dc9"
+      ],
+      "materialization_execution_id": "knowledge_materialization_execution_0e1027f20d03c727b418",
+      "materialization_id": "sql-analysis",
+      "node_kind": "knowledge_materialization",
+      "published_capabilities": [
+        "common.sql-analysis",
+        "common.sql-attribute-insertion-context",
+        "common.sql-relation-fields",
+        "common.sql-relation-semantic-roles",
+        "common.sql-source-inventory",
+        "common.sql-source-inventory-export",
+        "common.sql-target-column-lineage",
+        "common.sql-target-resolution",
+        "common.sql-workflow-bindings",
+        "common.sql-workflow-context"
+      ],
+      "result": "materialization-execution/materializations/002-sql-analysis/materialization-result.json",
+      "status": "completed"
+    }
+  ],
+  "published_capabilities": [
+    "common.observed-storage-usage",
+    "common.sql-analysis",
+    "common.sql-attribute-insertion-context",
+    "common.sql-relation-fields",
+    "common.sql-relation-semantic-roles",
+    "common.sql-source-inventory",
+    "common.sql-source-inventory-export",
+    "common.sql-target-column-lineage",
+    "common.sql-target-resolution",
+    "common.sql-workflow-bindings",
+    "common.sql-workflow-context",
+    "common.storage-access-gaps",
+    "common.storage-read-write-inventory"
+  ],
+  "repository_run_manifests": [
+    "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/001-analyzer-java-storage-usage-analyzer-demo-repository/repository_analysis_run_manifest.json",
+    "/mnt/data/work-next/e2e-storage-sql/execution/execution-nodes/002-analyzer-sql-analysis-analyzer-demo-repository/repository_analysis_run_manifest.json"
+  ],
+  "request": {
+    "knowledge_catalog_fingerprint": "f30ccc60f0d0f2f816256e94665e0f75c8a381fd5c03d5114ab375772381c5fd",
+    "knowledge_profile_fingerprint": "7bdbc85d28b043b68160ea5a0924aeecf39d51f70ae91eff5818f8c7bdb331ef",
+    "knowledge_profile_id": "storage-and-sql",
+    "knowledge_resolution_plan_fingerprint": "aa84a706325a364caf11a7f631ed61d01de56af61482d22a17d59ddd61b969cf",
+    "resolved_knowledge_ids": [
+      "observed-storage-usage",
+      "sql-source-inventory"
+    ]
+  },
+  "result_fingerprint": "e66cff773ef3117ab74135553a03e8337de051c98b58214777701e58b9d35560",
+  "runner": {
+    "producer": "static-analysis-runner",
+    "version": "0.9.52"
+  },
+  "schema_version": "knowledge_execution_result/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "demo-repository"
+  },
+  "semantic_policy": {
+    "capability_publication": "completed_materialization_results_only",
+    "core_dispatch": "artifact_identity_to_core_owned_analyzer",
+    "dual_write": "not_supported",
+    "evidence_registration": "all_validated_core_result_artifacts",
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "legacy_fallback": "not_supported",
+    "plan_dispatch": "knowledge_execution_plan_topological_order",
+    "task_suite_profile_semantics": "not_used"
+  },
+  "started_at": "2026-08-06T02:37:34.265801+00:00",
+  "status": "completed"
+}

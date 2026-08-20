@@ -1,0 +1,16 @@
+{
+  "datamart": {
+    "job_id": "job-f0f0b911031b4b9cbf6dba369972a838",
+    "output_path": "/mnt/data/preflight_block_b_real/outputs/datamart-policy-fixed",
+    "revision_id": "rev-54792c6179de4c482839796a",
+    "status": "succeeded",
+    "system_id": "preflight-datamart-fixed"
+  },
+  "gateway": {
+    "job_id": "job-755293c384f7468da7b33a76feb57f62",
+    "output_path": "/mnt/data/preflight_block_b_real/outputs/gateway-policy-fixed",
+    "revision_id": "rev-275eb494d30c835652f70aff",
+    "status": "succeeded",
+    "system_id": "preflight-gateway-fixed"
+  }
+}

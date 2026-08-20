@@ -1,0 +1,391 @@
+{
+  "schema_version": "iteration_28_2e_validation/v1",
+  "module": "code-analyzer-core",
+  "version": "0.40.6",
+  "scope": "AT900 real repository",
+  "repository": "client-profile multi-module Gradle repository",
+  "implementation": {
+    "repository_specific_conditions": false,
+    "evidence_basis": [
+      "Tree-sitter byte spans",
+      "lexical declarations",
+      "Java imports",
+      "declared Java types",
+      "exact API semantics",
+      "class-field initializers"
+    ],
+    "intentionally_unresolved": [
+      "direct DAO/helper return contracts without observed mapping evidence"
+    ]
+  },
+  "tests": {
+    "focused_constructor": 20,
+    "full_module": 401
+  },
+  "source_validation": {
+    "methods_indexed": 6343,
+    "containers_indexed": 629,
+    "constructor_mapping_not_resolved_before": 30,
+    "constructor_mapping_not_resolved_after": 3,
+    "constructor_attribute_mappings_before": 247,
+    "constructor_attribute_mappings_after": 259,
+    "constructor_attribute_derivations_before": 432,
+    "constructor_attribute_derivations_after": 453
+  },
+  "suite_validation": {
+    "status": "completed",
+    "foundation": "complete",
+    "system_description": "complete",
+    "data_model": "complete",
+    "knowledge_layer": "complete",
+    "knowledge_layer_core_version": "0.29.1",
+    "conceptual_model_quality_gate": "passed",
+    "attribute_mappings_before": 1723,
+    "attribute_mappings_after": 1735,
+    "attribute_derivations_before": 1940,
+    "attribute_derivations_after": 1961,
+    "constructor_gaps_before": 30,
+    "constructor_gaps_after": 3,
+    "workspace_missing_facts_before": 7237,
+    "workspace_missing_facts_after": 7210,
+    "workspace_constructor_gaps": 3,
+    "workspace_constructor_payloads": 3
+  },
+  "constructor_resolution_kind_counts": {
+    "class_field": 160,
+    "constant_or_default": 38,
+    "direct_source_field_expression": 136,
+    "enclosing_instance": 86,
+    "java_empty_collection_factory": 4,
+    "jooq_record_get_value": 4,
+    "lambda_parameter": 4,
+    "local_alias": 38,
+    "local_variable": 21,
+    "method_parameter": 176,
+    "named_constant": 32,
+    "object_creation": 2,
+    "object_creation_with_inputs": 6,
+    "optional_value_unwrap": 1,
+    "same_class_expression_inputs": 4
+  },
+  "representative_examples": {
+    "direct_source_field_expression": {
+      "operation": "TpsSwitchStateHandler.fillActionsForTPEDevice",
+      "source_fields": [
+        {
+          "container": "ActionData",
+          "field": "status"
+        }
+      ],
+      "target_container": "StatusWithType",
+      "target_field": "status",
+      "constructor_argument_expression": "actionData.status",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "method_parameter": {
+      "operation": "ClientProfileAppConfig.ccpnService",
+      "source_fields": [
+        {
+          "container": "ApplicationSettings",
+          "field": "settings"
+        }
+      ],
+      "target_container": "CcpnService",
+      "target_field": "settings",
+      "constructor_argument_expression": "settings",
+      "constructor_source_kind": "method_parameter",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "class_field": {
+      "operation": "BlockRuleTest.corpExists",
+      "source_fields": [
+        {
+          "container": "BlockRuleTest",
+          "field": "settings"
+        }
+      ],
+      "target_container": "BlockRule",
+      "target_field": "settings",
+      "constructor_argument_expression": "settings",
+      "constructor_source_kind": "class_field",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "local_variable": {
+      "operation": "TpsSwitchStateHandler.updatePushDevice",
+      "source_fields": [
+        {
+          "container": "boolean",
+          "field": "pushInform"
+        }
+      ],
+      "target_container": "ActionData",
+      "target_field": "pushInform",
+      "constructor_argument_expression": "pushInform",
+      "constructor_source_kind": "local_variable",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "jooq_record_get_value": {
+      "operation": "MbInfoTransactionPushDao.getLinkTypesByUcpId",
+      "source_fields": [
+        {
+          "container": "jooq.Record",
+          "field": "phoneId"
+        }
+      ],
+      "target_container": "LinkTypeWrapper",
+      "target_field": "phoneId",
+      "constructor_argument_expression": "r.getValue(PHONE_ID_FIELD)",
+      "constructor_source_kind": "jooq_record_field",
+      "constructor_source_field_reference": "PHONE_ID_FIELD",
+      "constructor_source_field_initializer": "DSL.field(\"phoneId\", Long.class)",
+      "constructor_factory_api": null
+    },
+    "local_alias": {
+      "operation": "RegistrationEventBuilder.enrichPhoneInfo",
+      "source_fields": [
+        {
+          "container": "RegistrationEvent",
+          "field": "phone"
+        }
+      ],
+      "target_container": "PhoneInfoWrapper",
+      "target_field": "phone",
+      "constructor_argument_expression": "phone",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "same_class_expression_inputs": {
+      "operation": "MbProfileExtRequest.copy",
+      "source_fields": [
+        {
+          "container": "MbProfileExtRequest",
+          "field": "accounts",
+          "source_kind": "class_field",
+          "value_type": "List",
+          "variable": "accounts"
+        }
+      ],
+      "target_container": "MbProfileExtRequest",
+      "target_field": "accounts",
+      "constructor_argument_expression": "mergeNotNull(accounts, new ArrayList<>())",
+      "constructor_source_kind": "class_field",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "lambda_parameter": {
+      "operation": "RegistrationEventBuilder.enrichUcpInfo",
+      "source_fields": [
+        {
+          "container": "lambda_parameter",
+          "field": "cardNum",
+          "lambda_line": 217,
+          "source_kind": "lambda_parameter",
+          "variable": "cardNum"
+        }
+      ],
+      "target_container": "InfoCard",
+      "target_field": "cardNumber",
+      "constructor_argument_expression": "cardNum",
+      "constructor_source_kind": "lambda_parameter",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "optional_value_unwrap": {
+      "operation": "TpsSwitchStateHandler.updatePushDevice",
+      "source_fields": [
+        {
+          "container": "DeviceLinkWrapper",
+          "field": "lastDevice",
+          "source_kind": "optional_value",
+          "value_type": "DeviceLinkWrapper",
+          "variable": "lastDevice"
+        }
+      ],
+      "target_container": "ActionData",
+      "target_field": "lastDeviceLink",
+      "constructor_argument_expression": "lastDevice.orElse(null)",
+      "constructor_source_kind": "optional_value",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "object_creation_with_inputs": {
+      "operation": "ClientProfileAppConfig.wayCardLifeCycleService",
+      "source_fields": [
+        {
+          "container": "RestClientProperties",
+          "field": "restProperties",
+          "source_kind": "method_parameter",
+          "variable": "restProperties"
+        },
+        {
+          "container": "SslProperties",
+          "field": "sslProperties",
+          "source_kind": "method_parameter",
+          "variable": "sslProperties"
+        }
+      ],
+      "target_container": "CardLifeCycleServiceImpl",
+      "target_field": "restTemplate",
+      "constructor_argument_expression": "new RestClient(restProperties, sslProperties)",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "enclosing_instance": {
+      "operation": "Activecardlink.as",
+      "source_fields": [
+        {
+          "container": "Activecardlink",
+          "field": "this",
+          "source_kind": "enclosing_instance",
+          "variable": "this"
+        }
+      ],
+      "target_container": "Activecardlink",
+      "target_field": "LINKID",
+      "constructor_argument_expression": "this",
+      "constructor_source_kind": "enclosing_instance",
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "constant_or_default": {
+      "operation": "BlockState.notBlocked",
+      "source_fields": [
+        {
+          "container": null,
+          "field": null
+        }
+      ],
+      "target_container": "BlockState",
+      "target_field": "descr",
+      "constructor_argument_expression": "null",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "named_constant": {
+      "operation": "BlockState.notBlocked",
+      "source_fields": [
+        {
+          "container": null,
+          "field": null
+        }
+      ],
+      "target_container": "BlockState",
+      "target_field": "state",
+      "constructor_argument_expression": "NOT_BLOCKED",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    },
+    "java_empty_collection_factory": {
+      "operation": "ClientProfileController.findDevicesByClients",
+      "source_fields": [
+        {
+          "container": null,
+          "field": null
+        }
+      ],
+      "target_container": "DevicesByClientsResponse",
+      "target_field": "clientsToDevice",
+      "constructor_argument_expression": "emptyMap()",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": "java.util.Collections.emptyMap"
+    },
+    "object_creation": {
+      "operation": "KafkaConfig.betweenKafkaProducer",
+      "source_fields": [
+        {
+          "container": null,
+          "field": null
+        }
+      ],
+      "target_container": "KafkaProducer",
+      "target_field": "kafkaTemplate",
+      "constructor_argument_expression": "new StringSerializer()",
+      "constructor_source_kind": null,
+      "constructor_source_field_reference": null,
+      "constructor_source_field_initializer": null,
+      "constructor_factory_api": null
+    }
+  },
+  "remaining_constructor_gaps": [
+    {
+      "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001055_41F69ACCFEBD47A9",
+      "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+      "target_container": "PprbProfileByUcpIdRs",
+      "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+      "target_field": "profiles",
+      "constructor_argument_expression": "dao.getPprbProfilesByUcpIdsWithChannel(ucpIds)",
+      "constructor_source_resolution_kind": "unresolved",
+      "source_scope": "production_code",
+      "evidence_refs": [
+        {
+          "extractor": "java_data_model_lineage_constructor_gap",
+          "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+          "line_end": 274,
+          "line_start": 266
+        }
+      ],
+      "reason": "constructor argument could not be resolved to source fields by the fast profile"
+    },
+    {
+      "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001056_7B76C41E2B78AD7C",
+      "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+      "target_container": "PprbProfileByUcpIdRs",
+      "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+      "target_field": "profiles",
+      "constructor_argument_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+      "constructor_source_resolution_kind": "unresolved",
+      "source_scope": "production_code",
+      "evidence_refs": [
+        {
+          "extractor": "java_data_model_lineage_constructor_gap",
+          "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+          "line_end": 274,
+          "line_start": 266
+        }
+      ],
+      "reason": "constructor argument could not be resolved to source fields by the fast profile"
+    },
+    {
+      "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001059_E58199727637EF7E",
+      "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIdsWhiteList",
+      "target_container": "PprbProfileByUcpIdRs",
+      "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+      "target_field": "profiles",
+      "constructor_argument_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+      "constructor_source_resolution_kind": "unresolved",
+      "source_scope": "production_code",
+      "evidence_refs": [
+        {
+          "extractor": "java_data_model_lineage_constructor_gap",
+          "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+          "line_end": 287,
+          "line_start": 276
+        }
+      ],
+      "reason": "constructor argument could not be resolved to source fields by the fast profile"
+    }
+  ]
+}

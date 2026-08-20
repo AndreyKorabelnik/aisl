@@ -1,0 +1,2264 @@
+{
+  "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+  "catalog_fingerprint": "001d1a74dae33c7cff3a220e5cef4e270c65d3b87533c0429c5b95d5a8a8718c",
+  "contracts": [
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "data-model-candidate-evidence",
+      "contract_fingerprint": "3e862e0fb27ffecf0e5435e6fdeba0d77dabc7e66ece5c2229a2c4e5e7d00fb3",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial"
+        ],
+        "required_metrics": [
+          "source_file_count",
+          "candidate_status",
+          "score",
+          "evidence_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "data_model_candidate_facts",
+              "data_model_candidate_profile"
+            ],
+            "stage_id": "java_data_model_candidate_scan"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "Safe non-applicability is not yet formalized because the current candidate scanner observes mixed Java, declarative-schema, SQL DDL/migration, and model-oriented path signals."
+      ],
+      "definition": "Lightweight repository-scoped observed evidence used to rank repositories as candidates for deeper data-model analysis.",
+      "forbidden_semantics": [
+        "automatic repository selection",
+        "full data-model construction",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or dual-write to Task/Suite artifacts"
+      ],
+      "intended_knowledge_consumers": [
+        "data-model-discovery"
+      ],
+      "non_goals": [
+        "Do not build a logical or physical data model.",
+        "Do not automatically select repositories for deep analysis."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "repository_identity",
+          "candidate_profile"
+        ],
+        "sections": [
+          {
+            "record_identity": "repo_id",
+            "required_fields": [
+              "repo_id",
+              "candidate_status",
+              "score",
+              "signals",
+              "score_components",
+              "evidence"
+            ],
+            "section": "candidate_profile"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "status": "not_formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "measured_bounded_current",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "specialized_candidate",
+        "execution_class": "bounded_preflight",
+        "preflight_phase": "p1",
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "java_data_model_candidate_scan"
+        ],
+        "target_analyzer_id": "data-model-candidate-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative inside candidate_profile.evidence"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/data-model-candidate-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "data-model-candidate-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "data-model-candidate-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "data-model-candidate-evidence",
+        "schema_version": "data-model-candidate-evidence/v1"
+      },
+      "title": "Data model candidate evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "interaction-boundary-evidence",
+      "contract_fingerprint": "67c6d2667dfaea030d8d1efade29f7120fc3c36c5a32be380b7fc17d149cae6f",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "source_file_count",
+          "boundary_count",
+          "inbound_boundary_count",
+          "outbound_boundary_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "interaction_boundary_facts",
+              "enriched_interfaces"
+            ],
+            "stage_id": "java_system_interaction_enrichment"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Deterministic repository-scoped inbound and outbound HTTP boundary observations for cross-repository matching.",
+      "forbidden_semantics": [
+        "cross-repository matching inside Core",
+        "Kafka boundary inference",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or dual-write to Task/Suite artifacts"
+      ],
+      "intended_knowledge_consumers": [
+        "system-interactions"
+      ],
+      "non_goals": [
+        "Do not match repositories or build islands inside Core.",
+        "Do not publish value-flow or execution-context evidence."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "repository_identity",
+          "boundary_catalog"
+        ],
+        "sections": [
+          {
+            "record_identity": "repo_id",
+            "required_fields": [
+              "repo_id",
+              "system_id",
+              "project_id",
+              "service_aliases"
+            ],
+            "section": "repository_identity"
+          },
+          {
+            "record_identity": "artifact_name",
+            "required_fields": [
+              "artifact_name",
+              "relative_path",
+              "sha256",
+              "bytes",
+              "section"
+            ],
+            "section": "boundary_catalog"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [
+            "java"
+          ],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "measured_bounded_current",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "specialized_observation",
+        "execution_class": "bounded_preflight",
+        "preflight_phase": "p1",
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "java_system_interaction_enrichment"
+        ],
+        "target_analyzer_id": "interaction-boundary-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative inside payload records"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/interaction-boundary-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "interaction-boundary-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "interaction-boundary-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "interaction-boundary-evidence",
+        "schema_version": "interaction-boundary-evidence/v1"
+      },
+      "title": "HTTP interaction boundary evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "contract_fingerprint": "9c053df026707ba758f1cd6361bcdf52c330e2c03a995d102827888cc56a406f",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_in_scope",
+          "java_files_parsed",
+          "java_files_failed",
+          "java_files_with_parse_errors",
+          "persistence_type_mapping_count",
+          "persistence_field_mapping_count",
+          "persistence_key_mapping_count",
+          "persistence_relationship_mapping_count",
+          "persistence_inheritance_mapping_count",
+          "mapping_gap_count",
+          "diagnostic_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "Method/property-access annotations are not normalized because java-persistence-mapping-evidence/v1 currently observes type and field declarations only.",
+        "Composite annotations such as JoinColumns, JoinTable and AttributeOverrides are retained as raw source annotations and diagnosed, but not normalized in v1.",
+        "JPA default table and column naming is intentionally not inferred."
+      ],
+      "definition": "Explicit Java persistence mapping declarations normalized from observed JPA/Jakarta annotations without matching them to a physical model or inferring default names.",
+      "diagnostic_contract": {
+        "failure_policy": "publish supported mapping declarations and explicit diagnostics for unsupported or non-literal annotation constructs",
+        "known_codes": [
+          "non_literal_persistence_annotation_argument",
+          "unsupported_composite_persistence_annotation",
+          "table_annotation_without_persistence_type_annotation"
+        ],
+        "required_fields": [
+          "code",
+          "severity",
+          "message",
+          "source_refs"
+        ]
+      },
+      "forbidden_semantics": [
+        "matching logical objects to physical tables or columns",
+        "physical-schema substitution",
+        "JPA default table or column naming inference",
+        "naming-similarity matching",
+        "observed SQL or storage usage as mapping proof",
+        "confidence score or probability",
+        "task_id, suite_id or profile_id as semantic selectors"
+      ],
+      "intended_knowledge_consumers": [
+        "logical-physical-mapping"
+      ],
+      "non_goals": [
+        "Do not decide whether an explicit table or column name exists in a supplied physical model.",
+        "Do not use storage calls, SQL joins or naming similarity to invent a mapping.",
+        "Do not merge persistence mapping with code-declared or physical-model knowledge inside Core.",
+        "Do not apply framework defaults when the source declaration is absent."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "persistence_type_mappings",
+          "persistence_field_mappings",
+          "persistence_key_mappings",
+          "persistence_relationship_mappings",
+          "persistence_inheritance_mappings",
+          "mapping_gaps"
+        ],
+        "sections": [
+          {
+            "optional_fields": [
+              "entity_name_explicit",
+              "table_name_explicit",
+              "schema_name_explicit",
+              "catalog_name_explicit"
+            ],
+            "record_identity": "persistence_type_mapping_id",
+            "required_fields": [
+              "persistence_type_mapping_id",
+              "type_id",
+              "fully_qualified_name",
+              "persistence_kind",
+              "annotation_ids",
+              "mapping_basis",
+              "source_ref"
+            ],
+            "section": "persistence_type_mappings"
+          },
+          {
+            "optional_fields": [
+              "column_name_explicit",
+              "column_table_name_explicit",
+              "nullable_declared",
+              "relationship_kind",
+              "relationship_mapped_by_explicit",
+              "join_column_name_explicit",
+              "referenced_column_name_explicit",
+              "resolved_target_type_id",
+              "candidate_target_type_ids"
+            ],
+            "record_identity": "persistence_field_mapping_id",
+            "required_fields": [
+              "persistence_field_mapping_id",
+              "field_id",
+              "owner_type_id",
+              "field_name",
+              "declared_type_expression",
+              "persistence_role",
+              "annotation_ids",
+              "mapping_basis",
+              "source_ref"
+            ],
+            "section": "persistence_field_mappings"
+          },
+          {
+            "optional_fields": [
+              "field_id",
+              "column_name_explicit",
+              "id_class_expression"
+            ],
+            "record_identity": "persistence_key_mapping_id",
+            "required_fields": [
+              "persistence_key_mapping_id",
+              "owner_type_id",
+              "key_kind",
+              "annotation_ids",
+              "source_ref"
+            ],
+            "section": "persistence_key_mappings"
+          },
+          {
+            "optional_fields": [
+              "target_type_id",
+              "candidate_target_type_ids",
+              "mapped_by_explicit",
+              "join_column_name_explicit",
+              "referenced_column_name_explicit"
+            ],
+            "record_identity": "persistence_relationship_mapping_id",
+            "required_fields": [
+              "persistence_relationship_mapping_id",
+              "source_type_id",
+              "field_id",
+              "relationship_kind",
+              "annotation_ids",
+              "source_ref"
+            ],
+            "section": "persistence_relationship_mappings"
+          },
+          {
+            "optional_fields": [
+              "strategy_expression",
+              "discriminator_column_name_explicit",
+              "discriminator_value_explicit"
+            ],
+            "record_identity": "persistence_inheritance_mapping_id",
+            "required_fields": [
+              "persistence_inheritance_mapping_id",
+              "type_id",
+              "fully_qualified_name",
+              "annotation_ids",
+              "source_ref"
+            ],
+            "section": "persistence_inheritance_mappings"
+          },
+          {
+            "record_identity": "mapping_gap_id",
+            "required_fields": [
+              "mapping_gap_id",
+              "gap_code",
+              "severity",
+              "owner_kind",
+              "owner_id",
+              "message",
+              "source_refs"
+            ],
+            "section": "mapping_gaps"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [
+            "java"
+          ],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "current_source_stage_ids": [],
+        "required_foundation_sections": [
+          "source_file_inventory",
+          "java_syntax_index"
+        ],
+        "source_language": "java",
+        "target_analyzer_id": "java-persistence-mapping-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported explicit persistence annotations on successfully parsed in-scope Java type and field declarations",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic_by_logical_owner_declaration_location_and_stable_id",
+        "partial_result_policy": "publish supported declarations with explicit diagnostics and mapping gaps",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "preserve_raw_annotation_in_source_structure_evidence_and_emit_diagnostic_without_invented_mapping"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [
+          "start_byte",
+          "end_byte",
+          "snippet_hash"
+        ],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/java-persistence-mapping-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-persistence-mapping-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "java-persistence-mapping-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Java persistence mapping evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "java-type-structure-evidence",
+      "contract_fingerprint": "c861267da0b3c2e2b2ab72639036e76b3d820d965581c2edc94a59453e14c8ee",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_discovered",
+          "java_files_in_scope",
+          "java_files_parsed",
+          "java_files_failed",
+          "java_files_with_parse_errors",
+          "type_declaration_count",
+          "field_declaration_count",
+          "inheritance_declaration_count",
+          "annotation_declaration_count",
+          "type_reference_count",
+          "unresolved_type_reference_count",
+          "ambiguous_type_reference_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "java_structural_facts",
+              "schemas",
+              "interfaces",
+              "relations",
+              "mapper_facts"
+            ],
+            "stage_id": "java_structural_scan"
+          },
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "source_observation_facts",
+              "source_observation_fact_store",
+              "module_resolution_facts",
+              "framework_observations_optional"
+            ],
+            "stage_id": "java_source_observation_build"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "Java annotation type declarations are diagnosed but not yet materialized as type records."
+      ],
+      "definition": "Complete source-observed Java type declarations and their structural members without persistence, physical, usage or effective-model interpretation.",
+      "diagnostic_contract": {
+        "failure_policy": "one_file_failure_does_not_drop_successfully_observed_declarations",
+        "known_codes": [
+          "java_parse_error",
+          "unresolved_type_reference",
+          "ambiguous_type_reference",
+          "unsupported_java_declaration",
+          "duplicate_type_identity",
+          "source_file_unreadable"
+        ],
+        "required_fields": [
+          "code",
+          "severity",
+          "message",
+          "source_refs"
+        ]
+      },
+      "forbidden_semantics": [
+        "JPA entity, table, column, key or relationship interpretation",
+        "logical-to-physical mapping",
+        "physical-schema substitution",
+        "SQL or storage usage",
+        "converter or builder attribute mapping",
+        "effective inherited fields",
+        "effective associations",
+        "domain or business-object classification",
+        "confidence score or probability",
+        "task_id, suite_id or profile_id as semantic selectors"
+      ],
+      "intended_knowledge_consumers": [
+        "code-declared-data-model"
+      ],
+      "non_goals": [
+        "Do not infer that a field type is a business association.",
+        "Do not decide which Java types are domain entities.",
+        "Do not calculate inherited effective fields inside Core.",
+        "Do not interpret persistence annotations in this analyzer."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "source_units",
+          "type_declarations",
+          "field_declarations",
+          "inheritance_declarations",
+          "annotation_declarations",
+          "type_reference_observations",
+          "enum_constant_declarations"
+        ],
+        "sections": [
+          {
+            "notes": "One record for every in-scope Java source file, including files with parse errors.",
+            "optional_fields": [
+              "source_set",
+              "content_sha256",
+              "bytes"
+            ],
+            "record_identity": "source_unit_id",
+            "required_fields": [
+              "source_unit_id",
+              "repository_relative_path",
+              "language",
+              "package_name",
+              "imports",
+              "parse_status",
+              "parse_error_count"
+            ],
+            "section": "source_units"
+          },
+          {
+            "allowed_type_kinds": [
+              "class",
+              "interface",
+              "enum",
+              "record",
+              "annotation_type"
+            ],
+            "optional_fields": [
+              "enclosing_type_id",
+              "documentation",
+              "source_set"
+            ],
+            "record_identity": "type_id",
+            "required_fields": [
+              "type_id",
+              "source_unit_id",
+              "fully_qualified_name",
+              "simple_name",
+              "package_name",
+              "type_kind",
+              "modifier_tokens",
+              "type_parameters",
+              "source_ref"
+            ],
+            "section": "type_declarations"
+          },
+          {
+            "notes": "Static fields are retained as declarations. KLC decides which members belong in a data-model view; Core does not silently discard them from evidence.",
+            "optional_fields": [
+              "normalized_type_expression",
+              "initializer_present",
+              "documentation"
+            ],
+            "record_identity": "field_id",
+            "required_fields": [
+              "field_id",
+              "owner_type_id",
+              "name",
+              "declared_type_expression",
+              "modifier_tokens",
+              "is_static",
+              "is_final",
+              "source_ref"
+            ],
+            "section": "field_declarations"
+          },
+          {
+            "allowed_relation_kinds": [
+              "extends",
+              "implements"
+            ],
+            "optional_fields": [
+              "resolved_supertype_id",
+              "candidate_supertype_ids",
+              "type_arguments",
+              "resolved_fqcn",
+              "candidate_fqcns"
+            ],
+            "record_identity": "inheritance_id",
+            "required_fields": [
+              "inheritance_id",
+              "subtype_id",
+              "relation_kind",
+              "declared_supertype_expression",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "inheritance_declarations"
+          },
+          {
+            "allowed_target_kinds": [
+              "type",
+              "field"
+            ],
+            "notes": "Raw annotations are evidence. Their JPA, serialization, validation or framework meaning is interpreted by separate analyzers/materializations.",
+            "optional_fields": [
+              "resolved_annotation_type",
+              "candidate_annotation_types"
+            ],
+            "record_identity": "annotation_id",
+            "required_fields": [
+              "annotation_id",
+              "target_kind",
+              "target_id",
+              "annotation_name",
+              "arguments_raw",
+              "structured_arguments",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "annotation_declarations"
+          },
+          {
+            "allowed_reference_roles": [
+              "field_type",
+              "extends_type",
+              "implements_type"
+            ],
+            "notes": "Method parameter/return references belong to broader source-code evidence and are outside the first code-declared data-model contract.",
+            "optional_fields": [
+              "resolved_type_id",
+              "candidate_type_ids",
+              "resolved_fqcn",
+              "candidate_fqcns"
+            ],
+            "record_identity": "type_reference_id",
+            "required_fields": [
+              "type_reference_id",
+              "owner_kind",
+              "owner_id",
+              "reference_role",
+              "declared_type_expression",
+              "referenced_type_token",
+              "resolution_status",
+              "source_ref"
+            ],
+            "section": "type_reference_observations"
+          },
+          {
+            "notes": "Constants are preserved as declarations without classifying them as reference data.",
+            "record_identity": "enum_constant_id",
+            "required_fields": [
+              "enum_constant_id",
+              "owner_type_id",
+              "name",
+              "arguments_raw",
+              "source_ref"
+            ],
+            "section": "enum_constant_declarations"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [
+            "java"
+          ],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "current_source_stage_ids": [
+          "java_structural_scan",
+          "java_source_observation_build"
+        ],
+        "required_foundation_sections": [
+          "source_file_inventory",
+          "java_syntax_index"
+        ],
+        "source_language": "java",
+        "target_analyzer_id": "java-type-structure-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all declarations from every successfully parsed in-scope Java source file",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic_by_repository_relative_path_declaration_location_and_stable_id",
+        "partial_result_policy": "publish_observed_records_with_explicit_file_coverage_and_parse_diagnostics",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "diagnostic_without_invented_semantics"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [
+          "start_byte",
+          "end_byte",
+          "snippet_hash"
+        ],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/java-type-structure-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-type-structure-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "java-type-structure-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Java type structure evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "model-storage-evidence",
+      "contract_fingerprint": "d6902f81014d6f1a76005a22c02b5f0b1de325a06e05dec15a36405a792295b8",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_discovered",
+          "source_observation_count",
+          "interpreter_observation_count",
+          "storage_records_count",
+          "storage_references_count",
+          "storage_key_lineage_count",
+          "reference_value_derivations_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "source_observation_facts",
+              "source_observation_fact_store",
+              "module_resolution_facts",
+              "framework_observations_optional"
+            ],
+            "stage_id": "java_source_observation_build"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "The first framework interpreter is TSA/change-vector; additional storage encodings require independent interpreters, not hardcoded KLC rules."
+      ],
+      "definition": "Observed model-to-storage record identities, reference construction and composed key lineage extracted from framework API bindings without physical-table or business interpretation.",
+      "diagnostic_contract": {
+        "failure_policy": "publish observed model-storage records even when unrelated Java files contain parse warnings",
+        "known_codes": [
+          "java_parse_warning"
+        ],
+        "required_fields": [
+          "code",
+          "severity",
+          "message",
+          "source_refs"
+        ]
+      },
+      "forbidden_semantics": [
+        "logical object to SQL or PDM table matching",
+        "logical field to physical column matching",
+        "PK or FK verdicts",
+        "business key classification",
+        "physical-name normalization or separator guessing",
+        "current-version filtering semantics",
+        "confidence scores or candidate ranking",
+        "UCP-specific entity names or source-table hardcodes"
+      ],
+      "intended_knowledge_consumers": [
+        "model-storage-semantics",
+        "effective-data-model"
+      ],
+      "non_goals": [
+        "Do not infer a table from a storage alias.",
+        "Do not assert joinability from a reference value.",
+        "Do not collapse object identity and version/currentness filtering.",
+        "Do not interpret storage calls from repositories that do not expose the configured reference+key+alias API signature."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "storage_records",
+          "storage_references",
+          "storage_key_lineage",
+          "reference_value_derivations"
+        ],
+        "sections": [
+          {
+            "notes": "Observed builder record alias and storage-key assignment on the same receiver.",
+            "record_identity": "observation_id",
+            "required_fields": [
+              "observation_id",
+              "observation_kind",
+              "api_framework",
+              "properties",
+              "source_refs"
+            ],
+            "section": "storage_records"
+          },
+          {
+            "notes": "Observed reference value connected to the returned key of a target storage record.",
+            "record_identity": "observation_id",
+            "required_fields": [
+              "observation_id",
+              "observation_kind",
+              "api_framework",
+              "properties",
+              "source_refs"
+            ],
+            "section": "storage_references"
+          },
+          {
+            "notes": "Observed collection reference and composed target key expression across exact Java bindings.",
+            "record_identity": "observation_id",
+            "required_fields": [
+              "observation_id",
+              "observation_kind",
+              "api_framework",
+              "properties",
+              "source_refs"
+            ],
+            "section": "storage_key_lineage"
+          },
+          {
+            "notes": "Observed reference-field value derivation across call and return bindings.",
+            "record_identity": "observation_id",
+            "required_fields": [
+              "observation_id",
+              "observation_kind",
+              "api_framework",
+              "properties",
+              "source_refs"
+            ],
+            "section": "reference_value_derivations"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [
+            "java"
+          ],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "current_source_stage_ids": [
+          "java_source_observation_build"
+        ],
+        "required_foundation_sections": [
+          "java_syntax_index"
+        ],
+        "source_language": "java",
+        "target_analyzer_id": "java-model-storage-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported model-storage observations from in-scope Java source when the framework API signature is applicable",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic_by_observation_id",
+        "partial_result_policy": "publish observed records with parse diagnostics",
+        "provenance": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "retain source observations and omit unsupported model-storage interpretation rather than guessing"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/model-storage-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-model-storage-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "model-storage-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Model-storage evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "persistence-lineage-evidence",
+      "contract_fingerprint": "8cd2824268adf44645ae77ac427b8923444b2b2db75108ad1ad4d9c4575b1cad",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "source_file_count",
+          "source_to_storage_lineage_count",
+          "storage_to_access_lineage_count",
+          "persistent_write_count",
+          "storage_access_count",
+          "lineage_gap_count",
+          "stored_field_mapping_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "persistence_lineage_facts"
+            ],
+            "stage_id": "java_persistence_lineage_build"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Deterministic repository-scoped source-to-storage and storage-to-access persistence lineage evidence with explicit writes, reads, field mappings and gaps.",
+      "forbidden_semantics": [
+        "FDP verdict assignment",
+        "business ownership inference",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or dual-write to Task/Suite artifacts"
+      ],
+      "intended_knowledge_consumers": [
+        "persistence-lineage"
+      ],
+      "non_goals": [
+        "Do not assign a foreign-data-persistence verdict.",
+        "Do not fabricate paths across missing storage or access evidence."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "repository_identity",
+          "artifacts"
+        ],
+        "sections": [
+          {
+            "record_identity": "artifact_name",
+            "required_fields": [
+              "artifact_name",
+              "relative_path",
+              "sha256",
+              "bytes",
+              "section"
+            ],
+            "section": "artifacts"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "status": "not_formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "java_persistence_lineage_build"
+        ],
+        "target_analyzer_id": "persistence-lineage-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative inside payload records"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/persistence-lineage-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "persistence-lineage-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "persistence-lineage-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "persistence-lineage-evidence",
+        "schema_version": "persistence-lineage-evidence/v1"
+      },
+      "title": "Persistence lineage evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "reference-data-evidence",
+      "contract_fingerprint": "2cc4219ea5fb272559b828b2c5e79f181f4ada51904ef3277c160cfee1dba63a",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "source_file_count",
+          "section_count",
+          "record_count",
+          "missing_section_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "declared_value_facts"
+            ],
+            "stage_id": "declared_value_scan"
+          },
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "declared_value_summary_facts"
+            ],
+            "stage_id": "declared_value_summary_scan"
+          },
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "reference_data_fact_base_artifact"
+            ],
+            "stage_id": "reference_data_fact_base"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Facts-only declared values, literal writes, storage context and unresolved gaps published as typed evidence.",
+      "forbidden_semantics": [
+        "reference-data or NSI classification",
+        "candidate ownership inference",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or dual-write to Task/Suite artifacts"
+      ],
+      "intended_knowledge_consumers": [
+        "reference-data"
+      ],
+      "non_goals": [
+        "Do not perform business interpretation or ownership classification.",
+        "Do not use Task/Suite identifiers as semantic routing."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "sections"
+        ],
+        "sections": [
+          {
+            "record_identity": "section_plus_relative_path",
+            "required_fields": [
+              "section",
+              "relative_path",
+              "records_count",
+              "sha256",
+              "bytes",
+              "format"
+            ],
+            "section": "sections"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "status": "not_formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "declared_value_scan",
+          "declared_value_summary_scan",
+          "reference_data_fact_base"
+        ],
+        "target_analyzer_id": "reference-data-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative inside payload records"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/reference-data-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "reference-data-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "reference-data-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "reference-data-evidence",
+        "schema_version": "reference-data-evidence/v1"
+      },
+      "title": "Reference data evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "repository-structure-evidence",
+      "contract_fingerprint": "75b0b1e721c92c97bbc587185ff74df3f041610e4b90b2e61ece37c08efc6f80",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial"
+        ],
+        "required_metrics": [
+          "all_file_count",
+          "analyzer_eligible_file_count",
+          "outside_analyzer_frontier_file_count",
+          "extension_family_count",
+          "outside_analyzer_frontier_extension_family_count",
+          "unreadable_file_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "repository_file_inventory",
+              "detected_stack"
+            ],
+            "stage_id": "scan_files"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "generic JSON/config/tabular structural shapes are intentionally not part of this initial observed file-frontier contract"
+      ],
+      "definition": "Repository-scoped concept-agnostic observed file frontier and Core analyzer-eligibility evidence over every non-skipped repository file.",
+      "forbidden_semantics": [
+        "concept classification",
+        "novelty scoring",
+        "business meaning",
+        "automatic scenario selection",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or second repository parser"
+      ],
+      "intended_knowledge_consumers": [
+        "repository-inventory"
+      ],
+      "non_goals": [
+        "Do not parse or interpret file contents.",
+        "Do not broaden the existing analyzer-eligible file set.",
+        "Do not classify repository concepts."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "repository_identity",
+          "files",
+          "extension_inventory",
+          "outside_analyzer_frontier_extension_families"
+        ],
+        "sections": [
+          {
+            "record_identity": "repository_relative_path",
+            "required_fields": [
+              "repository_relative_path",
+              "file_name",
+              "extension",
+              "readable",
+              "analyzer_eligible",
+              "analyzer_frontier_status"
+            ],
+            "section": "files"
+          },
+          {
+            "record_identity": "extension",
+            "required_fields": [
+              "extension",
+              "file_count",
+              "analyzer_eligible_file_count",
+              "outside_analyzer_frontier_file_count"
+            ],
+            "section": "extension_inventory"
+          },
+          {
+            "record_identity": "extension",
+            "required_fields": [
+              "extension",
+              "file_count",
+              "status"
+            ],
+            "section": "outside_analyzer_frontier_extension_families"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "metadata_only",
+          "hard_bounds_declared": true
+        },
+        "discovery_role": "generic_structural",
+        "execution_class": "always_on",
+        "preflight_phase": "p0",
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "scan_files"
+        ],
+        "target_analyzer_id": "repository-structure-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative in files.repository_relative_path"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/repository-structure-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "repository-structure-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "repository-structure-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "repository-structure-evidence",
+        "schema_version": "repository-structure-evidence/v1"
+      },
+      "title": "Repository structure evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "sql-analysis",
+      "contract_fingerprint": "df82c91eb06331b5ade56b3e78ad36513a6d1907c225f1f8131ee140fa4aa121",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "sql_files_scanned",
+          "sql_unit_count",
+          "sql_statement_count",
+          "lineage_gap_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Repository SQL analysis evidence",
+      "forbidden_semantics": [
+        "Task/Suite/Profile semantic routing",
+        "LLM interpretation in canonical evidence",
+        "absolute machine paths"
+      ],
+      "intended_knowledge_consumers": [
+        "sql-analysis",
+        "workspace-sql-catalog"
+      ],
+      "payload": {
+        "sections": [
+          {
+            "record_identity": "single_manifest",
+            "required_fields": [
+              "canonical_manifest_path",
+              "canonical_content_fingerprint"
+            ],
+            "section": "canonical_manifest_path"
+          },
+          {
+            "record_identity": "fact_type",
+            "required_fields": [
+              "fact_type",
+              "id_field",
+              "path",
+              "record_count",
+              "sha256",
+              "byte_size"
+            ],
+            "section": "fact_shards"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [
+            "sql"
+          ],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "current_source_stage_ids": [],
+        "required_foundation_sections": [],
+        "source_language": "sql",
+        "target_analyzer_id": "sql-analysis-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported observations from in-scope files",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic",
+        "partial_result_policy": "publish supported facts with explicit diagnostics and gaps",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "emit diagnostics without invented facts"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/sql-analysis-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "sql-analysis-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "sql-analysis/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Repository SQL analysis evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "storage-usage-evidence",
+      "contract_fingerprint": "a94c6e604ee6e43ed06821638d462c1c1e6b615f8a4c3cd40206154a390e626a",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "java_files_discovered",
+          "java_methods_indexed",
+          "storage_access_count",
+          "storage_read_count",
+          "storage_write_count",
+          "storage_gap_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Observed Java storage usage evidence",
+      "forbidden_semantics": [
+        "physical table inference from repository names",
+        "field lineage without explicit selected or bound fields",
+        "business ownership or risk classification"
+      ],
+      "intended_knowledge_consumers": [
+        "observed-storage-usage"
+      ],
+      "payload": {
+        "sections": [
+          {
+            "optional_fields": [
+              "storage_target_expression",
+              "storage_kind",
+              "payload_expression",
+              "selected_fields"
+            ],
+            "record_identity": "storage_access_id",
+            "required_fields": [
+              "storage_access_id",
+              "repo_id",
+              "operation",
+              "access_kind",
+              "storage_method",
+              "source_ref"
+            ],
+            "section": "storage_accesses"
+          },
+          {
+            "record_identity": "storage_read_id",
+            "required_fields": [
+              "storage_read_id",
+              "storage_access_id",
+              "repo_id",
+              "operation",
+              "source_ref"
+            ],
+            "section": "storage_reads"
+          },
+          {
+            "record_identity": "storage_write_id",
+            "required_fields": [
+              "storage_write_id",
+              "storage_access_id",
+              "repo_id",
+              "operation",
+              "source_ref"
+            ],
+            "section": "storage_writes"
+          },
+          {
+            "record_identity": "storage_usage_gap_id",
+            "required_fields": [
+              "storage_usage_gap_id",
+              "gap_code",
+              "severity",
+              "owner_kind",
+              "owner_id",
+              "message",
+              "source_refs"
+            ],
+            "section": "storage_usage_gaps"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [
+            "java"
+          ],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "current_source_stage_ids": [],
+        "required_foundation_sections": [],
+        "source_language": "java",
+        "target_analyzer_id": "java-storage-usage-analyzer"
+      },
+      "publication_policy": {
+        "completeness": "all supported observations from in-scope files",
+        "hidden_fallbacks": "forbidden",
+        "ordering": "deterministic",
+        "partial_result_policy": "publish supported facts with explicit diagnostics and gaps",
+        "path_policy": "repository_relative_paths_only",
+        "record_limit": null,
+        "unsupported_construct_policy": "emit diagnostics without invented facts"
+      },
+      "record_provenance_contract": {
+        "absolute_temporary_paths_forbidden": true,
+        "optional_fields": [],
+        "source_ref_required_fields": [
+          "repository_relative_path",
+          "line_start",
+          "line_end",
+          "extractor"
+        ]
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/storage-usage-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "java-storage-usage-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "storage-usage-evidence/v1",
+      "semantic_identity": [
+        "artifact_kind",
+        "schema_version"
+      ],
+      "title": "Observed Java storage usage evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "structured-file-shape-evidence",
+      "contract_fingerprint": "caba59d50cf1165a203f064c94404283bdc9fd4384c4752f7b5c198c0c223ac9",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial"
+        ],
+        "required_metrics": [
+          "candidate_file_count",
+          "parsed_file_count",
+          "parse_failed_file_count",
+          "bounded_skip_file_count",
+          "member_count",
+          "supported_syntaxes"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "base_evidence",
+            "present": true,
+            "produces": [
+              "repository_file_inventory",
+              "detected_stack"
+            ],
+            "stage_id": "scan_files"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [
+        "XML/properties/tabular and unknown syntaxes are not parsed by this v1 evidence family; unsupported syntax remains explicit outside this contract"
+      ],
+      "definition": "Repository-scoped concept-agnostic observed structural member evidence for bounded supported JSON/YAML source artifacts, preserving exact source membership, structural signatures, state sketches and cardinality without arbitrary scalar values or business semantics.",
+      "forbidden_semantics": [
+        "business meaning",
+        "concept classification",
+        "family membership",
+        "rare/dominant variant classification",
+        "semantic equivalence",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or schema guessing"
+      ],
+      "intended_knowledge_consumers": [
+        "repository-inventory",
+        "benchmark-source-case-production"
+      ],
+      "non_goals": [
+        "Do not infer structural-family membership in Core.",
+        "Do not export arbitrary scalar values.",
+        "Do not infer business/domain meaning from key names or states.",
+        "Do not claim unsupported structured syntaxes are parsed."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "repository_identity",
+          "members"
+        ],
+        "sections": [
+          {
+            "record_identity": "member_id",
+            "required_fields": [
+              "member_id",
+              "repository_relative_path",
+              "content_identity",
+              "syntax",
+              "parse_status",
+              "root_type",
+              "structure_signature",
+              "variant_signature",
+              "structural_size",
+              "path_observations",
+              "state_observations",
+              "cardinality_observations",
+              "observation_truncated",
+              "provenance"
+            ],
+            "section": "members"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [
+            ".json",
+            ".yaml",
+            ".yml"
+          ],
+          "required_languages_any_of": [],
+          "status": "formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "hard_bounded_content",
+          "hard_bound_contract": "structured-file-shape-evidence/v1 bounded parser limits",
+          "hard_bounds_declared": true
+        },
+        "discovery_role": "generic_structural",
+        "execution_class": "bounded_preflight",
+        "preflight_phase": "p1",
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "scan_files"
+        ],
+        "target_analyzer_id": "structured-file-shape-analyzer"
+      },
+      "publication_policy": {
+        "bounded_per_member_observations": true,
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative in members.repository_relative_path"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/structured-file-shape-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "structured-file-shape-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "structured-file-shape-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "structured-file-shape-evidence",
+        "schema_version": "structured-file-shape-evidence/v1"
+      },
+      "title": "Structured file shape evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "system-description-evidence",
+      "contract_fingerprint": "f920efb6cd7d5198207e7df87ae99b7a061a607fe172f740dfda9f17f6400021",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "source_file_count",
+          "payload_artifact_count",
+          "expected_payload_artifact_count",
+          "missing_payload_artifact_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "system_description_view_facts"
+            ],
+            "stage_id": "system_description_enrichment"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Deterministic interface, scenario, dependency, storage and access-boundary records published as typed evidence.",
+      "forbidden_semantics": [
+        "business capability classification",
+        "system ownership inference",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or dual-write to Task/Suite artifacts"
+      ],
+      "intended_knowledge_consumers": [
+        "system-description"
+      ],
+      "non_goals": [
+        "Do not perform business interpretation or ownership classification.",
+        "Do not use Task/Suite identifiers as semantic routing."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "artifacts"
+        ],
+        "sections": [
+          {
+            "record_identity": "artifact_name",
+            "required_fields": [
+              "artifact_name",
+              "relative_path",
+              "sha256",
+              "bytes",
+              "sections"
+            ],
+            "section": "artifacts"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "status": "not_formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "system_description_enrichment"
+        ],
+        "target_analyzer_id": "system-description-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative inside payload records"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/system-description-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "system-description-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "system-description-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "system-description-evidence",
+        "schema_version": "system-description-evidence/v1"
+      },
+      "title": "System description evidence"
+    },
+    {
+      "artifact_envelope_contract": "core_evidence_artifact_contract/v1",
+      "artifact_kind": "value-flow-evidence",
+      "contract_fingerprint": "f8b2a7f1bb3fc681bd404fac0aa08a0d4c56bdc6f9d6fc39638b9e8c4704c73b",
+      "contract_schema_version": "core_evidence_contract/v1",
+      "contract_status": "runtime_published",
+      "coverage_contract": {
+        "coverage_status_values": [
+          "complete",
+          "partial",
+          "not_applicable"
+        ],
+        "required_metrics": [
+          "source_file_count",
+          "field_occurrence_count",
+          "field_flow_edge_count",
+          "interface_count"
+        ]
+      },
+      "current_state_assessment": {
+        "missing_source_stage_ids": [],
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "runtime_registration_present": true,
+        "runtime_registration_valid": true,
+        "runtime_status": "registered_in_generic_core_evidence_runtime",
+        "source_observations_available": true,
+        "source_stages": [
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "java_data_flow_facts"
+            ],
+            "stage_id": "java_data_flow_build"
+          },
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "java_field_flow_facts"
+            ],
+            "stage_id": "java_field_flow_build"
+          },
+          {
+            "category": "derived_evidence",
+            "present": true,
+            "produces": [
+              "java_traceability_facts"
+            ],
+            "stage_id": "java_traceability_build"
+          }
+        ],
+        "typed_runtime_artifact_published": true
+      },
+      "current_state_gaps": [],
+      "definition": "Deterministic repository-scoped atomic value occurrences, direct observed value-flow edges and boundary field contracts.",
+      "forbidden_semantics": [
+        "transitive path fabrication inside Core",
+        "business lineage interpretation",
+        "task_id, suite_id or profile_id as semantic selectors",
+        "hidden fallback or dual-write to Task/Suite artifacts"
+      ],
+      "intended_knowledge_consumers": [
+        "repository-value-flow"
+      ],
+      "non_goals": [
+        "Do not compose transitive attribute paths inside Core.",
+        "Do not infer cross-repository transport links."
+      ],
+      "payload": {
+        "payload_root_fields": [
+          "repository_identity",
+          "artifacts"
+        ],
+        "sections": [
+          {
+            "record_identity": "artifact_name",
+            "required_fields": [
+              "artifact_name",
+              "relative_path",
+              "sha256",
+              "bytes",
+              "section"
+            ],
+            "section": "artifacts"
+          }
+        ]
+      },
+      "preflight_planning": {
+        "applicability": {
+          "basis": "observed_source_landscape",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "status": "not_formalized",
+          "when_unresolved": "execute_if_explicitly_requested_else_do_not_hard_skip"
+        },
+        "budget": {
+          "class": "full_analysis",
+          "hard_bounds_declared": false
+        },
+        "discovery_role": "domain_evidence",
+        "execution_class": "full_analysis",
+        "preflight_phase": null,
+        "selection_safety": {
+          "concept_inference_may_hard_skip": false,
+          "explicit_request_behavior": "execute_or_report_observed_blocking_precondition",
+          "hard_skip_requires_observed_non_applicability": true
+        }
+      },
+      "producer": {
+        "component": "code-analyzer-core",
+        "current_source_stage_ids": [
+          "java_data_flow_build",
+          "java_field_flow_build",
+          "java_traceability_build"
+        ],
+        "target_analyzer_id": "value-flow-analyzer"
+      },
+      "publication_policy": {
+        "preserve_all_observed_records": true,
+        "record_limit": null
+      },
+      "record_provenance_contract": {
+        "required_fields": [
+          "source_snapshot",
+          "producer",
+          "content_fingerprint"
+        ],
+        "source_paths": "repository-relative inside payload records"
+      },
+      "runtime_publication": {
+        "artifact_relative_path": "evidence/value-flow-evidence.json",
+        "generic_entrypoint": "code_analyzer_core.evidence_runtime.execute_evidence_request",
+        "producer_analyzer_id": "value-flow-analyzer",
+        "registration_status": "registered",
+        "request_schema_version": "core_evidence_execution_request/v1",
+        "result_schema_version": "core_evidence_execution_result/v1",
+        "runtime_contract_id": "core_evidence_runtime/v1"
+      },
+      "schema_version": "value-flow-evidence/v1",
+      "semantic_identity": {
+        "artifact_kind": "value-flow-evidence",
+        "schema_version": "value-flow-evidence/v1"
+      },
+      "title": "Direct value-flow evidence"
+    }
+  ],
+  "core_version": "0.44.23a7",
+  "execution_effect": "none",
+  "next_step": "compile Knowledge Resolution Plan evidence requirements into core_evidence_execution_request/v1",
+  "purpose": "Core-owned typed evidence payload contracts. The catalog is extensible; adding a new evidence kind does not add a new CLI command.",
+  "schema_version": "core_evidence_contract_catalog/v1",
+  "semantic_routing_rule": "artifact_kind_plus_schema_version_not_task_id",
+  "source": {
+    "core_catalog_fingerprint": "541fecbbf02ccee6f858965057a768f909330ae263e208199ede715b08b8ac9b",
+    "core_catalog_schema_version": "core_analysis_catalog/v1",
+    "core_target_contracts_fingerprint": "6253d3bdfad0089c827d7851675ed7f1e7d2080a0b6c293323769f886673f332",
+    "core_target_contracts_schema_version": "core_target_analysis_contracts/v1",
+    "definition_schema_version": "core_evidence_contract_definitions/v1"
+  },
+  "summary": {
+    "contract_count": 13,
+    "defined_not_published_count": 0,
+    "generic_preflight_contract_count": 2,
+    "planning_execution_class_counts": {
+      "always_on": 1,
+      "bounded_preflight": 3,
+      "full_analysis": 9
+    },
+    "runtime_published_count": 13
+  }
+}

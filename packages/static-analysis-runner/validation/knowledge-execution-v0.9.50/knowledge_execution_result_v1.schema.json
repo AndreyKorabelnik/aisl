@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_execution_result_v1.schema.json",
+  "title": "Knowledge Execution Result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "runner",
+    "scope",
+    "request",
+    "knowledge_execution_plan",
+    "catalogs",
+    "execution_order",
+    "node_executions",
+    "analyzer_executions",
+    "evidence_artifacts",
+    "repository_run_manifests",
+    "materialization_executions",
+    "knowledge_artifacts",
+    "published_capabilities",
+    "semantic_policy",
+    "started_at",
+    "completed_at",
+    "status",
+    "diagnostics",
+    "result_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {"const": "knowledge_execution_result/v1"},
+    "runner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["producer", "version"],
+      "properties": {
+        "producer": {"const": "static-analysis-runner"},
+        "version": {"type": "string", "minLength": 1}
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "scope_id"],
+      "properties": {
+        "kind": {"enum": ["repository", "workspace", "portfolio"]},
+        "scope_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "request": {"type": "object"},
+    "knowledge_execution_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "plan_fingerprint"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "plan_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "catalogs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "core_evidence_contract_catalog_fingerprint",
+        "knowledge_materialization_catalog_fingerprint"
+      ],
+      "properties": {
+        "core_evidence_contract_catalog_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "knowledge_materialization_catalog_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "execution_order": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "node_executions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["execution_node_id", "node_kind", "status"],
+        "properties": {
+          "execution_node_id": {"type": "string", "minLength": 1},
+          "node_kind": {"enum": ["core_evidence_analyzer", "knowledge_materialization"]},
+          "status": {"const": "completed"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "analyzer_executions": {"type": "array", "items": {"type": "object"}},
+    "evidence_artifacts": {"type": "array", "items": {"type": "object"}},
+    "repository_run_manifests": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "materialization_executions": {"type": "array", "items": {"type": "object"}},
+    "knowledge_artifacts": {"type": "array", "items": {"type": "object"}},
+    "published_capabilities": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "semantic_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan_dispatch",
+        "core_dispatch",
+        "evidence_registration",
+        "klc_dispatch",
+        "capability_publication",
+        "task_suite_profile_semantics",
+        "legacy_fallback",
+        "dual_write"
+      ],
+      "properties": {
+        "plan_dispatch": {"const": "knowledge_execution_plan_topological_order"},
+        "core_dispatch": {"const": "artifact_identity_to_core_owned_analyzer"},
+        "evidence_registration": {"const": "all_validated_core_result_artifacts"},
+        "klc_dispatch": {"const": "materialization_id_to_klc_owned_handler"},
+        "capability_publication": {"const": "completed_materialization_results_only"},
+        "task_suite_profile_semantics": {"const": "not_used"},
+        "legacy_fallback": {"const": "not_supported"},
+        "dual_write": {"const": "not_supported"}
+      }
+    },
+    "started_at": {"type": "string", "minLength": 1},
+    "completed_at": {"type": "string", "minLength": 1},
+    "status": {"const": "completed"},
+    "diagnostics": {"type": "array", "items": {"type": "object"}},
+    "result_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knowledge-control-plane"
+version = "1.2.0a35"
+description = "Headless knowledge production control plane for the automatic code-analysis framework"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+authors = [{name = "Automatic Code Analysis project"}]
+dependencies = [
+  "fastapi>=0.137,<1",
+  "pydantic>=2.13,<3",
+  "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1",
+  "PyYAML>=6,<7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools.package-data]
+knowledge_control_plane = ["resources/runtime_contracts/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra -p no:ddtrace"
+
+[project.scripts]
+knowledge-control-plane = "knowledge_control_plane.cli:main"

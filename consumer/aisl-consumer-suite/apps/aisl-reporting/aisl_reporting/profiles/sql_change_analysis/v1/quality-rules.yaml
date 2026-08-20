@@ -1,0 +1,5 @@
+max_dataset_bytes: 750000
+require_exact_evidence: false
+require_owner_questions: false
+require_diagram_data: false
+forbid_final_response_dependency: true

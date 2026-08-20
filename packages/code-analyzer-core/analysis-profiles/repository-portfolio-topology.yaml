@@ -1,0 +1,40 @@
+profile_id: repository-portfolio-topology
+profile_version: 1
+name: Portfolio topology evidence
+description: >
+  Minimal repository profile for large Bitbucket portfolio topology. It extracts
+  configuration, declared dependencies, OpenAPI contracts, Java structural
+  interfaces and direct HTTP/configuration boundary composition. Source
+  observation stores, SQL, physical schema, persistence, value-flow and
+  traceability are intentionally excluded.
+workspace_types: [java]
+capabilities:
+  - repository.inventory
+  - build.dependencies
+  - system.interfaces
+  - system.interactions
+  - portfolio.topology
+pipeline:
+  stages:
+    - id: scan_files
+    - id: config_scan
+    - id: maven_dependency_scan
+    - id: gradle_dependency_scan
+    - id: openapi_scan
+    - id: java_structural_scan
+    - id: java_system_interaction_enrichment
+  final_stages:
+    - id: core_output
+    - id: normalize_facts
+    - id: compact_package
+output_contract:
+  intent: portfolio_topology_evidence
+  policy:
+    system_interface_catalog_available: true
+    source_observation_fact_store_not_requested: true
+    sql_not_requested: true
+    physical_schema_not_requested: true
+    persistence_not_requested: true
+    value_flow_not_requested: true
+    execution_context_traceability_not_requested: true
+    no_business_decisions: true

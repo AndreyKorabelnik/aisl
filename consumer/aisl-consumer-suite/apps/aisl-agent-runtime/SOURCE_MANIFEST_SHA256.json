@@ -1,0 +1,76 @@
+{
+  "schema_version": "source_manifest_sha256/v1",
+  "file_count": 14,
+  "files": [
+    {
+      "path": "CHANGE_REPORT.md",
+      "sha256": "88232e41abbe4cce56b8b75994c50db4cc1d526a009f77e05f62ad8b4a1744ec",
+      "size": 222
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e539e1e6a0ebe717a85f84842e65ea724003f7177747fd77f69bf11519058a1",
+      "size": 1163
+    },
+    {
+      "path": "TEST_RESULTS.md",
+      "sha256": "6175075336f44f4f2406318b95e40e4b934f23c9436a8e543c54bb776aa8f9a5",
+      "size": 239
+    },
+    {
+      "path": "VERSION",
+      "sha256": "71015c979ccb0fc8a0be7ca0ae83046ab045cdc2c8faa09fb2f0f7e440f9b4a6",
+      "size": 6
+    },
+    {
+      "path": "aisl_agent_runtime/__init__.py",
+      "sha256": "84bff346e01c81bef3299b7ebd550952cccce71639924fb57ed382c82080fe99",
+      "size": 317
+    },
+    {
+      "path": "aisl_agent_runtime/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "size": 48
+    },
+    {
+      "path": "aisl_agent_runtime/cli.py",
+      "sha256": "2fb4984926bd6aabfca6946c08e7c4e5904b3e725823ee4fcc18f8d675a59ff6",
+      "size": 2329
+    },
+    {
+      "path": "aisl_agent_runtime/providers.py",
+      "sha256": "b7572cc29669fda484ed8a2ec95d7c0fc1793c0a2e60971a36f50aac00193771",
+      "size": 5634
+    },
+    {
+      "path": "aisl_agent_runtime/runtime.py",
+      "sha256": "33b1ec9a59eece2726f34bc7c8c8691a68b2bf08ec27cb67a9905fff6f6ef255",
+      "size": 10880
+    },
+    {
+      "path": "aisl_agent_runtime/service.py",
+      "sha256": "5bc8833261abacb24faa2392e9a8ea5f391cd72d7d1b6e35e21e0afba82f717a",
+      "size": 4878
+    },
+    {
+      "path": "aisl_agent_runtime/version.py",
+      "sha256": "1df8d53aba539e667ec551426125665f9d045da050789b5e5071be3c3ea242cf",
+      "size": 22
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "e8ab10fcad264a78eee212582b1fb2ae718b9e306b989b3157dc5e1294328a67",
+      "size": 582
+    },
+    {
+      "path": "tests/test_provider.py",
+      "sha256": "ac15e54df4a264f2cd0a9ecdb669d7bd602a7e4688faf83456e43285504d0e29",
+      "size": 367
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "sha256": "666abad0091fb3bc57284eebc6d8973ea59b0bc2735bf79262ed0bf44d573f69",
+      "size": 7731
+    }
+  ]
+}

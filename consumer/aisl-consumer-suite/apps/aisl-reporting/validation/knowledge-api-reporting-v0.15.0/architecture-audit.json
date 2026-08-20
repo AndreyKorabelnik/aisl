@@ -1,0 +1,15 @@
+{
+  "schema_version": "aisl_reporting_architecture_audit/v1",
+  "version": "0.15.0",
+  "status": "target_ready",
+  "source_dispatch": "knowledge_api_revision",
+  "artifact_selection": "model_kind_and_capabilities",
+  "data_model_projection": "knowledge_api_domain_endpoints",
+  "capability_semantics": "published_revision_capabilities",
+  "task_suite_profile_semantics": "not_used",
+  "direct_combined_database_input": "not_supported",
+  "legacy_fallback": "not_supported",
+  "dual_write": "not_supported",
+  "public_cli_commands": ["prepare", "build", "compare"],
+  "blocked_gates": []
+}

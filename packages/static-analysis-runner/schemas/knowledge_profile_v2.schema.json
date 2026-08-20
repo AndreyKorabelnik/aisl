@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_profile_v2.schema.json",
+  "title": "knowledge_profile/v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile_id", "title", "scope", "knowledge", "presentation"],
+  "properties": {
+    "schema_version": {"const": "knowledge_profile/v2"},
+    "profile_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$"},
+    "title": {"type": "string", "minLength": 1},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "scope_id"],
+      "properties": {
+        "kind": {"enum": ["repository", "workspace"]},
+        "scope_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "knowledge": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["knowledge_id"],
+        "properties": {
+          "knowledge_id": {"type": "string", "minLength": 1},
+          "options": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "include_optional_sources": {"type": "boolean", "default": true},
+              "minimum_coverage": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+            }
+          }
+        }
+      }
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["include_evidence", "include_coverage", "include_gaps", "include_technical_details"],
+      "properties": {
+        "include_evidence": {"type": "boolean"},
+        "include_coverage": {"type": "boolean"},
+        "include_gaps": {"type": "boolean"},
+        "include_technical_details": {"type": "boolean"}
+      }
+    }
+  }
+}

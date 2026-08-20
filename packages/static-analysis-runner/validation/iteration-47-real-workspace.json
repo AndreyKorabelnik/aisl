@@ -1,0 +1,28 @@
+{
+  "schema_version": "iteration_validation/v1",
+  "iteration": 47,
+  "scenario": "lightweight_interaction_lineage_workspace",
+  "repositories": [
+    "sbpr_ucp_integration",
+    "gw_sberid_update_phone_flags"
+  ],
+  "runner_status": "completed",
+  "repositories_completed": 2,
+  "repositories_failed": 0,
+  "boundary_interactions": 1,
+  "boundary_interaction_confidence": {
+    "probable": 1
+  },
+  "field_contracts": 7,
+  "transport_edges": 7,
+  "transport_edge_confidence": {
+    "probable": 7
+  },
+  "value_nodes": 10441,
+  "direct_value_flow_edges": 8232,
+  "notes": [
+    "Per-repository service aliases were provided through selected_repository_sources/v2.",
+    "No interaction confidence was promoted to confirmed.",
+    "The lightweight profile excluded persistence, conceptual data model and execution-context traceability."
+  ]
+}

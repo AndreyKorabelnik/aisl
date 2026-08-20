@@ -1,0 +1,212 @@
+{
+  "artifact_id": "knowledge_layer",
+  "artifacts": {
+    "database": "knowledge-layer.duckdb",
+    "manifest": "knowledge-layer-manifest.json",
+    "repository_inventory": "repository_inventory.json"
+  },
+  "build_id": "repository_inventory_build_fc4ac289a1865af06b10",
+  "build_status": "complete",
+  "capabilities": [
+    "common.repository-inventory",
+    "common.repository-identity",
+    "common.repository-technologies",
+    "common.repository-interfaces",
+    "common.repository-inputs-outputs",
+    "common.repository-data-footprint",
+    "common.repository-storage-footprint",
+    "common.repository-coverage",
+    "common.repository-coverage-gaps",
+    "common.repository-structural-families",
+    "common.repository-concept-candidates",
+    "common.repository-novelty",
+    "common.repository-discovery",
+    "common.repository-structural-members"
+  ],
+  "counts": {
+    "repository_inventory_candidate": 17,
+    "repository_inventory_completeness": 11,
+    "repository_inventory_concept_classification": 174,
+    "repository_inventory_concept_status": 6,
+    "repository_inventory_coverage_gap": 21,
+    "repository_inventory_detected_concept": 1,
+    "repository_inventory_diagnostic": 4,
+    "repository_inventory_discovery_candidate": 17,
+    "repository_inventory_extension": 12,
+    "repository_inventory_file": 491,
+    "repository_inventory_input": 0,
+    "repository_inventory_interface": 0,
+    "repository_inventory_output": 0,
+    "repository_inventory_source": 4,
+    "repository_inventory_structural_family": 29,
+    "repository_inventory_structural_member": 156,
+    "repository_inventory_technology": 0,
+    "repository_inventory_unclassified_concept_candidate": 0
+  },
+  "database_path": "knowledge-layer.duckdb",
+  "deterministic": true,
+  "llm_generated": false,
+  "manifest_path": "knowledge-layer-manifest.json",
+  "materialized_marts": [
+    "repository-inventory",
+    "repository-coverage-frontier",
+    "repository-concept-candidates",
+    "repository-system-passport"
+  ],
+  "metadata": {
+    "coverage_gap_count": 21,
+    "diagnostics": [
+      {
+        "basis": {
+          "available_relevant_evidence": [],
+          "expected_evidence": [
+            "sql-analysis",
+            "value-flow-evidence"
+          ],
+          "interpretation": "evidence is incomplete or unavailable",
+          "relevant_coverage_statuses": []
+        },
+        "code": "repository_inventory_concept_not_evaluated",
+        "message": "Concept data_flow is not_evaluated from supplied/default official evidence.",
+        "severity": "info"
+      },
+      {
+        "basis": {
+          "available_relevant_evidence": [],
+          "expected_evidence": [
+            "sql-analysis",
+            "system-description-evidence",
+            "value-flow-evidence"
+          ],
+          "interpretation": "evidence is incomplete or unavailable",
+          "relevant_coverage_statuses": []
+        },
+        "code": "repository_inventory_concept_not_evaluated",
+        "message": "Concept workflow is not_evaluated from supplied/default official evidence.",
+        "severity": "info"
+      },
+      {
+        "basis": {
+          "available_relevant_evidence": [],
+          "expected_evidence": [
+            "java-persistence-mapping-evidence",
+            "model-storage-evidence",
+            "persistence-lineage-evidence",
+            "storage-usage-evidence"
+          ],
+          "interpretation": "evidence is incomplete or unavailable",
+          "relevant_coverage_statuses": []
+        },
+        "code": "repository_inventory_concept_not_evaluated",
+        "message": "Concept persistence is not_evaluated from supplied/default official evidence.",
+        "severity": "info"
+      },
+      {
+        "basis": {
+          "available_relevant_evidence": [],
+          "expected_evidence": [
+            "reference-data-evidence"
+          ],
+          "interpretation": "evidence is incomplete or unavailable",
+          "relevant_coverage_statuses": []
+        },
+        "code": "repository_inventory_concept_not_evaluated",
+        "message": "Concept reference_data is not_evaluated from supplied/default official evidence.",
+        "severity": "info"
+      }
+    ],
+    "evaluation_basis": {
+      "basis": "actual_official_evidence_set",
+      "bounded_evidence_artifact_kinds": [
+        "data-model-candidate-evidence",
+        "interaction-boundary-evidence",
+        "repository-structure-evidence",
+        "structured-file-shape-evidence"
+      ],
+      "deep_evidence_artifact_kinds": [],
+      "interpretation": "post_analysis means the snapshot includes at least one deeper existing-only evidence product; preflight means it is based only on required/bounded evidence"
+    },
+    "evaluation_phase": "preflight",
+    "evaluation_policy": {
+      "claim": "bounded preflight evidence is produced according to the official materialization contract; deeper optional evidence is consumed only when already available",
+      "existing_only": [
+        "java-persistence-mapping-evidence",
+        "java-type-structure-evidence",
+        "model-storage-evidence",
+        "persistence-lineage-evidence",
+        "reference-data-evidence",
+        "sql-analysis",
+        "storage-usage-evidence",
+        "system-description-evidence",
+        "value-flow-evidence"
+      ],
+      "mode": "bounded_default",
+      "produce_if_missing": [
+        "data-model-candidate-evidence",
+        "interaction-boundary-evidence",
+        "structured-file-shape-evidence"
+      ],
+      "required": [
+        "repository-structure-evidence"
+      ]
+    },
+    "repository_inventory_schema_version": "repository-inventory/v3",
+    "repository_landscape_coverage": {
+      "all_file_count": 491,
+      "analyzer_eligible_file_count": 480,
+      "coverage_status": "complete",
+      "extension_family_count": 12,
+      "outside_analyzer_frontier_extension_family_count": 6,
+      "outside_analyzer_frontier_file_count": 11,
+      "unreadable_file_count": 0
+    }
+  },
+  "modes": [
+    "repository-inventory"
+  ],
+  "producer": "knowledge-layer-core",
+  "producer_version": "0.61.0a33",
+  "repository_count": 1,
+  "repository_ids": [
+    "datamart_profile_fl"
+  ],
+  "schema_version": "knowledge_layer/v1",
+  "scope_id": "preflight-datamart-fixed",
+  "scope_type": "repository",
+  "source_evidence": [
+    {
+      "artifact_id": "repository_structure_42c6763152fd340858ecf6f2",
+      "artifact_kind": "repository-structure-evidence",
+      "content_fingerprint": "42c6763152fd340858ecf6f23e03fdc588540c1b0a9bc91f7cac0179f059ad37",
+      "schema_version": "repository-structure-evidence/v1"
+    },
+    {
+      "artifact_id": "data_model_candidate_17a2cbfd3849ed90ea9a663d",
+      "artifact_kind": "data-model-candidate-evidence",
+      "content_fingerprint": "17a2cbfd3849ed90ea9a663d526e8e289c4423336a00173c194466eff821fcd0",
+      "schema_version": "data-model-candidate-evidence/v1"
+    },
+    {
+      "artifact_id": "interaction_boundary_baae5cabb3cda4b9e7077ef2",
+      "artifact_kind": "interaction-boundary-evidence",
+      "content_fingerprint": "baae5cabb3cda4b9e7077ef2537b3e5789278e49ea7ad9d6894995a57d7a15e2",
+      "schema_version": "interaction-boundary-evidence/v1"
+    },
+    {
+      "artifact_id": "structured_file_shape_ba41ea618eda14b98c7cc8c2",
+      "artifact_kind": "structured-file-shape-evidence",
+      "content_fingerprint": "ba41ea618eda14b98c7cc8c2f15fab0df5c366b599e1c402c85fccf575f69943",
+      "schema_version": "structured-file-shape-evidence/v1"
+    }
+  ],
+  "validation": {
+    "concept_classifications_are_inference": true,
+    "deep_missing_evidence_is_not_evaluated": true,
+    "discovery_classifications_are_inference": true,
+    "file_count_matches_structure_evidence": true,
+    "repository_structure_source_present": true,
+    "single_repository_scope": true,
+    "status": "complete",
+    "unclassified_concept_candidate_requires_stronger_evidence": true
+  }
+}

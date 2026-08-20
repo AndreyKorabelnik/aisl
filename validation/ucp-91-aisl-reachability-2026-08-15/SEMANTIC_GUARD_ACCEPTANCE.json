@@ -1,0 +1,680 @@
+{
+  "schema_version": "ucp-91-semantic-guard-acceptance/v1",
+  "scope": "Gold-informed post-run acceptance; validates that the read contract exposes evidence needed to avoid representative historical overclaims. It does not prove an external LLM will reason correctly.",
+  "cases": [
+    {
+      "input_index": 8,
+      "attribute": "Клиентский сегмент банка (масс, массмаркет+, премиум, Первый и т.п.)",
+      "expected_role": "unbound_type / ambiguous",
+      "terms": [
+        "сегмент"
+      ],
+      "reason": "Segment exists but the result binding summary does not show an observed client binding.",
+      "observed_retrieval_evidence": [
+        {
+          "term": "сегмент",
+          "scope": "projected",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.Segment",
+          "retrieval_score": 960,
+          "score_basis": "type_documentation_summary_exact",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_exact",
+              "documentation": {
+                "description": "Сегмент",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Сегмент"
+              }
+            }
+          ]
+        },
+        {
+          "term": "сегмент",
+          "scope": "projected",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.SegmentFz209",
+          "retrieval_score": 890,
+          "score_basis": "type_documentation_summary_prefix",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_prefix",
+              "documentation": {
+                "description": "Сегмент по 209-ФЗ",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Сегмент по 209-ФЗ"
+              }
+            }
+          ]
+        },
+        {
+          "term": "сегмент",
+          "scope": "projected",
+          "rank": 3,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.OrganizationSizeType",
+          "retrieval_score": 780,
+          "score_basis": "type_documentation_summary_substring",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_substring",
+              "documentation": {
+                "description": "Справочник сегментов бизнеса",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Справочник сегментов бизнеса"
+              }
+            }
+          ]
+        },
+        {
+          "term": "сегмент",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.Segment",
+          "retrieval_score": 960,
+          "score_basis": "type_documentation_summary_exact",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_exact",
+              "documentation": {
+                "description": "Сегмент",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Сегмент"
+              }
+            }
+          ]
+        },
+        {
+          "term": "сегмент",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.SegmentFz209",
+          "retrieval_score": 890,
+          "score_basis": "type_documentation_summary_prefix",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_prefix",
+              "documentation": {
+                "description": "Сегмент по 209-ФЗ",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Сегмент по 209-ФЗ"
+              }
+            }
+          ]
+        },
+        {
+          "term": "сегмент",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.OrganizationSizeType",
+          "retrieval_score": 780,
+          "score_basis": "type_documentation_summary_substring",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_substring",
+              "documentation": {
+                "description": "Справочник сегментов бизнеса",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Справочник сегментов бизнеса"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input_index": 32,
+      "attribute": "Закрытые продукты и причина закрытия",
+      "expected_role": "unbound_type / ambiguous",
+      "terms": [
+        "причины окончания"
+      ],
+      "reason": "PartyAgreementEndReason names the right concept but has no observed incoming binding to a client product/agreement.",
+      "observed_retrieval_evidence": [
+        {
+          "term": "причины окончания",
+          "scope": "projected",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.PartyAgreementEndReason",
+          "retrieval_score": 890,
+          "score_basis": "type_documentation_summary_prefix",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_prefix",
+              "documentation": {
+                "description": "Причины окончания действия связей клиента с продуктами/договорами",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Причины окончания действия связей клиента с продуктами/договорами"
+              }
+            }
+          ]
+        },
+        {
+          "term": "причины окончания",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.common.model.dictionary.PartyAgreementEndReason",
+          "retrieval_score": 890,
+          "score_basis": "type_documentation_summary_prefix",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_prefix",
+              "documentation": {
+                "description": "Причины окончания действия связей клиента с продуктами/договорами",
+                "line_end": 9,
+                "line_start": 7,
+                "summary": "Причины окончания действия связей клиента с продуктами/договорами"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input_index": 47,
+      "attribute": "Предпочтительный канал коммуникации",
+      "expected_role": "related_concept / unresolved",
+      "terms": [
+        "канал",
+        "предпочитаем"
+      ],
+      "reason": "Consent channel and information-flow channel are observed, but neither states preferred client communication channel.",
+      "observed_retrieval_evidence": [
+        {
+          "term": "предпочитаем",
+          "scope": "projected",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.customerjourney.model.CustomerJourney",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": "preferredLanguages",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Предпочитаемые языки коммуникации",
+                "line_end": 50,
+                "line_start": 48,
+                "summary": "Предпочитаемые языки коммуникации"
+              }
+            }
+          ]
+        },
+        {
+          "term": "предпочитаем",
+          "scope": "projected",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.customerjourney.model.PreferredLanguage",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "preferredLanguage",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Предпочитаемый язык общения",
+                "line_end": 39,
+                "line_start": 37,
+                "summary": "Предпочитаемый язык общения"
+              }
+            }
+          ]
+        },
+        {
+          "term": "предпочитаем",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.customerjourney.model.CustomerJourney",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": "preferredLanguages",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Предпочитаемые языки коммуникации",
+                "line_end": 50,
+                "line_start": 48,
+                "summary": "Предпочитаемые языки коммуникации"
+              }
+            }
+          ]
+        },
+        {
+          "term": "предпочитаем",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.customerjourney.model.PreferredLanguage",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "preferredLanguage",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Предпочитаемый язык общения",
+                "line_end": 39,
+                "line_start": 37,
+                "summary": "Предпочитаемый язык общения"
+              }
+            }
+          ]
+        },
+        {
+          "term": "канал",
+          "scope": "projected",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.common.model.party.Consent",
+          "retrieval_score": 970,
+          "score_basis": "field_documentation_summary_exact",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "consentChannels",
+              "match_kind": "field_documentation_summary_exact",
+              "documentation": {
+                "description": "Канал",
+                "line_end": 33,
+                "line_start": 31,
+                "summary": "Канал"
+              }
+            }
+          ]
+        },
+        {
+          "term": "канал",
+          "scope": "projected",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.retail.model.individual.Consent",
+          "retrieval_score": 970,
+          "score_basis": "field_documentation_summary_exact",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "consentChannels",
+              "match_kind": "field_documentation_summary_exact",
+              "documentation": {
+                "description": "Канал",
+                "line_end": 33,
+                "line_start": 31,
+                "summary": "Канал"
+              }
+            }
+          ]
+        },
+        {
+          "term": "канал",
+          "scope": "projected",
+          "rank": 3,
+          "fqcn": "com.sbt.bm.ucp.common.model.party.InfoFlowChannel",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "infoFlowChannelType",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Канал поступления информации",
+                "line_end": 25,
+                "line_start": 23,
+                "summary": "Канал поступления информации"
+              }
+            },
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_prefix",
+              "documentation": {
+                "description": "Канал поступления информации",
+                "line_end": 12,
+                "line_start": 10,
+                "summary": "Канал поступления информации"
+              }
+            }
+          ]
+        },
+        {
+          "term": "канал",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.common.model.party.Consent",
+          "retrieval_score": 970,
+          "score_basis": "field_documentation_summary_exact",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "consentChannels",
+              "match_kind": "field_documentation_summary_exact",
+              "documentation": {
+                "description": "Канал",
+                "line_end": 33,
+                "line_start": 31,
+                "summary": "Канал"
+              }
+            }
+          ]
+        },
+        {
+          "term": "канал",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.retail.model.individual.Consent",
+          "retrieval_score": 970,
+          "score_basis": "field_documentation_summary_exact",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "consentChannels",
+              "match_kind": "field_documentation_summary_exact",
+              "documentation": {
+                "description": "Канал",
+                "line_end": 33,
+                "line_start": 31,
+                "summary": "Канал"
+              }
+            }
+          ]
+        },
+        {
+          "term": "канал",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "fqcn": "com.sbt.bm.ucp.common.model.party.InfoFlowChannel",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "infoFlowChannelType",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Канал поступления информации",
+                "line_end": 25,
+                "line_start": 23,
+                "summary": "Канал поступления информации"
+              }
+            },
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_prefix",
+              "documentation": {
+                "description": "Канал поступления информации",
+                "line_end": 12,
+                "line_start": 10,
+                "summary": "Канал поступления информации"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input_index": 52,
+      "attribute": "Уровень финансовой грамотности",
+      "expected_role": "related_concept / unresolved",
+      "terms": [
+        "грамот"
+      ],
+      "reason": "Individual.literacy is documented as Неграмотность, not financial-literacy level.",
+      "observed_retrieval_evidence": [
+        {
+          "term": "грамот",
+          "scope": "projected",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+          "retrieval_score": 830,
+          "score_basis": "field_documentation_summary_substring",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "literacy",
+              "match_kind": "field_documentation_summary_substring",
+              "documentation": {
+                "description": "Неграмотность",
+                "line_end": 89,
+                "line_start": 87,
+                "summary": "Неграмотность"
+              }
+            }
+          ]
+        },
+        {
+          "term": "грамот",
+          "scope": "projected",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.retail.model.individual.Literacy",
+          "retrieval_score": 780,
+          "score_basis": "type_documentation_summary_substring",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_substring",
+              "documentation": {
+                "description": "Неграмотнось",
+                "line_end": 10,
+                "line_start": 8,
+                "summary": "Неграмотнось"
+              }
+            }
+          ]
+        },
+        {
+          "term": "грамот",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.retail.model.individual.Individual",
+          "retrieval_score": 830,
+          "score_basis": "field_documentation_summary_substring",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "literacy",
+              "match_kind": "field_documentation_summary_substring",
+              "documentation": {
+                "description": "Неграмотность",
+                "line_end": 89,
+                "line_start": 87,
+                "summary": "Неграмотность"
+              }
+            }
+          ]
+        },
+        {
+          "term": "грамот",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.retail.model.individual.Literacy",
+          "retrieval_score": 780,
+          "score_basis": "type_documentation_summary_substring",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_substring",
+              "documentation": {
+                "description": "Неграмотнось",
+                "line_end": 10,
+                "line_start": 8,
+                "summary": "Неграмотнось"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input_index": 87,
+      "attribute": "Активные ограничения и блокировки",
+      "expected_role": "related_concept / unresolved",
+      "terms": [
+        "блокиров",
+        "огранич"
+      ],
+      "reason": "Observed locks/restrictions belong to change-control/profile-card or real-estate contexts, not generic client/product compliance restriction.",
+      "observed_retrieval_evidence": [
+        {
+          "term": "блокиров",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.change_control.model.LockInfo",
+          "retrieval_score": 830,
+          "score_basis": "field_documentation_summary_substring",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "deactivated",
+              "match_kind": "field_documentation_summary_substring",
+              "documentation": {
+                "description": "Признак активности блокировки",
+                "line_end": 47,
+                "line_start": 45,
+                "summary": "Признак активности блокировки"
+              }
+            },
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_substring",
+              "documentation": {
+                "description": "Информация о блокировке карточки клиента",
+                "line_end": 8,
+                "line_start": 6,
+                "summary": "Информация о блокировке карточки клиента"
+              }
+            }
+          ]
+        },
+        {
+          "term": "блокиров",
+          "scope": "all_declared_types",
+          "rank": 2,
+          "fqcn": "com.sbt.bm.ucp.change_control.model.LockResponse",
+          "retrieval_score": 830,
+          "score_basis": "field_documentation_summary_substring",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": "lockInfo",
+              "match_kind": "field_documentation_summary_substring",
+              "documentation": {
+                "description": "Информация о блокировке карточки клиента",
+                "line_end": 19,
+                "line_start": 17,
+                "summary": "Информация о блокировке карточки клиента"
+              }
+            },
+            {
+              "field_name": "lockStatus",
+              "match_kind": "field_documentation_summary_substring",
+              "documentation": {
+                "description": "Статус блокировки карточки клиента",
+                "line_end": 14,
+                "line_start": 12,
+                "summary": "Статус блокировки карточки клиента"
+              }
+            }
+          ]
+        },
+        {
+          "term": "блокиров",
+          "scope": "all_declared_types",
+          "rank": 3,
+          "fqcn": "com.sbt.bm.ucp.change_control.model.TwoManRuleEntity",
+          "retrieval_score": 830,
+          "score_basis": "field_documentation_summary_substring",
+          "has_observed_incoming_binding": false,
+          "match_evidence": [
+            {
+              "field_name": "deactivated",
+              "match_kind": "field_documentation_summary_substring",
+              "documentation": {
+                "description": "Признак активности блокировки",
+                "line_end": 45,
+                "line_start": 43,
+                "summary": "Признак активности блокировки"
+              }
+            },
+            {
+              "field_name": null,
+              "match_kind": "type_documentation_summary_substring",
+              "documentation": {
+                "description": "Запрос на изменение клиента и информация о блокировке",
+                "line_end": 13,
+                "line_start": 11,
+                "summary": "Запрос на изменение клиента и информация о блокировке"
+              }
+            }
+          ]
+        },
+        {
+          "term": "огранич",
+          "scope": "projected",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.smpr.RealEstate",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "isRestrictive",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Ограничения и обременения прав на объект",
+                "line_end": 141,
+                "line_start": 139,
+                "summary": "Ограничения и обременения прав на объект"
+              }
+            }
+          ]
+        },
+        {
+          "term": "огранич",
+          "scope": "all_declared_types",
+          "rank": 1,
+          "fqcn": "com.sbt.bm.ucp.smpr.RealEstate",
+          "retrieval_score": 910,
+          "score_basis": "field_documentation_summary_prefix",
+          "has_observed_incoming_binding": true,
+          "match_evidence": [
+            {
+              "field_name": "isRestrictive",
+              "match_kind": "field_documentation_summary_prefix",
+              "documentation": {
+                "description": "Ограничения и обременения прав на объект",
+                "line_end": 141,
+                "line_start": 139,
+                "summary": "Ограничения и обременения прав на объект"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

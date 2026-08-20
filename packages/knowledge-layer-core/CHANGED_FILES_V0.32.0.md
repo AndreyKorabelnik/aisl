@@ -1,0 +1,22 @@
+# Changed files in 0.32.0
+
+- `knowledge_layer_core/interaction_contracts.py`
+  - exact unique normalized request-wire contract materialization;
+  - deterministic IDs, type compatibility and evidence provenance.
+- `knowledge_layer_core/suite_schema.py`
+  - `system_interaction_field_contract` table;
+  - suite schema v4.
+- `knowledge_layer_core/suite_builder.py`
+  - field-contract materialization, counts, capability and manifest metadata.
+- `knowledge_layer_core/query.py`
+  - query API and graph summary count.
+- `knowledge_layer_core/evidence.py`
+  - public evidence-tool command.
+- `knowledge_layer_core/__init__.py`
+- `tests/test_system_interaction_graph.py`
+- `docs/SYSTEM_INTERACTION_FIELD_CONTRACTS_V1.md`
+- `knowledge_layer_core/version.py`
+- `pyproject.toml`
+- `README.md`
+- `RELEASE_NOTES_V0.32.0.md`
+- `TEST_RESULTS.md`

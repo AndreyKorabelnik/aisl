@@ -1,0 +1,25 @@
+# Changed files — knowledge-layer-core 0.45.0
+
+- `knowledge_layer_core/value_flow.py`
+  - materializes HTTP wire nodes from request/response contract signatures;
+  - resolves unique local boundary occurrences;
+  - emits direct serialization/deserialization edges;
+  - preserves wire nodes when local binding is absent or ambiguous.
+- `knowledge_layer_core/evidence.py`
+  - documents wire nodes and local serialization/deserialization in the existing evidence tools.
+- `knowledge_layer_core/suite_schema.py`
+  - suite schema version raised to v13.
+- `knowledge_layer_core/version.py`
+- `pyproject.toml`
+  - package version raised to 0.45.0.
+- `tests/test_repository_value_flow.py`
+  - covers four HTTP directions and ambiguous binding.
+- `tests/test_system_interaction_graph.py`
+  - validates suite-level wire materialization and updated direct-graph counts.
+- `tests/test_offline_validation.py`
+  - version expectation updated.
+- `RELEASE_NOTES_V0.45.0.md`
+- `CHANGED_FILES_V0.45.0.md`
+- `HANDOVER_ITERATION_42.md`
+- `TEST_STATUS_ITERATION_42.md`
+- `SOURCE_TREE_MANIFEST.sha256`

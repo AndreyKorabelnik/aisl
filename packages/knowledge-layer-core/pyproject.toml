@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knowledge-layer-core"
+version = "0.61.0a39"
+description = "Deterministic repository and workspace knowledge-layer materialization over static-analysis evidence"
+requires-python = ">=3.10"
+dependencies = ["duckdb>=1.1.0", "prepared-knowledge-runtime>=0.1.0,<1.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["knowledge_layer_core*"]
+
+[project.scripts]
+knowledge-layer-materialization-contracts = "knowledge_layer_core.materialization_contracts_cli:main"
+knowledge-layer-materialize = "knowledge_layer_core.materialization_runtime_cli:main"

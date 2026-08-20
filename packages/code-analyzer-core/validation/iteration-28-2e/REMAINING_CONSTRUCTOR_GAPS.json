@@ -1,0 +1,59 @@
+[
+  {
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001055_41F69ACCFEBD47A9",
+    "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+    "target_container": "PprbProfileByUcpIdRs",
+    "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+    "target_field": "profiles",
+    "constructor_argument_expression": "dao.getPprbProfilesByUcpIdsWithChannel(ucpIds)",
+    "constructor_source_resolution_kind": "unresolved",
+    "source_scope": "production_code",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 274,
+        "line_start": 266
+      }
+    ],
+    "reason": "constructor argument could not be resolved to source fields by the fast profile"
+  },
+  {
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001056_7B76C41E2B78AD7C",
+    "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIds",
+    "target_container": "PprbProfileByUcpIdRs",
+    "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+    "target_field": "profiles",
+    "constructor_argument_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+    "constructor_source_resolution_kind": "unresolved",
+    "source_scope": "production_code",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 274,
+        "line_start": 266
+      }
+    ],
+    "reason": "constructor argument could not be resolved to source fields by the fast profile"
+  },
+  {
+    "gap_id": "GAP_DATA_MODEL_LINEAGE_GAP_DATA_MODEL_LINEAGE_GAP_001059_E58199727637EF7E",
+    "operation": "ClientProfileServiceImpl.getPprbProfilesByUcpIdsWhiteList",
+    "target_container": "PprbProfileByUcpIdRs",
+    "target_container_fqcn": "ru.sbrf.mss.profile.model.request.pprb.PprbProfileByUcpIdRs",
+    "target_field": "profiles",
+    "constructor_argument_expression": "dao.getPprbProfilesByUcpIds(ucpIds)",
+    "constructor_source_resolution_kind": "unresolved",
+    "source_scope": "production_code",
+    "evidence_refs": [
+      {
+        "extractor": "java_data_model_lineage_constructor_gap",
+        "file": "/mnt/data/iteration28_work/inputs/client-profile(2)/client-profile/client-profile/client-profile-app/src/main/java/ru/sbrf/mss/services/root/service/ClientProfileServiceImpl.java",
+        "line_end": 287,
+        "line_start": 276
+      }
+    ],
+    "reason": "constructor argument could not be resolved to source fields by the fast profile"
+  }
+]

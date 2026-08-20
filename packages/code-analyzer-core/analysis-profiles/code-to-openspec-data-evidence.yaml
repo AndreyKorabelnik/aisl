@@ -1,0 +1,39 @@
+profile_id: code-to-openspec-data-evidence
+profile_version: 1
+
+name: Code-to-OpenSpec data evidence
+
+description: >
+  Собирает deterministic evidence для генерации draft OpenSpec-compatible SDD
+  package по коду: system/data/interface/storage/lineage/access evidence и
+  Foreign Data Persistence candidate evidence. Профиль не формирует
+  спецификацию, не пишет OpenSpec-файлы, не принимает бизнес-решений и не
+  строит межсистемный граф.
+
+goal:
+  primary_question: >
+    Какие system/data/interface/storage/lineage/access evidence можно извлечь
+    из кода, чтобы LLM могла заполнить draft proposal/spec/design/data-evidence/tasks?
+
+pipeline:
+  stages:
+    - id: scan_files
+    - id: config_scan
+    - id: java_structural_scan
+    - id: sql_scan
+    - id: db_schema_scan
+    - id: java_data_flow_build
+    - id: java_field_flow_build
+    - id: java_traceability_build
+    - id: java_data_model_lineage_build
+      options:
+        max_depth: 2
+    - id: java_table_observation_build
+    - id: java_persistence_lineage_build
+      options:
+        max_depth: 7
+        deep: true
+    - id: declared_value_scan
+    - id: core_output
+    - id: normalize_facts
+    - id: compact_package

@@ -1,0 +1,23 @@
+# Changed files — knowledge-layer-core 0.46.0
+
+- `knowledge_layer_core/value_flow.py`
+  - emits confirmed HTTP request and reverse-response wire transport edges;
+  - stores explicit source and target repository identities on every edge.
+- `knowledge_layer_core/suite_schema.py`
+  - replaces edge `repo_id` with `source_repo_id` and `target_repo_id`;
+  - raises suite schema to v14.
+- `knowledge_layer_core/query.py`
+  - exposes source/target repository filters and repository-membership filtering.
+- `knowledge_layer_core/evidence.py`
+  - exposes source/target repository filters and transport semantics.
+- `knowledge_layer_core/version.py`, `pyproject.toml`
+  - package version 0.46.0.
+- `tests/test_repository_value_flow.py`
+  - confirmed request/response transport, zero execution context and probable-boundary rejection.
+- `tests/test_system_interaction_graph.py`
+  - suite-level transport counts and evidence expectations.
+- `tests/test_offline_validation.py`
+  - version expectation.
+- `docs/DIRECT_VALUE_FLOW_V4.md`
+- `README.md`
+- release, handover, test status and source manifest files.

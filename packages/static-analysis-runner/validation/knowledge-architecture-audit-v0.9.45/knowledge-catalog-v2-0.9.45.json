@@ -1,0 +1,2341 @@
+{
+  "architecture_goal": {
+    "developer_creates": [
+      "Core analyzers",
+      "evidence schemas",
+      "KLC materializations",
+      "knowledge types"
+    ],
+    "system_resolves": [
+      "materializations",
+      "evidence",
+      "Core sources",
+      "Foundation requirements",
+      "execution plan"
+    ],
+    "ui_previews": [
+      "knowledge contents",
+      "required and optional sources",
+      "readiness",
+      "expected gaps",
+      "technical lineage on demand"
+    ],
+    "user_selects": [
+      "repository or workspace scope",
+      "knowledge types",
+      "business-level options"
+    ]
+  },
+  "catalog_fingerprint": "7e0ffcbc2e3a5d00342922aca533c09161e4f5e925a14503a7fb672344084279",
+  "contracts": {
+    "knowledge_profile": {
+      "business_options": {
+        "include_optional_sources": "boolean",
+        "minimum_coverage": "number_0_to_1_or_null"
+      },
+      "contract_id": "knowledge_profile_contract/v2",
+      "definition": "User-owned selection of knowledge for one repository or workspace business scope.",
+      "forbidden_user_fields": [
+        "task_id",
+        "suite_id",
+        "core_profile_id",
+        "stage_id",
+        "analyzer_id",
+        "materialization_id",
+        "artifact_kind",
+        "schema_version_override",
+        "output_file"
+      ],
+      "knowledge_entry": {
+        "optional_fields": [
+          "options"
+        ],
+        "required_fields": [
+          "knowledge_id"
+        ]
+      },
+      "owner": "product-control-plane",
+      "presentation_options": {
+        "include_coverage": "boolean",
+        "include_evidence": "boolean",
+        "include_gaps": "boolean",
+        "include_technical_details": "boolean"
+      },
+      "required_fields": [
+        "schema_version",
+        "profile_id",
+        "title",
+        "scope",
+        "knowledge",
+        "presentation"
+      ],
+      "schema_version": "knowledge_profile/v2",
+      "scope": {
+        "required_fields": [
+          "kind",
+          "scope_id"
+        ],
+        "supported_kinds": [
+          "repository",
+          "workspace"
+        ]
+      }
+    },
+    "knowledge_resolver": {
+      "contract_id": "knowledge_resolver_contract/v2",
+      "definition": "Deterministically compile a user knowledge profile into KLC materializations, evidence requirements, Core sources and Foundation requirements.",
+      "execution_effect": "none",
+      "owner": "static-analysis-runner-control-plane",
+      "rules": [
+        "User selects knowledge, not Core stages, Tasks, Suites or KLC materializations.",
+        "Materializations are resolved from knowledge_catalog/v2.",
+        "Required knowledge dependencies are expanded deterministically; recommended dependencies remain optional diagnostics.",
+        "Different source families remain separate knowledge and are never treated as interchangeable inputs.",
+        "Evidence semantics are resolved by artifact_kind + schema_version.",
+        "Required evidence is never silently downgraded to optional evidence.",
+        "Actual repository source availability is not inferred in contract-only mode.",
+        "Internal Task/Suite/Profile identifiers may appear only in future execution provenance."
+      ],
+      "schema_version": "knowledge_resolution_plan/v2"
+    }
+  },
+  "current_state_assessment": {
+    "proposed_evidence_kinds": [
+      "build-dependency-evidence",
+      "configuration-evidence",
+      "declared-value-evidence",
+      "execution-context-evidence",
+      "interaction-boundary-evidence",
+      "java-persistence-evidence",
+      "java-persistence-mapping-evidence",
+      "java-type-structure-evidence",
+      "literal-write-evidence",
+      "model-evidence-gap",
+      "persistence-evidence",
+      "physical-schema-evidence",
+      "repository-interface-catalog-evidence",
+      "repository-metadata",
+      "storage-access-evidence",
+      "storage-usage-evidence",
+      "value-flow-evidence"
+    ],
+    "source_availability_mode": "contract_only_repository_not_scanned",
+    "technical_stage_visibility": "advanced_diagnostics_only",
+    "uncatalogued_materialization_ids": []
+  },
+  "data_model_knowledge_decomposition": {
+    "composite_knowledge_ids": [
+      "effective-data-model"
+    ],
+    "independent_knowledge_ids": [
+      "code-declared-data-model",
+      "physical-data-model",
+      "logical-physical-mapping",
+      "sql-source-inventory",
+      "observed-storage-usage"
+    ],
+    "legacy_source": {
+      "principles": [
+        "Different source families produce different knowledge and are not interchangeable inputs for one model.",
+        "Mixed legacy sections are split by evidence semantics rather than copied into one replacement artifact.",
+        "Composite effective views depend on independently materialized KLC models and preserve source-layer provenance.",
+        "Coverage, diagnostics and provenance belong to every target materialization and are not a standalone substitute knowledge type."
+      ],
+      "section_routes": [
+        {
+          "reason": "The legacy section mixes Java model types, physical-table entities and supporting inferred entities.",
+          "route": "split_by_semantics",
+          "source_section": "entities",
+          "target_materializations": [
+            "code-declared-data-model",
+            "physical-model",
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Declared code relations, FKs, persistence mappings and observed SQL joins are different facts.",
+          "route": "split_by_semantics",
+          "source_section": "associations",
+          "target_materializations": [
+            "code-declared-data-model",
+            "physical-model",
+            "logical-physical-mapping",
+            "sql-analysis",
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Declared type inheritance and persistence inheritance mapping must remain distinct.",
+          "route": "split_by_semantics",
+          "source_section": "generalizations",
+          "target_materializations": [
+            "code-declared-data-model",
+            "logical-physical-mapping"
+          ]
+        },
+        {
+          "reason": "Tables, columns, keys and constraints are physical knowledge.",
+          "route": "direct",
+          "source_section": "physical_assets",
+          "target_materializations": [
+            "physical-model"
+          ]
+        },
+        {
+          "reason": "Cross-layer mappings are a separate evidence-backed knowledge type.",
+          "route": "direct",
+          "source_section": "physical_to_entity_mappings",
+          "target_materializations": [
+            "logical-physical-mapping"
+          ]
+        },
+        {
+          "reason": "Domains are KLC views over independently materialized layers.",
+          "route": "derived_composite",
+          "source_section": "domains",
+          "target_materializations": [
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Clusters are derived groupings, not raw Core evidence.",
+          "route": "derived_composite",
+          "source_section": "entity_clusters",
+          "target_materializations": [
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Coverage is calculated per target knowledge type.",
+          "route": "distributed_metadata",
+          "source_section": "coverage_summary",
+          "target_materializations": [
+            "code-declared-data-model",
+            "physical-model",
+            "logical-physical-mapping",
+            "observed-storage-usage",
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Gaps retain the semantics and provenance of the affected knowledge type.",
+          "route": "distributed_metadata",
+          "source_section": "evidence_gaps",
+          "target_materializations": [
+            "code-declared-data-model",
+            "physical-model",
+            "logical-physical-mapping",
+            "observed-storage-usage",
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Provenance is required on every KLC model and object.",
+          "route": "distributed_metadata",
+          "source_section": "provenance",
+          "target_materializations": [
+            "code-declared-data-model",
+            "physical-model",
+            "logical-physical-mapping",
+            "observed-storage-usage",
+            "effective-data-model"
+          ]
+        },
+        {
+          "reason": "Observed SQL usage is not declared model knowledge.",
+          "route": "different_knowledge",
+          "source_section": "sql_query_models",
+          "target_materializations": [
+            "sql-analysis"
+          ]
+        },
+        {
+          "reason": "Observed storage operations and value flow are separate knowledge.",
+          "route": "different_knowledge",
+          "source_section": "storage_operations",
+          "target_materializations": [
+            "observed-storage-usage",
+            "repository-value-flow"
+          ]
+        },
+        {
+          "reason": "Operations belong to behavior, access and flow knowledge.",
+          "route": "different_knowledge",
+          "source_section": "operations",
+          "target_materializations": [
+            "observed-storage-usage",
+            "repository-value-flow",
+            "system-description"
+          ]
+        },
+        {
+          "reason": "Interfaces are system-boundary knowledge.",
+          "route": "different_knowledge",
+          "source_section": "interfaces",
+          "target_materializations": [
+            "system-interactions",
+            "system-description"
+          ]
+        },
+        {
+          "reason": "Access boundaries are system and interaction knowledge.",
+          "route": "different_knowledge",
+          "source_section": "access_boundaries",
+          "target_materializations": [
+            "system-interactions",
+            "system-description"
+          ]
+        },
+        {
+          "reason": "Scenarios are behavioral system knowledge.",
+          "route": "different_knowledge",
+          "source_section": "scenarios",
+          "target_materializations": [
+            "system-description"
+          ]
+        },
+        {
+          "reason": "Scenario context and observed storage use remain separate but linkable.",
+          "route": "different_knowledge",
+          "source_section": "scenario_storage_touches",
+          "target_materializations": [
+            "system-description",
+            "observed-storage-usage"
+          ]
+        },
+        {
+          "reason": "Data flow is lineage knowledge.",
+          "route": "different_knowledge",
+          "source_section": "data_flows",
+          "target_materializations": [
+            "repository-value-flow"
+          ]
+        },
+        {
+          "reason": "Field flow is lineage knowledge.",
+          "route": "different_knowledge",
+          "source_section": "field_flows",
+          "target_materializations": [
+            "repository-value-flow"
+          ]
+        },
+        {
+          "reason": "Response mappings are lineage knowledge.",
+          "route": "different_knowledge",
+          "source_section": "stored_field_to_response_field_mappings",
+          "target_materializations": [
+            "repository-value-flow"
+          ]
+        },
+        {
+          "reason": "Converter and builder mappings are lineage knowledge, not conceptual-model input.",
+          "route": "different_knowledge",
+          "source_section": "attribute_mappings",
+          "target_materializations": [
+            "repository-value-flow"
+          ]
+        },
+        {
+          "reason": "Derivations are lineage knowledge.",
+          "route": "different_knowledge",
+          "source_section": "attribute_derivations",
+          "target_materializations": [
+            "repository-value-flow"
+          ]
+        },
+        {
+          "reason": "Dictionary and value-set semantics belong to reference-data knowledge.",
+          "route": "different_knowledge",
+          "source_section": "data_dictionary",
+          "target_materializations": [
+            "reference-data"
+          ]
+        },
+        {
+          "reason": "Declared value sets are reference-data knowledge.",
+          "route": "different_knowledge",
+          "source_section": "declared_value_sets",
+          "target_materializations": [
+            "reference-data"
+          ]
+        },
+        {
+          "reason": "Dependencies are system-description knowledge.",
+          "route": "different_knowledge",
+          "source_section": "external_dependencies",
+          "target_materializations": [
+            "system-description"
+          ]
+        },
+        {
+          "reason": "Physical evidence detail belongs with the physical model and its provenance.",
+          "route": "evidence_detail",
+          "source_section": "physical_asset_facts",
+          "target_materializations": [
+            "physical-model"
+          ]
+        },
+        {
+          "reason": "Inspection requests are diagnostics, not user-selectable knowledge.",
+          "route": "diagnostic_only",
+          "source_section": "source_inspection_requests",
+          "target_materializations": []
+        }
+      ],
+      "source_artifact_kind": "code_conceptual_model",
+      "source_schema_version": "code_conceptual_model/v2",
+      "source_stage": "code_conceptual_model_build",
+      "status": "legacy_umbrella_to_be_removed_after_scoped_parity"
+    },
+    "rule": "Different source families produce different knowledge; composite knowledge is resolved through explicit knowledge dependencies."
+  },
+  "execution_effect": "none",
+  "internal_materializations": [
+    {
+      "lifecycle": "current_boundary_migration_required",
+      "materialization_id": "common-data-model",
+      "reason_not_user_selectable": "Текущий legacy umbrella; заменяется отдельными code-declared, physical, mapping, observed-usage и effective знаниями."
+    },
+    {
+      "lifecycle": "current_task_semantics_removal_required",
+      "materialization_id": "suite-evidence-registry",
+      "reason_not_user_selectable": "Технический реестр выполнения и артефактов, а не самостоятельное бизнес-знание."
+    }
+  ],
+  "knowledge_types": [
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает через текущий runtime, но зависит от Task/Profile или старого формата входов.",
+        "status": "current_legacy",
+        "target_contract_status": "migration_required"
+      },
+      "category": "lineage",
+      "contains": [
+        "локальные потоки значений",
+        "присваивания и передачи параметров",
+        "пути атрибутов",
+        "связи с хранилищами и интерфейсами",
+        "пробелы lineage"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "attribute-lineage",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "workspace.attribute-path-resolver",
+          "workspace.repository-value-flow"
+        ],
+        "definition": "Compose repository-local flow facts into a queryable repository value-flow graph.",
+        "lifecycle": "current_task_semantics_removal_required",
+        "materialization_id": "repository-value-flow",
+        "materialized_marts": [
+          "workspace-repository-value-flow"
+        ],
+        "models": [
+          "repository_attribute_path/v2",
+          "repository_value_flow/v6"
+        ],
+        "scope": "workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "persistence-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_persistence_lineage_build",
+              "java_table_observation_build"
+            ],
+            "foundation_requirements": [
+              "java-structure-index",
+              "physical-schema-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "java-persistence",
+            "mapping_status": "alias_not_yet_canonical",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Storage endpoints and persistent field correspondence.",
+            "schema_versions": [
+              "java-persistence-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Persistence evidence"
+          },
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_system_interaction_enrichment",
+              "openapi_scan",
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "java-structure-index",
+              "openapi-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "interaction-boundary",
+            "mapping_status": "current_partial_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Boundary inputs and outputs.",
+            "schema_versions": [
+              "interaction-boundary-evidence/v1"
+            ],
+            "source_category": "interfaces",
+            "title": "Входящие и исходящие интерфейсы"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "value-flow-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_flow_build",
+              "java_field_flow_build",
+              "java_traceability_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "value-flow",
+            "mapping_status": "current_fragmented_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Atomic value-flow nodes, edges, bindings and gaps.",
+            "schema_versions": [
+              "value-flow-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Потоки значений"
+          }
+        ]
+      },
+      "summary": "Граф движения значений и доказательные пути атрибутов внутри и между репозиториями.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Происхождение и пути атрибутов"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "code-declared portions of Core code_conceptual_model/v2 + KLC common-data-model ingestion",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "data-model",
+      "contains": [
+        "типы и сущности, объявленные в коде",
+        "поля и их типы",
+        "объявленные связи между типами",
+        "наследование",
+        "покрытие, доказательства и пробелы анализа кода"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "code-declared-data-model",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "common.code-declared-data-model",
+          "common.code-declared-entities",
+          "common.code-declared-inheritance",
+          "common.code-declared-relationships"
+        ],
+        "definition": "Compose observed source-code type, field, relationship and inheritance declarations into a code-declared data model without physical-schema substitution.",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "code-declared-data-model",
+        "materialized_marts": [
+          "code-declared-entities",
+          "code-declared-fields",
+          "code-declared-inheritance",
+          "code-declared-relationships"
+        ],
+        "models": [
+          "code-declared-data-model/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": "Физические таблицы не подменяют сущности, объявленные в коде.",
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "model-evidence-gap",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_model_lineage_build",
+              "java_persistence_lineage_build"
+            ],
+            "foundation_requirements": [
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "model-evidence-gap",
+            "mapping_status": "current_generic_gaps_require_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Explicit extraction and resolution gaps for the declared code model.",
+            "schema_versions": [
+              "model-evidence-gap/v1"
+            ],
+            "source_category": "diagnostics",
+            "title": "Пробелы evidence модели данных"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "java-type-structure-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_structural_scan",
+              "java_source_observation_build"
+            ],
+            "foundation_requirements": [
+              "java-structure-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "java-type-structure",
+            "mapping_status": "current_observations_require_complete_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Observed model type, field, relationship and inheritance declarations from source code.",
+            "schema_versions": [
+              "java-type-structure-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Объявления типов и полей в исходном коде"
+          }
+        ]
+      },
+      "summary": "Типы, поля, объявленные связи и наследование, непосредственно наблюдаемые в исходном коде.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Модель данных, объявленная в коде"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "mixed entities, mappings, domains and clusters inside Core code_conceptual_model/v2",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "data-model",
+      "contains": [
+        "слой модели, объявленной в коде",
+        "слой физической модели",
+        "доказанные логико-физические соответствия",
+        "составные домены и кластеры",
+        "необязательный контекст наблюдаемого SQL и storage usage",
+        "происхождение каждого объекта по слоям"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "effective-data-model",
+      "knowledge_inputs": {
+        "optional": [
+          {
+            "model_kind": "sql-observed-data-usage",
+            "purpose": "Observed SQL usage kept distinct from declared constraints.",
+            "schema_versions": [
+              "knowledge_layer_sql/v2"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "sql-analysis"
+          },
+          {
+            "model_kind": "observed-storage-usage",
+            "purpose": "Observed code-level storage use.",
+            "schema_versions": [
+              "observed-storage-usage/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "observed-storage-usage"
+          }
+        ],
+        "required": [
+          {
+            "model_kind": "code-declared-data-model",
+            "purpose": "Declared logical model layer.",
+            "schema_versions": [
+              "code-declared-data-model/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "code-declared-data-model"
+          },
+          {
+            "model_kind": "physical-data-model",
+            "purpose": "Physical model layer.",
+            "schema_versions": [
+              "knowledge_layer_physical_model/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "physical-model"
+          },
+          {
+            "model_kind": "logical-physical-model-mapping",
+            "purpose": "Evidence-backed correspondence between logical and physical layers.",
+            "schema_versions": [
+              "logical-physical-model-mapping/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "logical-physical-mapping"
+          }
+        ]
+      },
+      "materialization": {
+        "capabilities": [
+          "common.cross-layer-data-model",
+          "common.effective-data-model"
+        ],
+        "definition": "Build an explicit cross-layer view from independently materialized code-declared, physical and mapping knowledge while preserving the origin and semantics of every layer.",
+        "lifecycle": "planned_klc_composite_materialization",
+        "materialization_id": "effective-data-model",
+        "materialized_marts": [
+          "cross-layer-model-coverage",
+          "effective-data-model",
+          "entity-clusters",
+          "model-domains"
+        ],
+        "models": [
+          "effective-data-model/v1",
+          "model-domain-cluster-view/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [
+        "observed-storage-usage",
+        "sql-source-inventory"
+      ],
+      "required_knowledge_dependencies": [
+        "code-declared-data-model",
+        "logical-physical-mapping",
+        "physical-data-model"
+      ],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": "Это KLC-композиция самостоятельных знаний, а не единая модель из взаимозаменяемых источников.",
+      "sources": {
+        "optional": [],
+        "required": []
+      },
+      "summary": "Составное представление, связывающее независимо построенные модель из кода, физическую модель и доказанные логико-физические соответствия.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Эффективное представление модели данных"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает, но целевая evidence-граница ещё неполна.",
+        "status": "current_partial",
+        "target_contract_status": "partial"
+      },
+      "category": "quality",
+      "contains": [
+        "покрытие интерфейсов",
+        "неразрешённые границы",
+        "неоднозначные сопоставления",
+        "диагностика по репозиториям"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "interaction-coverage",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "workspace.repository-interaction-coverage"
+        ],
+        "definition": "Materialize coverage and diagnostics over repository interaction boundaries.",
+        "lifecycle": "current",
+        "materialization_id": "interaction-coverage",
+        "materialized_marts": [
+          "workspace-repository-interaction-coverage"
+        ],
+        "models": [
+          "repository_interaction_coverage/v1"
+        ],
+        "scope": "workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [],
+        "required": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_system_interaction_enrichment",
+              "openapi_scan",
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "java-structure-index",
+              "openapi-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "interaction-boundary",
+            "mapping_status": "current_partial_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Repository interaction boundaries.",
+            "schema_versions": [
+              "interaction-boundary-evidence/v1"
+            ],
+            "source_category": "interfaces",
+            "title": "Входящие и исходящие интерфейсы"
+          }
+        ]
+      },
+      "summary": "Покрытие и диагностика входящих и исходящих интерфейсов по репозиториям.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Покрытие анализа взаимодействий"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает, но целевая evidence-граница ещё неполна.",
+        "status": "current_partial",
+        "target_contract_status": "partial"
+      },
+      "category": "lineage",
+      "contains": [
+        "поля входящих и исходящих сообщений",
+        "сопоставления полей",
+        "пути атрибутов через границы систем",
+        "пробелы и неоднозначности полевых контрактов"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "interaction-field-contracts",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "workspace.system-interaction-field-contracts"
+        ],
+        "definition": "Materialize field-level contracts over matched system interactions.",
+        "lifecycle": "current",
+        "materialization_id": "interaction-field-contracts",
+        "materialized_marts": [
+          "workspace-system-interaction-field-contracts"
+        ],
+        "models": [
+          "workspace_system_interaction_field_contract/v2"
+        ],
+        "scope": "workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [
+        "attribute-lineage",
+        "system-interactions"
+      ],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [],
+        "required": [
+          {
+            "artifact_kind": "repository-value-flow",
+            "contract_status": "current_output",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_klc_output",
+            "producer_kind": "klc",
+            "producer_materialization_id": "repository-value-flow",
+            "purpose": "Repository-local value nodes and edges.",
+            "schema_versions": [
+              "repository_value_flow/v6"
+            ],
+            "source_category": "knowledge-output",
+            "title": "Граф потоков значений репозитория"
+          },
+          {
+            "artifact_kind": "repository-interaction-evidence",
+            "contract_status": "current_output",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_klc_output",
+            "producer_kind": "klc",
+            "producer_materialization_id": "system-interactions",
+            "purpose": "Matched repository boundaries.",
+            "schema_versions": [
+              "workspace_system_interaction/v5"
+            ],
+            "source_category": "knowledge-output",
+            "title": "Сопоставленные взаимодействия репозиториев"
+          }
+        ]
+      },
+      "summary": "Связи полей и атрибутов на сопоставленных межсистемных взаимодействиях.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Контракты полей во взаимодействиях"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает, но целевая evidence-граница ещё неполна.",
+        "status": "current_partial",
+        "target_contract_status": "partial"
+      },
+      "category": "interactions",
+      "contains": [
+        "строгие острова",
+        "расширенные острова",
+        "изолированные репозитории",
+        "состав и покрытие островов"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "interaction-islands",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "workspace.repository-interaction-islands"
+        ],
+        "definition": "Build strict and extended connected repository islands from confirmed/probable interaction evidence.",
+        "lifecycle": "current",
+        "materialization_id": "interaction-islands",
+        "materialized_marts": [
+          "workspace-repository-interaction-islands"
+        ],
+        "models": [
+          "repository_interaction_island/v2"
+        ],
+        "scope": "workspace_or_portfolio"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [
+        "system-interactions"
+      ],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "interaction-coverage",
+            "contract_status": "current_output",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_klc_output",
+            "producer_kind": "klc",
+            "producer_materialization_id": "interaction-coverage",
+            "purpose": "Coverage and diagnostic context.",
+            "schema_versions": [
+              "repository_interaction_coverage/v1"
+            ],
+            "source_category": "knowledge-output",
+            "title": "Покрытие взаимодействий"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "repository-interaction-evidence",
+            "contract_status": "current_output",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_klc_output",
+            "producer_kind": "klc",
+            "producer_materialization_id": "system-interactions",
+            "purpose": "Resolved interaction edges.",
+            "schema_versions": [
+              "workspace_system_interaction/v5"
+            ],
+            "source_category": "knowledge-output",
+            "title": "Сопоставленные взаимодействия репозиториев"
+          }
+        ]
+      },
+      "summary": "Связные группы репозиториев по подтверждённым и вероятным взаимодействиям.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Острова взаимодействующих репозиториев"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "physical_to_entity_mappings and persistence mapping fragments inside Core code_conceptual_model/v2",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "data-model",
+      "contains": [
+        "сущность → таблица",
+        "атрибут → колонка",
+        "ключ модели → физический ключ",
+        "связь модели → физическая связь",
+        "конфликты и неразрешённые соответствия"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "logical-physical-mapping",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": [
+          {
+            "model_kind": "code-declared-data-model",
+            "purpose": "Logical objects and members to map.",
+            "schema_versions": [
+              "code-declared-data-model/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "code-declared-data-model"
+          },
+          {
+            "model_kind": "physical-data-model",
+            "purpose": "Physical tables, columns, keys and relationships to map.",
+            "schema_versions": [
+              "knowledge_layer_physical_model/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "physical-model"
+          }
+        ]
+      },
+      "materialization": {
+        "capabilities": [
+          "common.entity-table-mapping",
+          "common.field-column-mapping",
+          "common.logical-physical-mapping"
+        ],
+        "definition": "Compose explicit persistence mappings between the code-declared model and the physical model; do not infer conceptual identity from physical names alone.",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "logical-physical-mapping",
+        "materialized_marts": [
+          "logical-physical-entity-mapping",
+          "logical-physical-field-mapping",
+          "mapping-gaps"
+        ],
+        "models": [
+          "logical-physical-model-mapping/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [
+        "code-declared-data-model",
+        "physical-data-model"
+      ],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": "Наблюдаемое использование и совпадение имён сами по себе не являются доказанным mapping.",
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "storage-usage-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_persistence_lineage_build",
+              "java_table_observation_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "physical-schema-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "storage-usage",
+            "mapping_status": "current_observations_require_complete_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Observed usage that explains mapping use without becoming mapping proof.",
+            "schema_versions": [
+              "storage-usage-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Наблюдаемое использование хранилищ"
+          },
+          {
+            "artifact_kind": "model-evidence-gap",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_model_lineage_build",
+              "java_persistence_lineage_build"
+            ],
+            "foundation_requirements": [
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "model-evidence-gap",
+            "mapping_status": "current_generic_gaps_require_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Explicit unresolved or conflicting mapping observations.",
+            "schema_versions": [
+              "model-evidence-gap/v1"
+            ],
+            "source_category": "diagnostics",
+            "title": "Пробелы evidence модели данных"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "java-persistence-mapping-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_persistence_lineage_build",
+              "java_table_observation_build",
+              "java_structural_scan"
+            ],
+            "foundation_requirements": [
+              "java-structure-index",
+              "physical-schema-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "java-persistence-mapping",
+            "mapping_status": "current_observations_require_complete_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Entity/table, field/column, key and relationship mapping declarations.",
+            "schema_versions": [
+              "java-persistence-mapping-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Объявленные persistence mappings"
+          }
+        ]
+      },
+      "summary": "Доказательные соответствия сущностей и атрибутов из кода таблицам, колонкам, ключам и связям физической модели.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Логико-физическое соответствие"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "storage_operations and storage usage counters inside Core code_conceptual_model/v2",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "data-usage",
+      "contains": [
+        "чтения из хранилищ",
+        "записи в хранилища",
+        "используемые таблицы, коллекции и поля",
+        "точки доступа в коде",
+        "неразрешённые цели хранения"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "observed-storage-usage",
+      "knowledge_inputs": {
+        "optional": [
+          {
+            "model_kind": "code-declared-data-model",
+            "purpose": "Optional correspondence to code-declared objects.",
+            "schema_versions": [
+              "code-declared-data-model/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "code-declared-data-model"
+          },
+          {
+            "model_kind": "physical-data-model",
+            "purpose": "Optional correspondence to physical objects.",
+            "schema_versions": [
+              "knowledge_layer_physical_model/v1"
+            ],
+            "semantic_selector": "model_kind_plus_schema_version",
+            "source_materialization_id": "physical-model"
+          }
+        ],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "common.observed-storage-usage",
+          "common.storage-read-write-inventory"
+        ],
+        "definition": "Materialize observed code-level reads, writes and storage access without reclassifying them as declared model or persistence mapping.",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "observed-storage-usage",
+        "materialized_marts": [
+          "observed-storage-access-gaps",
+          "observed-storage-reads",
+          "observed-storage-writes"
+        ],
+        "models": [
+          "observed-storage-usage/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [
+        "code-declared-data-model",
+        "physical-data-model"
+      ],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": "Наблюдаемое использование не становится объявленной моделью или persistence mapping.",
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "model-evidence-gap",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_model_lineage_build",
+              "java_persistence_lineage_build"
+            ],
+            "foundation_requirements": [
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "model-evidence-gap",
+            "mapping_status": "current_generic_gaps_require_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Unresolved storage targets and incomplete value bindings.",
+            "schema_versions": [
+              "model-evidence-gap/v1"
+            ],
+            "source_category": "diagnostics",
+            "title": "Пробелы evidence модели данных"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "storage-usage-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_persistence_lineage_build",
+              "java_table_observation_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "physical-schema-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "storage-usage",
+            "mapping_status": "current_observations_require_complete_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Observed reads, writes, storage calls and referenced objects or fields.",
+            "schema_versions": [
+              "storage-usage-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Наблюдаемое использование хранилищ"
+          }
+        ]
+      },
+      "summary": "Фактически наблюдаемые чтения, записи и обращения к объектам хранения из кода.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Наблюдаемое использование хранилищ"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": true,
+        "explanation": "Materialization уже использует самостоятельный типизированный вход.",
+        "status": "current_typed",
+        "target_contract_status": "current"
+      },
+      "category": "data-model",
+      "contains": [
+        "таблицы",
+        "колонки",
+        "первичные и альтернативные ключи",
+        "внешние ключи и связи",
+        "ограничения",
+        "пробелы физической модели"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "physical-data-model",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "common.physical-model",
+          "common.physical-model.columns",
+          "common.physical-model.gaps",
+          "common.physical-model.keys",
+          "common.physical-model.pdm",
+          "common.physical-model.relationships",
+          "common.physical-model.tables"
+        ],
+        "definition": "Materialize a supplied physical-model/v1 artifact into typed table, column, key, relationship and gap structures.",
+        "lifecycle": "current_typed_input",
+        "materialization_id": "physical-model",
+        "materialized_marts": [
+          "physical-model-inventory",
+          "physical-model-keys-and-relationships"
+        ],
+        "models": [
+          "knowledge_layer_physical_model/v1"
+        ],
+        "scope": "physical_model_source"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": "Требует отдельного артефакта физической модели; он не извлекается только из кода.",
+      "sources": {
+        "optional": [],
+        "required": [
+          {
+            "artifact_kind": "physical-model",
+            "contract_status": "current",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_external_typed_artifact",
+            "producer_kind": "external",
+            "producer_materialization_id": null,
+            "purpose": "Canonical physical model source artifact.",
+            "schema_versions": [
+              "physical-model/v1"
+            ],
+            "source_category": "external-model",
+            "title": "Предоставленная физическая модель"
+          }
+        ]
+      },
+      "summary": "Таблицы, колонки, ключи, ограничения, связи и пробелы предоставленной физической модели.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Физическая модель данных"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает через текущий runtime, но зависит от Task/Profile или старого формата входов.",
+        "status": "current_legacy",
+        "target_contract_status": "migration_required"
+      },
+      "category": "portfolio",
+      "contains": [
+        "репозитории",
+        "границы взаимодействий",
+        "рёбра топологии",
+        "острова",
+        "покрытие"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "portfolio-topology",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "portfolio.interaction-islands",
+          "portfolio.topology"
+        ],
+        "definition": "Materialize compact repository topology and interaction islands from repository topology evidence.",
+        "lifecycle": "current_profile_task_coupled",
+        "materialization_id": "portfolio-topology",
+        "materialized_marts": [
+          "portfolio-interaction-islands",
+          "portfolio-repository-topology"
+        ],
+        "models": [
+          "portfolio_interaction_islands/v1",
+          "portfolio_topology/v1"
+        ],
+        "scope": "portfolio"
+      },
+      "profile_v2_selectable": false,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": "knowledge_profile/v2 пока поддерживает repository и workspace.",
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "repository-metadata",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "proposed_typed_metadata",
+            "producer_kind": "runner",
+            "producer_materialization_id": null,
+            "purpose": "Repository, system and project identity metadata.",
+            "schema_versions": [
+              "repository-metadata/v1"
+            ],
+            "source_category": "execution-input",
+            "title": "Метаданные репозитория и системы"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "repository-interface-catalog-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_system_interaction_enrichment",
+              "openapi_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "openapi-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "repository-interface-catalog",
+            "mapping_status": "current_compact_artifact_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Compact per-repository protocol boundary catalog.",
+            "schema_versions": [
+              "repository-interface-catalog-evidence/v1"
+            ],
+            "source_category": "interfaces",
+            "title": "Компактный каталог интерфейсов репозитория"
+          }
+        ]
+      },
+      "summary": "Компактная топология и острова взаимодействий большого портфеля репозиториев.",
+      "supported_scopes": [
+        "portfolio"
+      ],
+      "title": "Топология портфеля репозиториев"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "Core reference_data_fact_base compact artifacts selected through current Task routing",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "reference-data",
+      "contains": [
+        "объявленные значения и перечисления",
+        "наблюдаемые литеральные записи",
+        "наборы значений",
+        "кандидаты справочников",
+        "контекст хранения и использования",
+        "неразрешённые альтернативы"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "reference-data",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "suite.reference-data"
+        ],
+        "definition": "Compose declared values, literal writes, storage, lineage, interface and configuration evidence into a facts-only reference-data knowledge base.",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "reference-data",
+        "materialized_marts": [
+          "declared-value-sets",
+          "reference-data-candidate-views",
+          "reference-data-fact-base"
+        ],
+        "models": [
+          "declared-value-set/v1",
+          "reference-data-candidate-view/v1",
+          "reference-data-fact-base/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "java-persistence-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_persistence_lineage_build",
+              "java_table_observation_build",
+              "java_structural_scan"
+            ],
+            "foundation_requirements": [
+              "java-structure-index",
+              "physical-schema-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "java-persistence",
+            "mapping_status": "partial_current_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Storage objects, fields and keys.",
+            "schema_versions": [
+              "java-persistence-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Persistence mappings и операции"
+          },
+          {
+            "artifact_kind": "value-flow-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_flow_build",
+              "java_field_flow_build",
+              "java_traceability_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "value-flow",
+            "mapping_status": "current_fragmented_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Value propagation and lineage context.",
+            "schema_versions": [
+              "value-flow-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Потоки значений"
+          },
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_system_interaction_enrichment",
+              "openapi_scan",
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "java-structure-index",
+              "openapi-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "interaction-boundary",
+            "mapping_status": "current_partial_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Interface usage context.",
+            "schema_versions": [
+              "interaction-boundary-evidence/v1"
+            ],
+            "source_category": "interfaces",
+            "title": "Входящие и исходящие интерфейсы"
+          },
+          {
+            "artifact_kind": "configuration-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "configuration",
+            "mapping_status": "current_foundation_facts_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Configured value sources and unresolved bindings.",
+            "schema_versions": [
+              "configuration-evidence/v1"
+            ],
+            "source_category": "configuration",
+            "title": "Конфигурация приложения"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "declared-value-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "declared_value_scan",
+              "declared_value_summary_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "java-structure-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "declared-value",
+            "mapping_status": "current_facts_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Declared constants, enumerations and configured value sets.",
+            "schema_versions": [
+              "declared-value-evidence/v1"
+            ],
+            "source_category": "source-code-and-configuration",
+            "title": "Объявленные значения и перечисления"
+          },
+          {
+            "artifact_kind": "literal-write-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_model_lineage_build",
+              "reference_data_fact_base"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "physical-schema-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "literal-write",
+            "mapping_status": "currently_mixed_with_knowledge_materialization",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Observed literal writes to storage or outbound payloads.",
+            "schema_versions": [
+              "literal-write-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Литеральные записи в хранилища и сообщения"
+          }
+        ]
+      },
+      "summary": "Наблюдаемые значения, записи литералов, кандидаты справочников и контекст использования.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Справочные данные"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": true,
+        "explanation": "Materialization уже использует самостоятельный типизированный вход.",
+        "status": "current_typed",
+        "target_contract_status": "current"
+      },
+      "category": "sql",
+      "contains": [
+        "SQL-операторы и области видимости",
+        "таблицы-источники и назначения",
+        "используемые поля",
+        "роли полей: projection, join, filter и другие",
+        "JOIN и условия связи",
+        "source-to-target lineage",
+        "неразрешённые ссылки и покрытие"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "sql-source-inventory",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "sql.relation-field-inventory",
+          "sql.semantic-roles"
+        ],
+        "definition": "Materialize repository SQL statements, relations, field use, semantic roles and source-to-target evidence.",
+        "lifecycle": "current_typed_input",
+        "materialization_id": "sql-analysis",
+        "materialized_marts": [
+          "sql-relation-field-inventory",
+          "sql-relation-semantic-roles"
+        ],
+        "models": [
+          "knowledge_layer_sql/v2"
+        ],
+        "scope": "repository_or_sql_source"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": "Для workspace строится по репозиториям; workspace-агрегация является отдельным видом знания.",
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "physical-model",
+            "contract_status": "current",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_external_typed_artifact",
+            "producer_kind": "external",
+            "producer_materialization_id": null,
+            "purpose": "Optional physical-model correspondence and target resolution.",
+            "schema_versions": [
+              "physical-model/v1"
+            ],
+            "source_category": "external-model",
+            "title": "Предоставленная физическая модель"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "sql-analysis",
+            "contract_status": "current",
+            "current_core_stage_ids": [
+              "sql_scan",
+              "sql_script_structure_scan",
+              "sql_script_semantic_inventory",
+              "sql_scoped_relation_scan",
+              "sql_scoped_column_usage_scan",
+              "sql_scoped_projection_scan",
+              "sql_scoped_direct_lineage_build",
+              "sql_scoped_write_target_binding",
+              "sql_join_graph_scan",
+              "sql_column_lineage_scan",
+              "sql_source_usage_scan",
+              "sql_mart_inventory_scan",
+              "sql_mart_lineage_gap_build"
+            ],
+            "foundation_requirements": [
+              "repository-file-index",
+              "sql-parse-index"
+            ],
+            "future_analyzer_id": "sql-analysis",
+            "mapping_status": "current_typed_artifact_fixed_runtime",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Repository-level SQL evidence artifact.",
+            "schema_versions": [
+              "sql-analysis/v1"
+            ],
+            "source_category": "sql",
+            "title": "SQL-код и его семантика"
+          }
+        ]
+      },
+      "summary": "SQL-операторы, таблицы, поля, роли использования, JOIN и доказательный source-to-target lineage.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "SQL-инвентарь источников и назначений"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "Core system_description_enrichment selected through current Task routing",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "system",
+      "contains": [
+        "системные сценарии",
+        "внешние зависимости",
+        "используемые хранилища",
+        "источники данных",
+        "границы доступа",
+        "покрытие и пробелы"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "system-description",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "suite.system-description"
+        ],
+        "definition": "Compose interface, configuration, dependency and storage evidence into system scenarios and system-description views.",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "system-description",
+        "materialized_marts": [
+          "access-boundaries",
+          "data-sources",
+          "external-dependencies",
+          "storage-usage-summaries",
+          "system-scenarios"
+        ],
+        "models": [
+          "storage-usage-summary/v1",
+          "system-description/v1",
+          "system-scenario/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "value-flow-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_data_flow_build",
+              "java_field_flow_build",
+              "java_traceability_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "repository-file-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "value-flow",
+            "mapping_status": "current_fragmented_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Scenario and boundary flow enrichment.",
+            "schema_versions": [
+              "value-flow-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Потоки значений"
+          },
+          {
+            "artifact_kind": "physical-schema-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "db_schema_scan"
+            ],
+            "foundation_requirements": [
+              "physical-schema-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "physical-schema",
+            "mapping_status": "current_facts_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Storage object detail.",
+            "schema_versions": [
+              "physical-schema-evidence/v1"
+            ],
+            "source_category": "database-schema",
+            "title": "Физическая схема из репозитория"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_system_interaction_enrichment",
+              "openapi_scan",
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "java-structure-index",
+              "openapi-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "interaction-boundary",
+            "mapping_status": "current_partial_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Inbound/outbound interfaces and protocol addresses.",
+            "schema_versions": [
+              "interaction-boundary-evidence/v1"
+            ],
+            "source_category": "interfaces",
+            "title": "Входящие и исходящие интерфейсы"
+          },
+          {
+            "artifact_kind": "configuration-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "configuration",
+            "mapping_status": "current_foundation_facts_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Resolved and unresolved configuration observations.",
+            "schema_versions": [
+              "configuration-evidence/v1"
+            ],
+            "source_category": "configuration",
+            "title": "Конфигурация приложения"
+          },
+          {
+            "artifact_kind": "build-dependency-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "maven_dependency_scan",
+              "gradle_dependency_scan"
+            ],
+            "foundation_requirements": [
+              "build-dependency-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "build-dependency",
+            "mapping_status": "current_foundation_facts_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "External and module dependency observations.",
+            "schema_versions": [
+              "build-dependency-evidence/v1"
+            ],
+            "source_category": "build-metadata",
+            "title": "Зависимости сборки"
+          },
+          {
+            "artifact_kind": "storage-access-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_persistence_lineage_build",
+              "java_table_observation_build",
+              "java_data_model_lineage_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "physical-schema-index"
+            ],
+            "future_analyzer_id": "storage-access",
+            "mapping_status": "derived_from_current_facts_contract_missing",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Observed storage use and access paths.",
+            "schema_versions": [
+              "storage-access-evidence/v1"
+            ],
+            "source_category": "storage",
+            "title": "Доступ к хранилищам"
+          }
+        ]
+      },
+      "summary": "Сценарии, внешние зависимости, хранилища, источники данных и границы доступа.",
+      "supported_scopes": [
+        "repository",
+        "workspace"
+      ],
+      "title": "Описание системы"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает, но целевая evidence-граница ещё неполна.",
+        "status": "current_partial",
+        "target_contract_status": "partial"
+      },
+      "category": "interactions",
+      "contains": [
+        "входящие и исходящие границы",
+        "протоколы и адреса",
+        "межрепозиторные взаимодействия",
+        "межсистемные взаимодействия",
+        "неоднозначные и неразрешённые сопоставления"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "system-interactions",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "workspace.repository-interaction-boundaries",
+          "workspace.system-interactions"
+        ],
+        "definition": "Match repository interaction boundaries into inter-repository and inter-system interaction facts.",
+        "lifecycle": "current_partial_evidence_contract",
+        "materialization_id": "system-interactions",
+        "materialized_marts": [
+          "workspace-repository-interaction-boundaries",
+          "workspace-system-interactions"
+        ],
+        "models": [
+          "workspace_system_interaction/v5"
+        ],
+        "scope": "workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "configuration-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "configuration",
+            "mapping_status": "current_foundation_facts_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Resolved endpoint/topic properties and aliases.",
+            "schema_versions": [
+              "configuration-evidence/v1"
+            ],
+            "source_category": "configuration",
+            "title": "Конфигурация приложения"
+          },
+          {
+            "artifact_kind": "execution-context-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_traceability_build"
+            ],
+            "foundation_requirements": [
+              "call-index",
+              "java-structure-index",
+              "symbol-and-type-index"
+            ],
+            "future_analyzer_id": "execution-context",
+            "mapping_status": "partial_not_yet_canonical",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Optional path from ingress to outbound operation.",
+            "schema_versions": [
+              "execution-context-evidence/v1"
+            ],
+            "source_category": "source-code",
+            "title": "Контекст выполнения и вызовов"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [
+              "java_system_interaction_enrichment",
+              "openapi_scan",
+              "config_scan"
+            ],
+            "foundation_requirements": [
+              "configuration-index",
+              "java-structure-index",
+              "openapi-index",
+              "repository-file-index"
+            ],
+            "future_analyzer_id": "interaction-boundary",
+            "mapping_status": "current_partial_proposed_typed_contract",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Inbound and outbound protocol boundary observations.",
+            "schema_versions": [
+              "interaction-boundary-evidence/v1"
+            ],
+            "source_category": "interfaces",
+            "title": "Входящие и исходящие интерфейсы"
+          }
+        ]
+      },
+      "summary": "Подтверждённые и вероятные связи между входящими и исходящими интерфейсами.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Взаимодействия систем и репозиториев"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "Core fixed SQL runtime with workspace_sql_mart_catalog_build label",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "category": "sql",
+      "contains": [
+        "SQL-витрины workspace",
+        "общий инвентарь таблиц и полей",
+        "источники и назначения по репозиториям",
+        "межрепозиторные соответствия",
+        "покрытие и пробелы"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_id": "workspace-sql-source-inventory",
+      "knowledge_inputs": {
+        "optional": [],
+        "required": []
+      },
+      "materialization": {
+        "capabilities": [
+          "workspace.sql-mart-catalog",
+          "workspace.sql-source-inventory"
+        ],
+        "definition": "Aggregate typed repository SQL evidence into a workspace-level mart catalog and cross-repository inventory.",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "workspace-sql-mart-catalog",
+        "materialized_marts": [
+          "workspace-sql-mart-catalog",
+          "workspace-sql-source-inventory"
+        ],
+        "models": [
+          "workspace-sql-mart-catalog/v1",
+          "workspace-sql-source-inventory/v1"
+        ],
+        "scope": "workspace"
+      },
+      "profile_v2_selectable": true,
+      "recommended_knowledge_dependencies": [
+        "sql-source-inventory"
+      ],
+      "required_knowledge_dependencies": [],
+      "scope_behavior": null,
+      "selection_note": null,
+      "source_note": null,
+      "sources": {
+        "optional": [
+          {
+            "artifact_kind": "physical-model",
+            "contract_status": "current",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "current_external_typed_artifact",
+            "producer_kind": "external",
+            "producer_materialization_id": null,
+            "purpose": "Physical object correspondence and role context.",
+            "schema_versions": [
+              "physical-model/v1"
+            ],
+            "source_category": "external-model",
+            "title": "Предоставленная физическая модель"
+          },
+          {
+            "artifact_kind": "repository-metadata",
+            "contract_status": "proposed",
+            "current_core_stage_ids": [],
+            "foundation_requirements": [],
+            "future_analyzer_id": null,
+            "mapping_status": "proposed_typed_metadata",
+            "producer_kind": "runner",
+            "producer_materialization_id": null,
+            "purpose": "Repository/system ownership and grouping.",
+            "schema_versions": [
+              "repository-metadata/v1"
+            ],
+            "source_category": "execution-input",
+            "title": "Метаданные репозитория и системы"
+          }
+        ],
+        "required": [
+          {
+            "artifact_kind": "sql-analysis",
+            "contract_status": "current",
+            "current_core_stage_ids": [
+              "sql_scan",
+              "sql_script_structure_scan",
+              "sql_script_semantic_inventory",
+              "sql_scoped_relation_scan",
+              "sql_scoped_column_usage_scan",
+              "sql_scoped_projection_scan",
+              "sql_scoped_direct_lineage_build",
+              "sql_scoped_write_target_binding",
+              "sql_join_graph_scan",
+              "sql_column_lineage_scan",
+              "sql_source_usage_scan",
+              "sql_mart_inventory_scan",
+              "sql_mart_lineage_gap_build"
+            ],
+            "foundation_requirements": [
+              "repository-file-index",
+              "sql-parse-index"
+            ],
+            "future_analyzer_id": "sql-analysis",
+            "mapping_status": "current_typed_artifact_fixed_runtime",
+            "producer_kind": "core",
+            "producer_materialization_id": null,
+            "purpose": "Repository statements, scopes, relations, fields, flows and diagnostics.",
+            "schema_versions": [
+              "sql-analysis/v1"
+            ],
+            "source_category": "sql",
+            "title": "SQL-код и его семантика"
+          }
+        ]
+      },
+      "summary": "Агрегированный каталог SQL-витрин, источников и назначений нескольких репозиториев.",
+      "supported_scopes": [
+        "workspace"
+      ],
+      "title": "Общий SQL-каталог workspace"
+    }
+  ],
+  "next_step": "generic_knowledge_architecture_audit/v1_for_code-declared-data-model",
+  "purpose": "User-facing catalog of selectable KLC knowledge and deterministic source lineage to Core evidence producers.",
+  "runner_version": "0.9.45",
+  "schema_version": "knowledge_catalog/v2",
+  "source": {
+    "core_target_contracts_fingerprint": "55766fdf9a92712569015372b90d906215e31b50eeabadfcd58780b50d7880d7",
+    "core_target_contracts_schema": "core_target_analysis_contracts/v1",
+    "execution_result_catalog_fingerprint": "5807dacc85953235c774c8850b30bbb0096a9b4d61a766ee85b58b6504989c65",
+    "execution_result_catalog_schema": "analysis_execution_result_catalog/v1",
+    "klc_materialization_catalog_fingerprint": "011a879e98c25e6002c57ab28063c9699d2eb62cd9e1b2d7cfb6374acbdcea42",
+    "klc_materialization_catalog_schema": "knowledge_materialization_catalog/v2",
+    "responsibility_map_fingerprint": "5456c1fd15ff8f49671964f0a6d4a4c1f3f0e0c759a385a3efccef20614fce5e",
+    "responsibility_map_schema": "core_klc_responsibility_map/v1"
+  },
+  "summary": {
+    "business_available_now_count": 14,
+    "internal_materialization_count": 2,
+    "knowledge_type_count": 15,
+    "profile_v2_selectable_count": 14,
+    "required_source_kind_count": 14,
+    "runtime_status_counts": {
+      "current_legacy": 8,
+      "current_partial": 4,
+      "current_typed": 2
+    },
+    "target_contract_ready_count": 2,
+    "uncatalogued_materialization_count": 0
+  }
+}

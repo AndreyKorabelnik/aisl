@@ -1,0 +1,135 @@
+{
+  "completed_tasks": [
+    "system-description",
+    "data-model"
+  ],
+  "failure": null,
+  "foundation": {
+    "artifact_fingerprint": "b1e09a6ea2fe363efee97f4183f57c8ee0807d0095eb395890e407f68349c2df",
+    "fragment": {
+      "path": "/mnt/data/iteration28_work/modules/code-analyzer-core/analysis-profile-fragments/repository-analysis-foundation.yaml",
+      "sha256": "90a445e331eb022b35cd54a0064f1d53443e6cb8463e21f96327ffd474024bfa"
+    },
+    "manifest": "foundation/foundation-manifest.json",
+    "output": "foundation",
+    "process": {
+      "elapsed_seconds": 23.526,
+      "max_rss_kb": 810456,
+      "stack_dump_requests": 0,
+      "timed_out": false
+    },
+    "schema_version": "repository_analysis_foundation/v1"
+  },
+  "knowledge_layer": {
+    "capabilities": [
+      "common.data-model",
+      "common.effective-model",
+      "common.field-flow-queries",
+      "common.keys",
+      "common.path-queries",
+      "common.physical-model",
+      "common.relationships",
+      "common.source-observations",
+      "suite.analysis",
+      "suite.artifact-catalog",
+      "suite.data-model",
+      "suite.fact-deduplication",
+      "suite.system-description",
+      "suite.task-provenance"
+    ],
+    "counts": {
+      "analysis_artifact": 149,
+      "analysis_fact": 121500,
+      "analysis_record": 1247,
+      "analysis_scope": 1,
+      "analysis_suite": 1,
+      "analysis_task": 2,
+      "analysis_task_artifact": 211,
+      "build_dependency": 116,
+      "build_module": 4,
+      "build_plugin": 9,
+      "build_project": 1,
+      "build_repository_observation": 4,
+      "build_source_set": 1,
+      "code_field_observation": 2496,
+      "configuration_type_correspondence_observation": 0,
+      "configuration_type_correspondences_built": 0,
+      "data_dictionary_entry": 181,
+      "data_model_association": 46,
+      "data_model_attribute": 39,
+      "data_model_cluster": 2,
+      "data_model_domain": 2,
+      "data_model_entity": 80,
+      "data_model_generalization": 0,
+      "data_model_local_correspondence_observation": 85,
+      "db_schema_column": 639,
+      "db_schema_constraint": 15,
+      "db_schema_index": 84,
+      "db_schema_key": 55,
+      "db_schema_partitioning": 18,
+      "db_schema_relationship": 13,
+      "db_schema_sequence": 25,
+      "db_schema_table": 80,
+      "db_schema_trigger": 11,
+      "declared_value_set": 0,
+      "derived_effective_entity_fields": 2910,
+      "effective_entity_association": 0,
+      "effective_entity_field": 2910,
+      "entity_physical_mapping": 80,
+      "evidence_ref": 139073,
+      "java_inheritance_observation": 459,
+      "java_type_declaration": 909,
+      "model_embedded_field_observation": 0,
+      "model_object_key_member": 0,
+      "model_object_key_observation": 0,
+      "model_relationship_candidate": 0,
+      "persistent_structure": 12,
+      "persistent_structure_attribute": 126,
+      "physical_asset": 80,
+      "physical_asset_fact": 80,
+      "physical_column": 39,
+      "physical_constraint": 6,
+      "source_inspection_request": 305,
+      "source_observation": 121500,
+      "source_record": 17351,
+      "table_key_observation": 150,
+      "table_key_observation_column": 201,
+      "table_relationship_column_pair": 197,
+      "table_relationship_observation": 192,
+      "workspace_missing_fact": 7210,
+      "workspace_repository": 1
+    },
+    "manifest": "knowledge-layer/knowledge-layer-manifest.json",
+    "output": "knowledge-layer",
+    "producer": "knowledge-layer-core",
+    "requested": true,
+    "status": "complete",
+    "version": "0.29.1"
+  },
+  "repo_id": "client_profile",
+  "requested_tasks": [
+    "system-description",
+    "data-model"
+  ],
+  "schema_version": "analysis_suite_run_summary/v1",
+  "status": "completed",
+  "suite_id": "default-system-analysis",
+  "task_outputs": {
+    "data-model": "tasks/data-model",
+    "system-description": "tasks/system-description"
+  },
+  "task_processes": {
+    "data-model": {
+      "elapsed_seconds": 19.519,
+      "max_rss_kb": 757128,
+      "stack_dump_requests": 0,
+      "timed_out": false
+    },
+    "system-description": {
+      "elapsed_seconds": 23.024,
+      "max_rss_kb": 809036,
+      "stack_dump_requests": 0,
+      "timed_out": false
+    }
+  }
+}

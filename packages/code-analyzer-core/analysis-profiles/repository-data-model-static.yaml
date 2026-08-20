@@ -1,0 +1,95 @@
+profile_id: repository-data-model-static
+profile_version: 1
+name: Repository static data-model evidence
+description: >
+  Deterministic repository-level data-model evidence for candidate-selected repositories.
+  Runs structural, persistence, conceptual-model and physical-schema stages, plus facts-only
+  SQL table relationship, data-movement and key-usage observations.
+  Excludes topology, transitive traceability and full declared-value extraction while retaining
+  bounded universal call-argument and constructed-value observations required for source-only interpretation.
+workspace_types:
+  - java
+goal:
+  primary_question: >
+    Which observable conceptual entities, attributes, declared type relations, persistent
+    structures, physical database objects, table relationships and key usages are present?
+pipeline:
+  stages:
+    - id: scan_files
+    - id: config_scan
+    - id: maven_dependency_scan
+    - id: gradle_dependency_scan
+    - id: java_structural_scan
+    - id: java_source_observation_build
+      options:
+        framework_interpreters:
+          - tsa
+        framework_api_roles:
+          tsa:
+            framework: tsa_change_vector
+            reference_methods:
+              referenceField:
+                kind: field
+                field_argument: 0
+                value_argument: 1
+              referenceCollection:
+                kind: collection
+                field_argument: 0
+                value_argument: 1
+              replaceReferenceCollection:
+                kind: collection
+                field_argument: 0
+                value_argument: 1
+              replacePolymorphicReferenceCollection:
+                kind: collection
+                field_argument: 0
+                value_argument: 1
+              reference:
+                kind: field
+                field_argument: 0
+                value_argument: 1
+              references:
+                kind: collection
+                field_argument: 0
+                value_argument: 1
+            record_key_methods:
+              key:
+                value_argument: 0
+                storage_field: key
+              setKey:
+                value_argument: 0
+                storage_field: key
+              withKey:
+                value_argument: 0
+                storage_field: key
+            record_alias_methods:
+              alias:
+                value_argument: 0
+              setAlias:
+                value_argument: 0
+              withAlias:
+                value_argument: 0
+    - id: sql_scan
+    - id: db_schema_scan
+    - id: java_persistence_lineage_build
+      options:
+        max_depth: 4
+        deep: false
+    - id: java_data_model_lineage_build
+      options:
+        max_depth: 4
+    - id: java_table_observation_build
+    - id: core_output
+    - id: normalize_facts
+    - id: compact_package
+output_contract:
+  intent: selected_repository_static_data_model_evidence
+  primary_interface: evidence_access_api
+  strict_evidence_policy: deterministic_observed_facts_provenance_gaps
+  policy:
+    no_business_decisions: true
+    no_semantic_equivalence_inference: true
+    topology_not_requested: true
+    lineage_not_requested: true
+    observed_table_relationships_are_not_foreign_keys: true
+    key_usage_observations_are_not_primary_key_verdicts: true

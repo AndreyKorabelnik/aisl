@@ -1,0 +1,138 @@
+{
+  "artifact_id": "repository_structure_46e367f133052553543a6638",
+  "artifact_kind": "repository-structure-evidence",
+  "content_fingerprint": "46e367f133052553543a66388d370528acc21da9120a9e54871102893bf84753",
+  "contract_version": "core_evidence_artifact_contract/v1",
+  "coverage": {
+    "all_file_count": 8,
+    "analyzer_eligible_file_count": 8,
+    "coverage_status": "complete",
+    "extension_family_count": 1,
+    "outside_analyzer_frontier_extension_family_count": 0,
+    "outside_analyzer_frontier_file_count": 0,
+    "unreadable_file_count": 0
+  },
+  "diagnostics": [],
+  "extension_inventory": [
+    {
+      "analyzer_eligible_file_count": 8,
+      "extension": ".json",
+      "file_count": 8,
+      "outside_analyzer_frontier_file_count": 0
+    }
+  ],
+  "files": [
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 267,
+      "extension": ".json",
+      "file_name": "dominant-1.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/dominant-1.json",
+      "sha256": "a058f9a0eb6b0866d8c52b06fcaa8d319a238364de5a84946a60d043f19335c4"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 363,
+      "extension": ".json",
+      "file_name": "dominant-2.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/dominant-2.json",
+      "sha256": "2741776bad0a2edea60c405ebc71a1b247a9417609cf46ddceaf7d4900a62d04"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 460,
+      "extension": ".json",
+      "file_name": "dominant-3.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/dominant-3.json",
+      "sha256": "c784de46623c56f1ec0ff1d1a51e47ca0dc21c66a72135d3d5fca31520583510"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 556,
+      "extension": ".json",
+      "file_name": "dominant-4.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/dominant-4.json",
+      "sha256": "ea4629f47709b3c7e3d81f8077f7962b879214ae5ea402b4e0df448b7829db2a"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 653,
+      "extension": ".json",
+      "file_name": "dominant-5.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/dominant-5.json",
+      "sha256": "63b7774a165aced85603e6e3547aa55b04fa53a6114c72d18fd74782c0742a09"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 1376,
+      "extension": ".json",
+      "file_name": "minority-deleted-true.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/minority-deleted-true.json",
+      "sha256": "dbf493595996ae18714da24797a4759731ad2ddb4ec3e72348e2e765b286040f"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 80,
+      "extension": ".json",
+      "file_name": "rare-empty-columns.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/rare-empty-columns.json",
+      "sha256": "b25e863bec7a7a4dc0e27f05c224de836b2602e04ebcd78a73ce0e1eb720a5af"
+    },
+    {
+      "analyzer_eligible": true,
+      "analyzer_frontier_status": "eligible",
+      "byte_size": 65,
+      "extension": ".json",
+      "file_name": "rare-missing-columns.json",
+      "is_symlink": false,
+      "readable": true,
+      "repository_relative_path": "schemas/rare-missing-columns.json",
+      "sha256": "e9831455a7e1dbbb03f07003732edd0400f314a935e83d2ad92dcd02871f1b68"
+    }
+  ],
+  "outside_analyzer_frontier_extension_families": [],
+  "parameters": {},
+  "producer": {
+    "analyzer_id": "repository-structure-analyzer",
+    "analyzer_version": "0.44.23a5",
+    "component": "code-analyzer-core"
+  },
+  "repository_identity": {
+    "repo_id": "generic-structured-member-acceptance"
+  },
+  "schema_version": "repository-structure-evidence/v1",
+  "semantic_policy": {
+    "business_meaning_inferred": false,
+    "classification": "observed_fact_only",
+    "concept_classification_performed": false,
+    "novelty_scoring_performed": false
+  },
+  "source_snapshot": {
+    "file_count": 8,
+    "fingerprint": "f45549e33bbe7434a9e4715d6235bd9c8daaf90b34b1d133f7d57849c9b05793",
+    "revision": null,
+    "scope": "repository_all_files",
+    "source_id": "generic-structured-member-acceptance"
+  }
+}

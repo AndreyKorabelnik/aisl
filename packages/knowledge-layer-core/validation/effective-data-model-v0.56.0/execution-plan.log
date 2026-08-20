@@ -1,0 +1,26 @@
+{
+  "execution_order": [
+    "analyzer:java-persistence-mapping-analyzer:repository",
+    "analyzer:java-type-structure-analyzer:repository",
+    "materialization:code-declared-data-model",
+    "materialization:physical-model",
+    "materialization:logical-physical-mapping",
+    "materialization:effective-data-model"
+  ],
+  "output": "/mnt/data/work_iter4/effective-model-e2e/knowledge-execution-plan.json",
+  "plan_fingerprint": "b734f41123d3db9d27fe5b687b49a3889731bcb16d18ef8529cfc5a21be6b6a5",
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "client-profile"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 2,
+    "execution_node_count": 6,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 1,
+    "materialization_node_count": 4,
+    "overall": "ready"
+  }
+}

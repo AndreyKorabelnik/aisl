@@ -1,0 +1,680 @@
+{
+  "diagnostics": [
+    {
+      "artifact_kind": "data-model-candidate-evidence",
+      "diagnostic_id": "evidence_applicability_unresolved_execution_preserved",
+      "effect": "Applicability is unresolved; Runner preserves execution eligibility instead of hard-skipping.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "produce_if_missing",
+      "required_by": [],
+      "schema_version": "data-model-candidate-evidence/v1",
+      "severity": "info",
+      "source_decisions": [
+        {
+          "basis": "observed_source_landscape",
+          "contract_status": "not_formalized",
+          "observed_extensions": [
+            ".java",
+            ".json",
+            ".md",
+            ".property",
+            ".sh",
+            ".xml",
+            ".yaml",
+            ".yml"
+          ],
+          "observed_languages": [
+            "java",
+            "json",
+            "xml",
+            "yaml"
+          ],
+          "reason": "core_applicability_not_formalized",
+          "required_extensions_any_of": [],
+          "required_languages_any_of": [],
+          "source_id": "gateway-sberid-userinfo-by-ucpid",
+          "status": "unresolved"
+        }
+      ]
+    },
+    {
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "java-persistence-mapping-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "java-type-structure-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "model-storage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "model-storage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "persistence-lineage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "persistence-lineage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "reference-data-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "reference-data-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "sql-analysis",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "sql-analysis/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "storage-usage-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "storage-usage-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "system-description-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "system-description-evidence/v1",
+      "severity": "info"
+    },
+    {
+      "artifact_kind": "value-flow-evidence",
+      "diagnostic_id": "optional_evidence_existing_only_not_available",
+      "effect": "Optional evidence is not present and will not be produced by the default bounded execution plan.",
+      "optional_by": [
+        "repository-inventory"
+      ],
+      "production_policy": "existing_only",
+      "schema_version": "value-flow-evidence/v1",
+      "severity": "info"
+    }
+  ],
+  "expected_outputs": {
+    "capabilities": [
+      "common.repository-concept-candidates",
+      "common.repository-coverage",
+      "common.repository-coverage-gaps",
+      "common.repository-data-footprint",
+      "common.repository-discovery",
+      "common.repository-identity",
+      "common.repository-inputs-outputs",
+      "common.repository-interfaces",
+      "common.repository-inventory",
+      "common.repository-novelty",
+      "common.repository-storage-footprint",
+      "common.repository-structural-families",
+      "common.repository-technologies"
+    ],
+    "knowledge_models": [
+      "repository-inventory/v3"
+    ]
+  },
+  "foundation_requirements": [],
+  "graph": {
+    "edges": [
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:data-model-candidate-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "to": "evidence:planned_evidence_571ca9a9aa12345f707a1812"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:interaction-boundary-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "to": "evidence:planned_evidence_9cc81f19c3c0a0b0c52eeb52"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:repository-structure-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "to": "evidence:planned_evidence_8211bf7b1cbb8376391522a9"
+      },
+      {
+        "edge_kind": "produces_evidence",
+        "from": "analyzer:structured-file-shape-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "to": "evidence:planned_evidence_cdb0287209577337868f90d3"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_571ca9a9aa12345f707a1812",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "required_evidence",
+        "from": "evidence:planned_evidence_8211bf7b1cbb8376391522a9",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_9cc81f19c3c0a0b0c52eeb52",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "optional_evidence",
+        "from": "evidence:planned_evidence_cdb0287209577337868f90d3",
+        "to": "materialization:repository-inventory"
+      },
+      {
+        "edge_kind": "produces_knowledge",
+        "from": "materialization:repository-inventory",
+        "to": "knowledge:planned_knowledge_7ec8466da979080cae0065d2"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:gateway-sberid-userinfo-by-ucpid",
+        "to": "analyzer:data-model-candidate-analyzer:gateway-sberid-userinfo-by-ucpid"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:gateway-sberid-userinfo-by-ucpid",
+        "to": "analyzer:interaction-boundary-analyzer:gateway-sberid-userinfo-by-ucpid"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:gateway-sberid-userinfo-by-ucpid",
+        "to": "analyzer:repository-structure-analyzer:gateway-sberid-userinfo-by-ucpid"
+      },
+      {
+        "edge_kind": "source_input",
+        "from": "source:gateway-sberid-userinfo-by-ucpid",
+        "to": "analyzer:structured-file-shape-analyzer:gateway-sberid-userinfo-by-ucpid"
+      }
+    ],
+    "execution_order": [
+      "analyzer:data-model-candidate-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:interaction-boundary-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:repository-structure-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:structured-file-shape-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "materialization:repository-inventory"
+    ],
+    "nodes": [
+      {
+        "analyzer_id": "data-model-candidate-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "not_formalized",
+              "observed_extensions": [
+                ".java",
+                ".json",
+                ".md",
+                ".property",
+                ".sh",
+                ".xml",
+                ".yaml",
+                ".yml"
+              ],
+              "observed_languages": [
+                "java",
+                "json",
+                "xml",
+                "yaml"
+              ],
+              "reason": "core_applicability_not_formalized",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [],
+              "source_id": "gateway-sberid-userinfo-by-ucpid",
+              "status": "unresolved"
+            },
+            "artifact_kind": "data-model-candidate-evidence",
+            "contract_fingerprint": "3e862e0fb27ffecf0e5435e6fdeba0d77dabc7e66ece5c2229a2c4e5e7d00fb3",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "data-model-candidate-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "schema_version": "data-model-candidate-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:data-model-candidate-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "gateway-sberid-userinfo-by-ucpid",
+        "source_snapshot_id": "source_snapshot_f9a62b980cf932e4f14baf6c"
+      },
+      {
+        "analyzer_id": "interaction-boundary-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".json",
+                ".md",
+                ".property",
+                ".sh",
+                ".xml",
+                ".yaml",
+                ".yml"
+              ],
+              "observed_languages": [
+                "java",
+                "json",
+                "xml",
+                "yaml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [
+                "java"
+              ],
+              "source_id": "gateway-sberid-userinfo-by-ucpid",
+              "status": "applicable"
+            },
+            "artifact_kind": "interaction-boundary-evidence",
+            "contract_fingerprint": "67c6d2667dfaea030d8d1efade29f7120fc3c36c5a32be380b7fc17d149cae6f",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "interaction-boundary-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "schema_version": "interaction-boundary-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:interaction-boundary-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "gateway-sberid-userinfo-by-ucpid",
+        "source_snapshot_id": "source_snapshot_f9a62b980cf932e4f14baf6c"
+      },
+      {
+        "analyzer_id": "repository-structure-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".json",
+                ".md",
+                ".property",
+                ".sh",
+                ".xml",
+                ".yaml",
+                ".yml"
+              ],
+              "observed_languages": [
+                "java",
+                "json",
+                "xml",
+                "yaml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [],
+              "required_languages_any_of": [],
+              "source_id": "gateway-sberid-userinfo-by-ucpid",
+              "status": "applicable"
+            },
+            "artifact_kind": "repository-structure-evidence",
+            "contract_fingerprint": "75b0b1e721c92c97bbc587185ff74df3f041610e4b90b2e61ece37c08efc6f80",
+            "optional_by": [],
+            "production_policy": "produce_if_missing",
+            "required_by": [
+              "repository-inventory"
+            ],
+            "schema_version": "repository-structure-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "repository-structure-evidence",
+            "schema_version": "repository-structure-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:repository-structure-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "gateway-sberid-userinfo-by-ucpid",
+        "source_snapshot_id": "source_snapshot_f9a62b980cf932e4f14baf6c"
+      },
+      {
+        "analyzer_id": "structured-file-shape-analyzer",
+        "evidence_requirements": [
+          {
+            "applicability": {
+              "basis": "observed_source_landscape",
+              "contract_status": "formalized",
+              "observed_extensions": [
+                ".java",
+                ".json",
+                ".md",
+                ".property",
+                ".sh",
+                ".xml",
+                ".yaml",
+                ".yml"
+              ],
+              "observed_languages": [
+                "java",
+                "json",
+                "xml",
+                "yaml"
+              ],
+              "reason": "observed_source_landscape_matches_core_predicate",
+              "required_extensions_any_of": [
+                ".json",
+                ".yaml",
+                ".yml"
+              ],
+              "required_languages_any_of": [],
+              "source_id": "gateway-sberid-userinfo-by-ucpid",
+              "status": "applicable"
+            },
+            "artifact_kind": "structured-file-shape-evidence",
+            "contract_fingerprint": "caba59d50cf1165a203f064c94404283bdc9fd4384c4752f7b5c198c0c223ac9",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "structured-file-shape-evidence/v1"
+          }
+        ],
+        "execution_required": true,
+        "expected_outputs": [
+          {
+            "artifact_kind": "structured-file-shape-evidence",
+            "schema_version": "structured-file-shape-evidence/v1"
+          }
+        ],
+        "foundation_requirements": [],
+        "node_id": "analyzer:structured-file-shape-analyzer:gateway-sberid-userinfo-by-ucpid",
+        "node_kind": "core_evidence_analyzer",
+        "runtime_contract_id": "core_evidence_runtime/v1",
+        "source_id": "gateway-sberid-userinfo-by-ucpid",
+        "source_snapshot_id": "source_snapshot_f9a62b980cf932e4f14baf6c"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_571ca9a9aa12345f707a1812",
+          "artifact_kind": "data-model-candidate-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:data-model-candidate-analyzer:gateway-sberid-userinfo-by-ucpid",
+          "schema_version": "data-model-candidate-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_571ca9a9aa12345f707a1812",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_8211bf7b1cbb8376391522a9",
+          "artifact_kind": "repository-structure-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:repository-structure-analyzer:gateway-sberid-userinfo-by-ucpid",
+          "schema_version": "repository-structure-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_8211bf7b1cbb8376391522a9",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [],
+        "production_policy": "produce_if_missing",
+        "required_by": [
+          "repository-inventory"
+        ],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_9cc81f19c3c0a0b0c52eeb52",
+          "artifact_kind": "interaction-boundary-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:interaction-boundary-analyzer:gateway-sberid-userinfo-by-ucpid",
+          "schema_version": "interaction-boundary-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_9cc81f19c3c0a0b0c52eeb52",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_evidence_cdb0287209577337868f90d3",
+          "artifact_kind": "structured-file-shape-evidence",
+          "availability": "planned",
+          "producer_analyzer_node_id": "analyzer:structured-file-shape-analyzer:gateway-sberid-userinfo-by-ucpid",
+          "schema_version": "structured-file-shape-evidence/v1"
+        },
+        "execution_required": false,
+        "node_id": "evidence:planned_evidence_cdb0287209577337868f90d3",
+        "node_kind": "typed_evidence_artifact",
+        "optional_by": [
+          "repository-inventory"
+        ],
+        "production_policy": "produce_if_missing",
+        "required_by": [],
+        "satisfaction_mode": "planned_core_output"
+      },
+      {
+        "artifact": {
+          "artifact_id": "planned_knowledge_7ec8466da979080cae0065d2",
+          "availability": "planned",
+          "model_kind": "repository-inventory",
+          "producer_materialization_node_id": "materialization:repository-inventory",
+          "schema_version": "repository-inventory/v3",
+          "source_materialization_id": "repository-inventory"
+        },
+        "execution_required": false,
+        "node_id": "knowledge:planned_knowledge_7ec8466da979080cae0065d2",
+        "node_kind": "knowledge_artifact",
+        "satisfaction_mode": "planned_materialization_output"
+      },
+      {
+        "conditional_capabilities": [
+          "common.repository-structural-members"
+        ],
+        "execution_required": true,
+        "expected_capabilities": [
+          "common.repository-concept-candidates",
+          "common.repository-coverage",
+          "common.repository-coverage-gaps",
+          "common.repository-data-footprint",
+          "common.repository-discovery",
+          "common.repository-identity",
+          "common.repository-inputs-outputs",
+          "common.repository-interfaces",
+          "common.repository-inventory",
+          "common.repository-novelty",
+          "common.repository-storage-footprint",
+          "common.repository-structural-families",
+          "common.repository-technologies"
+        ],
+        "expected_models": [
+          "repository-inventory/v3"
+        ],
+        "knowledge_id": "repository-inventory",
+        "materialization_id": "repository-inventory",
+        "node_id": "materialization:repository-inventory",
+        "node_kind": "knowledge_materialization",
+        "runtime_contract_id": "knowledge_materialization_runtime/v1",
+        "runtime_registered": true
+      },
+      {
+        "execution_required": false,
+        "node_id": "source:gateway-sberid-userinfo-by-ucpid",
+        "node_kind": "source_snapshot",
+        "source_snapshot": {
+          "availability": "available",
+          "extensions": [
+            ".java",
+            ".json",
+            ".md",
+            ".property",
+            ".sh",
+            ".xml",
+            ".yaml",
+            ".yml"
+          ],
+          "file_count": 151,
+          "languages": [
+            "java",
+            "json",
+            "xml",
+            "yaml"
+          ],
+          "location": {
+            "kind": "directory",
+            "path": "/mnt/data/work_block_e/real_sources/gateway/gateway-sberid-userinfo-by-ucpid"
+          },
+          "revision": {
+            "content_sha256": "27834900041acc90cbc0c238bb93494e3d5491d1e24ffd62fc634aec239038f0",
+            "kind": "content",
+            "revision": "sha256:27834900041acc90cbc0c238bb93494e3d5491d1e24ffd62fc634aec239038f0"
+          },
+          "snapshot_fingerprint": "f9a62b980cf932e4f14baf6c2df3075c67f360926223e6fa4202cd404a56aa8e",
+          "snapshot_id": "source_snapshot_f9a62b980cf932e4f14baf6c",
+          "source_id": "gateway-sberid-userinfo-by-ucpid",
+          "source_kind": "repository",
+          "source_metadata": {
+            "default_branch": null,
+            "repository_id": "gateway-sberid-userinfo-by-ucpid-18f2f1a1bb",
+            "repository_name": "gateway-sberid-userinfo-by-ucpid",
+            "source_kind": "local"
+          }
+        }
+      }
+    ],
+    "topological_order": [
+      "source:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:data-model-candidate-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:interaction-boundary-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:repository-structure-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "analyzer:structured-file-shape-analyzer:gateway-sberid-userinfo-by-ucpid",
+      "evidence:planned_evidence_571ca9a9aa12345f707a1812",
+      "evidence:planned_evidence_8211bf7b1cbb8376391522a9",
+      "evidence:planned_evidence_9cc81f19c3c0a0b0c52eeb52",
+      "evidence:planned_evidence_cdb0287209577337868f90d3",
+      "materialization:repository-inventory",
+      "knowledge:planned_knowledge_7ec8466da979080cae0065d2"
+    ]
+  },
+  "inputs": {
+    "core_evidence_contract_catalog_fingerprint": "001d1a74dae33c7cff3a220e5cef4e270c65d3b87533c0429c5b95d5a8a8718c",
+    "knowledge_input_inventory_fingerprint": "a3bb8336ed1fc6dafbfb28bcd6f3776bd1ec01c2af9aef9a100786d0df7e6790",
+    "knowledge_materialization_catalog_fingerprint": "80df8876c7bc23b878d0aa774acef70f67ae98eaa04363d85c9b7987245e55c4"
+  },
+  "next_step": "execute_with_knowledge_execute",
+  "plan_fingerprint": "31e60952d30bfd16889895965f42f3f14114a26b6530a3c0f7bf0136d38a0f70",
+  "producer": {
+    "component": "static-analysis-runner",
+    "version": "0.10.27"
+  },
+  "request": {
+    "knowledge_catalog_fingerprint": "4d8776b7381e13d161bcb5fc6d6875d3511110969122265338c58a7c9a8f82c7",
+    "knowledge_profile_fingerprint": "4a36291faf78c00a083f835e8819ca8f66c3709a183f590fd70fb5ab16d1cb45",
+    "knowledge_profile_id": "repository-inventory-v1",
+    "knowledge_resolution_plan_fingerprint": "b483cbe542ee0e00d33820e050ee3e93e9de57ea90824d57d3cc29d1d50cd816",
+    "resolved_knowledge_ids": [
+      "repository-inventory"
+    ]
+  },
+  "schema_version": "knowledge_execution_plan/v1",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "blocke-applicability-gateway"
+  },
+  "semantic_policy": {
+    "core_dispatch": "core_owned_analyzer_registry",
+    "evidence_identity": [
+      "artifact_kind",
+      "schema_version"
+    ],
+    "klc_dispatch": "materialization_id_to_klc_owned_handler",
+    "knowledge_identity": [
+      "model_kind",
+      "schema_version",
+      "source_materialization_id"
+    ],
+    "orchestration_semantics": "knowledge_contracts_only"
+  },
+  "status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 4,
+    "execution_node_count": 5,
+    "existing_knowledge_artifact_count": 0,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  }
+}

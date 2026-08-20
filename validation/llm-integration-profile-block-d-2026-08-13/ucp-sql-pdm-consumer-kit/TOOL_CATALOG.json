@@ -1,0 +1,904 @@
+[
+  {
+    "api_binding": {
+      "arguments": {
+        "business_entity_hints": {
+          "location": "query",
+          "name": "business_entity",
+          "transform": "list"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "source_column_hints": {
+          "location": "query",
+          "name": "source_column",
+          "transform": "list"
+        },
+        "source_relation_hints": {
+          "location": "query",
+          "name": "source_relation",
+          "transform": "list"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "find_sql_target_candidates_api_knowledge_v1_systems__system_id__sql_target_candidates_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/target-candidates",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "business_entity_hints": "array[string]",
+      "limit": "integer",
+      "repo_id": "string|null",
+      "source_column_hints": "array[string]",
+      "source_relation_hints": "array[string]"
+    },
+    "description": "Return deterministic ranked SQL target candidates for source relation, source column and business-entity hints. The tool does not generate SQL.",
+    "name": "find_sql_target_candidates",
+    "required_capabilities": [
+      "common.sql-target-resolution"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "confidence": {
+          "location": "query",
+          "name": "confidence",
+          "transform": "identity"
+        },
+        "join_method": {
+          "location": "query",
+          "name": "join_method",
+          "transform": "identity"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "source_field": {
+          "location": "query",
+          "name": "source_field",
+          "transform": "identity"
+        },
+        "source_type": {
+          "location": "query",
+          "name": "source_type",
+          "transform": "identity"
+        },
+        "sql_generation_status": {
+          "location": "query",
+          "name": "sql_generation_status",
+          "transform": "identity"
+        },
+        "target_type": {
+          "location": "query",
+          "name": "target_type",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_attribute_extension_context_api_knowledge_v1_systems__system_id__data_model_attribute_extension_context_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/attribute-extension-context",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "confidence": "string|null",
+      "join_method": "string|null",
+      "limit": "integer",
+      "offset": "integer",
+      "search": "string|null",
+      "source_field": "string|null",
+      "source_type": "string|null",
+      "sql_generation_status": "string|null",
+      "target_type": "string|null"
+    },
+    "description": "Query KLC-materialized technical relationship JOIN semantics, object anchors, SQL anchors, provenance, confidence and explicit gaps for extending a prepared data model. source_type/target_type accept either stable object/type occurrence IDs from model tools or FQCNs; source_field accepts either a field occurrence ID or field name. This tool does not generate SQL or choose business meaning.",
+    "name": "get_data_model_attribute_extension_context",
+    "required_capabilities": [
+      "common.data-model-attribute-extension-context"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "exclude_field_annotations": {
+          "location": "query",
+          "name": "exclude_field_annotations",
+          "transform": "csv"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "type_annotations": {
+          "location": "query",
+          "name": "type_annotations",
+          "transform": "csv"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "summarize_declared_data_model_api_knowledge_v1_systems__system_id__data_model_declared_summary_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-summary",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "exclude_field_annotations": "array[string]",
+      "repo_id": "string|null",
+      "type_annotations": "array[string]"
+    },
+    "description": "Summarize the code-declared model in the pinned revision with raw/filtered counts, observed type/field annotation frequencies and explicit model gaps. Exact annotation filters are caller-selected evidence projections, not framework-owned business semantics.",
+    "name": "get_declared_data_model_summary",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "object_id": {
+          "location": "path",
+          "name": "object_id",
+          "transform": "url_segment"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_declared_data_object_api_knowledge_v1_systems__system_id__data_model_declared_objects__object_id__get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-objects/{object_id}",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "object_id": "string"
+    },
+    "description": "Return one exact code-declared data object with effective inherited fields, declared relationships, inheritance, source references and provenance. Declared relationships do not by themselves prove storage JOIN semantics.",
+    "name": "get_declared_data_object",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "table_id": {
+          "location": "path",
+          "name": "table_id",
+          "transform": "url_segment"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_physical_model_table_api_knowledge_v1_systems__system_id__physical_model_tables__table_id__get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/physical-model/tables/{table_id}",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "table_id": "string"
+    },
+    "description": "Return one exact physical table with columns, keys and incoming/outgoing relationships.",
+    "name": "get_physical_model_table",
+    "required_capabilities": [
+      "common.physical-model.tables"
+    ],
+    "warnings": [
+      "Physical-model facts confirm structure only; they do not assign observed SQL read/write roles or replace SQL JOIN evidence."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "max_results": {
+          "location": "body",
+          "name": "max_results",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "body",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "source_column_hints": {
+          "location": "body",
+          "name": "source_column_hints",
+          "transform": "list"
+        },
+        "source_relation_hints": {
+          "location": "body",
+          "name": "source_relation_hints",
+          "transform": "list"
+        },
+        "target_relation": {
+          "location": "body",
+          "name": "target_relation",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_body": {},
+      "method": "POST",
+      "operation_id": "resolve_sql_attribute_insertion_context_api_knowledge_v1_systems__system_id__sql_attribute_insertion_context_post",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/attribute-insertion-context",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "max_results": "integer",
+      "repo_id": "string|null",
+      "source_column_hints": "array[string]",
+      "source_relation_hints": "array[string]",
+      "target_relation": "string"
+    },
+    "description": "Return the best observed SQL scope for introducing an attribute and all diagnostics for partial/probable propagation.",
+    "name": "get_sql_attribute_insertion_context",
+    "required_capabilities": [
+      "common.sql-attribute-insertion-context"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "sql_column_usage_id": {
+          "location": "path",
+          "name": "sql_column_usage_id",
+          "transform": "url_segment"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_sql_column_usage_context_api_knowledge_v1_systems__system_id__sql_column_usages__sql_column_usage_id__get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/column-usages/{sql_column_usage_id}",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "sql_column_usage_id": "string"
+    },
+    "description": "Return one exact SQL column usage with statement, SELECT scope, visible relations, JOINs and projections.",
+    "name": "get_sql_column_usage_context",
+    "required_capabilities": [
+      "common.sql-analysis"
+    ],
+    "warnings": []
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "include_gaps": {
+          "location": "query",
+          "name": "include_gaps",
+          "transform": "bool"
+        },
+        "max_gaps": {
+          "location": "query",
+          "name": "max_gaps",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "target_column": {
+          "location": "query",
+          "name": "target_column",
+          "transform": "identity"
+        },
+        "target_relation": {
+          "location": "query",
+          "name": "target_relation",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_sql_field_calculation_api_knowledge_v1_systems__system_id__sql_field_calculation_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/field-calculation",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "include_gaps": "boolean",
+      "max_gaps": "integer",
+      "repo_id": "string|null",
+      "target_column": "string",
+      "target_relation": "string"
+    },
+    "description": "Return the observed SQL expression, transformation paths and every terminal source for one target field. No preferred origin is inferred.",
+    "name": "get_sql_field_calculation",
+    "required_capabilities": [
+      "common.sql-field-calculation"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "query_id": {
+          "location": "query",
+          "name": "query_id",
+          "transform": "identity"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "scope_id": {
+          "location": "query",
+          "name": "scope_id",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "get_sql_query_context_api_knowledge_v1_systems__system_id__sql_query_context_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/query-context",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "query_id": "string",
+      "repo_id": "string",
+      "scope_id": "string|null"
+    },
+    "description": "Return one exact SQL query/select-scope context with statement, visible relations, JOINs and projections. Use it to inspect explicit propagation points before proposing a change.",
+    "name": "get_sql_query_context",
+    "required_capabilities": [
+      "common.sql-analysis"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "include_gaps": {
+          "location": "query",
+          "name": "include_gaps",
+          "transform": "bool"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "lineage_status": {
+          "location": "query",
+          "name": "lineage_status",
+          "transform": "identity"
+        },
+        "max_gaps": {
+          "location": "query",
+          "name": "max_gaps",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "target_column": {
+          "location": "query",
+          "name": "target_column",
+          "transform": "identity"
+        },
+        "target_relation": {
+          "location": "query",
+          "name": "target_relation",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_sql_target_column_lineage_api_knowledge_v1_systems__system_id__sql_target_column_lineage_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/target-column-lineage",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "include_gaps": "boolean",
+      "limit": "integer",
+      "lineage_status": "string|null",
+      "max_gaps": "integer",
+      "offset": "integer",
+      "repo_id": "string|null",
+      "target_column": "string|null",
+      "target_relation": "string"
+    },
+    "description": "Return deterministic recursive SQL lineage for one target relation and optional column. Every terminal branch and scoped gap is preserved.",
+    "name": "get_sql_target_column_lineage",
+    "required_capabilities": [
+      "common.sql-target-column-lineage"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "gap_kind": {
+          "location": "query",
+          "name": "gap_kind",
+          "transform": "identity"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "source_id": {
+          "location": "query",
+          "name": "source_id",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_physical_model_gaps_api_knowledge_v1_systems__system_id__physical_model_gaps_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/physical-model/gaps",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "gap_kind": "string|null",
+      "limit": "integer",
+      "offset": "integer",
+      "search": "string|null",
+      "source_id": "string|null"
+    },
+    "description": "Return extraction and unresolved-reference gaps from the physical model. A gap is not silently converted into a mapping.",
+    "name": "list_physical_model_gaps",
+    "required_capabilities": [
+      "common.physical-model.gaps"
+    ],
+    "warnings": [
+      "Physical-model gaps remain explicit and non-blocking unless they invalidate the selected object."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "direction": {
+          "location": "query",
+          "name": "direction",
+          "transform": "identity"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "resolution_status": {
+          "location": "query",
+          "name": "resolution_status",
+          "transform": "identity"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "source_id": {
+          "location": "query",
+          "name": "source_id",
+          "transform": "identity"
+        },
+        "table_id": {
+          "location": "query",
+          "name": "table_id",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_physical_model_relationships_api_knowledge_v1_systems__system_id__physical_model_relationships_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/physical-model/relationships",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "direction": "any|parent|child",
+      "limit": "integer",
+      "offset": "integer",
+      "resolution_status": "string|null",
+      "search": "string|null",
+      "source_id": "string|null",
+      "table_id": "string|null"
+    },
+    "description": "Return deterministic physical-model relationships for an optional table. They are structural evidence and do not replace observed SQL JOIN evidence.",
+    "name": "list_physical_model_relationships",
+    "required_capabilities": [
+      "common.physical-model.relationships"
+    ],
+    "warnings": [
+      "Physical-model facts confirm structure only; they do not assign observed SQL read/write roles or replace SQL JOIN evidence."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "output_table_name": {
+          "location": "query",
+          "name": "output_table_name",
+          "transform": "identity"
+        },
+        "query_id": {
+          "location": "query",
+          "name": "query_id",
+          "transform": "identity"
+        },
+        "workflow_context_file": {
+          "location": "query",
+          "name": "workflow_context_file",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_sql_relation_materializations_api_knowledge_v1_systems__system_id__sql_relation_materializations_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/relation-materializations",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "limit": "integer",
+      "offset": "integer",
+      "output_table_name": "string|null",
+      "query_id": "string|null",
+      "workflow_context_file": "string|null"
+    },
+    "description": "Return exact observed workflow/query-to-output relation materializations. Use this to follow SQL propagation across staging/intermediate relations; no lineage is inferred.",
+    "name": "list_sql_relation_materializations",
+    "required_capabilities": [
+      "common.relation-materialization"
+    ],
+    "warnings": [
+      "Probable, partial, ambiguous and unresolved SQL results must retain their returned status."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "max_evidence_per_role": {
+          "location": "query",
+          "name": "max_evidence_per_role",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "usage_role": {
+          "location": "query",
+          "name": "usage_role",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {
+        "view": "business_sources"
+      },
+      "method": "GET",
+      "operation_id": "export_sql_source_inventory_api_knowledge_v1_systems__system_id__sql_source_inventory_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/sql/source-inventory",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "max_evidence_per_role": "integer",
+      "repo_id": "string|null",
+      "search": "string|null",
+      "usage_role": "string|null"
+    },
+    "description": "Return the canonical SQL Source Inventory for external business-source tables, deterministically resolved fields, usage roles and coverage.",
+    "name": "list_used_source_tables_and_fields",
+    "required_capabilities": [
+      "common.sql-source-inventory-export"
+    ],
+    "warnings": [
+      "The inventory contains evidence-resolved business sources only; unmapped fields are not assigned by inference."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "include_fields": {
+          "location": "query",
+          "name": "include_fields",
+          "transform": "bool"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "repo_id": {
+          "location": "query",
+          "name": "repo_id",
+          "transform": "identity"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "type_annotations": {
+          "location": "query",
+          "name": "type_annotations",
+          "transform": "csv"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_declared_data_objects_api_knowledge_v1_systems__system_id__data_model_declared_objects_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/data-model/declared-objects",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "include_fields": "boolean",
+      "limit": "integer",
+      "offset": "integer",
+      "repo_id": "string|null",
+      "search": "string|null",
+      "type_annotations": "array[string]"
+    },
+    "description": "List or search code-declared data objects in the pinned prepared revision, including observed annotations, documentation and inherited effective field occurrences. Optional exact annotation filters select a caller-defined evidence projection; declared-code facts do not prove storage mappings or physical JOIN semantics.",
+    "name": "search_declared_data_objects",
+    "required_capabilities": [
+      "common.code-declared-data-model"
+    ],
+    "warnings": [
+      "Code-declared relationships and fields are declared-model facts; they do not by themselves prove storage JOIN semantics or physical mappings."
+    ]
+  },
+  {
+    "api_binding": {
+      "arguments": {
+        "include_columns": {
+          "location": "query",
+          "name": "include_columns",
+          "transform": "bool"
+        },
+        "limit": {
+          "location": "query",
+          "name": "limit",
+          "transform": "bounded_int"
+        },
+        "offset": {
+          "location": "query",
+          "name": "offset",
+          "transform": "bounded_int"
+        },
+        "search": {
+          "location": "query",
+          "name": "search",
+          "transform": "identity"
+        },
+        "source_id": {
+          "location": "query",
+          "name": "source_id",
+          "transform": "identity"
+        }
+      },
+      "binding_kind": "knowledge_api_http",
+      "expected_schema_versions": [
+        "knowledge_api/v1"
+      ],
+      "fixed_query": {},
+      "method": "GET",
+      "operation_id": "list_physical_model_tables_api_knowledge_v1_systems__system_id__physical_model_tables_get",
+      "path_template": "/api/knowledge/v1/systems/{system_id}/physical-model/tables",
+      "revision_binding": {
+        "location": "query",
+        "name": "revision_id",
+        "value_from": "scope.revision_id"
+      }
+    },
+    "arguments": {
+      "include_columns": "boolean",
+      "limit": "integer",
+      "offset": "integer",
+      "search": "string|null",
+      "source_id": "string|null"
+    },
+    "description": "List or search physical-model tables and optionally columns. Physical structure does not prove observed SQL read/write usage.",
+    "name": "search_physical_model_tables",
+    "required_capabilities": [
+      "common.physical-model.tables"
+    ],
+    "warnings": [
+      "Physical-model facts confirm structure only; they do not assign observed SQL read/write roles or replace SQL JOIN evidence."
+    ]
+  }
+]

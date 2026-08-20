@@ -1,0 +1,19 @@
+===== tests/test_builtin_suite_catalog.py =====
+....                                                                     [100%]
+4 passed in 0.20s
+===== tests/test_cli.py =====
+........                                                                 [100%]
+8 passed in 0.29s
+===== tests/test_data_model_discovery_runner.py =====
+..                                                                       [100%]
+2 passed in 2.16s
+===== tests/test_evidence_executor.py =====
+......                                                                   [100%]
+6 passed in 3.12s
+===== tests/test_execution_result_contracts.py =====
+......                                                                   [100%]
+6 passed in 0.10s
+===== tests/test_execution_runtime.py =====
+..                                                                       [100%]
+2 passed in 2.04s
+===== tests/test_knowledge_architecture_audit.py =====

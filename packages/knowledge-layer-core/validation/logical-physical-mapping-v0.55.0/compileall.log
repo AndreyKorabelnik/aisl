@@ -1,0 +1,2 @@
+python -m compileall -q knowledge_layer_core tests
+passed

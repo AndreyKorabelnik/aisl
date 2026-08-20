@@ -1,0 +1,39 @@
+{
+  "schema_version": "source_to_delivery_map/v1",
+  "date": "2026-08-19",
+  "deliveries": {
+    "aisl-producer": {
+      "source_modules": [
+        "packages/evidence-common",
+        "packages/code-analyzer-core",
+        "packages/static-analysis-runner",
+        "packages/knowledge-layer-core",
+        "packages/prepared-knowledge-runtime",
+        "packages/knowledge-control-plane"
+      ]
+    },
+    "aisl-server": {
+      "source_modules": [
+        "packages/knowledge-api",
+        "packages/knowledge-integration",
+        "packages/prepared-knowledge-runtime"
+      ]
+    },
+    "aisl-client": {
+      "source_modules": [
+        "consumer/aisl-consumer-suite/packages/aisl-sdk",
+        "consumer/aisl-consumer-suite/packages/aisl-sdk-typescript",
+        "consumer/aisl-consumer-suite/tools/aisl-cli",
+        "consumer/aisl-consumer-suite/apps/aisl-reporting"
+      ]
+    },
+    "aisl-ui": {
+      "source_modules": [
+        "consumer/aisl-consumer-suite/packages/aisl-sdk",
+        "consumer/aisl-consumer-suite/apps/aisl-agent-runtime",
+        "consumer/aisl-consumer-suite/apps/aisl-workbench"
+      ]
+    }
+  },
+  "note": "Source canonical contains the full active code base. Shared source modules may feed more than one clean delivery; this map does not create new runtime ownership."
+}

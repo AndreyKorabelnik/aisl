@@ -1,0 +1,12 @@
+Exact candidate ZIP clean extraction:
+- source manifest: passed
+- compileall: passed
+- targeted tests: 40 passed
+- real Core 0.43.28 + Runner 0.9.51 + KLC 0.55.0 E2E: passed
+- matched entity/table mappings: 2
+- matched field/column mappings: 4
+- transient fields not applicable: 1
+- matched key mappings: 2
+- matched relationship mappings: 1
+- mapping gaps: 0
+- ZIP integrity: passed

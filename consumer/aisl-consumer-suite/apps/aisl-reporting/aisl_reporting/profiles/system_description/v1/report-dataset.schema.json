@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audience_policy": {
+      "type": "object"
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "dataset_fingerprint": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "evidence_index": {
+      "additionalProperties": {
+        "required": [
+          "evidence_id",
+          "repo_id",
+          "path",
+          "maturity"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "interpretation_policy": {
+      "type": "object"
+    },
+    "profile_id": {
+      "const": "system-description/v1"
+    },
+    "report_blueprint": {
+      "type": "object"
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "report_dataset/v1"
+    },
+    "scope": {
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "repository",
+            "workspace"
+          ]
+        },
+        "repository_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "repository_ids"
+      ],
+      "type": "object"
+    },
+    "sections": {
+      "required": [
+        "scope_overview",
+        "project_structure",
+        "functional_capabilities",
+        "system_boundaries",
+        "technologies",
+        "events",
+        "interface_map",
+        "data_and_storage",
+        "journeys",
+        "gaps",
+        "diagrams",
+        "owner_questions",
+        "technical_appendix"
+      ],
+      "type": "object"
+    },
+    "validation": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_id",
+    "request",
+    "scope",
+    "audience_policy",
+    "report_blueprint",
+    "coverage",
+    "sections",
+    "evidence_index",
+    "interpretation_policy",
+    "dataset_fingerprint"
+  ],
+  "type": "object"
+}

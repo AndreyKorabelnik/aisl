@@ -1,0 +1,59 @@
+{
+  "cas_unique_blob_count": 22,
+  "coverage": {
+    "coverage_status": "partial",
+    "lineage_gap_count": 70,
+    "sql_files_scanned": 480,
+    "sql_statement_count": 475,
+    "sql_unit_count": 306
+  },
+  "fact_shard_count": 19,
+  "join_read": {
+    "id_field": "sql_join_edge_id",
+    "item_kind": "sql_join_edge",
+    "local_id": "sql_join_edge_datamart-profile-fl_0325f8f66b3110e1"
+  },
+  "observed_product_id": "sql_analysis_2223a9945b5214605c10a320",
+  "observed_product_status_from_core": "partial",
+  "physical_member_count": 22,
+  "physical_roles": [
+    "coverage",
+    "descriptor",
+    "fact:sql_column_usage",
+    "fact:sql_direct_column_lineage",
+    "fact:sql_join_edge",
+    "fact:sql_object_dependency",
+    "fact:sql_projection",
+    "fact:sql_recursive_column_lineage",
+    "fact:sql_relation",
+    "fact:sql_scoped_lineage_gap",
+    "fact:sql_script_binding",
+    "fact:sql_script_call",
+    "fact:sql_script_embedded_sql",
+    "fact:sql_script_invocation",
+    "fact:sql_script_statement",
+    "fact:sql_select_scope",
+    "fact:sql_semantic_placeholder",
+    "fact:sql_statement",
+    "fact:sql_target_projection_binding",
+    "fact:sql_workflow_binding",
+    "fact:sql_write_target",
+    "manifest"
+  ],
+  "producer_output_deleted": true,
+  "producer_source_deleted": true,
+  "reads_after_deletion": "PASS",
+  "revision_id": "rev-3156d56a22184e6a609bc36e",
+  "semantic_guards": {
+    "lineage_gaps_preserved": true,
+    "no_status_promotion": true,
+    "partial_preserved": true
+  },
+  "statement_read": {
+    "id_field": "sql_statement_id",
+    "item_kind": "sql_statement",
+    "local_id": "query_datamart-profile-fl_000001"
+  },
+  "status": "PASS",
+  "system_id": "datamart-profile-fl"
+}

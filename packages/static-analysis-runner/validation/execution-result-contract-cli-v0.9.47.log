@@ -1,0 +1,11 @@
+{
+  "catalog_fingerprint": "ff0b62887971cdc393deceb97b3c87dc29bffa14c49ab8ffbf456bba39fef73b",
+  "current_klc_task_semantic_route_count": 7,
+  "current_manifest_variant_count": 5,
+  "fully_compliant_manifest_count": 1,
+  "markdown": "/mnt/data/analysis-execution-result-contract-v1-0.9.47.md",
+  "next_step": "knowledge_profile_runtime_compilation",
+  "output": "/mnt/data/analysis-execution-result-contract-v1-0.9.47.json",
+  "schema_version": "analysis_execution_result_catalog/v1",
+  "task_semantic_coupled_variant_count": 3
+}

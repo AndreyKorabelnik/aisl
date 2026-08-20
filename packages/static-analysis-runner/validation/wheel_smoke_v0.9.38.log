@@ -1,0 +1,5 @@
+version: 0.9.38
+taxonomy_schema: analysis_stage_taxonomy/v1
+task_registry: True
+suite_count: 7
+status: passed

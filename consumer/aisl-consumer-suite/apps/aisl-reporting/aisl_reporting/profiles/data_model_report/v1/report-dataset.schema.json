@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "request", "scope", "coverage", "sections", "evidence_index", "interpretation_policy", "dataset_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "report_dataset/v1"},
+    "profile_id": {"const": "data-model-report/v1"},
+    "request": {"type": "object"},
+    "scope": {
+      "type": "object",
+      "required": ["kind", "id", "repository_ids"],
+      "properties": {
+        "kind": {"enum": ["repository", "workspace"]},
+        "id": {"type": "string", "minLength": 1},
+        "repository_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "coverage": {"type": "object"},
+    "sections": {
+      "type": "object",
+      "required": ["model_inventory", "selected_objects", "relationships_and_joins", "referenced_dictionaries", "cross_repository_correspondences", "physical_model_observations", "gaps", "diagrams", "owner_questions"],
+      "properties": {
+        "diagrams": {
+          "type": "object",
+          "required": ["logical_er", "physical_er", "observed_usage"],
+          "properties": {
+            "logical_er": {
+              "type": "object",
+              "required": ["status", "diagram_kind", "mode", "entities", "relationships", "entity_count", "relationship_count", "relationships_truncated", "selection_policy"]
+            },
+            "physical_er": {
+              "type": "object",
+              "required": ["status", "diagram_kind", "mode", "tables", "relationships", "table_count", "declared_relationship_count", "relationships_truncated", "selection_policy"]
+            },
+            "observed_usage": {
+              "type": "object",
+              "required": ["status", "diagram_kind", "relationships", "relationship_count", "relationships_truncated", "semantics"]
+            }
+          }
+        }
+      }
+    },
+    "evidence_index": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["evidence_id", "repo_id", "path", "maturity"]
+      }
+    },
+    "interpretation_policy": {"type": "object"},
+    "dataset_fingerprint": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": false
+}

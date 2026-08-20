@@ -1,0 +1,5 @@
+PLAN_STATUS {"overall": "ready", "blocking_diagnostic_count": 0, "execution_node_count": 4, "core_analyzer_node_count": 0, "materialization_node_count": 4, "existing_typed_artifact_count": 3, "existing_knowledge_artifact_count": 0}
+EXECUTION_ORDER ['materialization:code-declared-data-model', 'materialization:physical-model', 'materialization:logical-physical-mapping', 'materialization:effective-data-model']
+RESULT_STATUS "completed"
+NODE_EXECUTIONS [(None, 'completed'), (None, 'completed'), (None, 'completed'), (None, 'completed')]
+KNOWLEDGE_ARTIFACTS [('code-declared-data-model', 'code-declared-data-model/v1', 'code-declared-data-model'), ('physical-data-model', 'knowledge_layer_physical_model/v1', 'physical-model'), ('logical-physical-model-mapping', 'logical-physical-model-mapping/v1', 'logical-physical-mapping'), ('effective-data-model', 'effective-data-model/v1', 'effective-data-model'), ('model-domain-cluster-view', 'model-domain-cluster-view/v1', 'effective-data-model')]

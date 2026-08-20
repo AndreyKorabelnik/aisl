@@ -1,0 +1,83 @@
+baseline_id: at900-system-description-old-prompts/v1
+purpose: Preserve valuable report capabilities while removing preliminary LLM analysis and final_response.json.
+required_capabilities:
+  - rich_executive_summary
+  - functional_capability_grouping
+  - explicit_scope_boundary
+  - module_role_table
+  - inbound_boundary_summary
+  - outbound_boundary_summary
+  - system_boundary_mermaid
+  - two_to_four_representative_scenarios
+  - scenario_confirmation_boundary
+  - storage_inventory_counts
+  - data_domain_grouping
+  - explicit_relationship_mermaid
+  - compact_interface_map
+  - exact_interface_and_journey_ids
+  - evidence_id_citations
+  - source_file_line_references
+  - gap_explanation
+  - owner_questions
+  - technical_appendix
+intentionally_removed:
+  - preliminary_universal_llm_analysis
+  - final_response_json
+  - analysis_bundle_runtime
+  - report_time_arbitrary_source_access
+preservation_map:
+  rich_executive_summary:
+    dataset: sections.functional_capabilities, sections.scope_overview, coverage
+    renderer: section 1 Краткий вывод
+  functional_capability_grouping:
+    dataset: sections.functional_capabilities.clusters
+    renderer: interpreted Russian labels grounded in examples
+  explicit_scope_boundary:
+    dataset: scope, sections.system_boundaries, sections.technical_appendix.scope_limit
+  module_role_table:
+    dataset: sections.project_structure.modules[].role_hint
+  inbound_boundary_summary:
+    dataset: sections.system_boundaries.inbound_items
+  outbound_boundary_summary:
+    dataset: sections.system_boundaries.outbound_items
+  system_boundary_mermaid:
+    dataset: sections.diagrams.system_boundary
+  two_to_four_representative_scenarios:
+    dataset: sections.journeys.items
+  scenario_confirmation_boundary:
+    dataset: sections.journeys.items[].status, is_complete, boundary
+  storage_inventory_counts:
+    dataset: sections.data_and_storage.inventory
+  data_domain_grouping:
+    dataset: sections.data_and_storage.data_groups
+  explicit_relationship_mermaid:
+    dataset: sections.diagrams.data_relationships
+  compact_interface_map:
+    dataset: sections.interface_map.items
+  exact_interface_and_journey_ids:
+    dataset: sections.technical_appendix.exact_identifier_examples
+  evidence_id_citations:
+    dataset: evidence_index
+  source_file_line_references:
+    dataset: provenance, sections.technical_appendix.source_references
+  gap_explanation:
+    dataset: sections.gaps
+  owner_questions:
+    dataset: sections.owner_questions
+  technical_appendix:
+    dataset: sections.technical_appendix
+validation_policy:
+  automatic:
+    - dataset JSON schema and byte budget
+    - no dangling evidence IDs
+    - required Markdown headings
+    - cited evidence IDs exist in evidence_index
+  manual:
+    - narrative usefulness for the selected audience
+    - semantic quality of functional grouping
+    - comparison with the legacy AT900 report
+  explicitly_not_automated:
+    - word-count scoring
+    - table-count scoring
+    - diagram-count scoring
+    - subjective pale or rich report warnings

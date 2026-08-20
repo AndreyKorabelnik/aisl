@@ -1,0 +1,68 @@
+{
+  "sql-source-inventory-report": {
+    "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+    "selected_model": "sql-observed-data-usage",
+    "profile_id": "sql-source-inventory-report/v1",
+    "coverage": {
+      "source_count": 1,
+      "used_field_count": 3,
+      "relation_evidence_count": 1,
+      "field_evidence_count": 3,
+      "analysis": {
+        "analysis_status": "complete",
+        "repositories": [
+          {
+            "repo_id": "demo-repository",
+            "analysis_status": "complete",
+            "source_content_fingerprint": "4078e230b96e507ffe6c750ed3b4058e76fcf94bcc5a6b911980ac24f751bb2f",
+            "source_inventory": {
+              "non_source_values": {
+                "generated_value_usages": 0,
+                "semantic_parameter_usages": 0
+              },
+              "policy": "semantic parameters and generated LATERAL/EXPLODE values are reported separately and do not reduce source-field resolution",
+              "resolved_by_relation_kind": {
+                "physical": 3
+              },
+              "resolved_source_field_usages": 3,
+              "source_field_candidate_usages": 3,
+              "source_field_resolution_rate": 1.0,
+              "status": "complete",
+              "total_observed_usages": 3,
+              "unresolved_by_basis": {},
+              "unresolved_by_status": {},
+              "unresolved_source_field_usages": 0
+            },
+            "lineage_gaps": {
+              "by_kind": {},
+              "total": 0
+            }
+          }
+        ]
+      },
+      "focus_status": "not_requested"
+    },
+    "dataset": "/mnt/data/work-next/e2e-storage-sql/reporting-real/sql-source-inventory-report/report-dataset.json",
+    "status": "prepared"
+  },
+  "observed-storage-usage-report": {
+    "revision_id": "rev-39b6bbfcc211b4ba3990e963",
+    "selected_model": "observed-storage-usage",
+    "profile_id": "observed-storage-usage-report/v1",
+    "coverage": {
+      "access_count": 2,
+      "read_count": 1,
+      "write_count": 1,
+      "gap_count": 0,
+      "by_storage_kind": {
+        "repository_or_storage_api": 2
+      },
+      "by_resolution_status": {
+        "not_applicable": 1,
+        "recognized_storage_method": 1
+      }
+    },
+    "dataset": "/mnt/data/work-next/e2e-storage-sql/reporting-real/observed-storage-usage-report/report-dataset.json",
+    "status": "prepared"
+  }
+}

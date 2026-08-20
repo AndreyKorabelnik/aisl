@@ -1,0 +1,8 @@
+interactions:
+  executive: 20
+  standard: 60
+  detailed: 200
+field_contracts_per_interaction:
+  executive: 12
+  standard: 40
+  detailed: 120

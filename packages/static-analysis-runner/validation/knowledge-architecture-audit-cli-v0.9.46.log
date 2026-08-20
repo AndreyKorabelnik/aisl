@@ -1,0 +1,14 @@
+{
+  "audit_fingerprint": "bd052c8fa690cf0b551e044cbf2f78fc7a75266be132f676df8df07f5c9c0a38",
+  "audited_knowledge_ids": [
+    "code-declared-data-model"
+  ],
+  "blocked_gate_count": 2,
+  "markdown": "/mnt/data/work_runner0946/static-analysis-runner-0.9.46-java-type-structure-registration/validation/knowledge-architecture-audit-v1-0.9.46.md",
+  "next_step": "implement_KLC_code-declared-data-model_materialization_over_java-type-structure-evidence/v1",
+  "output": "/mnt/data/work_runner0946/static-analysis-runner-0.9.46-java-type-structure-registration/validation/knowledge-architecture-audit-v1-0.9.46.json",
+  "schema_version": "knowledge_architecture_audit/v1",
+  "target_status_counts": {
+    "current_business_available_target_migration_required": 1
+  }
+}

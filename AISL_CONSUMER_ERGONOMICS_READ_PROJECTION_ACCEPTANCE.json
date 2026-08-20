@@ -1,0 +1,37 @@
+{
+  "status": "CONSUMER_ERGONOMICS_READ_PROJECTION_BLOCK_COMPLETE",
+  "date": "2026-08-15",
+  "base_composed_revision_from_recovery": "rev-1fed54320afb0632c144e098",
+  "knowledge_api_version": "0.30.12",
+  "knowledge_integration_version": "0.1.11",
+  "tool_name": "get_data_model_attribute_extension_context",
+  "tool_count_change": 0,
+  "new_tool_binding": "/api/knowledge/v1/systems/{system_id}/data-model/attribute-extension-guidance",
+  "semantic_derivation": "none",
+  "contract_fixture_measurements": [
+    {
+      "case": "exact_observed_join",
+      "raw_bytes": 3240,
+      "guidance_bytes": 2687,
+      "reduction_percent": 17.1,
+      "usefulness_classification": "confirmed"
+    },
+    {
+      "case": "polymorphic_collection",
+      "raw_bytes": 3571,
+      "guidance_bytes": 2170,
+      "reduction_percent": 39.2,
+      "usefulness_classification": "ambiguity"
+    }
+  ],
+  "tests": {
+    "knowledge_integration": "15/15 PASS",
+    "knowledge_api": "96/96 PASS (60/60 + 36/36)",
+    "focused_final": "30/30 PASS",
+    "openapi_parity": "PASS"
+  },
+  "real_external_agent_trace": {
+    "status": "NOT_RUN",
+    "reason": "recovery contains acceptance metadata but no live API catalog or captured post-change external-agent trace; do not rebuild producer knowledge solely for consumer ergonomics acceptance"
+  }
+}

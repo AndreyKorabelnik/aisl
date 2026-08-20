@@ -1,0 +1,110 @@
+{
+  "summary": {
+    "case_count": 945,
+    "case_granularity": "storage_field_path_pair",
+    "source_and_access_case_count": 163,
+    "same_data_confirmed_case_count": 11,
+    "storage_summary_count": 85,
+    "business_fdp_decision_assigned": false,
+    "mechanical_bridge_only": true
+  },
+  "phone_storage_summary": {
+    "repo_id": "client_profile",
+    "storage_object": "PHONE",
+    "source_path_count": 19,
+    "access_path_count": 18,
+    "source_field_count": 6,
+    "access_field_count": 11,
+    "overlap_fields": [
+      "OPERATORID",
+      "PHONEBLOCKCODE",
+      "phoneid",
+      "phonenumber",
+      "TOKENID"
+    ],
+    "exact_case_count": 72,
+    "confirmed_case_count": 6,
+    "aggregation_policy": "summary_only_not_end_to_end_proof"
+  },
+  "device_link_storage_summary": {
+    "repo_id": "client_profile",
+    "storage_object": "DEVICE_LINK",
+    "source_path_count": 32,
+    "access_path_count": 1,
+    "source_field_count": 8,
+    "access_field_count": 3,
+    "overlap_fields": [
+      "CLIENT_ID",
+      "DEVICE_ID",
+      "UCP_ID"
+    ],
+    "exact_case_count": 32,
+    "confirmed_case_count": 3,
+    "aggregation_policy": "summary_only_not_end_to_end_proof"
+  },
+  "mnp_operator_cases": [
+    {
+      "case_id": "fdp_case_6f289406e2dbae8bab54",
+      "storage_object": "PHONE",
+      "storage_field": "OPERATORID",
+      "source_path_id": "source_to_storage_lineage_000201",
+      "access_path_id": "storage_to_access_lineage_000124",
+      "source_operation": "KafkaMNPConsumer.onReceiveMessage",
+      "access_boundary": "MbClientProfileExtendedServiceImpl.fetchLightProfile",
+      "same_data_end_to_end_status": "unresolved",
+      "missing_links": [
+        "storage_to_access_path_not_confirmed"
+      ]
+    },
+    {
+      "case_id": "fdp_case_03b5dde070c6aeb41d22",
+      "storage_object": "PHONE",
+      "storage_field": "OPERATORID",
+      "source_path_id": "source_to_storage_lineage_000201",
+      "access_path_id": "storage_to_access_lineage_000128",
+      "source_operation": "KafkaMNPConsumer.onReceiveMessage",
+      "access_boundary": "MbClientProfileExtendedServiceImpl.fetchSimpleProfile",
+      "same_data_end_to_end_status": "unresolved",
+      "missing_links": [
+        "storage_to_access_path_not_confirmed"
+      ]
+    },
+    {
+      "case_id": "fdp_case_669f5c4581a29872718e",
+      "storage_object": "PHONE",
+      "storage_field": "OPERATORID",
+      "source_path_id": "source_to_storage_lineage_000201",
+      "access_path_id": "storage_to_access_lineage_000250",
+      "source_operation": "KafkaMNPConsumer.onReceiveMessage",
+      "access_boundary": "MbClientProfileController.mbClientProfileExtended",
+      "same_data_end_to_end_status": "confirmed",
+      "missing_links": []
+    }
+  ],
+  "device_link_confirmed_cases": [
+    {
+      "case_id": "fdp_case_6fc82a8aa70c89389d11",
+      "storage_field": "CLIENT_ID",
+      "source_path_id": "source_to_storage_lineage_000108",
+      "access_path_id": "storage_to_access_lineage_000242",
+      "access_boundary": "ServerController.findDevicesByPhones",
+      "same_data_end_to_end_status": "confirmed"
+    },
+    {
+      "case_id": "fdp_case_ea364bbf11ba1a526b3f",
+      "storage_field": "DEVICE_ID",
+      "source_path_id": "source_to_storage_lineage_000106",
+      "access_path_id": "storage_to_access_lineage_000242",
+      "access_boundary": "ServerController.findDevicesByPhones",
+      "same_data_end_to_end_status": "confirmed"
+    },
+    {
+      "case_id": "fdp_case_aca6c30e060afe51a4ff",
+      "storage_field": "UCP_ID",
+      "source_path_id": "source_to_storage_lineage_000110",
+      "access_path_id": "storage_to_access_lineage_000242",
+      "access_boundary": "ServerController.findDevicesByPhones",
+      "same_data_end_to_end_status": "confirmed"
+    }
+  ]
+}

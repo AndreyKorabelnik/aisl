@@ -1,0 +1,25 @@
+{
+  "schema_version": "field_flow_performance_validation/v1",
+  "problem_repository": "gateway-sberid-userinfo-by-ucpid",
+  "before": {
+    "core_version": "0.41.0",
+    "task_timeout_seconds": 900,
+    "status": "timeout"
+  },
+  "after": {
+    "core_version": "0.41.1",
+    "java_field_flow_elapsed_seconds": 2.234,
+    "full_profile_elapsed_seconds": 9.771,
+    "field_occurrences": 13993,
+    "field_flow_edges": 12033,
+    "max_rss_kb": 373116
+  },
+  "semantic_parity": {
+    "repository": "gw-sberid-update-phone-flags",
+    "field_occurrences": 4029,
+    "field_flow_edges": 3084,
+    "occurrence_catalog_sha256": "7facbc3552daba894d5accc333ad38e15ec73795aea776a955062c1a94656c5a",
+    "edge_catalog_sha256": "154c545b716f531f09a40bcb1dffa1165913c88a986ca9936d6640a9b585ed05",
+    "old_new_catalogs_identical": true
+  }
+}

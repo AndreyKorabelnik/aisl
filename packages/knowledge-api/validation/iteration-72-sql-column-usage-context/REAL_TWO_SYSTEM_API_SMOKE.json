@@ -1,0 +1,33 @@
+{
+  "schema_version": "knowledge-api-validation/v1",
+  "iteration": 72,
+  "api_version": "0.11.0",
+  "status": "passed",
+  "systems": ["datamart-profile-fl", "ucp"],
+  "datamart": {
+    "system_id": "datamart-profile-fl",
+    "sql_column_usage_id": "sql_column_usage_datamart_profile_fl_8bb1154a86e9d743",
+    "column_name": "active_flag",
+    "resolution_status": "ambiguous",
+    "resolution_basis": "ambiguous_unqualified",
+    "scope_kind": "cte",
+    "scope_name": "src_table",
+    "scope_relation_count": 3,
+    "join_count": 2,
+    "projection_count": 12,
+    "scope_aliases": ["dd", "qc", "vr"]
+  },
+  "ucp": {
+    "system_id": "ucp",
+    "data_model_search": "Individual",
+    "endpoint_status": 200,
+    "published_table_count": 312,
+    "published_field_count": 2688,
+    "published_relationship_count": 496
+  },
+  "architecture": {
+    "direct_llm_duckdb_access": false,
+    "cross_system_access_via_knowledge_api": true,
+    "ucp_specific_logic_in_core_klc_api": false
+  }
+}

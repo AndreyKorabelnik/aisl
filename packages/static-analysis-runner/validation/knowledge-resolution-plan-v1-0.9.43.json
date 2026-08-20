@@ -1,0 +1,1450 @@
+{
+  "diagnostics": [
+    {
+      "diagnostic_id": "source_availability_not_assessed",
+      "effect": "This read-only resolution uses contracts only and does not inspect the selected repository/workspace.",
+      "severity": "info"
+    },
+    {
+      "diagnostic_id": "target_evidence_boundary_not_current",
+      "effect": "Знание может быть доступно через текущий runtime, но целевая цепочка typed evidence → KLC ещё требует миграции.",
+      "knowledge_ids": [
+        "conceptual-data-model",
+        "reference-data",
+        "system-interactions"
+      ],
+      "severity": "warning"
+    }
+  ],
+  "execution_effect": "none",
+  "knowledge_preview": [
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "core code_conceptual_model_build + KLC common-data-model ingestion",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "contains": [
+        "сущности",
+        "атрибуты и типы",
+        "ключи",
+        "связи и кратности",
+        "наследование",
+        "соответствия логических объектов таблицам и колонкам",
+        "покрытие, доказательства и пробелы"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_dependencies": [],
+      "knowledge_id": "conceptual-data-model",
+      "minimum_coverage": 0.7,
+      "sources": [
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "java-structure-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_structural_scan",
+            "java_source_observation_build"
+          ],
+          "foundation_requirements": [
+            "java-structure-index",
+            "repository-file-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "java-structure",
+          "mapping_status": "partial_current_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Types, fields, associations and inheritance observations.",
+          "requirement": "required",
+          "schema_versions": [
+            "java-structure-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Структура Java-кода"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "java-persistence-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_persistence_lineage_build",
+            "java_table_observation_build",
+            "java_structural_scan"
+          ],
+          "foundation_requirements": [
+            "java-structure-index",
+            "physical-schema-index",
+            "repository-file-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "java-persistence",
+          "mapping_status": "partial_current_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Persistence mappings, keys and relationship observations.",
+          "requirement": "required",
+          "schema_versions": [
+            "java-persistence-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Persistence mappings и операции"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "java-mapping-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_structural_scan",
+            "java_data_model_lineage_build"
+          ],
+          "foundation_requirements": [
+            "call-index",
+            "java-structure-index",
+            "repository-file-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "java-mapping",
+          "mapping_status": "partial_current_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Converter, builder, copy and reference observations.",
+          "requirement": "required",
+          "schema_versions": [
+            "java-mapping-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Преобразования, builder и присваивания"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "physical-schema-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "db_schema_scan"
+          ],
+          "foundation_requirements": [
+            "physical-schema-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "physical-schema",
+          "mapping_status": "current_facts_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Physical correspondence and schema constraints.",
+          "requirement": "optional",
+          "schema_versions": [
+            "physical-schema-evidence/v1"
+          ],
+          "source_category": "database-schema",
+          "title": "Физическая схема из репозитория"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "table-observation-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_table_observation_build"
+          ],
+          "foundation_requirements": [
+            "java-structure-index",
+            "physical-schema-index"
+          ],
+          "future_analyzer_id": "java-table-observation",
+          "mapping_status": "current_facts_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Observed table and key facts.",
+          "requirement": "optional",
+          "schema_versions": [
+            "table-observation-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Наблюдения таблиц, ключей и связей"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "declared-value-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "declared_value_scan",
+            "declared_value_summary_scan"
+          ],
+          "foundation_requirements": [
+            "configuration-index",
+            "java-structure-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "declared-value",
+          "mapping_status": "current_facts_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Value-set facts associated with fields.",
+          "requirement": "optional",
+          "schema_versions": [
+            "declared-value-evidence/v1"
+          ],
+          "source_category": "source-code-and-configuration",
+          "title": "Объявленные значения и перечисления"
+        }
+      ],
+      "summary": "Сущности, атрибуты, ключи, связи, наследование и логико-физические соответствия.",
+      "title": "Концептуальная модель данных"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": true,
+        "explanation": "Materialization уже использует самостоятельный типизированный вход.",
+        "status": "current_typed",
+        "target_contract_status": "current"
+      },
+      "contains": [
+        "SQL-операторы и области видимости",
+        "таблицы-источники и назначения",
+        "используемые поля",
+        "роли полей: projection, join, filter и другие",
+        "JOIN и условия связи",
+        "source-to-target lineage",
+        "неразрешённые ссылки и покрытие"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_dependencies": [],
+      "knowledge_id": "sql-source-inventory",
+      "minimum_coverage": null,
+      "sources": [
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "sql-analysis",
+          "contract_status": "current",
+          "current_core_stage_ids": [
+            "sql_scan",
+            "sql_script_structure_scan",
+            "sql_script_semantic_inventory",
+            "sql_scoped_relation_scan",
+            "sql_scoped_column_usage_scan",
+            "sql_scoped_projection_scan",
+            "sql_scoped_direct_lineage_build",
+            "sql_scoped_write_target_binding",
+            "sql_join_graph_scan",
+            "sql_column_lineage_scan",
+            "sql_source_usage_scan",
+            "sql_mart_inventory_scan",
+            "sql_mart_lineage_gap_build"
+          ],
+          "foundation_requirements": [
+            "repository-file-index",
+            "sql-parse-index"
+          ],
+          "future_analyzer_id": "sql-analysis",
+          "mapping_status": "current_typed_artifact_fixed_runtime",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Repository-level SQL evidence artifact.",
+          "requirement": "required",
+          "schema_versions": [
+            "sql-analysis/v1"
+          ],
+          "source_category": "sql",
+          "title": "SQL-код и его семантика"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "physical-model",
+          "contract_status": "current",
+          "current_core_stage_ids": [],
+          "foundation_requirements": [],
+          "future_analyzer_id": null,
+          "mapping_status": "current_external_typed_artifact",
+          "producer_kind": "external",
+          "producer_materialization_id": null,
+          "purpose": "Optional physical-model correspondence and target resolution.",
+          "requirement": "optional",
+          "schema_versions": [
+            "physical-model/v1"
+          ],
+          "source_category": "external-model",
+          "title": "Предоставленная физическая модель"
+        }
+      ],
+      "summary": "SQL-операторы, таблицы, поля, роли использования, JOIN и доказательный source-to-target lineage.",
+      "title": "SQL-инвентарь источников и назначений"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "explanation": "Materialization работает, но целевая evidence-граница ещё неполна.",
+        "status": "current_partial",
+        "target_contract_status": "partial"
+      },
+      "contains": [
+        "входящие и исходящие границы",
+        "протоколы и адреса",
+        "межрепозиторные взаимодействия",
+        "межсистемные взаимодействия",
+        "неоднозначные и неразрешённые сопоставления"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_dependencies": [],
+      "knowledge_id": "system-interactions",
+      "minimum_coverage": null,
+      "sources": [
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "interaction-boundary-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_system_interaction_enrichment",
+            "openapi_scan",
+            "config_scan"
+          ],
+          "foundation_requirements": [
+            "configuration-index",
+            "java-structure-index",
+            "openapi-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "interaction-boundary",
+          "mapping_status": "current_partial_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Inbound and outbound protocol boundary observations.",
+          "requirement": "required",
+          "schema_versions": [
+            "interaction-boundary-evidence/v1"
+          ],
+          "source_category": "interfaces",
+          "title": "Входящие и исходящие интерфейсы"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "configuration-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "config_scan"
+          ],
+          "foundation_requirements": [
+            "configuration-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "configuration",
+          "mapping_status": "current_foundation_facts_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Resolved endpoint/topic properties and aliases.",
+          "requirement": "optional",
+          "schema_versions": [
+            "configuration-evidence/v1"
+          ],
+          "source_category": "configuration",
+          "title": "Конфигурация приложения"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "execution-context-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_traceability_build"
+          ],
+          "foundation_requirements": [
+            "call-index",
+            "java-structure-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "execution-context",
+          "mapping_status": "partial_not_yet_canonical",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Optional path from ingress to outbound operation.",
+          "requirement": "optional",
+          "schema_versions": [
+            "execution-context-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Контекст выполнения и вызовов"
+        }
+      ],
+      "summary": "Подтверждённые и вероятные связи между входящими и исходящими интерфейсами.",
+      "title": "Взаимодействия систем и репозиториев"
+    },
+    {
+      "availability": {
+        "business_knowledge_available_now": true,
+        "can_execute_through_target_contracts": false,
+        "current_runtime_bridge": "Core reference_data_fact_base compact artifacts selected through current Task routing",
+        "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+        "status": "current_legacy",
+        "target_contract_status": "planned"
+      },
+      "contains": [
+        "объявленные значения и перечисления",
+        "наблюдаемые литеральные записи",
+        "наборы значений",
+        "кандидаты справочников",
+        "контекст хранения и использования",
+        "неразрешённые альтернативы"
+      ],
+      "expected_metadata": [
+        "coverage",
+        "diagnostics",
+        "provenance",
+        "content_fingerprint"
+      ],
+      "knowledge_dependencies": [],
+      "knowledge_id": "reference-data",
+      "minimum_coverage": null,
+      "sources": [
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "declared-value-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "declared_value_scan",
+            "declared_value_summary_scan"
+          ],
+          "foundation_requirements": [
+            "configuration-index",
+            "java-structure-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "declared-value",
+          "mapping_status": "current_facts_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Declared constants, enumerations and configured value sets.",
+          "requirement": "required",
+          "schema_versions": [
+            "declared-value-evidence/v1"
+          ],
+          "source_category": "source-code-and-configuration",
+          "title": "Объявленные значения и перечисления"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "literal-write-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_data_model_lineage_build",
+            "reference_data_fact_base"
+          ],
+          "foundation_requirements": [
+            "call-index",
+            "java-structure-index",
+            "physical-schema-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "literal-write",
+          "mapping_status": "currently_mixed_with_knowledge_materialization",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Observed literal writes to storage or outbound payloads.",
+          "requirement": "required",
+          "schema_versions": [
+            "literal-write-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Литеральные записи в хранилища и сообщения"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "java-persistence-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_persistence_lineage_build",
+            "java_table_observation_build",
+            "java_structural_scan"
+          ],
+          "foundation_requirements": [
+            "java-structure-index",
+            "physical-schema-index",
+            "repository-file-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "java-persistence",
+          "mapping_status": "partial_current_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Storage objects, fields and keys.",
+          "requirement": "optional",
+          "schema_versions": [
+            "java-persistence-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Persistence mappings и операции"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "value-flow-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_data_flow_build",
+            "java_field_flow_build",
+            "java_traceability_build"
+          ],
+          "foundation_requirements": [
+            "call-index",
+            "java-structure-index",
+            "repository-file-index",
+            "symbol-and-type-index"
+          ],
+          "future_analyzer_id": "value-flow",
+          "mapping_status": "current_fragmented_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Value propagation and lineage context.",
+          "requirement": "optional",
+          "schema_versions": [
+            "value-flow-evidence/v1"
+          ],
+          "source_category": "source-code",
+          "title": "Потоки значений"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "interaction-boundary-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "java_system_interaction_enrichment",
+            "openapi_scan",
+            "config_scan"
+          ],
+          "foundation_requirements": [
+            "configuration-index",
+            "java-structure-index",
+            "openapi-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "interaction-boundary",
+          "mapping_status": "current_partial_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Interface usage context.",
+          "requirement": "optional",
+          "schema_versions": [
+            "interaction-boundary-evidence/v1"
+          ],
+          "source_category": "interfaces",
+          "title": "Входящие и исходящие интерфейсы"
+        },
+        {
+          "actual_source_availability": "not_assessed",
+          "artifact_kind": "configuration-evidence",
+          "contract_status": "proposed",
+          "current_core_stage_ids": [
+            "config_scan"
+          ],
+          "foundation_requirements": [
+            "configuration-index",
+            "repository-file-index"
+          ],
+          "future_analyzer_id": "configuration",
+          "mapping_status": "current_foundation_facts_proposed_typed_contract",
+          "producer_kind": "core",
+          "producer_materialization_id": null,
+          "purpose": "Configured value sources and unresolved bindings.",
+          "requirement": "optional",
+          "schema_versions": [
+            "configuration-evidence/v1"
+          ],
+          "source_category": "configuration",
+          "title": "Конфигурация приложения"
+        }
+      ],
+      "summary": "Наблюдаемые значения, записи литералов, кандидаты справочников и контекст использования.",
+      "title": "Справочные данные"
+    }
+  ],
+  "next_step": "inspect_repository_or_workspace_sources_then_compile_runtime_execution_plan",
+  "plan_fingerprint": "4fb8d21021f100515b20bfb1b095e28e13e1930c91ff3976d91f54c7673579b0",
+  "profile": {
+    "knowledge": [
+      {
+        "knowledge_id": "conceptual-data-model",
+        "options": {
+          "include_optional_sources": true,
+          "minimum_coverage": 0.7
+        }
+      },
+      {
+        "knowledge_id": "sql-source-inventory",
+        "options": {
+          "include_optional_sources": true,
+          "minimum_coverage": null
+        }
+      },
+      {
+        "knowledge_id": "system-interactions",
+        "options": {
+          "include_optional_sources": true,
+          "minimum_coverage": null
+        }
+      },
+      {
+        "knowledge_id": "reference-data",
+        "options": {
+          "include_optional_sources": true,
+          "minimum_coverage": null
+        }
+      }
+    ],
+    "presentation": {
+      "include_coverage": true,
+      "include_evidence": true,
+      "include_gaps": true,
+      "include_technical_details": false
+    },
+    "profile_id": "client-workspace-knowledge",
+    "schema_version": "knowledge_profile/v1",
+    "scope": {
+      "kind": "workspace",
+      "scope_id": "client-profile"
+    },
+    "title": "База знаний клиентского профиля"
+  },
+  "resolution_mode": "contract_only_repository_not_scanned",
+  "resolver_contract_id": "knowledge_resolver_contract/v1",
+  "schema_version": "knowledge_resolution_plan/v1",
+  "source": {
+    "knowledge_catalog_fingerprint": "d5a326626cbec3c3d66888475f77bb61642cc37d3ad89c9361edacda0b5763cd",
+    "knowledge_profile_fingerprint": "1bb7bf36709e3d3ef81463e475f98990667b55ad26b42d1ce7f5d183d48706d2"
+  },
+  "status": {
+    "actual_source_availability": "not_assessed",
+    "current_legacy_or_partial_count": 3,
+    "current_typed_count": 1,
+    "overall": "current_runtime_requires_boundary_migration",
+    "planned_count": 0,
+    "selected_knowledge_count": 4,
+    "target_contract_not_current_count": 3
+  },
+  "technical_plan": {
+    "core_stage_sources": [
+      {
+        "artifact_kinds": [
+          "configuration-evidence",
+          "interaction-boundary-evidence"
+        ],
+        "source_titles": [
+          "Входящие и исходящие интерфейсы",
+          "Конфигурация приложения"
+        ],
+        "stage_id": "config_scan",
+        "used_by_knowledge": [
+          "reference-data",
+          "system-interactions"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "physical-schema-evidence"
+        ],
+        "source_titles": [
+          "Физическая схема из репозитория"
+        ],
+        "stage_id": "db_schema_scan",
+        "used_by_knowledge": [
+          "conceptual-data-model"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "declared-value-evidence"
+        ],
+        "source_titles": [
+          "Объявленные значения и перечисления"
+        ],
+        "stage_id": "declared_value_scan",
+        "used_by_knowledge": [
+          "conceptual-data-model",
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "declared-value-evidence"
+        ],
+        "source_titles": [
+          "Объявленные значения и перечисления"
+        ],
+        "stage_id": "declared_value_summary_scan",
+        "used_by_knowledge": [
+          "conceptual-data-model",
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "value-flow-evidence"
+        ],
+        "source_titles": [
+          "Потоки значений"
+        ],
+        "stage_id": "java_data_flow_build",
+        "used_by_knowledge": [
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "java-mapping-evidence",
+          "literal-write-evidence"
+        ],
+        "source_titles": [
+          "Литеральные записи в хранилища и сообщения",
+          "Преобразования, builder и присваивания"
+        ],
+        "stage_id": "java_data_model_lineage_build",
+        "used_by_knowledge": [
+          "conceptual-data-model",
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "value-flow-evidence"
+        ],
+        "source_titles": [
+          "Потоки значений"
+        ],
+        "stage_id": "java_field_flow_build",
+        "used_by_knowledge": [
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "java-persistence-evidence"
+        ],
+        "source_titles": [
+          "Persistence mappings и операции"
+        ],
+        "stage_id": "java_persistence_lineage_build",
+        "used_by_knowledge": [
+          "conceptual-data-model",
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "java-structure-evidence"
+        ],
+        "source_titles": [
+          "Структура Java-кода"
+        ],
+        "stage_id": "java_source_observation_build",
+        "used_by_knowledge": [
+          "conceptual-data-model"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "java-mapping-evidence",
+          "java-persistence-evidence",
+          "java-structure-evidence"
+        ],
+        "source_titles": [
+          "Persistence mappings и операции",
+          "Преобразования, builder и присваивания",
+          "Структура Java-кода"
+        ],
+        "stage_id": "java_structural_scan",
+        "used_by_knowledge": [
+          "conceptual-data-model",
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "interaction-boundary-evidence"
+        ],
+        "source_titles": [
+          "Входящие и исходящие интерфейсы"
+        ],
+        "stage_id": "java_system_interaction_enrichment",
+        "used_by_knowledge": [
+          "reference-data",
+          "system-interactions"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "java-persistence-evidence",
+          "table-observation-evidence"
+        ],
+        "source_titles": [
+          "Persistence mappings и операции",
+          "Наблюдения таблиц, ключей и связей"
+        ],
+        "stage_id": "java_table_observation_build",
+        "used_by_knowledge": [
+          "conceptual-data-model",
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "execution-context-evidence",
+          "value-flow-evidence"
+        ],
+        "source_titles": [
+          "Контекст выполнения и вызовов",
+          "Потоки значений"
+        ],
+        "stage_id": "java_traceability_build",
+        "used_by_knowledge": [
+          "reference-data",
+          "system-interactions"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "interaction-boundary-evidence"
+        ],
+        "source_titles": [
+          "Входящие и исходящие интерфейсы"
+        ],
+        "stage_id": "openapi_scan",
+        "used_by_knowledge": [
+          "reference-data",
+          "system-interactions"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "literal-write-evidence"
+        ],
+        "source_titles": [
+          "Литеральные записи в хранилища и сообщения"
+        ],
+        "stage_id": "reference_data_fact_base",
+        "used_by_knowledge": [
+          "reference-data"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_column_lineage_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_join_graph_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_mart_inventory_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_mart_lineage_gap_build",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_scoped_column_usage_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_scoped_direct_lineage_build",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_scoped_projection_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_scoped_relation_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_scoped_write_target_binding",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_script_semantic_inventory",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_script_structure_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      },
+      {
+        "artifact_kinds": [
+          "sql-analysis"
+        ],
+        "source_titles": [
+          "SQL-код и его семантика"
+        ],
+        "stage_id": "sql_source_usage_scan",
+        "used_by_knowledge": [
+          "sql-source-inventory"
+        ],
+        "visibility": "advanced_diagnostics_only"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "artifact_kind": "configuration-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "config_scan"
+        ],
+        "foundation_requirements": [
+          "configuration-index",
+          "repository-file-index"
+        ],
+        "future_analyzer_id": "configuration",
+        "mapping_status": "current_foundation_facts_proposed_typed_contract",
+        "optional_by": [
+          "reference-data",
+          "system-interactions"
+        ],
+        "producer_kind": "core",
+        "required_by": [],
+        "schema_version": "configuration-evidence/v1",
+        "title": "Конфигурация приложения"
+      },
+      {
+        "artifact_kind": "declared-value-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "declared_value_scan",
+          "declared_value_summary_scan"
+        ],
+        "foundation_requirements": [
+          "configuration-index",
+          "java-structure-index",
+          "repository-file-index"
+        ],
+        "future_analyzer_id": "declared-value",
+        "mapping_status": "current_facts_proposed_typed_contract",
+        "optional_by": [
+          "conceptual-data-model"
+        ],
+        "producer_kind": "core",
+        "required_by": [
+          "reference-data"
+        ],
+        "schema_version": "declared-value-evidence/v1",
+        "title": "Объявленные значения и перечисления"
+      },
+      {
+        "artifact_kind": "execution-context-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_traceability_build"
+        ],
+        "foundation_requirements": [
+          "call-index",
+          "java-structure-index",
+          "symbol-and-type-index"
+        ],
+        "future_analyzer_id": "execution-context",
+        "mapping_status": "partial_not_yet_canonical",
+        "optional_by": [
+          "system-interactions"
+        ],
+        "producer_kind": "core",
+        "required_by": [],
+        "schema_version": "execution-context-evidence/v1",
+        "title": "Контекст выполнения и вызовов"
+      },
+      {
+        "artifact_kind": "interaction-boundary-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "config_scan",
+          "java_system_interaction_enrichment",
+          "openapi_scan"
+        ],
+        "foundation_requirements": [
+          "configuration-index",
+          "java-structure-index",
+          "openapi-index",
+          "repository-file-index"
+        ],
+        "future_analyzer_id": "interaction-boundary",
+        "mapping_status": "current_partial_proposed_typed_contract",
+        "optional_by": [
+          "reference-data"
+        ],
+        "producer_kind": "core",
+        "required_by": [
+          "system-interactions"
+        ],
+        "schema_version": "interaction-boundary-evidence/v1",
+        "title": "Входящие и исходящие интерфейсы"
+      },
+      {
+        "artifact_kind": "java-mapping-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_data_model_lineage_build",
+          "java_structural_scan"
+        ],
+        "foundation_requirements": [
+          "call-index",
+          "java-structure-index",
+          "repository-file-index",
+          "symbol-and-type-index"
+        ],
+        "future_analyzer_id": "java-mapping",
+        "mapping_status": "partial_current_proposed_typed_contract",
+        "optional_by": [],
+        "producer_kind": "core",
+        "required_by": [
+          "conceptual-data-model"
+        ],
+        "schema_version": "java-mapping-evidence/v1",
+        "title": "Преобразования, builder и присваивания"
+      },
+      {
+        "artifact_kind": "java-persistence-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_persistence_lineage_build",
+          "java_structural_scan",
+          "java_table_observation_build"
+        ],
+        "foundation_requirements": [
+          "java-structure-index",
+          "physical-schema-index",
+          "repository-file-index",
+          "symbol-and-type-index"
+        ],
+        "future_analyzer_id": "java-persistence",
+        "mapping_status": "partial_current_proposed_typed_contract",
+        "optional_by": [
+          "reference-data"
+        ],
+        "producer_kind": "core",
+        "required_by": [
+          "conceptual-data-model"
+        ],
+        "schema_version": "java-persistence-evidence/v1",
+        "title": "Persistence mappings и операции"
+      },
+      {
+        "artifact_kind": "java-structure-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_source_observation_build",
+          "java_structural_scan"
+        ],
+        "foundation_requirements": [
+          "java-structure-index",
+          "repository-file-index",
+          "symbol-and-type-index"
+        ],
+        "future_analyzer_id": "java-structure",
+        "mapping_status": "partial_current_proposed_typed_contract",
+        "optional_by": [],
+        "producer_kind": "core",
+        "required_by": [
+          "conceptual-data-model"
+        ],
+        "schema_version": "java-structure-evidence/v1",
+        "title": "Структура Java-кода"
+      },
+      {
+        "artifact_kind": "literal-write-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_data_model_lineage_build",
+          "reference_data_fact_base"
+        ],
+        "foundation_requirements": [
+          "call-index",
+          "java-structure-index",
+          "physical-schema-index",
+          "symbol-and-type-index"
+        ],
+        "future_analyzer_id": "literal-write",
+        "mapping_status": "currently_mixed_with_knowledge_materialization",
+        "optional_by": [],
+        "producer_kind": "core",
+        "required_by": [
+          "reference-data"
+        ],
+        "schema_version": "literal-write-evidence/v1",
+        "title": "Литеральные записи в хранилища и сообщения"
+      },
+      {
+        "artifact_kind": "physical-model",
+        "contract_status": "current",
+        "current_core_stage_ids": [],
+        "foundation_requirements": [],
+        "future_analyzer_id": null,
+        "mapping_status": "current_external_typed_artifact",
+        "optional_by": [
+          "sql-source-inventory"
+        ],
+        "producer_kind": "external",
+        "required_by": [],
+        "schema_version": "physical-model/v1",
+        "title": "Предоставленная физическая модель"
+      },
+      {
+        "artifact_kind": "physical-schema-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "db_schema_scan"
+        ],
+        "foundation_requirements": [
+          "physical-schema-index",
+          "repository-file-index"
+        ],
+        "future_analyzer_id": "physical-schema",
+        "mapping_status": "current_facts_proposed_typed_contract",
+        "optional_by": [
+          "conceptual-data-model"
+        ],
+        "producer_kind": "core",
+        "required_by": [],
+        "schema_version": "physical-schema-evidence/v1",
+        "title": "Физическая схема из репозитория"
+      },
+      {
+        "artifact_kind": "sql-analysis",
+        "contract_status": "current",
+        "current_core_stage_ids": [
+          "sql_column_lineage_scan",
+          "sql_join_graph_scan",
+          "sql_mart_inventory_scan",
+          "sql_mart_lineage_gap_build",
+          "sql_scan",
+          "sql_scoped_column_usage_scan",
+          "sql_scoped_direct_lineage_build",
+          "sql_scoped_projection_scan",
+          "sql_scoped_relation_scan",
+          "sql_scoped_write_target_binding",
+          "sql_script_semantic_inventory",
+          "sql_script_structure_scan",
+          "sql_source_usage_scan"
+        ],
+        "foundation_requirements": [
+          "repository-file-index",
+          "sql-parse-index"
+        ],
+        "future_analyzer_id": "sql-analysis",
+        "mapping_status": "current_typed_artifact_fixed_runtime",
+        "optional_by": [],
+        "producer_kind": "core",
+        "required_by": [
+          "sql-source-inventory"
+        ],
+        "schema_version": "sql-analysis/v1",
+        "title": "SQL-код и его семантика"
+      },
+      {
+        "artifact_kind": "table-observation-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_table_observation_build"
+        ],
+        "foundation_requirements": [
+          "java-structure-index",
+          "physical-schema-index"
+        ],
+        "future_analyzer_id": "java-table-observation",
+        "mapping_status": "current_facts_proposed_typed_contract",
+        "optional_by": [
+          "conceptual-data-model"
+        ],
+        "producer_kind": "core",
+        "required_by": [],
+        "schema_version": "table-observation-evidence/v1",
+        "title": "Наблюдения таблиц, ключей и связей"
+      },
+      {
+        "artifact_kind": "value-flow-evidence",
+        "contract_status": "proposed",
+        "current_core_stage_ids": [
+          "java_data_flow_build",
+          "java_field_flow_build",
+          "java_traceability_build"
+        ],
+        "foundation_requirements": [
+          "call-index",
+          "java-structure-index",
+          "repository-file-index",
+          "symbol-and-type-index"
+        ],
+        "future_analyzer_id": "value-flow",
+        "mapping_status": "current_fragmented_proposed_typed_contract",
+        "optional_by": [
+          "reference-data"
+        ],
+        "producer_kind": "core",
+        "required_by": [],
+        "schema_version": "value-flow-evidence/v1",
+        "title": "Потоки значений"
+      }
+    ],
+    "foundation_requirements": [
+      "call-index",
+      "configuration-index",
+      "java-structure-index",
+      "openapi-index",
+      "physical-schema-index",
+      "repository-file-index",
+      "sql-parse-index",
+      "symbol-and-type-index"
+    ],
+    "materializations": [
+      {
+        "availability": {
+          "business_knowledge_available_now": true,
+          "can_execute_through_target_contracts": false,
+          "current_runtime_bridge": "core code_conceptual_model_build + KLC common-data-model ingestion",
+          "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+          "status": "current_legacy",
+          "target_contract_status": "planned"
+        },
+        "capabilities": [
+          "common.data-model",
+          "common.effective-model",
+          "common.keys",
+          "common.relationships"
+        ],
+        "definition": "Compose structural, persistence, mapping and physical evidence into conceptual/effective entities, fields, associations, inheritance and logical-to-physical mappings.",
+        "knowledge_id": "conceptual-data-model",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "conceptual-data-model",
+        "materialized_marts": [
+          "conceptual-data-model",
+          "effective-field-model",
+          "logical-physical-mapping"
+        ],
+        "models": [
+          "conceptual-data-model/v1",
+          "effective-data-model/v1",
+          "logical-physical-model-mapping/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      {
+        "availability": {
+          "business_knowledge_available_now": true,
+          "can_execute_through_target_contracts": false,
+          "current_runtime_bridge": "Core reference_data_fact_base compact artifacts selected through current Task routing",
+          "explanation": "Знание доступно через текущий legacy-путь; целевая KLC materialization по typed evidence ещё не реализована.",
+          "status": "current_legacy",
+          "target_contract_status": "planned"
+        },
+        "capabilities": [
+          "suite.reference-data"
+        ],
+        "definition": "Compose declared values, literal writes, storage, lineage, interface and configuration evidence into a facts-only reference-data knowledge base.",
+        "knowledge_id": "reference-data",
+        "lifecycle": "planned_core_to_klc_migration",
+        "materialization_id": "reference-data",
+        "materialized_marts": [
+          "declared-value-sets",
+          "reference-data-candidate-views",
+          "reference-data-fact-base"
+        ],
+        "models": [
+          "declared-value-set/v1",
+          "reference-data-candidate-view/v1",
+          "reference-data-fact-base/v1"
+        ],
+        "scope": "repository_or_workspace"
+      },
+      {
+        "availability": {
+          "business_knowledge_available_now": true,
+          "can_execute_through_target_contracts": true,
+          "explanation": "Materialization уже использует самостоятельный типизированный вход.",
+          "status": "current_typed",
+          "target_contract_status": "current"
+        },
+        "capabilities": [
+          "sql.relation-field-inventory",
+          "sql.semantic-roles"
+        ],
+        "definition": "Materialize repository SQL statements, relations, field use, semantic roles and source-to-target evidence.",
+        "knowledge_id": "sql-source-inventory",
+        "lifecycle": "current_typed_input",
+        "materialization_id": "sql-analysis",
+        "materialized_marts": [
+          "sql-relation-field-inventory",
+          "sql-relation-semantic-roles"
+        ],
+        "models": [
+          "knowledge_layer_sql/v2"
+        ],
+        "scope": "repository_or_sql_source"
+      },
+      {
+        "availability": {
+          "business_knowledge_available_now": true,
+          "can_execute_through_target_contracts": false,
+          "explanation": "Materialization работает, но целевая evidence-граница ещё неполна.",
+          "status": "current_partial",
+          "target_contract_status": "partial"
+        },
+        "capabilities": [
+          "workspace.repository-interaction-boundaries",
+          "workspace.system-interactions"
+        ],
+        "definition": "Match repository interaction boundaries into inter-repository and inter-system interaction facts.",
+        "knowledge_id": "system-interactions",
+        "lifecycle": "current_partial_evidence_contract",
+        "materialization_id": "system-interactions",
+        "materialized_marts": [
+          "workspace-repository-interaction-boundaries",
+          "workspace-system-interactions"
+        ],
+        "models": [
+          "workspace_system_interaction/v5"
+        ],
+        "scope": "workspace"
+      }
+    ],
+    "task_suite_profile_policy": "internal_execution_provenance_only_not_user_configuration"
+  }
+}

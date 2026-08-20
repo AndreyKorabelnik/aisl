@@ -1,0 +1,227 @@
+{
+  "schema_version": "knowledge_api/v1",
+  "candidate_schema_version": "sql-target-candidates/v1",
+  "system_id": "datamart-profile-fl",
+  "revision_id": "rev-b8bd10a31ea280789a18e0e6",
+  "filters": {
+    "repo_id": "datamart_profile_fl",
+    "source_relation_hints": [
+      "birthplace"
+    ],
+    "source_column_hints": [
+      "regioncode"
+    ],
+    "business_entity_hints": [
+      "client"
+    ],
+    "max_results": 5
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "repo_id": "datamart_profile_fl",
+      "logical_target_name": "epk_client",
+      "target_relation_candidates": [
+        "custom_b2c_profile_fl.epk_client"
+      ],
+      "target_kind": "published_or_terminal",
+      "score": 87,
+      "reasons": [
+        "business_entity_primary_suffix",
+        "declared_workflow_target",
+        "target_consumed_outside_own_workflow"
+      ],
+      "workflow_contexts": [
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client.yaml",
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t0.yaml",
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1.yaml",
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t2.yaml",
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t3.yaml",
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t4.yaml"
+      ],
+      "workflow_context_count": 6,
+      "write_observations": [],
+      "read_observations": [
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_persdata_mapping/epk_persdata_mapping.sql",
+          "line_start": 1,
+          "relation_name": "custom_b2c_profile_fl.epk_client",
+          "usage_role": "from"
+        }
+      ],
+      "source_relation_matches": [],
+      "source_column_matches": [],
+      "semantic_roles": [
+        "external_source"
+      ],
+      "diagnostics": [
+        "source_column_hint_not_observed_in_candidate_context",
+        "source_relation_hint_not_observed_in_candidate_context"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo_id": "datamart_profile_fl",
+      "logical_target_name": "epk_client_doc",
+      "target_relation_candidates": [
+        "custom_b2c_profile_fl.epk_client_doc"
+      ],
+      "target_kind": "published_or_terminal",
+      "score": 73,
+      "reasons": [
+        "business_entity_token",
+        "declared_workflow_target",
+        "target_consumed_outside_own_workflow"
+      ],
+      "workflow_contexts": [
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_doc.yaml"
+      ],
+      "workflow_context_count": 1,
+      "write_observations": [],
+      "read_observations": [
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_persdata_mapping/epk_persdata_mapping.sql",
+          "line_start": 1,
+          "relation_name": "custom_b2c_profile_fl.epk_client_doc",
+          "usage_role": "from"
+        }
+      ],
+      "source_relation_matches": [],
+      "source_column_matches": [],
+      "semantic_roles": [
+        "external_source"
+      ],
+      "diagnostics": [
+        "source_column_hint_not_observed_in_candidate_context",
+        "source_relation_hint_not_observed_in_candidate_context"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo_id": "datamart_profile_fl",
+      "logical_target_name": "epk_client_email",
+      "target_relation_candidates": [
+        "custom_b2c_profile_fl.epk_client_email"
+      ],
+      "target_kind": "published_or_terminal",
+      "score": 73,
+      "reasons": [
+        "business_entity_token",
+        "declared_workflow_target",
+        "target_consumed_outside_own_workflow"
+      ],
+      "workflow_contexts": [
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_email.yaml"
+      ],
+      "workflow_context_count": 1,
+      "write_observations": [],
+      "read_observations": [
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/ddl/migration_D-13.007.00_epk_client_email.sql",
+          "line_start": 1,
+          "relation_name": "custom_b2c_profile_fl.epk_client_email",
+          "usage_role": "from"
+        }
+      ],
+      "source_relation_matches": [],
+      "source_column_matches": [],
+      "semantic_roles": [
+        "external_source"
+      ],
+      "diagnostics": [
+        "source_column_hint_not_observed_in_candidate_context",
+        "source_relation_hint_not_observed_in_candidate_context"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo_id": "datamart_profile_fl",
+      "logical_target_name": "epk_client_phonenumber",
+      "target_relation_candidates": [
+        "custom_b2c_profile_fl.epk_client_phonenumber"
+      ],
+      "target_kind": "published_or_terminal",
+      "score": 73,
+      "reasons": [
+        "business_entity_token",
+        "declared_workflow_target",
+        "target_consumed_outside_own_workflow"
+      ],
+      "workflow_contexts": [
+        "workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_phonenumber.yaml"
+      ],
+      "workflow_context_count": 1,
+      "write_observations": [],
+      "read_observations": [
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/epk_phone_mapping/epk_phone_mapping.sql",
+          "line_start": 1,
+          "relation_name": "custom_b2c_profile_fl.epk_client_phonenumber",
+          "usage_role": "from"
+        }
+      ],
+      "source_relation_matches": [],
+      "source_column_matches": [],
+      "semantic_roles": [
+        "external_source"
+      ],
+      "diagnostics": [
+        "source_column_hint_not_observed_in_candidate_context",
+        "source_relation_hint_not_observed_in_candidate_context"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo_id": "datamart_profile_fl",
+      "logical_target_name": "documentattributeinstance_union",
+      "target_relation_candidates": [
+        "custom_b2c_profile_fl_stg.documentattributeinstance_union"
+      ],
+      "target_kind": "published_or_terminal",
+      "score": 70,
+      "reasons": [
+        "observed_data_write",
+        "observed_target_definition",
+        "target_consumed_outside_own_workflow"
+      ],
+      "workflow_contexts": [],
+      "workflow_context_count": 0,
+      "write_observations": [
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_link_client_x_client_uddk/documentattributeinstance_union.sql",
+          "line_start": 5,
+          "operation_kind": "create_table",
+          "target_relation_name": "custom_b2c_profile_fl_stg.documentattributeinstance_union",
+          "resolution_status": "resolved"
+        },
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_link_client_x_client_uddk/documentattributeinstance_union.sql",
+          "line_start": 16,
+          "operation_kind": "insert",
+          "target_relation_name": "custom_b2c_profile_fl_stg.documentattributeinstance_union",
+          "resolution_status": "partial"
+        }
+      ],
+      "read_observations": [
+        {
+          "file": "hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml/t_link_client_x_client_uddk/t_link_client_x_client_uddk_stg.sql",
+          "line_start": 14,
+          "relation_name": "custom_b2c_profile_fl_stg.documentattributeinstance_union",
+          "usage_role": "from"
+        }
+      ],
+      "source_relation_matches": [],
+      "source_column_matches": [],
+      "semantic_roles": [
+        "internal_intermediate"
+      ],
+      "diagnostics": [
+        "source_column_hint_not_observed_in_candidate_context",
+        "source_relation_hint_not_observed_in_candidate_context"
+      ]
+    }
+  ],
+  "candidate_count": 77,
+  "returned_count": 5,
+  "diagnostics": []
+}

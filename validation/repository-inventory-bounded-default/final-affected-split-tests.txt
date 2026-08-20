@@ -1,0 +1,16 @@
+=== packages/knowledge-layer-core/tests/test_repository_inventory_materialization.py ===
+..                                                                       [100%]
+2 passed in 0.49s
+EXIT=0
+=== packages/knowledge-layer-core/tests/test_materialization_contracts.py ===
+........                                                                 [100%]
+8 passed in 0.12s
+EXIT=0
+=== packages/static-analysis-runner/tests/test_input_preparation.py ===
+....                                                                     [100%]
+4 passed in 1.16s
+EXIT=0
+=== packages/static-analysis-runner/tests/test_knowledge_execution_planning.py ===
+...............                                                          [100%]
+15 passed in 0.27s
+EXIT=0

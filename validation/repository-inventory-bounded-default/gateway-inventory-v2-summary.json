@@ -1,0 +1,221 @@
+{
+  "elapsed_s": 0.527,
+  "format": "repository-inventory/v2",
+  "identity": {
+    "repository_id": "registry-gw",
+    "repository_name": "GW Update Phone Flags",
+    "source_kind": "bitbucket",
+    "repository_url": "https://bitbucket.example/scm/gw/update-phone-flags.git",
+    "default_branch": "master"
+  },
+  "summary": {
+    "root_file_count": 91,
+    "extension_family_count": 8,
+    "structural_family_count": 10,
+    "novel_candidate_count": 8,
+    "detected_concepts": [
+      "system_interaction"
+    ],
+    "detected_concept_count": 1,
+    "unclassified_candidate_count": 8,
+    "inbound_interface_count": 2,
+    "outbound_interface_count": 0,
+    "technology_count": 4
+  },
+  "technologies": [
+    {
+      "technology_id": "repository_inventory_technology_4b95e424375ce8af02c1",
+      "category": "build",
+      "technology": "maven",
+      "status": "strongly_supported",
+      "confidence": "strongly_supported_inference",
+      "basis": {
+        "observed_file_markers": [
+          "pom.xml"
+        ],
+        "source_artifact_id": "repository_structure_1f28f30abef1886e290b4ab9"
+      }
+    },
+    {
+      "technology_id": "repository_inventory_technology_353316257713734bae77",
+      "category": "container",
+      "technology": "docker",
+      "status": "strongly_supported",
+      "confidence": "strongly_supported_inference",
+      "basis": {
+        "observed_file_markers": [
+          "dockerfile"
+        ],
+        "source_artifact_id": "repository_structure_1f28f30abef1886e290b4ab9"
+      }
+    },
+    {
+      "technology_id": "repository_inventory_technology_6c7ee0f8e1f43be8fc0a",
+      "category": "deployment",
+      "technology": "helm",
+      "status": "strongly_supported",
+      "confidence": "strongly_supported_inference",
+      "basis": {
+        "observed_file_markers": [
+          "Chart.yaml"
+        ],
+        "source_artifact_id": "repository_structure_1f28f30abef1886e290b4ab9"
+      }
+    },
+    {
+      "technology_id": "repository_inventory_technology_94f9270955d6a9e1d19e",
+      "category": "api_spec",
+      "technology": "openapi",
+      "status": "strongly_supported",
+      "confidence": "strongly_supported_inference",
+      "basis": {
+        "observed_file_markers": [
+          "openapi.yaml"
+        ],
+        "source_artifact_id": "repository_structure_1f28f30abef1886e290b4ab9"
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "concept_id": "data_model",
+      "status": "unresolved",
+      "evidence_evaluation_status": "evaluated",
+      "concept_score": null
+    },
+    {
+      "concept_id": "data_flow",
+      "status": "not_evaluated",
+      "evidence_evaluation_status": "not_evaluated",
+      "concept_score": null
+    },
+    {
+      "concept_id": "system_interaction",
+      "status": "strongly_supported",
+      "evidence_evaluation_status": "evaluated",
+      "concept_score": 65.85
+    },
+    {
+      "concept_id": "workflow",
+      "status": "not_evaluated",
+      "evidence_evaluation_status": "not_evaluated",
+      "concept_score": null
+    },
+    {
+      "concept_id": "persistence",
+      "status": "not_evaluated",
+      "evidence_evaluation_status": "not_evaluated",
+      "concept_score": null
+    },
+    {
+      "concept_id": "reference_data",
+      "status": "not_evaluated",
+      "evidence_evaluation_status": "not_evaluated",
+      "concept_score": null
+    }
+  ],
+  "inputs": {
+    "evaluation_status": "evaluated",
+    "items": [
+      {
+        "interface_id": "repository_inventory_interface_e8ab4cb8ed9853bb25bc",
+        "direction": "inbound",
+        "boundary_kind": "rest_request",
+        "protocol": "rest",
+        "operation": "updatePhoneFlags",
+        "endpoint_or_topic": "/updatePhoneFlags",
+        "http_method": "POST",
+        "peer_system": null,
+        "peer_resolution_status": "unresolved",
+        "evidence_status": "observed",
+        "source_artifact_id": "interaction_boundary_f1d704d576c7ad2682603ce0",
+        "basis": {
+          "interface_id": "interface_000001",
+          "service_aliases": [],
+          "source_artifact_id": "interaction_boundary_f1d704d576c7ad2682603ce0"
+        }
+      },
+      {
+        "interface_id": "repository_inventory_interface_7321453f2f1b7a0f837c",
+        "direction": "inbound",
+        "boundary_kind": "rest_request",
+        "protocol": "rest",
+        "operation": "ArmeriaHttpController.updatePhoneFlags",
+        "endpoint_or_topic": "/updatePhoneFlags",
+        "http_method": "POST",
+        "peer_system": null,
+        "peer_resolution_status": "unresolved",
+        "evidence_status": "observed",
+        "source_artifact_id": "interaction_boundary_f1d704d576c7ad2682603ce0",
+        "basis": {
+          "interface_id": "interface_000003",
+          "service_aliases": [],
+          "source_artifact_id": "interaction_boundary_f1d704d576c7ad2682603ce0"
+        }
+      }
+    ]
+  },
+  "outputs": {
+    "evaluation_status": "evaluated",
+    "items": []
+  },
+  "storage": {
+    "evaluation_status": "not_evaluated",
+    "official_evidence": []
+  },
+  "data_footprint": {
+    "sql_files": 0,
+    "data_model": {
+      "concept_status_id": "repository_inventory_concept_status_93a336fd1cb6d0739fec",
+      "concept_id": "data_model",
+      "status": "unresolved",
+      "confidence": "unresolved",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "evaluated",
+      "basis": {
+        "available_relevant_evidence": [
+          "data-model-candidate-evidence"
+        ],
+        "expected_evidence": [
+          "data-model-candidate-evidence",
+          "sql-analysis"
+        ]
+      },
+      "claim_boundary": "candidate representation of a data model only; no logical/physical correctness or business meaning is asserted"
+    },
+    "reference_data": {
+      "concept_status_id": "repository_inventory_concept_status_30470ff89cb47cb8be02",
+      "concept_id": "reference_data",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "expected_evidence": [
+          "reference-data-evidence"
+        ]
+      },
+      "claim_boundary": "reference-data candidate only; NSI/master-data ownership, origin and lifecycle are not inferred"
+    },
+    "data_flow": {
+      "concept_status_id": "repository_inventory_concept_status_582c25862e2b7a59eb7a",
+      "concept_id": "data_flow",
+      "status": "not_evaluated",
+      "confidence": "not_evaluated",
+      "concept_score": null,
+      "top_family_id": null,
+      "evidence_evaluation_status": "not_evaluated",
+      "basis": {
+        "available_relevant_evidence": [],
+        "expected_evidence": [
+          "sql-analysis",
+          "value-flow-evidence"
+        ]
+      },
+      "claim_boundary": "data-flow/transformation candidate only; no end-to-end business lineage correctness is asserted"
+    }
+  }
+}

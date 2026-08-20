@@ -1,0 +1,25 @@
+report_type: workspace-interaction
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- Which systems interact through observed outbound-to-inbound boundaries?
+- Which business operations and data groups cross those boundaries?
+- Which interactions are confirmed, probable, ambiguous, or unresolved?
+- Which architecture conclusions are facts and which remain interpretations?
+required_headings:
+- Краткий вывод
+- Бизнесовая картина контура
+- Роли систем
+- Основные бизнес-взаимодействия
+- Какие данные проходят через контур
+- Архитектурные выводы
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance
+appendix_policy:
+  limitations_and_coverage: Приложение A. Полнота анализа и ограничения доказательности
+  ambiguities_and_questions: Приложение B. Неоднозначности и вопросы для уточнения
+  evidence_and_provenance: Приложение C. Технические доказательства и provenance

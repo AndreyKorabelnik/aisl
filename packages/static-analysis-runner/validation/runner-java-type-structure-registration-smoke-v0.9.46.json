@@ -1,0 +1,32 @@
+{
+  "analyzer_execution_count": 1,
+  "artifact_count": 1,
+  "artifact_kind": "java-type-structure-evidence",
+  "artifact_schema_version": "java-type-structure-evidence/v1",
+  "artifact_status": "completed",
+  "content_fingerprint": "553d460d0affd42cf1a269043d586a990bf4d07218c69a6e091ff549b3bff613",
+  "core_version": "0.43.26",
+  "coverage": {
+    "ambiguous_type_reference_count": 0,
+    "annotation_declaration_count": 0,
+    "coverage_status": "complete",
+    "enum_constant_declaration_count": 0,
+    "field_declaration_count": 5,
+    "inheritance_declaration_count": 1,
+    "java_files_discovered": 3,
+    "java_files_failed": 0,
+    "java_files_in_scope": 3,
+    "java_files_parsed": 3,
+    "java_files_with_parse_errors": 0,
+    "type_declaration_count": 3,
+    "type_reference_count": 2,
+    "unresolved_type_reference_count": 0,
+    "unsupported_declaration_count": 0
+  },
+  "diagnostic_count": 0,
+  "repository_file_count": 3,
+  "runner_version": "0.9.46",
+  "schema_version": "runner_java_type_structure_registration_smoke/v1",
+  "status": "completed",
+  "task_or_suite_semantic_keys_present": false
+}

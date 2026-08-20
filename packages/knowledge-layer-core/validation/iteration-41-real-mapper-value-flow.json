@@ -1,0 +1,61 @@
+{
+  "schema_version": "iteration_41_real_mapper_validation/v1",
+  "validation_case": "real Java mapper transformation and rename classification",
+  "source_repository": "gw-sberid-update-phone-flags",
+  "source_file": "gw-sberid-update-phone-flags-boot-starter/src/main/java/ru/sbrf/ucp/synapse/sberid/update/phoneflags/service/oms/OmsToIndividualMapper.java",
+  "core_version": "0.40.9",
+  "knowledge_layer_core_version": "0.44.0",
+  "core_result": {
+    "field_occurrence_count": 870,
+    "field_flow_edge_count": 626
+  },
+  "knowledge_layer_result": {
+    "value_node_count": 870,
+    "direct_value_flow_edge_count": 626,
+    "transformation_counts": {
+      "identity": 407,
+      "formatted": 11,
+      "derived": 193,
+      "unknown": 15
+    },
+    "confirmed_field_rename_count": 55
+  },
+  "observed_examples": [
+    {
+      "source": "name.nonStandartizedSurname",
+      "target": "type.familyName",
+      "source_edge_kind": "setter_argument",
+      "transformation_kind": "identity",
+      "naming_relation": "renamed",
+      "value_preservation": "preserved"
+    },
+    {
+      "source": "dateFormat.format()",
+      "target": "type.birthDate",
+      "source_edge_kind": "setter_argument",
+      "transformation_kind": "formatted",
+      "value_preservation": "partially_preserved",
+      "derivation_kind": "formatted",
+      "derivation_source_count": 1
+    },
+    {
+      "source": "OmsToIndividualMapper.toCode()",
+      "target": "type.phoneTypeCode",
+      "source_edge_kind": "setter_argument",
+      "transformation_kind": "derived",
+      "value_preservation": "transformed",
+      "derivation_kind": "derived",
+      "derivation_source_count": 1
+    },
+    {
+      "source": "Boolean.TRUE",
+      "target": "*.standardFlag",
+      "source_node_kind": "constant",
+      "naming_relation": "not_applicable"
+    }
+  ],
+  "notes": [
+    "No repository-, class-, method- or field-specific conditions were added.",
+    "The validation source is a regression case only; classification uses generic observed edge and expression evidence."
+  ]
+}

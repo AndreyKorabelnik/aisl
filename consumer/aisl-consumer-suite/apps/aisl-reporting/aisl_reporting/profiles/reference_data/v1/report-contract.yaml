@@ -1,0 +1,30 @@
+report_type: reference-data-report
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- Which observed objects are reference-data/value-set candidates?
+- Which candidates have repository-local definition evidence and by which mode (runtime, seed SQL, source file, code)?
+- Which candidates are externally sourced, mixed, state/config/operation vocabularies, or unresolved?
+- Which candidates satisfy the agreed own-NSI criterion and with what confidence/basis?
+- Which global authority/source-of-truth questions remain unresolved outside the analyzed context?
+required_headings:
+- Краткий вывод
+- Карта НСИ и справочных данных
+- Полный каталог кандидатов
+- Подробное описание ключевых кандидатов
+- Наблюдаемые значения и представления
+- Чтение, изменение и наполнение
+- Локальное ведение, встроенные значения и внешние реплики
+- Дублирование, расхождения и конфликты
+- Архитектурные и управленческие выводы
+- Рекомендации и следующий шаг
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance
+appendix_policy:
+  limitations_and_coverage: Приложение A. Полнота анализа и ограничения доказательности
+  ambiguities_and_questions: Приложение B. Неоднозначности и вопросы для уточнения
+  evidence_and_provenance: Приложение C. Технические доказательства и provenance

@@ -1,0 +1,3 @@
+49 passed in 11.92s
+Command groups: knowledge execution planning, knowledge execution, knowledge planning, evidence executor, materialization executor, CLI.
+Environment included knowledge-layer-core 0.55.0 and supplied offline DuckDB wheel.

@@ -1,0 +1,27 @@
+{
+  "name": "aisl-workbench",
+  "version": "0.4.1",
+  "description": "AISL Platform browser workbench runtime package",
+  "type": "module",
+  "scripts": {
+    "vendor-sdk": "node scripts/vendor-sdk.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "node tests/workbench.test.mjs",
+    "serve": "node server/server.mjs"
+  },
+  "dependencies": {
+    "aisl-sdk-typescript": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "bin": {
+    "aisl-workbench": "bin/aisl-workbench.mjs"
+  },
+  "files": [
+    "bin/",
+    "server/",
+    "public/"
+  ]
+}

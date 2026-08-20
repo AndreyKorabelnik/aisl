@@ -1,0 +1,49 @@
+profile_id: git-change-sql-spark-complexity-assessment
+profile_version: 1
+
+name: Git change complexity evidence for SQL/Spark SQL repositories
+
+source_type: sql_spark_config
+git_change_snapshot_analyzer: sql
+workspace_types:
+  - sql
+  - spark_sql
+  - config
+
+description: >
+  Technical static analysis profile used by analyze-git-change for BEFORE and
+  AFTER snapshots of SQL/Spark SQL/config repositories. It avoids Java-specific
+  analysis stages and uses the typed SQL analyzer to extract statements, relations, object
+  dependencies, scoped joins, direct/recursive column lineage, placeholders
+  and explicit coverage diagnostics. The profile
+  extracts change evidence only; it does not evaluate people, authors,
+  productivity, KPIs or code ownership.
+
+goal:
+  primary_question: >
+    Which SQL/Spark SQL data model, lineage, transformation, dependency,
+    configuration and coverage changes are visible between BEFORE and AFTER
+    snapshots of a git change?
+
+evidence_requirements:
+  - artifact_kind: sql-analysis
+    schema_version: sql-analysis/v1
+    parameters:
+      project_code: inherited
+      system_name: inherited
+
+output_contract:
+  intent: git_change_sql_spark_before_after_evidence_workspace
+  primary_interface: evidence_access_api
+  strict_evidence_policy: deterministic_change_evidence_not_person_evaluation
+  policy:
+    person_evaluation: forbidden
+    author_committer_metadata_use: traceability_only_not_scoring
+    java_source_inspection: not_applicable
+    primary_complexity_evidence:
+      - sql_object_delta
+      - sql_column_lineage_delta
+      - transformation_delta
+      - dependency_delta
+      - coverage_delta
+      - test_doc_config_delta

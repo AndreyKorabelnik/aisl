@@ -1,0 +1,27 @@
+{
+  "status": "downstream_interpretation_required",
+  "input_contract": {
+    "type_component": {
+      "source": "target_alias"
+    },
+    "key_component": {
+      "source": "target_storage_key"
+    },
+    "physical_join_confirmed": false
+  },
+  "generic_renderer_policy": {
+    "may_expose_components": true,
+    "must_not_invent": [
+      "separator",
+      "alias_normalization",
+      "container_representation",
+      "sql_function"
+    ],
+    "explicit_profile_or_user_rule_required": true
+  },
+  "expected_result": {
+    "join_method": "storage_reference_requires_encoding",
+    "requires_encoding_interpretation": true,
+    "physical_join_confirmed": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "active_revision_id": "rev-625a711bd629802a5370c4cb",
+  "created_at": "2026-07-30T11:12:40.140351Z",
+  "description": "Smoke published AT900",
+  "display_name": "AT900 Client Profile",
+  "metadata": {
+    "owner": "code-analysis"
+  },
+  "revision_count": 1,
+  "system_id": "client_profile",
+  "updated_at": "2026-07-30T11:13:29.792783Z"
+}

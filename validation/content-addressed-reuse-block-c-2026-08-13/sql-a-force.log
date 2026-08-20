@@ -1,0 +1,1165 @@
+Checking code-analyzer-core version
+0.44.23a3
+BUILD analyzer:java-model-storage-analyzer:ucp-api reason=force_rebuild
+BUILD analyzer:java-type-structure-analyzer:ucp-api reason=force_rebuild
+Executing Core evidence analyzers for ucp-api
+{"analyzer_execution_count": 2, "evidence_artifact_count": 2, "execution_id": 
+"core_evidence_execution_b4ca943fe8dcd12f44114d8a", "output": 
+"/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/001-sour
+ce-source_snapshot_4b6008b51459bf6fc1400bfb/core-evidence", 
+"result_fingerprint": 
+"15725e30c3db11d79d7da214d45159af33cea8a816b4998a73a55f4746a00a19", 
+"schema_version": "core_evidence_execution_result/v1", "status": "partial"}
+BUILD analyzer:java-model-storage-analyzer:ucp-tsa-v4 reason=force_rebuild
+BUILD analyzer:java-type-structure-analyzer:ucp-tsa-v4 reason=force_rebuild
+Executing Core evidence analyzers for ucp-tsa-v4
+{"analyzer_execution_count": 2, "evidence_artifact_count": 2, "execution_id": 
+"core_evidence_execution_237f5b5650378edd319b76ec", "output": 
+"/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/002-sour
+ce-source_snapshot_05b452494b1e7a4992c784b8/core-evidence", 
+"result_fingerprint": 
+"13c21359bb351718e9f02311c8efd1d10c87cf606455541b736d9c39a4cc10e2", 
+"schema_version": "core_evidence_execution_result/v1", "status": "completed"}
+BUILD analyzer:sql-analysis-analyzer:datamart_profile_fl reason=force_rebuild
+Executing Core evidence analyzers for datamart_profile_fl
+{"analyzer_execution_count": 1, "evidence_artifact_count": 1, "execution_id": 
+"core_evidence_execution_1073240b7a708b016a098b12", "output": 
+"/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/003-sour
+ce-source_snapshot_1fbcee64bf96a8ce707a782f/core-evidence", 
+"result_fingerprint": 
+"0da79f65ed61146d6f1e2321d42be604d2e300932f0a3daddd91c6c935f5547f", 
+"schema_version": "core_evidence_execution_result/v1", "status": "partial"}
+BUILD materialization:code-declared-data-model reason=force_rebuild (1/8)
+[materialization:code-declared-data-model] started (1/8)
+[materialization:code-declared-data-model] worker started
+[materialization:code-declared-data-model][stderr] materialization code-declared-data-model handler started
+[materialization:code-declared-data-model][stderr] materialization code-declared-data-model handler completed
+[materialization:code-declared-data-model] worker exited code=0; duration=12.3s
+[materialization:code-declared-data-model] completed; duration=12.3s; counts: code_declared_annotation=2507, code_declared_effective_field=7165, code_declared_enum_constant=77, code_declared_field=6045, code_declared_inheritance=984, code_declared_model_build=1, code_declared_model_gap=31, code_declared_model_source=2, code_declared_relationship=1573, code_declared_source_unit=1061, code_declared_type=1326, code_declared_type_reference=4246
+BUILD materialization:model-storage-semantics reason=force_rebuild (2/8)
+[materialization:model-storage-semantics] started (2/8)
+[materialization:model-storage-semantics] worker started
+[materialization:model-storage-semantics][stderr] materialization model-storage-semantics handler started
+[materialization:model-storage-semantics][stderr] materialization model-storage-semantics handler completed
+[materialization:model-storage-semantics] worker exited code=0; duration=7.2s
+[materialization:model-storage-semantics] completed; duration=7.2s; counts: model_storage_build=1, model_storage_key_lineage=238, model_storage_record=723, model_storage_reference=250, model_storage_reference_derivation=1436, model_storage_source=2
+BUILD materialization:physical-model reason=force_rebuild (3/8)
+[materialization:physical-model] started (3/8)
+[materialization:physical-model] worker started
+[materialization:physical-model][stderr] materialization physical-model handler started
+[materialization:physical-model][stderr] materialization physical-model handler completed
+[materialization:physical-model] worker exited code=0; duration=1.6s
+[materialization:physical-model] completed; duration=1.6s; counts: physical_model_build=1, physical_model_column=11940, physical_model_gap=0, physical_model_key=498, physical_model_relationship=370, physical_model_source=1, physical_model_table=522
+BUILD materialization:sql-analysis reason=force_rebuild (4/8)
+[materialization:sql-analysis] started (4/8)
+[materialization:sql-analysis] worker started
+[materialization:sql-analysis][stderr] materialization sql-analysis handler started
+[materialization:sql-analysis][stderr] sql-analysis build repo=datamart_profile_fl memory_limit=4GB threads=1
+[materialization:sql-analysis][stderr] sql-analysis database initialize started
+[materialization:sql-analysis][stderr] sql-analysis database initialize completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest all facts started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_statement records=475 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_statement records=475 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_statement records=1869 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_statement records=1869 completed; duration=0.2s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_call records=835 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_call records=835 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_binding records=995 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_binding records=995 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_embedded_sql records=140 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_embedded_sql records=140 completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_invocation records=158 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_script_invocation records=158 completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_semantic_placeholder records=786 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_semantic_placeholder records=786 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_workflow_binding records=3142 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_workflow_binding records=3142 completed; duration=0.4s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_select_scope records=1244 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_select_scope records=1244 completed; duration=0.3s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_relation records=1566 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_relation records=1566 completed; duration=0.5s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_column_usage records=12319 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_column_usage records=12319 completed; duration=1.2s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_projection records=8239 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_projection records=8239 completed; duration=0.8s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_write_target records=182 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_write_target records=182 completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_target_projection_binding records=848 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_target_projection_binding records=848 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_join_edge records=325 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_join_edge records=325 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_direct_column_lineage records=1049 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_direct_column_lineage records=1049 completed; duration=0.2s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_recursive_column_lineage records=1353 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_recursive_column_lineage records=1353 completed; duration=0.7s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_object_dependency records=539 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_object_dependency records=539 completed; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_scoped_lineage_gap records=70 started
+[materialization:sql-analysis][stderr] sql-analysis ingest sql_scoped_lineage_gap records=70 completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis ingest summary sql_statement=475, sql_script_statement=1869, sql_script_call=835, sql_script_binding=995, sql_script_embedded_sql=140, sql_script_invocation=158, sql_semantic_placeholder=786, sql_workflow_binding=3142, sql_select_scope=1244, sql_relation=1566, sql_column_usage=12319, sql_projection=8239, sql_write_target=182, sql_target_projection_binding=848, sql_join_edge=325, sql_direct_column_lineage=1049, sql_recursive_column_lineage=1353, sql_object_dependency=539, sql_scoped_lineage_gap=70
+[materialization:sql-analysis][stderr] sql-analysis ingest all facts completed; duration=4.9s
+[materialization:sql-analysis][stderr] sql-analysis workflow_context started
+[materialization:sql-analysis][stderr] workflow-context reset derived tables started
+[materialization:sql-analysis][stderr] workflow-context reset derived tables completed; duration=0.0s
+[materialization:sql-analysis][stderr] workflow-context load known files and bindings started
+[materialization:sql-analysis][stderr] workflow-context load known files and bindings completed; duration=0.1s
+[materialization:sql-analysis][stderr] workflow-context inventory known_files=419 bindings=3142
+[materialization:sql-analysis][stderr] workflow-context binding references discovered=260; duration=0.2s
+[materialization:sql-analysis][stderr] workflow-context script invocation references total=418; unique_templates=145; duration=0.0s
+[materialization:sql-analysis][stderr] workflow-context file references published=418; duration=0.0s
+[materialization:sql-analysis][stderr] workflow-context placeholders loaded files=228 roots=113; duration=0.0s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=50/113 context_files=278 resolutions=0 elapsed=0.0s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=100/113 context_files=2204 resolutions=205 elapsed=9.7s
+[materialization:sql-analysis][stderr] workflow-context traversal roots=113/113 context_files=2521 resolutions=377 elapsed=11.8s
+[materialization:sql-analysis][stderr] workflow-context traversal completed; context_files=2521 resolutions=377; duration=11.8s
+[materialization:sql-analysis][stderr] workflow-context context rows published=2521; duration=0.2s
+[materialization:sql-analysis][stderr] workflow-context placeholder resolutions published=377; duration=0.1s
+[materialization:sql-analysis][stderr] sql-analysis workflow_context completed; duration=12.5s
+[materialization:sql-analysis][stderr] sql-analysis workflow_context summary={'known_file_count': 419, 'workflow_context_count': 113, 'file_reference_count': 418, 'resolved_file_reference_count': 180, 'ambiguous_file_reference_count': 23, 'unresolved_file_reference_count': 215, 'workflow_context_file_count': 2521, 'placeholder_binding_resolution_count': 377, 'placeholder_binding_by_status': {'partial': 135, 'probable': 27, 'resolved': 215}}
+[materialization:sql-analysis][stderr] sql-analysis workflow_target_lineage started
+[materialization:sql-analysis][stderr] workflow-target-lineage derive producer observations started
+[materialization:sql-analysis][stderr] workflow-target-lineage derive producer observations completed; duration=0.2s
+[materialization:sql-analysis][stderr] workflow-target-lineage producer observations materializations=973 workflow_dependencies=33
+[materialization:sql-analysis][stderr] workflow-target-lineage build producer traversal started
+[materialization:sql-analysis][stderr] workflow-target-lineage build producer traversal completed; duration=0.2s
+[materialization:sql-analysis][stderr] workflow-target-lineage resolved sql contexts=469
+[materialization:sql-analysis][stderr] workflow-target-lineage script-seeded traversal started
+[materialization:sql-analysis][stderr] workflow-target-lineage script-seeded traversal completed; duration=21.7s; transforms=24; target_columns=576; lineage_paths=4571; gaps=101
+[materialization:sql-analysis][stderr] workflow-target-lineage materialization-seeded traversal started; target_pairs=119
+[materialization:sql-analysis][stderr] workflow-target-lineage target 1/119 started; table=interim_epk_client_individual; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t0_individual.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 1/119 contract resolved; table=interim_epk_client_individual; columns=21; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 1/119 completed; table=interim_epk_client_individual; duration=0.0s; new_lineage_paths=29; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 2/119 started; table=interim_epk_client_birthplace; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_demographics_education_riskprofile.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 2/119 contract resolved; table=interim_epk_client_birthplace; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=birth_place; raw_paths=108; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=row_actual_from; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=row_actual_to; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage target 2/119 completed; table=interim_epk_client_birthplace; duration=0.0s; new_lineage_paths=53; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 3/119 started; table=interim_epk_client_currencyresident; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_demographics_education_riskprofile.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 3/119 contract resolved; table=interim_epk_client_currencyresident; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=currency_resident_flag; raw_paths=108; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=row_actual_from; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=row_actual_to; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage target 3/119 completed; table=interim_epk_client_currencyresident; duration=0.0s; new_lineage_paths=53; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 4/119 started; table=interim_epk_client_deathinfo; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_demographics_education_riskprofile.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 4/119 contract resolved; table=interim_epk_client_deathinfo; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=death_info_channel; raw_paths=107; terminal_facts=21
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=deathinfo_channel_cd; raw_paths=107; terminal_facts=21
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=row_actual_from; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=row_actual_to; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage target 4/119 completed; table=interim_epk_client_deathinfo; duration=0.0s; new_lineage_paths=72; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 5/119 started; table=interim_epk_client_education; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_demographics_education_riskprofile.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 5/119 contract resolved; table=interim_epk_client_education; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 5/119 completed; table=interim_epk_client_education; duration=0.0s; new_lineage_paths=8; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 6/119 started; table=interim_epk_client_maritalstatus; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_demographics_education_riskprofile.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 6/119 contract resolved; table=interim_epk_client_maritalstatus; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 6/119 completed; table=interim_epk_client_maritalstatus; duration=0.0s; new_lineage_paths=8; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 7/119 started; table=interim_epk_client_riskprofile; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_demographics_education_riskprofile.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 7/119 contract resolved; table=interim_epk_client_riskprofile; columns=11; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=investinghorizon; raw_paths=132; terminal_facts=26
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=riskprofile_start_dt; raw_paths=134; terminal_facts=28
+[materialization:sql-analysis][stderr] workflow-target-lineage target 7/119 completed; table=interim_epk_client_riskprofile; duration=0.0s; new_lineage_paths=60; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 8/119 started; table=interim_epk_client_docs; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_docs.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 8/119 contract resolved; table=interim_epk_client_docs; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=doc_number; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=doc_series; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=row_actual_from; raw_paths=160; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=row_actual_to; raw_paths=160; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage target 8/119 completed; table=interim_epk_client_docs; duration=0.0s; new_lineage_paths=55; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 9/119 started; table=interim_epk_client_docs_bv; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_docs.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 9/119 contract resolved; table=interim_epk_client_docs_bv; columns=16; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_active_flag; raw_paths=327; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_number; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_series; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_valid_flag; raw_paths=32; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=part_1_month; raw_paths=160; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_actual_from; raw_paths=160; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_actual_to; raw_paths=160; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_hash; raw_paths=367; terminal_facts=43
+[materialization:sql-analysis][stderr] workflow-target-lineage target 9/119 completed; table=interim_epk_client_docs_bv; duration=0.1s; new_lineage_paths=165; new_gaps=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 10/119 started; table=interim_epk_client_distantmanager; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_domain_client_distantmanager.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 10/119 contract resolved; table=interim_epk_client_distantmanager; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=pon_channel_nflag; raw_paths=30; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=pon_managercode; raw_paths=32; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=row_actual_from; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=row_actual_to; raw_paths=12; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage target 10/119 completed; table=interim_epk_client_distantmanager; duration=0.0s; new_lineage_paths=49; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 11/119 started; table=interim_epk_client_domain_client; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_domain_client_distantmanager.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 11/119 contract resolved; table=interim_epk_client_domain_client; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=row_actual_from; raw_paths=18; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=row_actual_to; raw_paths=18; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=segment_crm; raw_paths=62; terminal_facts=20
+[materialization:sql-analysis][stderr] workflow-target-lineage target 11/119 completed; table=interim_epk_client_domain_client; duration=0.0s; new_lineage_paths=47; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 12/119 started; table=interim_epk_client_literacy; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_literacy_selfemployment_relgroups.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 12/119 contract resolved; table=interim_epk_client_literacy; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=literacy_flag; raw_paths=108; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=row_actual_from; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=row_actual_to; raw_paths=50; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage target 12/119 completed; table=interim_epk_client_literacy; duration=0.0s; new_lineage_paths=53; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 13/119 started; table=interim_epk_client_relgroups; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_literacy_selfemployment_relgroups.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 13/119 contract resolved; table=interim_epk_client_relgroups; columns=22; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bank_client_flag; raw_paths=508; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_155_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_156_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_157_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_158_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_159_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_160_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_161_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_162_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=dzo_60_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=incapable_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=militpens_27_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=rel_groups; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=row_actual_from; raw_paths=116; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=row_actual_to; raw_paths=116; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=sbrf_employee_59_nflag; raw_paths=254; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=segment; raw_paths=1016; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=segment_cd; raw_paths=1016; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage target 13/119 completed; table=interim_epk_client_relgroups; duration=0.5s; new_lineage_paths=865; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 14/119 started; table=interim_epk_client_selfemployment; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t1_literacy_selfemployment_relgroups.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 14/119 contract resolved; table=interim_epk_client_selfemployment; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=row_actual_from; raw_paths=44; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=row_actual_to; raw_paths=44; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=selfemployment_nflag; raw_paths=94; terminal_facts=18
+[materialization:sql-analysis][stderr] workflow-target-lineage target 14/119 completed; table=interim_epk_client_selfemployment; duration=0.0s; new_lineage_paths=45; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 15/119 started; table=interim_epk_client_citizenship; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t2_emigration.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 15/119 contract resolved; table=interim_epk_client_citizenship; columns=16; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_citizenship_cntry; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_citizenship_cntry_id; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_citizenship_cntry_startdate; raw_paths=113; terminal_facts=25
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_emigration_qc; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_cntry; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_cntry_id; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_cntry_startdate; raw_paths=113; terminal_facts=25
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_qty; raw_paths=111; terminal_facts=23
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=emigration_qc; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=row_actual_from; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=row_actual_to; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=russian_citizen_flag; raw_paths=112; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage target 15/119 completed; table=interim_epk_client_citizenship; duration=0.2s; new_lineage_paths=276; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 16/119 started; table=interim_epk_client_emigration_bv; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t2_emigration.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 16/119 contract resolved; table=interim_epk_client_emigration_bv; columns=19; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=emigr_active_flag; raw_paths=111; terminal_facts=23
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=part_1_month; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=row_actual_from; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=row_actual_to; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=row_hash; raw_paths=115; terminal_facts=27
+[materialization:sql-analysis][stderr] workflow-target-lineage target 16/119 completed; table=interim_epk_client_emigration_bv; duration=0.0s; new_lineage_paths=119; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 17/119 started; table=interim_epk_client_birthdate; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t3_cent_deathdate_birthdate_gender.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 17/119 contract resolved; table=interim_epk_client_birthdate; columns=10; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt_qc; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt_qc_id; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt_valid_flag; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 17/119 completed; table=interim_epk_client_birthdate; duration=0.0s; new_lineage_paths=21; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 18/119 started; table=interim_epk_client_deathdate; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t3_cent_deathdate_birthdate_gender.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 18/119 contract resolved; table=interim_epk_client_deathdate; columns=9; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=death_dt; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=death_dt_valid_flag; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=death_flag; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 18/119 completed; table=interim_epk_client_deathdate; duration=0.0s; new_lineage_paths=17; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 19/119 started; table=interim_epk_client_gender; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t3_cent_deathdate_birthdate_gender.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 19/119 contract resolved; table=interim_epk_client_gender; columns=10; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_cd; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_cd_valid_flag; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_qc; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_qc_id; raw_paths=5; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 19/119 completed; table=interim_epk_client_gender; duration=0.0s; new_lineage_paths=21; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 20/119 started; table=interim_epk_client_individualname_bv; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t4_names.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 20/119 contract resolved; table=interim_epk_client_individualname_bv; columns=23; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=fio_active_flag; raw_paths=147; terminal_facts=29
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=part_1_month; raw_paths=70; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=row_actual_from; raw_paths=70; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=row_actual_to; raw_paths=70; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=row_hash; raw_paths=159; terminal_facts=41
+[materialization:sql-analysis][stderr] workflow-target-lineage target 20/119 completed; table=interim_epk_client_individualname_bv; duration=0.1s; new_lineage_paths=165; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 21/119 started; table=interim_epk_client_names; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_arc/epk_client/pipeline_epk_client_t4_names.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 21/119 contract resolved; table=interim_epk_client_names; columns=29; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=confirmedbyoperator; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fio_active_flag; raw_paths=147; terminal_facts=29
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=first_name; raw_paths=149; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamequalitycode; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamequalitycode_id; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamerecognitionstatus; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamerecognitionstatus_id; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=last_name; raw_paths=149; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=middle_name; raw_paths=149; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=name_valid_flag; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=namequalitycode; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=namequalitycode_id; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=nametype; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=nametype_cd; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=patronymicqualitycode; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=patronymicqualitycode_id; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=row_actual_from; raw_paths=70; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=row_actual_to; raw_paths=70; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=standardflag; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=surnamequalitycode; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=surnamequalitycode_id; raw_paths=148; terminal_facts=30
+[materialization:sql-analysis][stderr] workflow-target-lineage target 21/119 completed; table=interim_epk_client_names; duration=0.3s; new_lineage_paths=627; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 22/119 started; table=interim_epk_client_individual; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/pipeline_epk_client_t0_individual.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 22/119 contract resolved; table=interim_epk_client_individual; columns=21; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 22/119 completed; table=interim_epk_client_individual; duration=0.0s; new_lineage_paths=21; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 23/119 started; table=interim_epk_client_docs_bv; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/pipeline_epk_client_t1_docs.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 23/119 contract resolved; table=interim_epk_client_docs_bv; columns=16; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_number; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_series; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_valid_flag; raw_paths=16; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_hash; raw_paths=31; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage target 23/119 completed; table=interim_epk_client_docs_bv; duration=0.0s; new_lineage_paths=29; new_gaps=6
+[materialization:sql-analysis][stderr] workflow-target-lineage target 24/119 started; table=interim_epk_client_emigration_bv; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/pipeline_epk_client_t2_emigration.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 24/119 contract resolved; table=interim_epk_client_emigration_bv; columns=19; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 24/119 completed; table=interim_epk_client_emigration_bv; duration=0.0s; new_lineage_paths=20; new_gaps=5
+[materialization:sql-analysis][stderr] workflow-target-lineage target 25/119 started; table=interim_epk_client_individualname_bv; workflow=hdfs/oozie-app/b2c_infra/__DATAMART_NAME__/wf/dml_inc/epk_client/pipeline_epk_client_t4_names.json
+[materialization:sql-analysis][stderr] workflow-target-lineage target 25/119 contract resolved; table=interim_epk_client_individualname_bv; columns=23; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage target 25/119 completed; table=interim_epk_client_individualname_bv; duration=0.0s; new_lineage_paths=28; new_gaps=5
+[materialization:sql-analysis][stderr] workflow-target-lineage target 26/119 started; table=application_list; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_application_list.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 27/119 started; table=creditpotential_json; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_creditpotential_json.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 28/119 started; table=liability_list; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_liability_list.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 29/119 started; table=participant_result; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_participant_result.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 30/119 started; table=product_color_list; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_product_color_list.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 31/119 started; table=product_range_list; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/__off__b2c_profile_fl_product_range_list.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 32/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 33/119 started; table=epk_client_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 34/119 started; table=epk_client_address; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_address.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 35/119 started; table=epk_client_address_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_address.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 36/119 started; table=epk_client_doc; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_doc.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 37/119 started; table=epk_client_doc_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_doc.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 38/119 started; table=epk_client_doc_flags; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_doc_flags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 39/119 started; table=epk_client_doc_flags_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_doc_flags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 40/119 started; table=epk_client_email; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_email.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 41/119 started; table=epk_client_email_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_email.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 42/119 started; table=epk_client_email_flags; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_email_flags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 43/119 started; table=epk_client_email_flags_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_email_flags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 44/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_migration_rollback.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 45/119 started; table=epk_client_phonenumber; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_phonenumber.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 46/119 started; table=epk_client_phonenumber_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_phonenumber.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 47/119 started; table=epk_client_phonenumber_flags; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_phonenumber_flags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 48/119 started; table=epk_client_phonenumber_flags_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_phonenumber_flags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 49/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t0.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 50/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t0_individual.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 51/119 started; table=interim_epk_client_individual; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t0_individual.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 51/119 contract resolved; table=interim_epk_client_individual; columns=21; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=active_flag; raw_paths=8; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=client_verified_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=enddate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=epk_client_status; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=epk_client_status_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=epk_id; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=key; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=part_1_month; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=row_actual_from; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=row_actual_to; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=row_hash; raw_paths=16; terminal_facts=8
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=russian_resident_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=snp_flag; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=src_ctl_action; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=src_ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=src_ctl_validfrom; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=startdate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individual; column=versionstartdate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 51/119 completed; table=interim_epk_client_individual; duration=0.0s; new_lineage_paths=42; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 52/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 53/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 54/119 started; table=interim_epk_client_birthplace; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 54/119 contract resolved; table=interim_epk_client_birthplace; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=birth_place; raw_paths=110; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=row_actual_from; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthplace; column=row_actual_to; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage target 54/119 completed; table=interim_epk_client_birthplace; duration=0.0s; new_lineage_paths=60; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 55/119 started; table=interim_epk_client_currencyresident; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 55/119 contract resolved; table=interim_epk_client_currencyresident; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=currency_resident_flag; raw_paths=110; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=row_actual_from; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_currencyresident; column=row_actual_to; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage target 55/119 completed; table=interim_epk_client_currencyresident; duration=0.0s; new_lineage_paths=60; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 56/119 started; table=interim_epk_client_deathinfo; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 56/119 contract resolved; table=interim_epk_client_deathinfo; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=death_info_channel; raw_paths=109; terminal_facts=23
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=deathinfo_channel_cd; raw_paths=109; terminal_facts=23
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=epk_id; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=row_actual_from; raw_paths=51; terminal_facts=15
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathinfo; column=row_actual_to; raw_paths=51; terminal_facts=15
+[materialization:sql-analysis][stderr] workflow-target-lineage target 56/119 completed; table=interim_epk_client_deathinfo; duration=0.0s; new_lineage_paths=78; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 57/119 started; table=interim_epk_client_education; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 57/119 contract resolved; table=interim_epk_client_education; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_education; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_education; column=education_type; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_education; column=education_type_cd; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_education; column=epk_id; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 57/119 completed; table=interim_epk_client_education; duration=0.0s; new_lineage_paths=12; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 58/119 started; table=interim_epk_client_maritalstatus; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 58/119 contract resolved; table=interim_epk_client_maritalstatus; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_maritalstatus; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_maritalstatus; column=epk_id; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_maritalstatus; column=martial_status_type; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_maritalstatus; column=martial_status_type_cd; raw_paths=4; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 58/119 completed; table=interim_epk_client_maritalstatus; duration=0.0s; new_lineage_paths=12; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 59/119 started; table=interim_epk_client_riskprofile; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_demographics_education_riskprofile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 59/119 contract resolved; table=interim_epk_client_riskprofile; columns=11; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=investinghorizon; raw_paths=140; terminal_facts=32
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=riskprofile_start_dt; raw_paths=143; terminal_facts=35
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=row_actual_from; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_riskprofile; column=row_actual_to; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 59/119 completed; table=interim_epk_client_riskprofile; duration=0.0s; new_lineage_paths=76; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 60/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_docs.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 61/119 started; table=interim_epk_client_docs; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_docs.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 61/119 contract resolved; table=interim_epk_client_docs; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=doc_number; raw_paths=12; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=doc_series; raw_paths=12; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=row_actual_from; raw_paths=327; terminal_facts=55
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs; column=row_actual_to; raw_paths=327; terminal_facts=55
+[materialization:sql-analysis][stderr] workflow-target-lineage target 61/119 completed; table=interim_epk_client_docs; duration=0.1s; new_lineage_paths=129; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 62/119 started; table=interim_epk_client_docs_bv; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_docs.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 62/119 contract resolved; table=interim_epk_client_docs_bv; columns=16; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_active_flag; raw_paths=658; terminal_facts=33
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_number; raw_paths=12; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_series; raw_paths=12; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=doc_valid_flag; raw_paths=96; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=epk_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=part_1_month; raw_paths=320; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_actual_from; raw_paths=326; terminal_facts=27
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_actual_to; raw_paths=320; terminal_facts=24
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=row_hash; raw_paths=796; terminal_facts=57
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_docs_bv; column=updatedatetime; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 62/119 completed; table=interim_epk_client_docs_bv; duration=0.2s; new_lineage_paths=193; new_gaps=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 63/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_domain_client_distantmanager.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 64/119 started; table=interim_epk_client_distantmanager; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_domain_client_distantmanager.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 64/119 contract resolved; table=interim_epk_client_distantmanager; columns=8; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=pon_channel_nflag; raw_paths=31; terminal_facts=15
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=pon_managercode; raw_paths=34; terminal_facts=18
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=row_actual_from; raw_paths=14; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_distantmanager; column=row_actual_to; raw_paths=14; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage target 64/119 completed; table=interim_epk_client_distantmanager; duration=0.0s; new_lineage_paths=57; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 65/119 started; table=interim_epk_client_domain_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_domain_client_distantmanager.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 65/119 contract resolved; table=interim_epk_client_domain_client; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=row_actual_from; raw_paths=36; terminal_facts=26
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=row_actual_to; raw_paths=36; terminal_facts=26
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_domain_client; column=segment_crm; raw_paths=99; terminal_facts=38
+[materialization:sql-analysis][stderr] workflow-target-lineage target 65/119 completed; table=interim_epk_client_domain_client; duration=0.1s; new_lineage_paths=94; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 66/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_literacy_selfemployment_relgroups.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 67/119 started; table=interim_epk_client_literacy; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_literacy_selfemployment_relgroups.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 67/119 contract resolved; table=interim_epk_client_literacy; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=literacy_flag; raw_paths=116; terminal_facts=28
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=row_actual_from; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_literacy; column=row_actual_to; raw_paths=52; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage target 67/119 completed; table=interim_epk_client_literacy; duration=0.0s; new_lineage_paths=64; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 68/119 started; table=interim_epk_client_relgroups; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_literacy_selfemployment_relgroups.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 68/119 contract resolved; table=interim_epk_client_relgroups; columns=22; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bank_client_flag; raw_paths=534; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_155_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_156_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_157_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_158_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_159_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_160_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_161_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=bankrupt_stage_162_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=dzo_60_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=incapable_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=militpens_27_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=rel_groups; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=row_actual_from; raw_paths=124; terminal_facts=36
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=row_actual_to; raw_paths=124; terminal_facts=36
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=sbrf_employee_59_nflag; raw_paths=267; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=segment; raw_paths=1068; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_relgroups; column=segment_cd; raw_paths=1068; terminal_facts=63
+[materialization:sql-analysis][stderr] workflow-target-lineage target 68/119 completed; table=interim_epk_client_relgroups; duration=0.6s; new_lineage_paths=1087; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 69/119 started; table=interim_epk_client_selfemployment; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t1_literacy_selfemployment_relgroups.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 69/119 contract resolved; table=interim_epk_client_selfemployment; columns=7; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=row_actual_from; raw_paths=46; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=row_actual_to; raw_paths=46; terminal_facts=14
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_selfemployment; column=selfemployment_nflag; raw_paths=101; terminal_facts=23
+[materialization:sql-analysis][stderr] workflow-target-lineage target 69/119 completed; table=interim_epk_client_selfemployment; duration=0.0s; new_lineage_paths=55; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 70/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t2.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 71/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t2_citizenship.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 72/119 started; table=interim_epk_client_citizenship; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t2_citizenship.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 72/119 contract resolved; table=interim_epk_client_citizenship; columns=16; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_citizenship_cntry; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_citizenship_cntry_id; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_citizenship_cntry_startdate; raw_paths=232; terminal_facts=56
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=add_emigration_qc; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_cntry; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_cntry_id; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_cntry_startdate; raw_paths=232; terminal_facts=56
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=citizenship_qty; raw_paths=226; terminal_facts=50
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=emigration_qc; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=row_actual_from; raw_paths=111; terminal_facts=39
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=row_actual_to; raw_paths=111; terminal_facts=39
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_citizenship; column=russian_citizen_flag; raw_paths=228; terminal_facts=52
+[materialization:sql-analysis][stderr] workflow-target-lineage target 72/119 completed; table=interim_epk_client_citizenship; duration=0.4s; new_lineage_paths=611; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 73/119 started; table=interim_epk_client_emigration_bv; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t2_citizenship.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 73/119 contract resolved; table=interim_epk_client_emigration_bv; columns=19; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=country_key; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=em_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=emigr_active_flag; raw_paths=226; terminal_facts=25
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=emigrationserviceattributes_key; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=enddate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=epk_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=part_1_month; raw_paths=104; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=row_actual_from; raw_paths=110; terminal_facts=19
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=row_actual_to; raw_paths=104; terminal_facts=16
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=row_hash; raw_paths=238; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=src_ctl_action; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=src_ctl_loading; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=src_ctl_validfrom; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=startdate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_emigration_bv; column=versionstartdate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 73/119 completed; table=interim_epk_client_emigration_bv; duration=0.1s; new_lineage_paths=138; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 74/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t3.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 75/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t3_deathdate_birthdate_gender.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 76/119 started; table=interim_epk_client_birthdate; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t3_deathdate_birthdate_gender.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 76/119 contract resolved; table=interim_epk_client_birthdate; columns=10; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt; raw_paths=7; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt_qc; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt_qc_id; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=birth_dt_valid_flag; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=row_actual_from; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_birthdate; column=row_actual_to; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 76/119 completed; table=interim_epk_client_birthdate; duration=0.0s; new_lineage_paths=29; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 77/119 started; table=interim_epk_client_deathdate; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t3_deathdate_birthdate_gender.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 77/119 contract resolved; table=interim_epk_client_deathdate; columns=9; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=death_dt; raw_paths=7; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=death_dt_valid_flag; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=death_flag; raw_paths=7; terminal_facts=5
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=row_actual_from; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_deathdate; column=row_actual_to; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 77/119 completed; table=interim_epk_client_deathdate; duration=0.0s; new_lineage_paths=22; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 78/119 started; table=interim_epk_client_gender; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t3_deathdate_birthdate_gender.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 78/119 contract resolved; table=interim_epk_client_gender; columns=10; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_cd; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_cd_valid_flag; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_qc; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=gender_qc_id; raw_paths=7; terminal_facts=6
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=row_actual_from; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_gender; column=row_actual_to; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 78/119 completed; table=interim_epk_client_gender; duration=0.0s; new_lineage_paths=30; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 79/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t4.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 80/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t4_names.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 81/119 started; table=interim_epk_client_individualname_bv; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t4_names.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 81/119 contract resolved; table=interim_epk_client_individualname_bv; columns=23; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=enddate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=epk_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=fio_active_flag; raw_paths=298; terminal_facts=31
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=first_name; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=language_key; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=last_name; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=middle_name; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=name_id; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=nametype_key; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=part_1_month; raw_paths=140; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=row_actual_from; raw_paths=146; terminal_facts=25
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=row_actual_to; raw_paths=140; terminal_facts=22
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=row_hash; raw_paths=334; terminal_facts=49
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=serviceattributes_key; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=src_ctl_action; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=src_ctl_loading; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=src_ctl_validfrom; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=startdate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_individualname_bv; column=versionstartdate; raw_paths=6; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 81/119 completed; table=interim_epk_client_individualname_bv; duration=0.2s; new_lineage_paths=192; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 82/119 started; table=interim_epk_client_names; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_t4_names.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 82/119 contract resolved; table=interim_epk_client_names; columns=29; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=confirmedbyoperator; raw_paths=301; terminal_facts=65
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=ctl_loading; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fio_active_flag; raw_paths=298; terminal_facts=62
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=first_name; raw_paths=304; terminal_facts=68
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamequalitycode; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamequalitycode_id; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamerecognitionstatus; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=fullnamerecognitionstatus_id; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=last_name; raw_paths=304; terminal_facts=68
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=middle_name; raw_paths=304; terminal_facts=68
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=name_valid_flag; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=namequalitycode; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=namequalitycode_id; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=nametype; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=nametype_cd; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=patronymicqualitycode; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=patronymicqualitycode_id; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=row_actual_from; raw_paths=147; terminal_facts=51
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=row_actual_to; raw_paths=147; terminal_facts=51
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=standardflag; raw_paths=301; terminal_facts=65
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=surnamequalitycode; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=interim_epk_client_names; column=surnamequalitycode_id; raw_paths=300; terminal_facts=64
+[materialization:sql-analysis][stderr] workflow-target-lineage target 82/119 completed; table=interim_epk_client_names; duration=0.7s; new_lineage_paths=1362; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 83/119 started; table=epk_client_tags; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_tags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 84/119 started; table=epk_client_tags_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_tags.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 85/119 started; table=epk_client_udbo; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_udbo.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 86/119 started; table=epk_client_udbo_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_udbo.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 87/119 started; table=epk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_v1_to_v2_migration.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 88/119 started; table=epk_client_bkp_20250930; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_v1_to_v2_migration.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 89/119 started; table=epk_client_v2; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_client_v2.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 89/119 contract resolved; table=epk_client_v2; columns=93; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=active_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=add_citizenship_cntry; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=add_citizenship_cntry_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=add_citizenship_cntry_startdate; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=add_emigration_qc; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bank_client_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_155_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_156_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_157_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_158_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_159_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_160_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_161_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=bankrupt_stage_162_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=birth_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=birth_dt_qc; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=birth_dt_qc_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=birth_dt_valid_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=birth_place; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=citizenship_cntry; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=citizenship_cntry_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=citizenship_cntry_startdate; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=citizenship_qty; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=client_centaur_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=client_verified_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=confirmedbyoperator; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=currency_resident_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=death_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=death_dt_valid_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=death_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=death_info_channel; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=deathinfo_channel_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=dzo_60_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=education_type; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=education_type_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=emigration_qc; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=epk_client_status; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=epk_client_status_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=epk_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=first_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=first_name_hash; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=fullnamequalitycode; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=fullnamequalitycode_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=fullnamerecognitionstatus; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=fullnamerecognitionstatus_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=gender_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=gender_cd_valid_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=gender_qc; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=gender_qc_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=hash_val; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=incapable_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=investinghorizon; raw_paths=8; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=last_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=last_name_hash; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=literacy_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=martial_status_type; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=martial_status_type_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=middle_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=middle_name_hash; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=militpens_27_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=name_valid_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=namequalitycode; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=namequalitycode_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=nametype; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=nametype_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=part_1_day; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=patronymicqualitycode; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=patronymicqualitycode_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=pon_channel_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=pon_managercode; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=rel_groups; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=riskprofile; raw_paths=8; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=riskprofile_desc; raw_paths=8; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=riskprofile_start_dt; raw_paths=8; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=row_actual_from; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=row_actual_to; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=row_hash; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=russian_citizen_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=russian_resident_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=sbrf_employee_59_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=score; raw_paths=8; terminal_facts=4
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=segment; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=segment_cd; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=segment_crm; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=selfemployment_nflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=standardflag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=surnamequalitycode; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=surnamequalitycode_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=epk_client_v2; column=united_person_hash; raw_paths=32; terminal_facts=12
+[materialization:sql-analysis][stderr] workflow-target-lineage target 89/119 completed; table=epk_client_v2; duration=0.1s; new_lineage_paths=197; new_gaps=3
+[materialization:sql-analysis][stderr] workflow-target-lineage target 90/119 started; table=epkid_2_epkid; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_epkid_2_epkid.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 91/119 started; table=epkid_2_epkid_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_epkid_2_epkid.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 92/119 started; table=epkid_2_finalepkid; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_epkid_2_finalepkid.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 93/119 started; table=epkid_2_finalepkid_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_epkid_2_finalepkid.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 94/119 started; table=epk_lnk_host_id; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_lnk_host_id.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 95/119 started; table=epk_lnk_host_id_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_lnk_host_id.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 96/119 started; table=epk_persdata_mapping; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_persdata_mapping.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 97/119 started; table=epk_persdata_mapping_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_persdata_mapping.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 98/119 started; table=epk_phone_mapping; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_phone_mapping.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 99/119 started; table=epk_phone_mapping_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_epk_phone_mapping.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 100/119 started; table=t_client_link_dzo; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_client_link_dzo.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 101/119 started; table=t_client_link_dzo_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_client_link_dzo.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 102/119 started; table=t_dim_client_team_type; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_client_team_type.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 102/119 contract resolved; table=t_dim_client_team_type; columns=12; direct_producers=1; usable_contracts=1; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_client_team_type; column=end_dt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_client_team_type; column=part_1_day; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_client_team_type; column=row_hash; raw_paths=22; terminal_facts=10
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_client_team_type; column=start_dt; raw_paths=8; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 102/119 completed; table=t_dim_client_team_type; duration=0.0s; new_lineage_paths=23; new_gaps=4
+[materialization:sql-analysis][stderr] workflow-target-lineage target 103/119 started; table=t_dim_interaction_profile; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_interaction_profile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 104/119 started; table=t_dim_interaction_profile_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_interaction_profile.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 105/119 started; table=t_dim_real_estate; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_real_estate.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 105/119 contract resolved; table=t_dim_real_estate; columns=57; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=accomodation_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=active_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=address_after_standart_txt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=address_before_standart_txt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=address_for_standart_txt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=apartment_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=area_qty; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=building_address_val; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=building_assignment_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=building_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=bulk_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=burden_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=cadastral_cost_rub_amt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=cadastral_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=cadastral_value_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=city_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=city_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=commisioning_year_ord; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=compartment_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=construction_year_ord; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=country_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=district_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=district_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=end_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=epk_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=fias_code; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=flags_txt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=floor_cnt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=floor_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=house_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=land_category_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=latitude_val; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=longitude_val; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=owner_cnt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=ownership_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=part_1_month; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=postcode_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=realestate_type_local_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=region_full_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=region_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=region_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=registration_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=renovation_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=restrictive_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=room_cnt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=room_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=row_hash; raw_paths=200; terminal_facts=100
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=share_size_val; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=sid; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=start_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=street_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=street_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=validation_quality_code; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_real_estate; column=validation_quality_code_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 105/119 completed; table=t_dim_real_estate; duration=0.0s; new_lineage_paths=207; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 106/119 started; table=t_dim_uvsk_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_client.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 107/119 started; table=t_dim_uvsk_client_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_client.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 108/119 started; table=t_dim_uvsk_client_team; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_client_team.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 109/119 started; table=t_dim_uvsk_client_team_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_client_team.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 110/119 started; table=t_dim_uvsk_position; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_position.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 111/119 started; table=t_dim_uvsk_position_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_position.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 112/119 started; table=t_dim_uvsk_team; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_team.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 113/119 started; table=t_dim_uvsk_team_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_team.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 114/119 started; table=t_dim_uvsk_team_position; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_team_position.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 115/119 started; table=t_dim_uvsk_team_position_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_uvsk_team_position.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 116/119 started; table=t_dim_vehicle; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_dim_vehicle.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 116/119 contract resolved; table=t_dim_vehicle; columns=30; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=active_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=body_style_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=ctl_loading; raw_paths=4; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=drive_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=end_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=engine_power_hp_val; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=engine_power_kwt_qty; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=engine_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=engine_volume_qty; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=epk_id; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=flags_txt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=mileage_cnt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=mileage_entry_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=part_1_month; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=register_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=right_hand_drive_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=row_hash; raw_paths=88; terminal_facts=44
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=sid; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=start_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=transmission_type_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_body_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_brand_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_category_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_chassis_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_identification_num; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_model_name; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_ownership_flag; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_dim_vehicle; column=vehicle_production_dt; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 116/119 completed; table=t_dim_vehicle; duration=0.0s; new_lineage_paths=97; new_gaps=2
+[materialization:sql-analysis][stderr] workflow-target-lineage target 117/119 started; table=t_link_client_x_client; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_link_client_x_client.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 118/119 started; table=t_link_client_x_client_hist; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_link_client_x_client.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 119/119 started; table=t_link_client_x_client_uddk; workflow=workflow_standby/p1167/blago/b2c_cdo/profile_fl/b2c_profile_fl_t_link_client_x_client_uddk.yaml
+[materialization:sql-analysis][stderr] workflow-target-lineage target 119/119 contract resolved; table=t_link_client_x_client_uddk; columns=11; direct_producers=2; usable_contracts=2; incomplete_branches=0
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=active_flag; raw_paths=58; terminal_facts=7
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=ctl_loading; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=from_party_epk_id; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=row_hash; raw_paths=62; terminal_facts=9
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=sid; raw_paths=4; terminal_facts=2
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=start_dt; raw_paths=16; terminal_facts=3
+[materialization:sql-analysis][stderr] workflow-target-lineage path aggregation; table=t_link_client_x_client_uddk; column=to_party_epk_id; raw_paths=2; terminal_facts=1
+[materialization:sql-analysis][stderr] workflow-target-lineage target 119/119 completed; table=t_link_client_x_client_uddk; duration=0.0s; new_lineage_paths=24; new_gaps=4
+[materialization:sql-analysis][stderr] workflow-target-lineage materialization-seeded traversal completed; duration=8.5s; batch_rows=7857; total_lineage_paths=12428; gaps=254
+[materialization:sql-analysis][stderr] sql-analysis workflow_target_lineage completed; duration=30.6s
+[materialization:sql-analysis][stderr] sql-analysis workflow_target_lineage summary={'workflow_transform_count': 75, 'target_projection_count': 1380, 'lineage_path_count': 12428, 'gap_count': 254}
+[materialization:sql-analysis][stderr] sql-analysis relation_semantic_roles started
+[materialization:sql-analysis][stderr] sql-analysis relation_semantic_roles completed; duration=1.2s
+[materialization:sql-analysis][stderr] sql-analysis relation_semantic_roles summary={'total_relations': 612, 'hidden_by_default': 347, 'visible_by_default': 265, 'by_role': {'external_or_shared_intermediate': 92, 'external_source': 258, 'internal_intermediate': 252, 'output_target': 3, 'unknown': 7}, 'by_status': {'confirmed': 509, 'probable': 96, 'unresolved': 7}}
+[materialization:sql-analysis][stderr] sql-analysis validation started
+[materialization:sql-analysis][stderr] sql-analysis validation completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis table counts started
+[materialization:sql-analysis][stderr] sql-analysis table counts completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis checkpoint started
+[materialization:sql-analysis][stderr] sql-analysis checkpoint completed; duration=0.4s
+[materialization:sql-analysis][stderr] sql-analysis database close started
+[materialization:sql-analysis][stderr] sql-analysis database close completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis manifest write started
+[materialization:sql-analysis][stderr] sql-analysis manifest write completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis atomic publish started
+[materialization:sql-analysis][stderr] sql-analysis atomic publish completed; duration=0.0s
+[materialization:sql-analysis][stderr] sql-analysis completed counts sql_analysis_build=1, sql_analysis_repository=1, sql_column_usage=12319, sql_direct_column_lineage=1049, sql_join_edge=325, sql_object_dependency=539, sql_placeholder_binding_resolution=377, sql_projection=8239, sql_recursive_column_lineage=1353, sql_relation=1566, sql_relation_semantic_role=612, sql_scoped_lineage_gap=70, sql_script_binding=995, sql_script_call=835, sql_script_embedded_sql=140, sql_script_invocation=158, sql_script_statement=1869, sql_select_scope=1244, sql_semantic_placeholder=786, sql_statement=475, sql_target_projection_binding=848, sql_workflow_binding=3142, sql_workflow_context_file=2521, sql_workflow_file_reference=418, sql_workflow_target_column_lineage=12428, sql_workflow_target_lineage_gap=254, sql_write_target=182
+[materialization:sql-analysis][stderr] materialization sql-analysis handler completed
+[materialization:sql-analysis] worker exited code=0; duration=50.4s
+[materialization:sql-analysis] completed; duration=50.4s; counts: sql_analysis_build=1, sql_analysis_repository=1, sql_column_usage=12319, sql_direct_column_lineage=1049, sql_join_edge=325, sql_object_dependency=539, sql_placeholder_binding_resolution=377, sql_projection=8239, sql_recursive_column_lineage=1353, sql_relation=1566, sql_relation_semantic_role=612, sql_scoped_lineage_gap=70, sql_script_binding=995, sql_script_call=835, sql_script_embedded_sql=140, sql_script_invocation=158, sql_script_statement=1869, sql_select_scope=1244, sql_semantic_placeholder=786, sql_statement=475, sql_target_projection_binding=848, sql_workflow_binding=3142, sql_workflow_context_file=2521, sql_workflow_file_reference=418, sql_workflow_target_column_lineage=12428, sql_workflow_target_lineage_gap=254, sql_write_target=182
+BUILD materialization:logical-storage-mapping reason=force_rebuild (5/8)
+[materialization:logical-storage-mapping] started (5/8)
+[materialization:logical-storage-mapping] worker started
+[materialization:logical-storage-mapping][stderr] materialization logical-storage-mapping handler started
+[materialization:logical-storage-mapping][stderr] materialization logical-storage-mapping handler completed
+[materialization:logical-storage-mapping] worker exited code=0; duration=1.4s
+[materialization:logical-storage-mapping] completed; duration=1.4s; counts: logical_storage_entity_mapping=723, logical_storage_mapping_build=1, logical_storage_mapping_gap=0, logical_storage_mapping_source=1, logical_storage_relationship_mapping=488
+BUILD materialization:cross-artifact-data-model-mapping reason=force_rebuild (6/8)
+[materialization:cross-artifact-data-model-mapping] started (6/8)
+[materialization:cross-artifact-data-model-mapping] worker started
+[materialization:cross-artifact-data-model-mapping][stderr] materialization cross-artifact-data-model-mapping handler started
+[materialization:cross-artifact-data-model-mapping][stderr] materialization cross-artifact-data-model-mapping handler completed
+[materialization:cross-artifact-data-model-mapping] worker exited code=0; duration=32.9s
+[materialization:cross-artifact-data-model-mapping] completed; duration=32.9s; counts: cross_artifact_logical_field_sql_usage=1632, cross_artifact_mapping_build=1, cross_artifact_mapping_gap=0, cross_artifact_mapping_source=4, cross_artifact_relation_materialization=947, cross_artifact_sql_physical_mapping=111, cross_artifact_storage_sql_mapping=374, cross_artifact_target_source_mapping=1305, cross_artifact_value_origin_physical_lineage=1078, cross_artifact_workflow_dependency=33, cross_artifact_workflow_projection_physical_mapping=470
+BUILD materialization:sql-target-source-mapping reason=force_rebuild (7/8)
+[materialization:sql-target-source-mapping] started (7/8)
+[materialization:sql-target-source-mapping] worker started
+[materialization:sql-target-source-mapping][stderr] materialization sql-target-source-mapping handler started
+[materialization:sql-target-source-mapping][stderr] materialization sql-target-source-mapping handler completed
+[materialization:sql-target-source-mapping] worker exited code=0; duration=40.9s
+[materialization:sql-target-source-mapping] completed; duration=40.9s; counts: sql_observed_relation_materialization=973, sql_observed_workflow_dependency=33, sql_target_source_mapping=12478, sql_target_source_mapping_build=1, sql_target_source_mapping_gap=6542, sql_target_source_mapping_source=2, sql_target_value_source_mapping=5794
+BUILD materialization:data-model-attribute-extension-context reason=force_rebuild (8/8)
+[materialization:data-model-attribute-extension-context] started (8/8)
+[materialization:data-model-attribute-extension-context] worker started
+[materialization:data-model-attribute-extension-context][stderr] materialization data-model-attribute-extension-context handler started
+[materialization:data-model-attribute-extension-context][stderr] materialization data-model-attribute-extension-context handler completed
+[materialization:data-model-attribute-extension-context] worker exited code=0; duration=19.3s
+[materialization:data-model-attribute-extension-context] completed; duration=19.3s; counts: attribute_extension_context_build=1, attribute_extension_context_gap=1027, attribute_extension_context_source=5, attribute_extension_join_semantic=1573, attribute_extension_object_anchor=1326
+{
+  "evidence_artifact_count": 6,
+  "execution_order": [
+    "analyzer:java-model-storage-analyzer:ucp-api",
+    "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+    "analyzer:java-type-structure-analyzer:ucp-api",
+    "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+    "analyzer:sql-analysis-analyzer:datamart_profile_fl",
+    "materialization:code-declared-data-model",
+    "materialization:model-storage-semantics",
+    "materialization:physical-model",
+    "materialization:sql-analysis",
+    "materialization:logical-storage-mapping",
+    "materialization:cross-artifact-data-model-mapping",
+    "materialization:sql-target-source-mapping",
+    "materialization:data-model-attribute-extension-context"
+  ],
+  "knowledge_artifact_count": 8,
+  "materialization_count": 8,
+  "output": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution",
+  "producer_reuse": {
+    "decisions": [
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/001-source-source_snapshot_4b6008b51459bf6fc1400bfb/repository_analysis_run_manifest.json",
+        "basis": "canonical_producer_execution",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "analyzer:java-model-storage-analyzer:ucp-api",
+        "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "bae6cd522b643d077fc06523e74d02a3236dde806003aaf6c62e40482e48b7ff",
+        "saved_seconds": null,
+        "source_id": "ucp-api"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/001-source-source_snapshot_4b6008b51459bf6fc1400bfb/repository_analysis_run_manifest.json",
+        "basis": "canonical_producer_execution",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "analyzer:java-type-structure-analyzer:ucp-api",
+        "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "66e01c50062c13b82e70d979d572faa7eda7057e39fb286a2a7cdb7841ead2a8",
+        "saved_seconds": null,
+        "source_id": "ucp-api"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/002-source-source_snapshot_05b452494b1e7a4992c784b8/repository_analysis_run_manifest.json",
+        "basis": "canonical_producer_execution",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "analyzer:java-model-storage-analyzer:ucp-tsa-v4",
+        "producer_id": "code-analyzer-core:java-model-storage-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "9113d3e35462915ef42f6244a02caa8a8a2a4fc2bdcdb0f18b751e233bdcf163",
+        "saved_seconds": null,
+        "source_id": "ucp-tsa-v4"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/002-source-source_snapshot_05b452494b1e7a4992c784b8/repository_analysis_run_manifest.json",
+        "basis": "canonical_producer_execution",
+        "diagnostics": [],
+        "elapsed_seconds": null,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "analyzer:java-type-structure-analyzer:ucp-tsa-v4",
+        "producer_id": "code-analyzer-core:java-type-structure-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "532ab95cccedd6737f68f00da929afa54a9dc27fca3929e787e67bfc0656aa04",
+        "saved_seconds": null,
+        "source_id": "ucp-tsa-v4"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/execution-nodes/003-source-source_snapshot_1fbcee64bf96a8ce707a782f/repository_analysis_run_manifest.json",
+        "basis": "canonical_producer_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 18.556183434000104,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "analyzer:sql-analysis-analyzer:datamart_profile_fl",
+        "producer_id": "code-analyzer-core:sql-analysis-analyzer",
+        "producer_kind": "core-repository-evidence",
+        "producer_version": "0.44.23a3",
+        "reuse_key": "27fee399f7b65b98840960fa1bf48c84cfd239cccaa1f8c7ebaf8d59a3835f48",
+        "saved_seconds": null,
+        "source_id": "datamart_profile_fl"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/001-code-declared-data-model/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 12.318572270999994,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:code-declared-data-model",
+        "producer_id": "knowledge-layer-core:code-declared-data-model",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "c90cca1ce8b8b08d889236f8ebc0edc93e962c63ed626333a4eb12eb9a1e94d8",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/002-model-storage-semantics/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 7.239076834999878,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:model-storage-semantics",
+        "producer_id": "knowledge-layer-core:model-storage-semantics",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "be0812ab940b1d7b60b92d9a324b7aefa3751b5638f5b8d7ce0167794ef9364c",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/003-physical-model/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 1.6314193799998975,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:physical-model",
+        "producer_id": "knowledge-layer-core:physical-model",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "382b34cedde43857c84a0c7ba78716e46c06699dee00f526cd85ec88666be162",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/004-sql-analysis/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 50.42413105299988,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:sql-analysis",
+        "producer_id": "knowledge-layer-core:sql-analysis",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "0d9823ecdf78eb8eabb13f21deea954ed950e64a0f07167f60c82361962c4fd9",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/005-logical-storage-mapping/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 1.4345839259999593,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:logical-storage-mapping",
+        "producer_id": "knowledge-layer-core:logical-storage-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "17856251a4017805853526bcace21b8a5447ebfb6fb36e86fe36b32a418daa43",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/006-cross-artifact-data-model-mapping/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 32.91182374999994,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:cross-artifact-data-model-mapping",
+        "producer_id": "knowledge-layer-core:cross-artifact-data-model-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "f8a09df490e2abecdba6ce875e76a6620b97e13fa226f7d0f607cb86070b4c70",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/007-sql-target-source-mapping/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 40.88299188099995,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:sql-target-source-mapping",
+        "producer_id": "knowledge-layer-core:sql-target-source-mapping",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "dbd30c8f1d1f6798da55ba2d8e4087c1a5c87df8288c03954f632ac6dbc16439",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      },
+      {
+        "action": "built",
+        "artifact_reference": "/mnt/data/blockc_acceptance/runs/sql-a-force/execution/materialization-execution/materializations/008-data-model-attribute-extension-context/materialization-result.json",
+        "basis": "canonical_materialization_execution",
+        "diagnostics": [],
+        "elapsed_seconds": 19.333563239000114,
+        "invalidation_reason": "force_rebuild",
+        "node_id": "materialization:data-model-attribute-extension-context",
+        "producer_id": "knowledge-layer-core:data-model-attribute-extension-context",
+        "producer_kind": "knowledge-materialization",
+        "producer_version": "0.61.0a23",
+        "reuse_key": "f9c7804b7113d73e12bf6fbc2b879dcd3a988f7288c445e719d6a34885e7161c",
+        "saved_seconds": null,
+        "source_id": "ucp-data-model"
+      }
+    ],
+    "schema_version": "producer_reuse_decisions/v1",
+    "summary": {
+      "built": 13,
+      "reused": 0
+    }
+  },
+  "published_capabilities": [
+    "common.code-declared-data-model",
+    "common.code-declared-entities",
+    "common.code-declared-fields",
+    "common.code-declared-inheritance",
+    "common.code-declared-relationships",
+    "common.cross-artifact-data-model-mapping",
+    "common.data-model-agent-join-semantics",
+    "common.data-model-attribute-extension-context",
+    "common.data-model-sql-anchor-context",
+    "common.logical-field-sql-usage",
+    "common.logical-storage-identity",
+    "common.logical-storage-mapping",
+    "common.logical-storage-relationship",
+    "common.model-storage-semantics",
+    "common.physical-model",
+    "common.physical-model.columns",
+    "common.physical-model.gaps",
+    "common.physical-model.keys",
+    "common.physical-model.pdm",
+    "common.physical-model.relationships",
+    "common.physical-model.tables",
+    "common.relation-materialization",
+    "common.sql-analysis",
+    "common.sql-attribute-insertion-context",
+    "common.sql-field-calculation",
+    "common.sql-physical-correspondence",
+    "common.sql-relation-fields",
+    "common.sql-relation-materialization",
+    "common.sql-relation-semantic-roles",
+    "common.sql-source-inventory",
+    "common.sql-source-inventory-export",
+    "common.sql-target-column-lineage",
+    "common.sql-target-resolution",
+    "common.sql-target-source-mapping",
+    "common.sql-target-value-source-mapping",
+    "common.sql-workflow-bindings",
+    "common.sql-workflow-context",
+    "common.sql-workflow-dependency",
+    "common.storage-identities",
+    "common.storage-reference-lineage",
+    "common.storage-sql-correspondence",
+    "common.value-origin-physical-lineage",
+    "common.workflow-dependency",
+    "common.workflow-projection-physical-correspondence"
+  ],
+  "result_fingerprint": "25d6ff6020b4d8cd990640192404102e9c87824c2ddde1738d2db10e1df015f5",
+  "schema_version": "knowledge_execution_result/v1",
+  "scope": {
+    "kind": "workspace",
+    "scope_id": "ucp-data-model"
+  },
+  "status": "completed"
+}
+ELAPSED=215.88

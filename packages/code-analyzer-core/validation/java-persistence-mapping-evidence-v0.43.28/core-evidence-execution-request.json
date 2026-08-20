@@ -1,0 +1,29 @@
+{
+  "evidence_requirements": [
+    {
+      "artifact_kind": "java-type-structure-evidence",
+      "parameters": {},
+      "required_by": [
+        "code-declared-data-model"
+      ],
+      "schema_version": "java-type-structure-evidence/v1"
+    },
+    {
+      "artifact_kind": "java-persistence-mapping-evidence",
+      "parameters": {},
+      "required_by": [
+        "logical-physical-mapping"
+      ],
+      "schema_version": "java-persistence-mapping-evidence/v1"
+    }
+  ],
+  "orchestration": {
+    "owner": "release-validation"
+  },
+  "request_fingerprint": "d508392be143b73fbaf047f555b65f519e26d53ca59d97a23cd2ebd8f50f4a14",
+  "schema_version": "core_evidence_execution_request/v1",
+  "source": {
+    "source_id": "core04328-smoke",
+    "source_kind": "repository"
+  }
+}

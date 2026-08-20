@@ -1,0 +1,5 @@
+ERROR: refuse to use the current working directory or one of its parents as output: /tmp/tmp.odf5cO5FiT
+
+exit_code=1
+sentinel_exists=true
+sentinel_content=valuable

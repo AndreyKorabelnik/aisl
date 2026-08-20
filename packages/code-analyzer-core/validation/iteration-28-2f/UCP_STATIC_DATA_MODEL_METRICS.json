@@ -1,0 +1,124 @@
+{
+  "workspace_missing_fact_total": 14033,
+  "gaps_by_repo_kind": [
+    {
+      "repo_id": "ucp_api",
+      "kind": "source_expression_not_resolved",
+      "count": 314
+    },
+    {
+      "repo_id": "ucp_api",
+      "kind": "repository_entity_type_unknown",
+      "count": 1
+    },
+    {
+      "repo_id": "ucp_api",
+      "kind": "declared_foreign_key_not_observed",
+      "count": 1
+    },
+    {
+      "repo_id": "ucp_tsa_v4",
+      "kind": "source_expression_not_resolved",
+      "count": 13713
+    },
+    {
+      "repo_id": "ucp_tsa_v4",
+      "kind": "constructor_mapping_not_resolved",
+      "count": 2
+    },
+    {
+      "repo_id": "ucp_tsa_v4",
+      "kind": "repository_entity_type_unknown",
+      "count": 1
+    },
+    {
+      "repo_id": "ucp_tsa_v4",
+      "kind": "declared_foreign_key_not_observed",
+      "count": 1
+    }
+  ],
+  "model_object_key_observation": 312,
+  "model_object_key_member": 514,
+  "model_relationship_observation": 504,
+  "model_relationship_candidate": 19,
+  "model_relationship_key_expression": 888,
+  "model_relationship_polymorphic_target": 19,
+  "model_relationship_reference_value_key_correspondence": 241,
+  "model_relationship_storage_key_derivation": 202,
+  "model_relationship_storage_reference": 224,
+  "v_model_relationships": 504,
+  "v_model_relationship_canonical_storage": 504,
+  "v_model_relationship_join_evidence": 504,
+  "v_model_object_fields": 2688,
+  "v_storage_records": 723,
+  "v_storage_references": 250,
+  "v_tsa_key_expressions": 770,
+  "v_tsa_reference_operations": 1247,
+  "v_tsa_reference_value_derivations": 1436,
+  "v_tsa_storage_key_derivations": 238,
+  "relationships_by_kind": [
+    {
+      "relation_kind": "configured_object_reference",
+      "count": 272
+    },
+    {
+      "relation_kind": "reference_field",
+      "count": 135
+    },
+    {
+      "relation_kind": "reference_collection",
+      "count": 50
+    },
+    {
+      "relation_kind": "configured_object_collection",
+      "count": 41
+    },
+    {
+      "relation_kind": "owned_object_collection",
+      "count": 2
+    },
+    {
+      "relation_kind": "owned_object_reference",
+      "count": 2
+    },
+    {
+      "relation_kind": "polymorphic_reference_collection",
+      "count": 2
+    }
+  ],
+  "relationships_by_cardinality": [
+    {
+      "cardinality": "one",
+      "count": 409
+    },
+    {
+      "cardinality": "many",
+      "count": 95
+    }
+  ],
+  "candidate_by_kind": [
+    {
+      "candidate_kind": "excluded_field_type_reference",
+      "count": 19
+    }
+  ],
+  "storage_refs_by_physical_encoding": [
+    {
+      "physical_encoding": "downstream_interpretation_required",
+      "count": 224
+    }
+  ],
+  "storage_refs_by_reference_value_binding_resolution": [
+    {
+      "reference_value_binding_resolution": "nearest_visible_dominating_assignment",
+      "count": 224
+    }
+  ],
+  "storage_refs_by_value_origin": [
+    {
+      "value_origin": "returned_target_storage_key",
+      "count": 224
+    }
+  ],
+  "duckdb_path": "/mnt/data/iteration28_work/ucp_static_data_model_run_0_40_7/workspace/knowledge-layer.duckdb"
+}

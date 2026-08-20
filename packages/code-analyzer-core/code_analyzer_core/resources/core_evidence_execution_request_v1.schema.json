@@ -1,0 +1,76 @@
+{
+  "$id": "core_evidence_execution_request/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "evidence_requirements": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "artifact_kind": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object"
+          },
+          "required_by": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "schema_version": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "artifact_kind",
+          "schema_version",
+          "parameters",
+          "required_by"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "orchestration": {
+      "type": "object"
+    },
+    "request_fingerprint": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "core_evidence_execution_request/v1"
+    },
+    "source": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_kind": {
+          "const": "repository"
+        }
+      },
+      "required": [
+        "source_kind",
+        "source_id"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "source",
+    "evidence_requirements",
+    "orchestration",
+    "request_fingerprint"
+  ],
+  "title": "Core Evidence Execution Request v1",
+  "type": "object"
+}

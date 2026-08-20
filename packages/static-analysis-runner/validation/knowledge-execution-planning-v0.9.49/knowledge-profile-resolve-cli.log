@@ -1,0 +1,16 @@
+{
+  "execution_effect": "none",
+  "implicit_required_dependency_count": 0,
+  "markdown": "/mnt/data/work_generic_plan/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-planning-v0.9.49/knowledge-resolution-plan-v2-0.9.49.md",
+  "output": "/mnt/data/work_generic_plan/static-analysis-runner-0.9.49-knowledge-execution-planning/validation/knowledge-execution-planning-v0.9.49/knowledge-resolution-plan-v2-0.9.49.json",
+  "overall_status": "current_typed",
+  "plan_fingerprint": "f0a140d3df2d5fa162ce81e6e831ff69becba11f7a76df8f47a4aa2e04c8a121",
+  "profile_id": "generic-core-evidence-smoke",
+  "requested_knowledge_count": 1,
+  "resolved_knowledge_count": 1,
+  "schema_version": "knowledge_resolution_plan/v2",
+  "scope": {
+    "kind": "repository",
+    "scope_id": "smoke-repository"
+  }
+}

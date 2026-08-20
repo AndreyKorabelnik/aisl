@@ -1,0 +1,38 @@
+{
+  "execution_order": [
+    "materialization:workspace-sql-catalog"
+  ],
+  "knowledge_artifacts": [
+    [
+      "workspace-sql-catalog",
+      "workspace-sql-catalog/v1"
+    ]
+  ],
+  "materializations": [
+    "workspace-sql-catalog"
+  ],
+  "plan_status": {
+    "blocking_diagnostic_count": 0,
+    "core_analyzer_node_count": 0,
+    "execution_node_count": 1,
+    "existing_knowledge_artifact_count": 2,
+    "existing_typed_artifact_count": 0,
+    "materialization_node_count": 1,
+    "overall": "ready"
+  },
+  "published_capabilities": [
+    "common.sql-analysis",
+    "common.sql-attribute-insertion-context",
+    "common.sql-field-calculation",
+    "common.sql-relation-fields",
+    "common.sql-relation-semantic-roles",
+    "common.sql-source-inventory",
+    "common.sql-source-inventory-export",
+    "common.sql-target-column-lineage",
+    "common.sql-target-resolution",
+    "common.sql-workflow-bindings",
+    "common.sql-workflow-context",
+    "common.workspace-sql-catalog"
+  ],
+  "result_status": "completed"
+}

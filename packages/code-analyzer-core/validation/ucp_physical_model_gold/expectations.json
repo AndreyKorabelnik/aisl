@@ -1,0 +1,40 @@
+{
+  "schema_version": "ucp_physical_model_gold/v1",
+  "workspace_id": "ucp-10-regression-v03615",
+  "expected_table_counts_by_repository": {
+    "ucpcostore": 8,
+    "ucpdbstorage": 38,
+    "ucpreplica": 174,
+    "ucpucp_shard_flyway": 89
+  },
+  "expected_restored_tables": [
+    "galorealestateentity_cadastral_number",
+    "galorealestateentity_flat_data",
+    "galorealestateentity_flat_delta",
+    "galorealestateentity_line2",
+    "galorealestateentity_om_id",
+    "galorealestateentity_ucp_id_object_id",
+    "galovaluationentity_flat_data",
+    "galovaluationentity_flat_delta",
+    "galovaluationentity_om_id",
+    "galovaluationentity_ucp_id_object_id",
+    "galovehicleentity_flat_data",
+    "galovehicleentity_flat_delta",
+    "galovehicleentity_om_id",
+    "galovehicleentity_register_number",
+    "galovehicleentity_ucp_id_object_id",
+    "galovehicleentity_vehicle_identification_number",
+    "omnimemoryindividualfacts_flat_data",
+    "omnimemoryindividualfacts_flat_delta"
+  ],
+  "excluded_demo_tables": ["client", "client_phones"],
+  "forbidden_schema_names": ["source"],
+  "required_exact_tables": [
+    {"repository_id": "ucpdbstorage", "schema_name": "cron", "table_name": "job"}
+  ],
+  "expected_explicit_partition_tables": {
+    "repository_id": "ucpreplica",
+    "count": 164,
+    "required_column_origin": "inherited_from_partition_parent"
+  }
+}

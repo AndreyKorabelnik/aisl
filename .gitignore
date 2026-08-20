@@ -1,0 +1,43 @@
+# Python runtime/build artifacts
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Node/TypeScript runtime/build artifacts
+node_modules/
+coverage/
+.npm/
+
+# Local IDE/OS state
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets / transport credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+certs/
+
+# Generated databases and local runtime state
+*.duckdb
+*.db
+
+# Transfer/recovery archives and built delivery artifacts belong in GitHub Releases, not Git history
+*.zip
+*.whl
+*.tar.gz
+*.tgz

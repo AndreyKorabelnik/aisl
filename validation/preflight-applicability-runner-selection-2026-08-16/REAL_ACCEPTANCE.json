@@ -1,0 +1,334 @@
+{
+  "core_contract_correction": {
+    "application_specific_exception_added": false,
+    "artifact_kind": "data-model-candidate-evidence",
+    "new_status": "not_formalized",
+    "previous_predicate": "formalized Java-only applicability",
+    "reason": "The existing scanner generically observes Java, declarative schemas, SQL DDL/migrations, and model-oriented paths. SQL-only regression proves useful candidate evidence without Java."
+  },
+  "date": "2026-08-16",
+  "limitations": [
+    "Safe non-applicability for data-model-candidate-evidence remains not_formalized; richer source predicates may be needed before hard-skipping it.",
+    "Prepared Repository Inventory exposes not_evaluated plus a coverage gap, while the exact Core applicability reason remains in the Runner execution plan.",
+    "Block E validates the mechanism and current P0/P1 Repository Inventory path; broader multi-repository-class selective-execution acceptance remains Block F."
+  ],
+  "real_runs": {
+    "datamart": {
+      "applicability_diagnostics": {
+        "observed_not_applicable": [
+          {
+            "artifact_kind": "interaction-boundary-evidence",
+            "basis": "observed_source_landscape",
+            "diagnostic_id": "evidence_observed_not_applicable_for_source",
+            "effect": "Automatic production is omitted only for source snapshots that are observed non-applicable; other sources remain eligible.",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "interaction-boundary-evidence/v1",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "formalized",
+                "failed_dimensions": [
+                  "required_languages_any_of"
+                ],
+                "observed_extensions": [
+                  ".conf",
+                  ".iml",
+                  ".json",
+                  ".properties",
+                  ".sbt",
+                  ".scala",
+                  ".sql",
+                  ".txt",
+                  ".xlsx",
+                  ".yaml",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "json",
+                  "properties",
+                  "scala",
+                  "sql",
+                  "yaml"
+                ],
+                "reason": "observed_source_landscape_does_not_match_core_predicate",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [
+                  "java"
+                ],
+                "source_id": "datamart_profile_fl",
+                "status": "not_applicable"
+              }
+            ]
+          }
+        ],
+        "unresolved_execution_preserved": [
+          {
+            "artifact_kind": "data-model-candidate-evidence",
+            "diagnostic_id": "evidence_applicability_unresolved_execution_preserved",
+            "effect": "Applicability is unresolved; Runner preserves execution eligibility instead of hard-skipping.",
+            "optional_by": [
+              "repository-inventory"
+            ],
+            "production_policy": "produce_if_missing",
+            "required_by": [],
+            "schema_version": "data-model-candidate-evidence/v1",
+            "severity": "info",
+            "source_decisions": [
+              {
+                "basis": "observed_source_landscape",
+                "contract_status": "not_formalized",
+                "observed_extensions": [
+                  ".conf",
+                  ".iml",
+                  ".json",
+                  ".properties",
+                  ".sbt",
+                  ".scala",
+                  ".sql",
+                  ".txt",
+                  ".xlsx",
+                  ".yaml",
+                  ".yml"
+                ],
+                "observed_languages": [
+                  "json",
+                  "properties",
+                  "scala",
+                  "sql",
+                  "yaml"
+                ],
+                "reason": "core_applicability_not_formalized",
+                "required_extensions_any_of": [],
+                "required_languages_any_of": [],
+                "source_id": "datamart_profile_fl",
+                "status": "unresolved"
+              }
+            ]
+          }
+        ]
+      },
+      "blocking_diagnostic_count": 0,
+      "composition_equal_to_block_d": true,
+      "core_analyzer_node_count": 3,
+      "evaluation_phase": "preflight",
+      "job_id": "job-12ef2df94bdf4edcb38709fae80104eb",
+      "positive_concepts_block_d": [
+        {
+          "concept_id": "data_model",
+          "concept_score": 27.0,
+          "confidence": "probable_inference",
+          "evidence_evaluation_status": "evaluated",
+          "status": "probable"
+        }
+      ],
+      "positive_concepts_block_e": [
+        {
+          "concept_id": "data_model",
+          "concept_score": 27.0,
+          "confidence": "probable_inference",
+          "evidence_evaluation_status": "evaluated",
+          "status": "probable"
+        }
+      ],
+      "positive_concepts_equal_to_block_d": true,
+      "published_revision": "rev-b502620788d3320e99528e5e",
+      "repository_inventory_summary_block_d": {
+        "completeness_counts": {
+          "complete": 5,
+          "not_evaluated": 4,
+          "partial": 1,
+          "supported_with_gaps": 1
+        },
+        "coverage_gap_count": 21,
+        "detected_concept_count": 1,
+        "detected_concepts": [
+          "data_model"
+        ],
+        "discovery_candidate_count": 17,
+        "discovery_counts": {
+          "known_concept": 1,
+          "none": 12,
+          "structural_novelty": 10,
+          "unknown_primitive": 6
+        },
+        "extension_family_count": 12,
+        "inbound_interface_count": 0,
+        "outbound_interface_count": 0,
+        "root_file_count": 491,
+        "structural_family_count": 29,
+        "structural_member_count": 156,
+        "structural_novelty_candidate_count": 10,
+        "structured_shape_family_count": 14,
+        "technology_count": 0,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 6
+      },
+      "repository_inventory_summary_block_e": {
+        "completeness_counts": {
+          "complete": 3,
+          "not_evaluated": 5,
+          "partial": 1,
+          "supported_with_gaps": 1
+        },
+        "coverage_gap_count": 22,
+        "detected_concept_count": 1,
+        "detected_concepts": [
+          "data_model"
+        ],
+        "discovery_candidate_count": 17,
+        "discovery_counts": {
+          "known_concept": 1,
+          "none": 11,
+          "structural_novelty": 10,
+          "unknown_primitive": 6
+        },
+        "extension_family_count": 12,
+        "inbound_interface_count": 0,
+        "outbound_interface_count": 0,
+        "root_file_count": 491,
+        "structural_family_count": 28,
+        "structural_member_count": 156,
+        "structural_novelty_candidate_count": 10,
+        "structured_shape_family_count": 14,
+        "technology_count": 0,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 6
+      },
+      "selected_core_analyzers": [
+        "data-model-candidate-analyzer",
+        "repository-structure-analyzer",
+        "structured-file-shape-analyzer"
+      ],
+      "semantic_delta": {
+        "interpretation": "The skipped Java-only interaction analyzer previously observed zero boundaries. Block E exposes system_interaction as not_evaluated plus a coverage gap rather than presenting an evaluated not_detected result.",
+        "system_interaction_block_d": {
+          "concept_id": "system_interaction",
+          "concept_score": null,
+          "confidence": "not_detected",
+          "evidence_evaluation_status": "evaluated",
+          "status": "not_detected"
+        },
+        "system_interaction_block_e": {
+          "concept_id": "system_interaction",
+          "concept_score": null,
+          "confidence": "not_evaluated",
+          "evidence_evaluation_status": "not_evaluated",
+          "status": "not_evaluated"
+        }
+      },
+      "skipped_interaction_previous_observation": {
+        "artifact_found": true,
+        "boundary_count": 0,
+        "coverage_status": "complete",
+        "inbound_boundary_count": 0,
+        "outbound_boundary_count": 0
+      },
+      "status": "succeeded"
+    },
+    "gateway": {
+      "blocking_diagnostic_count": 0,
+      "composition_equal_to_block_d": true,
+      "concept_projection_equal_to_block_d": true,
+      "core_analyzer_node_count": 4,
+      "evaluation_phase": "preflight",
+      "job_id": "job-63b87b31705442adb8a146b397f0ce27",
+      "published_revision": "rev-08085462cece47940c2aac24",
+      "repository_inventory_summary": {
+        "completeness_counts": {
+          "complete": 4,
+          "not_evaluated": 4,
+          "partial": 1,
+          "supported_with_gaps": 2
+        },
+        "coverage_gap_count": 15,
+        "detected_concept_count": 2,
+        "detected_concepts": [
+          "data_model",
+          "system_interaction"
+        ],
+        "discovery_candidate_count": 11,
+        "discovery_counts": {
+          "known_concept": 2,
+          "none": 9,
+          "structural_novelty": 7,
+          "unknown_primitive": 3
+        },
+        "extension_family_count": 9,
+        "inbound_interface_count": 2,
+        "outbound_interface_count": 0,
+        "root_file_count": 151,
+        "structural_family_count": 21,
+        "structural_member_count": 12,
+        "structural_novelty_candidate_count": 7,
+        "structured_shape_family_count": 9,
+        "technology_count": 3,
+        "unclassified_concept_candidate_count": 0,
+        "unknown_primitive_count": 3
+      },
+      "selected_core_analyzers": [
+        "data-model-candidate-analyzer",
+        "interaction-boundary-analyzer",
+        "repository-structure-analyzer",
+        "structured-file-shape-analyzer"
+      ],
+      "status": "succeeded"
+    }
+  },
+  "regression": {
+    "code_analyzer_core": {
+      "failed": 0,
+      "passed": 610
+    },
+    "knowledge_api": {
+      "failed": 0,
+      "passed": 118
+    },
+    "knowledge_control_plane": {
+      "failed": 0,
+      "passed": 95
+    },
+    "knowledge_layer_core": {
+      "failed": 0,
+      "passed": 256,
+      "skipped": 8
+    },
+    "prepared_knowledge_runtime": {
+      "failed": 0,
+      "passed": 10
+    },
+    "static_analysis_runner": {
+      "failed": 0,
+      "passed": 113
+    },
+    "timeout_policy": "Incomplete/timeout invocations were not counted; only completed pytest summaries are authoritative."
+  },
+  "safety_invariants": [
+    "Runner consumes Core-owned applicability metadata; it does not infer concept applicability from analyzer implementation or concept discovery.",
+    "Hard skip is allowed only for optional automatic production when all observed source snapshots are not_applicable.",
+    "Unresolved/not_formalized applicability preserves execution and emits a diagnostic.",
+    "Explicit/required incompatible evidence becomes a visible blocking diagnostic rather than a silent skip."
+  ],
+  "schema_version": "preflight_applicability_runner_selection_acceptance/v1",
+  "source_packages": {
+    "datamart": {
+      "file": "datamart_profile_fl(4).zip",
+      "sha256": "d94b4bd47c8972a561a9120b6bf6b86e13557b21d5ca32dd6d656b44913bf66c"
+    },
+    "gateway": {
+      "file": "gateway-sberid-userinfo-by-ucpid(1).zip",
+      "sha256": "e215b47c8d6eb38f73736cc370e7154ace2ce88bafc3073f02a176cd997f02d0"
+    }
+  },
+  "verdict": "PASS",
+  "versions": {
+    "code-analyzer-core": "0.44.23a7",
+    "knowledge-control-plane": "1.2.0a27",
+    "knowledge-layer-core": "0.61.0a35",
+    "static-analysis-runner": "0.10.27"
+  }
+}

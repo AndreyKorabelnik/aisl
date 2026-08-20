@@ -1,0 +1,8 @@
+{
+  "api_path": "knowledge_api/schemas/knowledge_execution_result_v1.schema.json",
+  "api_sha256": "6ea529b928298988df08c7d508fd066d8f424bfec1bb0e694cceab285949b9a1",
+  "byte_identical": true,
+  "runner_path": "/mnt/data/work_iter5/static-analysis-runner-0.9.51-generic-phase-order/static-analysis-runner-0.9.51-generic-phase-order/schemas/knowledge_execution_result_v1.schema.json",
+  "runner_sha256": "6ea529b928298988df08c7d508fd066d8f424bfec1bb0e694cceab285949b9a1",
+  "schema": "knowledge_execution_result/v1"
+}

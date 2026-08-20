@@ -1,0 +1,56 @@
+{
+  "schema_version": "source_manifest_sha256/v1",
+  "file_count": 10,
+  "files": [
+    {
+      "path": "CHANGE_REPORT.md",
+      "sha256": "a36c3f8d4ca16f113c0903c452ce89e05c3d9503a632f57c02dfea5f1c0c1e65",
+      "size": 267
+    },
+    {
+      "path": "README.md",
+      "sha256": "6a6ad8266eb19d61eb2daf07ee8f0571f03fb35786fe7d51e095cd0ce83be3a0",
+      "size": 1692
+    },
+    {
+      "path": "TEST_RESULTS.md",
+      "sha256": "bed162105ffcff47e285e7aeba382bf0faf5829c13d6df58664d2839c7e4022f",
+      "size": 406
+    },
+    {
+      "path": "VERSION",
+      "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9",
+      "size": 6
+    },
+    {
+      "path": "aisl_cli/__init__.py",
+      "sha256": "5df20df2b1258bdae26e740cdb3d63b80e1d0f4c2da75a34b51d5d95f8d66826",
+      "size": 62
+    },
+    {
+      "path": "aisl_cli/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "size": 48
+    },
+    {
+      "path": "aisl_cli/cli.py",
+      "sha256": "8743b527615b2a7574764ef29625c4fdcaa6d527e37ed36de83e2647edd5cfcc",
+      "size": 12126
+    },
+    {
+      "path": "examples/export_individual.sh",
+      "sha256": "11912a9b346d33c51e76f369849714a2862848288f975be57031f6154d0dbc84",
+      "size": 348
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "23acc62cebfb7f9dd5245a55bb7517e808de04aea4fac6c67e17409d8952ebc7",
+      "size": 455
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "4936c157a1e0cc5506cee39ab39421b94a2aa44bcb8f505b6d4637163f2d15be",
+      "size": 991
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge_product_catalog_v1.schema.json",
+  "title": "Knowledge Product Catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "catalog_id", "knowledge_types", "internal_materializations", "catalog_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "knowledge_product_catalog/v1"},
+    "catalog_id": {"type": "string", "minLength": 1},
+    "catalog_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "knowledge_types": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/knowledge_product"}
+    },
+    "internal_materializations": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/internal_materialization"}
+    }
+  },
+  "$defs": {
+    "string_list": {"type": "array", "items": {"type": "string"}},
+    "knowledge_product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["knowledge_id", "materialization_id", "title", "summary", "category", "contains", "supported_scopes"],
+      "properties": {
+        "knowledge_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$"},
+        "materialization_id": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "summary": {"type": "string", "minLength": 1},
+        "category": {"type": "string", "minLength": 1},
+        "contains": {"$ref": "#/$defs/string_list"},
+        "supported_scopes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["repository", "workspace"]}
+        },
+        "scope_behavior": {"type": ["string", "null"]},
+        "source_note": {"type": ["string", "null"]},
+        "selection_note": {"type": ["string", "null"]},
+        "profile_v2_selectable": {"type": "boolean"},
+        "knowledge_input_mode": {"enum": ["materialize_dependencies", "existing_artifacts_only"]},
+        "required_knowledge_dependencies": {"$ref": "#/$defs/string_list"},
+        "required_internal_materializations": {"$ref": "#/$defs/string_list"},
+        "optional_internal_materializations": {"$ref": "#/$defs/string_list"},
+        "recommended_knowledge_dependencies": {"$ref": "#/$defs/string_list"},
+        "knowledge_dependencies": {"$ref": "#/$defs/string_list"}
+      }
+    },
+    "internal_materialization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["materialization_id", "reason_not_user_selectable"],
+      "properties": {
+        "materialization_id": {"type": "string", "minLength": 1},
+        "reason_not_user_selectable": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

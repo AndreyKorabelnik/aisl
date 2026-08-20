@@ -1,0 +1,45 @@
+report_type: sql-source-inventory-report
+version: v1
+audiences:
+- business
+- architecture
+- engineering
+questions:
+- Which external SQL source relations are observed?
+- Which fields of each source are deterministically used?
+- How are the fields used in projections, joins, filters and windows?
+- Which sources are most reused or used only for joining/filtering?
+- What coverage limitations remain?
+required_headings:
+- Краткий вывод
+- Источники данных витрины
+- Используемые поля
+- Характер использования
+- Основные зависимости и паттерны использования
+- Приложение A. Полнота анализа и ограничения доказательности
+- Приложение B. Неоднозначности и вопросы для уточнения
+- Приложение C. Технические доказательства и provenance
+required_content:
+  sources:
+  - external physical and physical-template sources only
+  - complete source list for standard and detailed modes
+  fields:
+  - all deterministically bound fields for each listed source
+  - usage roles without invented semantics
+  usage:
+  - top sources by field count and statement reuse
+  - sources used only for joins or filters
+  limitations:
+  - ambiguous and unavailable relation counts from coverage
+  - no assignment or classification of unmapped fields
+appendix_policy:
+  limitations_and_coverage: Приложение A. Полнота анализа и ограничения доказательности
+  ambiguities_and_questions: Приложение B. Неоднозначности и вопросы для уточнения
+  evidence_and_provenance: Приложение C. Технические доказательства и provenance
+richness_policy:
+  executive_named_sources_minimum_when_available: 15
+  standard_detailed_named_sources_minimum_when_available: 20
+  standard_detailed_named_fields_minimum_when_available: 30
+  complete_catalog_source: sections.source_inventory.items
+  grouping_source: sections.source_inventory.catalog_groups
+  optional_full_catalog_appendix: Приложение D. Полный каталог источников и полей

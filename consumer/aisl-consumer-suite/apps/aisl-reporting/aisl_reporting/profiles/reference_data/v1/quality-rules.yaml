@@ -1,0 +1,6 @@
+max_dataset_bytes: 900000
+required_properties:
+  - complete_candidate_catalog
+  - source_set_separation
+  - official_status_not_established
+  - ownership_not_established
